@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Question - Admin</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 20px auto; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, textarea, select { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+    button { margin-top: 20px; padding: 10px 15px; background: #0051c3; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Add New Question to obh_qn_db</h2>
+  <form id="addQuestionForm">
+    <label>Question ID (e.g. MATH-ALG-LIN-004):</label> <input type="text" id="q_id" required>
+    <label>Subject:</label> <input type="text" id="subject" required>
+    <label>Category:</label> <input type="text" id="category" required>
+    <label>Topic:</label> <input type="text" id="topic" required>
+    <label>Level:</label> <input type="text" id="level" required>
+    <label>Difficulty (Number):</label> <input type="number" id="difficulty" required>
+    
+    <label>Question Text:</label> <textarea id="question" rows="3" required></textarea>
+    
+    <label>Option 1:</label> <input type="text" id="opt0" required>
+    <label>Option 2:</label> <input type="text" id="opt1" required>
+    <label>Option 3:</label> <input type="text" id="opt2" required>
+    <label>Option 4:</label> <input type="text" id="opt3" required>
+    
+    <label>Which option is correct?</label>
+    <select id="correct" required>
+      <option value="0">Option 1</option>
+      <option value="1">Option 2</option>
+      <option value="2">Option 3</option>
+      <option value="3">Option 4</option>
+    </select>
+
+    <label>Explanation:</label> <textarea id="explanation" rows="2"></textarea>
+    <label>Hint:</label> <input type="text" id="hint">
+    
+    <button type="submit">Save to Database</button>
+  </form>
+
+  <script>
+    document.getElementById('addQuestionForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const payload = {
+        id: document.getElementById('q_id').value,
+        subject: document.getElementById('subject').value,
+        category: document.getElementById('category').value,
+        topic: document.getElementById('topic').value,
+        level: document.getElementById('level').value,
+        difficulty: parseInt(document.getElementById('difficulty').value),
+        question: document.getElementById('question').value,
+        options: [
+          document.getElementById('opt0').value,
+          document.getElementById('opt1').value,
+          document.getElementById('opt2').value,
+          document.getElementById('opt3').value
+        ],
+        correct: parseInt(document.getElementById('correct').value),
+        explanation: document.getElementById('explanation').value,
+        hint: document.getElementById('hint').value
+      };
+
+      const response = await fetch('/api/questions', {
+        method: 'POST',
+        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      if(response.ok) {
+        alert('Question successfully added!');
+        e.target.reset();
+      } else {
+        const err = await response.json();
+        alert('Error: ' + err.error);
+      }
+    });
+  </script>
+</body>
+</html>

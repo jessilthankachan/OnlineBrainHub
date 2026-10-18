@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Brain Hub - Practice Quiz</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 20px auto; background-color: #f4f7f6; padding: 20px; }
+    .question-card { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .meta { font-size: 0.8em; color: #666; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;}
+    .options { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+    .option-btn { padding: 12px; border: 1px solid #ccc; background: #fff; cursor: pointer; text-align: left; border-radius: 6px; font-size: 1em; transition: 0.2s;}
+    .option-btn:hover { background: #f0f0f0; }
+    
+    /* Colors for answer feedback */
+    .correct { background: #d4edda !important; border-color: #c3e6cb !important; color: #155724; font-weight: bold;}
+    .wrong { background: #f8d7da !important; border-color: #f5c6cb !important; color: #721c24; }
+    
+    .hint-btn { margin-top: 15px; background: #ffc107; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-size: 0.9em; font-weight: bold;}
+    .hint-btn:hover { background: #e0a800; }
+    
+    .hint-text, .explanation-text { margin-top: 10px; padding: 12px; border-radius: 6px; display: none; line-height: 1.5;}
+    .hint-text { background: #fff3cd; color: #856404; border: 1px solid #ffeeba;}
+    .explanation-text { background: #e2e3e5; color: #383d41; border: 1px solid #d6d8db;}
+  </style>
+</head>
+<body>
+  <h1>Online Brain Hub - Quiz</h1>
+  <div id="quiz-container">Loading questions...</div>
+
+  <script>
+    async function loadQuiz() {
+      const container = document.getElementById('quiz-container');
+      
+      try {
+        const response = await fetch('/api/questions');
+        const questions = await response.json();
+        
+        container.innerHTML = ''; 
+
+        if (questions.length === 0) {
+          container.innerHTML = '<p>No questions found. Add some in the admin panel!</p>';
+          return;
+        }
+
+        questions.forEach((q, qIndex) => {
+          const card = document.createElement('div');
+          card.className = 'question-card';
+
+          // 1. Breadcrumbs / Meta Data
+          let html = `<div class="meta">${q.subject} > ${q.category} > ${q.topic} | Level: ${q.level} | ID: ${q.id}</div>`;
+          
+          // 2. Question Text
+          html += `<h3>${qIndex + 1}. ${q.question}</h3>`;
+
+          // 3. Options mapped as buttons
+          html += `<div class="options" id="options-${q.id}">`;
+          q.options.forEach((opt, optIndex) => {
+            // Pass the selected index and the actual correct index to the check function
+            html += `<button class="option-btn" onclick="checkAnswer('${q.id}', ${optIndex}, ${q.correct})">${opt}</button>`;
+          });
+          html += `</div>`;
+
+          // 4. Hint Button & Text
+          if (q.hint) {
+            html += `<button class="hint-btn" onclick="toggleHint('${q.id}')">💡 Show Hint</button>`;
+            html += `<div class="hint-text" id="hint-${q.id}"><strong>Hint:</strong> ${q.hint}</div>`;
+          }
+
+          // 5. Explanation Section (Hidden initially)
+          html += `<div class="explanation-text" id="exp-${q.id}">📖 <strong>Explanation:</strong> ${q.explanation || 'No explanation available.'}</div>`;
+
+          card.innerHTML = html;
+          container.appendChild(card);
+        });
+      } catch (error) {
+        container.innerHTML = '<p>Error loading questions. Ensure your database is linked and API is running.</p>';
+      }
+    }
+
+    // Evaluates the clicked option against the database's correct index
+    window.checkAnswer = function(qId, selectedIndex, correctIndex) {
+      const optionsDiv = document.getElementById(`options-${qId}`);
+      const buttons = optionsDiv.getElementsByTagName('button');
+      const explanation = document.getElementById(`exp-${qId}`);
+
+      // Lock all buttons so the user can only guess once per question
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].disabled = true;
+        buttons[i].style.cursor = 'not-allowed';
+        
+        // Apply green to correct answer, red to wrong user selection
+        if (i === correctIndex) {
+          buttons[i].classList.add('correct');
+        } else if (i === selectedIndex && selectedIndex !== correctIndex) {
+          buttons[i].classList.add('wrong');
+        }
+      }
+
+      // Automatically reveal the explanation after an answer is chosen
+      if (explanation) {
+        explanation.style.display = 'block';
+      }
+    };
+
+    // Toggles the hint visibility
+    window.toggleHint = function(qId) {
+      const hintDiv = document.getElementById(`hint-${qId}`);
+      if (hintDiv.style.display === 'none' || hintDiv.style.display === '') {
+        hintDiv.style.display = 'block';
+      } else {
+        hintDiv.style.display = 'none';
+      }
+    };
+
+    // Start execution
+    loadQuiz();
+  </script>
+</body>
+</html>

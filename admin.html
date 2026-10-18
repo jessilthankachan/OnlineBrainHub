@@ -1,46 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Add Question - Admin</title>
+  <title>Manage Questions - Admin</title>
   <style>
-    body { font-family: sans-serif; max-width: 600px; margin: 20px auto; }
+    body { font-family: sans-serif; max-width: 1000px; margin: 20px auto; padding: 20px;}
+    .container { display: flex; gap: 40px; flex-wrap: wrap; }
+    .form-section { flex: 1; min-width: 300px; }
+    .table-section { flex: 1.5; min-width: 400px; }
     label { display: block; margin-top: 10px; font-weight: bold; }
     input, textarea, select { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
-    button { margin-top: 20px; padding: 10px 15px; background: #0051c3; color: white; border: none; cursor: pointer; }
+    button { margin-top: 20px; padding: 10px 15px; background: #0051c3; color: white; border: none; cursor: pointer; border-radius: 4px;}
+    .delete-btn { background: #dc3545; padding: 6px 10px; margin-top: 0; font-size: 0.85em;}
+    .edit-btn { background: #28a745; padding: 6px 10px; margin-top: 0; font-size: 0.85em;}
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9em; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background-color: #f2f2f2; }
   </style>
 </head>
 <body>
-  <h2>Add New Question to obh_qn_db</h2>
-  <form id="addQuestionForm">
-    <label>Question ID (e.g. MATH-ALG-LIN-004):</label> <input type="text" id="q_id" required>
-    <label>Subject:</label> <input type="text" id="subject" required>
-    <label>Category:</label> <input type="text" id="category" required>
-    <label>Topic:</label> <input type="text" id="topic" required>
-    <label>Level:</label> <input type="text" id="level" required>
-    <label>Difficulty (Number):</label> <input type="number" id="difficulty" required>
+  <h2>Online Brain Hub - Admin Dashboard</h2>
+  <div class="container">
     
-    <label>Question Text:</label> <textarea id="question" rows="3" required></textarea>
-    
-    <label>Option 1:</label> <input type="text" id="opt0" required>
-    <label>Option 2:</label> <input type="text" id="opt1" required>
-    <label>Option 3:</label> <input type="text" id="opt2" required>
-    <label>Option 4:</label> <input type="text" id="opt3" required>
-    
-    <label>Which option is correct?</label>
-    <select id="correct" required>
-      <option value="0">Option 1</option>
-      <option value="1">Option 2</option>
-      <option value="2">Option 3</option>
-      <option value="3">Option 4</option>
-    </select>
+    <!-- Form Section -->
+    <div class="form-section">
+      <h3 id="form-title">Add New Question</h3>
+      <form id="addQuestionForm">
+        <label>Question ID:</label> <input type="text" id="q_id" required>
+        <label>Subject:</label> <input type="text" id="subject" required>
+        <label>Category:</label> <input type="text" id="category" required>
+        <label>Topic:</label> <input type="text" id="topic" required>
+        <label>Level:</label> <input type="text" id="level" required>
+        <label>Difficulty (Number):</label> <input type="number" id="difficulty" required>
+        
+        <label>Question Text:</label> <textarea id="question" rows="3" required></textarea>
+        
+        <label>Option 1:</label> <input type="text" id="opt0" required>
+        <label>Option 2:</label> <input type="text" id="opt1" required>
+        <label>Option 3:</label> <input type="text" id="opt2" required>
+        <label>Option 4:</label> <input type="text" id="opt3" required>
+        
+        <label>Which option is correct?</label>
+        <select id="correct" required>
+          <option value="0">Option 1</option>
+          <option value="1">Option 2</option>
+          <option value="2">Option 3</option>
+          <option value="3">Option 4</option>
+        </select>
 
-    <label>Explanation:</label> <textarea id="explanation" rows="2"></textarea>
-    <label>Hint:</label> <input type="text" id="hint">
-    
-    <button type="submit">Save to Database</button>
-  </form>
+        <label>Explanation:</label> <textarea id="explanation" rows="2"></textarea>
+        <label>Hint:</label> <input type="text" id="hint">
+        
+        <button type="submit" id="submitBtn">Save to Database</button>
+        <button type="button" id="cancelBtn" style="display:none; background:#6c757d;" onclick="resetForm()">Cancel Edit</button>
+      </form>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-section">
+      <h3>Existing Questions</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Question</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr><td colspan="3">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 
   <script>
+    let allQuestions = [];
+    let isEditing = false;
+
+    // 1. Fetch and display questions when the page loads
+    async function fetchQuestions() {
+      const res = await fetch('/api/questions');
+      allQuestions = await res.json();
+      renderTable();
+    }
+
+    // 2. Build the table rows dynamically
+    function renderTable() {
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = '';
+      
+      if (allQuestions.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="3">No questions found.</td></tr>';
+        return;
+      }
+
+      allQuestions.forEach(q => {
+        const tr = document.createElement('tr');
+        // Shorten long questions for the table view
+        const shortQ = q.question.length > 45 ? q.question.substring(0, 45) + '...' : q.question;
+        
+        tr.innerHTML = `
+          <td><strong>${q.id}</strong></td>
+          <td>${shortQ}</td>
+          <td>
+            <button class="edit-btn" onclick="editQuestion('${q.id}')">Edit</button>
+            <button class="delete-btn" onclick="deleteQuestion('${q.id}')">Delete</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // 3. Handle Submit (Routes to POST for new, PUT for edits)
     document.getElementById('addQuestionForm').addEventListener('submit', async (e) => {
       e.preventDefault();
       
@@ -63,20 +135,80 @@
         hint: document.getElementById('hint').value
       };
 
+      const method = isEditing ? 'PUT' : 'POST';
+
       const response = await fetch('/api/questions', {
-        method: 'POST',
+        method: method,
         body: JSON.stringify(payload),
         headers: { 'Content-Type': 'application/json' }
       });
 
       if(response.ok) {
-        alert('Question successfully added!');
-        e.target.reset();
+        alert(isEditing ? 'Question successfully updated!' : 'Question successfully added!');
+        resetForm();
+        fetchQuestions(); // Refresh the table instantly
       } else {
         const err = await response.json();
         alert('Error: ' + err.error);
       }
     });
+
+    // 4. Fill the form when "Edit" is clicked
+    window.editQuestion = function(id) {
+      const q = allQuestions.find(x => x.id === id);
+      
+      document.getElementById('q_id').value = q.id;
+      document.getElementById('q_id').disabled = true; // Lock the ID so it cannot be changed
+      document.getElementById('subject').value = q.subject;
+      document.getElementById('category').value = q.category;
+      document.getElementById('topic').value = q.topic;
+      document.getElementById('level').value = q.level;
+      document.getElementById('difficulty').value = q.difficulty;
+      document.getElementById('question').value = q.question;
+      document.getElementById('opt0').value = q.options[0];
+      document.getElementById('opt1').value = q.options[1];
+      document.getElementById('opt2').value = q.options[2];
+      document.getElementById('opt3').value = q.options[3];
+      document.getElementById('correct').value = q.correct;
+      document.getElementById('explanation').value = q.explanation || '';
+      document.getElementById('hint').value = q.hint || '';
+
+      isEditing = true;
+      document.getElementById('form-title').innerText = 'Edit Question: ' + q.id;
+      document.getElementById('submitBtn').innerText = 'Update Database';
+      document.getElementById('cancelBtn').style.display = 'inline-block';
+      window.scrollTo(0,0);
+    };
+
+    // 5. Delete a question permanently
+    window.deleteQuestion = async function(id) {
+      if(!confirm('Are you sure you want to permanently delete ' + id + '?')) return;
+      
+      const response = await fetch('/api/questions', {
+        method: 'DELETE',
+        body: JSON.stringify({ id: id }),
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      if(response.ok) {
+        fetchQuestions(); // Refresh table to remove deleted row
+      } else {
+        alert('Failed to delete question.');
+      }
+    };
+
+    // 6. Reset the form back to "Add Mode"
+    window.resetForm = function() {
+      document.getElementById('addQuestionForm').reset();
+      document.getElementById('q_id').disabled = false;
+      isEditing = false;
+      document.getElementById('form-title').innerText = 'Add New Question';
+      document.getElementById('submitBtn').innerText = 'Save to Database';
+      document.getElementById('cancelBtn').style.display = 'none';
+    };
+
+    // Boot up
+    fetchQuestions();
   </script>
 </body>
 </html>

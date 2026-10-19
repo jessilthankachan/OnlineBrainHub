@@ -55,81 +55,82 @@
   </div>
 
   <script>
-    // Parse URL Parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    const targetSubject = urlParams.get('subject');
-    const targetCategory = urlParams.get('category');
+   // Parse URL Parameters
+const urlParams = new URLSearchParams(window.location.search);
+const targetSubject = urlParams.get('subject');
+const targetCategory = urlParams.get('category');
+const targetLevel = urlParams.get('level') || 'All';
+const targetDiff = urlParams.get('diff') || 'All';
 
-    // Update Headers
-    if (targetSubject && targetCategory) {
-      document.getElementById('world-title').innerText = `${targetSubject} World`;
-      document.getElementById('category-title').innerText = targetCategory;
+// 1. Check if we arrived here correctly
+if (!targetSubject || !targetCategory) {
+  document.getElementById('world-title').innerText = "Navigation Error";
+  document.getElementById('category-title').innerText = "Missing Data";
+  document.getElementById('level-grid').innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">Please start from the Hub page so the game knows which subject to load!</div>';
+} else {
+  document.getElementById('world-title').innerText = `${targetSubject} World`;
+  document.getElementById('category-title').innerText = targetCategory;
+  loadSubtopics(); // Boot the level loader
+}
+
+async function loadSubtopics() {
+  try {
+    const res = await fetch('/api/questions');
+    const allQuestions = await res.json();
+    
+    // 2. Filter by Subject and Category
+    let filteredQuestions = allQuestions.filter(q => 
+      q.subject.toLowerCase() === targetSubject.toLowerCase() && 
+      q.category.toLowerCase() === targetCategory.toLowerCase()
+    );
+
+    // 3. Apply Level and Difficulty Filters from the URL
+    if (targetLevel !== 'All') {
+      filteredQuestions = filteredQuestions.filter(q => q.level.toLowerCase() === targetLevel.toLowerCase());
+    }
+    if (targetDiff !== 'All') {
+      filteredQuestions = filteredQuestions.filter(q => parseInt(q.difficulty) === parseInt(targetDiff));
     }
 
-    async function loadSubtopics() {
-      try {
-        const res = await fetch('/api/questions');
-        const allQuestions = await res.json();
-        
-        // Filter questions by Subject and Category
-        const categoryQuestions = allQuestions.filter(q => 
-          q.subject.toLowerCase() === targetSubject.toLowerCase() && 
-          q.category.toLowerCase() === targetCategory.toLowerCase()
-        );
+    const grid = document.getElementById('level-grid');
+    grid.innerHTML = ''; 
 
-        const grid = document.getElementById('level-grid');
-        grid.innerHTML = ''; // Clear loading text
-
-        if (categoryQuestions.length === 0) {
-          grid.innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">No stages unlocked here yet! Add questions in the Admin panel.</div>';
-          return;
-        }
-
-        // Extract unique Topics and count how many questions each has
-        const topicMap = {};
-        categoryQuestions.forEach(q => {
-          if (!topicMap[q.topic]) {
-            topicMap[q.topic] = 0;
-          }
-          topicMap[q.topic]++;
-        });
-
-        // Generate a game button for each unique topic
-        const icons = ['🎯', '⚡', '🚀', '🔥', '🧩', '⚔️', '🔮', '🏆'];
-        let iconIndex = 0;
-
-        for (const [topicName, qCount] of Object.entries(topicMap)) {
-          const card = document.createElement('div');
-          card.className = 'level-card';
-          
-          // Assign a random game icon
-          const icon = icons[iconIndex % icons.length];
-          iconIndex++;
-
-          card.innerHTML = `
-            <span class="level-icon">${icon}</span>
-            <h3 class="level-name">${topicName}</h3>
-            <span class="question-count">${qCount} Challenges Available</span>
-          `;
-          
-          card.onclick = () => {
-            // Send user to the quiz, passing the specific topic
-            window.location.href = \`/quiz.html?subject=\${encodeURIComponent(targetSubject)}&category=\${encodeURIComponent(targetCategory)}&topic=\${encodeURIComponent(topicName)}\`;
-          };
-          
-          grid.appendChild(card);
-        }
-      } catch (error) {
-        document.getElementById('level-grid').innerHTML = 'Error connecting to the game server.';
-      }
+    if (filteredQuestions.length === 0) {
+      grid.innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">No stages unlocked for this difficulty yet!</div>';
+      return;
     }
 
-    function goBack() {
-      window.location.href = \`/\${targetSubject.toLowerCase()}.html\`;
-    }
+    const topicMap = {};
+    filteredQuestions.forEach(q => {
+      if (!topicMap[q.topic]) topicMap[q.topic] = 0;
+      topicMap[q.topic]++;
+    });
 
-    // Boot
-    loadSubtopics();
+    const icons = ['🎯', '⚡', '🚀', '🔥', '🧩', '⚔️', '🔮', '🏆'];
+    let iconIndex = 0;
+
+    for (const [topicName, qCount] of Object.entries(topicMap)) {
+      const card = document.createElement('div');
+      card.className = 'level-card';
+      const icon = icons[iconIndex % icons.length];
+      iconIndex++;
+
+      card.innerHTML = `
+        <span class="level-icon">${icon}</span>
+        <h3 class="level-name">${topicName}</h3>
+        <span class="question-count">${qCount} Questions in Pool</span>
+      `;
+      
+      card.onclick = () => {
+        window.location.href = `/quiz.html?subject=${encodeURIComponent(targetSubject)}&category=${encodeURIComponent(targetCategory)}&topic=${encodeURIComponent(topicName)}&level=${encodeURIComponent(targetLevel)}&diff=${encodeURIComponent(targetDiff)}`;
+      };
+      
+      grid.appendChild(card);
+    }
+  } catch (error) {
+    document.getElementById('level-grid').innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">Error connecting to the game server. Are you testing on the live Cloudflare link?</div>';
+  }
+}
   </script>
 </body>
 </html>

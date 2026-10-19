@@ -68,7 +68,9 @@
 
   <header>
     <h1 class="logo">🧠 BrainHub</h1>
-    <button class="login-btn" onclick="alert('Login system coming soon!')">Login / Save Progress</button>
+   <a href="/login.html" id="auth-btn" style="display: inline-block; padding: 10px 20px; background: #0984e3; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin-bottom: 20px;">
+  Login to Save Progress
+</a>
   </header>
 
   <!-- Top AdSense Banner Placeholder -->
@@ -224,5 +226,18 @@
     // Boot up
     fetchDatabase();
   </script>
+
+  <script>
+  // Check if player is logged in
+  const savedUsername = localStorage.getItem('obh_username');
+  const authBtn = document.getElementById('auth-btn');
+  
+  if (savedUsername && authBtn) {
+    // Change button to point to their new Profile dashboard
+    authBtn.innerText = 'View Profile (' + savedUsername + ')';
+    authBtn.href = '/profile.html';
+    authBtn.style.background = '#00b894'; // Optional: Turn it green to show logged-in status
+  }
+</script>
 </body>
 </html>

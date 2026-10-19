@@ -168,15 +168,14 @@
   }
 }
 
-    function loadQuestion() {
+   function loadQuestion() {
   const q = gameQuestions[currentIndex];
   
   // Update HUD & Progress
   document.getElementById('game-progress').style.width = `${((currentIndex) / gameQuestions.length) * 100}%`;
   document.getElementById('q-meta').innerText = `${q.subject} • ${q.category} • Level ${q.level}`;
   
-  // Fix 1: Check for both 'question' and 'question_text' so it never says undefined
-  const questionText = q.question || q.question_text || `<span style="color:#ff7675; font-size:0.6em;">Data missing. Raw API Output:<br>${JSON.stringify(q)}</span>`;
+  const questionText = q.question || q.question_text || "Error: Question text missing";
   document.getElementById('q-text').innerHTML = questionText; 
   
   // Reset Options
@@ -185,30 +184,39 @@
   document.getElementById('feedback').style.display = 'none';
   document.getElementById('next-btn').style.display = 'none';
 
-  // Fix 2: Convert the database text string back into a real JavaScript array
+  // 1. Safely Parse the MathJax JSON
   let optionsArray = [];
   try {
     let optString = q.options;
     if (typeof optString === 'string') {
-      // Protect the MathJax backslashes so the JSON reader doesn't crash
       optString = optString.replace(/\\/g, '\\\\');
       optionsArray = JSON.parse(optString);
     } else {
       optionsArray = optString;
     }
   } catch(e) {
-    optionsArray = ["Error loading options"]; // Safety fallback
+    optionsArray = ["Error loading options"]; 
   }
 
-  // Generate the buttons safely
-  optionsArray.forEach((opt, index) => {
+  // 2. Package the options with a flag so we don't lose the correct one when shuffled
+  const originalCorrectIndex = parseInt(q.correct);
+  let shufflePool = optionsArray.map((text, index) => {
+    return { text: text, isCorrect: (index === originalCorrectIndex) };
+  });
+  
+  // 3. Shuffle the array randomly
+  shufflePool.sort(() => Math.random() - 0.5);
+
+  // 4. Find where the correct answer ended up after the shuffle
+  const newCorrectIndex = shufflePool.findIndex(opt => opt.isCorrect);
+
+  // 5. Generate the buttons safely
+  shufflePool.forEach((opt, index) => {
     const btn = document.createElement('button');
     btn.className = 'option-btn';
-    btn.innerHTML = opt;
+    btn.innerHTML = opt.text;
     
-    // Ensure q.correct is treated as a number
-    const correctIndex = parseInt(q.correct);
-    btn.onclick = () => checkAnswer(index, correctIndex, btn, q.explanation);
+    btn.onclick = () => checkAnswer(index, newCorrectIndex, btn, q.explanation);
     
     optionsBox.appendChild(btn);
   });

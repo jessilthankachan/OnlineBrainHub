@@ -115,10 +115,10 @@ async function loadSubtopics() {
       const icon = icons[iconIndex % icons.length];
       iconIndex++;
 
-      card.innerHTML = `
+   card.innerHTML = `
         <span class="level-icon">${icon}</span>
         <h3 class="level-name">${topicName}</h3>
-        <span class="question-count">${qCount} Questions in Pool</span>
+        <span class="question-count">Stage Unlocked</span>
       `;
       
       card.onclick = () => {

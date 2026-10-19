@@ -169,30 +169,46 @@
 }
 
     function loadQuestion() {
-      const q = gameQuestions[currentIndex];
-      
-      // Update HUD & Progress
-      document.getElementById('game-progress').style.width = `${((currentIndex) / gameQuestions.length) * 100}%`;
-      document.getElementById('q-meta').innerText = `${q.subject} • ${q.category} • Level ${q.level}`;
-      document.getElementById('q-text').innerHTML = q.question; // using innerHTML to support SVG/img tags
-      
-      // Reset Options
-      const optionsBox = document.getElementById('q-options');
-      optionsBox.innerHTML = '';
-      document.getElementById('feedback').style.display = 'none';
-      document.getElementById('next-btn').style.display = 'none';
+  const q = gameQuestions[currentIndex];
+  
+  // Update HUD & Progress
+  document.getElementById('game-progress').style.width = `${((currentIndex) / gameQuestions.length) * 100}%`;
+  document.getElementById('q-meta').innerText = `${q.subject} • ${q.category} • Level ${q.level}`;
+  
+  // Fix 1: Check for both 'question' and 'question_text' so it never says undefined
+  const questionText = q.question || q.question_text || "Error: Question text missing";
+  document.getElementById('q-text').innerHTML = questionText; 
+  
+  // Reset Options
+  const optionsBox = document.getElementById('q-options');
+  optionsBox.innerHTML = '';
+  document.getElementById('feedback').style.display = 'none';
+  document.getElementById('next-btn').style.display = 'none';
 
-      q.options.forEach((opt, index) => {
-        const btn = document.createElement('button');
-        btn.className = 'option-btn';
-        btn.innerHTML = opt;
-        btn.onclick = () => checkAnswer(index, q.correct, btn, q.explanation);
-        optionsBox.appendChild(btn);
-      });
+  // Fix 2: Convert the database text string back into a real JavaScript array
+  let optionsArray = [];
+  try {
+    optionsArray = typeof q.options === 'string' ? JSON.parse(q.options) : q.options;
+  } catch(e) {
+    optionsArray = ["Error loading options"]; // Safety fallback
+  }
 
-      // Trigger MathJax to format formulas on the new question
-      if (window.MathJax) { MathJax.typesetPromise(); }
-    }
+  // Generate the buttons safely
+  optionsArray.forEach((opt, index) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML = opt;
+    
+    // Ensure q.correct is treated as a number
+    const correctIndex = parseInt(q.correct);
+    btn.onclick = () => checkAnswer(index, correctIndex, btn, q.explanation);
+    
+    optionsBox.appendChild(btn);
+  });
+
+  // Trigger MathJax formatting
+  if (window.MathJax) { MathJax.typesetPromise(); }
+}
 
     function checkAnswer(selectedIndex, correctIndex, clickedBtn, explanation) {
       const buttons = document.querySelectorAll('.option-btn');

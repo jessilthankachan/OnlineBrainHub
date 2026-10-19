@@ -312,12 +312,12 @@ async function finalizeXP() {
         body: JSON.stringify({
           action: 'save_xp',
           username: savedUsername,
-          xpEarned: sessionXP,
+          xpEarned: sessionXP || 0,
           subject: targetSubject,
           topic: targetTopic || targetCategory,
-          score: score,                       // Sends the correct answers count
-          totalQuestions: gameQuestions.length, // Sends the total questions count
-          hearts: lives                       // Sends remaining health/hearts
+          score: (typeof score !== 'undefined') ? score : 0, 
+          totalQuestions: (typeof gameQuestions !== 'undefined') ? gameQuestions.length : 0, 
+          hearts: (typeof lives !== 'undefined') ? lives : 0
         })
       });
     } catch (e) {

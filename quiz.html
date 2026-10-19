@@ -120,7 +120,7 @@
 
     async function initGame() {
   try {
-    const res = await fetch('/api/questions');
+    const res = await fetch('/api/questions?nocache=' + new Date().getTime());
     const allQuestions = await res.json();
     
     // 1. Filter by Subject, Category, and Topic
@@ -176,7 +176,7 @@
   document.getElementById('q-meta').innerText = `${q.subject} • ${q.category} • Level ${q.level}`;
   
   // Fix 1: Check for both 'question' and 'question_text' so it never says undefined
-  const questionText = q.question || q.question_text || "Error: Question text missing";
+  const questionText = q.question || q.question_text || `<span style="color:#ff7675; font-size:0.6em;">Data missing. Raw API Output:<br>${JSON.stringify(q)}</span>`;
   document.getElementById('q-text').innerHTML = questionText; 
   
   // Reset Options

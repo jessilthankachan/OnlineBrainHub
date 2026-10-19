@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Login - Online Brain Hub</title>
+  <style>
+    :root { --bg: #1e272e; --panel: #2d3436; --primary: #0984e3; --accent: #fdcb6e; --text: #f5f6fa; --success: #00b894;}
+    body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+    .login-card { background: var(--panel); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%; max-width: 400px; text-align: center; }
+    h1 { margin-top: 0; color: var(--primary); }
+    .toggle-btn { background: none; border: none; color: #b2bec3; cursor: pointer; margin-bottom: 5px; font-weight: bold; text-decoration: underline; }
+    .recovery-btn { font-size: 0.8em; color: #ff7675; margin-bottom: 20px; display: block; }
+    input, select { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: none; background: #353b48; color: white; font-size: 1em; box-sizing: border-box; }
+    .play-btn { background: var(--accent); color: #2d3436; border: none; padding: 15px; width: 100%; font-size: 1.2em; font-weight: bold; border-radius: 10px; cursor: pointer; box-shadow: 0 4px 0 #e1b12c; margin-top: 15px; }
+    .play-btn:active { transform: translateY(4px); box-shadow: none; }
+    #error-msg { color: #ff7675; font-weight: bold; margin-bottom: 15px; min-height: 20px; }
+    .cf-turnstile { margin-bottom: 15px; display: flex; justify-content: center; }
+    
+    /* Recovery Key Pop-up Styles */
+    .recovery-box { display: none; background: #000; border: 2px dashed var(--success); padding: 20px; border-radius: 10px; margin-top: 20px; }
+    .recovery-code { color: var(--success); font-size: 1.5em; font-weight: bold; letter-spacing: 2px; margin: 10px 0; display: block;}
+  </style>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+
+  <div class="login-card" id="main-form">
+    <h1 id="form-title">Load Profile</h1>
+    <button class="toggle-btn" onclick="setMode('register')" id="toggle-register">Need an account? Create Player</button>
+    <button class="toggle-btn" onclick="setMode('login')" id="toggle-login" style="display:none;">Already have a profile? Load it</button>
+    <button class="toggle-btn recovery-btn" onclick="setMode('recover')" id="toggle-recover">Forgot Secret Answer?</button>
+    
+    <div id="error-msg"></div>
+
+    <input type="text" id="username" placeholder="Player Username" autocomplete="off">
+    
+    <!-- Only shows during Recovery mode -->
+    <input type="text" id="recovery-key-input" placeholder="Recovery Key (e.g. OBH-XXXX-XXXX)" style="display:none;" autocomplete="off">
+    
+    <select id="security-question" style="display: none;">
+      <option value="pet">What was the name of your first pet?</option>
+      <option value="hero">Who is your favorite superhero?</option>
+      <option value="food">What is your favorite food?</option>
+      <option value="city">In what city were you born?</option>
+    </select>
+    
+    <input type="password" id="security-answer" placeholder="Secret Answer" autocomplete="off">
+
+    <!-- REPLACE WITH YOUR ACTUAL SITE KEY -->
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAFbcYm7KvA_fcQaa" data-theme="dark"></div>
+
+    <button class="play-btn" id="submit-btn" onclick="submitAuth()">Start Playing ➔</button>
+  </div>
+
+  <!-- Success Screen showing the generated Recovery Key -->
+  <div class="login-card" id="success-screen" style="display:none;">
+    <h1 style="color: var(--success)">Player Created!</h1>
+    <p>Your profile is ready. If you ever forget your secret answer, you will need this Recovery Key to reset your account.</p>
+    <div class="recovery-box" style="display: block;">
+      Copy and save this securely:
+      <span class="recovery-code" id="new-recovery-key">OBH-XXXX-XXXX</span>
+    </div>
+    <button class="play-btn" onclick="goToHub()" style="margin-top: 30px;">I saved it. Let's Play! ➔</button>
+  </div>
+
+  <script>
+    let currentMode = 'login'; // 'login', 'register', or 'recover'
+
+    if (localStorage.getItem('obh_username')) {
+      window.location.href = '/';
+    }
+
+    function setMode(mode) {
+      currentMode = mode;
+      document.getElementById('error-msg').innerText = "";
+      
+      const isLogin = mode === 'login';
+      const isReg = mode === 'register';
+      const isRec = mode === 'recover';
+
+      document.getElementById('form-title').innerText = isReg ? "New Player" : (isRec ? "Account Recovery" : "Load Profile");
+      
+      document.getElementById('toggle-register').style.display = (isLogin || isRec) ? "block" : "none";
+      document.getElementById('toggle-login').style.display = (isReg || isRec) ? "block" : "none";
+      document.getElementById('toggle-recover').style.display = isLogin ? "block" : "none";
+      
+      document.getElementById('security-question').style.display = (isReg || isRec) ? "block" : "none";
+      
+      document.getElementById('recovery-key-input').style.display = isRec ? "block" : "none";
+      
+      document.getElementById('security-answer').placeholder = isRec ? "New Secret Answer" : "Secret Answer";
+      document.getElementById('submit-btn').innerText = isRec ? "Reset Account" : "Start Playing ➔";
+    }
+
+    async function submitAuth() {
+      const username = document.getElementById('username').value.trim();
+      const securityAnswer = document.getElementById('security-answer').value.trim();
+      const securityQuestion = document.getElementById('security-question').value;
+      const recoveryKey = document.getElementById('recovery-key-input').value.trim();
+      
+      const turnstileToken = document.querySelector('[name="cf-turnstile-response"]')?.value;
+
+      if (!username || !securityAnswer || (currentMode === 'recover' && !recoveryKey)) {
+        document.getElementById('error-msg').innerText = "Please fill in all fields.";
+        return;
+      }
+      if (!turnstileToken) {
+        document.getElementById('error-msg').innerText = "Please wait for the bot check.";
+        return;
+      }
+
+      document.getElementById('error-msg').innerText = "Connecting...";
+
+      try {
+        // Build payload dynamically based on mode
+        const payload = { action: currentMode, username, turnstileToken };
+        
+        if (currentMode === 'login') {
+          payload.securityAnswer = securityAnswer;
+        } else if (currentMode === 'register') {
+          payload.securityQuestion = securityQuestion;
+          payload.securityAnswer = securityAnswer;
+        } else if (currentMode === 'recover') {
+          payload.recoveryKey = recoveryKey;
+          payload.newSecurityQuestion = securityQuestion;
+          payload.newSecurityAnswer = securityAnswer;
+        }
+
+        const res = await fetch('/api/user', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await res.json();
+
+        if (result.success) {
+          // Save Player info to Browser Storage
+          localStorage.setItem('obh_username', result.username);
+          localStorage.setItem('brainhub_xp', result.xp);
+          
+          if (currentMode === 'register') {
+            // Show the Recovery Key screen instead of instantly redirecting
+            document.getElementById('main-form').style.display = 'none';
+            document.getElementById('success-screen').style.display = 'block';
+            document.getElementById('new-recovery-key').innerText = result.recoveryKey;
+          } else {
+            window.location.href = '/';
+          }
+        } else {
+          document.getElementById('error-msg').innerText = result.error;
+          turnstile.reset();
+        }
+      } catch (err) {
+        document.getElementById('error-msg').innerText = "Server error. Try again.";
+      }
+    }
+
+    function goToHub() {
+      window.location.href = '/';
+    }
+  </script>
+</body>
+</html>

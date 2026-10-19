@@ -294,12 +294,34 @@
       finalizeXP();
     }
 
-    function finalizeXP() {
-      document.getElementById('earned-xp').innerText = `${sessionXP} XP`;
-      // Save to local storage for now (Will be replaced by Database API when we add Login)
-      let totalXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;
-      localStorage.setItem('brainhub_xp', totalXP + sessionXP);
+async function finalizeXP() {
+  // 1. Update the local display
+  let currentLocalXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;
+  let newTotal = currentLocalXP + sessionXP;
+  
+  document.getElementById('earned-xp').innerText = `${sessionXP} XP!`;
+  localStorage.setItem('brainhub_xp', newTotal);
+
+  // 2. Sync to Database if logged in
+  const savedUsername = localStorage.getItem('obh_username');
+  if (savedUsername && sessionXP > 0) {
+    try {
+      await fetch('/api/user', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'save_xp',
+          username: savedUsername,
+          xpEarned: sessionXP,
+          subject: targetSubject, // Sending the subject
+          topic: targetTopic || targetCategory // Sending the specific topic
+        })
+      });
+    } catch (e) {
+      console.error("Failed to save XP to cloud.");
     }
+  }
+}
 
     function quitGame() {
       // Go back to the specific subject hub

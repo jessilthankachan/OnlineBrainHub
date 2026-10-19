@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Profile - Online Brain Hub</title>
+  <style>
+    :root { --bg: #1e272e; --panel: #2d3436; --primary: #0984e3; --accent: #fdcb6e; --text: #f5f6fa; }
+    body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); padding: 20px; }
+    
+    .header { text-align: center; margin-bottom: 40px; }
+    .username { font-size: 2.5em; color: var(--primary); margin: 0; text-transform: uppercase; letter-spacing: 2px;}
+    .total-xp { font-size: 1.5em; color: var(--accent); font-weight: bold; margin-top: 10px;}
+    
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+    .subject-card { background: var(--panel); padding: 20px; border-radius: 15px; box-shadow: 0 8px 0 rgba(0,0,0,0.2); }
+    .subject-title { border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-top: 0; color: #00cec9; }
+    
+    .topic-row { display: flex; justify-content: space-between; align-items: center; margin: 15px 0; background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;}
+    .topic-name { font-weight: bold; }
+    .topic-stats { color: var(--accent); font-weight: bold; }
+    .topic-plays { font-size: 0.8em; color: #b2bec3; display: block; text-align: right;}
+    
+    .back-btn { display: block; width: 200px; margin: 40px auto; background: rgba(255,255,255,0.1); text-align: center; padding: 15px; border-radius: 30px; text-decoration: none; color: white; font-weight: bold; }
+    .back-btn:hover { background: rgba(255,255,255,0.2); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1 class="username" id="display-name">Loading Profile...</h1>
+    <div class="total-xp">⭐ <span id="display-xp">0</span> Total XP</div>
+  </div>
+
+  <div class="stats-grid" id="stats-container">
+    <!-- Progress cards will be generated here -->
+  </div>
+
+  <a href="/" class="back-btn">← Back to Hub</a>
+
+  <script>
+    async function loadProfile() {
+      const username = localStorage.getItem('obh_username');
+      if (!username) {
+        window.location.href = '/login.html';
+        return;
+      }
+
+      document.getElementById('display-name').innerText = username;
+
+      try {
+        const res = await fetch('/api/user', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'get_profile', username: username })
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          document.getElementById('display-xp').innerText = data.xp;
+          renderStats(data.progress);
+        }
+      } catch (e) {
+        document.getElementById('stats-container').innerHTML = "<p style='text-align:center'>Failed to load stats.</p>";
+      }
+    }
+
+    function renderStats(progressObj) {
+      const container = document.getElementById('stats-container');
+      container.innerHTML = '';
+
+      // Loop through Subjects (e.g., Maths, Science)
+      for (const [subject, topics] of Object.entries(progressObj)) {
+        let cardHtml = `<div class="subject-card">
+                          <h2 class="subject-title">${subject} Mastery</h2>`;
+        
+        // Loop through Topics in that Subject (e.g., Derivatives, Limits)
+        for (const [topic, stats] of Object.entries(topics)) {
+          cardHtml += `
+            <div class="topic-row">
+              <div class="topic-name">${topic}</div>
+              <div>
+                <span class="topic-stats">${stats.xp} XP</span>
+                <span class="topic-plays">${stats.plays} Quizzes Played</span>
+              </div>
+            </div>
+          `;
+        }
+        cardHtml += `</div>`;
+        container.innerHTML += cardHtml;
+      }
+
+      if (container.innerHTML === '') {
+        container.innerHTML = "<p style='text-align:center; color:#b2bec3; width:100%;'>Play some games to start tracking your mastery!</p>";
+      }
+    }
+
+    loadProfile();
+  </script>
+</body>
+</html>

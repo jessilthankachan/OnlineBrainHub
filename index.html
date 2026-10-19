@@ -3,118 +3,226 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Brain Hub - Practice Quiz</title>
+  <title>Online Brain Hub</title>
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: 20px auto; background-color: #f4f7f6; padding: 20px; }
-    .question-card { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .meta { font-size: 0.8em; color: #666; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;}
-    .options { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
-    .option-btn { padding: 12px; border: 1px solid #ccc; background: #fff; cursor: pointer; text-align: left; border-radius: 6px; font-size: 1em; transition: 0.2s;}
-    .option-btn:hover { background: #f0f0f0; }
+    :root {
+      --bg-color: #f0f2f5;
+      --primary: #6c5ce7;
+      --secondary: #00cec9;
+      --accent: #fdcb6e;
+      --text: #2d3436;
+    }
     
-    /* Colors for answer feedback */
-    .correct { background: #d4edda !important; border-color: #c3e6cb !important; color: #155724; font-weight: bold;}
-    .wrong { background: #f8d7da !important; border-color: #f5c6cb !important; color: #721c24; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text); }
     
-    .hint-btn { margin-top: 15px; background: #ffc107; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-size: 0.9em; font-weight: bold;}
-    .hint-btn:hover { background: #e0a800; }
+    /* Header & Navigation */
+    header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100;}
+    .logo { font-size: 1.5em; font-weight: 800; color: var(--primary); margin: 0; }
+    .login-btn { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 0 #4a3eb1;}
+    .login-btn:hover { transform: translateY(2px); box-shadow: 0 2px 0 #4a3eb1; }
+
+    /* Ad Banners */
+    .ad-banner { background: #e2e2e2; border: 2px dashed #b2bec3; display: flex; align-items: center; justify-content: center; color: #636e72; font-weight: bold; text-align: center;}
+    .ad-top { width: 100%; max-width: 728px; height: 90px; margin: 20px auto; }
     
-    .hint-text, .explanation-text { margin-top: 10px; padding: 12px; border-radius: 6px; display: none; line-height: 1.5;}
+    /* Main Layout */
+    .layout { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 20px; gap: 30px; }
+    .main-content { flex: 1; }
+    .sidebar { width: 300px; display: none; }
+    @media(min-width: 900px) { .sidebar { display: block; } } /* Hide sidebar on mobile */
+    .ad-sticky { width: 300px; height: 600px; position: sticky; top: 90px; }
+
+    /* Game Lobby */
+    #lobby-view { display: block; }
+    .daily-challenge { background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 15px; padding: 30px; color: white; text-align: center; margin-bottom: 30px; box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);}
+    .daily-challenge h2 { margin-top: 0; font-size: 2em;}
+    .play-btn { background: var(--accent); color: #2d3436; border: none; padding: 15px 40px; font-size: 1.2em; font-weight: bold; border-radius: 30px; cursor: pointer; box-shadow: 0 5px 0 #e1b35c; transition: 0.2s;}
+    .play-btn:hover { transform: translateY(3px); box-shadow: 0 2px 0 #e1b35c; }
+
+    .topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .topic-card { background: white; border-radius: 15px; padding: 25px; text-align: center; cursor: pointer; transition: 0.3s; border: 2px solid transparent; box-shadow: 0 4px 10px rgba(0,0,0,0.05);}
+    .topic-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(108, 92, 231, 0.15);}
+    .topic-icon { font-size: 3em; margin-bottom: 10px; }
+    .topic-title { font-size: 1.2em; font-weight: bold; margin: 0; }
+
+    /* Quiz View (Hidden initially) */
+    #quiz-view { display: none; }
+    .back-btn { background: none; border: none; color: var(--primary); font-weight: bold; cursor: pointer; font-size: 1.1em; margin-bottom: 20px; padding: 0;}
+    .back-btn:hover { text-decoration: underline; }
+    
+    /* Existing Quiz Styles */
+    .question-card { background: white; padding: 25px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .meta { font-size: 0.85em; color: #636e72; margin-bottom: 15px; font-weight: bold;}
+    .options { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+    .option-btn { padding: 15px; border: 2px solid #dfe6e9; background: #fff; cursor: pointer; text-align: left; border-radius: 10px; font-size: 1em; font-weight: 600; transition: 0.2s;}
+    .option-btn:hover { border-color: var(--primary); background: #f8f9fa;}
+    .correct { background: #00cec9 !important; border-color: #00cec9 !important; color: white;}
+    .wrong { background: #ff7675 !important; border-color: #ff7675 !important; color: white; }
+    .hint-btn { margin-top: 20px; background: #ffeaa7; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: bold; color: #d63031;}
+    .hint-text, .explanation-text { margin-top: 15px; padding: 15px; border-radius: 8px; display: none; line-height: 1.5; font-size: 0.95em;}
     .hint-text { background: #fff3cd; color: #856404; border: 1px solid #ffeeba;}
     .explanation-text { background: #e2e3e5; color: #383d41; border: 1px solid #d6d8db;}
   </style>
 </head>
 <body>
-  <h1>Online Brain Hub - Quiz</h1>
-  <div id="quiz-container">Loading questions...</div>
+
+  <header>
+    <h1 class="logo">🧠 BrainHub</h1>
+    <button class="login-btn" onclick="alert('Login system coming soon!')">Login / Save Progress</button>
+  </header>
+
+  <!-- Top AdSense Banner Placeholder -->
+  <div class="ad-banner ad-top">
+    AdSense Top Banner (728x90)
+  </div>
+
+  <div class="layout">
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- LOBBY VIEW -->
+      <div id="lobby-view">
+        <section class="daily-challenge">
+          <h2>🔥 Daily Challenge</h2>
+          <p>Test your skills with today's mixed trivia!</p>
+          <button class="play-btn" onclick="startQuiz('All')">Play Now</button>
+        </section>
+
+        <h3 style="margin-top: 40px;">Select a Topic</h3>
+        <div class="topics-grid">
+          <a href="maths.html" style="text-decoration: none; color: inherit;">
+  <div class="topic-card">
+    <div class="topic-icon">📐</div>
+    <p class="topic-title">Mathematics</p>
+  </div>
+</a>
+          <div class="topic-card" onclick="startQuiz('Science')">
+            <div class="topic-icon">🔬</div>
+            <p class="topic-title">Science</p>
+          </div>
+          <div class="topic-card" onclick="startQuiz('History')">
+            <div class="topic-icon">🏛️</div>
+            <p class="topic-title">History</p>
+          </div>
+          <div class="topic-card" onclick="startQuiz('Geography')">
+            <div class="topic-icon">🌍</div>
+            <p class="topic-title">Geography</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ VIEW -->
+      <div id="quiz-view">
+        <button class="back-btn" onclick="showLobby()">← Back to Lobby</button>
+        <h2 id="quiz-title">Quiz Mode</h2>
+        <div id="quiz-container">Loading questions...</div>
+      </div>
+
+    </main>
+
+    <!-- Right Sticky AdSense Sidebar -->
+    <aside class="sidebar">
+      <div class="ad-banner ad-sticky">
+        AdSense Sticky Sidebar<br>(300x600)
+      </div>
+    </aside>
+  </div>
 
   <script>
-    async function loadQuiz() {
-      const container = document.getElementById('quiz-container');
-      
+    let allQuestions = [];
+
+    // 1. Fetch all questions in the background when the page loads
+    async function fetchDatabase() {
       try {
         const response = await fetch('/api/questions');
-        const questions = await response.json();
-        
-        container.innerHTML = ''; 
-
-        if (questions.length === 0) {
-          container.innerHTML = '<p>No questions found. Add some in the admin panel!</p>';
-          return;
-        }
-
-        questions.forEach((q, qIndex) => {
-          const card = document.createElement('div');
-          card.className = 'question-card';
-
-          // 1. Breadcrumbs / Meta Data
-          let html = `<div class="meta">${q.subject} > ${q.category} > ${q.topic} | Level: ${q.level} | ID: ${q.id}</div>`;
-          
-          // 2. Question Text
-          html += `<h3>${qIndex + 1}. ${q.question}</h3>`;
-
-          // 3. Options mapped as buttons
-          html += `<div class="options" id="options-${q.id}">`;
-          q.options.forEach((opt, optIndex) => {
-            // Pass the selected index and the actual correct index to the check function
-            html += `<button class="option-btn" onclick="checkAnswer('${q.id}', ${optIndex}, ${q.correct})">${opt}</button>`;
-          });
-          html += `</div>`;
-
-          // 4. Hint Button & Text
-          if (q.hint) {
-            html += `<button class="hint-btn" onclick="toggleHint('${q.id}')">💡 Show Hint</button>`;
-            html += `<div class="hint-text" id="hint-${q.id}"><strong>Hint:</strong> ${q.hint}</div>`;
-          }
-
-          // 5. Explanation Section (Hidden initially)
-          html += `<div class="explanation-text" id="exp-${q.id}">📖 <strong>Explanation:</strong> ${q.explanation || 'No explanation available.'}</div>`;
-
-          card.innerHTML = html;
-          container.appendChild(card);
-        });
+        allQuestions = await response.json();
       } catch (error) {
-        container.innerHTML = '<p>Error loading questions. Ensure your database is linked and API is running.</p>';
+        console.error('Failed to load database.');
       }
     }
 
-    // Evaluates the clicked option against the database's correct index
+    // 2. Switch from Lobby to Quiz View
+    window.startQuiz = function(subjectFilter) {
+      document.getElementById('lobby-view').style.display = 'none';
+      document.getElementById('quiz-view').style.display = 'block';
+      
+      let filteredQuestions = allQuestions;
+      
+      if (subjectFilter !== 'All') {
+        document.getElementById('quiz-title').innerText = subjectFilter + ' Challenge';
+        // Frontend filtering based on the subject clicked
+        filteredQuestions = allQuestions.filter(q => q.subject.toLowerCase() === subjectFilter.toLowerCase());
+      } else {
+        document.getElementById('quiz-title').innerText = 'Daily Mixed Challenge';
+      }
+
+      renderQuiz(filteredQuestions);
+    };
+
+    // 3. Switch back to Lobby
+    window.showLobby = function() {
+      document.getElementById('quiz-view').style.display = 'none';
+      document.getElementById('lobby-view').style.display = 'block';
+    };
+
+    // 4. Render the filtered questions (Your existing logic)
+    function renderQuiz(questions) {
+      const container = document.getElementById('quiz-container');
+      container.innerHTML = ''; 
+
+      if (questions.length === 0) {
+        container.innerHTML = '<div class="question-card">No questions available for this topic yet!</div>';
+        return;
+      }
+
+      questions.forEach((q, qIndex) => {
+        const card = document.createElement('div');
+        card.className = 'question-card';
+
+        let html = `<div class="meta">${q.subject} > ${q.category} > ${q.topic} | Level: ${q.level}</div>`;
+        html += `<h3>${qIndex + 1}. ${q.question}</h3>`;
+        html += `<div class="options" id="options-${q.id}">`;
+        
+        q.options.forEach((opt, optIndex) => {
+          html += `<button class="option-btn" onclick="checkAnswer('${q.id}', ${optIndex}, ${q.correct})">${opt}</button>`;
+        });
+        html += `</div>`;
+
+        if (q.hint) {
+          html += `<button class="hint-btn" onclick="toggleHint('${q.id}')">💡 Show Hint</button>`;
+          html += `<div class="hint-text" id="hint-${q.id}"><strong>Hint:</strong> ${q.hint}</div>`;
+        }
+
+        html += `<div class="explanation-text" id="exp-${q.id}">📖 <strong>Explanation:</strong> ${q.explanation || 'No explanation available.'}</div>`;
+
+        card.innerHTML = html;
+        container.appendChild(card);
+      });
+    }
+
+    // 5. Answer Checking Logic
     window.checkAnswer = function(qId, selectedIndex, correctIndex) {
       const optionsDiv = document.getElementById(`options-${qId}`);
       const buttons = optionsDiv.getElementsByTagName('button');
       const explanation = document.getElementById(`exp-${qId}`);
 
-      // Lock all buttons so the user can only guess once per question
       for (let i = 0; i < buttons.length; i++) {
         buttons[i].disabled = true;
         buttons[i].style.cursor = 'not-allowed';
-        
-        // Apply green to correct answer, red to wrong user selection
-        if (i === correctIndex) {
-          buttons[i].classList.add('correct');
-        } else if (i === selectedIndex && selectedIndex !== correctIndex) {
-          buttons[i].classList.add('wrong');
-        }
+        if (i === correctIndex) buttons[i].classList.add('correct');
+        else if (i === selectedIndex && selectedIndex !== correctIndex) buttons[i].classList.add('wrong');
       }
 
-      // Automatically reveal the explanation after an answer is chosen
-      if (explanation) {
-        explanation.style.display = 'block';
-      }
+      if (explanation) explanation.style.display = 'block';
     };
 
-    // Toggles the hint visibility
     window.toggleHint = function(qId) {
       const hintDiv = document.getElementById(`hint-${qId}`);
-      if (hintDiv.style.display === 'none' || hintDiv.style.display === '') {
-        hintDiv.style.display = 'block';
-      } else {
-        hintDiv.style.display = 'none';
-      }
+      hintDiv.style.display = hintDiv.style.display === 'block' ? 'none' : 'block';
     };
 
-    // Start execution
-    loadQuiz();
+    // Boot up
+    fetchDatabase();
   </script>
 </body>
 </html>

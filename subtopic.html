@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Level - Online Brain Hub</title>
+  <style>
+    :root {
+      --bg-color: #1e272e;
+      --panel-bg: #2d3436;
+      --primary: #0984e3;
+      --accent: #fdcb6e;
+      --text: #f5f6fa;
+    }
+    
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text); display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 20px;}
+    
+    header { width: 100%; max-width: 900px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; margin-top: 20px;}
+    .back-btn { background: rgba(255,255,255,0.1); border: none; color: white; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.2s;}
+    .back-btn:hover { background: rgba(255,255,255,0.2); }
+    
+    .stage-header { text-align: center; margin-bottom: 40px; }
+    .world-title { font-size: 1.2em; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; margin: 0; font-weight: 800;}
+    .category-title { font-size: 2.5em; margin: 10px 0; text-shadow: 0 4px 10px rgba(0,0,0,0.5);}
+
+    /* Game Level Grid */
+    .level-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; width: 100%; max-width: 900px;}
+    
+    .level-card { background: var(--panel-bg); border-radius: 20px; padding: 30px 20px; text-align: center; cursor: pointer; border: 3px solid transparent; box-shadow: 0 8px 0 rgba(0,0,0,0.2); transition: all 0.2s ease; position: relative; overflow: hidden;}
+    .level-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 13px 0 rgba(0,0,0,0.2);}
+    .level-card:active { transform: translateY(3px); box-shadow: 0 0px 0 rgba(0,0,0,0.2); }
+    
+    .level-icon { font-size: 3em; margin-bottom: 15px; display: block;}
+    .level-name { font-size: 1.4em; font-weight: bold; margin: 0;}
+    .question-count { font-size: 0.9em; color: #b2bec3; margin-top: 10px; display: block; font-weight: bold;}
+    
+    .loading { font-size: 1.5em; color: var(--accent); animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button class="back-btn" onclick="goBack()">← Back to Hub</button>
+    <div style="font-weight: bold; color: var(--accent);">⭐ Select a Stage</div>
+  </header>
+
+  <div class="stage-header">
+    <h3 class="world-title" id="world-title">Loading World...</h3>
+    <h1 class="category-title" id="category-title">Select Level</h1>
+  </div>
+
+  <div class="level-grid" id="level-grid">
+    <div class="loading">Generating levels from database...</div>
+  </div>
+
+  <script>
+    // Parse URL Parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetSubject = urlParams.get('subject');
+    const targetCategory = urlParams.get('category');
+
+    // Update Headers
+    if (targetSubject && targetCategory) {
+      document.getElementById('world-title').innerText = `${targetSubject} World`;
+      document.getElementById('category-title').innerText = targetCategory;
+    }
+
+    async function loadSubtopics() {
+      try {
+        const res = await fetch('/api/questions');
+        const allQuestions = await res.json();
+        
+        // Filter questions by Subject and Category
+        const categoryQuestions = allQuestions.filter(q => 
+          q.subject.toLowerCase() === targetSubject.toLowerCase() && 
+          q.category.toLowerCase() === targetCategory.toLowerCase()
+        );
+
+        const grid = document.getElementById('level-grid');
+        grid.innerHTML = ''; // Clear loading text
+
+        if (categoryQuestions.length === 0) {
+          grid.innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">No stages unlocked here yet! Add questions in the Admin panel.</div>';
+          return;
+        }
+
+        // Extract unique Topics and count how many questions each has
+        const topicMap = {};
+        categoryQuestions.forEach(q => {
+          if (!topicMap[q.topic]) {
+            topicMap[q.topic] = 0;
+          }
+          topicMap[q.topic]++;
+        });
+
+        // Generate a game button for each unique topic
+        const icons = ['🎯', '⚡', '🚀', '🔥', '🧩', '⚔️', '🔮', '🏆'];
+        let iconIndex = 0;
+
+        for (const [topicName, qCount] of Object.entries(topicMap)) {
+          const card = document.createElement('div');
+          card.className = 'level-card';
+          
+          // Assign a random game icon
+          const icon = icons[iconIndex % icons.length];
+          iconIndex++;
+
+          card.innerHTML = `
+            <span class="level-icon">${icon}</span>
+            <h3 class="level-name">${topicName}</h3>
+            <span class="question-count">${qCount} Challenges Available</span>
+          `;
+          
+          card.onclick = () => {
+            // Send user to the quiz, passing the specific topic
+            window.location.href = \`/quiz.html?subject=\${encodeURIComponent(targetSubject)}&category=\${encodeURIComponent(targetCategory)}&topic=\${encodeURIComponent(topicName)}\`;
+          };
+          
+          grid.appendChild(card);
+        }
+      } catch (error) {
+        document.getElementById('level-grid').innerHTML = 'Error connecting to the game server.';
+      }
+    }
+
+    function goBack() {
+      window.location.href = \`/\${targetSubject.toLowerCase()}.html\`;
+    }
+
+    // Boot
+    loadSubtopics();
+  </script>
+</body>
+</html>

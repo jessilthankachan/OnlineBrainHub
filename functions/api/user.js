@@ -85,6 +85,7 @@ export async function onRequestPost(context) {
     }
 
     // 5. SAVE XP PROGRESS
+// 5. SAVE XP PROGRESS (Now tracks Score & Hearts)
     else if (data.action === 'save_xp') {
       const user = await db.prepare("SELECT progress_data FROM users WHERE username = ?").bind(data.username).first();
       let prog = {};
@@ -92,9 +93,29 @@ export async function onRequestPost(context) {
 
       if (data.subject && data.topic) {
         if (!prog[data.subject]) prog[data.subject] = {};
-        if (!prog[data.subject][data.topic]) prog[data.subject][data.topic] = { xp: 0, plays: 0 };
-        prog[data.subject][data.topic].xp += parseInt(data.xpEarned);
+        // Initialize new topic stats if they don't exist
+        if (!prog[data.subject][data.topic]) {
+          prog[data.subject][data.topic] = { xp: 0, plays: 0, best_score: 0, best_score_total: 0, max_hearts: 0 };
+        }
+        
+        // Add XP and Plays
+        prog[data.subject][data.topic].xp += parseInt(data.xpEarned || 0);
         prog[data.subject][data.topic].plays += 1;
+        
+        // Update Best Score if the new score is higher
+        if (data.score !== undefined && data.totalQuestions !== undefined) {
+          if (data.score > (prog[data.subject][data.topic].best_score || 0)) {
+            prog[data.subject][data.topic].best_score = parseInt(data.score);
+            prog[data.subject][data.topic].best_score_total = parseInt(data.totalQuestions);
+          }
+        }
+        
+        // Update Max Hearts if they survived with more health this time
+        if (data.hearts !== undefined) {
+          if (data.hearts > (prog[data.subject][data.topic].max_hearts || 0)) {
+            prog[data.subject][data.topic].max_hearts = parseInt(data.hearts);
+          }
+        }
       }
 
       await db.prepare("UPDATE users SET xp = xp + ?, progress_data = ? WHERE username = ?")

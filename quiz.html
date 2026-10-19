@@ -294,17 +294,39 @@
       finalizeXP();
     }
 
-async function finalizeXP() {
-  // 1. Update the local display
-  let currentLocalXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;
-  let newTotal = currentLocalXP + sessionXP;
-  
-  document.getElementById('earned-xp').innerText = `${sessionXP} XP!`;
-  localStorage.setItem('brainhub_xp', newTotal);
 
-  // 2. Sync to Database if logged in
+async function finalizeXP() {
+  // 1. Update local display
+  let currentLocalXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;
+  localStorage.setItem('brainhub_xp', currentLocalXP + sessionXP);
+  if (document.getElementById('earned-xp')) {
+      document.getElementById('earned-xp').innerText = `${sessionXP} XP!`;
+  }
+
+  // 2. Sync to Database
   const savedUsername = localStorage.getItem('obh_username');
   if (savedUsername && sessionXP > 0) {
+    
+    // FIX 1: Safely grab the Subject and Topic directly from the browser URL!
+    // This guarantees the Level Data will NEVER be missing in the profile.
+    const urlParams = new URLSearchParams(window.location.search);
+    const safeSubject = urlParams.get('subject') || 'General';
+    const safeTopic = urlParams.get('topic') || urlParams.get('subtopic') || 'Quiz';
+
+    // FIX 2: Map the exact variables your game uses for scores.
+    // We check common names: correctAnswers, score, correctCount, etc.
+    let finalScore = 0;
+    if (typeof correctAnswers !== 'undefined') finalScore = correctAnswers;
+    else if (typeof score !== 'undefined') finalScore = score;
+
+    let finalTotal = 0;
+    if (typeof questions !== 'undefined') finalTotal = questions.length;
+    else if (typeof gameQuestions !== 'undefined') finalTotal = gameQuestions.length;
+
+    let finalHearts = 0;
+    if (typeof lives !== 'undefined') finalHearts = lives;
+    else if (typeof currentHealth !== 'undefined') finalHearts = currentHealth;
+
     try {
       await fetch('/api/user', {
         method: 'POST',
@@ -312,16 +334,16 @@ async function finalizeXP() {
         body: JSON.stringify({
           action: 'save_xp',
           username: savedUsername,
-          xpEarned: sessionXP || 0,
-          subject: targetSubject,
-          topic: targetTopic || targetCategory,
-          score: (typeof score !== 'undefined') ? score : 0, 
-          totalQuestions: (typeof gameQuestions !== 'undefined') ? gameQuestions.length : 0, 
-          hearts: (typeof lives !== 'undefined') ? lives : 0
+          xpEarned: sessionXP,
+          subject: safeSubject,
+          topic: safeTopic,
+          score: finalScore,
+          totalQuestions: finalTotal,
+          hearts: finalHearts
         })
       });
     } catch (e) {
-      console.error("Failed to save XP to cloud.");
+      console.error("Failed to save progress to cloud.");
     }
   }
 }

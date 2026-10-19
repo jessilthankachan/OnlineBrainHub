@@ -45,7 +45,11 @@
 
   <div class="header">
     <h1 class="username" id="display-name">Loading Profile...</h1>
-    <div class="total-xp">⭐ <span id="display-xp">0</span> Total XP</div>
+   <div class="total-xp">
+  ⭐ <span id="display-xp">0</span> Total XP 
+  <span style="color: rgba(255,255,255,0.3); margin: 0 10px;">|</span> 
+  <span style="color: #00cec9;">Level <span id="display-level">1</span></span>
+</div>
   </div>
 
   <div class="stats-grid" id="stats-container">
@@ -78,8 +82,10 @@
         });
         const data = await res.json();
 
-        if (data.success) {
+   if (data.success) {
           document.getElementById('display-xp').innerText = data.xp;
+          // Calculate Level: Every 100 XP = 1 Level Up!
+          document.getElementById('display-level').innerText = Math.floor(data.xp / 100) + 1; 
           renderStats(data.progress);
         }
       } catch (e) {

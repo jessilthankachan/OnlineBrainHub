@@ -20,7 +20,7 @@
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text); display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden;}
     
     /* Game HUD (Heads Up Display) */
-    .hud { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.3); border-bottom: 2px solid rgba(255,255,255,0.1);}
+    .hud { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.3); border-bottom: 2px solid rgba(255,255,255,0.1);}
     .hud-item { font-size: 1.2em; font-weight: bold; display: flex; align-items: center; gap: 8px;}
     .lives { color: #ff7675; letter-spacing: 2px; }
     .score { color: var(--accent); }
@@ -31,8 +31,50 @@
     .progress-container { width: 100%; height: 8px; background: #636e72; }
     .progress-bar { height: 100%; width: 0%; background: var(--success); transition: width 0.3s ease; }
 
+    /* Layout structure for Ads */
+    .page-layout {
+      display: flex;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+      width: 100%;
+      box-sizing: border-box;
+      flex: 1; /* Pushes footer/bottom down */
+    }
+
+    /* Main Content Area (Ads + Game Stage) */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Sidebar for Sticky Ad */
+    .sidebar {
+      width: 300px;
+      flex-shrink: 0;
+    }
+
+    /* Ad Placeholders */
+    .ad-space {
+      background: rgba(0,0,0,0.2);
+      border: 2px dashed rgba(255,255,255,0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b2bec3;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    .top-ad { width: 100%; min-height: 90px; }
+    .sticky-ad { width: 100%; height: 600px; position: sticky; top: 20px; }
+
     /* Game Stage */
-    .stage { flex: 1; display: flex; justify-content: center; align-items: center; padding: 20px; }
+    .stage { flex: 1; display: flex; justify-content: center; align-items: flex-start; padding-top: 20px; }
     .game-card { background: var(--panel-bg); width: 100%; max-width: 700px; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: center; position: relative;}
     
     .meta-tag { font-size: 0.85em; color: #b2bec3; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; display: block;}
@@ -58,6 +100,14 @@
     #end-screen { display: none; }
     .reward-icon { font-size: 5em; margin-bottom: 10px; animation: bounce 2s infinite; }
 
+    /* Responsive Design for Ads and Layout */
+    @media(max-width: 900px) {
+      .page-layout { flex-direction: column; padding: 0 10px; }
+      .sidebar { width: 100%; }
+      .sticky-ad { position: static; height: 250px; }
+      .game-card { padding: 20px; }
+    }
+
     /* Animations */
     @keyframes shake { 0%, 100% {transform: translateX(0);} 25% {transform: translateX(-10px);} 75% {transform: translateX(10px);} }
     @keyframes pop { 0% {transform: scale(1);} 50% {transform: scale(1.05);} 100% {transform: scale(1);} }
@@ -75,155 +125,178 @@
     <div class="progress-bar" id="game-progress"></div>
   </div>
 
-  <div class="stage">
+  <div class="page-layout">
     
-    <!-- Active Question Card -->
-    <div class="game-card" id="question-screen">
-      <span class="meta-tag" id="q-meta">Loading...</span>
-      <div class="question-text" id="q-text">Setting up your game...</div>
+    <!-- LEFT SIDE: Ads & Game -->
+    <div class="main-content">
       
-      <div class="options-grid" id="q-options">
-        <!-- Buttons injected by JS -->
+      <!-- Top Ad Banner -->
+      <div class="ad-space top-ad">
+        Top Banner Ad (e.g. 728x90)
       </div>
 
-      <div class="feedback-panel" id="feedback">
-        <strong>Explanation:</strong> <span id="explanation-text"></span>
+      <!-- Game Stage -->
+      <div class="stage">
+        
+        <!-- Active Question Card -->
+        <div class="game-card" id="question-screen">
+          <span class="meta-tag" id="q-meta">Loading...</span>
+          <div class="question-text" id="q-text">Setting up your game...</div>
+          
+          <div class="options-grid" id="q-options">
+            <!-- Buttons injected by JS -->
+          </div>
+
+          <div class="feedback-panel" id="feedback">
+            <strong>Explanation:</strong> <span id="explanation-text"></span>
+          </div>
+          
+          <button class="next-btn" id="next-btn" style="display:none;" onclick="loadNextQuestion()">Next Question ➔</button>
+        </div>
+
+        <!-- End of Game Screen -->
+        <div class="game-card" id="end-screen">
+          <div class="reward-icon" id="end-icon">🏆</div>
+          <h1 id="end-title">Level Complete!</h1>
+          <p style="font-size: 1.2em; color: #b2bec3;">You earned <strong id="earned-xp" style="color:var(--accent);">0 XP</strong></p>
+          <button class="next-btn" style="display:block; margin-top: 30px;" onclick="quitGame()">Return to Hub</button>
+        </div>
+
       </div>
-      
-      <button class="next-btn" id="next-btn" style="display:none;" onclick="loadNextQuestion()">Next Question ➔</button>
     </div>
 
-    <!-- End of Game Screen -->
-    <div class="game-card" id="end-screen">
-      <div class="reward-icon" id="end-icon">🏆</div>
-      <h1 id="end-title">Level Complete!</h1>
-      <p style="font-size: 1.2em; color: #b2bec3;">You earned <strong id="earned-xp" style="color:var(--accent);">0 XP</strong></p>
-      <button class="next-btn" style="display:block; margin-top: 30px;" onclick="quitGame()">Return to Hub</button>
+    <!-- RIGHT SIDE: Sidebar Ad -->
+    <div class="sidebar">
+      <div class="ad-space sticky-ad">
+        Right Sidebar Ad (e.g. 300x600)<br>
+        Scroll down to see me stick!
+      </div>
     </div>
 
   </div>
 
   <script>
    // Game State Variables
-    let gameQuestions = [];
-    let currentIndex = 0;
-    let sessionXP = 0;
-    let lives = 3;
-    
-    // Parse URL Parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    const targetSubject = urlParams.get('subject');
-    const targetCategory = urlParams.get('category');
-    const targetTopic = urlParams.get('topic');
-    const targetLevel = urlParams.get('level');
-    const targetDiff = urlParams.get('diff');
+   let gameQuestions = [];
+   let currentIndex = 0;
+   let sessionXP = 0;
+   let lives = 3;
+   let correctAnswers = 0;
+   
+   // Parse URL Parameters
+   const urlParams = new URLSearchParams(window.location.search);
+   const targetSubject = urlParams.get('subject');
+   const targetCategory = urlParams.get('category');
+   const targetTopic = urlParams.get('topic');
+   const targetLevel = urlParams.get('level');
+   const targetDiff = urlParams.get('diff');
 
-    async function initGame() {
-  try {
-    const res = await fetch('/api/questions?nocache=' + new Date().getTime());
-    const allQuestions = await res.json();
-    
-    // 1. Filter by Subject, Category, and Topic
-    if(targetTopic && targetCategory && targetSubject) {
-      gameQuestions = allQuestions.filter(q => 
-        q.subject.toLowerCase() === targetSubject.toLowerCase() && 
-        q.category.toLowerCase() === targetCategory.toLowerCase() &&
-        q.topic.toLowerCase() === targetTopic.toLowerCase()
-      );
-    } else if (targetCategory && targetSubject) {
-      // Fallback if no topic is selected
-      gameQuestions = allQuestions.filter(q => 
-        q.subject.toLowerCase() === targetSubject.toLowerCase() && 
-        q.category.toLowerCase() === targetCategory.toLowerCase()
-      );
-    } else if (targetSubject) {
-      // Fallback for daily challenge (Subject only)
-      gameQuestions = allQuestions.filter(q => 
-        q.subject.toLowerCase() === targetSubject.toLowerCase()
-      );
+   async function initGame() {
+      try {
+        const res = await fetch('/api/questions?nocache=' + new Date().getTime());
+        const allQuestions = await res.json();
+        
+        // 1. Filter by Subject, Category, and Topic
+        if(targetTopic && targetCategory && targetSubject) {
+          gameQuestions = allQuestions.filter(q => 
+            q.subject.toLowerCase() === targetSubject.toLowerCase() && 
+            q.category.toLowerCase() === targetCategory.toLowerCase() &&
+            q.topic.toLowerCase() === targetTopic.toLowerCase()
+          );
+        } else if (targetCategory && targetSubject) {
+          // Fallback if no topic is selected
+          gameQuestions = allQuestions.filter(q => 
+            q.subject.toLowerCase() === targetSubject.toLowerCase() && 
+            q.category.toLowerCase() === targetCategory.toLowerCase()
+          );
+        } else if (targetSubject) {
+          // Fallback for daily challenge (Subject only)
+          gameQuestions = allQuestions.filter(q => 
+            q.subject.toLowerCase() === targetSubject.toLowerCase()
+          );
+        }
+
+        // 2. Apply Level and Difficulty Filters
+        if (targetLevel && targetLevel !== 'All') {
+          gameQuestions = gameQuestions.filter(q => q.level.toLowerCase() === targetLevel.toLowerCase());
+        }
+        if (targetDiff && targetDiff !== 'All') {
+          gameQuestions = gameQuestions.filter(q => parseInt(q.difficulty) === parseInt(targetDiff));
+        }
+
+        if(gameQuestions.length === 0) {
+          document.getElementById('q-text').innerText = "No questions match your selected difficulty!";
+          return;
+        }
+
+        // 3. Shuffle the entire filtered pool
+        gameQuestions.sort(() => Math.random() - 0.5);
+
+        // 4. Slice exactly 10 questions
+        gameQuestions = gameQuestions.slice(0, 10);
+
+        loadQuestion();
+      } catch (error) {
+        document.getElementById('q-text').innerText = "Error loading database.";
+      }
     }
-
-    // 2. Apply Level and Difficulty Filters
-    if (targetLevel && targetLevel !== 'All') {
-      gameQuestions = gameQuestions.filter(q => q.level.toLowerCase() === targetLevel.toLowerCase());
-    }
-    if (targetDiff && targetDiff !== 'All') {
-      gameQuestions = gameQuestions.filter(q => parseInt(q.difficulty) === parseInt(targetDiff));
-    }
-
-    if(gameQuestions.length === 0) {
-      document.getElementById('q-text').innerText = "No questions match your selected difficulty!";
-      return;
-    }
-
-    // 3. Shuffle the entire filtered pool
-    gameQuestions.sort(() => Math.random() - 0.5);
-
-    // 4. Slice exactly 10 questions
-    gameQuestions = gameQuestions.slice(0, 10);
-
-    loadQuestion();
-  } catch (error) {
-    document.getElementById('q-text').innerText = "Error loading database.";
-  }
-}
 
    function loadQuestion() {
-  const q = gameQuestions[currentIndex];
-  
-  // Update HUD & Progress
-  document.getElementById('game-progress').style.width = `${((currentIndex) / gameQuestions.length) * 100}%`;
-  document.getElementById('q-meta').innerText = `${q.subject} • ${q.category} • Level ${q.level}`;
-  
-  const questionText = q.question || q.question_text || "Error: Question text missing";
-  document.getElementById('q-text').innerHTML = questionText; 
-  
-  // Reset Options
-  const optionsBox = document.getElementById('q-options');
-  optionsBox.innerHTML = '';
-  document.getElementById('feedback').style.display = 'none';
-  document.getElementById('next-btn').style.display = 'none';
+      const q = gameQuestions[currentIndex];
+      
+      // Update HUD & Progress
+      document.getElementById('game-progress').style.width = `${((currentIndex) / gameQuestions.length) * 100}%`;
+      document.getElementById('q-meta').innerText = `${q.subject} - ${q.category} Level ${q.level}`;
+      
+      const questionText = q.question || q.question_text || "Error: Question text missing";
+      document.getElementById('q-text').innerHTML = questionText; 
+      
+      // Reset Options
+      const optionsBox = document.getElementById('q-options');
+      optionsBox.innerHTML = '';
+      document.getElementById('feedback').style.display = 'none';
+      document.getElementById('next-btn').style.display = 'none';
 
-  // 1. Safely Parse the MathJax JSON
-  let optionsArray = [];
-  try {
-    let optString = q.options;
-    if (typeof optString === 'string') {
-      optString = optString.replace(/\\/g, '\\\\');
-      optionsArray = JSON.parse(optString);
-    } else {
-      optionsArray = optString;
+      // 1. Safely Parse the MathJax JSON
+      let optionsArray = [];
+      try {
+        let optString = q.options;
+        if (typeof optString === 'string') {
+          optString = optString.replace(/\\/g, '\\\\');
+          optionsArray = JSON.parse(optString);
+        } else {
+          optionsArray = optString;
+        }
+      } catch(e) {
+        optionsArray = ["Error loading options"]; 
+      }
+
+      // 2. Package the options with a flag so we don't lose the correct one when shuffled
+      const originalCorrectIndex = parseInt(q.correct);
+      let shufflePool = optionsArray.map((text, index) => {
+        return { text: text, isCorrect: (index === originalCorrectIndex) };
+      });
+      
+      // 3. Shuffle the array randomly
+      shufflePool.sort(() => Math.random() - 0.5);
+
+      // 4. Find where the correct answer ended up after the shuffle
+      const newCorrectIndex = shufflePool.findIndex(opt => opt.isCorrect);
+
+      // 5. Generate the buttons safely
+      shufflePool.forEach((opt, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'option-btn';
+        btn.innerHTML = opt.text;
+        
+        btn.onclick = () => checkAnswer(index, newCorrectIndex, btn, q.explanation);
+        
+        optionsBox.appendChild(btn);
+      });
+
+      // Trigger MathJax formatting
+      if (window.MathJax) { MathJax.typesetPromise(); }
     }
-  } catch(e) {
-    optionsArray = ["Error loading options"]; 
-  }
-
-  // 2. Package the options with a flag so we don't lose the correct one when shuffled
-  const originalCorrectIndex = parseInt(q.correct);
-  let shufflePool = optionsArray.map((text, index) => {
-    return { text: text, isCorrect: (index === originalCorrectIndex) };
-  });
-  
-  // 3. Shuffle the array randomly
-  shufflePool.sort(() => Math.random() - 0.5);
-
-  // 4. Find where the correct answer ended up after the shuffle
-  const newCorrectIndex = shufflePool.findIndex(opt => opt.isCorrect);
-
-  // 5. Generate the buttons safely
-  shufflePool.forEach((opt, index) => {
-    const btn = document.createElement('button');
-    btn.className = 'option-btn';
-    btn.innerHTML = opt.text;
-    
-    btn.onclick = () => checkAnswer(index, newCorrectIndex, btn, q.explanation);
-    
-    optionsBox.appendChild(btn);
-  });
-
-  // Trigger MathJax formatting
-  if (window.MathJax) { MathJax.typesetPromise(); }
-}
 
     function checkAnswer(selectedIndex, correctIndex, clickedBtn, explanation) {
       const buttons = document.querySelectorAll('.option-btn');
@@ -236,6 +309,7 @@
       });
 
       if (isCorrect) {
+        correctAnswers++;
         sessionXP += 15;
         document.getElementById('xp-counter').innerText = sessionXP;
       } else {
@@ -295,58 +369,54 @@
     }
 
 
-async function finalizeXP() {
-  // 1. Update local display
-  let currentLocalXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;
-  localStorage.setItem('brainhub_xp', currentLocalXP + sessionXP);
-  if (document.getElementById('earned-xp')) {
-      document.getElementById('earned-xp').innerText = `${sessionXP} XP!`;
-  }
+    async function finalizeXP() {
+      // 1. Update local display
+      let currentLocalXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;
+      localStorage.setItem('brainhub_xp', currentLocalXP + sessionXP);
+      if (document.getElementById('earned-xp')) {
+          document.getElementById('earned-xp').innerText = `${sessionXP} XP!`;
+      }
 
-  // 2. Sync to Database
-  const savedUsername = localStorage.getItem('obh_username');
-  if (savedUsername && sessionXP > 0) {
-    
-    // FIX 1: Safely grab the Subject and Topic directly from the browser URL!
-    // This guarantees the Level Data will NEVER be missing in the profile.
-    const urlParams = new URLSearchParams(window.location.search);
-    const safeSubject = urlParams.get('subject') || 'General';
-    const safeTopic = urlParams.get('topic') || urlParams.get('subtopic') || 'Quiz';
+      // 2. Sync to Database
+      const savedUsername = localStorage.getItem('obh_username');
+      if (savedUsername && sessionXP > 0) {
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const safeSubject = urlParams.get('subject') || 'General';
+        const safeTopic = urlParams.get('topic') || urlParams.get('subtopic') || 'Quiz';
 
-    // FIX 2: Map the exact variables your game uses for scores.
-    // We check common names: correctAnswers, score, correctCount, etc.
-    let finalScore = 0;
-    if (typeof correctAnswers !== 'undefined') finalScore = correctAnswers;
-    else if (typeof score !== 'undefined') finalScore = score;
+        let finalScore = 0;
+        if (typeof correctAnswers !== 'undefined') finalScore = correctAnswers;
+        else if (typeof score !== 'undefined') finalScore = score;
 
-    let finalTotal = 0;
-    if (typeof questions !== 'undefined') finalTotal = questions.length;
-    else if (typeof gameQuestions !== 'undefined') finalTotal = gameQuestions.length;
+        let finalTotal = 0;
+        if (typeof questions !== 'undefined') finalTotal = questions.length;
+        else if (typeof gameQuestions !== 'undefined') finalTotal = gameQuestions.length;
 
-    let finalHearts = 0;
-    if (typeof lives !== 'undefined') finalHearts = lives;
-    else if (typeof currentHealth !== 'undefined') finalHearts = currentHealth;
+        let finalHearts = 0;
+        if (typeof lives !== 'undefined') finalHearts = lives;
+        else if (typeof currentHealth !== 'undefined') finalHearts = currentHealth;
 
-    try {
-      await fetch('/api/user', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          action: 'save_xp',
-          username: savedUsername,
-          xpEarned: sessionXP,
-          subject: safeSubject,
-          topic: safeTopic,
-          score: finalScore,
-          totalQuestions: finalTotal,
-          hearts: finalHearts
-        })
-      });
-    } catch (e) {
-      console.error("Failed to save progress to cloud.");
+        try {
+          await fetch('/api/user', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'save_xp',
+              username: savedUsername,
+              xpEarned: sessionXP,
+              subject: safeSubject,
+              topic: safeTopic,
+              score: finalScore,
+              totalQuestions: finalTotal,
+              hearts: finalHearts
+            })
+          });
+        } catch (e) {
+          console.error("Failed to save progress to cloud.");
+        }
+      }
     }
-  }
-}
 
     function quitGame() {
       // Go back to the specific subject hub

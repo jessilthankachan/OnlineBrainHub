@@ -4,17 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Mode - Online Brain Hub</title>
-  <!-- MathJax for formulas -->
-   <!-- Advanced MathJax Config -->
+  
+  <!-- Advanced MathJax Config -->
   <script>
     window.MathJax = {
       tex: { 
         inlineMath: [['\\(', '\\)'], ['$', '$']], 
-        displayMath: [['$$', '$$'], ['\\[', '\\]']] 
+        displayMath: [['$$', '$$'], ['[', ']']] 
       }
     };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
   <style>
     :root {
       --bg-color: #1e272e;
@@ -49,10 +50,10 @@
       padding: 0 20px;
       width: 100%;
       box-sizing: border-box;
-      flex: 1; /* Pushes footer/bottom down */
+      flex: 1;
     }
 
-    /* Main Content Area (Ads + Game Stage) */
+    /* Main Content Area */
     .main-content {
       flex: 1;
       display: flex;
@@ -109,7 +110,7 @@
     #end-screen { display: none; }
     .reward-icon { font-size: 5em; margin-bottom: 10px; animation: bounce 2s infinite; }
 
-    /* Responsive Design for Ads and Layout */
+    /* Responsive Design */
     @media(max-width: 900px) {
       .page-layout { flex-direction: column; padding: 0 10px; }
       .sidebar { width: 100%; }
@@ -130,6 +131,7 @@
     <div class="hud-item score">⭐ <span id="xp-counter">0</span> XP</div>
     <div class="hud-item lives" id="lives-display">❤️❤️❤️</div>
   </div>
+  
   <div class="progress-container">
     <div class="progress-bar" id="game-progress"></div>
   </div>
@@ -185,64 +187,87 @@
   </div>
 
   <script>
-   // Game State Variables
-   let gameQuestions = [];
-   let currentIndex = 0;
-   let sessionXP = 0;
-   let lives = 3;
-   let correctAnswers = 0;
-   
-   // Parse URL Parameters
-   const urlParams = new URLSearchParams(window.location.search);
-   const targetSubject = urlParams.get('subject');
-   const targetCategory = urlParams.get('category');
-   const targetTopic = urlParams.get('topic');
-   const targetLevel = urlParams.get('level');
-   const targetDiff = urlParams.get('diff');
+    // Game State Variables
+    let gameQuestions = [];
+    let currentIndex = 0;
+    let sessionXP = 0;
+    let lives = 3;
+    let correctAnswers = 0;
 
-   async function initGame() {
+    // Parse URL Parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetSubject = urlParams.get('subject');
+    const targetCategory = urlParams.get('category');
+    const targetTopic = urlParams.get('topic');
+    const targetLevel = urlParams.get('level');
+    const targetDiff = urlParams.get('diff');
+    
+    let isDailyChallenge = (targetSubject === 'Daily');
+
+    // Generates a random but consistent array of questions based on the current date
+    function getDailyQuestions(questionsArray, numberOfQuestions) {
+      if (!questionsArray || questionsArray.length === 0) return [];
+      
+      // Get today's date as a string (e.g., "2026-10-20") and turn it into a number
+      const today = new Date().toISOString().split('T')[0]; 
+      let seed = parseInt(today.replace(/-/g, '')); 
+      
+      let dailySet = [];
+      let pool = [...questionsArray]; 
+      
+      for(let i = 0; i < numberOfQuestions; i++) {
+        if(pool.length === 0) break;
+        seed = (seed * 9301 + 49297) % 233280;
+        let index = Math.floor((seed / 233280) * pool.length);
+        dailySet.push(pool.splice(index, 1)[0]);
+      }
+      return dailySet;
+    }
+
+    async function initGame() {
       try {
         const res = await fetch('/api/questions?nocache=' + new Date().getTime());
         const allQuestions = await res.json();
         
-        // 1. Filter by Subject, Category, and Topic
-        if(targetTopic && targetCategory && targetSubject) {
-          gameQuestions = allQuestions.filter(q => 
-            q.subject.toLowerCase() === targetSubject.toLowerCase() && 
-            q.category.toLowerCase() === targetCategory.toLowerCase() &&
-            q.topic.toLowerCase() === targetTopic.toLowerCase()
-          );
-        } else if (targetCategory && targetSubject) {
-          // Fallback if no topic is selected
-          gameQuestions = allQuestions.filter(q => 
-            q.subject.toLowerCase() === targetSubject.toLowerCase() && 
-            q.category.toLowerCase() === targetCategory.toLowerCase()
-          );
-        } else if (targetSubject) {
-          // Fallback for daily challenge (Subject only)
-          gameQuestions = allQuestions.filter(q => 
-            q.subject.toLowerCase() === targetSubject.toLowerCase()
-          );
-        }
+        if (isDailyChallenge) {
+          // 🏆 DAILY CHALLENGE MODE (Exactly 5 seeded questions)
+          gameQuestions = getDailyQuestions(allQuestions, 5);
+        } else {
+          // 📚 NORMAL PRACTICE MODE
+          if(targetTopic && targetCategory && targetSubject) {
+            gameQuestions = allQuestions.filter(q => 
+              q.subject.toLowerCase() === targetSubject.toLowerCase() && 
+              q.category.toLowerCase() === targetCategory.toLowerCase() &&
+              q.topic.toLowerCase() === targetTopic.toLowerCase()
+            );
+          } else if (targetCategory && targetSubject) {
+            gameQuestions = allQuestions.filter(q => 
+              q.subject.toLowerCase() === targetSubject.toLowerCase() && 
+              q.category.toLowerCase() === targetCategory.toLowerCase()
+            );
+          } else if (targetSubject) {
+            gameQuestions = allQuestions.filter(q => 
+              q.subject.toLowerCase() === targetSubject.toLowerCase()
+            );
+          }
 
-        // 2. Apply Level and Difficulty Filters
-        if (targetLevel && targetLevel !== 'All') {
-          gameQuestions = gameQuestions.filter(q => q.level.toLowerCase() === targetLevel.toLowerCase());
-        }
-        if (targetDiff && targetDiff !== 'All') {
-          gameQuestions = gameQuestions.filter(q => parseInt(q.difficulty) === parseInt(targetDiff));
+          // Apply Level and Difficulty Filters
+          if (targetLevel && targetLevel !== 'All') {
+            gameQuestions = gameQuestions.filter(q => q.level.toLowerCase() === targetLevel.toLowerCase());
+          }
+          if (targetDiff && targetDiff !== 'All') {
+            gameQuestions = gameQuestions.filter(q => parseInt(q.difficulty) === parseInt(targetDiff));
+          }
+
+          // Shuffle and slice 10 questions for normal play
+          gameQuestions.sort(() => Math.random() - 0.5);
+          gameQuestions = gameQuestions.slice(0, 10);
         }
 
         if(gameQuestions.length === 0) {
-          document.getElementById('q-text').innerText = "No questions match your selected difficulty!";
+          document.getElementById('q-text').innerText = "No questions match your selected filters!";
           return;
         }
-
-        // 3. Shuffle the entire filtered pool
-        gameQuestions.sort(() => Math.random() - 0.5);
-
-        // 4. Slice exactly 10 questions
-        gameQuestions = gameQuestions.slice(0, 10);
 
         loadQuestion();
       } catch (error) {
@@ -250,12 +275,18 @@
       }
     }
 
-   function loadQuestion() {
+    function loadQuestion() {
       const q = gameQuestions[currentIndex];
       
-      // Update HUD & Progress
+      // Update Progress Bar
       document.getElementById('game-progress').style.width = `${((currentIndex) / gameQuestions.length) * 100}%`;
-      document.getElementById('q-meta').innerText = `${q.subject} > ${q.category} > Level ${q.level}`;
+      
+      // Dynamic HUD Meta Tag
+      if (isDailyChallenge) {
+        document.getElementById('q-meta').innerHTML = `🔥 DAILY CHALLENGE | Question ${currentIndex + 1} of 5 <span style="color: #ff7675; font-weight: bold; margin-left: 10px;">(2x XP ACTIVE)</span>`;
+      } else {
+        document.getElementById('q-meta').innerText = `${q.subject} > ${q.category} > Level ${q.level}`;
+      }
       
       const questionText = q.question || q.question_text || "Error: Question text missing";
       document.getElementById('q-text').innerHTML = questionText; 
@@ -280,34 +311,28 @@
         optionsArray = ["Error loading options"]; 
       }
 
-      // 2. Package the options with a flag so we don't lose the correct one when shuffled
+      // 2. Package and Shuffle
       const originalCorrectIndex = parseInt(q.correct);
       let shufflePool = optionsArray.map((text, index) => {
         return { text: text, isCorrect: (index === originalCorrectIndex) };
       });
-      
-      // 3. Shuffle the array randomly
       shufflePool.sort(() => Math.random() - 0.5);
-
-      // 4. Find where the correct answer ended up after the shuffle
       const newCorrectIndex = shufflePool.findIndex(opt => opt.isCorrect);
 
-// 5. Generate the buttons safely
+      // 3. Generate Buttons safely for MathJax
       shufflePool.forEach((opt, index) => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
         
-        // 🚨 NEW FIX: Remove the double backslashes so MathJax can read the brackets!
+        // Remove double backslashes so MathJax reads the formulas natively
         let cleanText = String(opt.text).replace(/\\\\/g, '\\');
-        
         btn.innerHTML = `<span style="pointer-events: none;">${cleanText}</span>`;
         
         btn.onclick = () => checkAnswer(index, newCorrectIndex, btn, q.explanation);
-        
         optionsBox.appendChild(btn);
       });
 
-      // Trigger MathJax formatting safely for the whole page
+      // 4. Trigger MathJax rendering
       setTimeout(() => {
         if (window.MathJax) {
           MathJax.typesetClear();
@@ -319,6 +344,9 @@
     function checkAnswer(selectedIndex, correctIndex, clickedBtn, explanation) {
       const buttons = document.querySelectorAll('.option-btn');
       const isCorrect = (selectedIndex === correctIndex);
+      
+      // Apply 2x Multiplier if playing the Daily Challenge
+      let xpMultiplier = isDailyChallenge ? 2 : 1;
 
       buttons.forEach((btn, idx) => {
         btn.disabled = true; // Lock all buttons
@@ -328,12 +356,12 @@
 
       if (isCorrect) {
         correctAnswers++;
-        sessionXP += 15;
+        sessionXP += (15 * xpMultiplier);
         document.getElementById('xp-counter').innerText = sessionXP;
       } else {
         lives--;
         updateLivesDisplay();
-        sessionXP += 5; // Reward for trying
+        sessionXP += (5 * xpMultiplier); // Reward for trying
         document.getElementById('xp-counter').innerText = sessionXP;
       }
 
@@ -350,7 +378,7 @@
     function updateLivesDisplay() {
       let hearts = '';
       for(let i=0; i<lives; i++) hearts += '❤️';
-      for(let i=lives; i<3; i++) hearts += '🖤'; // Empty hearts
+      for(let i=lives; i<3; i++) hearts += '🖤';
       document.getElementById('lives-display').innerText = hearts;
 
       if (lives <= 0) {
@@ -386,34 +414,19 @@
       finalizeXP();
     }
 
-
     async function finalizeXP() {
-      // 1. Update local display
+      // Update local display
       let currentLocalXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;
       localStorage.setItem('brainhub_xp', currentLocalXP + sessionXP);
       if (document.getElementById('earned-xp')) {
           document.getElementById('earned-xp').innerText = `${sessionXP} XP!`;
       }
 
-      // 2. Sync to Database
+      // Sync to Database
       const savedUsername = localStorage.getItem('obh_username');
       if (savedUsername && sessionXP > 0) {
-        
-        const urlParams = new URLSearchParams(window.location.search);
-        const safeSubject = urlParams.get('subject') || 'General';
-        const safeTopic = urlParams.get('topic') || urlParams.get('subtopic') || 'Quiz';
-
-        let finalScore = 0;
-        if (typeof correctAnswers !== 'undefined') finalScore = correctAnswers;
-        else if (typeof score !== 'undefined') finalScore = score;
-
-        let finalTotal = 0;
-        if (typeof questions !== 'undefined') finalTotal = questions.length;
-        else if (typeof gameQuestions !== 'undefined') finalTotal = gameQuestions.length;
-
-        let finalHearts = 0;
-        if (typeof lives !== 'undefined') finalHearts = lives;
-        else if (typeof currentHealth !== 'undefined') finalHearts = currentHealth;
+        const safeSubject = targetSubject || 'General';
+        const safeTopic = targetTopic || 'Quiz';
 
         try {
           await fetch('/api/user', {
@@ -425,9 +438,9 @@
               xpEarned: sessionXP,
               subject: safeSubject,
               topic: safeTopic,
-              score: finalScore,
-              totalQuestions: finalTotal,
-              hearts: finalHearts
+              score: correctAnswers,
+              totalQuestions: gameQuestions.length,
+              hearts: lives
             })
           });
         } catch (e) {
@@ -437,8 +450,9 @@
     }
 
     function quitGame() {
-      // Go back to the specific subject hub
-      if(targetSubject) {
+      if(isDailyChallenge) {
+        window.location.href = '/';
+      } else if(targetSubject) {
         window.location.href = `/${targetSubject.toLowerCase()}.html`;
       } else {
         window.location.href = '/';

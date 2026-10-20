@@ -292,13 +292,15 @@
       // 4. Find where the correct answer ended up after the shuffle
       const newCorrectIndex = shufflePool.findIndex(opt => opt.isCorrect);
 
-      // 5. Generate the buttons safely
+// 5. Generate the buttons safely
       shufflePool.forEach((opt, index) => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
         
-        // 🚨 CRITICAL FIX: Wrapped the text in a span so MathJax doesn't block it inside the button
-        btn.innerHTML = `<span style="pointer-events: none;">${opt.text}</span>`;
+        // 🚨 NEW FIX: Remove the double backslashes so MathJax can read the brackets!
+        let cleanText = String(opt.text).replace(/\\\\/g, '\\');
+        
+        btn.innerHTML = `<span style="pointer-events: none;">${cleanText}</span>`;
         
         btn.onclick = () => checkAnswer(index, newCorrectIndex, btn, q.explanation);
         

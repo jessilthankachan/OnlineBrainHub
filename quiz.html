@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Mode - Online Brain Hub</title>
   <!-- MathJax for formulas -->
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     :root {
@@ -295,7 +296,11 @@
       });
 
       // Trigger MathJax formatting
-      if (window.MathJax) { MathJax.typesetPromise(); }
+      setTimeout(() => {
+    if (window.MathJax) { 
+      MathJax.typesetPromise().catch((err) => console.log('MathJax error:', err)); 
+    }
+  }, 100);
     }
 
     function checkAnswer(selectedIndex, correctIndex, clickedBtn, explanation) {

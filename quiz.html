@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Mode - Online Brain Hub</title>
   
-  <!-- Advanced MathJax Config -->
+  <!-- Advanced MathJax Config (Fixed displayMath brackets) -->
   <script>
     window.MathJax = {
       tex: { 
@@ -194,12 +194,11 @@
     let lives = 3;
     let correctAnswers = 0;
 
-    // Parse URL Parameters
+    // Parse URL Parameters (Level parameter completely removed)
     const urlParams = new URLSearchParams(window.location.search);
     const targetSubject = urlParams.get('subject');
     const targetCategory = urlParams.get('category');
     const targetTopic = urlParams.get('topic');
-    const targetLevel = urlParams.get('level');
     const targetDiff = urlParams.get('diff');
     
     let isDailyChallenge = (targetSubject === 'Daily');
@@ -208,7 +207,6 @@
     function getDailyQuestions(questionsArray, numberOfQuestions) {
       if (!questionsArray || questionsArray.length === 0) return [];
       
-      // Get today's date as a string (e.g., "2026-10-20") and turn it into a number
       const today = new Date().toISOString().split('T')[0]; 
       let seed = parseInt(today.replace(/-/g, '')); 
       
@@ -230,7 +228,7 @@
         const allQuestions = await res.json();
         
         if (isDailyChallenge) {
-          // 🏆 DAILY CHALLENGE MODE (Exactly 5 seeded questions)
+          // 🏆 DAILY CHALLENGE MODE
           gameQuestions = getDailyQuestions(allQuestions, 5);
         } else {
           // 📚 NORMAL PRACTICE MODE
@@ -251,10 +249,7 @@
             );
           }
 
-          // Apply Level and Difficulty Filters
-          if (targetLevel && targetLevel !== 'All') {
-            gameQuestions = gameQuestions.filter(q => q.level.toLowerCase() === targetLevel.toLowerCase());
-          }
+          // Apply Difficulty Filter ONLY (Level filtering removed)
           if (targetDiff && targetDiff !== 'All') {
             gameQuestions = gameQuestions.filter(q => parseInt(q.difficulty) === parseInt(targetDiff));
           }
@@ -281,11 +276,11 @@
       // Update Progress Bar
       document.getElementById('game-progress').style.width = `${((currentIndex) / gameQuestions.length) * 100}%`;
       
-      // Dynamic HUD Meta Tag
+      // Dynamic HUD Meta Tag (Updated to show Difficulty instead of Level)
       if (isDailyChallenge) {
         document.getElementById('q-meta').innerHTML = `🔥 DAILY CHALLENGE | Question ${currentIndex + 1} of 5 <span style="color: #ff7675; font-weight: bold; margin-left: 10px;">(2x XP ACTIVE)</span>`;
       } else {
-        document.getElementById('q-meta').innerText = `${q.subject} > ${q.category} > Level ${q.level}`;
+        document.getElementById('q-meta').innerText = `${q.subject} > ${q.category} > Difficulty ${q.difficulty}/10`;
       }
       
       const questionText = q.question || q.question_text || "Error: Question text missing";
@@ -324,7 +319,6 @@
         const btn = document.createElement('button');
         btn.className = 'option-btn';
         
-        // Remove double backslashes so MathJax reads the formulas natively
         let cleanText = String(opt.text).replace(/\\\\/g, '\\');
         btn.innerHTML = `<span style="pointer-events: none;">${cleanText}</span>`;
         

@@ -41,7 +41,6 @@
     
     .level-icon { font-size: 3em; margin-bottom: 15px; display: block;}
     .level-name { font-size: 1.4em; font-weight: bold; margin: 0;}
-    .question-count { font-size: 0.9em; color: #b2bec3; margin-top: 10px; display: block; font-weight: bold;}
     
     .loading { font-size: 1.5em; color: var(--accent); animation: pulse 1.5s infinite; }
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
@@ -75,20 +74,11 @@
         <h1 class="category-title" id="category-title">Select Level</h1>
       </div>
 
-      <!-- In-Page Filters -->
+      <!-- In-Page Filters (Difficulty Only) -->
       <div style="background: var(--panel-bg); padding: 15px; border-radius: 10px; margin-bottom: 10px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
         <div>
-          <label style="color: var(--accent); font-weight: bold; margin-right: 10px;">Level:</label>
-          <select id="level-filter" onchange="applyFilters()" style="padding: 8px; border-radius: 5px; background: #353b48; color: white; border: 1px solid #7f8fa6; outline: none;">
-            <option value="All">All Levels</option>
-            <option value="School">School</option>
-            <option value="UG">UG (Undergraduate)</option>
-            <option value="PG">PG (Postgraduate)</option>
-          </select>
-        </div>
-        <div>
           <label style="color: var(--accent); font-weight: bold; margin-right: 10px;">Difficulty:</label>
-          <select id="diff-filter" onchange="applyFilters()" style="padding: 8px; border-radius: 5px; background: #353b48; color: white; border: 1px solid #7f8fa6; outline: none;">
+          <select id="diff-filter" onchange="applyFilters()" style="padding: 8px; border-radius: 5px; background: #353b48; color: white; border: 1px solid #7f8fa6; outline: none; cursor: pointer;">
             <option value="All">All Difficulties</option>
             <option value="1">Difficulty 1</option>
             <option value="5">Difficulty 5</option>
@@ -121,7 +111,6 @@
     const urlParams = new URLSearchParams(window.location.search);
     const targetSubject = urlParams.get('subject');
     const targetCategory = urlParams.get('category');
-    const urlLevel = urlParams.get('level') || 'All';
     const urlDiff = urlParams.get('diff') || 'All';
 
     // 1. Check if we arrived here correctly
@@ -133,8 +122,7 @@
       document.getElementById('world-title').innerText = `${targetSubject} World`;
       document.getElementById('category-title').innerText = targetCategory;
       
-      // Set dropdown menus to match the URL parameters passed from the previous page
-      document.getElementById('level-filter').value = urlLevel;
+      // Set dropdown menu to match the URL parameters passed from the previous page
       document.getElementById('diff-filter').value = urlDiff;
       
       bootSystem();
@@ -154,7 +142,6 @@
     function applyFilters() {
       if(globalQuestions.length === 0) return;
 
-      const selectedLevel = document.getElementById('level-filter').value;
       const selectedDiff = document.getElementById('diff-filter').value;
 
       // Filter by Subject and Category
@@ -163,10 +150,7 @@
         q.category.toLowerCase() === targetCategory.toLowerCase()
       );
 
-      // Apply Level and Difficulty Filters
-      if (selectedLevel !== 'All') {
-        filteredQuestions = filteredQuestions.filter(q => q.level.toLowerCase() === selectedLevel.toLowerCase());
-      }
+      // Apply Difficulty Filter
       if (selectedDiff !== 'All') {
         filteredQuestions = filteredQuestions.filter(q => parseInt(q.difficulty) === parseInt(selectedDiff));
       }
@@ -200,7 +184,7 @@
         `;
         
         card.onclick = () => {
-          window.location.href = `/quiz.html?subject=${encodeURIComponent(targetSubject)}&category=${encodeURIComponent(targetCategory)}&topic=${encodeURIComponent(topicName)}&level=${encodeURIComponent(selectedLevel)}&diff=${encodeURIComponent(selectedDiff)}`;
+          window.location.href = `/quiz.html?subject=${encodeURIComponent(targetSubject)}&category=${encodeURIComponent(targetCategory)}&topic=${encodeURIComponent(topicName)}&diff=${encodeURIComponent(selectedDiff)}`;
         };
         
         grid.appendChild(card);

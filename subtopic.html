@@ -20,51 +20,21 @@
     .back-btn:hover { background: rgba(255,255,255,0.2); }
     
     /* Layout structure for Ads */
-    .page-layout {
-      display: flex;
-      gap: 30px;
-      max-width: 1200px;
-      width: 100%;
-      flex: 1;
-    }
-
-    /* Main Content Area */
-    .main-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    /* Sidebar for Sticky Ad */
-    .sidebar {
-      width: 300px;
-      flex-shrink: 0;
-    }
+    .page-layout { display: flex; gap: 30px; max-width: 1200px; width: 100%; flex: 1; }
+    .main-content { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+    .sidebar { width: 300px; flex-shrink: 0; }
 
     /* Ad Placeholders */
-    .ad-space {
-      background: rgba(0,0,0,0.2);
-      border: 2px dashed rgba(255,255,255,0.2);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #b2bec3;
-      font-weight: bold;
-      text-align: center;
-    }
-    
+    .ad-space { background: rgba(0,0,0,0.2); border: 2px dashed rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #b2bec3; font-weight: bold; text-align: center; }
     .top-ad { width: 100%; min-height: 90px; }
     .sticky-ad { width: 100%; height: 600px; position: sticky; top: 20px; }
 
-    .stage-header { text-align: center; margin-bottom: 20px; }
+    .stage-header { text-align: center; margin-bottom: 10px; }
     .world-title { font-size: 1.2em; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; margin: 0; font-weight: 800;}
     .category-title { font-size: 2.5em; margin: 10px 0; text-shadow: 0 4px 10px rgba(0,0,0,0.5);}
 
     /* Game Level Grid */
     .level-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; width: 100%; }
-    
     .level-card { background: var(--panel-bg); border-radius: 20px; padding: 30px 20px; text-align: center; cursor: pointer; border: 3px solid transparent; box-shadow: 0 8px 0 rgba(0,0,0,0.2); transition: all 0.2s ease; position: relative; overflow: hidden;}
     .level-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 13px 0 rgba(0,0,0,0.2);}
     .level-card:active { transform: translateY(3px); box-shadow: 0 0px 0 rgba(0,0,0,0.2); }
@@ -76,7 +46,6 @@
     .loading { font-size: 1.5em; color: var(--accent); animation: pulse 1.5s infinite; }
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 
-    /* Responsive Design */
     @media(max-width: 900px) {
       .page-layout { flex-direction: column; }
       .sidebar { width: 100%; }
@@ -87,7 +56,8 @@
 <body>
 
   <header>
-    <button class="back-btn" onclick="goBack()">← Back to Hub</button>
+    <!-- Dynamic Back Button -->
+    <button class="back-btn" onclick="window.history.back()">← Back</button>
     <div style="font-weight: bold; color: var(--accent);">⭐ Select a Stage</div>
   </header>
 
@@ -96,7 +66,6 @@
     <!-- LEFT SIDE: Main Content -->
     <div class="main-content">
       
-      <!-- Top Ad Banner -->
       <div class="ad-space top-ad">
         Top Banner Ad (e.g. 728x90)
       </div>
@@ -104,6 +73,28 @@
       <div class="stage-header">
         <h3 class="world-title" id="world-title">Loading World...</h3>
         <h1 class="category-title" id="category-title">Select Level</h1>
+      </div>
+
+      <!-- In-Page Filters -->
+      <div style="background: var(--panel-bg); padding: 15px; border-radius: 10px; margin-bottom: 10px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <div>
+          <label style="color: var(--accent); font-weight: bold; margin-right: 10px;">Level:</label>
+          <select id="level-filter" onchange="applyFilters()" style="padding: 8px; border-radius: 5px; background: #353b48; color: white; border: 1px solid #7f8fa6; outline: none;">
+            <option value="All">All Levels</option>
+            <option value="School">School</option>
+            <option value="UG">UG (Undergraduate)</option>
+            <option value="PG">PG (Postgraduate)</option>
+          </select>
+        </div>
+        <div>
+          <label style="color: var(--accent); font-weight: bold; margin-right: 10px;">Difficulty:</label>
+          <select id="diff-filter" onchange="applyFilters()" style="padding: 8px; border-radius: 5px; background: #353b48; color: white; border: 1px solid #7f8fa6; outline: none;">
+            <option value="All">All Difficulties</option>
+            <option value="1">Difficulty 1</option>
+            <option value="5">Difficulty 5</option>
+            <option value="10">Difficulty 10</option>
+          </select>
+        </div>
       </div>
 
       <div class="level-grid" id="level-grid">
@@ -123,85 +114,97 @@
   </div>
 
   <script>
-    // Go Back Function
-    function goBack() {
-      window.location.href = '/';
-    }
-
+    // Global variable to store all fetched questions
+    let globalQuestions = [];
+    
     // Parse URL Parameters
     const urlParams = new URLSearchParams(window.location.search);
     const targetSubject = urlParams.get('subject');
     const targetCategory = urlParams.get('category');
-    const targetLevel = urlParams.get('level') || 'All';
-    const targetDiff = urlParams.get('diff') || 'All';
+    const urlLevel = urlParams.get('level') || 'All';
+    const urlDiff = urlParams.get('diff') || 'All';
 
     // 1. Check if we arrived here correctly
     if (!targetSubject || !targetCategory) {
       document.getElementById('world-title').innerText = "Navigation Error";
       document.getElementById('category-title').innerText = "Missing Data";
-      document.getElementById('level-grid').innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">Please start from the Hub page so the game knows which subject to load!</div>';
+      document.getElementById('level-grid').innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">Please start from a subject page!</div>';
     } else {
       document.getElementById('world-title').innerText = `${targetSubject} World`;
       document.getElementById('category-title').innerText = targetCategory;
-      loadSubtopics(); // Boot the level loader
+      
+      // Set dropdown menus to match the URL parameters passed from the previous page
+      document.getElementById('level-filter').value = urlLevel;
+      document.getElementById('diff-filter').value = urlDiff;
+      
+      bootSystem();
     }
 
-    async function loadSubtopics() {
+    async function bootSystem() {
       try {
         const res = await fetch('/api/questions');
-        const allQuestions = await res.json();
-        
-        // 2. Filter by Subject and Category
-        let filteredQuestions = allQuestions.filter(q => 
-          q.subject.toLowerCase() === targetSubject.toLowerCase() && 
-          q.category.toLowerCase() === targetCategory.toLowerCase()
-        );
-
-        // 3. Apply Level and Difficulty Filters from the URL
-        if (targetLevel !== 'All') {
-          filteredQuestions = filteredQuestions.filter(q => q.level.toLowerCase() === targetLevel.toLowerCase());
-        }
-        if (targetDiff !== 'All') {
-          filteredQuestions = filteredQuestions.filter(q => parseInt(q.difficulty) === parseInt(targetDiff));
-        }
-
-        const grid = document.getElementById('level-grid');
-        grid.innerHTML = ''; 
-
-        if (filteredQuestions.length === 0) {
-          grid.innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">No stages unlocked for this difficulty yet!</div>';
-          return;
-        }
-
-        const topicMap = {};
-        filteredQuestions.forEach(q => {
-          if (!topicMap[q.topic]) topicMap[q.topic] = 0;
-          topicMap[q.topic]++;
-        });
-
-        const icons = ['🎯', '⚡', '🚀', '🔥', '🧩', '⚔️', '🔮', '🏆'];
-        let iconIndex = 0;
-
-        for (const [topicName, qCount] of Object.entries(topicMap)) {
-          const card = document.createElement('div');
-          card.className = 'level-card';
-          const icon = icons[iconIndex % icons.length];
-          iconIndex++;
-
-          card.innerHTML = `
-            <span class="level-icon">${icon}</span>
-            <h3 class="level-name">${topicName}</h3>
-            <span class="question-count">Stage Unlocked</span>
-          `;
-          
-          card.onclick = () => {
-            window.location.href = `/quiz.html?subject=${encodeURIComponent(targetSubject)}&category=${encodeURIComponent(targetCategory)}&topic=${encodeURIComponent(topicName)}&level=${encodeURIComponent(targetLevel)}&diff=${encodeURIComponent(targetDiff)}`;
-          };
-          
-          grid.appendChild(card);
-        }
+        globalQuestions = await res.json();
+        applyFilters(); // Draw the grid based on initial selections
       } catch (error) {
-        document.getElementById('level-grid').innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">Error connecting to the game server. Are you testing on the live Cloudflare link?</div>';
+        document.getElementById('level-grid').innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">Error connecting to the game server.</div>';
+      }
+    }
+
+    // Triggered when a player changes the dropdown menus on this page
+    function applyFilters() {
+      if(globalQuestions.length === 0) return;
+
+      const selectedLevel = document.getElementById('level-filter').value;
+      const selectedDiff = document.getElementById('diff-filter').value;
+
+      // Filter by Subject and Category
+      let filteredQuestions = globalQuestions.filter(q => 
+        q.subject.toLowerCase() === targetSubject.toLowerCase() && 
+        q.category.toLowerCase() === targetCategory.toLowerCase()
+      );
+
+      // Apply Level and Difficulty Filters
+      if (selectedLevel !== 'All') {
+        filteredQuestions = filteredQuestions.filter(q => q.level.toLowerCase() === selectedLevel.toLowerCase());
+      }
+      if (selectedDiff !== 'All') {
+        filteredQuestions = filteredQuestions.filter(q => parseInt(q.difficulty) === parseInt(selectedDiff));
+      }
+
+      const grid = document.getElementById('level-grid');
+      grid.innerHTML = ''; 
+
+      if (filteredQuestions.length === 0) {
+        grid.innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675; font-size: 1.2em; padding: 20px;">No stages unlocked for this combination! Try changing your filters above.</div>';
+        return;
+      }
+
+      const topicMap = {};
+      filteredQuestions.forEach(q => {
+        if (!topicMap[q.topic]) topicMap[q.topic] = 0;
+        topicMap[q.topic]++;
+      });
+
+      const icons = ['🎯', '⚡', '🚀', '🔥', '🧩', '⚔️', '🔮', '🏆'];
+      let iconIndex = 0;
+
+      for (const [topicName, qCount] of Object.entries(topicMap)) {
+        const card = document.createElement('div');
+        card.className = 'level-card';
+        const icon = icons[iconIndex % icons.length];
+        iconIndex++;
+
+        card.innerHTML = `
+          <span class="level-icon">${icon}</span>
+          <h3 class="level-name">${topicName}</h3>
+          <span class="question-count">${qCount} Questions Available</span>
+        `;
+        
+        card.onclick = () => {
+          window.location.href = `/quiz.html?subject=${encodeURIComponent(targetSubject)}&category=${encodeURIComponent(targetCategory)}&topic=${encodeURIComponent(topicName)}&level=${encodeURIComponent(selectedLevel)}&diff=${encodeURIComponent(selectedDiff)}`;
+        };
+        
+        grid.appendChild(card);
       }
     }
   </script>

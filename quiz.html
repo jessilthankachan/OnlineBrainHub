@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Mode - Online Brain Hub</title>
   <!-- MathJax for formulas -->
-   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+   <!-- Advanced MathJax Config -->
+  <script>
+    window.MathJax = {
+      tex: { 
+        inlineMath: [['\\(', '\\)'], ['$', '$']], 
+        displayMath: [['$$', '$$'], ['\\[', '\\]']] 
+      }
+    };
+  </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     :root {
@@ -247,7 +255,7 @@
       
       // Update HUD & Progress
       document.getElementById('game-progress').style.width = `${((currentIndex) / gameQuestions.length) * 100}%`;
-      document.getElementById('q-meta').innerText = `${q.subject} - ${q.category} Level ${q.level}`;
+      document.getElementById('q-meta').innerText = `${q.subject} > ${q.category} > Level ${q.level}`;
       
       const questionText = q.question || q.question_text || "Error: Question text missing";
       document.getElementById('q-text').innerHTML = questionText; 
@@ -288,19 +296,22 @@
       shufflePool.forEach((opt, index) => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
-        btn.innerHTML = opt.text;
+        
+        // 🚨 CRITICAL FIX: Wrapped the text in a span so MathJax doesn't block it inside the button
+        btn.innerHTML = `<span style="pointer-events: none;">${opt.text}</span>`;
         
         btn.onclick = () => checkAnswer(index, newCorrectIndex, btn, q.explanation);
         
         optionsBox.appendChild(btn);
       });
 
-      // Trigger MathJax formatting
+      // Trigger MathJax formatting safely for the whole page
       setTimeout(() => {
-    if (window.MathJax) { 
-      MathJax.typesetPromise().catch((err) => console.log('MathJax error:', err)); 
-    }
-  }, 100);
+        if (window.MathJax) {
+          MathJax.typesetClear();
+          MathJax.typesetPromise().catch(err => console.log('Math error:', err));
+        }
+      }, 100);
     }
 
     function checkAnswer(selectedIndex, correctIndex, clickedBtn, explanation) {

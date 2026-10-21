@@ -290,14 +290,32 @@
     window.deleteQuestion = async function(id) {
       if(!confirm('Are you sure you want to permanently delete ' + id + '?')) return;
       
-      const response = await fetch('/api/questions', {
-        method: 'DELETE',
-        body: JSON.stringify({ id: id }),
-        headers: { 'Content-Type': 'application/json' }
-      });
+      try {
+        // Attempt 1: Send the ID in the body (Original method)
+        let response = await fetch('/api/questions', {
+          method: 'DELETE',
+          body: JSON.stringify({ id: id }),
+          headers: { 'Content-Type': 'application/json' }
+        });
 
-      if(response.ok) { fetchQuestions(); } 
-      else { alert('Failed to delete question.'); }
+        // Attempt 2: If the backend rejected the body, send the ID in the URL instead
+        if(!response.ok && (response.status === 404 || response.status === 405)) {
+          response = await fetch(`/api/questions/${id}`, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' }
+          });
+        }
+
+        if(response.ok) { 
+          fetchQuestions(); // Refresh the table
+        } else { 
+          const err = await response.json().catch(() => ({}));
+          alert('Failed to delete question. Server says: ' + (err.error || response.statusText)); 
+        }
+      } catch (error) {
+        alert('Network error while trying to delete.');
+        console.error(error);
+      }
     };
 
     window.resetForm = function() {

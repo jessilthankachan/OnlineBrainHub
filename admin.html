@@ -217,26 +217,30 @@
       });
     }
 
+    // Single Question Form Submission - Also sanitizes MathJax!
     document.getElementById('addQuestionForm').addEventListener('submit', async (e) => {
       e.preventDefault();
       
+      // Sanitizer helper for single form inputs
+      const sanitize = (str) => str ? str.trim().replace(/\\/g, '\\\\') : "";
+
       const payload = {
-        id: document.getElementById('q_id').value,
-        subject: document.getElementById('subject').value,
-        category: document.getElementById('category').value,
-        topic: document.getElementById('topic').value,
-        level: document.getElementById('level').value,
+        id: sanitize(document.getElementById('q_id').value),
+        subject: sanitize(document.getElementById('subject').value),
+        category: sanitize(document.getElementById('category').value),
+        topic: sanitize(document.getElementById('topic').value),
+        level: sanitize(document.getElementById('level').value),
         difficulty: parseInt(document.getElementById('difficulty').value),
-        question: document.getElementById('question').value,
+        question: sanitize(document.getElementById('question').value),
         options: [
-          document.getElementById('opt0').value,
-          document.getElementById('opt1').value,
-          document.getElementById('opt2').value,
-          document.getElementById('opt3').value
+          sanitize(document.getElementById('opt0').value),
+          sanitize(document.getElementById('opt1').value),
+          sanitize(document.getElementById('opt2').value),
+          sanitize(document.getElementById('opt3').value)
         ],
         correct: parseInt(document.getElementById('correct').value),
-        explanation: document.getElementById('explanation').value,
-        hint: document.getElementById('hint').value
+        explanation: sanitize(document.getElementById('explanation').value),
+        hint: sanitize(document.getElementById('hint').value)
       };
 
       const method = isEditing ? 'PUT' : 'POST';
@@ -336,22 +340,25 @@
 
         statusDiv.innerText = `Processing ${rows.length} questions...`;
 
+        // Helper function to safely escape backslashes for SQL backends
+        const sanitize = (str) => str ? str.trim().replace(/\\/g, '\\\\') : "";
+
         for (const row of rows) {
           if (row.length < 12 || !row[0].trim()) continue; // Skip empty rows
 
           try {
             const payload = {
-              id: row[0].trim(),
-              subject: row[1].trim(),
-              category: row[2].trim(),
-              topic: row[3].trim(),
-              level: row[4].trim(),
+              id: sanitize(row[0]),
+              subject: sanitize(row[1]),
+              category: sanitize(row[2]),
+              topic: sanitize(row[3]),
+              level: sanitize(row[4]),
               difficulty: parseInt(row[5].trim()) || 1,
-              question: row[6].trim(),
-              options: [ row[7].trim(), row[8].trim(), row[9].trim(), row[10].trim() ],
+              question: sanitize(row[6]),
+              options: [ sanitize(row[7]), sanitize(row[8]), sanitize(row[9]), sanitize(row[10]) ],
               correct: parseInt(row[11].trim()) || 0,
-              explanation: row[12] ? row[12].trim() : "",
-              hint: row[13] ? row[13].trim() : ""
+              explanation: sanitize(row[12]),
+              hint: sanitize(row[13])
             };
 
             const response = await fetch('/api/questions', {

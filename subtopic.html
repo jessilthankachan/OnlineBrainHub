@@ -130,9 +130,13 @@
 
     async function bootSystem() {
       try {
-        const res = await fetch('/api/questions');
+        // Send the smart filters directly to the backend to bypass safety limits!
+        const apiUrl = `/api/questions?subject=${encodeURIComponent(targetSubject)}&category=${encodeURIComponent(targetCategory)}&nocache=${new Date().getTime()}`;
+        
+        const res = await fetch(apiUrl);
         globalQuestions = await res.json();
-        applyFilters(); // Draw the grid based on initial selections
+        
+        applyFilters(); // Draw the grid based on the newly fetched data
       } catch (error) {
         document.getElementById('level-grid').innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">Error connecting to the game server.</div>';
       }

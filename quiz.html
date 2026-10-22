@@ -94,9 +94,11 @@
     .options-grid { display: grid; gap: 15px; grid-template-columns: 1fr; }
     @media(min-width: 600px) { .options-grid { grid-template-columns: 1fr 1fr; } }
     
+    /* OPTION BUTTONS (Changed to div to bypass MathJax strict tag skipping) */
     .option-btn { background: #353b48; color: white; border: 2px solid #40739e; padding: 18px; border-radius: 12px; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 0 #273c75;}
-    .option-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 6px 0 #273c75; background: #2f3640;}
-    .option-btn:active:not(:disabled) { transform: translateY(4px); box-shadow: none; }
+    .option-btn:hover:not(.disabled) { transform: translateY(-2px); box-shadow: 0 6px 0 #273c75; background: #2f3640;}
+    .option-btn:active:not(.disabled) { transform: translateY(4px); box-shadow: none; }
+    .option-btn.disabled { pointer-events: none; cursor: default; }
     
     /* Game States */
     .correct { background: var(--success) !important; border-color: #00cec9 !important; box-shadow: 0 4px 0 #0097e6 !important; animation: pop 0.3s ease; }
@@ -137,19 +139,12 @@
   </div>
 
   <div class="page-layout">
-    
     <!-- LEFT SIDE: Ads & Game -->
     <div class="main-content">
-      
-      <!-- Top Ad Banner -->
-      <div class="ad-space top-ad">
-        Top Banner Ad (e.g. 728x90)
-      </div>
+      <div class="ad-space top-ad">Top Banner Ad (e.g. 728x90)</div>
 
       <!-- Game Stage -->
       <div class="stage">
-        
-        <!-- Active Question Card -->
         <div class="game-card" id="question-screen">
           <span class="meta-tag" id="q-meta">Loading...</span>
           <div class="question-text" id="q-text">Setting up your game...</div>
@@ -165,40 +160,48 @@
           <button class="next-btn" id="next-btn" style="display:none;" onclick="loadNextQuestion()">Next Question ➔</button>
         </div>
 
-        <!-- End of Game Screen -->
         <div class="game-card" id="end-screen">
           <div class="reward-icon" id="end-icon">🏆</div>
           <h1 id="end-title">Level Complete!</h1>
           <p style="font-size: 1.2em; color: #b2bec3;">You earned <strong id="earned-xp" style="color:var(--accent);">0 XP</strong></p>
           <button class="next-btn" style="display:block; margin-top: 30px;" onclick="quitGame()">Return to Hub</button>
         </div>
-
       </div>
     </div>
 
     <!-- RIGHT SIDE: Sidebar Ad -->
     <div class="sidebar">
-      <div class="ad-space sticky-ad">
-        Right Sidebar Ad (e.g. 300x600)<br>
-        Scroll down to see me stick!
-      </div>
+      <div class="ad-space sticky-ad">Right Sidebar Ad (e.g. 300x600)<br>Scroll down to see me stick!</div>
     </div>
-
   </div>
 
   <script>
-    // --- MathJax Promise Queue & Race Condition Fix ---
-    let mathJaxPromise = Promise.resolve();
+    // --- Universal Math Formatting Helper ---
+    function formatMathText(text, isExplanation = false) {
+      if (!text) return "";
+      let s = String(text);
+      
+      // Convert database \( \) delimiters to foolproof $ $ delimiters
+      s = s.replace(/\\\\\(/g, '$').replace(/\\\\\)/g, '$');
+      s = s.replace(/\\\(/g, '$').replace(/\\\)/g, '$');
+      
+      // Auto-wrap naked math equations if no $ is found
+      if (!isExplanation && !s.includes('$') && (s.includes('^') || s.includes('\\') || s.includes('='))) {
+         s = `$ ${s} $`;
+      }
+      
+      return s;
+    }
 
+    // --- MathJax Promise Queue ---
+    let mathJaxPromise = Promise.resolve();
     function renderMath() {
-      // Check if MathJax has fully downloaded and initialized
       if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
         mathJaxPromise = mathJaxPromise.then(() => {
           MathJax.typesetClear();
           return MathJax.typesetPromise();
         }).catch((err) => console.log('MathJax error: ', err));
       } else {
-        // If MathJax is still downloading, wait 50ms and try again
         setTimeout(renderMath, 50);
       }
     }
@@ -210,16 +213,13 @@
     let lives = 3;
     let correctAnswers = 0;
 
-    // Parse URL Parameters
     const urlParams = new URLSearchParams(window.location.search);
     const targetSubject = urlParams.get('subject');
     const targetCategory = urlParams.get('category');
     const targetTopic = urlParams.get('topic');
     const targetDiff = urlParams.get('diff');
-    
     let isDailyChallenge = (targetSubject === 'Daily');
 
-    // Generates a random but consistent array of questions based on the current date
     function getDailyQuestions(questionsArray, numberOfQuestions) {
       if (!questionsArray || questionsArray.length === 0) return [];
       const today = new Date().toISOString().split('T')[0]; 
@@ -280,9 +280,7 @@
         document.getElementById('q-meta').innerText = `${q.subject} > ${q.category} > Difficulty ${q.difficulty}/10 | Question ${currentIndex + 1} of ${gameQuestions.length}`;
       }
       
-      // Inject Question Text with backslash sanitizer
-      const rawQuestion = q.question || q.question_text || "Error: Question text missing";
-      document.getElementById('q-text').innerHTML = String(rawQuestion).replace(/\\\\/g, '\\');
+      document.getElementById('q-text').innerHTML = formatMathText(q.question || q.question_text, false);
       
       const optionsBox = document.getElementById('q-options');
       optionsBox.innerHTML = '';
@@ -293,7 +291,6 @@
       try {
         let optString = q.options;
         if (typeof optString === 'string') {
-          optString = optString.replace(/\\/g, '\\\\');
           optionsArray = JSON.parse(optString);
         } else {
           optionsArray = optString;
@@ -309,23 +306,22 @@
       shufflePool.sort(() => Math.random() - 0.5);
       const newCorrectIndex = shufflePool.findIndex(opt => opt.isCorrect);
 
-      // Generate Option Buttons
+      // Generate Option DIVS instead of buttons to force MathJax rendering
       shufflePool.forEach((opt, index) => {
-        const btn = document.createElement('button');
+        const btn = document.createElement('div');
         btn.className = 'option-btn';
-        let cleanText = String(opt.text).replace(/\\\\/g, '\\');
-
-// 🔥 NEW: Auto-wrap raw LaTeX in MathJax delimiters if missing
-        if (cleanText.includes('\\') && !cleanText.includes('\\(') && !cleanText.includes('\\[')) {
-          cleanText = '\\( ' + cleanText + ' \\)';
-        }
-
+        
+        let cleanText = formatMathText(opt.text, false);
         btn.innerHTML = `<span style="pointer-events: none;">${cleanText}</span>`;
-        btn.onclick = () => checkAnswer(index, newCorrectIndex, btn, q.explanation);
+        
+        btn.onclick = () => {
+          if (!btn.classList.contains('disabled')) {
+            checkAnswer(index, newCorrectIndex, btn, q.explanation);
+          }
+        };
         optionsBox.appendChild(btn);
       });
 
-      // 🔥 Safely trigger MathJax Render for the newly loaded question
       renderMath();
     }
 
@@ -335,7 +331,7 @@
       let xpMultiplier = isDailyChallenge ? 2 : 1;
 
       buttons.forEach((btn, idx) => {
-        btn.disabled = true;
+        btn.classList.add('disabled');
         if (idx === correctIndex) btn.classList.add('correct');
         else if (idx === selectedIndex && !isCorrect) btn.classList.add('wrong');
       });
@@ -351,19 +347,9 @@
         document.getElementById('xp-counter').innerText = sessionXP;
       }
 
-      // Show explanation if it exists
       if (explanation && explanation.length > 2) {
-        let cleanExp = String(explanation).replace(/\\\\/g, '\\');
-
-// 🔥 NEW: Auto-wrap raw LaTeX in explanation if missing
-        if (cleanExp.includes('\\') && !cleanExp.includes('\\(') && !cleanExp.includes('\\[')) {
-          cleanExp = '\\( ' + cleanExp + ' \\)';
-        }
-
-        document.getElementById('explanation-text').innerHTML = cleanExp;
+        document.getElementById('explanation-text').innerHTML = formatMathText(explanation, true);
         document.getElementById('feedback').style.display = 'block';
-        
-        // 🔥 Safely trigger MathJax Render for the newly revealed explanation
         renderMath();
       }
 

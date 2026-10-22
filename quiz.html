@@ -171,17 +171,17 @@
   </div>
 
   <script>
-    // --- SMART MATH FORMATTER ---
+   // --- ULTRA-SAFE SMART MATH FORMATTER ---
     function formatMathText(text, isExplanation = false) {
       if (!text) return "";
       let s = String(text);
       
-      // 1. Recover lost backslashes for common math words
+      // 1. Force fix any broken carets or degree symbols instantly
+      s = s.replace(/\^\s*\\?circ/g, '^{\\circ}');
+      
+      // 2. Recover lost backslashes for common math words
       s = s.replace(/\bfrac\b/g, '\\frac');
       s = s.replace(/\blog\b/g, '\\log');
-      
-      // 2. FIX FOR GEOMETRY CRASH: Forces braces around 'circ'
-      s = s.replace(/\^(?:\\)?circ/g, '^{\\circ}');
       
       // 3. Convert all variations of \( and \) into universally accepted $ $ tags
       s = s.replace(/\\\\?\(/g, '$').replace(/\\\\?\)/g, '$');

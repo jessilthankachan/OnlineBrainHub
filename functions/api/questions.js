@@ -12,9 +12,39 @@ export async function onRequest(context) {
   }
 
   try {
-    // GET: ZERO CPU PROCESSING. Raw database dump straight to the browser.
+    const url = new URL(request.url);
+
+    // ==========================================
+    // GET: Smart Server-Side Filtering
+    // ==========================================
     if (request.method === 'GET') {
-      const { results } = await env.DB.prepare("SELECT * FROM questions").all();
+      const subject = url.searchParams.get('subject');
+      const category = url.searchParams.get('category');
+      
+      let sql = "SELECT * FROM questions";
+      let bindParams = [];
+      let conditions = [];
+
+      // If the frontend asks for a specific subject, add it to the SQL query
+      if (subject && subject !== 'Daily') {
+        conditions.push("subject = ?");
+        bindParams.push(subject);
+      }
+      
+      // If the frontend asks for a specific category, add it to the SQL query
+      if (category) {
+        conditions.push("category = ?");
+        bindParams.push(category);
+      }
+
+      // Combine conditions, or apply a safety limit if fetching everything (e.g., Admin Panel)
+      if (conditions.length > 0) {
+        sql += " WHERE " + conditions.join(" AND ");
+      } else {
+        sql += " ORDER BY id DESC LIMIT 1000"; // Prevents 503s on the Admin panel by capping the load
+      }
+
+      const { results } = await env.DB.prepare(sql).bind(...bindParams).all();
       
       return new Response(JSON.stringify(results), { 
         status: 200, 
@@ -22,7 +52,9 @@ export async function onRequest(context) {
       });
     }
 
-    // POST: Raw insert (Admin)
+    // ==========================================
+    // POST, PUT, DELETE remain raw and fast
+    // ==========================================
     if (request.method === 'POST') {
       const body = await request.json();
       await env.DB.prepare(
@@ -32,11 +64,9 @@ export async function onRequest(context) {
         body.id, body.subject, body.category, body.topic, body.level, body.difficulty, 
         body.question, JSON.stringify(body.options), body.correct, body.explanation, body.hint
       ).run();
-      
       return new Response(JSON.stringify({ success: true }), { status: 201, headers: corsHeaders });
     }
 
-    // PUT: Raw update (Admin)
     if (request.method === 'PUT') {
       const body = await request.json();
       await env.DB.prepare(
@@ -45,11 +75,9 @@ export async function onRequest(context) {
         body.subject, body.category, body.topic, body.level, body.difficulty, 
         body.question, JSON.stringify(body.options), body.correct, body.explanation, body.hint, body.id
       ).run();
-      
       return new Response(JSON.stringify({ success: true }), { status: 200, headers: corsHeaders });
     }
 
-    // DELETE: Raw delete (Admin)
     if (request.method === 'DELETE') {
       const body = await request.json();
       await env.DB.prepare("DELETE FROM questions WHERE id = ?").bind(body.id).run();

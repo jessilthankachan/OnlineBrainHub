@@ -171,46 +171,48 @@
       return dailySet;
     }
 
-    async function initGame() {
+async function initGame() {
       try {
-        const res = await fetch('/api/questions?nocache=' + Date.now());
-        if (!res.ok) throw new Error('Questions request failed: ' + res.status);
-        const allQuestions = await res.json();
-        if (!Array.isArray(allQuestions)) throw new Error('Question API did not return an array');
+        // Construct the API URL with smart server-side filters
+        let apiUrl = '/api/questions?nocache=' + new Date().getTime();
+        
+        if (targetSubject && !isDailyChallenge) {
+          apiUrl += `&subject=${encodeURIComponent(targetSubject)}`;
+        }
+        if (targetCategory && !isDailyChallenge) {
+          apiUrl += `&category=${encodeURIComponent(targetCategory)}`;
+        }
 
+        // Fetch ONLY the required questions from the backend
+        const res = await fetch(apiUrl);
+        const allQuestions = await res.json();
+        
         if (isDailyChallenge) {
           gameQuestions = getDailyQuestions(allQuestions, 5);
         } else {
-          if (targetTopic && targetCategory && targetSubject) {
-            gameQuestions = allQuestions.filter(q =>
-              String(q.subject || '').toLowerCase() === targetSubject.toLowerCase() &&
-              String(q.category || '').toLowerCase() === targetCategory.toLowerCase() &&
-              String(q.topic || '').toLowerCase() === targetTopic.toLowerCase());
-          } else if (targetCategory && targetSubject) {
-            gameQuestions = allQuestions.filter(q =>
-              String(q.subject || '').toLowerCase() === targetSubject.toLowerCase() &&
-              String(q.category || '').toLowerCase() === targetCategory.toLowerCase());
-          } else if (targetSubject) {
-            gameQuestions = allQuestions.filter(q => String(q.subject || '').toLowerCase() === targetSubject.toLowerCase());
+          // Additional local filtering for topics and difficulty
+          if (targetTopic) {
+            gameQuestions = allQuestions.filter(q => q.topic && q.topic.toLowerCase() === targetTopic.toLowerCase());
           } else {
             gameQuestions = [...allQuestions];
           }
+
           if (targetDiff && targetDiff !== 'All') {
-            gameQuestions = gameQuestions.filter(q => parseInt(q.difficulty, 10) === parseInt(targetDiff, 10));
+            gameQuestions = gameQuestions.filter(q => parseInt(q.difficulty) === parseInt(targetDiff));
           }
+
           gameQuestions.sort(() => Math.random() - 0.5);
           gameQuestions = gameQuestions.slice(0, 10);
         }
 
-        if (gameQuestions.length === 0) {
-          document.getElementById('q-text').textContent = 'No questions match your selected filters!';
-          document.getElementById('q-meta').textContent = '';
+        if(gameQuestions.length === 0) {
+          document.getElementById('q-text').innerText = "No questions match your selected filters!";
           return;
         }
+
         loadQuestion();
       } catch (error) {
-        console.error('Error loading questions:', error);
-        document.getElementById('q-text').textContent = 'Error loading database. Please reload and try again.';
+        document.getElementById('q-text').innerText = "Error loading database.";
       }
     }
 

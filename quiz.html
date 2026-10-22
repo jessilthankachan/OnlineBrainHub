@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Mode - Online Brain Hub</title>
   
-  <!-- Advanced MathJax Config (Fixed displayMath brackets) -->
+  <!-- Advanced MathJax Config -->
   <script>
     window.MathJax = {
       tex: { 
         inlineMath: [['\\(', '\\)'], ['$', '$']], 
         displayMath: [['$$', '$$'], ['\\[', '\\]']] 
+      },
+      startup: {
+        typeset: false // We will manually trigger it
       }
     };
   </script>
@@ -194,7 +197,7 @@
     let lives = 3;
     let correctAnswers = 0;
 
-    // Parse URL Parameters (Level parameter completely removed)
+    // Parse URL Parameters
     const urlParams = new URLSearchParams(window.location.search);
     const targetSubject = urlParams.get('subject');
     const targetCategory = urlParams.get('category');
@@ -206,13 +209,10 @@
     // Generates a random but consistent array of questions based on the current date
     function getDailyQuestions(questionsArray, numberOfQuestions) {
       if (!questionsArray || questionsArray.length === 0) return [];
-      
       const today = new Date().toISOString().split('T')[0]; 
       let seed = parseInt(today.replace(/-/g, '')); 
-      
       let dailySet = [];
       let pool = [...questionsArray]; 
-      
       for(let i = 0; i < numberOfQuestions; i++) {
         if(pool.length === 0) break;
         seed = (seed * 9301 + 49297) % 233280;
@@ -228,33 +228,20 @@
         const allQuestions = await res.json();
         
         if (isDailyChallenge) {
-          // 🏆 DAILY CHALLENGE MODE
           gameQuestions = getDailyQuestions(allQuestions, 5);
         } else {
-          // 📚 NORMAL PRACTICE MODE
           if(targetTopic && targetCategory && targetSubject) {
-            gameQuestions = allQuestions.filter(q => 
-              q.subject.toLowerCase() === targetSubject.toLowerCase() && 
-              q.category.toLowerCase() === targetCategory.toLowerCase() &&
-              q.topic.toLowerCase() === targetTopic.toLowerCase()
-            );
+            gameQuestions = allQuestions.filter(q => q.subject.toLowerCase() === targetSubject.toLowerCase() && q.category.toLowerCase() === targetCategory.toLowerCase() && q.topic.toLowerCase() === targetTopic.toLowerCase());
           } else if (targetCategory && targetSubject) {
-            gameQuestions = allQuestions.filter(q => 
-              q.subject.toLowerCase() === targetSubject.toLowerCase() && 
-              q.category.toLowerCase() === targetCategory.toLowerCase()
-            );
+            gameQuestions = allQuestions.filter(q => q.subject.toLowerCase() === targetSubject.toLowerCase() && q.category.toLowerCase() === targetCategory.toLowerCase());
           } else if (targetSubject) {
-            gameQuestions = allQuestions.filter(q => 
-              q.subject.toLowerCase() === targetSubject.toLowerCase()
-            );
+            gameQuestions = allQuestions.filter(q => q.subject.toLowerCase() === targetSubject.toLowerCase());
           }
 
-          // Apply Difficulty Filter ONLY (Level filtering removed)
           if (targetDiff && targetDiff !== 'All') {
             gameQuestions = gameQuestions.filter(q => parseInt(q.difficulty) === parseInt(targetDiff));
           }
 
-          // Shuffle and slice 10 questions for normal play
           gameQuestions.sort(() => Math.random() - 0.5);
           gameQuestions = gameQuestions.slice(0, 10);
         }
@@ -270,13 +257,18 @@
       }
     }
 
+    // Helper to safely render MathJax inside a specific element
+    function renderMath(elementId) {
+      if (window.MathJax) {
+        MathJax.typesetClear();
+        MathJax.typesetPromise([document.getElementById(elementId)]).catch(err => console.log('Math error:', err));
+      }
+    }
+
     function loadQuestion() {
       const q = gameQuestions[currentIndex];
-      
-      // Update Progress Bar
       document.getElementById('game-progress').style.width = `${((currentIndex) / gameQuestions.length) * 100}%`;
       
-      // Dynamic HUD Meta Tag (Updated to include Question Count)
       if (isDailyChallenge) {
         document.getElementById('q-meta').innerHTML = `🔥 DAILY CHALLENGE | Question ${currentIndex + 1} of ${gameQuestions.length} <span style="color: #ff7675; font-weight: bold; margin-left: 10px;">(2x XP ACTIVE)</span>`;
       } else {
@@ -286,13 +278,11 @@
       const questionText = q.question || q.question_text || "Error: Question text missing";
       document.getElementById('q-text').innerHTML = questionText; 
       
-      // Reset Options
       const optionsBox = document.getElementById('q-options');
       optionsBox.innerHTML = '';
       document.getElementById('feedback').style.display = 'none';
       document.getElementById('next-btn').style.display = 'none';
 
-      // 1. Safely Parse the MathJax JSON
       let optionsArray = [];
       try {
         let optString = q.options;
@@ -306,7 +296,6 @@
         optionsArray = ["Error loading options"]; 
       }
 
-      // 2. Package and Shuffle
       const originalCorrectIndex = parseInt(q.correct);
       let shufflePool = optionsArray.map((text, index) => {
         return { text: text, isCorrect: (index === originalCorrectIndex) };
@@ -314,35 +303,26 @@
       shufflePool.sort(() => Math.random() - 0.5);
       const newCorrectIndex = shufflePool.findIndex(opt => opt.isCorrect);
 
-      // 3. Generate Buttons safely for MathJax
       shufflePool.forEach((opt, index) => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
-        
         let cleanText = String(opt.text).replace(/\\\\/g, '\\');
         btn.innerHTML = `<span style="pointer-events: none;">${cleanText}</span>`;
-        
         btn.onclick = () => checkAnswer(index, newCorrectIndex, btn, q.explanation);
         optionsBox.appendChild(btn);
       });
 
-      // 4. Trigger MathJax rendering
-      if (window.MathJax) {
-        MathJax.typesetPromise().catch(function (err) {
-          console.log('MathJax rendering error: ', err);
-        });
-      }
+      // 🔥 Trigger MathJax Render for the newly loaded question & options
+      setTimeout(() => renderMath('question-screen'), 50);
     }
 
     function checkAnswer(selectedIndex, correctIndex, clickedBtn, explanation) {
       const buttons = document.querySelectorAll('.option-btn');
       const isCorrect = (selectedIndex === correctIndex);
-      
-      // Apply 2x Multiplier if playing the Daily Challenge
       let xpMultiplier = isDailyChallenge ? 2 : 1;
 
       buttons.forEach((btn, idx) => {
-        btn.disabled = true; // Lock all buttons
+        btn.disabled = true;
         if (idx === correctIndex) btn.classList.add('correct');
         else if (idx === selectedIndex && !isCorrect) btn.classList.add('wrong');
       });
@@ -354,21 +334,16 @@
       } else {
         lives--;
         updateLivesDisplay();
-        sessionXP += (5 * xpMultiplier); // Reward for trying
+        sessionXP += (5 * xpMultiplier);
         document.getElementById('xp-counter').innerText = sessionXP;
       }
 
-      // Show explanation if it exists
       if (explanation && explanation.length > 2) {
         document.getElementById('explanation-text').innerHTML = explanation;
         document.getElementById('feedback').style.display = 'block';
         
-        // Trigger MathJax rendering for the newly revealed explanation
-        if (window.MathJax) {
-          MathJax.typesetPromise().catch(function (err) {
-            console.log('MathJax rendering error in explanation: ', err);
-          });
-        }
+        // 🔥 Trigger MathJax Render for the newly revealed explanation
+        setTimeout(() => renderMath('feedback'), 50);
       }
 
       document.getElementById('next-btn').style.display = 'block';
@@ -379,19 +354,13 @@
       for(let i=0; i<lives; i++) hearts += '❤️';
       for(let i=lives; i<3; i++) hearts += '🖤';
       document.getElementById('lives-display').innerText = hearts;
-
-      if (lives <= 0) {
-        setTimeout(gameOver, 1000);
-      }
+      if (lives <= 0) setTimeout(gameOver, 1000);
     }
 
     function loadNextQuestion() {
       currentIndex++;
-      if (currentIndex >= gameQuestions.length) {
-        gameWon();
-      } else {
-        loadQuestion();
-      }
+      if (currentIndex >= gameQuestions.length) gameWon();
+      else loadQuestion();
     }
 
     function gameOver() {
@@ -414,51 +383,30 @@
     }
 
     async function finalizeXP() {
-      // Update local display
       let currentLocalXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;
       localStorage.setItem('brainhub_xp', currentLocalXP + sessionXP);
-      if (document.getElementById('earned-xp')) {
-          document.getElementById('earned-xp').innerText = `${sessionXP} XP!`;
-      }
+      if (document.getElementById('earned-xp')) document.getElementById('earned-xp').innerText = `${sessionXP} XP!`;
 
-      // Sync to Database
       const savedUsername = localStorage.getItem('obh_username');
       if (savedUsername && sessionXP > 0) {
         const safeSubject = targetSubject || 'General';
         const safeTopic = targetTopic || 'Quiz';
-
         try {
           await fetch('/api/user', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              action: 'save_xp',
-              username: savedUsername,
-              xpEarned: sessionXP,
-              subject: safeSubject,
-              topic: safeTopic,
-              score: correctAnswers,
-              totalQuestions: gameQuestions.length,
-              hearts: lives
-            })
+            body: JSON.stringify({ action: 'save_xp', username: savedUsername, xpEarned: sessionXP, subject: safeSubject, topic: safeTopic, score: correctAnswers, totalQuestions: gameQuestions.length, hearts: lives })
           });
-        } catch (e) {
-          console.error("Failed to save progress to cloud.");
-        }
+        } catch (e) { console.error("Failed to save progress to cloud."); }
       }
     }
 
     function quitGame() {
-      if(isDailyChallenge) {
-        window.location.href = '/';
-      } else if(targetSubject) {
-        window.location.href = `/${targetSubject.toLowerCase()}.html`;
-      } else {
-        window.location.href = '/';
-      }
+      if(isDailyChallenge) window.location.href = '/';
+      else if(targetSubject) window.location.href = `/${targetSubject.toLowerCase()}.html`;
+      else window.location.href = '/';
     }
 
-    // Boot the game
     initGame();
   </script>
 </body>

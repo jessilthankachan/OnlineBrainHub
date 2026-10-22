@@ -94,7 +94,7 @@
     .options-grid { display: grid; gap: 15px; grid-template-columns: 1fr; }
     @media(min-width: 600px) { .options-grid { grid-template-columns: 1fr 1fr; } }
     
-    /* OPTION BUTTONS (Changed to div to bypass MathJax strict tag skipping) */
+    /* OPTION BUTTONS */
     .option-btn { background: #353b48; color: white; border: 2px solid #40739e; padding: 18px; border-radius: 12px; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 0 #273c75;}
     .option-btn:hover:not(.disabled) { transform: translateY(-2px); box-shadow: 0 6px 0 #273c75; background: #2f3640;}
     .option-btn:active:not(.disabled) { transform: translateY(4px); box-shadow: none; }
@@ -139,19 +139,15 @@
   </div>
 
   <div class="page-layout">
-    <!-- LEFT SIDE: Ads & Game -->
     <div class="main-content">
       <div class="ad-space top-ad">Top Banner Ad (e.g. 728x90)</div>
 
-      <!-- Game Stage -->
       <div class="stage">
         <div class="game-card" id="question-screen">
           <span class="meta-tag" id="q-meta">Loading...</span>
           <div class="question-text" id="q-text">Setting up your game...</div>
           
-          <div class="options-grid" id="q-options">
-            <!-- Buttons injected by JS -->
-          </div>
+          <div class="options-grid" id="q-options"></div>
 
           <div class="feedback-panel" id="feedback">
             <strong>Explanation:</strong> <span id="explanation-text"></span>
@@ -169,25 +165,40 @@
       </div>
     </div>
 
-    <!-- RIGHT SIDE: Sidebar Ad -->
     <div class="sidebar">
       <div class="ad-space sticky-ad">Right Sidebar Ad (e.g. 300x600)<br>Scroll down to see me stick!</div>
     </div>
   </div>
 
   <script>
-    // --- Universal Math Formatting Helper ---
+    // --- SMART MATH FORMATTER (Upgraded to fix JSON backslash loss) ---
     function formatMathText(text, isExplanation = false) {
       if (!text) return "";
       let s = String(text);
       
-      // Convert database \( \) delimiters to foolproof $ $ delimiters
+      // 1. Recover lost backslashes that JS strings swallow
+      s = s.replace(/\bfrac\b/g, '\\frac');
+      s = s.replace(/\blog\b/g, '\\log');
+      
+      // 2. Fix the specific MathJax crash causing "Missing open brace for superscript"
+      s = s.replace(/\^\\circ/g, '^{\\circ}');
+      s = s.replace(/\^circ/g, '^{\\circ}');
+      
+      // 3. Convert \( \) to universal $ $
       s = s.replace(/\\\\\(/g, '$').replace(/\\\\\)/g, '$');
       s = s.replace(/\\\(/g, '$').replace(/\\\)/g, '$');
       
-      // Auto-wrap naked math equations if no $ is found
-      if (!isExplanation && !s.includes('$') && (s.includes('^') || s.includes('\\') || s.includes('='))) {
-         s = `$ ${s} $`;
+      // 4. Auto-wrap naked math
+      if (!s.includes('$')) {
+        if (!isExplanation) {
+          // If a question/option has algebra symbols, wrap the whole string in math tags
+          if (s.includes('^') || s.includes('_') || s.includes('\\') || s.match(/[=+\-*/]/)) {
+            s = `$ ${s} $`;
+          }
+        } else {
+          // Explanations mix English and Math. We hunt for math variables (like F_x or t^n) and wrap them individually!
+          s = s.replace(/([a-zA-Z0-9{}]+[\^_][a-zA-Z0-9{}+-]+)/g, ' $ $1 $ ');
+        }
       }
       
       return s;
@@ -306,7 +317,6 @@
       shufflePool.sort(() => Math.random() - 0.5);
       const newCorrectIndex = shufflePool.findIndex(opt => opt.isCorrect);
 
-      // Generate Option DIVS instead of buttons to force MathJax rendering
       shufflePool.forEach((opt, index) => {
         const btn = document.createElement('div');
         btn.className = 'option-btn';

@@ -11,9 +11,6 @@
       tex: { 
         inlineMath: [['\\(', '\\)'], ['$', '$']], 
         displayMath: [['$$', '$$'], ['\\[', '\\]']] 
-      },
-      startup: {
-        typeset: false // We will manually trigger it
       }
     };
   </script>
@@ -190,7 +187,19 @@
   </div>
 
   <script>
-    // Game State Variables
+    // --- MathJax Promise Queue ---
+    let mathJaxPromise = Promise.resolve();
+
+    function renderMath() {
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        mathJaxPromise = mathJaxPromise.then(() => {
+          MathJax.typesetClear();
+          return MathJax.typesetPromise();
+        }).catch((err) => console.log('MathJax error: ', err));
+      }
+    }
+
+    // --- Game State Variables ---
     let gameQuestions = [];
     let currentIndex = 0;
     let sessionXP = 0;
@@ -257,14 +266,6 @@
       }
     }
 
-    // Helper to safely render MathJax inside a specific element
-    function renderMath(elementId) {
-      if (window.MathJax) {
-        MathJax.typesetClear();
-        MathJax.typesetPromise([document.getElementById(elementId)]).catch(err => console.log('Math error:', err));
-      }
-    }
-
     function loadQuestion() {
       const q = gameQuestions[currentIndex];
       document.getElementById('game-progress').style.width = `${((currentIndex) / gameQuestions.length) * 100}%`;
@@ -312,8 +313,8 @@
         optionsBox.appendChild(btn);
       });
 
-      // 🔥 Trigger MathJax Render for the newly loaded question & options
-      setTimeout(() => renderMath('question-screen'), 50);
+      // 🔥 Trigger global MathJax Render safely
+      renderMath();
     }
 
     function checkAnswer(selectedIndex, correctIndex, clickedBtn, explanation) {
@@ -342,8 +343,8 @@
         document.getElementById('explanation-text').innerHTML = explanation;
         document.getElementById('feedback').style.display = 'block';
         
-        // 🔥 Trigger MathJax Render for the newly revealed explanation
-        setTimeout(() => renderMath('feedback'), 50);
+        // 🔥 Trigger global MathJax Render for the newly revealed explanation
+        renderMath();
       }
 
       document.getElementById('next-btn').style.display = 'block';

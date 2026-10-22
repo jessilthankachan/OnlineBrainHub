@@ -314,6 +314,12 @@
         const btn = document.createElement('button');
         btn.className = 'option-btn';
         let cleanText = String(opt.text).replace(/\\\\/g, '\\');
+
+// 🔥 NEW: Auto-wrap raw LaTeX in MathJax delimiters if missing
+        if (cleanText.includes('\\') && !cleanText.includes('\\(') && !cleanText.includes('\\[')) {
+          cleanText = '\\( ' + cleanText + ' \\)';
+        }
+
         btn.innerHTML = `<span style="pointer-events: none;">${cleanText}</span>`;
         btn.onclick = () => checkAnswer(index, newCorrectIndex, btn, q.explanation);
         optionsBox.appendChild(btn);
@@ -348,6 +354,12 @@
       // Show explanation if it exists
       if (explanation && explanation.length > 2) {
         let cleanExp = String(explanation).replace(/\\\\/g, '\\');
+
+// 🔥 NEW: Auto-wrap raw LaTeX in explanation if missing
+        if (cleanExp.includes('\\') && !cleanExp.includes('\\(') && !cleanExp.includes('\\[')) {
+          cleanExp = '\\( ' + cleanExp + ' \\)';
+        }
+
         document.getElementById('explanation-text').innerHTML = cleanExp;
         document.getElementById('feedback').style.display = 'block';
         

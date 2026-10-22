@@ -171,32 +171,28 @@
   </div>
 
   <script>
-    // --- SMART MATH FORMATTER (Upgraded to fix JSON backslash loss) ---
+    // --- SMART MATH FORMATTER ---
     function formatMathText(text, isExplanation = false) {
       if (!text) return "";
       let s = String(text);
       
-      // 1. Recover lost backslashes that JS strings swallow
+      // 1. Recover lost backslashes for common math words
       s = s.replace(/\bfrac\b/g, '\\frac');
       s = s.replace(/\blog\b/g, '\\log');
       
-      // 2. Fix the specific MathJax crash causing "Missing open brace for superscript"
-      s = s.replace(/\^\\circ/g, '^{\\circ}');
-      s = s.replace(/\^circ/g, '^{\\circ}');
+      // 2. FIX FOR GEOMETRY CRASH: Forces braces around 'circ'
+      s = s.replace(/\^(?:\\)?circ/g, '^{\\circ}');
       
-      // 3. Convert \( \) to universal $ $
-      s = s.replace(/\\\\\(/g, '$').replace(/\\\\\)/g, '$');
-      s = s.replace(/\\\(/g, '$').replace(/\\\)/g, '$');
+      // 3. Convert all variations of \( and \) into universally accepted $ $ tags
+      s = s.replace(/\\\\?\(/g, '$').replace(/\\\\?\)/g, '$');
       
-      // 4. Auto-wrap naked math
+      // 4. Auto-Wrap Naked Math
       if (!s.includes('$')) {
         if (!isExplanation) {
-          // If a question/option has algebra symbols, wrap the whole string in math tags
-          if (s.includes('^') || s.includes('_') || s.includes('\\') || s.match(/[=+\-*/]/)) {
+          if (s.includes('^') || s.includes('_') || s.match(/[=+\-*/]/)) {
             s = `$ ${s} $`;
           }
         } else {
-          // Explanations mix English and Math. We hunt for math variables (like F_x or t^n) and wrap them individually!
           s = s.replace(/([a-zA-Z0-9{}]+[\^_][a-zA-Z0-9{}+-]+)/g, ' $ $1 $ ');
         }
       }
@@ -204,7 +200,7 @@
       return s;
     }
 
-    // --- MathJax Promise Queue ---
+    // --- MathJax Promise Queue (Prevents Race Conditions) ---
     let mathJaxPromise = Promise.resolve();
     function renderMath() {
       if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {

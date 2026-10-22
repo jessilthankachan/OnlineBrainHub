@@ -4,18 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Mode - Online Brain Hub</title>
-  
-  <!-- Advanced MathJax Config -->
+
+  <!-- MathJax configuration: supports \( ... \), $ ... $, and display math -->
   <script>
     window.MathJax = {
-      tex: { 
-        inlineMath: [['\\(', '\\)'], ['$', '$']], 
-        displayMath: [['$$', '$$'], ['\\[', '\\]']] 
-      }
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      startup: { typeset: false }
     };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
+
   <style>
     :root {
       --bg-color: #1e272e;
@@ -26,136 +30,77 @@
       --text: #f5f6fa;
       --accent: #fdcb6e;
     }
-    
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text); display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden;}
-    
-    /* Game HUD (Heads Up Display) */
-    .hud { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.3); border-bottom: 2px solid rgba(255,255,255,0.1);}
-    .hud-item { font-size: 1.2em; font-weight: bold; display: flex; align-items: center; gap: 8px;}
+    * { box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text); display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; }
+    .hud { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.3); border-bottom: 2px solid rgba(255,255,255,0.1); }
+    .hud-item { font-size: 1.2em; font-weight: bold; display: flex; align-items: center; gap: 8px; }
     .lives { color: #ff7675; letter-spacing: 2px; }
     .score { color: var(--accent); }
-    .quit-btn { background: none; border: none; color: #b2bec3; cursor: pointer; font-size: 1em; font-weight: bold;}
+    .quit-btn { background: none; border: none; color: #b2bec3; cursor: pointer; font-size: 1em; font-weight: bold; }
     .quit-btn:hover { color: white; }
-
-    /* Level Progress Bar */
     .progress-container { width: 100%; height: 8px; background: #636e72; }
     .progress-bar { height: 100%; width: 0%; background: var(--success); transition: width 0.3s ease; }
-
-    /* Layout structure for Ads */
-    .page-layout {
-      display: flex;
-      gap: 30px;
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 20px;
-      width: 100%;
-      box-sizing: border-box;
-      flex: 1;
-    }
-
-    /* Main Content Area */
-    .main-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    /* Sidebar for Sticky Ad */
-    .sidebar {
-      width: 300px;
-      flex-shrink: 0;
-    }
-
-    /* Ad Placeholders */
-    .ad-space {
-      background: rgba(0,0,0,0.2);
-      border: 2px dashed rgba(255,255,255,0.2);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #b2bec3;
-      font-weight: bold;
-      text-align: center;
-    }
-    
+    .page-layout { display: flex; gap: 30px; max-width: 1200px; margin: 20px auto; padding: 0 20px; width: 100%; box-sizing: border-box; flex: 1; }
+    .main-content { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+    .sidebar { width: 300px; flex-shrink: 0; }
+    .ad-space { background: rgba(0,0,0,0.2); border: 2px dashed rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #b2bec3; font-weight: bold; text-align: center; }
     .top-ad { width: 100%; min-height: 90px; }
     .sticky-ad { width: 100%; height: 600px; position: sticky; top: 20px; }
-
-    /* Game Stage */
-    .stage { flex: 1; display: flex; justify-content: center; align-items: flex-start; padding-top: 20px; }
-    .game-card { background: var(--panel-bg); width: 100%; max-width: 700px; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: center; position: relative;}
-    
-    .meta-tag { font-size: 0.85em; color: #b2bec3; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; display: block;}
-    .question-text { font-size: 1.6em; font-weight: 700; margin-bottom: 30px; line-height: 1.4;}
-    
-    /* Options Grid */
+    .stage { flex: 1; display: flex; justify-content: center; align-items: flex-start; padding-top: 20px; min-width: 0; }
+    .game-card { background: var(--panel-bg); width: 100%; max-width: 780px; min-width: 0; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: center; position: relative; }
+    .meta-tag { font-size: 0.85em; color: #b2bec3; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; display: block; }
+    .question-text { font-size: 1.6em; font-weight: 700; margin-bottom: 30px; line-height: 1.5; overflow-wrap: anywhere; }
+    .question-text mjx-container { max-width: 100%; }
     .options-grid { display: grid; gap: 15px; grid-template-columns: 1fr; }
     @media(min-width: 600px) { .options-grid { grid-template-columns: 1fr 1fr; } }
-    
-    /* OPTION BUTTONS */
-    .option-btn { background: #353b48; color: white; border: 2px solid #40739e; padding: 18px; border-radius: 12px; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 0 #273c75;}
-    .option-btn:hover:not(.disabled) { transform: translateY(-2px); box-shadow: 0 6px 0 #273c75; background: #2f3640;}
+    .option-btn { background: #353b48; color: white; border: 2px solid #40739e; padding: 18px; border-radius: 12px; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 0 #273c75; overflow-wrap: anywhere; }
+    .option-btn:hover:not(.disabled) { transform: translateY(-2px); box-shadow: 0 6px 0 #273c75; background: #2f3640; }
     .option-btn:active:not(.disabled) { transform: translateY(4px); box-shadow: none; }
     .option-btn.disabled { pointer-events: none; cursor: default; }
-    
-    /* Game States */
+    .option-btn mjx-container { max-width: 100%; }
     .correct { background: var(--success) !important; border-color: #00cec9 !important; box-shadow: 0 4px 0 #0097e6 !important; animation: pop 0.3s ease; }
-    .wrong { background: var(--danger) !important; border-color: #c0392b !important; box-shadow: 0 4px 0 #a93226 !important; animation: shake 0.4s ease; opacity: 0.7;}
-    
-    .feedback-panel { margin-top: 30px; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 12px; display: none; text-align: left; border-left: 4px solid var(--accent);}
-    .next-btn { margin-top: 20px; background: var(--primary); color: white; border: none; padding: 15px 30px; font-size: 1.2em; border-radius: 30px; cursor: pointer; font-weight: bold; width: 100%; box-shadow: 0 4px 0 #273c75;}
+    .wrong { background: var(--danger) !important; border-color: #c0392b !important; box-shadow: 0 4px 0 #a93226 !important; animation: shake 0.4s ease; opacity: 0.7; }
+    .feedback-panel { margin-top: 30px; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 12px; display: none; text-align: left; border-left: 4px solid var(--accent); line-height: 1.6; overflow-wrap: anywhere; }
+    .next-btn { margin-top: 20px; background: var(--primary); color: white; border: none; padding: 15px 30px; font-size: 1.2em; border-radius: 30px; cursor: pointer; font-weight: bold; width: 100%; box-shadow: 0 4px 0 #273c75; }
     .next-btn:hover { background: #0097e6; }
-
-    /* End Screen */
     #end-screen { display: none; }
     .reward-icon { font-size: 5em; margin-bottom: 10px; animation: bounce 2s infinite; }
-
-    /* Responsive Design */
     @media(max-width: 900px) {
       .page-layout { flex-direction: column; padding: 0 10px; }
       .sidebar { width: 100%; }
       .sticky-ad { position: static; height: 250px; }
       .game-card { padding: 20px; }
     }
-
-    /* Animations */
-    @keyframes shake { 0%, 100% {transform: translateX(0);} 25% {transform: translateX(-10px);} 75% {transform: translateX(10px);} }
-    @keyframes pop { 0% {transform: scale(1);} 50% {transform: scale(1.05);} 100% {transform: scale(1);} }
-    @keyframes bounce { 0%, 100% {transform: translateY(0);} 50% {transform: translateY(-20px);} }
+    @media(max-width: 420px) {
+      .hud { padding: 12px; }
+      .hud-item { font-size: 1em; }
+      .question-text { font-size: 1.25em; }
+      .game-card { padding: 16px; }
+    }
+    @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-10px); } 75% { transform: translateX(10px); } }
+    @keyframes pop { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
   </style>
 </head>
 <body>
-
   <div class="hud">
     <button class="quit-btn" onclick="quitGame()">✖ Quit</button>
     <div class="hud-item score">⭐ <span id="xp-counter">0</span> XP</div>
     <div class="hud-item lives" id="lives-display">❤️❤️❤️</div>
   </div>
-  
-  <div class="progress-container">
-    <div class="progress-bar" id="game-progress"></div>
-  </div>
+  <div class="progress-container"><div class="progress-bar" id="game-progress"></div></div>
 
   <div class="page-layout">
     <div class="main-content">
       <div class="ad-space top-ad">Top Banner Ad (e.g. 728x90)</div>
-
       <div class="stage">
         <div class="game-card" id="question-screen">
           <span class="meta-tag" id="q-meta">Loading...</span>
           <div class="question-text" id="q-text">Setting up your game...</div>
-          
           <div class="options-grid" id="q-options"></div>
-
-          <div class="feedback-panel" id="feedback">
-            <strong>Explanation:</strong> <span id="explanation-text"></span>
-          </div>
-          
+          <div class="feedback-panel" id="feedback"><strong>Explanation:</strong> <span id="explanation-text"></span></div>
           <button class="next-btn" id="next-btn" style="display:none;" onclick="loadNextQuestion()">Next Question ➔</button>
         </div>
-
         <div class="game-card" id="end-screen">
           <div class="reward-icon" id="end-icon">🏆</div>
           <h1 id="end-title">Level Complete!</h1>
@@ -164,56 +109,40 @@
         </div>
       </div>
     </div>
-
-    <div class="sidebar">
-      <div class="ad-space sticky-ad">Right Sidebar Ad (e.g. 300x600)<br>Scroll down to see me stick!</div>
-    </div>
+    <div class="sidebar"><div class="ad-space sticky-ad">Right Sidebar Ad (e.g. 300x600)<br>Scroll down to see me stick!</div></div>
   </div>
 
   <script>
-   // --- ULTRA-SAFE SMART MATH FORMATTER ---
-    function formatMathText(text, isExplanation = false) {
-      if (!text) return "";
+    // Normalize database math delimiters without wrapping ordinary sentences in math mode.
+    function formatMathText(text) {
+      if (text == null) return '';
       let s = String(text);
-      
-      // 1. Force fix any broken carets or degree symbols instantly
-      s = s.replace(/\^\s*\\?circ/g, '^{\\circ}');
-      
-      // 2. Recover lost backslashes for common math words
-      s = s.replace(/\bfrac\b/g, '\\frac');
-      s = s.replace(/\blog\b/g, '\\log');
-      
-      // 3. Convert all variations of \( and \) into universally accepted $ $ tags
-      s = s.replace(/\\\\?\(/g, '$').replace(/\\\\?\)/g, '$');
-      
-      // 4. Auto-Wrap Naked Math
-      if (!s.includes('$')) {
-        if (!isExplanation) {
-          if (s.includes('^') || s.includes('_') || s.match(/[=+\-*/]/)) {
-            s = `$ ${s} $`;
-          }
-        } else {
-          s = s.replace(/([a-zA-Z0-9{}]+[\^_][a-zA-Z0-9{}+-]+)/g, ' $ $1 $ ');
-        }
-      }
-      
+
+      // Some records contain doubled or repeated backslashes around \( and \).
+      // Normalize any run of backslashes to one valid MathJax delimiter.
+      s = s.replace(/\\+\(/g, '\\(').replace(/\\+\)/g, '\\)');
+
+      // Recover common LaTeX commands that may have lost their leading slash.
+      // Word boundaries avoid changing words such as "logarithm" or "fraction".
+      s = s.replace(/\\?frac\s*\{/g, '\\frac{');
+      s = s.replace(/\\?sqrt\s*\{/g, '\\sqrt{');
+
       return s;
     }
 
-    // --- MathJax Promise Queue (Prevents Race Conditions) ---
+    // Serialize MathJax typesetting so rapid question changes do not race.
     let mathJaxPromise = Promise.resolve();
     function renderMath() {
-      if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
+      if (window.MathJax && MathJax.typesetPromise) {
         mathJaxPromise = mathJaxPromise.then(() => {
-          MathJax.typesetClear();
+          if (MathJax.typesetClear) MathJax.typesetClear();
           return MathJax.typesetPromise();
-        }).catch((err) => console.log('MathJax error: ', err));
+        }).catch(err => console.error('MathJax error:', err));
       } else {
         setTimeout(renderMath, 50);
       }
     }
 
-    // --- Game State Variables ---
     let gameQuestions = [];
     let currentIndex = 0;
     let sessionXP = 0;
@@ -225,18 +154,18 @@
     const targetCategory = urlParams.get('category');
     const targetTopic = urlParams.get('topic');
     const targetDiff = urlParams.get('diff');
-    let isDailyChallenge = (targetSubject === 'Daily');
+    const isDailyChallenge = targetSubject === 'Daily';
 
     function getDailyQuestions(questionsArray, numberOfQuestions) {
       if (!questionsArray || questionsArray.length === 0) return [];
-      const today = new Date().toISOString().split('T')[0]; 
-      let seed = parseInt(today.replace(/-/g, '')); 
-      let dailySet = [];
-      let pool = [...questionsArray]; 
-      for(let i = 0; i < numberOfQuestions; i++) {
-        if(pool.length === 0) break;
+      const today = new Date().toISOString().split('T')[0];
+      let seed = parseInt(today.replace(/-/g, ''), 10);
+      const dailySet = [];
+      const pool = [...questionsArray];
+      for (let i = 0; i < numberOfQuestions; i++) {
+        if (pool.length === 0) break;
         seed = (seed * 9301 + 49297) % 233280;
-        let index = Math.floor((seed / 233280) * pool.length);
+        const index = Math.floor((seed / 233280) * pool.length);
         dailySet.push(pool.splice(index, 1)[0]);
       }
       return dailySet;
@@ -244,133 +173,143 @@
 
     async function initGame() {
       try {
-        const res = await fetch('/api/questions?nocache=' + new Date().getTime());
+        const res = await fetch('/api/questions?nocache=' + Date.now());
+        if (!res.ok) throw new Error('Questions request failed: ' + res.status);
         const allQuestions = await res.json();
-        
+        if (!Array.isArray(allQuestions)) throw new Error('Question API did not return an array');
+
         if (isDailyChallenge) {
           gameQuestions = getDailyQuestions(allQuestions, 5);
         } else {
-          if(targetTopic && targetCategory && targetSubject) {
-            gameQuestions = allQuestions.filter(q => q.subject.toLowerCase() === targetSubject.toLowerCase() && q.category.toLowerCase() === targetCategory.toLowerCase() && q.topic.toLowerCase() === targetTopic.toLowerCase());
+          if (targetTopic && targetCategory && targetSubject) {
+            gameQuestions = allQuestions.filter(q =>
+              String(q.subject || '').toLowerCase() === targetSubject.toLowerCase() &&
+              String(q.category || '').toLowerCase() === targetCategory.toLowerCase() &&
+              String(q.topic || '').toLowerCase() === targetTopic.toLowerCase());
           } else if (targetCategory && targetSubject) {
-            gameQuestions = allQuestions.filter(q => q.subject.toLowerCase() === targetSubject.toLowerCase() && q.category.toLowerCase() === targetCategory.toLowerCase());
+            gameQuestions = allQuestions.filter(q =>
+              String(q.subject || '').toLowerCase() === targetSubject.toLowerCase() &&
+              String(q.category || '').toLowerCase() === targetCategory.toLowerCase());
           } else if (targetSubject) {
-            gameQuestions = allQuestions.filter(q => q.subject.toLowerCase() === targetSubject.toLowerCase());
+            gameQuestions = allQuestions.filter(q => String(q.subject || '').toLowerCase() === targetSubject.toLowerCase());
+          } else {
+            gameQuestions = [...allQuestions];
           }
-
           if (targetDiff && targetDiff !== 'All') {
-            gameQuestions = gameQuestions.filter(q => parseInt(q.difficulty) === parseInt(targetDiff));
+            gameQuestions = gameQuestions.filter(q => parseInt(q.difficulty, 10) === parseInt(targetDiff, 10));
           }
-
           gameQuestions.sort(() => Math.random() - 0.5);
           gameQuestions = gameQuestions.slice(0, 10);
         }
 
-        if(gameQuestions.length === 0) {
-          document.getElementById('q-text').innerText = "No questions match your selected filters!";
+        if (gameQuestions.length === 0) {
+          document.getElementById('q-text').textContent = 'No questions match your selected filters!';
+          document.getElementById('q-meta').textContent = '';
           return;
         }
-
         loadQuestion();
       } catch (error) {
-        document.getElementById('q-text').innerText = "Error loading database.";
+        console.error('Error loading questions:', error);
+        document.getElementById('q-text').textContent = 'Error loading database. Please reload and try again.';
       }
+    }
+
+    function parseOptions(q) {
+      let options = q.options;
+      // The API may return options as a JSON string or an array.
+      for (let attempt = 0; typeof options === 'string' && attempt < 2; attempt++) {
+        try { options = JSON.parse(options); }
+        catch (e) { break; }
+      }
+      if (!Array.isArray(options)) throw new Error('Options are not an array');
+      return options;
     }
 
     function loadQuestion() {
       const q = gameQuestions[currentIndex];
-      document.getElementById('game-progress').style.width = `${((currentIndex) / gameQuestions.length) * 100}%`;
-      
+      document.getElementById('game-progress').style.width = `${(currentIndex / gameQuestions.length) * 100}%`;
       if (isDailyChallenge) {
-        document.getElementById('q-meta').innerHTML = `🔥 DAILY CHALLENGE | Question ${currentIndex + 1} of ${gameQuestions.length} <span style="color: #ff7675; font-weight: bold; margin-left: 10px;">(2x XP ACTIVE)</span>`;
+        document.getElementById('q-meta').innerHTML = `🔥 DAILY CHALLENGE | Question ${currentIndex + 1} of ${gameQuestions.length} <span style="color:#ff7675;font-weight:bold;margin-left:10px;">(2x XP ACTIVE)</span>`;
       } else {
-        document.getElementById('q-meta').innerText = `${q.subject} > ${q.category} > Difficulty ${q.difficulty}/10 | Question ${currentIndex + 1} of ${gameQuestions.length}`;
+        document.getElementById('q-meta').textContent = `${q.subject || 'General'} > ${q.category || 'General'} > Difficulty ${q.difficulty ?? '?'}/10 | Question ${currentIndex + 1} of ${gameQuestions.length}`;
       }
-      
-      document.getElementById('q-text').innerHTML = formatMathText(q.question || q.question_text, false);
-      
+
+      // Use textContent for question/option text so database strings are not interpreted as HTML.
+      const questionEl = document.getElementById('q-text');
+      questionEl.textContent = formatMathText(q.question || q.question_text || '');
       const optionsBox = document.getElementById('q-options');
-      optionsBox.innerHTML = '';
+      optionsBox.replaceChildren();
       document.getElementById('feedback').style.display = 'none';
+      document.getElementById('explanation-text').textContent = '';
       document.getElementById('next-btn').style.display = 'none';
 
-      let optionsArray = [];
-      try {
-        let optString = q.options;
-        if (typeof optString === 'string') {
-          optionsArray = JSON.parse(optString);
-        } else {
-          optionsArray = optString;
-        }
-      } catch(e) {
-        optionsArray = ["Error loading options"]; 
+      let optionsArray;
+      try { optionsArray = parseOptions(q); }
+      catch (e) {
+        console.error('Invalid options for question:', q, e);
+        questionEl.textContent = 'This question has invalid answer options in the database.';
+        return;
       }
 
-      const originalCorrectIndex = parseInt(q.correct);
-      let shufflePool = optionsArray.map((text, index) => {
-        return { text: text, isCorrect: (index === originalCorrectIndex) };
-      });
+      const originalCorrectIndex = Number.parseInt(q.correct, 10);
+      const shufflePool = optionsArray.map((text, index) => ({ text: String(text), isCorrect: index === originalCorrectIndex }));
       shufflePool.sort(() => Math.random() - 0.5);
       const newCorrectIndex = shufflePool.findIndex(opt => opt.isCorrect);
 
       shufflePool.forEach((opt, index) => {
-        const btn = document.createElement('div');
+        const btn = document.createElement('button');
+        btn.type = 'button';
         btn.className = 'option-btn';
-        
-        let cleanText = formatMathText(opt.text, false);
-        btn.innerHTML = `<span style="pointer-events: none;">${cleanText}</span>`;
-        
-        btn.onclick = () => {
-          if (!btn.classList.contains('disabled')) {
-            checkAnswer(index, newCorrectIndex, btn, q.explanation);
-          }
-        };
+        const span = document.createElement('span');
+        span.textContent = formatMathText(opt.text);
+        btn.appendChild(span);
+        btn.addEventListener('click', () => {
+          if (!btn.classList.contains('disabled')) checkAnswer(index, newCorrectIndex, btn, q.explanation);
+        });
         optionsBox.appendChild(btn);
       });
-
       renderMath();
     }
 
     function checkAnswer(selectedIndex, correctIndex, clickedBtn, explanation) {
       const buttons = document.querySelectorAll('.option-btn');
-      const isCorrect = (selectedIndex === correctIndex);
-      let xpMultiplier = isDailyChallenge ? 2 : 1;
-
+      const isCorrect = selectedIndex === correctIndex;
+      const xpMultiplier = isDailyChallenge ? 2 : 1;
       buttons.forEach((btn, idx) => {
         btn.classList.add('disabled');
+        btn.disabled = true;
         if (idx === correctIndex) btn.classList.add('correct');
         else if (idx === selectedIndex && !isCorrect) btn.classList.add('wrong');
       });
 
       if (isCorrect) {
         correctAnswers++;
-        sessionXP += (15 * xpMultiplier);
-        document.getElementById('xp-counter').innerText = sessionXP;
+        sessionXP += 15 * xpMultiplier;
       } else {
-        lives--;
+        lives = Math.max(0, lives - 1);
         updateLivesDisplay();
-        sessionXP += (5 * xpMultiplier);
-        document.getElementById('xp-counter').innerText = sessionXP;
+        sessionXP += 5 * xpMultiplier;
       }
+      document.getElementById('xp-counter').textContent = sessionXP;
 
-      if (explanation && explanation.length > 2) {
-        document.getElementById('explanation-text').innerHTML = formatMathText(explanation, true);
+      if (explanation && String(explanation).length > 2) {
+        document.getElementById('explanation-text').textContent = formatMathText(explanation, true);
         document.getElementById('feedback').style.display = 'block';
         renderMath();
       }
-
       document.getElementById('next-btn').style.display = 'block';
     }
 
     function updateLivesDisplay() {
       let hearts = '';
-      for(let i=0; i<lives; i++) hearts += '❤️';
-      for(let i=lives; i<3; i++) hearts += '🖤';
-      document.getElementById('lives-display').innerText = hearts;
+      for (let i = 0; i < lives; i++) hearts += '❤️';
+      for (let i = lives; i < 3; i++) hearts += '🖤';
+      document.getElementById('lives-display').textContent = hearts;
       if (lives <= 0) setTimeout(gameOver, 1000);
     }
 
     function loadNextQuestion() {
+      if (lives <= 0) return;
       currentIndex++;
       if (currentIndex >= gameQuestions.length) gameWon();
       else loadQuestion();
@@ -379,8 +318,8 @@
     function gameOver() {
       document.getElementById('question-screen').style.display = 'none';
       document.getElementById('end-screen').style.display = 'block';
-      document.getElementById('end-icon').innerText = '💀';
-      document.getElementById('end-title').innerText = 'Out of Lives!';
+      document.getElementById('end-icon').textContent = '💀';
+      document.getElementById('end-title').textContent = 'Out of Lives!';
       document.getElementById('end-title').style.color = 'var(--danger)';
       finalizeXP();
     }
@@ -388,35 +327,40 @@
     function gameWon() {
       document.getElementById('question-screen').style.display = 'none';
       document.getElementById('end-screen').style.display = 'block';
-      document.getElementById('end-icon').innerText = '👑';
-      document.getElementById('end-title').innerText = 'Level Complete!';
+      document.getElementById('end-icon').textContent = '👑';
+      document.getElementById('end-title').textContent = 'Level Complete!';
       document.getElementById('end-title').style.color = 'var(--accent)';
       document.getElementById('game-progress').style.width = '100%';
       finalizeXP();
     }
 
+    let xpFinalized = false;
     async function finalizeXP() {
-      let currentLocalXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;
+      if (xpFinalized) return;
+      xpFinalized = true;
+      const currentLocalXP = parseInt(localStorage.getItem('brainhub_xp'), 10) || 0;
       localStorage.setItem('brainhub_xp', currentLocalXP + sessionXP);
-      if (document.getElementById('earned-xp')) document.getElementById('earned-xp').innerText = `${sessionXP} XP!`;
+      document.getElementById('earned-xp').textContent = `${sessionXP} XP!`;
 
       const savedUsername = localStorage.getItem('obh_username');
       if (savedUsername && sessionXP > 0) {
-        const safeSubject = targetSubject || 'General';
-        const safeTopic = targetTopic || 'Quiz';
         try {
           await fetch('/api/user', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ action: 'save_xp', username: savedUsername, xpEarned: sessionXP, subject: safeSubject, topic: safeTopic, score: correctAnswers, totalQuestions: gameQuestions.length, hearts: lives })
+            body: JSON.stringify({
+              action: 'save_xp', username: savedUsername, xpEarned: sessionXP,
+              subject: targetSubject || 'General', topic: targetTopic || 'Quiz',
+              score: correctAnswers, totalQuestions: gameQuestions.length, hearts: lives
+            })
           });
-        } catch (e) { console.error("Failed to save progress to cloud."); }
+        } catch (e) { console.error('Failed to save progress to cloud.'); }
       }
     }
 
     function quitGame() {
-      if(isDailyChallenge) window.location.href = '/';
-      else if(targetSubject) window.location.href = `/${targetSubject.toLowerCase()}.html`;
+      if (isDailyChallenge) window.location.href = '/';
+      else if (targetSubject) window.location.href = `/${targetSubject.toLowerCase()}.html`;
       else window.location.href = '/';
     }
 

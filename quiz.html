@@ -187,15 +187,19 @@
   </div>
 
   <script>
-    // --- MathJax Promise Queue ---
+    // --- MathJax Promise Queue & Race Condition Fix ---
     let mathJaxPromise = Promise.resolve();
 
     function renderMath() {
-      if (window.MathJax && window.MathJax.typesetPromise) {
+      // Check if MathJax has fully downloaded and initialized
+      if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
         mathJaxPromise = mathJaxPromise.then(() => {
           MathJax.typesetClear();
           return MathJax.typesetPromise();
         }).catch((err) => console.log('MathJax error: ', err));
+      } else {
+        // If MathJax is still downloading, wait 50ms and try again
+        setTimeout(renderMath, 50);
       }
     }
 
@@ -276,8 +280,9 @@
         document.getElementById('q-meta').innerText = `${q.subject} > ${q.category} > Difficulty ${q.difficulty}/10 | Question ${currentIndex + 1} of ${gameQuestions.length}`;
       }
       
-      const questionText = q.question || q.question_text || "Error: Question text missing";
-      document.getElementById('q-text').innerHTML = questionText; 
+      // Inject Question Text with backslash sanitizer
+      const rawQuestion = q.question || q.question_text || "Error: Question text missing";
+      document.getElementById('q-text').innerHTML = String(rawQuestion).replace(/\\\\/g, '\\');
       
       const optionsBox = document.getElementById('q-options');
       optionsBox.innerHTML = '';
@@ -304,6 +309,7 @@
       shufflePool.sort(() => Math.random() - 0.5);
       const newCorrectIndex = shufflePool.findIndex(opt => opt.isCorrect);
 
+      // Generate Option Buttons
       shufflePool.forEach((opt, index) => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
@@ -313,7 +319,7 @@
         optionsBox.appendChild(btn);
       });
 
-      // 🔥 Trigger global MathJax Render safely
+      // 🔥 Safely trigger MathJax Render for the newly loaded question
       renderMath();
     }
 
@@ -339,11 +345,13 @@
         document.getElementById('xp-counter').innerText = sessionXP;
       }
 
+      // Show explanation if it exists
       if (explanation && explanation.length > 2) {
-        document.getElementById('explanation-text').innerHTML = explanation;
+        let cleanExp = String(explanation).replace(/\\\\/g, '\\');
+        document.getElementById('explanation-text').innerHTML = cleanExp;
         document.getElementById('feedback').style.display = 'block';
         
-        // 🔥 Trigger global MathJax Render for the newly revealed explanation
+        // 🔥 Safely trigger MathJax Render for the newly revealed explanation
         renderMath();
       }
 

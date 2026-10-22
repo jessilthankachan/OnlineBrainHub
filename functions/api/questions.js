@@ -7,6 +7,7 @@ const corsHeaders = {
 export async function onRequest(context) {
   const { request, env } = context;
 
+  // Handle CORS Preflight
   if (request.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -15,7 +16,7 @@ export async function onRequest(context) {
     const url = new URL(request.url);
 
     // ==========================================
-    // GET: Smart Server-Side Filtering
+    // GET: Smart Server-Side Filtering + Edge Caching
     // ==========================================
     if (request.method === 'GET') {
       const subject = url.searchParams.get('subject');
@@ -41,19 +42,23 @@ export async function onRequest(context) {
       if (conditions.length > 0) {
         sql += " WHERE " + conditions.join(" AND ");
       } else {
-        sql += " ORDER BY id DESC LIMIT 1000"; // Prevents 503s on the Admin panel by capping the load
+        sql += " ORDER BY id DESC LIMIT 1000"; 
       }
 
       const { results } = await env.DB.prepare(sql).bind(...bindParams).all();
       
       return new Response(JSON.stringify(results), { 
         status: 200, 
-        headers: { 'Content-Type': 'application/json', ...corsHeaders } 
+        headers: { 
+          'Content-Type': 'application/json',
+          'Cache-Control': 'public, max-age=3600', // 🔥 Memorizes the DB response for 1 hour to save hits
+          ...corsHeaders 
+        } 
       });
     }
 
     // ==========================================
-    // POST, PUT, DELETE remain raw and fast
+    // POST, PUT, DELETE (Raw Admin Operations)
     // ==========================================
     if (request.method === 'POST') {
       const body = await request.json();
@@ -64,6 +69,7 @@ export async function onRequest(context) {
         body.id, body.subject, body.category, body.topic, body.level, body.difficulty, 
         body.question, JSON.stringify(body.options), body.correct, body.explanation, body.hint
       ).run();
+      
       return new Response(JSON.stringify({ success: true }), { status: 201, headers: corsHeaders });
     }
 
@@ -75,12 +81,16 @@ export async function onRequest(context) {
         body.subject, body.category, body.topic, body.level, body.difficulty, 
         body.question, JSON.stringify(body.options), body.correct, body.explanation, body.hint, body.id
       ).run();
+      
       return new Response(JSON.stringify({ success: true }), { status: 200, headers: corsHeaders });
     }
 
     if (request.method === 'DELETE') {
       const body = await request.json();
+      if (!body.id) throw new Error("No ID provided");
+      
       await env.DB.prepare("DELETE FROM questions WHERE id = ?").bind(body.id).run();
+      
       return new Response(JSON.stringify({ success: true }), { status: 200, headers: corsHeaders });
     }
 

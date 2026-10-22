@@ -10,7 +10,7 @@
     window.MathJax = {
       tex: { 
         inlineMath: [['\\(', '\\)'], ['$', '$']], 
-        displayMath: [['$$', '$$'], ['[', ']']] 
+        displayMath: [['$$', '$$'], ['\\[', '\\]']] 
       }
     };
   </script>
@@ -276,11 +276,11 @@
       // Update Progress Bar
       document.getElementById('game-progress').style.width = `${((currentIndex) / gameQuestions.length) * 100}%`;
       
-      // Dynamic HUD Meta Tag (Updated to show Difficulty instead of Level)
+      // Dynamic HUD Meta Tag (Updated to include Question Count)
       if (isDailyChallenge) {
-        document.getElementById('q-meta').innerHTML = `🔥 DAILY CHALLENGE | Question ${currentIndex + 1} of 5 <span style="color: #ff7675; font-weight: bold; margin-left: 10px;">(2x XP ACTIVE)</span>`;
+        document.getElementById('q-meta').innerHTML = `🔥 DAILY CHALLENGE | Question ${currentIndex + 1} of ${gameQuestions.length} <span style="color: #ff7675; font-weight: bold; margin-left: 10px;">(2x XP ACTIVE)</span>`;
       } else {
-        document.getElementById('q-meta').innerText = `${q.subject} > ${q.category} > Difficulty ${q.difficulty}/10`;
+        document.getElementById('q-meta').innerText = `${q.subject} > ${q.category} > Difficulty ${q.difficulty}/10 | Question ${currentIndex + 1} of ${gameQuestions.length}`;
       }
       
       const questionText = q.question || q.question_text || "Error: Question text missing";
@@ -327,12 +327,11 @@
       });
 
       // 4. Trigger MathJax rendering
-      setTimeout(() => {
-        if (window.MathJax) {
-          MathJax.typesetClear();
-          MathJax.typesetPromise().catch(err => console.log('Math error:', err));
-        }
-      }, 100);
+      if (window.MathJax) {
+        MathJax.typesetPromise().catch(function (err) {
+          console.log('MathJax rendering error: ', err);
+        });
+      }
     }
 
     function checkAnswer(selectedIndex, correctIndex, clickedBtn, explanation) {
@@ -363,7 +362,13 @@
       if (explanation && explanation.length > 2) {
         document.getElementById('explanation-text').innerHTML = explanation;
         document.getElementById('feedback').style.display = 'block';
-        if (window.MathJax) { MathJax.typesetPromise(); }
+        
+        // Trigger MathJax rendering for the newly revealed explanation
+        if (window.MathJax) {
+          MathJax.typesetPromise().catch(function (err) {
+            console.log('MathJax rendering error in explanation: ', err);
+          });
+        }
       }
 
       document.getElementById('next-btn').style.display = 'block';

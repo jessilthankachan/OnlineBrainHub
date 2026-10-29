@@ -3,197 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Select Level - Online Brain Hub</title>
+  <title>Select Subtopic - Online Brain Hub</title>
   <style>
     :root {
-      --bg-color: #1e272e;
-      --panel-bg: #2d3436;
-      --primary: #0984e3;
+      --bg-color: #f0f2f5;
+      --primary: #00b894;
+      --secondary: #0984e3;
       --accent: #fdcb6e;
-      --text: #f5f6fa;
+      --text: #2d3436;
     }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text); }
+    header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100;}
+    .logo { font-size: 1.5em; font-weight: 800; color: var(--primary); margin: 0; text-decoration: none;}
     
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text); display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 20px; box-sizing: border-box;}
+    .layout { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+    .back-btn { background: none; border: none; color: var(--primary); font-weight: bold; cursor: pointer; font-size: 1.1em; margin-bottom: 20px; padding: 0; text-decoration: none; display: inline-block;}
     
-    header { width: 100%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; margin-top: 10px;}
-    .back-btn { background: rgba(255,255,255,0.1); border: none; color: white; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.2s;}
-    .back-btn:hover { background: rgba(255,255,255,0.2); }
+    .header-section { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid var(--primary); padding-bottom: 15px; margin-bottom: 30px;}
+    .page-title { color: var(--primary); margin: 0; font-size: 2em;}
     
-    /* Layout structure for Ads */
-    .page-layout { display: flex; gap: 30px; max-width: 1200px; width: 100%; flex: 1; }
-    .main-content { flex: 1; display: flex; flex-direction: column; gap: 20px; }
-    .sidebar { width: 300px; flex-shrink: 0; }
+    .topic-quiz-btn { background: var(--accent); color: #2d3436; border: none; padding: 12px 25px; border-radius: 8px; font-size: 1.1em; font-weight: bold; cursor: pointer; box-shadow: 0 4px 0 #e1b35c; transition: 0.2s;}
+    .topic-quiz-btn:active { transform: translateY(4px); box-shadow: none;}
 
-    /* Ad Placeholders */
-    .ad-space { background: rgba(0,0,0,0.2); border: 2px dashed rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #b2bec3; font-weight: bold; text-align: center; }
-    .top-ad { width: 100%; min-height: 90px; }
-    .sticky-ad { width: 100%; height: 600px; position: sticky; top: 20px; }
-
-    .stage-header { text-align: center; margin-bottom: 10px; }
-    .world-title { font-size: 1.2em; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; margin: 0; font-weight: 800;}
-    .category-title { font-size: 2.5em; margin: 10px 0; text-shadow: 0 4px 10px rgba(0,0,0,0.5);}
-
-    /* Game Level Grid */
-    .level-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; width: 100%; }
-    .level-card { background: var(--panel-bg); border-radius: 20px; padding: 30px 20px; text-align: center; cursor: pointer; border: 3px solid transparent; box-shadow: 0 8px 0 rgba(0,0,0,0.2); transition: all 0.2s ease; position: relative; overflow: hidden;}
-    .level-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 13px 0 rgba(0,0,0,0.2);}
-    .level-card:active { transform: translateY(3px); box-shadow: 0 0px 0 rgba(0,0,0,0.2); }
+    .subtopics-list { display: flex; flex-direction: column; gap: 15px; }
+    .subtopic-row { background: white; border: 1px solid #dfe6e9; padding: 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02); transition: 0.2s;}
+    .subtopic-row:hover { border-color: var(--primary); box-shadow: 0 4px 10px rgba(0, 184, 148, 0.15);}
+    .subtopic-title { font-size: 1.1em; font-weight: 600; margin: 0; flex: 1;}
     
-    .level-icon { font-size: 3em; margin-bottom: 15px; display: block;}
-    .level-name { font-size: 1.4em; font-weight: bold; margin: 0;}
-    
-    .loading { font-size: 1.5em; color: var(--accent); animation: pulse 1.5s infinite; }
-    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-
-    @media(max-width: 900px) {
-      .page-layout { flex-direction: column; }
-      .sidebar { width: 100%; }
-      .sticky-ad { position: static; height: 250px; }
-    }
+    .action-group { display: flex; gap: 10px; }
+    .action-btn { padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; border: none; font-size: 0.95em; transition: 0.2s;}
+    .btn-notes { background: #e3f2fd; color: var(--secondary); border: 1px solid #bbdefb;}
+    .btn-notes:hover { background: #bbdefb; }
+    .btn-quiz { background: #e8f8f5; color: var(--primary); border: 1px solid #b2dfdb;}
+    .btn-quiz:hover { background: #b2dfdb; }
   </style>
 </head>
 <body>
 
   <header>
-    <!-- Dynamic Back Button -->
-    <button class="back-btn" onclick="window.history.back()">← Back</button>
-    <div style="font-weight: bold; color: var(--accent);">⭐ Select a Stage</div>
+    <a href="/" class="logo">🧠 BrainHub</a>
   </header>
 
-  <div class="page-layout">
+  <div class="layout">
+    <a href="javascript:history.back()" class="back-btn">← Back to Main Topics</a>
     
-    <!-- LEFT SIDE: Main Content -->
-    <div class="main-content">
-      
-      <div class="ad-space top-ad">
-        Top Banner Ad (e.g. 728x90)
-      </div>
-
-      <div class="stage-header">
-        <h3 class="world-title" id="world-title">Loading World...</h3>
-        <h1 class="category-title" id="category-title">Select Level</h1>
-      </div>
-
-      <!-- In-Page Filters (Difficulty Only) -->
-      <div style="background: var(--panel-bg); padding: 15px; border-radius: 10px; margin-bottom: 10px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <div>
-          <label style="color: var(--accent); font-weight: bold; margin-right: 10px;">Difficulty:</label>
-          <select id="diff-filter" onchange="applyFilters()" style="padding: 8px; border-radius: 5px; background: #353b48; color: white; border: 1px solid #7f8fa6; outline: none; cursor: pointer;">
-            <option value="All">All Difficulties</option>
-            <option value="1">Difficulty 1</option>
-            <option value="5">Difficulty 5</option>
-            <option value="10">Difficulty 10</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="level-grid" id="level-grid">
-        <div class="loading">Generating levels from database...</div>
-      </div>
-      
+    <div class="header-section">
+      <h1 class="page-title" id="dynamic-title">Loading...</h1>
+      <button class="topic-quiz-btn" onclick="startTopicQuiz()">🏆 Take Topic Master Quiz</button>
     </div>
-
-    <!-- RIGHT SIDE: Sidebar Ad -->
-    <div class="sidebar">
-      <div class="ad-space sticky-ad">
-        Right Sidebar Ad (e.g. 300x600)<br>
-        Scroll down to see me stick!
-      </div>
+    
+    <div class="subtopics-list" id="subtopics-container">
+      <p style="color: #636e72;">Fetching subtopics...</p>
     </div>
-
   </div>
 
   <script>
-    // Global variable to store all fetched questions
-    let globalQuestions = [];
-    
-    // Parse URL Parameters
     const urlParams = new URLSearchParams(window.location.search);
-    const targetSubject = urlParams.get('subject');
-    const targetCategory = urlParams.get('category');
-    const urlDiff = urlParams.get('diff') || 'All';
+    const subject = urlParams.get('subject') || 'primary-maths';
+    const mainCategory = urlParams.get('category');
+    
+    document.getElementById('dynamic-title').innerText = mainCategory || 'Topic Not Found';
 
-    // 1. Check if we arrived here correctly
-    if (!targetSubject || !targetCategory) {
-      document.getElementById('world-title').innerText = "Navigation Error";
-      document.getElementById('category-title').innerText = "Missing Data";
-      document.getElementById('level-grid').innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">Please start from a subject page!</div>';
-    } else {
-      document.getElementById('world-title').innerText = `${targetSubject} World`;
-      document.getElementById('category-title').innerText = targetCategory;
+    // Map the friendly category name to the JSON file name
+    const categoryFileMap = {
+      "Numbers and Number Sense": "numbers-and-sense",
+      "Basic Arithmetic Operations": "basic-arithmetic",
+      "Factors, Multiples and Divisibility": "factors-multiples"
+      // Add other mappings here as you create more JSON files
+    };
+
+    async function loadSubtopics() {
+      const container = document.getElementById('subtopics-container');
       
-      // Set dropdown menu to match the URL parameters passed from the previous page
-      document.getElementById('diff-filter').value = urlDiff;
-      
-      bootSystem();
-    }
-
-    async function bootSystem() {
-      try {
-        // Send the smart filters directly to the backend to bypass safety limits!
-        const apiUrl = `/api/questions?subject=${encodeURIComponent(targetSubject)}&category=${encodeURIComponent(targetCategory)}&nocache=${new Date().getTime()}`;
-        
-        const res = await fetch(apiUrl);
-        globalQuestions = await res.json();
-        
-        applyFilters(); // Draw the grid based on the newly fetched data
-      } catch (error) {
-        document.getElementById('level-grid').innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675;">Error connecting to the game server.</div>';
-      }
-    }
-
-    // Triggered when a player changes the dropdown menus on this page
-    function applyFilters() {
-      if(globalQuestions.length === 0) return;
-
-      const selectedDiff = document.getElementById('diff-filter').value;
-
-      // Filter by Subject and Category
-      let filteredQuestions = globalQuestions.filter(q => 
-        q.subject.toLowerCase() === targetSubject.toLowerCase() && 
-        q.category.toLowerCase() === targetCategory.toLowerCase()
-      );
-
-      // Apply Difficulty Filter
-      if (selectedDiff !== 'All') {
-        filteredQuestions = filteredQuestions.filter(q => parseInt(q.difficulty) === parseInt(selectedDiff));
-      }
-
-      const grid = document.getElementById('level-grid');
-      grid.innerHTML = ''; 
-
-      if (filteredQuestions.length === 0) {
-        grid.innerHTML = '<div style="text-align:center; grid-column: 1 / -1; color: #ff7675; font-size: 1.2em; padding: 20px;">No stages unlocked for this combination! Try changing your filters above.</div>';
+      if (!mainCategory || !categoryFileMap[mainCategory]) {
+        container.innerHTML = '<p>No subtopics found for this category yet.</p>';
         return;
       }
 
-      const topicMap = {};
-      filteredQuestions.forEach(q => {
-        if (!topicMap[q.topic]) topicMap[q.topic] = 0;
-        topicMap[q.topic]++;
-      });
-
-      const icons = ['🎯', '⚡', '🚀', '🔥', '🧩', '⚔️', '🔮', '🏆'];
-      let iconIndex = 0;
-
-      for (const [topicName, qCount] of Object.entries(topicMap)) {
-        const card = document.createElement('div');
-        card.className = 'level-card';
-        const icon = icons[iconIndex % icons.length];
-        iconIndex++;
-
-        card.innerHTML = `
-          <span class="level-icon">${icon}</span>
-          <h3 class="level-name">${topicName}</h3>
-        `;
+      try {
+        const fileName = categoryFileMap[mainCategory];
+        // Fetch the specific JSON file we created
+        const response = await fetch(`data/primary-maths/${fileName}.json`);
         
-        card.onclick = () => {
-          window.location.href = `/quiz.html?subject=${encodeURIComponent(targetSubject)}&category=${encodeURIComponent(targetCategory)}&topic=${encodeURIComponent(topicName)}&diff=${encodeURIComponent(selectedDiff)}`;
-        };
+        if (!response.ok) throw new Error("File not found");
         
-        grid.appendChild(card);
+        const data = await response.json();
+        const subtopics = Object.keys(data); // Extracts the names (e.g., "Place value and face value")
+        
+        container.innerHTML = ''; // Clear loading text
+
+        subtopics.forEach((subtopic, index) => {
+          const row = document.createElement('div');
+          row.className = 'subtopic-row';
+          row.innerHTML = `
+            <h3 class="subtopic-title">${index + 1}. ${subtopic}</h3>
+            <div class="action-group">
+              <button class="action-btn btn-notes" onclick="openNotes('${subtopic}')">📖 Read Notes</button>
+              <button class="action-btn btn-quiz" onclick="startSubtopicQuiz('${subtopic}')">🎮 Take Quiz</button>
+            </div>
+          `;
+          container.appendChild(row);
+        });
+
+      } catch (error) {
+        container.innerHTML = '<p style="color: #d63031;">Could not load the database file. If you are on a laptop, ensure you are using VS Code Live Server.</p>';
       }
     }
+
+    function openNotes(subtopicName) {
+      const fileName = categoryFileMap[mainCategory];
+      window.location.href = `notes.html?subject=primary-maths&category=${fileName}&target=${encodeURIComponent(subtopicName)}`;
+    }
+
+    function startSubtopicQuiz(subtopicName) {
+      window.location.href = `quiz.html?scope=subtopic&target=${encodeURIComponent(subtopicName)}`;
+    }
+
+    function startTopicQuiz() {
+      window.location.href = `quiz.html?scope=topic&target=${encodeURIComponent(mainCategory)}`;
+    }
+
+    // Execute on page load
+    loadSubtopics();
   </script>
 </body>
 </html>

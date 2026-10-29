@@ -83,7 +83,7 @@
       try {
         const fileName = categoryFileMap[mainCategory];
         // Fetch the specific JSON file we created
-        const response = await fetch(`data/primary-maths/${fileName}.json`);
+        const response = await fetch(`/data/primary-maths/${fileName}.json`);
         
         if (!response.ok) throw new Error("File not found");
         

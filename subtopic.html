@@ -112,7 +112,7 @@
 
     function openNotes(subtopicName) {
       const fileName = categoryFileMap[mainCategory];
-      window.location.href = `notes.html?subject=primary-maths&category=${fileName}&target=${encodeURIComponent(subtopicName)}`;
+      window.location.href = `/notes.html?subject=primary-maths&category=${fileName}&target=${encodeURIComponent(subtopicName)}`;
     }
 
     function startSubtopicQuiz(subtopicName) {

@@ -124,7 +124,7 @@
   </div>
 
   <script>
-    async function loadNotes() {
+async function loadNotes() {
       const urlParams = new URLSearchParams(window.location.search);
       const subject = urlParams.get('subject') || 'primary-maths';
       const category = urlParams.get('category') || 'numbers-and-sense';
@@ -142,6 +142,7 @@
       titleEl.innerText = targetSubtopic;
 
       try {
+        // CRITICAL FIX: Added the '/' at the very beginning of the path
         const dataPath = `/data/${subject}/${category}.json`;
         const response = await fetch(dataPath);
         
@@ -149,55 +150,17 @@
         
         const notesDatabase = await response.json();
 
+        // This checks if the exact subtopic name exists in the JSON
         if (notesDatabase[targetSubtopic]) {
           bodyEl.innerHTML = notesDatabase[targetSubtopic];
           
-          // 1. Process MathJax Formulas
           if (window.MathJax) MathJax.typesetPromise([bodyEl]);
-
-          // 2. Process any in-content AdSense injected from JSON
-          const injectedAds = bodyEl.querySelectorAll('.adsbygoogle');
-          injectedAds.forEach(() => {
-            try { (adsbygoogle = window.adsbygoogle || []).push({}); } 
-            catch (e) { console.error("In-content AdSense failed:", e); }
-          });
-
-          // 3. Process WebGL/Three.js if requested in the JSON
-          const webglContainer = document.getElementById('webgl-container');
-          if (webglContainer) {
-            const renderType = webglContainer.getAttribute('data-webgl');
-            if (renderType === 'renderCube') initThreeJSCube(webglContainer);
-          }
-
         } else {
           bodyEl.innerHTML = "<p>Notes coming soon!</p>";
         }
       } catch (error) {
-        bodyEl.innerHTML = "<p>Study materials for this module are not uploaded yet. Add them to your JSON file.</p>";
+        bodyEl.innerHTML = "<p>Study materials for this module are not uploaded yet. Ensure your JSON file is in the correct folder.</p>";
       }
-    }
-
-    // WebGL Example Function
-    function initThreeJSCube(container) {
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-      renderer.setSize(container.clientWidth, container.clientHeight);
-      container.appendChild(renderer.domElement);
-
-      const geometry = new THREE.BoxGeometry();
-      const material = new THREE.MeshBasicMaterial({ color: 0x00b894, wireframe: true });
-      const cube = new THREE.Mesh(geometry, material);
-      scene.add(cube);
-      camera.position.z = 3;
-
-      function animate() {
-        requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-        renderer.render(scene, camera);
-      }
-      animate();
     }
 
     loadNotes();

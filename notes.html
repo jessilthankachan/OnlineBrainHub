@@ -104,8 +104,8 @@
         return;
       }
 
-      // FIX: Reverted to your original file naming convention without "-notes"
-      const fileUrl = `/data/${subjectParam}/${categoryParam}.json`;
+      // CACHE BUSTER ADDED HERE: Forces the browser to load the newest version of the JSON file
+      const fileUrl = `/data/${subjectParam}/${categoryParam}.json?nocache=` + new Date().getTime();
 
       try {
         const response = await fetch(fileUrl);
@@ -137,7 +137,8 @@
     }
 
     function startQuiz() {
-      fetch(`/data/${subjectParam}/${categoryParam}.json`)
+      // CACHE BUSTER ADDED HERE: Ensures the quiz button also reads the correct subtopic list index
+      fetch(`/data/${subjectParam}/${categoryParam}.json?nocache=` + new Date().getTime())
         .then(res => res.json())
         .then(data => {
           const keys = Object.keys(data);

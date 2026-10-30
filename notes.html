@@ -104,7 +104,8 @@
         return;
       }
 
-      const fileUrl = `/data/${subjectParam}/${categoryParam}-notes.json`;
+      // FIX: Reverted to your original file naming convention without "-notes"
+      const fileUrl = `/data/${subjectParam}/${categoryParam}.json`;
 
       try {
         const response = await fetch(fileUrl);

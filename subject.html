@@ -14,45 +14,67 @@
       --success: #0984e3;
     }
     
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text); }
+    * { box-sizing: border-box; }
+
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      margin: 0; background-color: var(--bg-color); color: var(--text); 
+      overflow-x: hidden;
+    }
     
-    header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100;}
+    header { 
+      background: white; padding: 15px 5%; display: flex; 
+      justify-content: space-between; align-items: center; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; 
+      top: 0; z-index: 100;
+    }
     .logo { font-size: 1.5em; font-weight: 800; color: var(--primary); margin: 0; text-decoration: none;}
     
     /* Gamification Header */
-    .player-stats { background: #2d3436; color: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; }
-    .level-badge { background: var(--accent); color: #2d3436; padding: 10px 20px; border-radius: 30px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 0 #e1b35c;}
-    .progress-container { flex: 1; margin: 0 30px; background: #636e72; border-radius: 15px; height: 20px; overflow: hidden; position: relative;}
+    .player-stats { 
+      background: #2d3436; color: white; padding: 20px 5%; 
+      display: flex; justify-content: space-between; align-items: center; 
+      flex-wrap: wrap; gap: 15px;
+    }
+    .level-badge { 
+      background: var(--accent); color: #2d3436; padding: 10px 20px; 
+      border-radius: 30px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 0 #e1b35c;
+    }
+    .progress-container { 
+      flex: 1; min-width: 200px; margin: 0 10px; background: #636e72; 
+      border-radius: 15px; height: 20px; overflow: hidden; position: relative;
+    }
     .progress-bar { background: var(--success); height: 100%; width: 0%; transition: width 0.5s ease-out; }
     .xp-text { position: absolute; width: 100%; text-align: center; top: 0; font-size: 0.85em; font-weight: bold; line-height: 20px;}
 
-    .layout { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+    .layout { width: 100% !important; max-width: 1200px; margin: 30px auto; padding: 0 15px; }
     
     /* Filters */
-    .filters { background: white; padding: 20px; border-radius: 15px; display: flex; gap: 20px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); align-items: center;}
-    .filters select { padding: 10px; border-radius: 8px; border: 1px solid #dfe6e9; font-size: 1em; flex: 1; cursor: pointer;}
+    .filters { 
+      background: white; padding: 20px; border-radius: 15px; display: flex; 
+      flex-wrap: wrap; gap: 15px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); align-items: center;
+    }
+    .filters select { padding: 10px; border-radius: 8px; border: 1px solid #dfe6e9; font-size: 1em; flex: 1; cursor: pointer; min-width: 200px;}
     
     /* Syllabus Grid */
     .level-section { margin-bottom: 40px; }
     .level-section h2 { border-bottom: 2px solid var(--primary); padding-bottom: 10px; color: var(--primary); }
-    .topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 20px;}
-    .topic-card { background: white; border-radius: 12px; padding: 20px; cursor: pointer; transition: 0.2s; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center;}
+    .topics-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 20px;}
+    
+    .topic-card { 
+      background: white; border-radius: 12px; padding: 20px; cursor: pointer; 
+      transition: 0.2s; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center;
+    }
     .topic-card:hover { border-color: var(--primary); transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0, 184, 148, 0.15);}
     .topic-card h3 { margin: 10px 0 5px 0; }
     .topic-card p { margin: 0; font-size: 0.85em; color: #636e72; }
 
-    /* Quiz View */
-    #quiz-view { display: none; }
-    .back-btn { background: none; border: none; color: var(--primary); font-weight: bold; cursor: pointer; font-size: 1.1em; margin-bottom: 20px; padding: 0;}
-    
-    .question-card { background: white; padding: 25px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-    .meta { font-size: 0.85em; color: #636e72; margin-bottom: 15px; font-weight: bold;}
-    .options { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
-    .option-btn { padding: 15px; border: 2px solid #dfe6e9; background: #fff; cursor: pointer; text-align: left; border-radius: 10px; font-size: 1em; font-weight: 600; transition: 0.2s;}
-    .option-btn:hover:not(:disabled) { border-color: var(--primary); background: #f8f9fa;}
-    .correct { background: var(--success) !important; border-color: var(--success) !important; color: white;}
-    .wrong { background: #d63031 !important; border-color: #d63031 !important; color: white; }
-    .explanation-text { margin-top: 15px; padding: 15px; border-radius: 8px; display: none; background: #e2e3e5; color: #383d41; border: 1px solid #d6d8db; line-height: 1.5; font-size: 0.95em;}
+    @media screen and (max-width: 768px) {
+      header { padding: 12px 20px; }
+      .logo { font-size: 1.3em; }
+      .player-stats { flex-direction: column; align-items: flex-start; }
+      .progress-container { width: 100%; margin: 0; }
+    }
   </style>
 </head>
 <body>
@@ -72,126 +94,111 @@
 
   <div class="layout">
     
-    <div id="lobby-view">
-      <!-- Filters -->
-      <div class="filters">
-        <strong>Target Level:</strong>
-        <select id="level-filter">
-          <option value="All">All Levels</option>
-          <option value="Primary">Primary School</option>
-          <option value="Middle">Middle School</option>
-          <option value="High">High School</option>
-          <option value="HigherSecondary">Higher Secondary</option>
-        </select>
-        <strong>Difficulty (1-10):</strong>
-        <select id="diff-filter">
-          <option value="All">Any Difficulty</option>
-          <option value="1">1 - Basic</option>
-          <option value="5">5 - Intermediate</option>
-          <option value="10">10 - Advanced</option>
-        </select>
-      </div>
+    <!-- Filters -->
+    <div class="filters">
+      <strong>Target Level:</strong>
+      <select id="level-filter">
+        <option value="All">All Levels</option>
+        <option value="Primary">Primary School</option>
+        <option value="Middle">Middle School</option>
+        <option value="High">High School</option>
+        <option value="HigherSecondary">Higher Secondary</option>
+      </select>
+    </div>
 
-      <!-- Primary School -->
-      <div class="level-section">
-        <h2>Primary School</h2>
-        <div class="topics-grid">
-          <div class="topic-card" onclick="startQuiz('Maths')">
-            <h3>🧮 Maths</h3><p>Numbers, Addition, Shapes</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('Science')">
-            <h3>🔬 Science</h3><p>Plants, Animals, Senses</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('Social Science')">
-            <h3>🌍 Social Science</h3><p>Community, Planet, Safety</p>
-          </div>
+    <!-- Primary School -->
+    <div class="level-section">
+      <h2>Primary School</h2>
+      <div class="topics-grid">
+        <div class="topic-card" onclick="startSubject('Maths', 'Primary')">
+          <h3>🧮 Maths</h3><p>Numbers, Addition, Shapes</p>
         </div>
-      </div>
-
-      <!-- Middle School -->
-      <div class="level-section">
-        <h2>Middle School</h2>
-        <div class="topics-grid">
-          <div class="topic-card" onclick="startQuiz('Maths')">
-            <h3>📐 Maths</h3><p>Fractions, Algebra, Geometry</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('Science')">
-            <h3>🧪 Science</h3><p>Matter, Energy, Ecosystems</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('Social Science')">
-            <h3>🏛️ Social Science</h3><p>History, Geography, Civics</p>
-          </div>
+        <div class="topic-card" onclick="startSubject('Science', 'Primary')">
+          <h3>🔬 Science</h3><p>Plants, Animals, Senses</p>
         </div>
-      </div>
-
-      <!-- High School -->
-      <div class="level-section">
-        <h2>High School</h2>
-        <div class="topics-grid">
-          <div class="topic-card" onclick="startQuiz('Maths')">
-            <h3>∑ Maths</h3><p>Trigonometry, Statistics, Algebra</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('Physics')">
-            <h3>🍎 Physics</h3><p>Motion, Forces, Optics</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('Chemistry')">
-            <h3>⬡ Chemistry</h3><p>Elements, Reactions, Bonds</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('Biology')">
-            <h3>🧬 Biology</h3><p>Genetics, Evolution, Cells</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('History')">
-            <h3>📜 History</h3><p>World Events, Civilizations</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('Geography')">
-            <h3>🗺️ Geography</h3><p>Climate, Topography, Mapping</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Higher Secondary -->
-      <div class="level-section">
-        <h2>Higher Secondary</h2>
-        <div class="topics-grid">
-          <div class="topic-card" onclick="startQuiz('Maths')">
-            <h3>∞ Maths</h3><p>Calculus, Vectors, Matrices</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('Physics')">
-            <h3>⚡ Physics</h3><p>Electromagnetism, Quantum</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('Chemistry')">
-            <h3>🔬 Chemistry</h3><p>Organic, Inorganic, Physical</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('Biology')">
-            <h3>🌱 Biology</h3><p>Biotechnology, Human Anatomy</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('History')">
-            <h3>🏛️ History</h3><p>Modern History, Politics</p>
-          </div>
-          <div class="topic-card" onclick="startQuiz('Geography')">
-            <h3>🌍 Geography</h3><p>Economic & Physical Geography</p>
-          </div>
+        <div class="topic-card" onclick="startSubject('Social Science', 'Primary')">
+          <h3>🌍 Social Science</h3><p>Community, Planet, Safety</p>
         </div>
       </div>
     </div>
 
-    <!-- Quiz View -->
-    <div id="quiz-view">
-      <button class="back-btn" onclick="showLobby()">← Back to Subjects</button>
-      <h2 id="quiz-title">Quiz Mode</h2>
-      <div id="quiz-container">Loading questions...</div>
+    <!-- Middle School -->
+    <div class="level-section">
+      <h2>Middle School</h2>
+      <div class="topics-grid">
+        <div class="topic-card" onclick="startSubject('Maths', 'Middle')">
+          <h3>📐 Maths</h3><p>Fractions, Algebra, Geometry</p>
+        </div>
+        <div class="topic-card" onclick="startSubject('Science', 'Middle')">
+          <h3>🧪 Science</h3><p>Matter, Energy, Ecosystems</p>
+        </div>
+        <div class="topic-card" onclick="startSubject('Social Science', 'Middle')">
+          <h3>🏛️ Social Science</h3><p>History, Geography, Civics</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- High School -->
+    <div class="level-section">
+      <h2>High School</h2>
+      <div class="topics-grid">
+        <div class="topic-card" onclick="startSubject('Maths', 'High')">
+          <h3>∑ Maths</h3><p>Trigonometry, Statistics, Algebra</p>
+        </div>
+        <div class="topic-card" onclick="startSubject('Physics', 'High')">
+          <h3>🍎 Physics</h3><p>Motion, Forces, Optics</p>
+        </div>
+        <div class="topic-card" onclick="startSubject('Chemistry', 'High')">
+          <h3>⬡ Chemistry</h3><p>Elements, Reactions, Bonds</p>
+        </div>
+        <div class="topic-card" onclick="startSubject('Biology', 'High')">
+          <h3>🧬 Biology</h3><p>Genetics, Evolution, Cells</p>
+        </div>
+        <div class="topic-card" onclick="startSubject('History', 'High')">
+          <h3>📜 History</h3><p>World Events, Civilizations</p>
+        </div>
+        <div class="topic-card" onclick="startSubject('Geography', 'High')">
+          <h3>🗺️ Geography</h3><p>Climate, Topography, Mapping</p>
+        </div>
+      </div>
     </div>
 
   </div>
 
   <script>
-    let allQuestions = [];
-    let playerXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;
+    let playerXP = 0;
     
-    function updateXP(points) {
-      playerXP += points;
-      localStorage.setItem('brainhub_xp', playerXP);
-      
+    // Unified XP Gamification System pulled securely from Backend
+    async function loadUserProfile() {
+        const username = localStorage.getItem('brainhub_username');
+        
+        // Show offline cached XP immediately for snappy UI
+        playerXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;
+        updateXPUI();
+
+        if (!username) return;
+
+        try {
+            const progressRes = await fetch('/api/user', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: 'get_profile', username: username })
+            });
+            
+            if (progressRes.ok) {
+                const profileData = await progressRes.json();
+                if (profileData.success) {
+                    playerXP = profileData.xp || 0;
+                    localStorage.setItem('brainhub_xp', playerXP);
+                    updateXPUI(); 
+                }
+            }
+        } catch (err) {
+            console.error("Failed to sync user profile", err);
+        }
+    }
+
+    function updateXPUI() {
       let level = Math.floor(playerXP / 100) + 1;
       let currentLevelXP = playerXP % 100;
       let titles = ["Novice", "Scholar", "Adept", "Expert", "Master", "Grandmaster", "Legend"];
@@ -202,77 +209,19 @@
       document.getElementById('xp-text').innerText = `${currentLevelXP} / 100 XP`;
     }
 
-    updateXP(0);
-
-    async function fetchDatabase() {
-      const res = await fetch('/api/questions');
-      const data = await res.json();
-      // Changed to support all subjects instead of filtering just Science
-      allQuestions = data; 
-    }
-
-    window.startQuiz = function(category) {
-      const selectedLevel = document.getElementById('level-filter').value;
-      const selectedDiff = document.getElementById('diff-filter').value;
-      
-      // Updated to dynamically pass the clicked subject/category
-      window.location.href = `/subtopic.html?subject=${encodeURIComponent(category)}&level=${encodeURIComponent(selectedLevel)}&diff=${encodeURIComponent(selectedDiff)}`;
-    };
-
-    window.showLobby = function() {
-      document.getElementById('quiz-view').style.display = 'none';
-      document.getElementById('lobby-view').style.display = 'block';
-    };
-
-    function renderQuiz(questions) {
-      const container = document.getElementById('quiz-container');
-      container.innerHTML = ''; 
-
-      if (questions.length === 0) {
-        container.innerHTML = '<div class="question-card">No questions found for this topic and filter combination. Add some in the Admin panel!</div>';
-        return;
-      }
-
-      questions.forEach((q, qIndex) => {
-        const card = document.createElement('div');
-        card.className = 'question-card';
-        let html = `<div class="meta">${q.level} | Difficulty: ${q.difficulty}/10</div>`;
-        html += `<h3>${qIndex + 1}. ${q.question}</h3><div class="options" id="options-${q.id}">`;
-        
-        q.options.forEach((opt, optIndex) => {
-          html += `<button class="option-btn" onclick="checkAnswer('${q.id}', ${optIndex}, ${q.correct})">${opt}</button>`;
-        });
-        
-        html += `</div><div class="explanation-text" id="exp-${q.id}">📖 <strong>Explanation:</strong> ${q.explanation || ''}</div>`;
-        card.innerHTML = html;
-        container.appendChild(card);
-      });
-    }
-
-    window.checkAnswer = function(qId, selectedIndex, correctIndex) {
-      const optionsDiv = document.getElementById(`options-${qId}`);
-      const buttons = optionsDiv.getElementsByTagName('button');
-      const explanation = document.getElementById(`exp-${qId}`);
-      
-      let isCorrect = (selectedIndex === correctIndex);
-
-      for (let i = 0; i < buttons.length; i++) {
-        buttons[i].disabled = true;
-        if (i === correctIndex) buttons[i].classList.add('correct');
-        else if (i === selectedIndex && !isCorrect) buttons[i].classList.add('wrong');
-      }
-
-      if(explanation.innerText.length > 20) explanation.style.display = 'block';
-
-      if(isCorrect) {
-        updateXP(15);
-        alert("Correct! +15 XP");
+    // Strict Navigation Funnel
+    window.startSubject = function(subjectName, level) {
+      // If it's Primary Maths, route directly to the custom syllabus lobby
+      if (level === 'Primary' && subjectName === 'Maths') {
+        window.location.href = `/primary-maths.html`;
       } else {
-        updateXP(5);
+        // Fallback for subjects not yet fully built - routes them to a generic lobby
+        window.location.href = `/subtopic.html?subject=${encodeURIComponent(subjectName)}&level=${encodeURIComponent(level)}`;
       }
     };
 
-    fetchDatabase();
+    // Initialize Page
+    loadUserProfile();
   </script>
 </body>
 </html>

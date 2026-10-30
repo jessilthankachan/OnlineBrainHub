@@ -13,64 +13,92 @@
       --text: #2d3436;
     }
     
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text); }
+    * {
+      box-sizing: border-box;
+    }
+
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      margin: 0; 
+      background-color: var(--bg-color); 
+      color: var(--text); 
+      overflow-x: hidden;
+    }
     
     /* Header & Navigation */
-    header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100;}
+    header { 
+      background: white; padding: 15px 5%; display: flex; 
+      justify-content: space-between; align-items: center; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; 
+      top: 0; z-index: 100;
+    }
     .logo { font-size: 1.5em; font-weight: 800; color: var(--primary); margin: 0; }
-    .login-btn { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 0 #4a3eb1;}
-    .login-btn:hover { transform: translateY(2px); box-shadow: 0 2px 0 #4a3eb1; }
+    
+    .auth-btn { 
+      display: inline-block; padding: 10px 20px; background: #0984e3; 
+      color: white; text-decoration: none; border-radius: 8px; 
+      font-weight: bold; transition: 0.2s;
+    }
+    .auth-btn:hover { background: #076bb8; transform: translateY(-2px); }
 
     /* Ad Banners */
-    .ad-banner { background: #e2e2e2; border: 2px dashed #b2bec3; display: flex; align-items: center; justify-content: center; color: #636e72; font-weight: bold; text-align: center;}
+    .ad-banner { 
+      background: #e2e2e2; border: 2px dashed #b2bec3; display: flex; 
+      align-items: center; justify-content: center; color: #636e72; 
+      font-weight: bold; text-align: center;
+    }
     .ad-top { width: 100%; max-width: 728px; height: 90px; margin: 20px auto; }
     
     /* Main Layout */
-    .layout { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 20px; gap: 30px; }
-    .main-content { flex: 1; }
-    .sidebar { width: 300px; display: none; }
-    @media(min-width: 900px) { .sidebar { display: block; } } /* Hide sidebar on mobile */
-    .ad-sticky { width: 300px; height: 600px; position: sticky; top: 90px; }
+    .layout { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 15px; gap: 30px; }
+    .main-content { flex: 1; min-width: 0; }
+    .sidebar { width: 300px; display: none; flex-shrink: 0;}
+    @media(min-width: 900px) { .sidebar { display: block; } } 
+    .ad-sticky { width: 100%; height: 600px; position: sticky; top: 90px; }
+
+    /* Hero Section */
+    .hero-section {
+      text-align: center; padding: 40px 20px; background: white; 
+      border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .hero-section h1 { color: var(--primary); margin-top: 0; font-size: 2.5em; }
+    .hero-section p { font-size: 1.2em; color: #636e72; margin-bottom: 0; line-height: 1.5; }
 
     /* Game Lobby */
-    #lobby-view { display: block; }
-    .daily-challenge { background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 15px; padding: 30px; color: white; text-align: center; margin-bottom: 30px; box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);}
+    .daily-challenge { 
+      background: linear-gradient(135deg, var(--primary), var(--secondary)); 
+      border-radius: 15px; padding: 30px; color: white; text-align: center; 
+      margin-bottom: 30px; box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);
+      position: relative; overflow: hidden;
+    }
     .daily-challenge h2 { margin-top: 0; font-size: 2em;}
-    .play-btn { background: var(--accent); color: #2d3436; border: none; padding: 15px 40px; font-size: 1.2em; font-weight: bold; border-radius: 30px; cursor: pointer; box-shadow: 0 5px 0 #e1b35c; transition: 0.2s;}
+    .play-btn { 
+      background: var(--accent); color: #2d3436; border: none; padding: 15px 40px; 
+      font-size: 1.2em; font-weight: bold; border-radius: 30px; cursor: pointer; 
+      box-shadow: 0 5px 0 #e1b35c; transition: 0.2s;
+    }
     .play-btn:hover { transform: translateY(3px); box-shadow: 0 2px 0 #e1b35c; }
 
-    .topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-    .topic-card { background: white; border-radius: 15px; padding: 25px; text-align: center; cursor: pointer; transition: 0.3s; border: 2px solid transparent; box-shadow: 0 4px 10px rgba(0,0,0,0.05);}
+    .topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px;}
+    .topic-card { 
+      background: white; border-radius: 15px; padding: 25px; text-align: center; 
+      cursor: pointer; transition: 0.3s; border: 2px solid transparent; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: block;
+    }
     .topic-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(108, 92, 231, 0.15);}
     .topic-icon { font-size: 3em; margin-bottom: 10px; }
     .topic-title { font-size: 1.2em; font-weight: bold; margin: 0; }
 
-    /* Quiz View (Hidden initially) */
-    #quiz-view { display: none; }
-    .back-btn { background: none; border: none; color: var(--primary); font-weight: bold; cursor: pointer; font-size: 1.1em; margin-bottom: 20px; padding: 0;}
-    .back-btn:hover { text-decoration: underline; }
-    
-    /* Existing Quiz Styles */
-    .question-card { background: white; padding: 25px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-    .meta { font-size: 0.85em; color: #636e72; margin-bottom: 15px; font-weight: bold;}
-    .options { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
-    .option-btn { padding: 15px; border: 2px solid #dfe6e9; background: #fff; cursor: pointer; text-align: left; border-radius: 10px; font-size: 1em; font-weight: 600; transition: 0.2s;}
-    .option-btn:hover { border-color: var(--primary); background: #f8f9fa;}
-    .correct { background: #00cec9 !important; border-color: #00cec9 !important; color: white;}
-    .wrong { background: #ff7675 !important; border-color: #ff7675 !important; color: white; }
-    .hint-btn { margin-top: 20px; background: #ffeaa7; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: bold; color: #d63031;}
-    .hint-text, .explanation-text { margin-top: 15px; padding: 15px; border-radius: 8px; display: none; line-height: 1.5; font-size: 0.95em;}
-    .hint-text { background: #fff3cd; color: #856404; border: 1px solid #ffeeba;}
-    .explanation-text { background: #e2e3e5; color: #383d41; border: 1px solid #d6d8db;}
+    @media (max-width: 600px) {
+      .hero-section h1 { font-size: 2em; }
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1 class="logo">🧠 BrainHub</h1>
-   <a href="/login.html" id="auth-btn" style="display: inline-block; padding: 10px 20px; background: #0984e3; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin-bottom: 20px;">
-  Login to Save Progress
-</a>
+    <a href="/login.html" id="auth-btn" class="auth-btn">Login to Save Progress</a>
   </header>
 
   <!-- Top AdSense Banner Placeholder -->
@@ -82,10 +110,15 @@
     <!-- Main Content Area -->
     <main class="main-content">
       
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <h1>Master Math & Science!</h1>
+        <p>Explore interactive lessons, challenge yourself with smart quizzes, and earn XP to level up your brain power.</p>
+      </section>
+
       <!-- LOBBY VIEW -->
       <div id="lobby-view">
-       <section class="daily-challenge" style="position: relative; overflow: hidden;">
-          <!-- decorative background element -->
+       <section class="daily-challenge">
           <div style="position: absolute; top: -20px; right: -20px; font-size: 8em; opacity: 0.1; pointer-events: none;">⏰</div>
           
           <div style="background: #ff7675; color: white; display: inline-block; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.85em; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
@@ -96,44 +129,28 @@
           <button class="play-btn" onclick="window.location.href='/quiz.html?subject=Daily'">Play Now</button>
         </section>
 
-        <h3 style="margin-top: 40px;">Select a Topic</h3>
+        <h3 style="margin-top: 40px;">Select a Core Subject</h3>
         <div class="topics-grid">
-          <a href="maths.html" style="text-decoration: none; color: inherit;">
-  <div class="topic-card">
-    <div class="topic-icon">📐</div>
-    <p class="topic-title">Mathematics</p>
-  </div>
-</a>
+          <a href="subject.html" class="topic-card">
+            <div class="topic-icon">📐</div>
+            <p class="topic-title">Mathematics</p>
+          </a>
 
-<a href="science.html" style="text-decoration: none; color: inherit;">          
-<div class="topic-card">
+          <a href="subject.html" class="topic-card">
             <div class="topic-icon">🔬</div>
             <p class="topic-title">Science</p>
-          </div>
           </a>
 
-          <a href="history.html" style="text-decoration: none; color: inherit;">
-          <div class="topic-card">
+          <a href="subject.html" class="topic-card">
             <div class="topic-icon">🏛️</div>
             <p class="topic-title">History</p>
-          </div>
           </a>
 
-           <a href="geography.html" style="text-decoration: none; color: inherit;">
-          <div class="topic-card">
+           <a href="subject.html" class="topic-card">
             <div class="topic-icon">🌍</div>
             <p class="topic-title">Geography</p>
-          </div>
           </a>
-
         </div>
-      </div>
-
-      <!-- QUIZ VIEW -->
-      <div id="quiz-view">
-        <button class="back-btn" onclick="showLobby()">← Back to Lobby</button>
-        <h2 id="quiz-title">Quiz Mode</h2>
-        <div id="quiz-container">Loading questions...</div>
       </div>
 
     </main>
@@ -147,113 +164,15 @@
   </div>
 
   <script>
-    let allQuestions = [];
-
-    // 1. Fetch all questions in the background when the page loads
-    async function fetchDatabase() {
-      try {
-        const response = await fetch('/api/questions');
-        allQuestions = await response.json();
-      } catch (error) {
-        console.error('Failed to load database.');
-      }
+    // Check if player is logged in to update header button
+    const savedUsername = localStorage.getItem('brainhub_username'); // Updated to match your backend storage key
+    const authBtn = document.getElementById('auth-btn');
+    
+    if (savedUsername && authBtn) {
+      authBtn.innerText = 'Profile (' + savedUsername + ')';
+      authBtn.href = '/profile.html';
+      authBtn.style.background = '#00b894'; 
     }
-
-    // 2. Switch from Lobby to Quiz View
-    window.startQuiz = function(subjectFilter) {
-      document.getElementById('lobby-view').style.display = 'none';
-      document.getElementById('quiz-view').style.display = 'block';
-      
-      let filteredQuestions = allQuestions;
-      
-      if (subjectFilter !== 'All') {
-        document.getElementById('quiz-title').innerText = subjectFilter + ' Challenge';
-        // Frontend filtering based on the subject clicked
-        filteredQuestions = allQuestions.filter(q => q.subject.toLowerCase() === subjectFilter.toLowerCase());
-      } else {
-        document.getElementById('quiz-title').innerText = 'Daily Mixed Challenge';
-      }
-
-      renderQuiz(filteredQuestions);
-    };
-
-    // 3. Switch back to Lobby
-    window.showLobby = function() {
-      document.getElementById('quiz-view').style.display = 'none';
-      document.getElementById('lobby-view').style.display = 'block';
-    };
-
-    // 4. Render the filtered questions (Your existing logic)
-    function renderQuiz(questions) {
-      const container = document.getElementById('quiz-container');
-      container.innerHTML = ''; 
-
-      if (questions.length === 0) {
-        container.innerHTML = '<div class="question-card">No questions available for this topic yet!</div>';
-        return;
-      }
-
-      questions.forEach((q, qIndex) => {
-        const card = document.createElement('div');
-        card.className = 'question-card';
-
-        let html = `<div class="meta">${q.subject} > ${q.category} > ${q.topic} | Level: ${q.level}</div>`;
-        html += `<h3>${qIndex + 1}. ${q.question}</h3>`;
-        html += `<div class="options" id="options-${q.id}">`;
-        
-        q.options.forEach((opt, optIndex) => {
-          html += `<button class="option-btn" onclick="checkAnswer('${q.id}', ${optIndex}, ${q.correct})">${opt}</button>`;
-        });
-        html += `</div>`;
-
-        if (q.hint) {
-          html += `<button class="hint-btn" onclick="toggleHint('${q.id}')">💡 Show Hint</button>`;
-          html += `<div class="hint-text" id="hint-${q.id}"><strong>Hint:</strong> ${q.hint}</div>`;
-        }
-
-        html += `<div class="explanation-text" id="exp-${q.id}">📖 <strong>Explanation:</strong> ${q.explanation || 'No explanation available.'}</div>`;
-
-        card.innerHTML = html;
-        container.appendChild(card);
-      });
-    }
-
-    // 5. Answer Checking Logic
-    window.checkAnswer = function(qId, selectedIndex, correctIndex) {
-      const optionsDiv = document.getElementById(`options-${qId}`);
-      const buttons = optionsDiv.getElementsByTagName('button');
-      const explanation = document.getElementById(`exp-${qId}`);
-
-      for (let i = 0; i < buttons.length; i++) {
-        buttons[i].disabled = true;
-        buttons[i].style.cursor = 'not-allowed';
-        if (i === correctIndex) buttons[i].classList.add('correct');
-        else if (i === selectedIndex && selectedIndex !== correctIndex) buttons[i].classList.add('wrong');
-      }
-
-      if (explanation) explanation.style.display = 'block';
-    };
-
-    window.toggleHint = function(qId) {
-      const hintDiv = document.getElementById(`hint-${qId}`);
-      hintDiv.style.display = hintDiv.style.display === 'block' ? 'none' : 'block';
-    };
-
-    // Boot up
-    fetchDatabase();
   </script>
-
-  <script>
-  // Check if player is logged in
-  const savedUsername = localStorage.getItem('obh_username');
-  const authBtn = document.getElementById('auth-btn');
-  
-  if (savedUsername && authBtn) {
-    // Change button to point to their new Profile dashboard
-    authBtn.innerText = 'View Profile (' + savedUsername + ')';
-    authBtn.href = '/profile.html';
-    authBtn.style.background = '#00b894'; // Optional: Turn it green to show logged-in status
-  }
-</script>
 </body>
 </html>

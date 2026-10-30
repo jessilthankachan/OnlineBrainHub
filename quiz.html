@@ -344,7 +344,8 @@ async function initGame() {
       localStorage.setItem('brainhub_xp', currentLocalXP + sessionXP);
       document.getElementById('earned-xp').textContent = `${sessionXP} XP!`;
 
-      const savedUsername = localStorage.getItem('obh_username');
+      // Use correct local storage key mapped to your app's login handler
+      const savedUsername = localStorage.getItem('brainhub_username');
       if (savedUsername && sessionXP > 0) {
         try {
           await fetch('/api/user', {
@@ -361,9 +362,12 @@ async function initGame() {
     }
 
     function quitGame() {
-      if (isDailyChallenge) window.location.href = '/';
-      else if (targetSubject) window.location.href = `/${targetSubject.toLowerCase()}.html`;
-      else window.location.href = '/';
+      // Send the user back to the exact page they entered from, rather than relying on URL params
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = '/';
+      }
     }
 
     initGame();

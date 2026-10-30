@@ -52,12 +52,21 @@
       margin: 30px auto; padding: 0 15px; 
     }
     
-    /* Filters */
-    .filters { 
-      background: white; padding: 20px; border-radius: 15px; display: flex; 
-      flex-wrap: wrap; gap: 15px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); align-items: center;
+    /* Breadcrumb Header */
+    .page-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
     }
-    .filters select { padding: 10px; border-radius: 8px; border: 1px solid #dfe6e9; font-size: 1em; cursor: pointer; min-width: 200px;}
+    .back-link {
+      color: var(--primary);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    .back-link:hover { text-decoration: underline; }
     
     /* Syllabus Grid */
     .level-section { margin-bottom: 40px; }
@@ -98,15 +107,8 @@
 
   <div class="layout" id="lobby-view">
     
-    <!-- Filters (Target Level removed, only Difficulty remains) -->
-    <div class="filters">
-      <strong>Difficulty Default:</strong>
-      <select id="diff-filter">
-        <option value="All">Any Difficulty</option>
-        <option value="1">1 - Basic</option>
-        <option value="5">5 - Intermediate</option>
-        <option value="10">10 - Advanced</option>
-      </select>
+    <div class="page-header">
+      <a href="/" class="back-link">← Back to Lobby</a>
     </div>
 
     <!-- Primary School -->
@@ -239,14 +241,12 @@
 
     // 2. Centralized Routing Logic
     window.routeToSubject = function(subjectName, level) {
-      const selectedDiff = document.getElementById('diff-filter').value;
-      
       // If the user clicks Primary Maths, route them to the dedicated lobby page
       if (level === 'Primary' && subjectName === 'Maths') {
-        window.location.href = `/primary-maths.html?diff=${encodeURIComponent(selectedDiff)}`;
+        window.location.href = `/primary-maths.html`;
       } else {
         // Fallback for subjects that don't have a dedicated layout page built yet
-        window.location.href = `/subtopic.html?subject=${encodeURIComponent(subjectName)}&level=${encodeURIComponent(level)}&diff=${encodeURIComponent(selectedDiff)}`;
+        window.location.href = `/subtopic.html?subject=${encodeURIComponent(subjectName)}&level=${encodeURIComponent(level)}`;
       }
     };
 

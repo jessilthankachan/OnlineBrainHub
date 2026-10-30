@@ -52,7 +52,7 @@
       margin: 30px auto; padding: 0 15px; 
     }
     
-    /* Top Action Bar (Breadcrumbs + Filter) */
+    /* Top Action Bar (Breadcrumbs Only) */
     .top-action-bar {
       background: white; 
       padding: 15px 20px; 
@@ -85,15 +85,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-    .filters-inline {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .filters-inline select { 
-      padding: 8px 12px; border-radius: 8px; border: 1px solid #dfe6e9; 
-      font-size: 1em; cursor: pointer; min-width: 150px;
     }
     
     /* Syllabus Grid */
@@ -141,7 +132,7 @@
 
   <div class="layout" id="lobby-view">
       
-    <!-- Top Action Bar (Breadcrumbs + Filter) -->
+    <!-- Top Action Bar (Breadcrumbs Only) -->
     <div class="top-action-bar">
       <div class="page-header">
         <a href="javascript:history.back()" class="back-link">← Back to Subjects</a>
@@ -151,16 +142,6 @@
           <span style="color: var(--primary);">›</span> 
           <span>Maths</span>
         </div>
-      </div>
-      
-      <div class="filters-inline">
-        <strong>Difficulty:</strong>
-        <select id="diff-filter">
-          <option value="All">Any</option>
-          <option value="1">1 - Basic</option>
-          <option value="5">5 - Intermediate</option>
-          <option value="10">10 - Advanced</option>
-        </select>
       </div>
     </div>
 
@@ -339,12 +320,9 @@
     }
 
     window.startTopic = function(category) {
-      // Hardcode Subject to 'Maths' as we removed the dropdown
       const selectedSubject = 'Maths'; 
-      const selectedDiff = document.getElementById('diff-filter').value;
-      
-      // Navigate to subtopic page with the strictly correct subject parameter
-      window.location.href = `/subtopic.html?subject=${encodeURIComponent(selectedSubject)}&category=${encodeURIComponent(category)}&diff=${encodeURIComponent(selectedDiff)}`;
+      // Removed diff parameter since we no longer track it here
+      window.location.href = `/subtopic.html?subject=${encodeURIComponent(selectedSubject)}&category=${encodeURIComponent(category)}`;
     };
 
     // Initialize Page

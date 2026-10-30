@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Brain Hub</title>
   <style>
+    /* Global & Responsive Styles */
     :root {
       --bg-color: #f0f2f5;
       --primary: #6c5ce7;
@@ -126,11 +127,13 @@
           </div>
           <h2>Today's Brain Sprint</h2>
           <p style="font-size: 1.1em; opacity: 0.9; margin-bottom: 25px;">5 fresh questions spanning all subjects. A new set unlocks every day at midnight!</p>
+          <!-- Using standard routing to quiz.html for the Daily Challenge -->
           <button class="play-btn" onclick="window.location.href='/quiz.html?subject=Daily'">Play Now</button>
         </section>
 
         <h3 style="margin-top: 40px;">Select a Core Subject</h3>
         <div class="topics-grid">
+          <!-- Routes nicely to your unified subject.html directory -->
           <a href="subject.html" class="topic-card">
             <div class="topic-icon">📐</div>
             <p class="topic-title">Mathematics</p>
@@ -164,15 +167,19 @@
   </div>
 
   <script>
-    // Check if player is logged in to update header button
-    const savedUsername = localStorage.getItem('brainhub_username'); // Updated to match your backend storage key
-    const authBtn = document.getElementById('auth-btn');
-    
-    if (savedUsername && authBtn) {
-      authBtn.innerText = 'Profile (' + savedUsername + ')';
-      authBtn.href = '/profile.html';
-      authBtn.style.background = '#00b894'; 
-    }
+    // Wait for the DOM to fully load before trying to manipulate the header button
+    document.addEventListener("DOMContentLoaded", function() {
+      // Check for the exact key saved during login
+      const savedUsername = localStorage.getItem('brainhub_username');
+      const authBtn = document.getElementById('auth-btn');
+      
+      if (savedUsername && authBtn) {
+        // Transform the Login button into a Profile Dashboard button
+        authBtn.innerText = 'Profile (' + savedUsername + ')';
+        authBtn.href = '/profile.html';
+        authBtn.style.background = '#00b894'; 
+      }
+    });
   </script>
 </body>
 </html>

@@ -67,7 +67,8 @@
   <script>
     let currentMode = 'login';
 
-    if (localStorage.getItem('obh_username')) {
+    // CRITICAL FIX: Ensure we check the exact key the rest of the site uses
+    if (localStorage.getItem('brainhub_username')) {
       window.location.href = '/';
     }
 
@@ -147,8 +148,12 @@
         const result = await res.json();
 
         if (result.success) {
-          localStorage.setItem('obh_username', result.username);
+          // CRITICAL FIX: Storing the username with the 'brainhub_username' key exactly as index.html expects
+          localStorage.setItem('brainhub_username', result.username);
           localStorage.setItem('brainhub_xp', result.xp);
+          
+          // Optionally clean up the old incorrect key if it exists
+          localStorage.removeItem('obh_username');
           
           if (currentMode === 'register') {
             document.getElementById('main-form').style.display = 'none';

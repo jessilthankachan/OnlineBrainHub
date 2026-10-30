@@ -56,6 +56,23 @@
     }
     .page-title { color: var(--primary); margin: 0; font-size: 2em;}
     
+    /* Difficulty Select Styles */
+    .difficulty-select {
+        padding: 10px 15px;
+        border-radius: 8px;
+        border: 2px solid #dfe6e9;
+        font-size: 1em;
+        font-weight: 600;
+        color: var(--text);
+        margin-right: 15px;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s;
+    }
+    .difficulty-select:focus {
+        border-color: var(--primary);
+    }
+    
     .topic-quiz-btn { 
       background: var(--accent); color: #2d3436; border: none; padding: 12px 25px; 
       border-radius: 8px; font-size: 1.1em; font-weight: bold; cursor: pointer; 
@@ -73,7 +90,7 @@
     .subtopic-row:hover { border-color: var(--primary); box-shadow: 0 4px 10px rgba(0, 184, 148, 0.15);}
     .subtopic-title { font-size: 1.1em; font-weight: 600; margin: 0; flex: 1;}
     
-    .action-group { display: flex; gap: 10px; }
+    .action-group { display: flex; gap: 10px; align-items: center; }
     .action-btn { 
       padding: 10px 20px; border-radius: 8px; font-weight: bold; 
       cursor: pointer; border: none; font-size: 0.95em; transition: 0.2s;
@@ -88,10 +105,12 @@
       header { padding: 12px 20px; }
       .logo { font-size: 1.3em; }
       .subtopic-row { flex-direction: column; align-items: flex-start; gap: 15px; padding: 15px; }
-      .action-group { width: 100%; display: flex; gap: 10px; }
-      .action-btn { flex: 1; text-align: center; padding: 12px 10px; }
+      .action-group { width: 100%; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;}
+      .action-btn { flex: 1; text-align: center; padding: 12px 10px; min-width: 120px;}
+      .difficulty-select { width: 100%; margin-right: 0; margin-bottom: 10px;}
       .page-title { font-size: 1.5em !important; }
       .header-section { flex-direction: column; align-items: flex-start; gap: 15px; }
+      .topic-quiz-btn { width: 100%; }
     }
   </style>
 </head>
@@ -106,7 +125,15 @@
     
     <div class="header-section">
       <h1 class="page-title" id="dynamic-title">Loading...</h1>
-      <button class="topic-quiz-btn" onclick="startTopicQuiz()">🏆 Take Topic Master Quiz</button>
+      <div style="display: flex; align-items: center; flex-wrap: wrap; width: 100%; justify-content: flex-end; margin-top: 15px;">
+          <select id="master-diff-select" class="difficulty-select">
+              <option value="All">Any Difficulty</option>
+              <option value="1">1 - Basic</option>
+              <option value="5">5 - Intermediate</option>
+              <option value="10">10 - Advanced</option>
+          </select>
+          <button class="topic-quiz-btn" onclick="startTopicQuiz()">🏆 Take Topic Master Quiz</button>
+      </div>
     </div>
     
     <div class="subtopics-list" id="subtopics-container">
@@ -121,6 +148,12 @@
     let rawSubject = urlParams.get('subject');
     const subject = (rawSubject === 'primary-maths' || rawSubject === 'PrimaryMaths' || !rawSubject) ? 'Maths' : rawSubject;
     const mainCategory = urlParams.get('category');
+    
+    // Check if difficulty was passed from previous page
+    const passedDiff = urlParams.get('diff');
+    if (passedDiff) {
+        document.getElementById('master-diff-select').value = passedDiff;
+    }
     
     document.getElementById('dynamic-title').innerText = mainCategory || 'Topic Not Found';
 
@@ -182,15 +215,23 @@
           // Format exactly as saved in database (e.g., "Subtopic 1: Counting and Number Recognition")
           const dbTopicName = `Subtopic ${index + 1}: ${subtopic}`;
           
-          // Get saved stats or default to 0 XP and 3 Hearts
-          let stats = { best_score: 0, max_hearts: 3, best_score_total: 10 };
+          // Default to 0 Hearts until they achieve them
+          let stats = { best_score: 0, max_hearts: 0, best_score_total: 10 };
           if (userProgress[dbTopicName]) {
-              stats = userProgress[dbTopicName];
+              stats = { ...stats, ...userProgress[dbTopicName] };
           }
 
-          let heartsAmt = stats.max_hearts !== undefined ? stats.max_hearts : 3;
+          let heartsAmt = stats.max_hearts !== undefined ? stats.max_hearts : 0;
           let heartsDisplay = '❤️'.repeat(heartsAmt) + '🖤'.repeat(3 - heartsAmt);
           let scoreDisplay = `${stats.best_score || 0}/${stats.best_score_total || 10}`;
+
+          // Set default dropdown value if passed from previous page
+          const diffOptionsHtml = `
+              <option value="All" ${passedDiff === 'All' ? 'selected' : ''}>Any Diff</option>
+              <option value="1" ${passedDiff === '1' ? 'selected' : ''}>Lvl 1</option>
+              <option value="5" ${passedDiff === '5' ? 'selected' : ''}>Lvl 5</option>
+              <option value="10" ${passedDiff === '10' ? 'selected' : ''}>Lvl 10</option>
+          `;
 
           const row = document.createElement('div');
           row.className = 'subtopic-row';
@@ -199,12 +240,17 @@
               <h3 class="subtopic-title">${index + 1}. ${subtopic}</h3>
               <div style="font-size: 0.85em; color: #636e72; margin-top: 6px; display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
                 <span>🏆 Best Score: <strong style="color: #00b894;">${scoreDisplay}</strong></span>
-                <span>Lives: ${heartsDisplay}</span>
+                <span>Lives Achieved: ${heartsDisplay}</span>
               </div>
             </div>
             <div class="action-group">
               <button class="action-btn btn-notes" onclick="openNotes('${subtopic}')">📖 Read Notes</button>
-              <button class="action-btn btn-quiz" onclick="startSubtopicQuiz('${dbTopicName}')">🎮 Take Quiz</button>
+              
+              <select id="diff-${index}" class="difficulty-select" style="padding: 10px; margin-right: 0; min-width: 100px;">
+                  ${diffOptionsHtml}
+              </select>
+              
+              <button class="action-btn btn-quiz" onclick="startSubtopicQuiz('${dbTopicName}', ${index})">🎮 Take Quiz</button>
             </div>
           `;
           container.appendChild(row);
@@ -220,12 +266,14 @@
       window.location.href = `/notes.html?subject=primary-maths&category=${fileName}&target=${encodeURIComponent(subtopicName)}`;
     }
 
-    function startSubtopicQuiz(dbTopicName) {
-      window.location.href = `/quiz.html?subject=${encodeURIComponent(subject)}&category=${encodeURIComponent(mainCategory)}&topic=${encodeURIComponent(dbTopicName)}`;
+    function startSubtopicQuiz(dbTopicName, index) {
+      const selectedDiff = document.getElementById(`diff-${index}`).value;
+      window.location.href = `/quiz.html?subject=${encodeURIComponent(subject)}&category=${encodeURIComponent(mainCategory)}&topic=${encodeURIComponent(dbTopicName)}&diff=${encodeURIComponent(selectedDiff)}`;
     }
 
     function startTopicQuiz() {
-      window.location.href = `/quiz.html?subject=${encodeURIComponent(subject)}&category=${encodeURIComponent(mainCategory)}`;
+      const selectedDiff = document.getElementById('master-diff-select').value;
+      window.location.href = `/quiz.html?subject=${encodeURIComponent(subject)}&category=${encodeURIComponent(mainCategory)}&diff=${encodeURIComponent(selectedDiff)}`;
     }
 
     loadSubtopics();

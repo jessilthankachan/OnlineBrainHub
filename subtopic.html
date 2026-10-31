@@ -3,114 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Select Subtopic - Online Brain Hub</title>
+  <title>Subtopics - Online Brain Hub</title>
   <style>
-    /* Global & Responsive Styles */
     :root {
       --bg-color: #f0f2f5;
       --primary: #00b894;
       --secondary: #0984e3;
-      --accent: #fdcb6e;
       --text: #2d3436;
+      --panel: #ffffff;
     }
     
     * { box-sizing: border-box; }
-
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      margin: 0; 
-      background-color: var(--bg-color); 
-      color: var(--text); 
-      overflow-x: hidden; 
-    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text); }
     
-    header { 
-      background: white; 
-      padding: 15px 5%; 
-      display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-      position: sticky; 
-      top: 0; 
-      z-index: 100;
-    }
+    header { background: var(--panel); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100;}
     .logo { font-size: 1.5em; font-weight: 800; color: var(--primary); margin: 0; text-decoration: none;}
-    
-    .layout { 
-      width: 100% !important;
-      max-width: 900px; 
-      margin: 15px auto; 
-      padding: 0 15px; 
-    }
-    
-    .back-btn { 
-      background: none; border: none; color: var(--primary); 
-      font-weight: bold; cursor: pointer; font-size: 1.1em; 
-      margin-bottom: 20px; padding: 0; text-decoration: none; display: inline-block;
-    }
-    
-    .header-section { 
-      display: flex; justify-content: space-between; align-items: flex-end; 
-      border-bottom: 2px solid var(--primary); padding-bottom: 15px; margin-bottom: 30px;
-    }
-    .page-title { color: var(--primary); margin: 0; font-size: 2em;}
-    
-    /* Difficulty Select Styles */
-    .difficulty-select {
-        padding: 10px 15px;
-        border-radius: 8px;
-        border: 2px solid #dfe6e9;
-        font-size: 1em;
-        font-weight: 600;
-        color: var(--text);
-        margin-right: 15px;
-        cursor: pointer;
-        outline: none;
-        transition: 0.2s;
-    }
-    .difficulty-select:focus {
-        border-color: var(--primary);
-    }
-    
-    .topic-quiz-btn { 
-      background: var(--accent); color: #2d3436; border: none; padding: 12px 25px; 
-      border-radius: 8px; font-size: 1.1em; font-weight: bold; cursor: pointer; 
-      box-shadow: 0 4px 0 #e1b35c; transition: 0.2s;
-    }
-    .topic-quiz-btn:active { transform: translateY(4px); box-shadow: none;}
 
-    .subtopics-list { display: flex; flex-direction: column; gap: 15px; }
+    .layout { max-width: 800px; margin: 30px auto; padding: 0 20px; }
     
-    .subtopic-row { 
-      background: white; border: 1px solid #dfe6e9; padding: 20px; border-radius: 12px; 
-      display: flex; justify-content: space-between; align-items: center; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.02); transition: 0.2s;
-    }
-    .subtopic-row:hover { border-color: var(--primary); box-shadow: 0 4px 10px rgba(0, 184, 148, 0.15);}
-    .subtopic-title { font-size: 1.1em; font-weight: 600; margin: 0; flex: 1;}
-    
-    .action-group { display: flex; gap: 10px; align-items: center; }
-    .action-btn { 
-      padding: 10px 20px; border-radius: 8px; font-weight: bold; 
-      cursor: pointer; border: none; font-size: 0.95em; transition: 0.2s;
-    }
-    .btn-notes { background: #e3f2fd; color: var(--secondary); border: 1px solid #bbdefb;}
-    .btn-notes:hover { background: #bbdefb; }
-    .btn-quiz { background: #e8f8f5; color: var(--primary); border: 1px solid #b2dfdb;}
-    .btn-quiz:hover { background: #b2dfdb; }
+    .back-btn { color: var(--primary); font-weight: bold; text-decoration: none; font-size: 1.1em; display: inline-block; margin-bottom: 20px;}
+    .back-btn:hover { text-decoration: underline; }
 
-    /* Mobile Responsive Overrides */
-    @media screen and (max-width: 768px) {
-      header { padding: 12px 20px; }
-      .logo { font-size: 1.3em; }
-      .subtopic-row { flex-direction: column; align-items: flex-start; gap: 15px; padding: 15px; }
-      .action-group { width: 100%; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;}
-      .action-btn { flex: 1; text-align: center; padding: 12px 10px; min-width: 120px;}
-      .difficulty-select { width: 100%; margin-right: 0; margin-bottom: 10px;}
-      .page-title { font-size: 1.5em !important; }
-      .header-section { flex-direction: column; align-items: flex-start; gap: 15px; }
-      .topic-quiz-btn { width: 100%; }
+    .page-title { color: var(--secondary); font-size: 2em; margin-top: 0; margin-bottom: 30px; text-transform: capitalize;}
+    
+    .subtopic-list { display: flex; flex-direction: column; gap: 15px; }
+    
+    .subtopic-btn {
+      background: var(--panel);
+      border: 2px solid #dfe6e9;
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+    }
+    
+    .subtopic-btn:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+      color: var(--primary);
+    }
+    
+    .subtopic-btn::after {
+      content: '→';
+      font-size: 1.5em;
+      color: #b2bec3;
+      transition: color 0.2s;
+    }
+    
+    .subtopic-btn:hover::after { color: var(--primary); }
+
+    #loading-error { 
+      background: #ffeaa7; color: #d63031; padding: 20px; 
+      border-radius: 10px; border: 2px solid #d63031; 
+      font-size: 1.1em; display: none; margin-bottom: 20px;
     }
   </style>
 </head>
@@ -121,158 +76,80 @@
   </header>
 
   <div class="layout">
-    <a href="javascript:history.back()" class="back-btn">← Back to Main Topics</a>
+    <!-- The back button goes back to the subject page dynamically -->
+    <a href="javascript:history.back()" class="back-btn">← Back to Subjects</a>
     
-    <div class="header-section">
-      <h1 class="page-title" id="dynamic-title">Loading...</h1>
-      <div style="display: flex; align-items: center; flex-wrap: wrap; width: 100%; justify-content: flex-end; margin-top: 15px;">
-          <select id="master-diff-select" class="difficulty-select">
-              <option value="All">Any Difficulty</option>
-              <option value="1">1 - Basic</option>
-              <option value="5">5 - Intermediate</option>
-              <option value="10">10 - Advanced</option>
-          </select>
-          <button class="topic-quiz-btn" onclick="startTopicQuiz()">🏆 Take Topic Master Quiz</button>
-      </div>
-    </div>
+    <h1 class="page-title" id="page-title">Loading Subtopics...</h1>
     
-    <div class="subtopics-list" id="subtopics-container">
-      <p style="color: #636e72;">Fetching subtopics...</p>
+    <!-- Diagnostic Error Box -->
+    <div id="loading-error"></div>
+    
+    <div class="subtopic-list" id="subtopic-container">
+      <!-- Subtopic buttons will be generated here -->
     </div>
   </div>
 
   <script>
+    // 1. Grab the parameters straight from the URL
     const urlParams = new URLSearchParams(window.location.search);
-    
-    // Force subject to 'Maths' to match the database strictly
-    let rawSubject = urlParams.get('subject');
-    const subject = (rawSubject === 'primary-maths' || rawSubject === 'PrimaryMaths' || !rawSubject) ? 'Maths' : rawSubject;
-    const mainCategory = urlParams.get('category');
-    
-    // Check if difficulty was passed from previous page
-    const passedDiff = urlParams.get('diff');
-    if (passedDiff) {
-        document.getElementById('master-diff-select').value = passedDiff;
-    }
-    
-    document.getElementById('dynamic-title').innerText = mainCategory || 'Topic Not Found';
+    const subjectParam = urlParams.get('subject');   // e.g., 'primary-maths' or 'primary-science'
+    const categoryParam = urlParams.get('category'); // e.g., 'factors-multiples'
 
-    const categoryParam = urlParams.get('category');
-const fileUrl = `/data/${subjectParam}/${categoryParam}.json?nocache=` + new Date().getTime();
-
-    function getLoggedInUser() {
-        return localStorage.getItem('brainhub_username'); 
+    // Clean up the category name for the display title (replace dashes with spaces)
+    if (categoryParam) {
+      document.getElementById('page-title').innerText = categoryParam.replace(/-/g, ' ');
+    } else {
+      document.getElementById('page-title').innerText = "Select a Topic";
     }
 
     async function loadSubtopics() {
-      const container = document.getElementById('subtopics-container');
-      
-      if (!mainCategory || !categoryFileMap[mainCategory]) {
-        container.innerHTML = '<p>No subtopics found for this category yet.</p>';
+      const errorDiv = document.getElementById('loading-error');
+      const container = document.getElementById('subtopic-container');
+
+      if (!subjectParam || !categoryParam) {
+        errorDiv.innerHTML = "<strong>Missing Data:</strong> The URL must include both a subject and a category.";
+        errorDiv.style.display = 'block';
         return;
       }
 
+      // 2. Fetch the JSON file dynamically with a cache-buster
+      const fileUrl = `/data/${subjectParam}/${categoryParam}.json?nocache=` + new Date().getTime();
+
       try {
-        const fileName = categoryFileMap[mainCategory];
+        const response = await fetch(fileUrl);
         
-        // 1. Fetch static JSON subtopics
-        const response = await fetch(`/data/primary-maths/${fileName}.json`);
-        if (!response.ok) throw new Error("File not found");
-        
-        const data = await response.json();
-        const subtopics = Object.keys(data);
-        
-        // 2. Fetch User Progress from Cloudflare Worker
-        let userProgress = {};
-        const username = getLoggedInUser();
-        
-        if (username) {
-            try {
-                const progressRes = await fetch('/api/user', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ action: 'get_profile', username: username })
-                });
-                
-                if (progressRes.ok) {
-                    const profileData = await progressRes.json();
-                    if (profileData.success && profileData.progress && profileData.progress[subject]) {
-                        userProgress = profileData.progress[subject];
-                    }
-                }
-            } catch (err) {
-                console.error("Failed to load backend progress", err);
-            }
+        if (!response.ok) {
+          errorDiv.innerHTML = `<strong>File Not Found:</strong><br>Could not find <code>${fileUrl}</code>.<br>Make sure the folder and file exist exactly as spelled.`;
+          errorDiv.style.display = 'block';
+          return;
         }
 
-        container.innerHTML = ''; 
+        const data = await response.json();
+        const subtopics = Object.keys(data); // Get all the keys from the JSON file
 
-        // 3. Render Cards
-        subtopics.forEach((subtopic, index) => {
-          // Format exactly as saved in database (e.g., "Subtopic 1: Counting and Number Recognition")
-          const dbTopicName = `Subtopic ${index + 1}: ${subtopic}`;
-          
-          // Default to 0 Hearts until they achieve them
-          let stats = { best_score: 0, max_hearts: 0, best_score_total: 10 };
-          if (userProgress[dbTopicName]) {
-              stats = { ...stats, ...userProgress[dbTopicName] };
-          }
+        if (subtopics.length === 0) {
+          errorDiv.innerHTML = "<strong>Empty File:</strong> The JSON file was found, but it has no topics inside.";
+          errorDiv.style.display = 'block';
+          return;
+        }
 
-          let heartsAmt = stats.max_hearts !== undefined ? stats.max_hearts : 0;
-          let heartsDisplay = '❤️'.repeat(heartsAmt) + '🖤'.repeat(3 - heartsAmt);
-          let scoreDisplay = `${stats.best_score || 0}/${stats.best_score_total || 10}`;
-
-          // Set default dropdown value if passed from previous page
-          const diffOptionsHtml = `
-              <option value="All" ${passedDiff === 'All' ? 'selected' : ''}>Any Diff</option>
-              <option value="1" ${passedDiff === '1' ? 'selected' : ''}>Lvl 1</option>
-              <option value="5" ${passedDiff === '5' ? 'selected' : ''}>Lvl 5</option>
-              <option value="10" ${passedDiff === '10' ? 'selected' : ''}>Lvl 10</option>
-          `;
-
-          const row = document.createElement('div');
-          row.className = 'subtopic-row';
-          row.innerHTML = `
-            <div style="flex: 1;">
-              <h3 class="subtopic-title">${index + 1}. ${subtopic}</h3>
-              <div style="font-size: 0.85em; color: #636e72; margin-top: 6px; display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
-                <span>🏆 Best Score: <strong style="color: #00b894;">${scoreDisplay}</strong></span>
-                <span>Lives Achieved: ${heartsDisplay}</span>
-              </div>
-            </div>
-            <div class="action-group">
-              <button class="action-btn btn-notes" onclick="openNotes('${subtopic}')">📖 Read Notes</button>
-              
-              <select id="diff-${index}" class="difficulty-select" style="padding: 10px; margin-right: 0; min-width: 100px;">
-                  ${diffOptionsHtml}
-              </select>
-              
-              <button class="action-btn btn-quiz" onclick="startSubtopicQuiz('${dbTopicName}', ${index})">🎮 Take Quiz</button>
-            </div>
-          `;
-          container.appendChild(row);
+        // 3. Generate a button for every key in the JSON file
+        subtopics.forEach(subtopicName => {
+          const btn = document.createElement('a');
+          btn.className = 'subtopic-btn';
+          // Create the URL to open notes.html with all three pieces of data
+          btn.href = `/notes.html?subject=${encodeURIComponent(subjectParam)}&category=${encodeURIComponent(categoryParam)}&target=${encodeURIComponent(subtopicName)}`;
+          btn.innerText = subtopicName;
+          container.appendChild(btn);
         });
 
       } catch (error) {
-        container.innerHTML = '<p style="color: #d63031;">Could not load the database file.</p>';
+        errorDiv.innerHTML = `<strong>JSON Syntax Error:</strong><br>The file exists, but it has a formatting error: <code>${error.message}</code>.`;
+        errorDiv.style.display = 'block';
       }
     }
 
-    function openNotes(subtopicName) {
-      const fileName = categoryFileMap[mainCategory];
-      window.location.href = `/notes.html?subject=primary-maths&category=${fileName}&target=${encodeURIComponent(subtopicName)}`;
-    }
-
-    function startSubtopicQuiz(dbTopicName, index) {
-      const selectedDiff = document.getElementById(`diff-${index}`).value;
-      window.location.href = `/quiz.html?subject=${encodeURIComponent(subject)}&category=${encodeURIComponent(mainCategory)}&topic=${encodeURIComponent(dbTopicName)}&diff=${encodeURIComponent(selectedDiff)}`;
-    }
-
-    function startTopicQuiz() {
-      const selectedDiff = document.getElementById('master-diff-select').value;
-      window.location.href = `/quiz.html?subject=${encodeURIComponent(subject)}&category=${encodeURIComponent(mainCategory)}&diff=${encodeURIComponent(selectedDiff)}`;
-    }
-
+    // Start the process
     loadSubtopics();
   </script>
 </body>

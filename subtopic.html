@@ -66,6 +66,7 @@
       background: #ffeaa7; color: #d63031; padding: 20px; 
       border-radius: 10px; border: 2px solid #d63031; 
       font-size: 1.1em; display: none; margin-bottom: 20px;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -76,7 +77,6 @@
   </header>
 
   <div class="layout">
-    <!-- The back button goes back to the subject page dynamically -->
     <a href="javascript:history.back()" class="back-btn">← Back to Subjects</a>
     
     <h1 class="page-title" id="page-title">Loading Subtopics...</h1>
@@ -90,66 +90,86 @@
   </div>
 
   <script>
-    // 1. Grab the parameters straight from the URL
     const urlParams = new URLSearchParams(window.location.search);
-    const subjectParam = urlParams.get('subject');   // e.g., 'primary-maths' or 'primary-science'
-    const categoryParam = urlParams.get('category'); // e.g., 'factors-multiples'
+    const subjectParam = urlParams.get('subject');   
+    const categoryParam = urlParams.get('category'); 
 
-    // Clean up the category name for the display title (replace dashes with spaces)
-    if (categoryParam) {
-      document.getElementById('page-title').innerText = categoryParam.replace(/-/g, ' ');
-    } else {
-      document.getElementById('page-title').innerText = "Select a Topic";
-    }
+    // 1. The Bulletproof Map: This translates exactly what is clicked into the exact JSON file name.
+    const categoryFileMap = {
+      "Numbers and Number Sense": "numbers-and-sense",
+      "numbers-and-sense": "numbers-and-sense",
+      
+      "Basic Arithmetic Operations": "basic-arithmetic",
+      "basic-arithmetic": "basic-arithmetic",
+      
+      "Factors, Multiples and Divisibility": "factors-multiples",
+      "factors-multiples": "factors-multiples",
+      
+      "Fractions": "fractions",
+      "fractions": "fractions",
+      
+      "Decimals": "decimals",
+      "decimals": "decimals"
+    };
 
     async function loadSubtopics() {
       const errorDiv = document.getElementById('loading-error');
       const container = document.getElementById('subtopic-container');
 
       if (!subjectParam || !categoryParam) {
-        errorDiv.innerHTML = "<strong>Missing Data:</strong> The URL must include both a subject and a category.";
+        errorDiv.innerHTML = "<strong>Missing Data:</strong> The URL is missing the subject or category.";
         errorDiv.style.display = 'block';
         return;
       }
 
-      // 2. Fetch the JSON file dynamically with a cache-buster
-      const fileUrl = `/data/${subjectParam}/${categoryParam}.json?nocache=` + new Date().getTime();
+      // Display the title nicely on the page
+      document.getElementById('page-title').innerText = categoryParam;
+
+      // 2. Safely look up the exact file name. If it's not in the map, force it to lowercase with hyphens.
+      let fileName = categoryFileMap[categoryParam];
+      if (!fileName) {
+          fileName = categoryParam.toLowerCase().replace(/\s+/g, '-');
+      }
+
+      // 3. Create the exact URL for the JSON fetch
+      const fileUrl = `/data/${subjectParam}/${fileName}.json?nocache=` + new Date().getTime();
 
       try {
         const response = await fetch(fileUrl);
         
-        if (!response.ok) {
-          errorDiv.innerHTML = `<strong>File Not Found:</strong><br>Could not find <code>${fileUrl}</code>.<br>Make sure the folder and file exist exactly as spelled.`;
+        // This catches the "Unexpected Token <" 404 error perfectly
+        if (!response.ok || response.headers.get("content-type")?.includes("text/html")) {
+          errorDiv.innerHTML = `<strong>Error 404 (File Not Found):</strong><br>The browser is looking for exactly <code>${fileUrl}</code> but cannot find it.<br>Make sure you saved the file perfectly in that folder.`;
           errorDiv.style.display = 'block';
+          document.getElementById('page-title').innerText = "Topic Not Found";
           return;
         }
 
         const data = await response.json();
-        const subtopics = Object.keys(data); // Get all the keys from the JSON file
+        const subtopics = Object.keys(data); 
 
         if (subtopics.length === 0) {
-          errorDiv.innerHTML = "<strong>Empty File:</strong> The JSON file was found, but it has no topics inside.";
+          errorDiv.innerHTML = "<strong>Empty File:</strong> The JSON file was found, but it has no subtopics inside.";
           errorDiv.style.display = 'block';
           return;
         }
 
-        // 3. Generate a button for every key in the JSON file
+        // 4. Generate the buttons successfully
         subtopics.forEach(subtopicName => {
           const btn = document.createElement('a');
           btn.className = 'subtopic-btn';
-          // Create the URL to open notes.html with all three pieces of data
-          btn.href = `/notes.html?subject=${encodeURIComponent(subjectParam)}&category=${encodeURIComponent(categoryParam)}&target=${encodeURIComponent(subtopicName)}`;
+          // Important: We pass the exact 'fileName' onward so notes.html also finds the correct file!
+          btn.href = `/notes.html?subject=${encodeURIComponent(subjectParam)}&category=${encodeURIComponent(fileName)}&target=${encodeURIComponent(subtopicName)}`;
           btn.innerText = subtopicName;
           container.appendChild(btn);
         });
 
       } catch (error) {
-        errorDiv.innerHTML = `<strong>JSON Syntax Error:</strong><br>The file exists, but it has a formatting error: <code>${error.message}</code>.`;
+        errorDiv.innerHTML = `<strong>JSON Format Error:</strong><br>The file <code>${fileName}.json</code> exists, but has a syntax error inside it.`;
         errorDiv.style.display = 'block';
       }
     }
 
-    // Start the process
     loadSubtopics();
   </script>
 </body>

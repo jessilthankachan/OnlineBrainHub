@@ -157,7 +157,13 @@
     
     document.getElementById('dynamic-title').innerText = mainCategory || 'Topic Not Found';
 
-    
+    const categoryFileMap = {
+      "Numbers and Number Sense": "numbers-and-sense",
+      "Basic Arithmetic Operations": "basic-arithmetic",
+      "Factors, Multiples and Divisibility": "factors-multiples",
+      "Fractions": "fractions",
+      "Decimals": "decimals"
+    };
 
     function getLoggedInUser() {
         return localStorage.getItem('brainhub_username'); 

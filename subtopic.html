@@ -93,24 +93,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const subjectParam = urlParams.get('subject');   
     const categoryParam = urlParams.get('category'); 
-
-    // 1. The Bulletproof Map: This translates exactly what is clicked into the exact JSON file name.
-    const categoryFileMap = {
-      "Numbers and Number Sense": "numbers-and-sense",
-      "numbers-and-sense": "numbers-and-sense",
-      
-      "Basic Arithmetic Operations": "basic-arithmetic",
-      "basic-arithmetic": "basic-arithmetic",
-      
-      "Factors, Multiples and Divisibility": "factors-multiples",
-      "factors-multiples": "factors-multiples",
-      
-      "Fractions": "fractions",
-      "fractions": "fractions",
-      
-      "Decimals": "decimals",
-      "decimals": "decimals"
-    };
+    const titleParam = urlParams.get('title'); // Grab the pretty title if provided!
 
     async function loadSubtopics() {
       const errorDiv = document.getElementById('loading-error');
@@ -122,24 +105,24 @@
         return;
       }
 
-      // Display the title nicely on the page
-      document.getElementById('page-title').innerText = categoryParam;
+      // 1. Set the visual title (Use the titleParam if it exists, otherwise fallback to the category name)
+      const displayTitle = titleParam ? titleParam : categoryParam.replace(/-/g, ' ');
+      document.getElementById('page-title').innerText = displayTitle;
+      document.title = displayTitle + " - Online Brain Hub";
 
-      // 2. Safely look up the exact file name. If it's not in the map, force it to lowercase with hyphens.
-      let fileName = categoryFileMap[categoryParam];
-      if (!fileName) {
-          fileName = categoryParam.toLowerCase().replace(/\s+/g, '-');
-      }
+      // 2. Force the category to lowercase to guarantee it matches the Linux/Cloudflare file system exactly
+      const fileName = categoryParam.toLowerCase().trim();
 
       // 3. Create the exact URL for the JSON fetch
-      const fileUrl = `/data/${subjectParam}/${fileName}.json?nocache=` + new Date().getTime();
+      // Note: Using a relative path "data/..." instead of "/data/..." ensures it works flawlessly on Windows local testing and Cloudflare
+      const fileUrl = `data/${subjectParam}/${fileName}.json?nocache=` + new Date().getTime();
 
       try {
         const response = await fetch(fileUrl);
         
-        // This catches the "Unexpected Token <" 404 error perfectly
+        // Catch 404 HTML errors
         if (!response.ok || response.headers.get("content-type")?.includes("text/html")) {
-          errorDiv.innerHTML = `<strong>Error 404 (File Not Found):</strong><br>The browser is looking for exactly <code>${fileUrl}</code> but cannot find it.<br>Make sure you saved the file perfectly in that folder.`;
+          errorDiv.innerHTML = `<strong>Error 404 (File Not Found):</strong><br>The browser is looking for exactly <code>${fileUrl}</code> but cannot find it.<br>Make sure your JSON file is named exactly <strong>${fileName}.json</strong>.`;
           errorDiv.style.display = 'block';
           document.getElementById('page-title').innerText = "Topic Not Found";
           return;
@@ -158,8 +141,8 @@
         subtopics.forEach(subtopicName => {
           const btn = document.createElement('a');
           btn.className = 'subtopic-btn';
-          // Important: We pass the exact 'fileName' onward so notes.html also finds the correct file!
-          btn.href = `/notes.html?subject=${encodeURIComponent(subjectParam)}&category=${encodeURIComponent(fileName)}&target=${encodeURIComponent(subtopicName)}`;
+          // Pass the exact fileName and subject forward so notes.html knows exactly where to look
+          btn.href = `notes.html?subject=${encodeURIComponent(subjectParam)}&category=${encodeURIComponent(fileName)}&target=${encodeURIComponent(subtopicName)}`;
           btn.innerText = subtopicName;
           container.appendChild(btn);
         });

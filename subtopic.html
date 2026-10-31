@@ -157,8 +157,7 @@
     
     document.getElementById('dynamic-title').innerText = mainCategory || 'Topic Not Found';
 
-    const categoryParam = urlParams.get('category');
-const fileUrl = `/data/${subjectParam}/${categoryParam}.json?nocache=` + new Date().getTime();
+    
 
     function getLoggedInUser() {
         return localStorage.getItem('brainhub_username'); 

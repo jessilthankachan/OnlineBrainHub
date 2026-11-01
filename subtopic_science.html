@@ -151,8 +151,15 @@
     let displaySubject = rawSubject.replace('primary-', '').replace('Primary', '');
     displaySubject = displaySubject.charAt(0).toUpperCase() + displaySubject.slice(1);
     
-    // 3. Format JSON file name (e.g., 'primary-physics' -> 'primary_physics')
-    const jsonFileName = rawSubject.replace('-', '_');
+    // 3. Map to exact JSON filename based on your folder structure
+    let jsonFileName = rawSubject; 
+    if (rawSubject === 'primary-physics') jsonFileName = 'primary_physics';
+    if (rawSubject === 'primary-chemistry') jsonFileName = 'primary_chemistry';
+    if (rawSubject === 'primary-biology') jsonFileName = 'primary_biology';
+    // history and geography remain 'primary-history' and 'primary-geography' as per your folder
+
+    // 4. Force folder to always be 'primary-science' since all 5 files are there
+    const folderName = 'primary-science';
 
     document.getElementById('dynamic-title').innerText = displaySubject + " Topics";
 
@@ -169,13 +176,13 @@
       const container = document.getElementById('subtopics-container');
       
       try {
-        // Fetch the corresponding JSON file
-        const response = await fetch(`/data/${rawSubject}/${jsonFileName}.json`);
+        // Fetch the corresponding JSON file using the hardcoded folder
+        const response = await fetch(`/data/${folderName}/${jsonFileName}.json`);
         
-        if (!response.ok) throw new Error("File not found");
+        if (!response.ok) throw new Error("File not found at /data/" + folderName + "/" + jsonFileName + ".json");
         
         const data = await response.json();
-        const topics = Object.keys(data); // e.g., ["Introduction to Physics", "Measurement", ...]
+        const topics = Object.keys(data); 
         
         // Fetch User Progress
         let userProgress = {};
@@ -204,7 +211,6 @@
 
         // Render Topic Cards
         topics.forEach((topicName, index) => {
-          // Format exactly as saved in the Science/Social CSVs (e.g., "Topic 1: Our Earth")
           const dbTopicName = `Topic ${index + 1}: ${topicName}`;
           
           let stats = { best_score: 0, max_hearts: 0, best_score_total: 10 };
@@ -247,7 +253,7 @@
         });
 
       } catch (error) {
-        container.innerHTML = '<p style="color: #d63031;">Could not load the subject file.</p>';
+        container.innerHTML = `<p style="color: #d63031;">${error.message}</p>`;
         console.error(error);
       }
     }
@@ -259,8 +265,6 @@
 
     function startTopicQuiz(dbTopicName, index) {
       const selectedDiff = document.getElementById(`diff-${index}`).value;
-      // Sends the properly formatted subject (e.g. "Physics") and topic ("Topic 1: Introduction to Physics")
-      // to match your uploaded CSV database structure perfectly.
       window.location.href = `/quiz.html?subject=${encodeURIComponent(displaySubject)}&category=All&topic=${encodeURIComponent(dbTopicName)}&diff=${encodeURIComponent(selectedDiff)}`;
     }
 

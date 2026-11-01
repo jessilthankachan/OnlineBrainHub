@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & AdSense Meta Tags -->
   <title>Subjects - Online Brain Hub</title>
+  <meta name="description" content="Browse all subjects on Online Brain Hub. Select your grade level and subject—from Primary Math to Higher Secondary Physics—to access notes and quizzes.">
+  <meta name="keywords" content="subjects, syllabus, primary school, middle school, high school, math, physics, chemistry, biology, history, geography">
+  <meta property="og:title" content="Browse Subjects | Online Brain Hub">
+  <meta property="og:description" content="Select your grade level and subject to start learning and earning XP today.">
+
   <style>
     /* Global & Responsive Styles */
     :root {
@@ -21,8 +28,12 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
       margin: 0; background-color: var(--bg-color); color: var(--text); 
       overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     
+    /* Universal Header & Navigation */
     header { 
       background: white; padding: 15px 5%; display: flex; 
       justify-content: space-between; align-items: center; 
@@ -31,6 +42,17 @@
     }
     .logo { font-size: 1.5em; font-weight: 800; color: var(--primary); margin: 0; text-decoration: none;}
     
+    .nav-links { display: flex; gap: 25px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    
+    .auth-btn { 
+      display: inline-block; padding: 10px 20px; background: #0984e3; 
+      color: white; text-decoration: none; border-radius: 8px; 
+      font-weight: bold; transition: 0.2s;
+    }
+    .auth-btn:hover { background: #076bb8; transform: translateY(-2px); }
+
     /* Gamification Header */
     .player-stats { 
       background: #2d3436; color: white; padding: 20px 5%; 
@@ -49,22 +71,15 @@
 
     .layout { 
       width: 100% !important; max-width: 1200px; 
-      margin: 30px auto; padding: 0 15px; 
+      margin: 30px auto; padding: 0 15px; flex: 1;
     }
     
     /* Breadcrumb Header */
     .page-header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
+      display: flex; align-items: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;
     }
     .back-link {
-      color: var(--primary);
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1.1em;
+      color: var(--primary); font-weight: bold; text-decoration: none; font-size: 1.1em;
     }
     .back-link:hover { text-decoration: underline; }
     
@@ -81,10 +96,32 @@
     .topic-card h3 { margin: 10px 0 5px 0; }
     .topic-card p { margin: 0; font-size: 0.85em; color: #636e72; }
 
-    /* Mobile Responsive Overrides */
+    /* Universal Footer (AdSense Mandatory) */
+    .universal-footer { 
+      background: #2d3436; color: #f5f6fa; padding: 40px 5% 20px; 
+      margin-top: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    }
+    .footer-content { 
+      display: flex; flex-wrap: wrap; justify-content: space-between; 
+      gap: 30px; max-width: 1200px; margin: 0 auto; 
+    }
+    .footer-section { flex: 1; min-width: 200px; }
+    .footer-section h4 { color: var(--accent); margin-top: 0; margin-bottom: 15px; font-size: 1.2em; }
+    .footer-section p { color: #b2bec3; line-height: 1.6; font-size: 0.9em; }
+    .footer-section a { 
+      display: block; color: #b2bec3; text-decoration: none; 
+      margin-bottom: 10px; transition: 0.2s; font-size: 0.9em; 
+    }
+    .footer-section a:hover { color: white; padding-left: 5px; }
+    .footer-bottom { 
+      text-align: center; border-top: 1px solid #636e72; 
+      margin-top: 30px; padding-top: 20px; color: #b2bec3; font-size: 0.85em; 
+    }
+
     @media screen and (max-width: 768px) {
       header { padding: 12px 20px; }
       .logo { font-size: 1.3em; }
+      .nav-links { display: none; }
       .player-stats { flex-direction: column; align-items: flex-start; }
       .progress-container { width: 100%; margin: 0; }
     }
@@ -92,8 +129,16 @@
 </head>
 <body>
 
+  <!-- Universal Header -->
   <header>
     <a href="/" class="logo">🧠 BrainHub</a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/subject.html">Subjects</a>
+      <a href="/about.html">About Us</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <a href="/login.html" id="auth-btn" class="auth-btn">Login</a>
   </header>
 
   <!-- Gamification Bar -->
@@ -106,7 +151,6 @@
   </div>
 
   <div class="layout" id="lobby-view">
-    
     <div class="page-header">
       <a href="/" class="back-link">← Back to Lobby</a>
     </div>
@@ -210,17 +254,47 @@
         </div>
       </div>
     </div>
-
   </div>
+
+  <!-- Universal Footer (Mandatory for AdSense) -->
+  <footer class="universal-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>🧠 Online Brain Hub</h4>
+        <p>Empowering students globally with interactive study notes, smart quizzes, and daily challenges in Mathematics, Science, and Social Studies.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="/">Home</a>
+        <a href="/subject.html">All Subjects</a>
+        <a href="/about.html">About Us</a>
+        <a href="/contact.html">Contact Us</a>
+      </div>
+      <div class="footer-section">
+        <h4>Legal & Policies</h4>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/cookie-policy.html">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Online Brain Hub. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script>
     let playerXP = 0;
 
-    // 1. Sync User XP from Backend
     async function loadUserProfile() {
         const username = localStorage.getItem('brainhub_username');
+        const authBtn = document.getElementById('auth-btn');
         
-        // Load cached XP instantly to prevent visual pop-in
+        if (username && authBtn) {
+            authBtn.innerText = 'Profile (' + username + ')';
+            authBtn.href = '/profile.html';
+        }
+
         playerXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;
         updateXPUI();
 
@@ -257,7 +331,6 @@
       document.getElementById('xp-text').innerText = `${currentLevelXP} / 100 XP`;
     }
 
-    // 2. Centralized Routing Logic
     window.routeToSubject = function(subjectName, level) {
       if (level === 'Primary' && subjectName === 'Maths') {
         window.location.href = `/primary-maths.html`;
@@ -265,12 +338,10 @@
         let formattedSubject = subjectName.toLowerCase().replace('primary', 'primary-');
         window.location.href = `/subtopic_science.html?subject=${formattedSubject}`;
       } else {
-        // Fallback for other subjects
         window.location.href = `/subtopic.html?subject=${encodeURIComponent(subjectName)}&level=${encodeURIComponent(level)}`;
       }
     };
 
-    // Initialize Page
     loadUserProfile();
   </script>
 </body>

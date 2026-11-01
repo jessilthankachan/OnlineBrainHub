@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Brain Hub</title>
+  
+  <!-- SEO & AdSense Meta Tags -->
+  <title>Online Brain Hub | Master Math, Science & History</title>
+  <meta name="description" content="Online Brain Hub offers interactive lessons, smart quizzes, and daily challenges in Mathematics, Science, History, and Geography for primary to high school students.">
+  <meta name="keywords" content="online learning, quizzes, math, science, history, geography, student education, interactive lessons">
+  <meta property="og:title" content="Online Brain Hub | Interactive Learning">
+  <meta property="og:description" content="Level up your brain power with interactive lessons and smart quizzes.">
+  <meta property="og:type" content="website">
+
   <style>
     /* Global & Responsive Styles */
     :root {
@@ -24,16 +32,23 @@
       background-color: var(--bg-color); 
       color: var(--text); 
       overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     
-    /* Header & Navigation */
+    /* Universal Header & Navigation */
     header { 
       background: white; padding: 15px 5%; display: flex; 
       justify-content: space-between; align-items: center; 
       box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; 
       top: 0; z-index: 100;
     }
-    .logo { font-size: 1.5em; font-weight: 800; color: var(--primary); margin: 0; }
+    .logo { font-size: 1.5em; font-weight: 800; color: var(--primary); margin: 0; text-decoration: none; }
+    
+    .nav-links { display: flex; gap: 25px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
     
     .auth-btn { 
       display: inline-block; padding: 10px 20px; background: #0984e3; 
@@ -51,7 +66,7 @@
     .ad-top { width: 100%; max-width: 728px; height: 90px; margin: 20px auto; }
     
     /* Main Layout */
-    .layout { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 15px; gap: 30px; }
+    .layout { display: flex; max-width: 1200px; margin: 0 auto; padding: 0 15px; gap: 30px; flex: 1; }
     .main-content { flex: 1; min-width: 0; }
     .sidebar { width: 300px; display: none; flex-shrink: 0;}
     @media(min-width: 900px) { .sidebar { display: block; } } 
@@ -90,16 +105,46 @@
     .topic-icon { font-size: 3em; margin-bottom: 10px; }
     .topic-title { font-size: 1.2em; font-weight: bold; margin: 0; }
 
-    @media (max-width: 600px) {
+    /* Universal Footer (AdSense Mandatory) */
+    .universal-footer { 
+      background: #2d3436; color: #f5f6fa; padding: 40px 5% 20px; 
+      margin-top: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    }
+    .footer-content { 
+      display: flex; flex-wrap: wrap; justify-content: space-between; 
+      gap: 30px; max-width: 1200px; margin: 0 auto; 
+    }
+    .footer-section { flex: 1; min-width: 200px; }
+    .footer-section h4 { color: var(--accent); margin-top: 0; margin-bottom: 15px; font-size: 1.2em; }
+    .footer-section p { color: #b2bec3; line-height: 1.6; font-size: 0.9em; }
+    .footer-section a { 
+      display: block; color: #b2bec3; text-decoration: none; 
+      margin-bottom: 10px; transition: 0.2s; font-size: 0.9em; 
+    }
+    .footer-section a:hover { color: white; padding-left: 5px; }
+    .footer-bottom { 
+      text-align: center; border-top: 1px solid #636e72; 
+      margin-top: 30px; padding-top: 20px; color: #b2bec3; font-size: 0.85em; 
+    }
+
+    @media (max-width: 768px) {
       .hero-section h1 { font-size: 2em; }
+      .nav-links { display: none; } /* Hide text links on mobile to save space */
     }
   </style>
 </head>
 <body>
 
+  <!-- Universal Header -->
   <header>
-    <h1 class="logo">🧠 BrainHub</h1>
-    <a href="/login.html" id="auth-btn" class="auth-btn">Login to Save Progress</a>
+    <a href="/" class="logo">🧠 BrainHub</a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/subject.html">Subjects</a>
+      <a href="/about.html">About Us</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <a href="/login.html" id="auth-btn" class="auth-btn">Login</a>
   </header>
 
   <!-- Top AdSense Banner Placeholder -->
@@ -127,35 +172,29 @@
           </div>
           <h2>Today's Brain Sprint</h2>
           <p style="font-size: 1.1em; opacity: 0.9; margin-bottom: 25px;">5 fresh questions spanning all subjects. A new set unlocks every day at midnight!</p>
-          <!-- Using standard routing to quiz.html for the Daily Challenge -->
           <button class="play-btn" onclick="window.location.href='/quiz.html?subject=Daily'">Play Now</button>
         </section>
 
         <h3 style="margin-top: 40px;">Select a Core Subject</h3>
         <div class="topics-grid">
-          <!-- Routes nicely to your unified subject.html directory -->
           <a href="subject.html" class="topic-card">
             <div class="topic-icon">📐</div>
             <p class="topic-title">Mathematics</p>
           </a>
-
           <a href="subject.html" class="topic-card">
             <div class="topic-icon">🔬</div>
             <p class="topic-title">Science</p>
           </a>
-
           <a href="subject.html" class="topic-card">
             <div class="topic-icon">🏛️</div>
             <p class="topic-title">History</p>
           </a>
-
            <a href="subject.html" class="topic-card">
             <div class="topic-icon">🌍</div>
             <p class="topic-title">Geography</p>
           </a>
         </div>
       </div>
-
     </main>
 
     <!-- Right Sticky AdSense Sidebar -->
@@ -166,15 +205,39 @@
     </aside>
   </div>
 
+  <!-- Universal Footer (Mandatory for AdSense) -->
+  <footer class="universal-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>🧠 Online Brain Hub</h4>
+        <p>Empowering students globally with interactive study notes, smart quizzes, and daily challenges in Mathematics, Science, and Social Studies.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="/">Home</a>
+        <a href="/subject.html">All Subjects</a>
+        <a href="/about.html">About Us</a>
+        <a href="/contact.html">Contact Us</a>
+      </div>
+      <div class="footer-section">
+        <h4>Legal & Policies</h4>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/cookie-policy.html">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Online Brain Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script>
-    // Wait for the DOM to fully load before trying to manipulate the header button
     document.addEventListener("DOMContentLoaded", function() {
-      // Check for the exact key saved during login
       const savedUsername = localStorage.getItem('brainhub_username');
       const authBtn = document.getElementById('auth-btn');
       
       if (savedUsername && authBtn) {
-        // Transform the Login button into a Profile Dashboard button
         authBtn.innerText = 'Profile (' + savedUsername + ')';
         authBtn.href = '/profile.html';
         authBtn.style.background = '#00b894'; 

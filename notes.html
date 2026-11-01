@@ -89,9 +89,9 @@
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
-    const subjectParam = urlParams.get('subject'); // e.g., 'primary-maths'
-    const categoryParam = urlParams.get('category'); // e.g., 'basic-arithmetic'
-    const targetSubtopic = urlParams.get('target'); // e.g., 'Addition of whole numbers'
+    const subjectParam = urlParams.get('subject'); // e.g., 'primary-physics' or 'primary-maths'
+    const categoryParam = urlParams.get('category'); // e.g., 'primary_physics' or 'basic-arithmetic'
+    const targetSubtopic = urlParams.get('target'); // e.g., 'Introduction to Physics'
     
     document.getElementById('notes-title').innerText = targetSubtopic || 'Study Notes';
 
@@ -104,8 +104,14 @@
         return;
       }
 
-      // CACHE BUSTER ADDED HERE: Forces the browser to load the newest version of the JSON file
-      const fileUrl = `/data/${subjectParam}/${categoryParam}.json?nocache=` + new Date().getTime();
+      // Determine the correct folder path based on subject type
+      let folderPath = subjectParam;
+      if (subjectParam.includes('physics') || subjectParam.includes('chemistry') || subjectParam.includes('biology') || subjectParam.includes('history') || subjectParam.includes('geography')) {
+          folderPath = 'primary-science'; // All 5 files are grouped inside primary-science as seen in your screenshot
+      }
+
+      // CACHE BUSTER: Forces the browser to load the newest version of the JSON file
+      const fileUrl = `/data/${folderPath}/${categoryParam}.json?nocache=` + new Date().getTime();
 
       try {
         const response = await fetch(fileUrl);
@@ -137,15 +143,24 @@
     }
 
     function startQuiz() {
-      // CACHE BUSTER ADDED HERE: Ensures the quiz button also reads the correct subtopic list index
-      fetch(`/data/${subjectParam}/${categoryParam}.json?nocache=` + new Date().getTime())
+      let folderPath = subjectParam;
+      if (subjectParam.includes('physics') || subjectParam.includes('chemistry') || subjectParam.includes('biology') || subjectParam.includes('history') || subjectParam.includes('geography')) {
+          folderPath = 'primary-science';
+      }
+
+      fetch(`/data/${folderPath}/${categoryParam}.json?nocache=` + new Date().getTime())
         .then(res => res.json())
         .then(data => {
           const keys = Object.keys(data);
           const index = keys.indexOf(targetSubtopic);
           if (index !== -1) {
-            const dbTopicName = `Subtopic ${index + 1}: ${targetSubtopic}`;
-            window.location.href = `/quiz.html?subject=Maths&category=${encodeURIComponent(categoryParam)}&topic=${encodeURIComponent(dbTopicName)}&diff=All`;
+            // Format display subject nicely for quiz database matching (e.g. "Physics", "Geography")
+            let formattedSubject = subjectParam.replace('primary-', '').replace('Primary', '');
+            formattedSubject = formattedSubject.charAt(0).toUpperCase() + formattedSubject.slice(1);
+            if (formattedSubject === 'Maths') formattedSubject = 'Maths';
+
+            const dbTopicName = `Topic ${index + 1}: ${targetSubtopic}`;
+            window.location.href = `/quiz.html?subject=${encodeURIComponent(formattedSubject)}&category=All&topic=${encodeURIComponent(dbTopicName)}&diff=All`;
           }
         });
     }

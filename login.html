@@ -148,7 +148,7 @@
         const result = await res.json();
 
         if (result.success) {
-          // CRITICAL FIX: Storing the username with the 'brainhub_username' key exactly as index.html expects
+          // CRITICAL FIX:  Storing the username with the 'brainhub_username' key exactly as index.html expects
           localStorage.setItem('brainhub_username', result.username);
           localStorage.setItem('brainhub_xp', result.xp);
           

@@ -49,24 +49,28 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; 
       top: 0; z-index: 100;
     }
-    .logo-link {
+
+/* UPDATE IN YOUR CSS STYLES */
+.logo-link {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
 .header-logo-img {
-  height: 45px; /* Adjust this number to make the logo larger or smaller */
+  height: 55px; /* Bumped from 45px to 55px for better readability */
   width: auto;
   max-width: 100%;
+  display: block;
 }
 
-/* Mobile Responsive Tweaks */
+/* On mobile devices, we maintain a highly readable size without overflow */
 @media screen and (max-width: 768px) {
   .header-logo-img {
-    height: 35px;
+    height: 42px; /* Large enough to read, small enough to fit mobile headers */
   }
 }
+
     
     .nav-links { display: flex; gap: 25px; align-items: center; }
     .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; transition: color 0.2s; }
@@ -159,9 +163,11 @@
 
   <!-- Universal Header -->
   <header>
-    <a href="/" class="logo-link">
-  <img src="/header-logo.png" alt="Online Brain Hub" class="header-logo-img">
+    <!-- UPDATE IN YOUR HTML HEADER -->
+<a href="/" class="logo-link">
+  <img src="/header-logo.png" alt="Online BrainHub" class="header-logo-img">
 </a>
+
     <nav class="nav-links">
       <a href="/">Home</a>
       <a href="/subject.html">Subjects</a>

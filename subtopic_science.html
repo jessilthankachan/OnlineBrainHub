@@ -156,7 +156,6 @@
     if (rawSubject === 'primary-physics') jsonFileName = 'primary_physics';
     if (rawSubject === 'primary-chemistry') jsonFileName = 'primary_chemistry';
     if (rawSubject === 'primary-biology') jsonFileName = 'primary_biology';
-    // history and geography remain 'primary-history' and 'primary-geography' as per your folder
 
     // 4. Force folder to always be 'primary-science' since all 5 files are there
     const folderName = 'primary-science';
@@ -176,7 +175,6 @@
       const container = document.getElementById('subtopics-container');
       
       try {
-        // Fetch the corresponding JSON file using the hardcoded folder
         const response = await fetch(`/data/${folderName}/${jsonFileName}.json`);
         
         if (!response.ok) throw new Error("File not found at /data/" + folderName + "/" + jsonFileName + ".json");
@@ -184,7 +182,6 @@
         const data = await response.json();
         const topics = Object.keys(data); 
         
-        // Fetch User Progress
         let userProgress = {};
         const username = getLoggedInUser();
         
@@ -209,7 +206,6 @@
 
         container.innerHTML = ''; 
 
-        // Render Topic Cards
         topics.forEach((topicName, index) => {
           const dbTopicName = `Topic ${index + 1}: ${topicName}`;
           
@@ -259,18 +255,27 @@
     }
 
     function openNotes(topicName) {
-      // Passes the specific JSON file and the target topic key
       window.location.href = `/notes.html?subject=${encodeURIComponent(rawSubject)}&category=${encodeURIComponent(jsonFileName)}&target=${encodeURIComponent(topicName)}`;
     }
 
     function startTopicQuiz(dbTopicName, index) {
       const selectedDiff = document.getElementById(`diff-${index}`).value;
-      window.location.href = `/quiz.html?subject=${encodeURIComponent(displaySubject)}&category=All&topic=${encodeURIComponent(dbTopicName)}&diff=${encodeURIComponent(selectedDiff)}`;
+      
+      // IMPORTANT FIX: Ensures URL subject matches database perfectly (e.g. "Physics" instead of "Primary-physics")
+      let cleanSubject = rawSubject.replace('primary-', '').replace('Primary', '');
+      cleanSubject = cleanSubject.charAt(0).toUpperCase() + cleanSubject.slice(1);
+      
+      // Send the clean subject to the quiz script. (Note: we leave category blank or generic so it matches any category containing the specific topic)
+      window.location.href = `/quiz.html?subject=${encodeURIComponent(cleanSubject)}&topic=${encodeURIComponent(dbTopicName)}&diff=${encodeURIComponent(selectedDiff)}`;
     }
 
     function startMasterQuiz() {
       const selectedDiff = document.getElementById('master-diff-select').value;
-      window.location.href = `/quiz.html?subject=${encodeURIComponent(displaySubject)}&category=All&diff=${encodeURIComponent(selectedDiff)}`;
+      
+      let cleanSubject = rawSubject.replace('primary-', '').replace('Primary', '');
+      cleanSubject = cleanSubject.charAt(0).toUpperCase() + cleanSubject.slice(1);
+      
+      window.location.href = `/quiz.html?subject=${encodeURIComponent(cleanSubject)}&diff=${encodeURIComponent(selectedDiff)}`;
     }
 
     loadTopics();

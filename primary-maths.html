@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & AdSense Meta Tags -->
   <title>Primary School Maths - Online Brain Hub</title>
+  <meta name="description" content="Explore Primary School Maths topics on Online Brain Hub. Access structured lessons, practice fractions and arithmetic, and test your skills with interactive quizzes.">
+  <meta name="keywords" content="primary maths, math quizzes, learn mathematics, fractions, arithmetic, online brain hub">
+  <meta property="og:title" content="Primary School Maths | Online Brain Hub">
+  <meta property="og:description" content="Master Primary School Mathematics with interactive lessons, quizzes, and XP rewards.">
+
   <style>
     /* Global & Responsive Styles */
     :root {
@@ -21,8 +28,12 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
       margin: 0; background-color: var(--bg-color); color: var(--text); 
       overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     
+    /* Universal Header & Navigation */
     header { 
       background: white; padding: 15px 5%; display: flex; 
       justify-content: space-between; align-items: center; 
@@ -30,6 +41,25 @@
       top: 0; z-index: 100;
     }
     .logo { font-size: 1.5em; font-weight: 800; color: var(--primary); margin: 0; text-decoration: none;}
+    
+    .nav-links { display: flex; gap: 25px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    
+    .auth-btn { 
+      display: inline-block; padding: 10px 20px; background: #0984e3; 
+      color: white; text-decoration: none; border-radius: 8px; 
+      font-weight: bold; transition: 0.2s;
+    }
+    .auth-btn:hover { background: #076bb8; transform: translateY(-2px); }
+
+    /* Ad Banners */
+    .ad-banner { 
+      background: #e2e2e2; border: 2px dashed #b2bec3; display: flex; 
+      align-items: center; justify-content: center; color: #636e72; 
+      font-weight: bold; text-align: center; border-radius: 10px;
+    }
+    .ad-top { width: 100%; max-width: 728px; height: 90px; margin: 20px auto; }
     
     /* Gamification Header */
     .player-stats { 
@@ -47,10 +77,16 @@
     .progress-bar { background: var(--success); height: 100%; width: 0%; transition: width 0.5s ease-out; }
     .xp-text { position: absolute; width: 100%; text-align: center; top: 0; font-size: 0.85em; font-weight: bold; line-height: 20px;}
 
+    /* Main Layout with Sidebar */
     .layout { 
-      width: 100% !important; max-width: 1200px; 
-      margin: 30px auto; padding: 0 15px; 
+      display: flex; max-width: 1200px; margin: 0 auto 30px auto; 
+      padding: 0 15px; gap: 30px; flex: 1; width: 100%;
     }
+    .main-content { flex: 1; min-width: 0; }
+    
+    .sidebar { width: 300px; display: none; flex-shrink: 0;}
+    @media(min-width: 900px) { .sidebar { display: block; } } 
+    .ad-sticky { width: 100%; height: 600px; position: sticky; top: 90px; }
     
     /* Top Action Bar (Breadcrumbs Only) */
     .top-action-bar {
@@ -105,10 +141,33 @@
       padding: 6px 12px; border-radius: 12px; display: inline-block; margin-top: 15px; align-self: center;
     }
 
+    /* Universal Footer (AdSense Mandatory) */
+    .universal-footer { 
+      background: #2d3436; color: #f5f6fa; padding: 40px 5% 20px; 
+      margin-top: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    }
+    .footer-content { 
+      display: flex; flex-wrap: wrap; justify-content: space-between; 
+      gap: 30px; max-width: 1200px; margin: 0 auto; 
+    }
+    .footer-section { flex: 1; min-width: 200px; }
+    .footer-section h4 { color: var(--accent); margin-top: 0; margin-bottom: 15px; font-size: 1.2em; }
+    .footer-section p { color: #b2bec3; line-height: 1.6; font-size: 0.9em; }
+    .footer-section a { 
+      display: block; color: #b2bec3; text-decoration: none; 
+      margin-bottom: 10px; transition: 0.2s; font-size: 0.9em; 
+    }
+    .footer-section a:hover { color: white; padding-left: 5px; }
+    .footer-bottom { 
+      text-align: center; border-top: 1px solid #636e72; 
+      margin-top: 30px; padding-top: 20px; color: #b2bec3; font-size: 0.85em; 
+    }
+
     /* Mobile Responsive Overrides */
     @media screen and (max-width: 768px) {
       header { padding: 12px 20px; }
       .logo { font-size: 1.3em; }
+      .nav-links { display: none; }
       .player-stats { flex-direction: column; align-items: flex-start; }
       .progress-container { width: 100%; margin: 0; }
       .top-action-bar { flex-direction: column; align-items: flex-start; }
@@ -117,8 +176,16 @@
 </head>
 <body>
 
+  <!-- Universal Header -->
   <header>
     <a href="/" class="logo">🧠 BrainHub</a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/subject.html">Subjects</a>
+      <a href="/about.html">About Us</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <a href="/login.html" id="auth-btn" class="auth-btn">Login</a>
   </header>
 
   <!-- Gamification Bar -->
@@ -130,114 +197,156 @@
     </div>
   </div>
 
+  <!-- Top AdSense Banner Placeholder -->
+  <div class="ad-banner ad-top">
+    AdSense Top Banner (728x90)
+  </div>
+
   <div class="layout" id="lobby-view">
-      
-    <!-- Top Action Bar (Breadcrumbs Only) -->
-    <div class="top-action-bar">
-      <div class="page-header">
-        <a href="javascript:history.back()" class="back-link">← Back to Subjects</a>
-        <span style="color: #b2bec3; font-size: 1.5em; display: none;">|</span>
-        <div class="page-context">
-          <span>🎓 Primary School</span> 
-          <span style="color: var(--primary);">›</span> 
-          <span>Maths</span>
+    
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Top Action Bar (Breadcrumbs Only) -->
+      <div class="top-action-bar">
+        <div class="page-header">
+          <a href="javascript:history.back()" class="back-link">← Back to Subjects</a>
+          <span style="color: #b2bec3; font-size: 1.5em; display: none;">|</span>
+          <div class="page-context">
+            <span>🎓 Primary School</span> 
+            <span style="color: var(--primary);">›</span> 
+            <span>Maths</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Part 1: Number Systems & Arithmetic -->
-    <div class="level-section">
-      <h2>1. Numbers & Arithmetic Operations</h2>
-      <div class="topics-grid">
-        <div class="topic-card" onclick="startTopic('Numbers and Number Sense')">
-          <h3>🔢 1. Numbers & Sense</h3>
-          <p>Counting, Place value, Expanded form, Rounding, Roman numerals</p>
-        </div>
-        <div class="topic-card" onclick="startTopic('Basic Arithmetic Operations')">
-          <h3>➕ 2. Basic Arithmetic</h3>
-          <p>Addition, Subtraction, Multiplication, Division, Word problems</p>
-        </div>
-        <div class="topic-card" onclick="startTopic('Factors, Multiples and Divisibility')">
-          <h3>➗ 3. Factors & Multiples</h3>
-          <p>Prime numbers, Divisibility rules, Common factors, HCF & LCM</p>
-        </div>
-        <div class="topic-card" onclick="startTopic('Patterns and Sequences')">
-          <h3>🔄 4. Patterns & Sequences</h3>
-          <p>Repeating patterns, Skip counting, Number machines, Finding missing terms</p>
+      <!-- Part 1: Number Systems & Arithmetic -->
+      <div class="level-section">
+        <h2>1. Numbers & Arithmetic Operations</h2>
+        <div class="topics-grid">
+          <div class="topic-card" onclick="startTopic('Numbers and Number Sense')">
+            <h3>🔢 1. Numbers & Sense</h3>
+            <p>Counting, Place value, Expanded form, Rounding, Roman numerals</p>
+          </div>
+          <div class="topic-card" onclick="startTopic('Basic Arithmetic Operations')">
+            <h3>➕ 2. Basic Arithmetic</h3>
+            <p>Addition, Subtraction, Multiplication, Division, Word problems</p>
+          </div>
+          <div class="topic-card" onclick="startTopic('Factors, Multiples and Divisibility')">
+            <h3>➗ 3. Factors & Multiples</h3>
+            <p>Prime numbers, Divisibility rules, Common factors, HCF & LCM</p>
+          </div>
+          <div class="topic-card" onclick="startTopic('Patterns and Sequences')">
+            <h3>🔄 4. Patterns & Sequences</h3>
+            <p>Repeating patterns, Skip counting, Number machines, Finding missing terms</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Part 2: Fractions, Decimals & Early Algebra -->
-    <div class="level-section">
-      <h2>2. Fractions, Decimals & Early Algebra</h2>
-      <div class="topics-grid">
-        <div class="topic-card" onclick="startTopic('Fractions')">
-          <h3>◗ 5. Fractions</h3>
-          <p>Equivalent fractions, Simplifying, Adding/Subtracting, Multiplying/Dividing</p>
-        </div>
-        <div class="topic-card" onclick="startTopic('Decimals')">
-          <h3>⏺ 6. Decimals</h3>
-          <p>Tenths/Hundredths, Place value, Converting to fractions, Decimal arithmetic</p>
-        </div>
-        <div class="topic-card" onclick="startTopic('Introduction to Algebra')">
-          <h3>𝑥 7. Intro to Algebra</h3>
-          <p>Variables, Number sentences, One-step equations, Simple expressions</p>
-        </div>
-        <div class="topic-card" onclick="startTopic('Ratio, Proportion and Percentages')">
-          <h3>⚖️ 8. Ratio & Percentages</h3>
-          <p>Comparing quantities, Equivalent ratios, Simple proportions, Percentages</p>
+      <!-- Part 2: Fractions, Decimals & Early Algebra -->
+      <div class="level-section">
+        <h2>2. Fractions, Decimals & Early Algebra</h2>
+        <div class="topics-grid">
+          <div class="topic-card" onclick="startTopic('Fractions')">
+            <h3>◗ 5. Fractions</h3>
+            <p>Equivalent fractions, Simplifying, Adding/Subtracting, Multiplying/Dividing</p>
+          </div>
+          <div class="topic-card" onclick="startTopic('Decimals')">
+            <h3>⏺ 6. Decimals</h3>
+            <p>Tenths/Hundredths, Place value, Converting to fractions, Decimal arithmetic</p>
+          </div>
+          <div class="topic-card" onclick="startTopic('Introduction to Algebra')">
+            <h3>𝑥 7. Intro to Algebra</h3>
+            <p>Variables, Number sentences, One-step equations, Simple expressions</p>
+          </div>
+          <div class="topic-card" onclick="startTopic('Ratio, Proportion and Percentages')">
+            <h3>⚖️ 8. Ratio & Percentages</h3>
+            <p>Comparing quantities, Equivalent ratios, Simple proportions, Percentages</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Part 3: Geometry, Measurement & Time -->
-    <div class="level-section">
-      <h2>3. Geometry, Measurement & Time</h2>
-      <div class="topics-grid">
-        <div class="topic-card" onclick="startTopic('Geometry: Shapes and Properties')">
-          <h3>🔺 9. Geometry & Shapes</h3>
-          <p>Points, Lines, Angles, 2D/3D shapes, Symmetry, Tessellations</p>
-        </div>
-        <div class="topic-card" onclick="startTopic('Measurement and Units')">
-          <h3>📏 10. Measurement & Units</h3>
-          <p>Length, Mass, Capacity, Perimeter, Area of rectangles, Volume</p>
-        </div>
-        <div class="topic-card" onclick="startTopic('Time and Calendar')">
-          <h3>⌚ 11. Time & Calendar</h3>
-          <p>Analogue/Digital clocks, A.M./P.M., Elapsed time, Calendars, Schedules</p>
-        </div>
-        <div class="topic-card" onclick="startTopic('Position, Direction and Coordinates')">
-          <h3>📍 12. Position & Coordinates</h3>
-          <p>Grids, Turns/Rotations, Plotting points, First-quadrant coordinates</p>
+      <!-- Part 3: Geometry, Measurement & Time -->
+      <div class="level-section">
+        <h2>3. Geometry, Measurement & Time</h2>
+        <div class="topics-grid">
+          <div class="topic-card" onclick="startTopic('Geometry: Shapes and Properties')">
+            <h3>🔺 9. Geometry & Shapes</h3>
+            <p>Points, Lines, Angles, 2D/3D shapes, Symmetry, Tessellations</p>
+          </div>
+          <div class="topic-card" onclick="startTopic('Measurement and Units')">
+            <h3>📏 10. Measurement & Units</h3>
+            <p>Length, Mass, Capacity, Perimeter, Area of rectangles, Volume</p>
+          </div>
+          <div class="topic-card" onclick="startTopic('Time and Calendar')">
+            <h3>⌚ 11. Time & Calendar</h3>
+            <p>Analogue/Digital clocks, A.M./P.M., Elapsed time, Calendars, Schedules</p>
+          </div>
+          <div class="topic-card" onclick="startTopic('Position, Direction and Coordinates')">
+            <h3>📍 12. Position & Coordinates</h3>
+            <p>Grids, Turns/Rotations, Plotting points, First-quadrant coordinates</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Part 4: Data, Money & Logical Reasoning -->
-    <div class="level-section">
-      <h2>4. Data, Logic & Everyday Math</h2>
-      <div class="topics-grid">
-        <div class="topic-card" onclick="startTopic('Money and Financial Mathematics')">
-          <h3>💵 13. Money & Finance</h3>
-          <p>Counting money, Making change, Budgeting, Simple bills and receipts</p>
-        </div>
-        <div class="topic-card" onclick="startTopic('Data Handling and Statistics')">
-          <h3>📊 14. Data Handling</h3>
-          <p>Tally marks, Pictographs, Bar graphs, Reading data, Intro to average/mean</p>
-        </div>
-        <div class="topic-card" onclick="startTopic('Logical Reasoning and Problem-Solving')">
-          <h3>🧠 15. Logical Reasoning</h3>
-          <p>Odd-one-out, Puzzles, Working backwards, Multi-step word problems</p>
-        </div>
-        <div class="topic-card" onclick="startTopic('Everyday Applications of Mathematics')">
-          <h3>🛒 16. Everyday Math</h3>
-          <p>Shopping, Journey times, Cooking quantities, Estimating in real life</p>
+      <!-- Part 4: Data, Money & Logical Reasoning -->
+      <div class="level-section">
+        <h2>4. Data, Logic & Everyday Math</h2>
+        <div class="topics-grid">
+          <div class="topic-card" onclick="startTopic('Money and Financial Mathematics')">
+            <h3>💵 13. Money & Finance</h3>
+            <p>Counting money, Making change, Budgeting, Simple bills and receipts</p>
+          </div>
+          <div class="topic-card" onclick="startTopic('Data Handling and Statistics')">
+            <h3>📊 14. Data Handling</h3>
+            <p>Tally marks, Pictographs, Bar graphs, Reading data, Intro to average/mean</p>
+          </div>
+          <div class="topic-card" onclick="startTopic('Logical Reasoning and Problem-Solving')">
+            <h3>🧠 15. Logical Reasoning</h3>
+            <p>Odd-one-out, Puzzles, Working backwards, Multi-step word problems</p>
+          </div>
+          <div class="topic-card" onclick="startTopic('Everyday Applications of Mathematics')">
+            <h3>🛒 16. Everyday Math</h3>
+            <p>Shopping, Journey times, Cooking quantities, Estimating in real life</p>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+
+    <!-- Right Sticky AdSense Sidebar -->
+    <aside class="sidebar">
+      <div class="ad-banner ad-sticky">
+        AdSense Sticky Sidebar<br>(300x600)
+      </div>
+    </aside>
 
   </div>
+
+  <!-- Universal Footer (Mandatory for AdSense) -->
+  <footer class="universal-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>🧠 Online Brain Hub</h4>
+        <p>Empowering students globally with interactive study notes, smart quizzes, and daily challenges in Mathematics, Science, and Social Studies.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="/">Home</a>
+        <a href="/subject.html">All Subjects</a>
+        <a href="/about.html">About Us</a>
+        <a href="/contact.html">Contact Us</a>
+      </div>
+      <div class="footer-section">
+        <h4>Legal & Policies</h4>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/cookie-policy.html">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Online Brain Hub. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script>
     let playerXP = 0;
@@ -249,6 +358,14 @@
 
     async function loadUserProfile() {
         const username = getLoggedInUser();
+        
+        // Handle Authentication Button Name
+        const authBtn = document.getElementById('auth-btn');
+        if (username && authBtn) {
+          authBtn.innerText = 'Profile (' + username + ')';
+          authBtn.href = '/profile.html';
+          authBtn.style.background = '#00b894'; 
+        }
         
         // Show offline cached XP if available before API returns
         playerXP = parseInt(localStorage.getItem('brainhub_xp')) || 0;

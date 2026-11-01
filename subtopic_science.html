@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Topic - Online Brain Hub</title>
+  <style>
+    /* Global & Responsive Styles */
+    :root {
+      --bg-color: #f0f2f5;
+      --primary: #00b894;
+      --secondary: #0984e3;
+      --accent: #fdcb6e;
+      --text: #2d3436;
+    }
+    
+    * { box-sizing: border-box; }
+
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      margin: 0; 
+      background-color: var(--bg-color); 
+      color: var(--text); 
+      overflow-x: hidden; 
+    }
+    
+    header { 
+      background: white; 
+      padding: 15px 5%; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+      position: sticky; 
+      top: 0; 
+      z-index: 100;
+    }
+    .logo { font-size: 1.5em; font-weight: 800; color: var(--primary); margin: 0; text-decoration: none;}
+    
+    .layout { 
+      width: 100% !important;
+      max-width: 900px; 
+      margin: 15px auto; 
+      padding: 0 15px; 
+    }
+    
+    .back-btn { 
+      background: none; border: none; color: var(--primary); 
+      font-weight: bold; cursor: pointer; font-size: 1.1em; 
+      margin-bottom: 20px; padding: 0; text-decoration: none; display: inline-block;
+    }
+    
+    .header-section { 
+      display: flex; justify-content: space-between; align-items: flex-end; 
+      border-bottom: 2px solid var(--primary); padding-bottom: 15px; margin-bottom: 30px;
+    }
+    .page-title { color: var(--primary); margin: 0; font-size: 2em;}
+    
+    /* Difficulty Select Styles */
+    .difficulty-select {
+        padding: 10px 15px;
+        border-radius: 8px;
+        border: 2px solid #dfe6e9;
+        font-size: 1em;
+        font-weight: 600;
+        color: var(--text);
+        margin-right: 15px;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s;
+    }
+    .difficulty-select:focus {
+        border-color: var(--primary);
+    }
+    
+    .topic-quiz-btn { 
+      background: var(--accent); color: #2d3436; border: none; padding: 12px 25px; 
+      border-radius: 8px; font-size: 1.1em; font-weight: bold; cursor: pointer; 
+      box-shadow: 0 4px 0 #e1b35c; transition: 0.2s;
+    }
+    .topic-quiz-btn:active { transform: translateY(4px); box-shadow: none;}
+
+    .subtopics-list { display: flex; flex-direction: column; gap: 15px; }
+    
+    .subtopic-row { 
+      background: white; border: 1px solid #dfe6e9; padding: 20px; border-radius: 12px; 
+      display: flex; justify-content: space-between; align-items: center; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02); transition: 0.2s;
+    }
+    .subtopic-row:hover { border-color: var(--primary); box-shadow: 0 4px 10px rgba(0, 184, 148, 0.15);}
+    .subtopic-title { font-size: 1.1em; font-weight: 600; margin: 0; flex: 1;}
+    
+    .action-group { display: flex; gap: 10px; align-items: center; }
+    .action-btn { 
+      padding: 10px 20px; border-radius: 8px; font-weight: bold; 
+      cursor: pointer; border: none; font-size: 0.95em; transition: 0.2s;
+    }
+    .btn-notes { background: #e3f2fd; color: var(--secondary); border: 1px solid #bbdefb;}
+    .btn-notes:hover { background: #bbdefb; }
+    .btn-quiz { background: #e8f8f5; color: var(--primary); border: 1px solid #b2dfdb;}
+    .btn-quiz:hover { background: #b2dfdb; }
+
+    /* Mobile Responsive Overrides */
+    @media screen and (max-width: 768px) {
+      header { padding: 12px 20px; }
+      .logo { font-size: 1.3em; }
+      .subtopic-row { flex-direction: column; align-items: flex-start; gap: 15px; padding: 15px; }
+      .action-group { width: 100%; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;}
+      .action-btn { flex: 1; text-align: center; padding: 12px 10px; min-width: 120px;}
+      .difficulty-select { width: 100%; margin-right: 0; margin-bottom: 10px;}
+      .page-title { font-size: 1.5em !important; }
+      .header-section { flex-direction: column; align-items: flex-start; gap: 15px; }
+      .topic-quiz-btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/" class="logo">🧠 BrainHub</a>
+  </header>
+
+  <div class="layout">
+    <a href="javascript:history.back()" class="back-btn">← Back to Main Topics</a>
+    
+    <div class="header-section">
+      <h1 class="page-title" id="dynamic-title">Loading...</h1>
+      <div style="display: flex; align-items: center; flex-wrap: wrap; width: 100%; justify-content: flex-end; margin-top: 15px;">
+          <select id="master-diff-select" class="difficulty-select">
+              <option value="All">Any Difficulty</option>
+              <option value="1">1 - Basic</option>
+              <option value="5">5 - Intermediate</option>
+              <option value="10">10 - Advanced</option>
+          </select>
+          <button class="topic-quiz-btn" onclick="startMasterQuiz()">🏆 Take Subject Master Quiz</button>
+      </div>
+    </div>
+    
+    <div class="subtopics-list" id="subtopics-container">
+      <p style="color: #636e72;">Fetching topics...</p>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // 1. Get raw subject from URL (e.g., 'primary-physics')
+    let rawSubject = urlParams.get('subject') || 'primary-physics';
+    
+    // 2. Format subject for display and database (e.g., 'primary-physics' -> 'Physics')
+    let displaySubject = rawSubject.replace('primary-', '').replace('Primary', '');
+    displaySubject = displaySubject.charAt(0).toUpperCase() + displaySubject.slice(1);
+    
+    // 3. Format JSON file name (e.g., 'primary-physics' -> 'primary_physics')
+    const jsonFileName = rawSubject.replace('-', '_');
+
+    document.getElementById('dynamic-title').innerText = displaySubject + " Topics";
+
+    const passedDiff = urlParams.get('diff');
+    if (passedDiff) {
+        document.getElementById('master-diff-select').value = passedDiff;
+    }
+
+    function getLoggedInUser() {
+        return localStorage.getItem('brainhub_username'); 
+    }
+
+    async function loadTopics() {
+      const container = document.getElementById('subtopics-container');
+      
+      try {
+        // Fetch the corresponding JSON file
+        const response = await fetch(`/data/${rawSubject}/${jsonFileName}.json`);
+        
+        if (!response.ok) throw new Error("File not found");
+        
+        const data = await response.json();
+        const topics = Object.keys(data); // e.g., ["Introduction to Physics", "Measurement", ...]
+        
+        // Fetch User Progress
+        let userProgress = {};
+        const username = getLoggedInUser();
+        
+        if (username) {
+            try {
+                const progressRes = await fetch('/api/user', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'get_profile', username: username })
+                });
+                
+                if (progressRes.ok) {
+                    const profileData = await progressRes.json();
+                    if (profileData.success && profileData.progress && profileData.progress[displaySubject]) {
+                        userProgress = profileData.progress[displaySubject];
+                    }
+                }
+            } catch (err) {
+                console.error("Failed to load backend progress", err);
+            }
+        }
+
+        container.innerHTML = ''; 
+
+        // Render Topic Cards
+        topics.forEach((topicName, index) => {
+          // Format exactly as saved in the Science/Social CSVs (e.g., "Topic 1: Our Earth")
+          const dbTopicName = `Topic ${index + 1}: ${topicName}`;
+          
+          let stats = { best_score: 0, max_hearts: 0, best_score_total: 10 };
+          if (userProgress[dbTopicName]) {
+              stats = { ...stats, ...userProgress[dbTopicName] };
+          }
+
+          let heartsAmt = stats.max_hearts !== undefined ? stats.max_hearts : 0;
+          let heartsDisplay = '❤️'.repeat(heartsAmt) + '🖤'.repeat(3 - heartsAmt);
+          let scoreDisplay = `${stats.best_score || 0}/${stats.best_score_total || 10}`;
+
+          const diffOptionsHtml = `
+              <option value="All" ${passedDiff === 'All' ? 'selected' : ''}>Any Diff</option>
+              <option value="1" ${passedDiff === '1' ? 'selected' : ''}>Lvl 1</option>
+              <option value="5" ${passedDiff === '5' ? 'selected' : ''}>Lvl 5</option>
+              <option value="10" ${passedDiff === '10' ? 'selected' : ''}>Lvl 10</option>
+          `;
+
+          const row = document.createElement('div');
+          row.className = 'subtopic-row';
+          row.innerHTML = `
+            <div style="flex: 1;">
+              <h3 class="subtopic-title">Topic ${index + 1}: ${topicName}</h3>
+              <div style="font-size: 0.85em; color: #636e72; margin-top: 6px; display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                <span>🏆 Best Score: <strong style="color: #00b894;">${scoreDisplay}</strong></span>
+                <span>Lives Achieved: ${heartsDisplay}</span>
+              </div>
+            </div>
+            <div class="action-group">
+              <button class="action-btn btn-notes" onclick="openNotes('${topicName}')">📖 Read Notes</button>
+              
+              <select id="diff-${index}" class="difficulty-select" style="padding: 10px; margin-right: 0; min-width: 100px;">
+                  ${diffOptionsHtml}
+              </select>
+              
+              <button class="action-btn btn-quiz" onclick="startTopicQuiz('${dbTopicName}', ${index})">🎮 Take Quiz</button>
+            </div>
+          `;
+          container.appendChild(row);
+        });
+
+      } catch (error) {
+        container.innerHTML = '<p style="color: #d63031;">Could not load the subject file.</p>';
+        console.error(error);
+      }
+    }
+
+    function openNotes(topicName) {
+      // Passes the specific JSON file and the target topic key
+      window.location.href = `/notes.html?subject=${encodeURIComponent(rawSubject)}&category=${encodeURIComponent(jsonFileName)}&target=${encodeURIComponent(topicName)}`;
+    }
+
+    function startTopicQuiz(dbTopicName, index) {
+      const selectedDiff = document.getElementById(`diff-${index}`).value;
+      // Sends the properly formatted subject (e.g. "Physics") and topic ("Topic 1: Introduction to Physics")
+      // to match your uploaded CSV database structure perfectly.
+      window.location.href = `/quiz.html?subject=${encodeURIComponent(displaySubject)}&category=All&topic=${encodeURIComponent(dbTopicName)}&diff=${encodeURIComponent(selectedDiff)}`;
+    }
+
+    function startMasterQuiz() {
+      const selectedDiff = document.getElementById('master-diff-select').value;
+      window.location.href = `/quiz.html?subject=${encodeURIComponent(displaySubject)}&category=All&diff=${encodeURIComponent(selectedDiff)}`;
+    }
+
+    loadTopics();
+  </script>
+</body>
+</html>

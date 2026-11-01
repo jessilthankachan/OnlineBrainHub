@@ -118,11 +118,20 @@
         <div class="topic-card" onclick="routeToSubject('Maths', 'Primary')">
           <h3>🧮 Maths</h3><p>Numbers, Addition, Shapes</p>
         </div>
-        <div class="topic-card" onclick="routeToSubject('Science', 'Primary')">
-          <h3>🔬 Science</h3><p>Plants, Animals, Senses</p>
+        <div class="topic-card" onclick="routeToSubject('PrimaryPhysics', 'Primary')">
+          <h3>🍎 Science (Physics)</h3><p>Motion, Forces, Energy</p>
         </div>
-        <div class="topic-card" onclick="routeToSubject('Social Science', 'Primary')">
-          <h3>🌍 Social Science</h3><p>Community, Planet, Safety</p>
+        <div class="topic-card" onclick="routeToSubject('PrimaryChemistry', 'Primary')">
+          <h3>⬡ Science (Chemistry)</h3><p>Matter, Changes, Materials</p>
+        </div>
+        <div class="topic-card" onclick="routeToSubject('PrimaryBiology', 'Primary')">
+          <h3>🧬 Science (Biology)</h3><p>Plants, Animals, Habitats</p>
+        </div>
+        <div class="topic-card" onclick="routeToSubject('PrimaryHistory', 'Primary')">
+          <h3>📜 Social Science (History)</h3><p>Past Events, Civilizations</p>
+        </div>
+        <div class="topic-card" onclick="routeToSubject('PrimaryGeography', 'Primary')">
+          <h3>🗺️ Social Science (Geography)</h3><p>Earth, Oceans, Climate</p>
         </div>
       </div>
     </div>
@@ -134,11 +143,20 @@
         <div class="topic-card" onclick="routeToSubject('Maths', 'Middle')">
           <h3>📐 Maths</h3><p>Fractions, Algebra, Geometry</p>
         </div>
-        <div class="topic-card" onclick="routeToSubject('Science', 'Middle')">
-          <h3>🧪 Science</h3><p>Matter, Energy, Ecosystems</p>
+        <div class="topic-card" onclick="routeToSubject('MiddlePhysics', 'Middle')">
+          <h3>🍎 Science (Physics)</h3><p>Motion, Forces, Energy</p>
         </div>
-        <div class="topic-card" onclick="routeToSubject('Social Science', 'Middle')">
-          <h3>🏛️ Social Science</h3><p>History, Geography, Civics</p>
+        <div class="topic-card" onclick="routeToSubject('MiddleChemistry', 'Middle')">
+          <h3>⬡ Science (Chemistry)</h3><p>Elements, Reactions, Bonds</p>
+        </div>
+        <div class="topic-card" onclick="routeToSubject('MiddleBiology', 'Middle')">
+          <h3>🧬 Science (Biology)</h3><p>Genetics, Cells, Ecosystems</p>
+        </div>
+        <div class="topic-card" onclick="routeToSubject('MiddleHistory', 'Middle')">
+          <h3>📜 Social Science (History)</h3><p>World Events, Societies</p>
+        </div>
+        <div class="topic-card" onclick="routeToSubject('MiddleGeography', 'Middle')">
+          <h3>🗺️ Social Science (Geography)</h3><p>Topography, Climate, Maps</p>
         </div>
       </div>
     </div>
@@ -241,11 +259,13 @@
 
     // 2. Centralized Routing Logic
     window.routeToSubject = function(subjectName, level) {
-      // If the user clicks Primary Maths, route them to the dedicated lobby page
       if (level === 'Primary' && subjectName === 'Maths') {
         window.location.href = `/primary-maths.html`;
+      } else if (level === 'Primary' && subjectName !== 'Maths') {
+        let formattedSubject = subjectName.toLowerCase().replace('primary', 'primary-');
+        window.location.href = `/subtopic_science.html?subject=${formattedSubject}`;
       } else {
-        // Fallback for subjects that don't have a dedicated layout page built yet
+        // Fallback for other subjects
         window.location.href = `/subtopic.html?subject=${encodeURIComponent(subjectName)}&level=${encodeURIComponent(level)}`;
       }
     };

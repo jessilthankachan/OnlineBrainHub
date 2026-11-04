@@ -30,8 +30,32 @@ export async function onRequestPost({request,env}){
   });
   if(errors.length)return Response.json({success:false,validated:rows.length,inserted:0,errors},{status:400});
   if(!records.length)return Response.json({error:"No data rows found."},{status:400});
+
+  // Check the live database before inserting. Chunk IDs to stay below SQLite/D1
+  // bind-parameter limits. Reject the entire file if any ID already exists.
+  const existingIds=[];
+  for(let i=0;i<records.length;i+=90){
+   const chunk=records.slice(i,i+90).map(q=>q.id);
+   const placeholders=chunk.map(()=>"?").join(",");
+   const result=await env.DB.prepare(`SELECT id FROM questions WHERE id IN (${placeholders})`).bind(...chunk).all();
+   for(const row of (result.results||[])) existingIds.push(row.id);
+  }
+  if(existingIds.length){
+   return Response.json({success:false,validated:records.length,inserted:0,duplicate_count:existingIds.length,duplicate_ids:existingIds,error:`Import rejected: ${existingIds.length} question ID(s) already exist in the database. No records were inserted.`},{status:409,headers:{"Cache-Control":"no-store"}});
+  }
+
   const statements=records.map(q=>env.DB.prepare(`INSERT INTO questions (id,subject,category,topic,level,difficulty,question,options,correct,explanation,hint,topic_id,subtopic_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)`).bind(q.id,q.subject,q.category,q.topic,q.level,q.difficulty,q.question,JSON.stringify(q.options),q.correct,q.explanation,q.hint,q.topic_id,q.subtopic_id));
-  await env.DB.batch(statements);
+  try {
+   await env.DB.batch(statements);
+  } catch(insertError) {
+   // A concurrent import could create an ID after the pre-check. Keep the
+   // database constraint as the final safeguard and return a readable error.
+   const message=String(insertError?.message||"");
+   if(message.includes("UNIQUE constraint failed")||message.includes("SQLITE_CONSTRAINT_PRIMARYKEY")){
+    return Response.json({success:false,validated:records.length,inserted:0,error:"Import rejected: one or more question IDs already exist in the database. No records were imported. Please validate again with a fresh CSV."},{status:409,headers:{"Cache-Control":"no-store"}});
+   }
+   throw insertError;
+  }
   return Response.json({success:true,validated:records.length,inserted:records.length,errors:[]},{headers:{"Cache-Control":"no-store"}});
- }catch(e){return Response.json({error:e.message||"Import failed. No success is assumed."},{status:400});}
+ }catch(e){return Response.json({error:"Import failed. No success is assumed. Please check the CSV and server logs."},{status:400,headers:{"Cache-Control":"no-store"}});}
 }

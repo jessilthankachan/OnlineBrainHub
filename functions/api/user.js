@@ -1,122 +1,14 @@
-export async function onRequestPost(context) {
-  try {
-    const data = await context.request.json();
-    const db = context.env.DB;
-
-    if (data.action !== 'save_xp' && data.action !== 'get_profile') {
-      if (!data.turnstileToken) throw new Error("Please complete the bot check.");
-      const tsData = new FormData();
-      tsData.append('secret', context.env.TURNSTILE_SECRET);
-      tsData.append('response', data.turnstileToken);
-      const tsRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', { method: 'POST', body: tsData });
-      const tsOutcome = await tsRes.json();
-      if (!tsOutcome.success) throw new Error("Bot verification failed!");
-    }
-
-    async function hash(text) {
-      if (!text) return "";
-      const msgBuffer = new TextEncoder().encode(text.toLowerCase().trim());
-      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-      const hashArray = Array.from(new Uint8Array(hashBuffer));
-      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-    }
-
-    function generateRecoveryKey() {
-      return 'OBH-' + crypto.randomUUID().split('-')[0].toUpperCase() + '-' + crypto.randomUUID().split('-')[1].toUpperCase();
-    }
-
-    // 1. REGISTER
-    if (data.action === 'register') {
-      const passHash = await hash(data.password);
-      const hintHash = await hash(data.hintAnswer);
-      const rawRecoveryKey = generateRecoveryKey();
-      const recoveryHash = await hash(rawRecoveryKey);
-      
-      try {
-        await db.prepare("INSERT INTO users (username, password_hash, security_question, security_answer_hash, recovery_key_hash) VALUES (?, ?, ?, ?, ?)")
-                .bind(data.username, passHash, data.hintQuestion, hintHash, recoveryHash).run();
-        return Response.json({ success: true, username: data.username, xp: 0, recoveryKey: rawRecoveryKey });
-      } catch (e) {
-        return Response.json({ error: "Username already taken!" }, { status: 400 });
-      }
-    } 
-    
-    // 2. LOGIN (Now uses Password)
-    else if (data.action === 'login') {
-      const passHash = await hash(data.password);
-      const user = await db.prepare("SELECT * FROM users WHERE username = ?").bind(data.username).first();
-      
-      if (!user || user.password_hash !== passHash) {
-        return Response.json({ error: "Invalid username or password!" }, { status: 401 });
-      }
-      return Response.json({ success: true, username: user.username, xp: user.xp });
-    }
-
-    // 3. RECOVER (Uses Hint OR Recovery Key)
-    else if (data.action === 'recover') {
-      const user = await db.prepare("SELECT * FROM users WHERE username = ?").bind(data.username).first();
-      if (!user) return Response.json({ error: "User not found!" }, { status: 404 });
-
-      const hintHash = await hash(data.hintAnswer);
-      const recoveryHash = await hash(data.recoveryKey);
-      
-      if ((data.hintAnswer && user.security_answer_hash === hintHash) || 
-          (data.recoveryKey && user.recovery_key_hash === recoveryHash)) {
-        
-        const newPassHash = await hash(data.newPassword);
-        await db.prepare("UPDATE users SET password_hash = ? WHERE username = ?")
-                .bind(newPassHash, data.username).run();
-        return Response.json({ success: true, username: user.username, xp: user.xp });
-      }
-      return Response.json({ error: "Invalid Hint Answer or Recovery Key!" }, { status: 401 });
-    }
-
-    // 4. GET PROFILE
-    else if (data.action === 'get_profile') {
-      const user = await db.prepare("SELECT xp, progress_data FROM users WHERE username = ?").bind(data.username).first();
-      if (!user) return Response.json({ error: "User not found" }, { status: 404 });
-      let parsedProgress = {};
-      try { parsedProgress = JSON.parse(user.progress_data || '{}'); } catch(e){}
-      return Response.json({ success: true, xp: user.xp, progress: parsedProgress });
-    }
-
-    // 5. SAVE XP (Added fail-safes so undefined values don't break the save)
-    else if (data.action === 'save_xp') {
-      const user = await db.prepare("SELECT progress_data FROM users WHERE username = ?").bind(data.username).first();
-      let prog = {};
-      try { prog = JSON.parse(user.progress_data || '{}'); } catch(e){}
-
-      if (data.subject && data.topic) {
-        if (!prog[data.subject]) prog[data.subject] = {};
-        if (!prog[data.subject][data.topic]) {
-          prog[data.subject][data.topic] = { xp: 0, plays: 0, best_score: 0, best_score_total: 0, max_hearts: 0 };
-        }
-        
-        prog[data.subject][data.topic].xp += parseInt(data.xpEarned || 0);
-        prog[data.subject][data.topic].plays += 1;
-        
-        if (data.score !== undefined && !isNaN(data.score)) {
-          if (data.score > (prog[data.subject][data.topic].best_score || 0)) {
-            prog[data.subject][data.topic].best_score = parseInt(data.score);
-            prog[data.subject][data.topic].best_score_total = parseInt(data.totalQuestions || 0);
-          }
-        }
-        
-        if (data.hearts !== undefined && !isNaN(data.hearts)) {
-          if (data.hearts > (prog[data.subject][data.topic].max_hearts || 0)) {
-            prog[data.subject][data.topic].max_hearts = parseInt(data.hearts);
-          }
-        }
-      }
-
-      await db.prepare("UPDATE users SET xp = xp + ?, progress_data = ? WHERE username = ?")
-              .bind(parseInt(data.xpEarned || 0), JSON.stringify(prog), data.username).run();
-              
-      return Response.json({ success: true });
-    }
-
-    return Response.json({ error: "Invalid request" }, { status: 400 });
-  } catch (error) {
-    return Response.json({ error: error.message }, { status: 500 });
-  }
-}
+import { issueUserCookie, clearUserCookie, getAuthenticatedUsername, isSameOriginRequest } from "./_user-auth.js";
+async function hash(v){if(typeof v!=="string"||!v)return "";const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(v.toLowerCase().trim()));return Array.from(new Uint8Array(b),x=>x.toString(16).padStart(2,"0")).join("");}
+function json(data,status=200,headers={}){return Response.json(data,{status,headers:{"Cache-Control":"no-store",...headers}});}
+function recoveryKey(){return "OBH-"+crypto.randomUUID().split("-")[0].toUpperCase()+"-"+crypto.randomUUID().split("-")[1].toUpperCase();}
+async function turnstile(token,secret,host){if(!token||!secret)return false;const f=new FormData();f.append("secret",secret);f.append("response",token);const r=await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify",{method:"POST",body:f});if(!r.ok)return false;const d=await r.json();return d.success===true&&(!d.hostname||d.hostname===host);}
+export async function onRequestPost({request,env}){try{if(!isSameOriginRequest(request))return json({error:"Forbidden origin."},403);if(!env.DB)return json({error:"Database unavailable."},503);const d=await request.json();if(!d||typeof d.action!=="string")return json({error:"Invalid request."},400);const db=env.DB,host=new URL(request.url).hostname;
+if(["register","login","recover"].includes(d.action)){if(!await turnstile(d.turnstileToken,env.TURNSTILE_SECRET,host))return json({error:"Bot verification failed. Please try again."},401);if(typeof d.username!=="string"||!d.username.trim()||d.username.length>64)return json({error:"Enter a valid username."},400);const username=d.username.trim();
+if(d.action==="register"){if(typeof d.password!=="string"||d.password.length<8||d.password.length>256||typeof d.hintAnswer!=="string"||!d.hintAnswer.trim()||typeof d.hintQuestion!=="string"||!d.hintQuestion.trim())return json({error:"Check your password and security question details."},400);if(typeof env.USER_SESSION_SECRET!=="string"||env.USER_SESSION_SECRET.length<32)return json({error:"Learner sessions are not configured. Contact the site administrator."},503);const rk=recoveryKey();try{await db.prepare("INSERT INTO users (username,password_hash,security_question,security_answer_hash,recovery_key_hash) VALUES (?,?,?,?,?)").bind(username,await hash(d.password),d.hintQuestion,await hash(d.hintAnswer),await hash(rk)).run();}catch{return json({error:"Username already taken!"},400);}return json({success:true,username,xp:0,recoveryKey:rk},200,{"Set-Cookie":await issueUserCookie(username,env.USER_SESSION_SECRET)});}
+if(d.action==="login"){if(typeof d.password!=="string"||d.password.length>256)return json({error:"Enter your password."},400);if(typeof env.USER_SESSION_SECRET!=="string"||env.USER_SESSION_SECRET.length<32)return json({error:"Learner sessions are not configured. Contact the site administrator."},503);const u=await db.prepare("SELECT username,password_hash,xp FROM users WHERE username=?").bind(username).first();if(!u||!u.password_hash||u.password_hash!==await hash(d.password))return json({error:"Invalid username or password!"},401);return json({success:true,username:u.username,xp:u.xp||0},200,{"Set-Cookie":await issueUserCookie(u.username,env.USER_SESSION_SECRET)});}
+if(d.action==="recover"){if(typeof d.newPassword!=="string"||d.newPassword.length<8||d.newPassword.length>256)return json({error:"New password must contain at least 8 characters."},400);const u=await db.prepare("SELECT username,security_answer_hash,recovery_key_hash FROM users WHERE username=?").bind(username).first();if(!u)return json({error:"Invalid recovery details."},401);const hm=typeof d.hintAnswer==="string"&&d.hintAnswer.trim()&&u.security_answer_hash===await hash(d.hintAnswer);const rm=typeof d.recoveryKey==="string"&&d.recoveryKey.trim()&&u.recovery_key_hash===await hash(d.recoveryKey);if(!hm&&!rm)return json({error:"Invalid recovery details."},401);await db.prepare("UPDATE users SET password_hash=? WHERE username=?").bind(await hash(d.newPassword),username).run();return json({success:true,username});}}
+if(d.action==="get_profile"||d.action==="save_xp"){const username=await getAuthenticatedUsername(request,env);if(!username)return json({error:"Your session has expired. Please log in again."},401,{"Set-Cookie":clearUserCookie});if(d.username&&d.username!==username)return json({error:"Forbidden."},403);if(d.action==="get_profile"){const u=await db.prepare("SELECT xp,progress_data FROM users WHERE username=?").bind(username).first();if(!u)return json({error:"User not found."},404);let progress={};try{progress=JSON.parse(u.progress_data||"{}");if(!progress||typeof progress!=="object"||Array.isArray(progress))progress={};}catch{}return json({success:true,xp:u.xp||0,progress});}
+const xp=Number(d.xpEarned??0);if(!Number.isSafeInteger(xp)||xp<0||xp>150)return json({error:"Invalid XP value."},400);const u=await db.prepare("SELECT progress_data FROM users WHERE username=?").bind(username).first();if(!u)return json({error:"User not found."},404);let p={};try{p=JSON.parse(u.progress_data||"{}");if(!p||typeof p!=="object"||Array.isArray(p))p={};}catch{}if(d.subject&&d.topic){const s=String(d.subject).slice(0,80),t=String(d.topic).slice(0,160);if(!p[s]||typeof p[s]!=="object")p[s]={};if(!p[s][t]||typeof p[s][t]!=="object")p[s][t]={xp:0,plays:0,best_score:0,best_score_total:0,max_hearts:0};const r=p[s][t];r.xp=(Number(r.xp)||0)+xp;r.plays=(Number(r.plays)||0)+1;const score=Number(d.score),total=Number(d.totalQuestions);if(Number.isFinite(score)&&score>=0&&score<=10&&Number.isFinite(total)&&total>0&&total<=10&&score>(Number(r.best_score)||0)){r.best_score=Math.trunc(score);r.best_score_total=Math.trunc(total);}const hearts=Number(d.hearts);if(Number.isFinite(hearts)&&hearts>=0&&hearts<=3&&hearts>(Number(r.max_hearts)||0))r.max_hearts=Math.trunc(hearts);}await db.prepare("UPDATE users SET xp=xp+?,progress_data=? WHERE username=?").bind(xp,JSON.stringify(p),username).run();return json({success:true});}
+return json({error:"Invalid request."},400);}catch{return json({error:"Request could not be completed."},500);}}
+export async function onRequestDelete({request}){if(!isSameOriginRequest(request))return new Response(null,{status:403,headers:{"Cache-Control":"no-store"}});return new Response(null,{status:204,headers:{"Set-Cookie":clearUserCookie,"Cache-Control":"no-store"}});}

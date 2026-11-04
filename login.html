@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32"
       href="/favicon-32x32.png">
@@ -154,6 +153,13 @@
         const result = await res.json();
 
         if (result.success) {
+          if (currentMode === 'recover') {
+            document.getElementById('error-msg').innerText = 'Password reset successfully. Please log in with your new password.';
+            currentMode = 'login';
+            updateUI();
+            turnstile.reset();
+            return;
+          }
           // CRITICAL FIX:  Storing the username with the 'brainhub_username' key exactly as index.html expects
           localStorage.setItem('brainhub_username', result.username);
           localStorage.setItem('brainhub_xp', result.xp);

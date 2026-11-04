@@ -1,0 +1,10 @@
+const enc = new TextEncoder();
+const COOKIE = "obh_user_session";
+const SESSION_SECONDS = 7 * 24 * 60 * 60;
+function b64(bytes) { let s=""; for (const b of bytes) s+=String.fromCharCode(b); return btoa(s).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/g,""); }
+function unb64(s) { s=s.replace(/-/g,"+").replace(/_/g,"/"); return atob(s+"=".repeat((4-s.length%4)%4)); }
+async function sign(payload, secret) { const k=await crypto.subtle.importKey("raw",enc.encode(secret),{name:"HMAC",hash:"SHA-256"},false,["sign"]); return b64(new Uint8Array(await crypto.subtle.sign("HMAC",k,enc.encode(payload)))); }
+export async function issueUserCookie(username,secret) { const p=b64(enc.encode(JSON.stringify({role:"learner",username,exp:Math.floor(Date.now()/1000)+SESSION_SECONDS,nonce:crypto.randomUUID()}))); return `${COOKIE}=${p}.${await sign(p,secret)}; HttpOnly; Secure; SameSite=Strict; Path=/api/; Max-Age=${SESSION_SECONDS}`; }
+export const clearUserCookie=`${COOKIE}=; HttpOnly; Secure; SameSite=Strict; Path=/api/; Max-Age=0`;
+export async function getAuthenticatedUsername(request,env) { const secret=env.USER_SESSION_SECRET; if(typeof secret!=="string"||secret.length<32)return null; const raw=request.headers.get("Cookie")||""; const token=raw.split(";").map(x=>x.trim()).find(x=>x.startsWith(COOKIE+"="))?.slice(COOKIE.length+1); if(!token)return null; const parts=token.split("."); if(parts.length!==2)return null; const [p,sig]=parts; const expected=await sign(p,secret); if(sig.length!==expected.length)return null; let diff=0; for(let i=0;i<sig.length;i++)diff|=sig.charCodeAt(i)^expected.charCodeAt(i); if(diff)return null; try { const d=JSON.parse(unb64(p)); return d.role==="learner"&&typeof d.username==="string"&&d.username&&Number.isInteger(d.exp)&&d.exp>Math.floor(Date.now()/1000)?d.username:null; } catch{return null;} }
+export function isSameOriginRequest(req) { const o=req.headers.get("Origin"); if(!o)return false; try{return new URL(o).origin===new URL(req.url).origin;}catch{return false;} }

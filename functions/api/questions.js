@@ -1,11 +1,18 @@
+import { isAdminRequest, sameOrigin } from "./_admin-auth.js";
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": "https://onlinebrainhub.com",
   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type",
 };
 
 export async function onRequest(context) {
   const { request, env } = context;
+
+  // Mutations are same-origin and require a valid signed admin session.
+  if (["POST", "PUT", "DELETE"].includes(request.method)) {
+    if (!sameOrigin(request)) return Response.json({ error: "Forbidden origin" }, { status: 403 });
+    if (!await isAdminRequest(request, env)) return Response.json({ error: "Admin session required" }, { status: 401 });
+  }
 
   // Handle CORS Preflight
   if (request.method === "OPTIONS") {

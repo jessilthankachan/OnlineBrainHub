@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "subject": "math",
+  "level": "ms",
+  "topicId": "ms_math_t01",
+  "topicTitle": "Replace with the exact topic title from maths-curriculum-registry.json",
+  "subtopics": {
+    "ms_math_t01_st01": {
+      "number": 1,
+      "title": "Replace with the exact subtopic title from maths-curriculum-registry.json",
+      "shortNote": "<p>Write the short note here.</p>",
+      "content": "<section><h2>Detailed explanation</h2><p>Write the full learning note here.</p></section>"
+    }
+  }
+}

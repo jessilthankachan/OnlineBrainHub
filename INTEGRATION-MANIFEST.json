@@ -1,0 +1,21 @@
+{
+  "quiz_loader": "quiz-loader.html",
+  "legacy_quiz_html_modified": false,
+  "notes_json_pattern": "/data/maths/{topicId}.json",
+  "quiz_db_fields": [
+    "subject",
+    "category",
+    "level",
+    "topic_id",
+    "subtopic_id",
+    "topic",
+    "difficulty"
+  ],
+  "progress_keys": {
+    "master": "topicId",
+    "subtopic": "subtopicId"
+  },
+  "note_loader": "note-loader.html",
+  "legacy_notes_html_modified": false,
+  "new_maths_notes_route": "note-loader.html"
+}

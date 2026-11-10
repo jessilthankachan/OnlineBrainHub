@@ -1,153 +1,110 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mathematics Subtopics | OnlineBrainHub</title>
-<meta name="description" content="Explore the registered subtopics for Middle School, Secondary School and Senior Secondary Mathematics on OnlineBrainHub.">
-<meta name="robots" content="index,follow"><link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#3568b8">
-<style>
-    :root{--accent:#3568b8;--accent-soft:#edf3ff;--ink:#17243a;--muted:#64748b;--page:#f5f7fb;--line:#e4eaf2;--white:#fff;--shadow:0 8px 26px rgba(25,43,72,.07)}
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--page);color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.55}
-    a{color:inherit}
-    .site-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
-    .header-inner{max-width:1180px;margin:auto;padding:12px 22px;min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{display:flex;align-items:center;text-decoration:none}
-    .brand img{display:block;width:auto;height:47px;max-width:230px;object-fit:contain}
-    .nav{display:flex;align-items:center;gap:22px}
-    .nav a{text-decoration:none;color:#40516a;font-weight:650;font-size:.93rem}
-    .nav a:hover{color:var(--accent)}
-    .auth-link{background:#1769c2;color:#fff!important;padding:10px 15px;border-radius:10px}
-    .page-wrap{max-width:1120px;margin:0 auto;padding:27px 22px 60px}
-    .breadcrumbs{display:flex;flex-wrap:wrap;gap:9px;align-items:center;color:var(--muted);font-size:.9rem;margin:3px 0 20px}
-    .breadcrumbs a{text-decoration:none}
-    .breadcrumbs a:hover{color:var(--accent)}
-    .hero{background:linear-gradient(120deg,#fff 0%,var(--accent-soft) 100%);border:1px solid var(--line);border-radius:22px;padding:clamp(24px,5vw,44px);box-shadow:var(--shadow);position:relative;overflow:hidden}
-    .eyebrow{color:var(--accent);font-size:.77rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-    h1{font-size:clamp(2rem,4vw,2.9rem);line-height:1.12;letter-spacing:-.035em;margin:11px 0 13px;max-width:780px}
-    .hero-copy{max-width:760px;color:#52627a;font-size:1.04rem;margin:0}
-    .hero-symbol{position:absolute;right:clamp(18px,5vw,52px);top:50%;transform:translateY(-50%);width:116px;height:116px;display:grid;place-items:center;border-radius:30px;background:rgba(255,255,255,.75);color:var(--accent);font-size:3.7rem;box-shadow:0 10px 30px rgba(30,50,80,.07)}
-    .stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-    .stat{background:#fff;border:1px solid rgba(140,160,185,.28);border-radius:12px;padding:9px 14px;min-width:130px}
-    .stat strong{display:block;font-size:1.2rem;line-height:1.2}
-    .stat span{color:var(--muted);font-size:.78rem}
-    .level-nav{display:flex;flex-wrap:wrap;gap:9px;margin:19px 0 27px}
-    .level-nav a{text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 13px;color:#53637a;font-size:.85rem;font-weight:650}
-    .level-nav a[aria-current=page]{background:var(--accent-soft);border-color:transparent;color:var(--accent)}
-    .section-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:30px 0 15px}
-    .section-heading h2{font-size:1.4rem;letter-spacing:-.02em;margin:0}
-    .section-heading p{margin:4px 0 0;color:var(--muted);font-size:.91rem}
-    .search-wrap{position:relative;margin:16px 0 17px}
-    .search-wrap input{width:100%;border:1px solid #d8e0eb;background:#fff;border-radius:13px;padding:13px 15px 13px 43px;font-size:1rem;outline:none}
-    .search-wrap input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
-    .search-icon{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#8290a4}
-    .topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
-    .topic-button{display:flex;align-items:center;gap:14px;padding:17px;background:#fff;border:1px solid var(--line);border-radius:15px;text-decoration:none;box-shadow:0 3px 12px rgba(25,43,72,.035);transition:border-color .18s,box-shadow .18s,transform .18s;min-height:88px}
-    .topic-button:hover{border-color:var(--accent);box-shadow:var(--shadow);transform:translateY(-2px)}
-    .topic-number{width:43px;height:43px;flex:0 0 43px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-weight:850}
-    .topic-text{flex:1;min-width:0}
-    .topic-title{display:block;font-weight:760;line-height:1.35}
-    .topic-meta{display:block;color:var(--muted);font-size:.81rem;margin-top:5px}
-    .topic-arrow{font-size:1.25rem;color:#8290a4}
-    .empty-state{display:none;background:#fff;border:1px dashed #cbd5e1;border-radius:14px;padding:24px;color:var(--muted);text-align:center}
-    .note{margin-top:24px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:14px 17px;color:#53637a;font-size:.9rem}
-    .footer{background:#17243a;color:#d6deea;padding:30px 22px 18px}
-    .footer-inner{max-width:1120px;margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:25px}
-    .footer h3{color:#fff;margin:0 0 8px;font-size:1rem}
-    .footer p{max-width:420px;color:#aebbd0;margin:0;font-size:.88rem}
-    .footer-links{display:flex;flex-wrap:wrap;gap:12px 18px;align-content:flex-start}
-    .footer-links a{color:#c8d2e1;text-decoration:none;font-size:.86rem}
-    .footer-bottom{max-width:1120px;margin:20px auto 0;padding-top:14px;border-top:1px solid #34445c;color:#9baac0;font-size:.79rem}
-    @media(max-width:760px){.header-inner{padding:10px 15px;min-height:62px}.brand img{height:40px;max-width:185px}.nav{gap:10px}.nav a:not(.auth-link){display:none}.page-wrap{padding:19px 15px 45px}.hero{padding:25px 20px}.hero-symbol{opacity:.13;right:8px;width:95px;height:95px;font-size:3rem}.hero-copy{position:relative;z-index:1}.topic-grid{grid-template-columns:1fr}.stats{gap:8px}.stat{flex:1;min-width:calc(50% - 5px)}.section-heading{display:block}}
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
-    
-.subtopic-list{display:grid;grid-template-columns:1fr;gap:10px}
-.subtopic-item{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:13px;padding:15px 17px;box-shadow:0 3px 12px rgba(25,43,72,.03)}
-.subtopic-number{width:39px;height:39px;flex:0 0 39px;display:grid;place-items:center;background:#edf3ff;color:#3568b8;border-radius:11px;font-size:.82rem;font-weight:850}
-.subtopic-name{font-weight:650;line-height:1.4;flex:1}
-.status-tag{font-size:.75rem;color:#718096;background:#f3f5f8;border-radius:999px;padding:5px 9px;white-space:nowrap}
-.back-link{display:inline-flex;text-decoration:none;color:#3568b8;font-weight:700;margin:0 0 18px}
-.loading,.error{padding:22px;background:#fff;border:1px solid var(--line);border-radius:13px;color:var(--muted)}
-@media(max-width:600px){.subtopic-item{align-items:flex-start;padding:13px}.status-tag{display:none}}
-</style></head><body>
-
-    <header class="site-header"><div class="header-inner">
-      <a class="brand" href="/" aria-label="OnlineBrainHub home"><img src="/header-logo.png" alt="OnlineBrainHub"></a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="/">Home</a><a href="/subject.html">Subjects</a><a href="/about.html">About</a>
-        <a class="auth-link" id="auth-link" href="/login.html">Log in</a>
-      </nav>
-    </div></header>
-    <footer class="footer"><div class="footer-inner">
-      <div><h3>OnlineBrainHub</h3><p>Free, accessible learning resources that help learners build understanding, confidence and problem-solving skills.</p></div>
-      <div class="footer-links"><a href="/">Home</a><a href="/subject.html">Subjects</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/disclaimer.html">Disclaimer</a></div>
-    </div><div class="footer-bottom">© 2026 OnlineBrainHub. All rights reserved.</div></footer>
-    <script>
-      const authLink=document.getElementById("auth-link");
-      const username=localStorage.getItem("brainhub_username");
-      if(username){authLink.textContent="Profile";authLink.href="/profile.html";}
-    </script>
-    
-<main class="page-wrap">
-<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/subject.html">Subjects</a><span>›</span><a id="level-breadcrumb" href="#">Mathematics</a><span>›</span><strong>Subtopics</strong></nav>
-<a class="back-link" id="back-link" href="/subject.html">← Back to Mathematics topics</a>
-<section class="hero"><div class="eyebrow" id="level-eyebrow">MATHEMATICS</div><h1 id="topic-title">Loading subtopics…</h1>
-<p class="hero-copy" id="topic-intro">The topic subtopics are being loaded from the curriculum registry.</p>
-<div class="stats"><div class="stat"><strong id="subtopic-count">—</strong><span>Subtopics</span></div><div class="stat"><strong>Curriculum</strong><span>Approved topic outline</span></div></div>
-<div class="hero-symbol" aria-hidden="true">∑</div></section>
-<section><div class="section-heading"><div><h2>Subtopic list</h2><p>Follow the sequence shown below.</p></div></div>
-<div class="subtopic-list" id="subtopic-list"><div class="loading">Loading the subtopic list…</div></div></section>
-<div class="note"><strong>Next learning stage:</strong> Detailed study notes, short notes and quizzes will be connected to these subtopics as their learning content is prepared. This page does not use the Primary School subtopic loader.</div>
-</main>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematics Subtopics | OnlineBrainHub</title>
+  <meta name="description" content="Explore Mathematics subtopics, study notes and interactive quizzes on OnlineBrainHub.">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root{--bg-color:#f0f2f5;--primary:#00b894;--secondary:#0984e3;--accent:#fdcb6e;--text:#2d3436;--muted:#636e72;--line:#dfe6e9}
+    *{box-sizing:border-box}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;margin:0;background:var(--bg-color);color:var(--text);overflow-x:hidden;display:flex;flex-direction:column;min-height:100vh}
+    header{background:#fff;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}
+    .logo{font-size:1.5em;font-weight:800;color:var(--primary);margin:0;text-decoration:none}.nav-links{display:flex;gap:25px;align-items:center}.nav-links a{text-decoration:none;color:var(--text);font-weight:600;transition:color .2s}.nav-links a:hover{color:var(--primary)}
+    .auth-btn{display:inline-block;padding:10px 20px;background:#0984e3;color:#fff!important;text-decoration:none;border-radius:8px;font-weight:bold;transition:.2s}.auth-btn:hover{background:#076bb8;transform:translateY(-2px)}
+    .ad-banner{background:#e2e2e2;border:2px dashed #b2bec3;display:flex;align-items:center;justify-content:center;color:#636e72;font-weight:bold;text-align:center;border-radius:10px}.ad-top{width:100%;max-width:728px;height:90px;margin:20px auto}
+    .layout{display:flex;max-width:1200px;margin:0 auto 30px;padding:0 15px;gap:30px;flex:1;width:100%}.main-content{flex:1;min-width:0}.sidebar{width:300px;display:none;flex-shrink:0}@media(min-width:900px){.sidebar{display:block}}.ad-sticky{width:100%;height:600px;position:sticky;top:90px}
+    .back-btn{background:none;border:none;color:var(--primary);font-weight:bold;cursor:pointer;font-size:1.05em;margin:0 0 18px;padding:0;text-decoration:none;display:inline-block}
+    .breadcrumbs{font-size:.88em;color:var(--muted);margin:0 0 13px}.breadcrumbs a{color:var(--muted);text-decoration:none}.breadcrumbs a:hover{color:var(--primary)}
+    .header-section{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;border-bottom:2px solid var(--primary);padding-bottom:15px;margin-bottom:25px}.page-title{color:var(--primary);margin:0;font-size:2em}.page-intro{color:var(--muted);margin:7px 0 0;font-size:.95em}.header-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+    .difficulty-select{padding:10px 13px;border-radius:8px;border:2px solid #dfe6e9;font-size:.95em;font-weight:600;color:var(--text);cursor:pointer;outline:none;background:#fff}.difficulty-select:focus{border-color:var(--primary)}
+    .topic-quiz-btn{background:var(--accent);color:#2d3436;border:none;padding:12px 20px;border-radius:8px;font-size:1em;font-weight:bold;cursor:pointer;box-shadow:0 4px 0 #e1b35c;transition:.2s}.topic-quiz-btn:active{transform:translateY(4px);box-shadow:none}
+    .subtopics-list{display:flex;flex-direction:column;gap:15px}.subtopic-row{background:#fff;border:1px solid var(--line);padding:18px 20px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;gap:18px;box-shadow:0 2px 5px rgba(0,0,0,.02);transition:.2s}.subtopic-row:hover{border-color:var(--primary);box-shadow:0 4px 10px rgba(0,184,148,.15)}
+    .subtopic-info{flex:1;min-width:0}.subtopic-title{font-size:1.05em;font-weight:650;margin:0;line-height:1.4}.subtopic-stats{font-size:.83em;color:var(--muted);margin-top:7px;display:flex;gap:15px;align-items:center;flex-wrap:wrap}.master-quiz-stats{width:100%;display:flex;gap:15px;align-items:center;justify-content:flex-end;flex-wrap:wrap;font-size:.83em;color:var(--muted)}.master-quiz-stats strong{color:var(--primary)}.score-value{color:var(--primary)}
+    .action-group{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.action-btn{padding:10px 15px;border-radius:8px;font-weight:bold;cursor:pointer;border:1px solid transparent;font-size:.92em;transition:.2s;white-space:nowrap}.btn-notes{background:#e3f2fd;color:var(--secondary);border-color:#bbdefb}.btn-notes:hover{background:#bbdefb}.btn-quiz{background:#e8f8f5;color:var(--primary);border-color:#b2dfdb}.btn-quiz:hover{background:#b2dfdb}
+    .loading,.error{padding:20px;background:#fff;border:1px solid var(--line);border-radius:10px;color:var(--muted)}.error{color:#d63031}
+    .universal-footer{background:#2d3436;color:#f5f6fa;padding:35px 5% 18px;margin-top:45px}.footer-content{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;max-width:1200px;margin:0 auto}.footer-section{flex:1;min-width:200px}.footer-section h4{color:var(--accent);margin:0 0 13px;font-size:1.1em}.footer-section p{color:#b2bec3;line-height:1.6;font-size:.9em}.footer-section a{display:block;color:#b2bec3;text-decoration:none;margin-bottom:9px;font-size:.9em}.footer-section a:hover{color:#fff;padding-left:4px}.footer-bottom{text-align:center;border-top:1px solid #636e72;margin:25px auto 0;padding-top:17px;color:#b2bec3;font-size:.83em;max-width:1200px}
+    @media(max-width:768px){header{padding:12px 20px}.logo{font-size:1.3em}.nav-links{display:none}.layout{padding:0 12px}.subtopic-row{flex-direction:column;align-items:flex-start;gap:14px;padding:15px}.action-group{width:100%;justify-content:center}.action-btn{flex:1;text-align:center;padding:11px 8px;min-width:105px}.difficulty-select{flex:1;min-width:105px}.page-title{font-size:1.5em}.header-section{flex-direction:column;align-items:flex-start;gap:13px}.header-actions{width:100%;justify-content:stretch}.header-actions>*{flex:1}.master-quiz-stats{justify-content:flex-start;flex:0 0 100%}.topic-quiz-btn{width:100%}.ad-top{width:calc(100% - 24px);height:70px;margin:14px auto;font-size:.85em}}
+  </style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">🧠 BrainHub</a>
+  <nav class="nav-links"><a href="/">Home</a><a href="/subject.html">Subjects</a><a href="/about.html">About Us</a><a href="/contact.html">Contact</a></nav>
+  <a href="/login.html" id="auth-btn" class="auth-btn">Login</a>
+</header>
+<div class="ad-banner ad-top">AdSense Top Banner (728x90)</div>
+<div class="layout">
+  <main class="main-content">
+    <div class="breadcrumbs"><a href="/">Home</a> › <a href="/subject.html">Subjects</a> › <a id="level-breadcrumb" href="#">Mathematics</a> › Subtopics</div>
+    <a href="javascript:history.back()" class="back-btn" id="back-link">← Back to Mathematics topics</a>
+    <div class="header-section">
+      <div><h1 class="page-title" id="dynamic-title">Loading...</h1><p class="page-intro" id="topic-intro">Loading the subtopic list...</p></div>
+      <div class="header-actions">
+        <select id="master-diff-select" class="difficulty-select"><option value="All">Any Difficulty</option><option value="1">1 - Basic</option><option value="5">5 - Intermediate</option><option value="10">10 - Advanced</option></select>
+        <button class="topic-quiz-btn" onclick="startTopicQuiz()">🏆 Take Topic Master Quiz</button>
+        <div class="master-quiz-stats" aria-live="polite" aria-label="Topic master quiz progress">
+          <span>🏆 Master Quiz Best Score: <strong id="master-best-score">0/10</strong></span>
+          <span>Lives Achieved: <strong id="master-lives-achieved">🖤🖤🖤</strong></span>
+        </div>
+      </div>
+    </div>
+    <div class="subtopics-list" id="subtopics-container"><div class="loading">Fetching subtopics...</div></div>
+  </main>
+  <aside class="sidebar"><div class="ad-banner ad-sticky">AdSense Sticky Sidebar<br>(300x600)</div></aside>
+</div>
+<footer class="universal-footer">
+  <div class="footer-content">
+    <div class="footer-section"><h4>🧠 Online Brain Hub</h4><p>Empowering students globally with interactive study notes, smart quizzes, and daily challenges in Mathematics, Science, and Social Studies.</p></div>
+    <div class="footer-section"><h4>Quick Links</h4><a href="/">Home</a><a href="/subject.html">All Subjects</a><a href="/about.html">About Us</a><a href="/contact.html">Contact Us</a></div>
+    <div class="footer-section"><h4>Legal & Policies</h4><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="/disclaimer.html">Disclaimer</a><a href="/cookie-policy.html">Cookie Policy</a></div>
+  </div><div class="footer-bottom">© 2026 Online Brain Hub. All rights reserved.</div>
+</footer>
 <script>
-const params=new URLSearchParams(location.search);
-const levelKey=params.get("level");
-const topicId=params.get("topicId");
-const levelNames={middle:"Middle School",secondary:"High School",senior:"Higher Secondary"};
-const pageFiles={middle:"/middle-school-maths.html",secondary:"/secondary-school-maths.html",senior:"/senior-secondary-maths.html"};
-const levelDisplay={middle:"Middle School",secondary:"Secondary School",senior:"Senior Secondary"};
-const list=document.getElementById("subtopic-list");
+const params=new URLSearchParams(window.location.search);
+const levelKey=params.get('level');
+const topicId=params.get('topicId');
+const levelDisplay={middle:'Middle School (Grade 6–8)',secondary:'Secondary School (Grade 9–10)',senior:'Senior Secondary School (Grade 11–12)'};
+const pageFiles={middle:'/middle-school-maths.html',secondary:'/secondary-school-maths.html',senior:'/senior-secondary-maths.html'};
+const container=document.getElementById('subtopics-container');
+let currentTopic=null;
+let currentLevel=null;
+function getLoggedInUser(){return localStorage.getItem('brainhub_username');}
+function updateAuth(){const username=getLoggedInUser();const authBtn=document.getElementById('auth-btn');if(username&&authBtn){authBtn.textContent='Profile ('+username+')';authBtn.href='/profile.html';authBtn.style.background='#00b894';}}
+function getLevelCode(){return ({middle:'ms',secondary:'hs',senior:'hss'})[levelKey]||'';}
+function makeQuizUrl(sub,diff,mode){const dbTopicName=sub?'Subtopic '+sub.number+': '+sub.title:'';const progressKey=sub?sub.id:currentTopic.id;const p=new URLSearchParams({subject:'math',progressSubject:'Maths',category:currentTopic.title,level:getLevelCode(),topicId:currentTopic.id,progressKey,diff:diff||'All',mode});if(sub){p.set('topic',dbTopicName);p.set('subtopicId',sub.id);}return '/quiz-loader.html?'+p.toString();}
+function openSubtopicNotes(sub){const p=new URLSearchParams({subject:'maths',category:currentTopic.id,target:sub.title,topicId:currentTopic.id,subtopicId:sub.id,topicName:currentTopic.title,subtopicName:sub.title,dbSubject:'math',dbLevel:getLevelCode(),dbTopic:'Subtopic '+sub.number+': '+sub.title,progressSubject:'Maths',progressKey:sub.id,diff:'All',mode:'subtopic'});window.location.href='/note-loader.html?'+p.toString();}
+function renderMasterQuizStats(userProgress){const stats={best_score:0,max_hearts:0,best_score_total:10,...(userProgress[currentTopic.id]||userProgress[currentTopic.title]||{})};const hearts=Math.max(0,Math.min(3,Number(stats.max_hearts)||0));document.getElementById('master-best-score').textContent=(Number(stats.best_score)||0)+'/'+(Number(stats.best_score_total)||10);document.getElementById('master-lives-achieved').textContent='❤️'.repeat(hearts)+'🖤'.repeat(3-hearts);}
+function startSubtopicQuiz(sub,index){const diff=document.getElementById('diff-'+index).value;window.location.href=makeQuizUrl(sub,diff,'subtopic');}
+function startTopicQuiz(){if(!currentTopic)return;const diff=document.getElementById('master-diff-select').value;window.location.href=makeQuizUrl(null,diff,'master');}
 async function loadSubtopics(){
- if(!levelNames[levelKey]||!topicId){
-   list.innerHTML='<div class="error">The requested Mathematics topic could not be identified. Please return to the topic list and select a topic.</div>';
-   document.getElementById("topic-title").textContent="Topic not found";
-   document.getElementById("topic-intro").textContent="Please select a topic from the Mathematics curriculum pages.";
-   return;
- }
+ updateAuth();
+ if(!levelDisplay[levelKey]||!topicId){container.innerHTML='<div class="error">The requested Mathematics topic could not be identified. Please return to the topic list and select a topic.</div>';document.getElementById('dynamic-title').textContent='Topic not found';return;}
  try{
-   const response=await fetch("/data/maths-curriculum-registry.json");
-   if(!response.ok)throw new Error("Curriculum registry file not found");
-   const data=await response.json();
-   const levelData=data[levelKey];
-   const topic=levelData?.topics?.find(item=>item.id===topicId);
-   if(!topic)throw new Error("Topic not found in curriculum registry");
-   const display=levelDisplay[levelKey];
-   document.title=topic.title+" Subtopics | OnlineBrainHub";
-   document.getElementById("level-eyebrow").textContent="MATHEMATICS · "+display.toUpperCase();
-   document.getElementById("topic-title").textContent=topic.title;
-   document.getElementById("topic-intro").textContent="Explore the "+topic.subtopics.length+" registered subtopics in this "+display+" Mathematics topic.";
-   document.getElementById("subtopic-count").textContent=topic.subtopics.length;
-   document.getElementById("level-breadcrumb").textContent=display;
-   document.getElementById("level-breadcrumb").href=pageFiles[levelKey];
-   document.getElementById("back-link").href=pageFiles[levelKey];
-   document.getElementById("back-link").textContent="← Back to "+display+" Mathematics topics";
-   list.innerHTML="";
-   topic.subtopics.forEach(sub=>{
-     const row=document.createElement("div");row.className="subtopic-item";
-     const number=document.createElement("span");number.className="subtopic-number";
-     number.textContent=String(sub.number).padStart(2,"0");
-     const name=document.createElement("span");name.className="subtopic-name";name.textContent=sub.title;
-     const status=document.createElement("span");status.className="status-tag";status.textContent="Learning unit";
-     row.append(number,name,status);list.appendChild(row);
-   });
-   if(!topic.subtopics.length)list.innerHTML='<div class="error">No active subtopics are currently registered for this topic.</div>';
- }catch(error){
-   console.error(error);
-   list.innerHTML='<div class="error">The subtopic list could not be loaded. Check that the curriculum JSON file is deployed in the /data folder.</div>';
-   document.getElementById("topic-title").textContent="Unable to load subtopics";
-   document.getElementById("topic-intro").textContent="Please return to the topic list and try again.";
- }
+  const response=await fetch('/data/maths-curriculum-registry.json');if(!response.ok)throw new Error('Curriculum registry file not found');
+  const data=await response.json();currentLevel=data[levelKey];currentTopic=currentLevel?.topics?.find(item=>item.id===topicId);if(!currentTopic)throw new Error('Topic not found in curriculum registry');
+  const display=levelDisplay[levelKey];document.title=currentTopic.title+' Subtopics | OnlineBrainHub';
+  document.getElementById('dynamic-title').textContent=currentTopic.title;
+  document.getElementById('topic-intro').textContent=display+' · '+currentTopic.subtopics.length+' learning units in this Mathematics topic.';
+  document.getElementById('level-breadcrumb').textContent=display;document.getElementById('level-breadcrumb').href=pageFiles[levelKey];
+  document.getElementById('back-link').href=pageFiles[levelKey];document.getElementById('back-link').textContent='← Back to '+display+' Mathematics topics';
+  let userProgress={};const username=getLoggedInUser();
+  if(username){try{const res=await fetch('/api/user',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'get_profile',username})});if(res.ok){const profile=await res.json();if(profile.success&&profile.progress&&profile.progress.Maths)userProgress=profile.progress.Maths;}}catch(err){console.warn('Could not load learner progress',err);}}
+  renderMasterQuizStats(userProgress);
+  container.innerHTML='';
+  currentTopic.subtopics.forEach((sub,index)=>{
+   const dbTopicName='Subtopic '+sub.number+': '+sub.title;const stats={best_score:0,max_hearts:0,best_score_total:10,...(userProgress[sub.id]||userProgress[dbTopicName]||{})};
+   const hearts=Math.max(0,Math.min(3,Number(stats.max_hearts)||0));const heartsDisplay='❤️'.repeat(hearts)+'🖤'.repeat(3-hearts);const score=(Number(stats.best_score)||0)+'/'+(Number(stats.best_score_total)||10);
+   const row=document.createElement('div');row.className='subtopic-row';
+   const info=document.createElement('div');info.className='subtopic-info';const title=document.createElement('h2');title.className='subtopic-title';title.textContent=sub.number+'. '+sub.title;
+   const meta=document.createElement('div');meta.className='subtopic-stats';const scoreSpan=document.createElement('span');scoreSpan.innerHTML='🏆 Best Score: <strong class="score-value"></strong>';scoreSpan.querySelector('strong').textContent=score;const lives=document.createElement('span');lives.textContent='Lives Achieved: '+heartsDisplay;meta.append(scoreSpan,lives);info.append(title,meta);
+   const actions=document.createElement('div');actions.className='action-group';const notes=document.createElement('button');notes.className='action-btn btn-notes';notes.type='button';notes.textContent='📖 Read Notes';notes.addEventListener('click',()=>openSubtopicNotes(sub));
+   const diff=document.createElement('select');diff.className='difficulty-select';diff.id='diff-'+index;diff.setAttribute('aria-label','Quiz difficulty for '+sub.title);[['All','Any Diff'],['1','Lvl 1'],['5','Lvl 5'],['10','Lvl 10']].forEach(([value,label])=>{const opt=document.createElement('option');opt.value=value;opt.textContent=label;diff.appendChild(opt);});
+   const quiz=document.createElement('button');quiz.className='action-btn btn-quiz';quiz.type='button';quiz.textContent='🎮 Take Quiz';quiz.addEventListener('click',()=>startSubtopicQuiz(sub,index));
+   actions.append(notes,diff,quiz);row.append(info,actions);container.appendChild(row);
+  });
+  if(!currentTopic.subtopics.length)container.innerHTML='<div class="loading">No active subtopics are currently registered for this topic.</div>';
+ }catch(error){console.error(error);container.innerHTML='<div class="error">The subtopic list could not be loaded. Check that the curriculum registry JSON file is deployed in the /data folder.</div>';document.getElementById('dynamic-title').textContent='Unable to load subtopics';document.getElementById('topic-intro').textContent='Please return to the topic list and try again.';}
 }
 loadSubtopics();
 </script>

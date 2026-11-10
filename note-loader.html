@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32"
+      href="/favicon-32x32.png">
+<link rel="apple-touch-icon"
+      href="/apple-touch-icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematics Study Notes | OnlineBrainHub</title>
+
+
+<!-- SEO Meta Tags -->
+<meta name="description" id="meta-description"
+      content="Explore structured Mathematics study notes on OnlineBrainHub.">
+
+<meta name="robots" content="index, follow">
+
+<!-- Canonical URL -->
+<link rel="canonical" id="canonical-url"
+      href="https://onlinebrainhub.com/note-loader.html">
+
+<!-- Open Graph SEO -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Online Brain Hub">
+<meta property="og:title" id="og-title"
+      content="Mathematics Study Notes - OnlineBrainHub">
+<meta property="og:description" id="og-description"
+      content="Explore structured Mathematics study notes on OnlineBrainHub.">
+<meta property="og:url" id="og-url"
+      content="https://onlinebrainhub.com/note-loader.html">
+
+  
+  <!-- MathJax for rendering equations in notes -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+      startup: { typeset: true }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    :root {
+      --bg-color: #f0f2f5;
+      --primary: #00b894;
+      --secondary: #0984e3;
+      --accent: #fdcb6e;
+      --text: #2d3436;
+      --panel: #ffffff;
+    }
+    
+    * { box-sizing: border-box; }
+    
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      margin: 0; 
+      background-color: var(--bg-color); 
+      color: var(--text); 
+      overflow-x: hidden; 
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    /* Universal Header & Navigation */
+    header { 
+      background: white; padding: 15px 5%; display: flex; 
+      justify-content: space-between; align-items: center; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; 
+      top: 0; z-index: 100;
+    }
+    .logo { font-size: 1.5em; font-weight: 800; color: var(--primary); margin: 0; text-decoration: none;}
+    
+    .nav-links { display: flex; gap: 25px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    
+    .auth-btn { 
+      display: inline-block; padding: 10px 20px; background: #0984e3; 
+      color: white; text-decoration: none; border-radius: 8px; 
+      font-weight: bold; transition: 0.2s;
+    }
+    .auth-btn:hover { background: #076bb8; transform: translateY(-2px); }
+
+    /* Ad Banners */
+    .ad-banner { 
+      background: #e2e2e2; border: 2px dashed #b2bec3; display: flex; 
+      align-items: center; justify-content: center; color: #636e72; 
+      font-weight: bold; text-align: center; border-radius: 10px;
+    }
+    .ad-top { width: 100%; max-width: 728px; height: 90px; margin: 20px auto; }
+    
+    /* Main Layout with Sidebar */
+    .layout { 
+      display: flex; max-width: 1200px; margin: 0 auto 30px auto; 
+      padding: 0 15px; gap: 30px; flex: 1; width: 100%;
+    }
+    .main-content { flex: 1; min-width: 0; }
+    
+    .sidebar { width: 300px; display: none; flex-shrink: 0;}
+    @media(min-width: 900px) { .sidebar { display: block; } } 
+    .ad-sticky { width: 100%; height: 600px; position: sticky; top: 90px; }
+
+    /* Notes Content Styles */
+    .back-btn { color: var(--primary); font-weight: bold; text-decoration: none; font-size: 1.1em; display: inline-block; margin-bottom: 20px;}
+    .back-btn:hover { text-decoration: underline; }
+
+    .notes-card { background: var(--panel); border-radius: 15px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .notes-title { color: var(--primary); font-size: 2.2em; margin-top: 0; margin-bottom: 20px; border-bottom: 2px solid #dfe6e9; padding-bottom: 10px;}
+    
+    .notes-content h3 { color: var(--secondary); margin-top: 30px; }
+    .notes-content p { font-size: 1.1em; color: #4b4b4b; }
+    .notes-content ul { font-size: 1.1em; color: #4b4b4b; padding-left: 20px; }
+    .notes-content li { margin-bottom: 10px; }
+    .notes-content .highlight { background: #fff3cd; padding: 2px 6px; border-radius: 4px; font-weight: bold; color: #856404; }
+    .notes-content .example-box { background: #e8f8f5; border-left: 4px solid var(--primary); padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+
+    .notes-mode .active { background: var(--primary) !important; color: #fff !important; box-shadow: 0 5px 0 #008f72 !important; }
+    .quiz-cta { margin-top: 40px; text-align: center; border-top: 2px dashed #dfe6e9; padding-top: 30px; }
+    .quiz-btn { background: var(--accent); color: #2d3436; border: none; padding: 15px 40px; font-size: 1.2em; border-radius: 30px; cursor: pointer; font-weight: bold; box-shadow: 0 5px 0 #e1b35c; transition: 0.2s;}
+    .quiz-btn:hover { transform: translateY(3px); box-shadow: 0 2px 0 #e1b35c; }
+
+    #loading-error { 
+      background: #ffeaa7; color: #d63031; padding: 20px; 
+      border-radius: 10px; border: 2px solid #d63031; 
+      font-size: 1.1em; display: none; margin-bottom: 20px;
+    }
+
+    /* Universal Footer (AdSense Mandatory) */
+    .universal-footer { 
+      background: #2d3436; color: #f5f6fa; padding: 40px 5% 20px; 
+      margin-top: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    }
+    .footer-content { 
+      display: flex; flex-wrap: wrap; justify-content: space-between; 
+      gap: 30px; max-width: 1200px; margin: 0 auto; 
+    }
+    .footer-section { flex: 1; min-width: 200px; }
+    .footer-section h4 { color: var(--accent); margin-top: 0; margin-bottom: 15px; font-size: 1.2em; }
+    .footer-section p { color: #b2bec3; line-height: 1.6; font-size: 0.9em; }
+    .footer-section a { 
+      display: block; color: #b2bec3; text-decoration: none; 
+      margin-bottom: 10px; transition: 0.2s; font-size: 0.9em; 
+    }
+    .footer-section a:hover { color: white; padding-left: 5px; }
+    .footer-bottom { 
+      text-align: center; border-top: 1px solid #636e72; 
+      margin-top: 30px; padding-top: 20px; color: #b2bec3; font-size: 0.85em; 
+    }
+
+    @media (max-width: 768px) {
+      .notes-card { padding: 25px; }
+      .notes-title { font-size: 1.8em; }
+      .nav-links { display: none; }
+      header { padding: 12px 20px; }
+      .logo { font-size: 1.3em; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Universal Header -->
+  <header>
+    <a href="/" class="logo">🧠 BrainHub</a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/subject.html">Subjects</a>
+      <a href="/about.html">About Us</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <a href="/login.html" id="auth-btn" class="auth-btn">Login</a>
+  </header>
+
+  <!-- Top AdSense Banner Placeholder -->
+  <div class="ad-banner ad-top">
+    AdSense Top Banner (728x90)
+  </div>
+
+  <div class="layout">
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <a href="javascript:history.back()" class="back-btn">← Back to Subtopics</a>
+      
+      <div class="notes-card">
+        <h1 class="notes-title" id="notes-title">Loading...</h1>
+        
+        <!-- Diagnostic Error Box -->
+        <div id="loading-error"></div>
+        
+        <div class="notes-mode" id="notes-mode" style="display:none;margin:0 0 18px;gap:10px;flex-wrap:wrap;">
+          <button type="button" class="quiz-btn" id="short-note-btn" style="padding:10px 20px;font-size:.95em;">Short Note</button>
+          <button type="button" class="quiz-btn" id="detailed-note-btn" style="padding:10px 20px;font-size:.95em;">Detailed Note</button>
+        </div>
+        <div class="notes-content" id="notes-content">
+          <!-- ID-matched JSON content injected here -->
+        </div>
+
+        <div class="quiz-cta" id="quiz-cta" style="display: none;">
+          <h3 style="margin-top: 0;">Ready to test your knowledge?</h3>
+          <button class="quiz-btn" onclick="startQuiz()">🎮 Take the Quiz</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Right Sticky AdSense Sidebar -->
+    <aside class="sidebar">
+      <div class="ad-banner ad-sticky">
+        AdSense Sticky Sidebar<br>(300x600)
+      </div>
+    </aside>
+  </div>
+
+  <!-- Universal Footer (Mandatory for AdSense) -->
+  <footer class="universal-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>🧠 Online Brain Hub</h4>
+        <p>Empowering students globally with interactive study notes, smart quizzes, and daily challenges in Mathematics, Science, and Social Studies.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="/">Home</a>
+        <a href="/subject.html">All Subjects</a>
+        <a href="/about.html">About Us</a>
+        <a href="/contact.html">Contact Us</a>
+      </div>
+      <div class="footer-section">
+        <h4>Legal & Policies</h4>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/cookie-policy.html">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Online Brain Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const topicId = params.get('topicId') || '';
+    const subtopicId = params.get('subtopicId') || '';
+    const topicName = params.get('topicName') || '';
+    const subtopicName = params.get('subtopicName') || params.get('target') || '';
+    const subjectCode = params.get('dbSubject') || 'math';
+    const levelCode = params.get('dbLevel') || '';
+    const progressSubject = params.get('progressSubject') || 'Maths';
+    const progressKey = params.get('progressKey') || subtopicId;
+    let activeRecord = null;
+    let activeMode = 'short';
+
+    const titleEl = document.getElementById('notes-title');
+    const contentEl = document.getElementById('notes-content');
+    const errorEl = document.getElementById('loading-error');
+    const modeEl = document.getElementById('notes-mode');
+    const shortBtn = document.getElementById('short-note-btn');
+    const detailedBtn = document.getElementById('detailed-note-btn');
+
+    titleEl.textContent = subtopicName || 'Mathematics Study Notes';
+
+    function showError(message) {
+      errorEl.textContent = message;
+      errorEl.style.display = 'block';
+      contentEl.innerHTML = '';
+      modeEl.style.display = 'none';
+      document.getElementById('quiz-cta').style.display = 'none';
+    }
+
+    function renderNote(mode) {
+      if (!activeRecord) return;
+      activeMode = mode;
+      const html = mode === 'detailed'
+        ? (activeRecord.content || activeRecord.detailedNote || '')
+        : (activeRecord.shortNote || activeRecord.content || '');
+      if (!html) {
+        showError(mode === 'detailed'
+          ? 'A detailed note has not yet been added for this subtopic.'
+          : 'A short note has not yet been added for this subtopic.');
+        return;
+      }
+      errorEl.style.display = 'none';
+      contentEl.innerHTML = html;
+      shortBtn.classList.toggle('active', mode === 'short');
+      detailedBtn.classList.toggle('active', mode === 'detailed');
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([contentEl]).catch(err => console.warn('MathJax rendering issue', err));
+      }
+    }
+
+    shortBtn.addEventListener('click', () => renderNote('short'));
+    detailedBtn.addEventListener('click', () => renderNote('detailed'));
+
+    async function loadNotes() {
+      if (!topicId || !subtopicId) {
+        showError('Missing topic ID or subtopic ID. Please return to the Mathematics subtopic list and open the note again.');
+        return;
+      }
+      const fileUrl = `/data/maths/${encodeURIComponent(topicId)}.json?nocache=${Date.now()}`;
+      try {
+        const response = await fetch(fileUrl, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`Could not find the topic notes file (${response.status}): ${fileUrl}`);
+        const data = await response.json();
+        if (data.topicId && data.topicId !== topicId) {
+          throw new Error(`Topic ID mismatch: requested ${topicId}, but this file belongs to ${data.topicId}.`);
+        }
+        if (data.subject && data.subject !== subjectCode && !(subjectCode === 'maths' && data.subject === 'math')) {
+          throw new Error(`Subject mismatch in notes JSON: expected ${subjectCode}, found ${data.subject}.`);
+        }
+        activeRecord = data?.subtopics?.[subtopicId] || null;
+        if (!activeRecord) {
+          throw new Error(`Subtopic ID ${subtopicId} was not found in ${fileUrl}. Check the subtopics object key against the curriculum registry.`);
+        }
+        if (activeRecord.id && activeRecord.id !== subtopicId) {
+          throw new Error(`Subtopic ID mismatch: requested ${subtopicId}, but the note record declares ${activeRecord.id}.`);
+        }
+        const exactTitle = activeRecord.title || subtopicName;
+        titleEl.textContent = exactTitle;
+        document.title = `${exactTitle} | ${topicName || data.topicTitle || 'Mathematics'} | OnlineBrainHub`;
+        const description = document.getElementById('meta-description');
+        if (description) description.setAttribute('content', `Study ${exactTitle} with free Mathematics notes on OnlineBrainHub.`);
+        modeEl.style.display = 'flex';
+        document.getElementById('quiz-cta').style.display = 'block';
+        renderNote('short');
+      } catch (error) {
+        console.error('Mathematics note loading failed:', error);
+        showError(error.message || 'The requested Mathematics note could not be loaded.');
+      }
+    }
+
+    function startQuiz() {
+      if (!topicId || !subtopicId) return;
+      const quizParams = new URLSearchParams({
+        subject: subjectCode,
+        progressSubject,
+        category: topicName,
+        level: levelCode,
+        topicId,
+        subtopicId,
+        topic: params.get('dbTopic') || (subtopicName ? `Subtopic: ${subtopicName}` : ''),
+        progressKey,
+        diff: params.get('diff') || 'All',
+        mode: 'subtopic'
+      });
+      window.location.href = '/quiz-loader.html?' + quizParams.toString();
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const username = localStorage.getItem('brainhub_username');
+      const authBtn = document.getElementById('auth-btn');
+      if (username && authBtn) {
+        authBtn.textContent = 'Profile (' + username + ')';
+        authBtn.href = '/profile.html';
+        authBtn.style.background = '#00b894';
+      }
+    });
+
+    loadNotes();
+  </script>
+</body>
+</html>

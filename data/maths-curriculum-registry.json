@@ -1,0 +1,3707 @@
+{
+  "middle": {
+    "level": "Middle School",
+    "pageTitle": "Middle School Mathematics",
+    "topics": [
+      {
+        "id": "ms_math_t01",
+        "title": "Number Systems",
+        "subtopics": [
+          {
+            "id": "ms_math_t01_st01",
+            "number": 1,
+            "title": "Natural numbers, whole numbers and integers"
+          },
+          {
+            "id": "ms_math_t01_st02",
+            "number": 2,
+            "title": "Positive and negative numbers"
+          },
+          {
+            "id": "ms_math_t01_st03",
+            "number": 3,
+            "title": "Number lines and ordering integers"
+          },
+          {
+            "id": "ms_math_t01_st04",
+            "number": 4,
+            "title": "Rational numbers"
+          },
+          {
+            "id": "ms_math_t01_st05",
+            "number": 5,
+            "title": "Equivalent fractions and rational numbers"
+          },
+          {
+            "id": "ms_math_t01_st06",
+            "number": 6,
+            "title": "Comparing and ordering rational numbers"
+          },
+          {
+            "id": "ms_math_t01_st07",
+            "number": 7,
+            "title": "Absolute value"
+          },
+          {
+            "id": "ms_math_t01_st08",
+            "number": 8,
+            "title": "Factors and multiples"
+          },
+          {
+            "id": "ms_math_t01_st09",
+            "number": 9,
+            "title": "Prime factorisation"
+          },
+          {
+            "id": "ms_math_t01_st10",
+            "number": 10,
+            "title": "HCF and LCM"
+          },
+          {
+            "id": "ms_math_t01_st11",
+            "number": 11,
+            "title": "Divisibility rules"
+          },
+          {
+            "id": "ms_math_t01_st12",
+            "number": 12,
+            "title": "Powers and exponents"
+          },
+          {
+            "id": "ms_math_t01_st13",
+            "number": 13,
+            "title": "Squares, cubes and roots"
+          },
+          {
+            "id": "ms_math_t01_st14",
+            "number": 14,
+            "title": "Irrational numbers — introduction"
+          },
+          {
+            "id": "ms_math_t01_st15",
+            "number": 15,
+            "title": "Real numbers — introduction"
+          }
+        ],
+        "subtopicCount": 15
+      },
+      {
+        "id": "ms_math_t02",
+        "title": "Arithmetic and Numerical Operations",
+        "subtopics": [
+          {
+            "id": "ms_math_t02_st01",
+            "number": 1,
+            "title": "Order of operations (BODMAS/PEMDAS)"
+          },
+          {
+            "id": "ms_math_t02_st02",
+            "number": 2,
+            "title": "Operations with integers"
+          },
+          {
+            "id": "ms_math_t02_st06",
+            "number": 6,
+            "title": "Estimation and approximation"
+          },
+          {
+            "id": "ms_math_t02_st07",
+            "number": 7,
+            "title": "Rounding and significant figures — introduction"
+          },
+          {
+            "id": "ms_math_t02_st08",
+            "number": 8,
+            "title": "Mental arithmetic strategies"
+          },
+          {
+            "id": "ms_math_t02_st09",
+            "number": 9,
+            "title": "Laws of arithmetic operations"
+          },
+          {
+            "id": "ms_math_t02_st10",
+            "number": 10,
+            "title": "Multi-step numerical problems"
+          }
+        ],
+        "subtopicCount": 7
+      },
+      {
+        "id": "ms_math_t03",
+        "title": "Fractions, Decimals and Percentages",
+        "subtopics": [
+          {
+            "id": "ms_math_t03_st01",
+            "number": 1,
+            "title": "Simplifying fractions"
+          },
+          {
+            "id": "ms_math_t03_st02",
+            "number": 2,
+            "title": "Mixed numbers and improper fractions"
+          },
+          {
+            "id": "ms_math_t03_st03",
+            "number": 3,
+            "title": "Operations with fractions"
+          },
+          {
+            "id": "ms_math_t03_st04",
+            "number": 4,
+            "title": "Terminating and recurring decimals"
+          },
+          {
+            "id": "ms_math_t03_st13",
+            "number": 5,
+            "title": "Operations with decimals"
+          },
+          {
+            "id": "ms_math_t03_st14",
+            "number": 6,
+            "title": "Operations with rational numbers"
+          },
+          {
+            "id": "ms_math_t03_st05",
+            "number": 7,
+            "title": "Converting fractions and decimals"
+          },
+          {
+            "id": "ms_math_t03_st06",
+            "number": 8,
+            "title": "Converting fractions to percentages"
+          },
+          {
+            "id": "ms_math_t03_st08",
+            "number": 9,
+            "title": "Finding a percentage of a quantity"
+          },
+          {
+            "id": "ms_math_t03_st09",
+            "number": 10,
+            "title": "Finding the original quantity"
+          },
+          {
+            "id": "ms_math_t03_st07",
+            "number": 11,
+            "title": "Percentage increase and decrease"
+          },
+          {
+            "id": "ms_math_t03_st10",
+            "number": 12,
+            "title": "Percentage change"
+          },
+          {
+            "id": "ms_math_t03_st11",
+            "number": 13,
+            "title": "Applications of percentages"
+          },
+          {
+            "id": "ms_math_t03_st12",
+            "number": 14,
+            "title": "Fraction-decimal-percentage problem-solving"
+          }
+        ],
+        "subtopicCount": 14
+      },
+      {
+        "id": "ms_math_t04",
+        "title": "Ratio, Proportion and Rates",
+        "subtopics": [
+          {
+            "id": "ms_math_t04_st01",
+            "number": 1,
+            "title": "Simplifying ratios"
+          },
+          {
+            "id": "ms_math_t04_st02",
+            "number": 2,
+            "title": "Equivalent ratios"
+          },
+          {
+            "id": "ms_math_t04_st03",
+            "number": 3,
+            "title": "Dividing quantities in a ratio"
+          },
+          {
+            "id": "ms_math_t04_st04",
+            "number": 4,
+            "title": "Direct proportion"
+          },
+          {
+            "id": "ms_math_t04_st05",
+            "number": 5,
+            "title": "Inverse proportion"
+          },
+          {
+            "id": "ms_math_t04_st06",
+            "number": 6,
+            "title": "Unitary method"
+          },
+          {
+            "id": "ms_math_t04_st07",
+            "number": 7,
+            "title": "Rates and unit rates"
+          },
+          {
+            "id": "ms_math_t04_st08",
+            "number": 8,
+            "title": "Speed, distance and time"
+          },
+          {
+            "id": "ms_math_t04_st09",
+            "number": 9,
+            "title": "Scale drawings and maps"
+          },
+          {
+            "id": "ms_math_t04_st10",
+            "number": 10,
+            "title": "Ratios in recipes and mixtures"
+          },
+          {
+            "id": "ms_math_t04_st11",
+            "number": 11,
+            "title": "Proportional reasoning"
+          },
+          {
+            "id": "ms_math_t04_st12",
+            "number": 12,
+            "title": "Real-world ratio and rate problems"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "ms_math_t05",
+        "title": "Algebraic Expressions",
+        "subtopics": [
+          {
+            "id": "ms_math_t05_st01",
+            "number": 1,
+            "title": "Variables, constants and coefficients"
+          },
+          {
+            "id": "ms_math_t05_st02",
+            "number": 2,
+            "title": "Terms and algebraic expressions"
+          },
+          {
+            "id": "ms_math_t05_st03",
+            "number": 3,
+            "title": "Writing expressions from words"
+          },
+          {
+            "id": "ms_math_t05_st04",
+            "number": 4,
+            "title": "Evaluating expressions"
+          },
+          {
+            "id": "ms_math_t05_st05",
+            "number": 5,
+            "title": "Like and unlike terms"
+          },
+          {
+            "id": "ms_math_t05_st06",
+            "number": 6,
+            "title": "Simplifying expressions"
+          },
+          {
+            "id": "ms_math_t05_st07",
+            "number": 7,
+            "title": "Addition and subtraction of expressions"
+          },
+          {
+            "id": "ms_math_t05_st08",
+            "number": 8,
+            "title": "Multiplication and division of expressions"
+          },
+          {
+            "id": "ms_math_t05_st09",
+            "number": 9,
+            "title": "Using the distributive property"
+          },
+          {
+            "id": "ms_math_t05_st10",
+            "number": 10,
+            "title": "Expanding brackets"
+          },
+          {
+            "id": "ms_math_t05_st11",
+            "number": 11,
+            "title": "Factorising simple expressions"
+          },
+          {
+            "id": "ms_math_t05_st12",
+            "number": 12,
+            "title": "Algebraic word problems"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "ms_math_t06",
+        "title": "Equations and Inequalities",
+        "subtopics": [
+          {
+            "id": "ms_math_t06_st01",
+            "number": 1,
+            "title": "Understanding equations"
+          },
+          {
+            "id": "ms_math_t06_st02",
+            "number": 2,
+            "title": "One-step linear equations"
+          },
+          {
+            "id": "ms_math_t06_st03",
+            "number": 3,
+            "title": "Two-step linear equations"
+          },
+          {
+            "id": "ms_math_t06_st04",
+            "number": 4,
+            "title": "Multi-step linear equations"
+          },
+          {
+            "id": "ms_math_t06_st05",
+            "number": 5,
+            "title": "Equations with brackets"
+          },
+          {
+            "id": "ms_math_t06_st06",
+            "number": 6,
+            "title": "Equations involving fractions"
+          },
+          {
+            "id": "ms_math_t06_st07",
+            "number": 7,
+            "title": "Forming equations from word problems"
+          },
+          {
+            "id": "ms_math_t06_st08",
+            "number": 8,
+            "title": "Checking solutions"
+          },
+          {
+            "id": "ms_math_t06_st09",
+            "number": 9,
+            "title": "Linear inequalities"
+          },
+          {
+            "id": "ms_math_t06_st10",
+            "number": 10,
+            "title": "Representing inequalities on number lines"
+          },
+          {
+            "id": "ms_math_t06_st11",
+            "number": 11,
+            "title": "Solving simple inequalities"
+          },
+          {
+            "id": "ms_math_t06_st12",
+            "number": 12,
+            "title": "Rearranging simple formulas"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "ms_math_t07",
+        "title": "Sequences, Patterns and Functions",
+        "subtopics": [
+          {
+            "id": "ms_math_t07_st01",
+            "number": 1,
+            "title": "Number sequences"
+          },
+          {
+            "id": "ms_math_t07_st02",
+            "number": 2,
+            "title": "Arithmetic sequences"
+          },
+          {
+            "id": "ms_math_t07_st03",
+            "number": 3,
+            "title": "Finding missing terms"
+          },
+          {
+            "id": "ms_math_t07_st04",
+            "number": 4,
+            "title": "Finding the rule of a sequence"
+          },
+          {
+            "id": "ms_math_t07_st05",
+            "number": 5,
+            "title": "Term-to-term rules"
+          },
+          {
+            "id": "ms_math_t07_st06",
+            "number": 6,
+            "title": "Position-to-term rules"
+          },
+          {
+            "id": "ms_math_t07_st07",
+            "number": 7,
+            "title": "Patterns involving shapes"
+          },
+          {
+            "id": "ms_math_t07_st08",
+            "number": 8,
+            "title": "Input-output tables"
+          },
+          {
+            "id": "ms_math_t07_st09",
+            "number": 9,
+            "title": "Function machines"
+          },
+          {
+            "id": "ms_math_t07_st10",
+            "number": 10,
+            "title": "Introduction to functions"
+          },
+          {
+            "id": "ms_math_t07_st11",
+            "number": 11,
+            "title": "Independent and dependent variables"
+          },
+          {
+            "id": "ms_math_t07_st12",
+            "number": 12,
+            "title": "Patterns represented by algebraic expressions"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "ms_math_t08",
+        "title": "Coordinate Geometry and Graphs",
+        "subtopics": [
+          {
+            "id": "ms_math_t08_st01",
+            "number": 1,
+            "title": "Cartesian coordinate system"
+          },
+          {
+            "id": "ms_math_t08_st02",
+            "number": 2,
+            "title": "Plotting ordered pairs"
+          },
+          {
+            "id": "ms_math_t08_st03",
+            "number": 3,
+            "title": "Four quadrants"
+          },
+          {
+            "id": "ms_math_t08_st04",
+            "number": 4,
+            "title": "Reading coordinates from graphs"
+          },
+          {
+            "id": "ms_math_t08_st05",
+            "number": 5,
+            "title": "Horizontal and vertical lines"
+          },
+          {
+            "id": "ms_math_t08_st06",
+            "number": 6,
+            "title": "Plotting linear relationships"
+          },
+          {
+            "id": "ms_math_t08_st07",
+            "number": 7,
+            "title": "Tables of values"
+          },
+          {
+            "id": "ms_math_t08_st08",
+            "number": 8,
+            "title": "Graphs of simple equations"
+          },
+          {
+            "id": "ms_math_t08_st09",
+            "number": 9,
+            "title": "Interpreting real-world graphs"
+          },
+          {
+            "id": "ms_math_t08_st10",
+            "number": 10,
+            "title": "Distance between points on horizontal or vertical lines"
+          },
+          {
+            "id": "ms_math_t08_st11",
+            "number": 11,
+            "title": "Gradient — introduction"
+          },
+          {
+            "id": "ms_math_t08_st12",
+            "number": 12,
+            "title": "Graphing inequalities — introduction"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "ms_math_t09",
+        "title": "Geometry: Lines, Angles and Polygons",
+        "subtopics": [
+          {
+            "id": "ms_math_t09_st01",
+            "number": 1,
+            "title": "Points, lines, rays and line segments"
+          },
+          {
+            "id": "ms_math_t09_st02",
+            "number": 2,
+            "title": "Parallel and perpendicular lines"
+          },
+          {
+            "id": "ms_math_t09_st03",
+            "number": 3,
+            "title": "Types of angles"
+          },
+          {
+            "id": "ms_math_t09_st04",
+            "number": 4,
+            "title": "Complementary and supplementary angles"
+          },
+          {
+            "id": "ms_math_t09_st05",
+            "number": 5,
+            "title": "Angles on a straight line"
+          },
+          {
+            "id": "ms_math_t09_st06",
+            "number": 6,
+            "title": "Angles around a point"
+          },
+          {
+            "id": "ms_math_t09_st07",
+            "number": 7,
+            "title": "Vertically opposite angles"
+          },
+          {
+            "id": "ms_math_t09_st08",
+            "number": 8,
+            "title": "Angles formed by parallel lines"
+          },
+          {
+            "id": "ms_math_t09_st09",
+            "number": 9,
+            "title": "Interior and exterior angles of polygons"
+          },
+          {
+            "id": "ms_math_t09_st11",
+            "number": 11,
+            "title": "Properties of quadrilaterals"
+          },
+          {
+            "id": "ms_math_t09_st12",
+            "number": 12,
+            "title": "Regular and irregular polygons"
+          },
+          {
+            "id": "ms_math_t09_st13",
+            "number": 13,
+            "title": "Angle-sum properties"
+          },
+          {
+            "id": "ms_math_t09_st14",
+            "number": 14,
+            "title": "Geometric reasoning and missing-angle problems"
+          }
+        ],
+        "subtopicCount": 13
+      },
+      {
+        "id": "ms_math_t10",
+        "title": "Triangles, Congruence and Similarity",
+        "subtopics": [
+          {
+            "id": "ms_math_t10_st01",
+            "number": 1,
+            "title": "Classification of triangles"
+          },
+          {
+            "id": "ms_math_t10_st13",
+            "number": 2,
+            "title": "Properties of triangles"
+          },
+          {
+            "id": "ms_math_t10_st02",
+            "number": 3,
+            "title": "Angle sum of a triangle"
+          },
+          {
+            "id": "ms_math_t10_st03",
+            "number": 4,
+            "title": "Exterior angles of a triangle"
+          },
+          {
+            "id": "ms_math_t10_st04",
+            "number": 5,
+            "title": "Isosceles and equilateral triangles"
+          },
+          {
+            "id": "ms_math_t10_st05",
+            "number": 6,
+            "title": "Triangle inequality"
+          },
+          {
+            "id": "ms_math_t10_st06",
+            "number": 7,
+            "title": "Congruent figures"
+          },
+          {
+            "id": "ms_math_t10_st07",
+            "number": 8,
+            "title": "Tests for triangle congruence"
+          },
+          {
+            "id": "ms_math_t10_st08",
+            "number": 9,
+            "title": "Similar figures"
+          },
+          {
+            "id": "ms_math_t10_st09",
+            "number": 10,
+            "title": "Similar triangles"
+          },
+          {
+            "id": "ms_math_t10_st10",
+            "number": 11,
+            "title": "Scale factors"
+          },
+          {
+            "id": "ms_math_t10_st11",
+            "number": 12,
+            "title": "Missing lengths in similar figures"
+          },
+          {
+            "id": "ms_math_t10_st12",
+            "number": 13,
+            "title": "Applications of congruence and similarity"
+          }
+        ],
+        "subtopicCount": 13
+      },
+      {
+        "id": "ms_math_t11",
+        "title": "Measurement, Perimeter, Area and Volume",
+        "subtopics": [
+          {
+            "id": "ms_math_t11_st01",
+            "number": 1,
+            "title": "Metric units and conversions"
+          },
+          {
+            "id": "ms_math_t11_st02",
+            "number": 2,
+            "title": "Perimeter of polygons"
+          },
+          {
+            "id": "ms_math_t11_st03",
+            "number": 3,
+            "title": "Area of rectangles and squares"
+          },
+          {
+            "id": "ms_math_t11_st04",
+            "number": 4,
+            "title": "Area of triangles"
+          },
+          {
+            "id": "ms_math_t11_st05",
+            "number": 5,
+            "title": "Area of parallelograms"
+          },
+          {
+            "id": "ms_math_t11_st06",
+            "number": 6,
+            "title": "Area of trapeziums/trapezoids"
+          },
+          {
+            "id": "ms_math_t11_st07",
+            "number": 7,
+            "title": "Circumference of circles"
+          },
+          {
+            "id": "ms_math_t11_st08",
+            "number": 8,
+            "title": "Area of circles"
+          },
+          {
+            "id": "ms_math_t11_st09",
+            "number": 9,
+            "title": "Composite shapes"
+          },
+          {
+            "id": "ms_math_t11_st10",
+            "number": 10,
+            "title": "Surface area of cubes and cuboids"
+          },
+          {
+            "id": "ms_math_t11_st11",
+            "number": 11,
+            "title": "Volume of cubes and cuboids"
+          },
+          {
+            "id": "ms_math_t11_st12",
+            "number": 12,
+            "title": "Volume of prisms — introduction"
+          },
+          {
+            "id": "ms_math_t11_st13",
+            "number": 13,
+            "title": "Capacity and volume conversions"
+          },
+          {
+            "id": "ms_math_t11_st14",
+            "number": 14,
+            "title": "Units of area and volume"
+          },
+          {
+            "id": "ms_math_t11_st15",
+            "number": 15,
+            "title": "Practical measurement problems"
+          }
+        ],
+        "subtopicCount": 15
+      },
+      {
+        "id": "ms_math_t12",
+        "title": "Transformations and Symmetry",
+        "subtopics": [
+          {
+            "id": "ms_math_t12_st01",
+            "number": 1,
+            "title": "Reflection"
+          },
+          {
+            "id": "ms_math_t12_st02",
+            "number": 2,
+            "title": "Lines of symmetry"
+          },
+          {
+            "id": "ms_math_t12_st03",
+            "number": 3,
+            "title": "Rotational symmetry"
+          },
+          {
+            "id": "ms_math_t12_st04",
+            "number": 4,
+            "title": "Order of rotational symmetry"
+          },
+          {
+            "id": "ms_math_t12_st05",
+            "number": 5,
+            "title": "Translation"
+          },
+          {
+            "id": "ms_math_t12_st06",
+            "number": 6,
+            "title": "Rotation about a point"
+          },
+          {
+            "id": "ms_math_t12_st07",
+            "number": 7,
+            "title": "Enlargement and reduction"
+          },
+          {
+            "id": "ms_math_t12_st08",
+            "number": 8,
+            "title": "Scale factors in transformations"
+          },
+          {
+            "id": "ms_math_t12_st09",
+            "number": 9,
+            "title": "Describing transformations"
+          },
+          {
+            "id": "ms_math_t12_st10",
+            "number": 10,
+            "title": "Combining transformations"
+          },
+          {
+            "id": "ms_math_t12_st11",
+            "number": 11,
+            "title": "Congruence through transformations"
+          },
+          {
+            "id": "ms_math_t12_st12",
+            "number": 12,
+            "title": "Tessellations and repeating patterns"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "ms_math_t13",
+        "title": "Statistics and Data Handling",
+        "subtopics": [
+          {
+            "id": "ms_math_t13_st01",
+            "number": 1,
+            "title": "Collecting and organising data"
+          },
+          {
+            "id": "ms_math_t13_st02",
+            "number": 2,
+            "title": "Qualitative and quantitative data"
+          },
+          {
+            "id": "ms_math_t13_st03",
+            "number": 3,
+            "title": "Frequency tables"
+          },
+          {
+            "id": "ms_math_t13_st04",
+            "number": 4,
+            "title": "Grouped and ungrouped data"
+          },
+          {
+            "id": "ms_math_t13_st05",
+            "number": 5,
+            "title": "Bar charts"
+          },
+          {
+            "id": "ms_math_t13_st06",
+            "number": 6,
+            "title": "Double bar charts"
+          },
+          {
+            "id": "ms_math_t13_st07",
+            "number": 7,
+            "title": "Line graphs"
+          },
+          {
+            "id": "ms_math_t13_st08",
+            "number": 8,
+            "title": "Pie charts — introduction"
+          },
+          {
+            "id": "ms_math_t13_st09",
+            "number": 9,
+            "title": "Histograms — introduction"
+          },
+          {
+            "id": "ms_math_t13_st10",
+            "number": 10,
+            "title": "Mean, median and mode"
+          },
+          {
+            "id": "ms_math_t13_st11",
+            "number": 11,
+            "title": "Range"
+          },
+          {
+            "id": "ms_math_t13_st12",
+            "number": 12,
+            "title": "Choosing appropriate averages"
+          },
+          {
+            "id": "ms_math_t13_st13",
+            "number": 13,
+            "title": "Interpreting misleading graphs"
+          },
+          {
+            "id": "ms_math_t13_st14",
+            "number": 14,
+            "title": "Comparing data sets"
+          },
+          {
+            "id": "ms_math_t13_st15",
+            "number": 15,
+            "title": "Drawing conclusions from data"
+          }
+        ],
+        "subtopicCount": 15
+      },
+      {
+        "id": "ms_math_t14",
+        "title": "Probability",
+        "subtopics": [
+          {
+            "id": "ms_math_t14_st01",
+            "number": 1,
+            "title": "Understanding probability"
+          },
+          {
+            "id": "ms_math_t14_st02",
+            "number": 2,
+            "title": "Outcomes and events"
+          },
+          {
+            "id": "ms_math_t14_st03",
+            "number": 3,
+            "title": "Sample spaces"
+          },
+          {
+            "id": "ms_math_t14_st04",
+            "number": 4,
+            "title": "Equally likely outcomes"
+          },
+          {
+            "id": "ms_math_t14_st05",
+            "number": 5,
+            "title": "Probability scales"
+          },
+          {
+            "id": "ms_math_t14_st06",
+            "number": 6,
+            "title": "Probability as fractions, decimals and percentages"
+          },
+          {
+            "id": "ms_math_t14_st07",
+            "number": 7,
+            "title": "Experimental probability"
+          },
+          {
+            "id": "ms_math_t14_st08",
+            "number": 8,
+            "title": "Theoretical probability"
+          },
+          {
+            "id": "ms_math_t14_st09",
+            "number": 9,
+            "title": "Complementary events"
+          },
+          {
+            "id": "ms_math_t14_st10",
+            "number": 10,
+            "title": "Comparing experimental and theoretical results"
+          },
+          {
+            "id": "ms_math_t14_st11",
+            "number": 11,
+            "title": "Simple two-stage experiments"
+          },
+          {
+            "id": "ms_math_t14_st12",
+            "number": 12,
+            "title": "Listing possible outcomes systematically"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "ms_math_t15",
+        "title": "Financial Mathematics and Applied Problem-Solving",
+        "subtopics": [
+          {
+            "id": "ms_math_t15_st01",
+            "number": 1,
+            "title": "Profit and loss"
+          },
+          {
+            "id": "ms_math_t15_st02",
+            "number": 2,
+            "title": "Discount and sale prices"
+          },
+          {
+            "id": "ms_math_t15_st03",
+            "number": 3,
+            "title": "Simple interest"
+          },
+          {
+            "id": "ms_math_t15_st04",
+            "number": 4,
+            "title": "Compound interest — introduction"
+          },
+          {
+            "id": "ms_math_t15_st05",
+            "number": 5,
+            "title": "Budgets and spending plans"
+          },
+          {
+            "id": "ms_math_t15_st06",
+            "number": 6,
+            "title": "Currency and exchange rates"
+          },
+          {
+            "id": "ms_math_t15_st07",
+            "number": 7,
+            "title": "Tax and service charges — introduction"
+          },
+          {
+            "id": "ms_math_t15_st08",
+            "number": 8,
+            "title": "Unit pricing and value for money"
+          },
+          {
+            "id": "ms_math_t15_st09",
+            "number": 9,
+            "title": "Bills, invoices and financial records"
+          },
+          {
+            "id": "ms_math_t15_st11",
+            "number": 11,
+            "title": "Multi-step real-life problems"
+          },
+          {
+            "id": "ms_math_t15_st12",
+            "number": 12,
+            "title": "Estimation and reasonableness checks"
+          },
+          {
+            "id": "ms_math_t15_st13",
+            "number": 13,
+            "title": "Logical reasoning and mathematical puzzles"
+          },
+          {
+            "id": "ms_math_t15_st14",
+            "number": 14,
+            "title": "Choosing suitable problem-solving strategies"
+          }
+        ],
+        "subtopicCount": 13
+      }
+    ]
+  },
+  "secondary": {
+    "level": "High School",
+    "pageTitle": "Secondary School Mathematics",
+    "topics": [
+      {
+        "id": "hs_math_t01",
+        "title": "Number Systems and Real Numbers",
+        "subtopics": [
+          {
+            "id": "hs_math_t01_st01",
+            "number": 1,
+            "title": "Natural numbers, integers and rational numbers"
+          },
+          {
+            "id": "hs_math_t01_st02",
+            "number": 2,
+            "title": "Irrational numbers"
+          },
+          {
+            "id": "hs_math_t01_st03",
+            "number": 3,
+            "title": "Real number system"
+          },
+          {
+            "id": "hs_math_t01_st04",
+            "number": 4,
+            "title": "Properties of real numbers"
+          },
+          {
+            "id": "hs_math_t01_st05",
+            "number": 5,
+            "title": "Number line and intervals"
+          },
+          {
+            "id": "hs_math_t01_st06",
+            "number": 6,
+            "title": "Absolute value and distance"
+          },
+          {
+            "id": "hs_math_t01_st07",
+            "number": 7,
+            "title": "Laws of exponents"
+          },
+          {
+            "id": "hs_math_t01_st08",
+            "number": 8,
+            "title": "Rational Exponents and Fractional Powers"
+          },
+          {
+            "id": "hs_math_t01_st09",
+            "number": 9,
+            "title": "Surds and simplifying radicals"
+          },
+          {
+            "id": "hs_math_t01_st10",
+            "number": 10,
+            "title": "Operations involving surds"
+          },
+          {
+            "id": "hs_math_t01_st11",
+            "number": 11,
+            "title": "Scientific notation and standard form"
+          },
+          {
+            "id": "hs_math_t01_st12",
+            "number": 12,
+            "title": "Approximation, significant figures and error bounds"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "hs_math_t02",
+        "title": "Sets, Relations and Functions",
+        "subtopics": [
+          {
+            "id": "hs_math_t02_st01",
+            "number": 1,
+            "title": "Set notation and representation"
+          },
+          {
+            "id": "hs_math_t02_st02",
+            "number": 2,
+            "title": "Types of sets"
+          },
+          {
+            "id": "hs_math_t02_st03",
+            "number": 3,
+            "title": "Subsets and power sets"
+          },
+          {
+            "id": "hs_math_t02_st04",
+            "number": 4,
+            "title": "Union, intersection, difference and complement"
+          },
+          {
+            "id": "hs_math_t02_st05",
+            "number": 5,
+            "title": "Venn diagrams"
+          },
+          {
+            "id": "hs_math_t02_st06",
+            "number": 6,
+            "title": "Cartesian products"
+          },
+          {
+            "id": "hs_math_t02_st07",
+            "number": 7,
+            "title": "Relations and ordered pairs"
+          },
+          {
+            "id": "hs_math_t02_st09",
+            "number": 8,
+            "title": "Definition of a function"
+          },
+          {
+            "id": "hs_math_t02_st08",
+            "number": 9,
+            "title": "Domain, codomain and range"
+          },
+          {
+            "id": "hs_math_t02_st10",
+            "number": 10,
+            "title": "Types of functions"
+          },
+          {
+            "id": "hs_math_t02_st11",
+            "number": 11,
+            "title": "Function notation and evaluation"
+          },
+          {
+            "id": "hs_math_t02_st12",
+            "number": 12,
+            "title": "Composite functions"
+          },
+          {
+            "id": "hs_math_t02_st13",
+            "number": 13,
+            "title": "Inverse functions"
+          },
+          {
+            "id": "hs_math_t02_st14",
+            "number": 14,
+            "title": "Transformations of function graphs"
+          }
+        ],
+        "subtopicCount": 14
+      },
+      {
+        "id": "hs_math_t03",
+        "title": "Algebraic Expressions and Factorisation",
+        "subtopics": [
+          {
+            "id": "hs_math_t03_st01",
+            "number": 1,
+            "title": "Algebraic terms and coefficients"
+          },
+          {
+            "id": "hs_math_t03_st02",
+            "number": 2,
+            "title": "Simplifying algebraic expressions"
+          },
+          {
+            "id": "hs_math_t03_st03",
+            "number": 3,
+            "title": "Expanding brackets"
+          },
+          {
+            "id": "hs_math_t03_st04",
+            "number": 4,
+            "title": "Algebraic identities"
+          },
+          {
+            "id": "hs_math_t03_st05",
+            "number": 5,
+            "title": "Factorisation by common factors"
+          },
+          {
+            "id": "hs_math_t03_st06",
+            "number": 6,
+            "title": "Factorisation by grouping"
+          },
+          {
+            "id": "hs_math_t03_st07",
+            "number": 7,
+            "title": "Factorising quadratic expressions"
+          },
+          {
+            "id": "hs_math_t03_st08",
+            "number": 8,
+            "title": "Difference of two squares"
+          },
+          {
+            "id": "hs_math_t03_st09",
+            "number": 9,
+            "title": "Perfect-square expressions"
+          },
+          {
+            "id": "hs_math_t03_st10",
+            "number": 10,
+            "title": "Simplifying rational algebraic expressions"
+          },
+          {
+            "id": "hs_math_t03_st11",
+            "number": 11,
+            "title": "Operations with algebraic fractions"
+          }
+        ],
+        "subtopicCount": 11
+      },
+      {
+        "id": "hs_math_t04",
+        "title": "Equations and Inequalities",
+        "subtopics": [
+          {
+            "id": "hs_math_t04_st01",
+            "number": 1,
+            "title": "Linear equations in one variable"
+          },
+          {
+            "id": "hs_math_t04_st02",
+            "number": 2,
+            "title": "Linear equations in two variables"
+          },
+          {
+            "id": "hs_math_t04_st03",
+            "number": 3,
+            "title": "Simultaneous linear equations"
+          },
+          {
+            "id": "hs_math_t04_st04",
+            "number": 4,
+            "title": "Graphical solutions of simultaneous equations"
+          },
+          {
+            "id": "hs_math_t04_st05",
+            "number": 5,
+            "title": "Substitution and elimination methods"
+          },
+          {
+            "id": "hs_math_t04_st06",
+            "number": 6,
+            "title": "Quadratic equations by factorisation"
+          },
+          {
+            "id": "hs_math_t04_st07",
+            "number": 7,
+            "title": "Completing the square"
+          },
+          {
+            "id": "hs_math_t04_st08",
+            "number": 8,
+            "title": "Quadratic formula"
+          },
+          {
+            "id": "hs_math_t04_st09",
+            "number": 9,
+            "title": "Nature of roots and discriminant"
+          },
+          {
+            "id": "hs_math_t04_st10",
+            "number": 10,
+            "title": "Linear inequalities"
+          },
+          {
+            "id": "hs_math_t04_st11",
+            "number": 11,
+            "title": "Compound inequalities"
+          },
+          {
+            "id": "hs_math_t04_st12",
+            "number": 12,
+            "title": "Quadratic inequalities"
+          },
+          {
+            "id": "hs_math_t04_st13",
+            "number": 13,
+            "title": "Equations involving rational expressions"
+          },
+          {
+            "id": "hs_math_t04_st14",
+            "number": 14,
+            "title": "Equations involving radicals"
+          },
+          {
+            "id": "hs_math_t04_st17",
+            "number": 15,
+            "title": "Equations and inequalities involving absolute values"
+          },
+          {
+            "id": "hs_math_t04_st15",
+            "number": 16,
+            "title": "Word problems using equations"
+          },
+          {
+            "id": "hs_math_t04_st16",
+            "number": 17,
+            "title": "Systems of equations and applications"
+          }
+        ],
+        "subtopicCount": 17
+      },
+      {
+        "id": "hs_math_t05",
+        "title": "Polynomials",
+        "subtopics": [
+          {
+            "id": "hs_math_t05_st01",
+            "number": 1,
+            "title": "Definition and classification of polynomials"
+          },
+          {
+            "id": "hs_math_t05_st02",
+            "number": 2,
+            "title": "Degree and coefficients"
+          },
+          {
+            "id": "hs_math_t05_st03",
+            "number": 3,
+            "title": "Addition and subtraction of polynomials"
+          },
+          {
+            "id": "hs_math_t05_st04",
+            "number": 4,
+            "title": "Multiplication of polynomials"
+          },
+          {
+            "id": "hs_math_t05_st05",
+            "number": 5,
+            "title": "Polynomial identities"
+          },
+          {
+            "id": "hs_math_t05_st06",
+            "number": 6,
+            "title": "Polynomial factorisation"
+          },
+          {
+            "id": "hs_math_t05_st07",
+            "number": 7,
+            "title": "Zeros and roots of polynomials"
+          },
+          {
+            "id": "hs_math_t05_st11",
+            "number": 8,
+            "title": "Polynomial division"
+          },
+          {
+            "id": "hs_math_t05_st09",
+            "number": 9,
+            "title": "Remainder theorem"
+          },
+          {
+            "id": "hs_math_t05_st10",
+            "number": 10,
+            "title": "Factor theorem"
+          },
+          {
+            "id": "hs_math_t05_st08",
+            "number": 11,
+            "title": "Relationship between roots and coefficients"
+          },
+          {
+            "id": "hs_math_t05_st12",
+            "number": 12,
+            "title": "Graphs of polynomial functions"
+          },
+          {
+            "id": "hs_math_t05_st13",
+            "number": 13,
+            "title": "Polynomial equations and applications"
+          }
+        ],
+        "subtopicCount": 13
+      },
+      {
+        "id": "hs_math_t06",
+        "title": "Sequences, Series and Mathematical Induction",
+        "subtopics": [
+          {
+            "id": "hs_math_t06_st01",
+            "number": 1,
+            "title": "Number sequences and patterns"
+          },
+          {
+            "id": "hs_math_t06_st02",
+            "number": 2,
+            "title": "Arithmetic sequences"
+          },
+          {
+            "id": "hs_math_t06_st03",
+            "number": 3,
+            "title": "Arithmetic series"
+          },
+          {
+            "id": "hs_math_t06_st04",
+            "number": 4,
+            "title": "Geometric sequences"
+          },
+          {
+            "id": "hs_math_t06_st05",
+            "number": 5,
+            "title": "Geometric series"
+          },
+          {
+            "id": "hs_math_t06_st07",
+            "number": 7,
+            "title": "Sigma notation"
+          },
+          {
+            "id": "hs_math_t06_st08",
+            "number": 8,
+            "title": "Finding the general term"
+          },
+          {
+            "id": "hs_math_t06_st09",
+            "number": 9,
+            "title": "Recursive sequences"
+          },
+          {
+            "id": "hs_math_t06_st10",
+            "number": 10,
+            "title": "Special Number Sequences and Patterns"
+          },
+          {
+            "id": "hs_math_t06_st12",
+            "number": 12,
+            "title": "Applications of sequences and series"
+          }
+        ],
+        "subtopicCount": 10
+      },
+      {
+        "id": "hs_math_t07",
+        "title": "Exponents, Logarithms and Exponential Functions",
+        "subtopics": [
+          {
+            "id": "hs_math_t07_st01",
+            "number": 1,
+            "title": "Advanced Applications of Exponent Laws"
+          },
+          {
+            "id": "hs_math_t07_st02",
+            "number": 2,
+            "title": "Irrational Exponents and Their Applications"
+          },
+          {
+            "id": "hs_math_t07_st03",
+            "number": 3,
+            "title": "Exponential expressions"
+          },
+          {
+            "id": "hs_math_t07_st05",
+            "number": 4,
+            "title": "Understanding logarithms"
+          },
+          {
+            "id": "hs_math_t07_st07",
+            "number": 5,
+            "title": "Converting between exponential and logarithmic forms"
+          },
+          {
+            "id": "hs_math_t07_st06",
+            "number": 6,
+            "title": "Laws of logarithms"
+          },
+          {
+            "id": "hs_math_t07_st04",
+            "number": 7,
+            "title": "Exponential equations"
+          },
+          {
+            "id": "hs_math_t07_st08",
+            "number": 8,
+            "title": "Solving logarithmic equations"
+          },
+          {
+            "id": "hs_math_t07_st09",
+            "number": 9,
+            "title": "Graphs of exponential functions"
+          },
+          {
+            "id": "hs_math_t07_st10",
+            "number": 10,
+            "title": "Graphs of logarithmic functions"
+          },
+          {
+            "id": "hs_math_t07_st11",
+            "number": 11,
+            "title": "Exponential growth and decay"
+          },
+          {
+            "id": "hs_math_t07_st12",
+            "number": 12,
+            "title": "Exponential and logarithmic scales in scientific contexts"
+          },
+          {
+            "id": "hs_math_t07_st13",
+            "number": 13,
+            "title": "Applications of logarithms"
+          }
+        ],
+        "subtopicCount": 13
+      },
+      {
+        "id": "hs_math_t08",
+        "title": "Coordinate Geometry",
+        "subtopics": [
+          {
+            "id": "hs_math_t08_st01",
+            "number": 1,
+            "title": "Cartesian coordinate system"
+          },
+          {
+            "id": "hs_math_t08_st02",
+            "number": 2,
+            "title": "Distance between two points"
+          },
+          {
+            "id": "hs_math_t08_st03",
+            "number": 3,
+            "title": "Midpoint formula"
+          },
+          {
+            "id": "hs_math_t08_st04",
+            "number": 4,
+            "title": "Gradient or slope of a line"
+          },
+          {
+            "id": "hs_math_t08_st05",
+            "number": 5,
+            "title": "Equation of a straight line"
+          },
+          {
+            "id": "hs_math_t08_st06",
+            "number": 6,
+            "title": "Slope-intercept form"
+          },
+          {
+            "id": "hs_math_t08_st07",
+            "number": 7,
+            "title": "Point-slope form"
+          },
+          {
+            "id": "hs_math_t08_st08",
+            "number": 8,
+            "title": "Parallel and perpendicular lines"
+          },
+          {
+            "id": "hs_math_t08_st09",
+            "number": 9,
+            "title": "Intercepts of a line"
+          },
+          {
+            "id": "hs_math_t08_st10",
+            "number": 10,
+            "title": "Distance from a point to a line"
+          },
+          {
+            "id": "hs_math_t08_st11",
+            "number": 11,
+            "title": "Area of a triangle using coordinates"
+          },
+          {
+            "id": "hs_math_t08_st12",
+            "number": 12,
+            "title": "Locus and geometric conditions"
+          },
+          {
+            "id": "hs_math_t08_st13",
+            "number": 13,
+            "title": "Circles in coordinate geometry"
+          },
+          {
+            "id": "hs_math_t08_st14",
+            "number": 14,
+            "title": "Equations of circles"
+          },
+          {
+            "id": "hs_math_t08_st15",
+            "number": 15,
+            "title": "Conic sections — introduction"
+          }
+        ],
+        "subtopicCount": 15
+      },
+      {
+        "id": "hs_math_t09",
+        "title": "Geometry and Euclidean Proof",
+        "subtopics": [
+          {
+            "id": "hs_math_t09_st01",
+            "number": 1,
+            "title": "Geometric definitions and notation"
+          },
+          {
+            "id": "hs_math_t09_st02",
+            "number": 2,
+            "title": "Angle properties"
+          },
+          {
+            "id": "hs_math_t09_st03",
+            "number": 3,
+            "title": "Parallel lines and transversals"
+          },
+          {
+            "id": "hs_math_t09_st04",
+            "number": 4,
+            "title": "Triangle properties"
+          },
+          {
+            "id": "hs_math_t09_st05",
+            "number": 5,
+            "title": "Congruence of triangles"
+          },
+          {
+            "id": "hs_math_t09_st06",
+            "number": 6,
+            "title": "Similarity of triangles"
+          },
+          {
+            "id": "hs_math_t09_st07",
+            "number": 7,
+            "title": "Quadrilaterals and polygons"
+          },
+          {
+            "id": "hs_math_t09_st08",
+            "number": 8,
+            "title": "Interior and exterior angles of polygons"
+          },
+          {
+            "id": "hs_math_t09_st09",
+            "number": 9,
+            "title": "Circle geometry"
+          },
+          {
+            "id": "hs_math_t09_st10",
+            "number": 10,
+            "title": "Chords, arcs and sectors"
+          },
+          {
+            "id": "hs_math_t09_st11",
+            "number": 11,
+            "title": "Angles subtended by chords"
+          },
+          {
+            "id": "hs_math_t09_st12",
+            "number": 12,
+            "title": "Tangents and secants"
+          },
+          {
+            "id": "hs_math_t09_st13",
+            "number": 13,
+            "title": "Geometric constructions"
+          },
+          {
+            "id": "hs_math_t09_st14",
+            "number": 14,
+            "title": "Pythagorean theorem and applications"
+          },
+          {
+            "id": "hs_math_t09_st15",
+            "number": 15,
+            "title": "Geometric proof and reasoning"
+          }
+        ],
+        "subtopicCount": 15
+      },
+      {
+        "id": "hs_math_t10",
+        "title": "Trigonometry",
+        "subtopics": [
+          {
+            "id": "hs_math_t10_st01",
+            "number": 1,
+            "title": "Angles in degrees and radians"
+          },
+          {
+            "id": "hs_math_t10_st02",
+            "number": 2,
+            "title": "Right-triangle trigonometric ratios"
+          },
+          {
+            "id": "hs_math_t10_st03",
+            "number": 3,
+            "title": "Sine, cosine and tangent"
+          },
+          {
+            "id": "hs_math_t10_st04",
+            "number": 4,
+            "title": "Reciprocal trigonometric ratios"
+          },
+          {
+            "id": "hs_math_t10_st08",
+            "number": 5,
+            "title": "Trigonometric ratios of special angles"
+          },
+          {
+            "id": "hs_math_t10_st05",
+            "number": 6,
+            "title": "Finding unknown sides and angles"
+          },
+          {
+            "id": "hs_math_t10_st06",
+            "number": 7,
+            "title": "Angles of elevation and depression"
+          },
+          {
+            "id": "hs_math_t10_st07",
+            "number": 8,
+            "title": "Bearings and navigation problems"
+          },
+          {
+            "id": "hs_math_t10_st16",
+            "number": 9,
+            "title": "Sine rule"
+          },
+          {
+            "id": "hs_math_t10_st17",
+            "number": 10,
+            "title": "Cosine rule"
+          },
+          {
+            "id": "hs_math_t10_st18",
+            "number": 11,
+            "title": "Area of a triangle using trigonometry"
+          },
+          {
+            "id": "hs_math_t10_st11",
+            "number": 12,
+            "title": "Unit circle"
+          },
+          {
+            "id": "hs_math_t10_st10",
+            "number": 13,
+            "title": "Trigonometric ratios in all quadrants"
+          },
+          {
+            "id": "hs_math_t10_st09",
+            "number": 14,
+            "title": "Trigonometric identities"
+          },
+          {
+            "id": "hs_math_t10_st12",
+            "number": 15,
+            "title": "Graphs of sine, cosine and tangent"
+          },
+          {
+            "id": "hs_math_t10_st13",
+            "number": 16,
+            "title": "Compound-angle identities"
+          },
+          {
+            "id": "hs_math_t10_st14",
+            "number": 17,
+            "title": "Double-angle identities"
+          },
+          {
+            "id": "hs_math_t10_st15",
+            "number": 18,
+            "title": "Trigonometric equations"
+          },
+          {
+            "id": "hs_math_t10_st19",
+            "number": 19,
+            "title": "Inverse trigonometric functions"
+          }
+        ],
+        "subtopicCount": 19
+      },
+      {
+        "id": "hs_math_t11",
+        "title": "Mensuration and Three-Dimensional Geometry",
+        "subtopics": [
+          {
+            "id": "hs_math_t11_st01",
+            "number": 1,
+            "title": "Perimeter and area of plane figures"
+          },
+          {
+            "id": "hs_math_t11_st02",
+            "number": 2,
+            "title": "Area of composite shapes"
+          },
+          {
+            "id": "hs_math_t11_st03",
+            "number": 3,
+            "title": "Circumference and area of circles"
+          },
+          {
+            "id": "hs_math_t11_st04",
+            "number": 4,
+            "title": "Arc length and sector area"
+          },
+          {
+            "id": "hs_math_t11_st05",
+            "number": 5,
+            "title": "Surface area of prisms"
+          },
+          {
+            "id": "hs_math_t11_st06",
+            "number": 6,
+            "title": "Volume of prisms"
+          },
+          {
+            "id": "hs_math_t11_st07",
+            "number": 7,
+            "title": "Cylinders"
+          },
+          {
+            "id": "hs_math_t11_st08",
+            "number": 8,
+            "title": "Cones"
+          },
+          {
+            "id": "hs_math_t11_st09",
+            "number": 9,
+            "title": "Spheres and hemispheres"
+          },
+          {
+            "id": "hs_math_t11_st10",
+            "number": 10,
+            "title": "Pyramids"
+          },
+          {
+            "id": "hs_math_t11_st11",
+            "number": 11,
+            "title": "Frustums — introduction"
+          },
+          {
+            "id": "hs_math_t11_st12",
+            "number": 12,
+            "title": "Composite three-dimensional solids"
+          },
+          {
+            "id": "hs_math_t11_st13",
+            "number": 13,
+            "title": "Similar solids and scale factors"
+          },
+          {
+            "id": "hs_math_t11_st14",
+            "number": 14,
+            "title": "Applications of mensuration"
+          }
+        ],
+        "subtopicCount": 14
+      },
+      {
+        "id": "hs_math_t12",
+        "title": "Vectors and Transformations",
+        "subtopics": [
+          {
+            "id": "hs_math_t12_st01",
+            "number": 1,
+            "title": "Scalar and vector quantities"
+          },
+          {
+            "id": "hs_math_t12_st02",
+            "number": 2,
+            "title": "Vector notation and representation"
+          },
+          {
+            "id": "hs_math_t12_st03",
+            "number": 3,
+            "title": "Magnitude and direction"
+          },
+          {
+            "id": "hs_math_t12_st04",
+            "number": 4,
+            "title": "Adding and subtracting vectors"
+          },
+          {
+            "id": "hs_math_t12_st05",
+            "number": 5,
+            "title": "Scalar multiplication of vectors"
+          },
+          {
+            "id": "hs_math_t12_st07",
+            "number": 6,
+            "title": "Components of a vector"
+          },
+          {
+            "id": "hs_math_t12_st06",
+            "number": 7,
+            "title": "Position vectors"
+          },
+          {
+            "id": "hs_math_t12_st08",
+            "number": 8,
+            "title": "Vector geometry"
+          },
+          {
+            "id": "hs_math_t12_st09",
+            "number": 9,
+            "title": "Dot product — introduction"
+          },
+          {
+            "id": "hs_math_t12_st10",
+            "number": 10,
+            "title": "Translation, reflection and rotation"
+          },
+          {
+            "id": "hs_math_t12_st11",
+            "number": 11,
+            "title": "Enlargement and scale factors"
+          },
+          {
+            "id": "hs_math_t12_st12",
+            "number": 12,
+            "title": "Matrices for geometric transformations — introduction"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "hs_math_t13",
+        "title": "Matrices and Determinants",
+        "subtopics": [
+          {
+            "id": "hs_math_t13_st01",
+            "number": 1,
+            "title": "Definition and types of matrices"
+          },
+          {
+            "id": "hs_math_t13_st02",
+            "number": 2,
+            "title": "Matrix dimensions and elements"
+          },
+          {
+            "id": "hs_math_t13_st03",
+            "number": 3,
+            "title": "Equality of matrices"
+          },
+          {
+            "id": "hs_math_t13_st04",
+            "number": 4,
+            "title": "Matrix addition and subtraction"
+          },
+          {
+            "id": "hs_math_t13_st05",
+            "number": 5,
+            "title": "Scalar multiplication"
+          },
+          {
+            "id": "hs_math_t13_st07",
+            "number": 6,
+            "title": "Identity and zero matrices"
+          },
+          {
+            "id": "hs_math_t13_st06",
+            "number": 7,
+            "title": "Matrix multiplication"
+          },
+          {
+            "id": "hs_math_t13_st08",
+            "number": 8,
+            "title": "Transpose of a matrix"
+          },
+          {
+            "id": "hs_math_t13_st09",
+            "number": 9,
+            "title": "Determinants of \\\\(2 \\times 2\\\\) matrices"
+          },
+          {
+            "id": "hs_math_t13_st10",
+            "number": 10,
+            "title": "Inverse of a \\\\(2 \\times 2\\\\) matrix"
+          },
+          {
+            "id": "hs_math_t13_st11",
+            "number": 11,
+            "title": "Solving simultaneous equations using matrices"
+          },
+          {
+            "id": "hs_math_t13_st12",
+            "number": 12,
+            "title": "Applications of matrices"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "hs_math_t14",
+        "title": "Permutations, Combinations and Counting",
+        "subtopics": [
+          {
+            "id": "hs_math_t14_st01",
+            "number": 1,
+            "title": "Fundamental counting principle"
+          },
+          {
+            "id": "hs_math_t14_st02",
+            "number": 2,
+            "title": "Factorials"
+          },
+          {
+            "id": "hs_math_t14_st03",
+            "number": 3,
+            "title": "Arrangements and permutations"
+          },
+          {
+            "id": "hs_math_t14_st04",
+            "number": 4,
+            "title": "Permutations with restrictions"
+          },
+          {
+            "id": "hs_math_t14_st05",
+            "number": 5,
+            "title": "Combinations"
+          },
+          {
+            "id": "hs_math_t14_st06",
+            "number": 6,
+            "title": "Permutations versus combinations"
+          },
+          {
+            "id": "hs_math_t14_st07",
+            "number": 7,
+            "title": "Counting with repetition"
+          },
+          {
+            "id": "hs_math_t14_st08",
+            "number": 8,
+            "title": "Circular permutations — introduction"
+          },
+          {
+            "id": "hs_math_t14_st10",
+            "number": 9,
+            "title": "Pascal’s triangle"
+          },
+          {
+            "id": "hs_math_t14_st09",
+            "number": 10,
+            "title": "Binomial theorem"
+          },
+          {
+            "id": "hs_math_t14_st11",
+            "number": 11,
+            "title": "Counting problems and applications"
+          }
+        ],
+        "subtopicCount": 11
+      },
+      {
+        "id": "hs_math_t15",
+        "title": "Probability",
+        "subtopics": [
+          {
+            "id": "hs_math_t15_st01",
+            "number": 1,
+            "title": "Sample spaces and events"
+          },
+          {
+            "id": "hs_math_t15_st02",
+            "number": 2,
+            "title": "Classical probability"
+          },
+          {
+            "id": "hs_math_t15_st03",
+            "number": 3,
+            "title": "Experimental probability"
+          },
+          {
+            "id": "hs_math_t15_st04",
+            "number": 4,
+            "title": "Complementary events"
+          },
+          {
+            "id": "hs_math_t15_st05",
+            "number": 5,
+            "title": "Mutually exclusive events"
+          },
+          {
+            "id": "hs_math_t15_st06",
+            "number": 6,
+            "title": "Independent and dependent events"
+          },
+          {
+            "id": "hs_math_t15_st11",
+            "number": 7,
+            "title": "Venn diagrams and probability"
+          },
+          {
+            "id": "hs_math_t15_st07",
+            "number": 8,
+            "title": "Addition rule of probability"
+          },
+          {
+            "id": "hs_math_t15_st09",
+            "number": 9,
+            "title": "Conditional probability"
+          },
+          {
+            "id": "hs_math_t15_st08",
+            "number": 10,
+            "title": "Multiplication rule of probability"
+          },
+          {
+            "id": "hs_math_t15_st10",
+            "number": 11,
+            "title": "Tree diagrams"
+          },
+          {
+            "id": "hs_math_t15_st12",
+            "number": 12,
+            "title": "Permutations and combinations in probability"
+          },
+          {
+            "id": "hs_math_t15_st13",
+            "number": 13,
+            "title": "Expected value"
+          },
+          {
+            "id": "hs_math_t15_st14",
+            "number": 14,
+            "title": "Binomial probability distribution — introduction"
+          }
+        ],
+        "subtopicCount": 14
+      },
+      {
+        "id": "hs_math_t16",
+        "title": "Statistics and Data Analysis",
+        "subtopics": [
+          {
+            "id": "hs_math_t16_st01",
+            "number": 1,
+            "title": "Types of data and sampling"
+          },
+          {
+            "id": "hs_math_t16_st02",
+            "number": 2,
+            "title": "Frequency distributions"
+          },
+          {
+            "id": "hs_math_t16_st03",
+            "number": 3,
+            "title": "Grouped data and class intervals"
+          },
+          {
+            "id": "hs_math_t16_st09",
+            "number": 4,
+            "title": "Histograms and frequency polygons"
+          },
+          {
+            "id": "hs_math_t16_st04",
+            "number": 5,
+            "title": "Mean, median and mode"
+          },
+          {
+            "id": "hs_math_t16_st05",
+            "number": 6,
+            "title": "Weighted mean"
+          },
+          {
+            "id": "hs_math_t16_st08",
+            "number": 7,
+            "title": "Quartiles and percentiles"
+          },
+          {
+            "id": "hs_math_t16_st06",
+            "number": 8,
+            "title": "Range and interquartile range"
+          },
+          {
+            "id": "hs_math_t16_st07",
+            "number": 9,
+            "title": "Variance and standard deviation"
+          },
+          {
+            "id": "hs_math_t16_st10",
+            "number": 10,
+            "title": "Cumulative frequency curves"
+          },
+          {
+            "id": "hs_math_t16_st11",
+            "number": 11,
+            "title": "Box-and-whisker plots"
+          },
+          {
+            "id": "hs_math_t16_st12",
+            "number": 12,
+            "title": "Scatter plots and correlation"
+          },
+          {
+            "id": "hs_math_t16_st13",
+            "number": 13,
+            "title": "Lines of best fit"
+          },
+          {
+            "id": "hs_math_t16_st14",
+            "number": 14,
+            "title": "Interpreting statistical information"
+          },
+          {
+            "id": "hs_math_t16_st15",
+            "number": 15,
+            "title": "Sampling bias and misleading representations"
+          }
+        ],
+        "subtopicCount": 15
+      },
+      {
+        "id": "hs_math_t17",
+        "title": "Introduction to Calculus",
+        "subtopics": [
+          {
+            "id": "hs_math_t17_st01",
+            "number": 1,
+            "title": "Understanding Limits"
+          },
+          {
+            "id": "hs_math_t17_st02",
+            "number": 2,
+            "title": "Limits from Graphs and Tables"
+          },
+          {
+            "id": "hs_math_t17_st03",
+            "number": 3,
+            "title": "Continuity — Introduction"
+          },
+          {
+            "id": "hs_math_t17_st04",
+            "number": 4,
+            "title": "Average and Instantaneous Rates of Change"
+          },
+          {
+            "id": "hs_math_t17_st05",
+            "number": 5,
+            "title": "Definition of a Derivative"
+          },
+          {
+            "id": "hs_math_t17_st06",
+            "number": 6,
+            "title": "Basic Rules of Differentiation"
+          },
+          {
+            "id": "hs_math_t17_st07",
+            "number": 7,
+            "title": "Derivatives of Polynomial Functions"
+          },
+          {
+            "id": "hs_math_t17_st12",
+            "number": 12,
+            "title": "Tangents and Gradients of Curves"
+          },
+          {
+            "id": "hs_math_t17_st13",
+            "number": 13,
+            "title": "Increasing and Decreasing Functions"
+          },
+          {
+            "id": "hs_math_t17_st14",
+            "number": 14,
+            "title": "Stationary Points — Introduction"
+          },
+          {
+            "id": "hs_math_t17_st16",
+            "number": 16,
+            "title": "Simple Indefinite Integrals"
+          }
+        ],
+        "subtopicCount": 11
+      },
+      {
+        "id": "hs_math_t18",
+        "title": "Financial Mathematics and Mathematical Modelling",
+        "subtopics": [
+          {
+            "id": "hs_math_t18_st01",
+            "number": 1,
+            "title": "Ratios, rates and proportions"
+          },
+          {
+            "id": "hs_math_t18_st02",
+            "number": 2,
+            "title": "Percentages and percentage change"
+          },
+          {
+            "id": "hs_math_t18_st03",
+            "number": 3,
+            "title": "Profit, loss and discount"
+          },
+          {
+            "id": "hs_math_t18_st04",
+            "number": 4,
+            "title": "Simple and compound interest"
+          },
+          {
+            "id": "hs_math_t18_st05",
+            "number": 5,
+            "title": "Depreciation and asset value"
+          },
+          {
+            "id": "hs_math_t18_st06",
+            "number": 6,
+            "title": "Loans and repayment calculations"
+          },
+          {
+            "id": "hs_math_t18_st07",
+            "number": 7,
+            "title": "Investments and returns"
+          },
+          {
+            "id": "hs_math_t18_st08",
+            "number": 8,
+            "title": "Currency conversion and exchange rates"
+          },
+          {
+            "id": "hs_math_t18_st09",
+            "number": 9,
+            "title": "Tax, inflation and purchasing power"
+          },
+          {
+            "id": "hs_math_t18_st13",
+            "number": 10,
+            "title": "Interpreting formulas and real-world data"
+          },
+          {
+            "id": "hs_math_t18_st10",
+            "number": 11,
+            "title": "Linear mathematical models"
+          },
+          {
+            "id": "hs_math_t18_st11",
+            "number": 12,
+            "title": "Quadratic models"
+          },
+          {
+            "id": "hs_math_t18_st12",
+            "number": 13,
+            "title": "Exponential growth and decay models"
+          },
+          {
+            "id": "hs_math_t18_st14",
+            "number": 14,
+            "title": "Optimisation and decision-making"
+          },
+          {
+            "id": "hs_math_t18_st15",
+            "number": 15,
+            "title": "Multi-step applied mathematical problems"
+          }
+        ],
+        "subtopicCount": 15
+      }
+    ]
+  },
+  "senior": {
+    "level": "Higher Secondary",
+    "pageTitle": "Senior Secondary Mathematics",
+    "topics": [
+      {
+        "id": "hss_math_t01",
+        "title": "Sets, Relations and Functions",
+        "subtopics": [
+          {
+            "id": "hss_math_t01_st01",
+            "number": 1,
+            "title": "Set notation and representation"
+          },
+          {
+            "id": "hss_math_t01_st02",
+            "number": 2,
+            "title": "Types of sets and subsets"
+          },
+          {
+            "id": "hss_math_t01_st03",
+            "number": 3,
+            "title": "Power sets"
+          },
+          {
+            "id": "hss_math_t01_st04",
+            "number": 4,
+            "title": "Union, intersection and difference of sets"
+          },
+          {
+            "id": "hss_math_t01_st05",
+            "number": 5,
+            "title": "Complement of a set"
+          },
+          {
+            "id": "hss_math_t01_st06",
+            "number": 6,
+            "title": "Venn diagrams and set identities"
+          },
+          {
+            "id": "hss_math_t01_st07",
+            "number": 7,
+            "title": "Cartesian products"
+          },
+          {
+            "id": "hss_math_t01_st08",
+            "number": 8,
+            "title": "Relations and their properties"
+          },
+          {
+            "id": "hss_math_t01_st09",
+            "number": 9,
+            "title": "Equivalence relations"
+          },
+          {
+            "id": "hss_math_t01_st10",
+            "number": 10,
+            "title": "Functions: domain, codomain and range"
+          },
+          {
+            "id": "hss_math_t01_st11",
+            "number": 11,
+            "title": "Types of functions: injective, surjective and bijective"
+          },
+          {
+            "id": "hss_math_t01_st12",
+            "number": 12,
+            "title": "Composition of functions"
+          },
+          {
+            "id": "hss_math_t01_st13",
+            "number": 13,
+            "title": "Inverse functions"
+          },
+          {
+            "id": "hss_math_t01_st14",
+            "number": 14,
+            "title": "Binary operations"
+          }
+        ],
+        "subtopicCount": 14
+      },
+      {
+        "id": "hss_math_t02",
+        "title": "Number Systems, Complex Numbers and Inequalities",
+        "subtopics": [
+          {
+            "id": "hss_math_t02_st01",
+            "number": 1,
+            "title": "Real numbers and their properties"
+          },
+          {
+            "id": "hss_math_t02_st02",
+            "number": 2,
+            "title": "Complex numbers and the imaginary unit"
+          },
+          {
+            "id": "hss_math_t02_st03",
+            "number": 3,
+            "title": "Algebra of complex numbers"
+          },
+          {
+            "id": "hss_math_t02_st05",
+            "number": 4,
+            "title": "Geometric representation of complex numbers"
+          },
+          {
+            "id": "hss_math_t02_st04",
+            "number": 5,
+            "title": "Conjugates and modulus of complex numbers"
+          },
+          {
+            "id": "hss_math_t02_st06",
+            "number": 6,
+            "title": "Polar form of complex numbers"
+          },
+          {
+            "id": "hss_math_t02_st07",
+            "number": 7,
+            "title": "De Moivre’s theorem"
+          },
+          {
+            "id": "hss_math_t02_st08",
+            "number": 8,
+            "title": "Powers and roots of complex numbers"
+          },
+          {
+            "id": "hss_math_t02_st09",
+            "number": 9,
+            "title": "Quadratic inequalities"
+          },
+          {
+            "id": "hss_math_t02_st10",
+            "number": 10,
+            "title": "Linear inequalities in two variables"
+          },
+          {
+            "id": "hss_math_t02_st11",
+            "number": 11,
+            "title": "Graphical representation of inequalities"
+          },
+          {
+            "id": "hss_math_t02_st12",
+            "number": 12,
+            "title": "Systems of inequalities"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "hss_math_t03",
+        "title": "Advanced Polynomial Algebra and Equations",
+        "subtopics": [
+          {
+            "id": "hss_math_t03_st01",
+            "number": 1,
+            "title": "Polynomial expressions and degree"
+          },
+          {
+            "id": "hss_math_t03_st02",
+            "number": 2,
+            "title": "Polynomial operations"
+          },
+          {
+            "id": "hss_math_t03_st03",
+            "number": 3,
+            "title": "Algebraic identities"
+          },
+          {
+            "id": "hss_math_t03_st07",
+            "number": 4,
+            "title": "Polynomial division"
+          },
+          {
+            "id": "hss_math_t03_st05",
+            "number": 5,
+            "title": "Remainder theorem"
+          },
+          {
+            "id": "hss_math_t03_st06",
+            "number": 6,
+            "title": "Factor theorem"
+          },
+          {
+            "id": "hss_math_t03_st04",
+            "number": 7,
+            "title": "Factorisation of polynomials"
+          },
+          {
+            "id": "hss_math_t03_st08",
+            "number": 8,
+            "title": "Zeros of polynomials"
+          },
+          {
+            "id": "hss_math_t03_st09",
+            "number": 9,
+            "title": "Relationship between zeros and coefficients"
+          },
+          {
+            "id": "hss_math_t03_st10",
+            "number": 10,
+            "title": "Symmetric expressions in roots"
+          },
+          {
+            "id": "hss_math_t03_st11",
+            "number": 11,
+            "title": "Polynomial equations"
+          },
+          {
+            "id": "hss_math_t03_st12",
+            "number": 12,
+            "title": "Applications of polynomial factorisation"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "hss_math_t04",
+        "title": "Matrices and Determinants",
+        "subtopics": [
+          {
+            "id": "hss_math_t04_st01",
+            "number": 1,
+            "title": "Definition and types of matrices"
+          },
+          {
+            "id": "hss_math_t04_st02",
+            "number": 2,
+            "title": "Order and equality of matrices"
+          },
+          {
+            "id": "hss_math_t04_st03",
+            "number": 3,
+            "title": "Addition and subtraction of matrices"
+          },
+          {
+            "id": "hss_math_t04_st04",
+            "number": 4,
+            "title": "Scalar multiplication"
+          },
+          {
+            "id": "hss_math_t04_st08",
+            "number": 5,
+            "title": "Identity and zero matrices"
+          },
+          {
+            "id": "hss_math_t04_st05",
+            "number": 6,
+            "title": "Matrix multiplication"
+          },
+          {
+            "id": "hss_math_t04_st06",
+            "number": 7,
+            "title": "Transpose of a matrix"
+          },
+          {
+            "id": "hss_math_t04_st07",
+            "number": 8,
+            "title": "Symmetric and skew-symmetric matrices"
+          },
+          {
+            "id": "hss_math_t04_st09",
+            "number": 9,
+            "title": "Determinants of square matrices"
+          },
+          {
+            "id": "hss_math_t04_st10",
+            "number": 10,
+            "title": "Properties of determinants"
+          },
+          {
+            "id": "hss_math_t04_st11",
+            "number": 11,
+            "title": "Minors and cofactors"
+          },
+          {
+            "id": "hss_math_t04_st12",
+            "number": 12,
+            "title": "Adjoint of a matrix"
+          },
+          {
+            "id": "hss_math_t04_st13",
+            "number": 13,
+            "title": "Inverse of a matrix"
+          },
+          {
+            "id": "hss_math_t04_st14",
+            "number": 14,
+            "title": "Solving simultaneous equations using matrices"
+          },
+          {
+            "id": "hss_math_t04_st15",
+            "number": 15,
+            "title": "Applications of matrices and determinants"
+          }
+        ],
+        "subtopicCount": 15
+      },
+      {
+        "id": "hss_math_t05",
+        "title": "Sequences and Series",
+        "subtopics": [
+          {
+            "id": "hss_math_t05_st01",
+            "number": 1,
+            "title": "Sequences and general terms"
+          },
+          {
+            "id": "hss_math_t05_st02",
+            "number": 2,
+            "title": "Arithmetic progressions"
+          },
+          {
+            "id": "hss_math_t05_st03",
+            "number": 3,
+            "title": "Sum of an arithmetic progression"
+          },
+          {
+            "id": "hss_math_t05_st04",
+            "number": 4,
+            "title": "Geometric progressions"
+          },
+          {
+            "id": "hss_math_t05_st05",
+            "number": 5,
+            "title": "Sum of a finite geometric progression"
+          },
+          {
+            "id": "hss_math_t05_st06",
+            "number": 6,
+            "title": "Infinite geometric series"
+          },
+          {
+            "id": "hss_math_t05_st07",
+            "number": 7,
+            "title": "Arithmetic and geometric means"
+          },
+          {
+            "id": "hss_math_t05_st08",
+            "number": 8,
+            "title": "Inserting arithmetic and geometric means"
+          },
+          {
+            "id": "hss_math_t05_st10",
+            "number": 9,
+            "title": "Sigma notation"
+          },
+          {
+            "id": "hss_math_t05_st11",
+            "number": 10,
+            "title": "Mathematical induction"
+          },
+          {
+            "id": "hss_math_t05_st09",
+            "number": 11,
+            "title": "Special series"
+          },
+          {
+            "id": "hss_math_t05_st12",
+            "number": 12,
+            "title": "Applications of sequences and series"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "hss_math_t06",
+        "title": "Permutations, Combinations and Binomial Theorem",
+        "subtopics": [
+          {
+            "id": "hss_math_t06_st01",
+            "number": 1,
+            "title": "Fundamental principle of counting"
+          },
+          {
+            "id": "hss_math_t06_st02",
+            "number": 2,
+            "title": "Factorials"
+          },
+          {
+            "id": "hss_math_t06_st03",
+            "number": 3,
+            "title": "Permutations"
+          },
+          {
+            "id": "hss_math_t06_st05",
+            "number": 4,
+            "title": "Combinations"
+          },
+          {
+            "id": "hss_math_t06_st06",
+            "number": 5,
+            "title": "Relationship between permutations and combinations"
+          },
+          {
+            "id": "hss_math_t06_st04",
+            "number": 6,
+            "title": "Permutations with restrictions"
+          },
+          {
+            "id": "hss_math_t06_st07",
+            "number": 7,
+            "title": "Circular arrangements"
+          },
+          {
+            "id": "hss_math_t06_st08",
+            "number": 8,
+            "title": "Counting with repetition"
+          },
+          {
+            "id": "hss_math_t06_st13",
+            "number": 9,
+            "title": "Applications of counting principles"
+          },
+          {
+            "id": "hss_math_t06_st12",
+            "number": 10,
+            "title": "Binomial coefficients and Pascal’s triangle"
+          },
+          {
+            "id": "hss_math_t06_st09",
+            "number": 11,
+            "title": "Binomial theorem for positive integer powers"
+          },
+          {
+            "id": "hss_math_t06_st10",
+            "number": 12,
+            "title": "General term of a binomial expansion"
+          },
+          {
+            "id": "hss_math_t06_st11",
+            "number": 13,
+            "title": "Middle terms in binomial expansions"
+          }
+        ],
+        "subtopicCount": 13
+      },
+      {
+        "id": "hss_math_t07",
+        "title": "Trigonometric Functions and Equations",
+        "subtopics": [
+          {
+            "id": "hss_math_t07_st01",
+            "number": 1,
+            "title": "Angles in degrees and radians"
+          },
+          {
+            "id": "hss_math_t07_st02",
+            "number": 2,
+            "title": "Unit circle and trigonometric functions"
+          },
+          {
+            "id": "hss_math_t07_st04",
+            "number": 3,
+            "title": "Signs of trigonometric functions in quadrants"
+          },
+          {
+            "id": "hss_math_t07_st05",
+            "number": 4,
+            "title": "Standard trigonometric values"
+          },
+          {
+            "id": "hss_math_t07_st03",
+            "number": 5,
+            "title": "Trigonometric functions of real numbers"
+          },
+          {
+            "id": "hss_math_t07_st06",
+            "number": 6,
+            "title": "Trigonometric identities"
+          },
+          {
+            "id": "hss_math_t07_st07",
+            "number": 7,
+            "title": "Compound-angle formulas"
+          },
+          {
+            "id": "hss_math_t07_st08",
+            "number": 8,
+            "title": "Double-angle and half-angle formulas"
+          },
+          {
+            "id": "hss_math_t07_st09",
+            "number": 9,
+            "title": "Product-to-sum and sum-to-product identities"
+          },
+          {
+            "id": "hss_math_t07_st10",
+            "number": 10,
+            "title": "Graphs of trigonometric functions"
+          },
+          {
+            "id": "hss_math_t07_st11",
+            "number": 11,
+            "title": "Periodicity and transformations"
+          },
+          {
+            "id": "hss_math_t07_st12",
+            "number": 12,
+            "title": "Inverse trigonometric functions"
+          },
+          {
+            "id": "hss_math_t07_st13",
+            "number": 13,
+            "title": "Principal values and domains"
+          },
+          {
+            "id": "hss_math_t07_st14",
+            "number": 14,
+            "title": "Trigonometric equations"
+          },
+          {
+            "id": "hss_math_t07_st15",
+            "number": 15,
+            "title": "Applications of trigonometry"
+          }
+        ],
+        "subtopicCount": 15
+      },
+      {
+        "id": "hss_math_t08",
+        "title": "Coordinate Geometry: Lines and Circles",
+        "subtopics": [
+          {
+            "id": "hss_math_t08_st01",
+            "number": 1,
+            "title": "Cartesian coordinate system"
+          },
+          {
+            "id": "hss_math_t08_st02",
+            "number": 2,
+            "title": "Distance and section formulas"
+          },
+          {
+            "id": "hss_math_t08_st03",
+            "number": 3,
+            "title": "Midpoint and centroid"
+          },
+          {
+            "id": "hss_math_t08_st04",
+            "number": 4,
+            "title": "Slope of a straight line"
+          },
+          {
+            "id": "hss_math_t08_st05",
+            "number": 5,
+            "title": "Different forms of a line equation"
+          },
+          {
+            "id": "hss_math_t08_st06",
+            "number": 6,
+            "title": "Angle between two lines"
+          },
+          {
+            "id": "hss_math_t08_st07",
+            "number": 7,
+            "title": "Parallel and perpendicular lines"
+          },
+          {
+            "id": "hss_math_t08_st08",
+            "number": 8,
+            "title": "Distance from a point to a line"
+          },
+          {
+            "id": "hss_math_t08_st09",
+            "number": 9,
+            "title": "Family of straight lines"
+          },
+          {
+            "id": "hss_math_t08_st11",
+            "number": 10,
+            "title": "Centre-radius form of a circle"
+          },
+          {
+            "id": "hss_math_t08_st10",
+            "number": 11,
+            "title": "General equation of a circle"
+          },
+          {
+            "id": "hss_math_t08_st13",
+            "number": 12,
+            "title": "Intersections of lines and circles"
+          },
+          {
+            "id": "hss_math_t08_st12",
+            "number": 13,
+            "title": "Equations of tangents to circles"
+          },
+          {
+            "id": "hss_math_t08_st14",
+            "number": 14,
+            "title": "Coordinate-based geometric problems"
+          }
+        ],
+        "subtopicCount": 14
+      },
+      {
+        "id": "hss_math_t09",
+        "title": "Conic Sections",
+        "subtopics": [
+          {
+            "id": "hss_math_t09_st01",
+            "number": 1,
+            "title": "Introduction to conic sections"
+          },
+          {
+            "id": "hss_math_t09_st02",
+            "number": 2,
+            "title": "Circle and its properties"
+          },
+          {
+            "id": "hss_math_t09_st04",
+            "number": 3,
+            "title": "Focus, directrix and eccentricity"
+          },
+          {
+            "id": "hss_math_t09_st03",
+            "number": 4,
+            "title": "Parabola and standard equations"
+          },
+          {
+            "id": "hss_math_t09_st05",
+            "number": 5,
+            "title": "Ellipse and standard equations"
+          },
+          {
+            "id": "hss_math_t09_st06",
+            "number": 6,
+            "title": "Foci, vertices and axes of an ellipse"
+          },
+          {
+            "id": "hss_math_t09_st07",
+            "number": 7,
+            "title": "Hyperbola and standard equations"
+          },
+          {
+            "id": "hss_math_t09_st08",
+            "number": 8,
+            "title": "Asymptotes of a hyperbola"
+          },
+          {
+            "id": "hss_math_t09_st09",
+            "number": 9,
+            "title": "Eccentricity of conic sections"
+          },
+          {
+            "id": "hss_math_t09_st10",
+            "number": 10,
+            "title": "General equations of conics"
+          },
+          {
+            "id": "hss_math_t09_st11",
+            "number": 11,
+            "title": "Tangents and normals to conics — introduction"
+          },
+          {
+            "id": "hss_math_t09_st12",
+            "number": 12,
+            "title": "Applications of conic sections"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "hss_math_t10",
+        "title": "Three-Dimensional Geometry and Vectors",
+        "subtopics": [
+          {
+            "id": "hss_math_t10_st01",
+            "number": 1,
+            "title": "Three-dimensional coordinate system"
+          },
+          {
+            "id": "hss_math_t10_st02",
+            "number": 2,
+            "title": "Distance between two points in 3D"
+          },
+          {
+            "id": "hss_math_t10_st03",
+            "number": 3,
+            "title": "Section formula in 3D"
+          },
+          {
+            "id": "hss_math_t10_st07",
+            "number": 4,
+            "title": "Vector notation and representation"
+          },
+          {
+            "id": "hss_math_t10_st08",
+            "number": 5,
+            "title": "Magnitude and direction of vectors"
+          },
+          {
+            "id": "hss_math_t10_st11",
+            "number": 6,
+            "title": "Position vectors"
+          },
+          {
+            "id": "hss_math_t10_st09",
+            "number": 7,
+            "title": "Vector addition and subtraction"
+          },
+          {
+            "id": "hss_math_t10_st10",
+            "number": 8,
+            "title": "Scalar multiplication"
+          },
+          {
+            "id": "hss_math_t10_st12",
+            "number": 9,
+            "title": "Dot product of vectors"
+          },
+          {
+            "id": "hss_math_t10_st14",
+            "number": 10,
+            "title": "Angles between vectors"
+          },
+          {
+            "id": "hss_math_t10_st13",
+            "number": 11,
+            "title": "Cross product of vectors"
+          },
+          {
+            "id": "hss_math_t10_st04",
+            "number": 12,
+            "title": "Direction ratios and direction cosines"
+          },
+          {
+            "id": "hss_math_t10_st05",
+            "number": 13,
+            "title": "Equations of lines in space"
+          },
+          {
+            "id": "hss_math_t10_st06",
+            "number": 14,
+            "title": "Angle between two lines in 3D"
+          },
+          {
+            "id": "hss_math_t10_st15",
+            "number": 15,
+            "title": "Applications of vectors and 3D geometry"
+          },
+          {
+            "id": "hss_math_t10_st16",
+            "number": 16,
+            "title": "Equations of planes and related geometry"
+          }
+        ],
+        "subtopicCount": 16
+      },
+      {
+        "id": "hss_math_t11",
+        "title": "Limits and Continuity",
+        "subtopics": [
+          {
+            "id": "hss_math_t11_st01",
+            "number": 1,
+            "title": "Concept of a limit"
+          },
+          {
+            "id": "hss_math_t11_st02",
+            "number": 2,
+            "title": "Limits from graphs and tables"
+          },
+          {
+            "id": "hss_math_t11_st03",
+            "number": 3,
+            "title": "Algebraic evaluation of limits"
+          },
+          {
+            "id": "hss_math_t11_st04",
+            "number": 4,
+            "title": "Standard limits"
+          },
+          {
+            "id": "hss_math_t11_st05",
+            "number": 5,
+            "title": "One-sided limits"
+          },
+          {
+            "id": "hss_math_t11_st06",
+            "number": 6,
+            "title": "Limits at infinity"
+          },
+          {
+            "id": "hss_math_t11_st07",
+            "number": 7,
+            "title": "Infinite limits and vertical asymptotes"
+          },
+          {
+            "id": "hss_math_t11_st08",
+            "number": 8,
+            "title": "Indeterminate forms — introductory"
+          },
+          {
+            "id": "hss_math_t11_st09",
+            "number": 9,
+            "title": "Continuity at a point"
+          },
+          {
+            "id": "hss_math_t11_st10",
+            "number": 10,
+            "title": "Continuity over an interval"
+          },
+          {
+            "id": "hss_math_t11_st11",
+            "number": 11,
+            "title": "Types of discontinuities"
+          },
+          {
+            "id": "hss_math_t11_st12",
+            "number": 12,
+            "title": "Properties of continuous functions"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "hss_math_t12",
+        "title": "Differentiation",
+        "subtopics": [
+          {
+            "id": "hss_math_t12_st01",
+            "number": 1,
+            "title": "Average and instantaneous rates of change"
+          },
+          {
+            "id": "hss_math_t12_st02",
+            "number": 2,
+            "title": "Derivative from first principles"
+          },
+          {
+            "id": "hss_math_t12_st03",
+            "number": 3,
+            "title": "Derivatives of standard functions"
+          },
+          {
+            "id": "hss_math_t12_st04",
+            "number": 4,
+            "title": "Power rule"
+          },
+          {
+            "id": "hss_math_t12_st05",
+            "number": 5,
+            "title": "Sum and difference rules"
+          },
+          {
+            "id": "hss_math_t12_st06",
+            "number": 6,
+            "title": "Product rule"
+          },
+          {
+            "id": "hss_math_t12_st07",
+            "number": 7,
+            "title": "Quotient rule"
+          },
+          {
+            "id": "hss_math_t12_st08",
+            "number": 8,
+            "title": "Chain rule"
+          },
+          {
+            "id": "hss_math_t12_st09",
+            "number": 9,
+            "title": "Derivatives of trigonometric functions"
+          },
+          {
+            "id": "hss_math_t12_st10",
+            "number": 10,
+            "title": "Derivatives of exponential functions"
+          },
+          {
+            "id": "hss_math_t12_st11",
+            "number": 11,
+            "title": "Derivatives of logarithmic functions"
+          },
+          {
+            "id": "hss_math_t12_st12",
+            "number": 12,
+            "title": "Implicit differentiation"
+          },
+          {
+            "id": "hss_math_t12_st13",
+            "number": 13,
+            "title": "Parametric differentiation"
+          },
+          {
+            "id": "hss_math_t12_st14",
+            "number": 14,
+            "title": "Second and higher derivatives"
+          },
+          {
+            "id": "hss_math_t12_st15",
+            "number": 15,
+            "title": "Logarithmic differentiation"
+          },
+          {
+            "id": "hss_math_t12_st16",
+            "number": 16,
+            "title": "Applications of differentiation"
+          }
+        ],
+        "subtopicCount": 16
+      },
+      {
+        "id": "hss_math_t13",
+        "title": "Applications of Derivatives",
+        "subtopics": [
+          {
+            "id": "hss_math_t13_st01",
+            "number": 1,
+            "title": "Rate of change"
+          },
+          {
+            "id": "hss_math_t13_st02",
+            "number": 2,
+            "title": "Equations of tangents and normals"
+          },
+          {
+            "id": "hss_math_t13_st03",
+            "number": 3,
+            "title": "Increasing and decreasing functions"
+          },
+          {
+            "id": "hss_math_t13_st04",
+            "number": 4,
+            "title": "Critical and stationary points"
+          },
+          {
+            "id": "hss_math_t13_st05",
+            "number": 5,
+            "title": "Local maxima and minima"
+          },
+          {
+            "id": "hss_math_t13_st06",
+            "number": 6,
+            "title": "First-derivative test"
+          },
+          {
+            "id": "hss_math_t13_st07",
+            "number": 7,
+            "title": "Second-derivative test"
+          },
+          {
+            "id": "hss_math_t13_st08",
+            "number": 8,
+            "title": "Optimisation problems"
+          },
+          {
+            "id": "hss_math_t13_st09",
+            "number": 9,
+            "title": "Approximation using differentials"
+          },
+          {
+            "id": "hss_math_t13_st10",
+            "number": 10,
+            "title": "Related rates — introduction"
+          },
+          {
+            "id": "hss_math_t13_st11",
+            "number": 11,
+            "title": "Curve sketching"
+          },
+          {
+            "id": "hss_math_t13_st12",
+            "number": 12,
+            "title": "Real-world applications of derivatives"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "hss_math_t14",
+        "title": "Integration",
+        "subtopics": [
+          {
+            "id": "hss_math_t14_st01",
+            "number": 1,
+            "title": "Antiderivatives and indefinite integrals"
+          },
+          {
+            "id": "hss_math_t14_st02",
+            "number": 2,
+            "title": "Basic integration formulas"
+          },
+          {
+            "id": "hss_math_t14_st03",
+            "number": 3,
+            "title": "Integration using substitution"
+          },
+          {
+            "id": "hss_math_t14_st04",
+            "number": 4,
+            "title": "Integration by parts"
+          },
+          {
+            "id": "hss_math_t14_st05",
+            "number": 5,
+            "title": "Integration using partial fractions"
+          },
+          {
+            "id": "hss_math_t14_st06",
+            "number": 6,
+            "title": "Integration using trigonometric identities"
+          },
+          {
+            "id": "hss_math_t14_st07",
+            "number": 7,
+            "title": "Definite integrals"
+          },
+          {
+            "id": "hss_math_t14_st08",
+            "number": 8,
+            "title": "Properties of definite integrals"
+          },
+          {
+            "id": "hss_math_t14_st09",
+            "number": 9,
+            "title": "Fundamental theorem of calculus"
+          },
+          {
+            "id": "hss_math_t14_st10",
+            "number": 10,
+            "title": "Symmetry properties of integrals"
+          },
+          {
+            "id": "hss_math_t14_st11",
+            "number": 11,
+            "title": "Numerical integration — introduction"
+          },
+          {
+            "id": "hss_math_t14_st12",
+            "number": 12,
+            "title": "Applications of integration"
+          }
+        ],
+        "subtopicCount": 12
+      },
+      {
+        "id": "hss_math_t15",
+        "title": "Applications of Integrals",
+        "subtopics": [
+          {
+            "id": "hss_math_t15_st01",
+            "number": 1,
+            "title": "Area under a curve"
+          },
+          {
+            "id": "hss_math_t15_st02",
+            "number": 2,
+            "title": "Area between a curve and an axis"
+          },
+          {
+            "id": "hss_math_t15_st03",
+            "number": 3,
+            "title": "Area between two curves"
+          },
+          {
+            "id": "hss_math_t15_st04",
+            "number": 4,
+            "title": "Areas bounded by lines and curves"
+          },
+          {
+            "id": "hss_math_t15_st05",
+            "number": 5,
+            "title": "Integration in geometric problems"
+          },
+          {
+            "id": "hss_math_t15_st06",
+            "number": 6,
+            "title": "Displacement from velocity"
+          },
+          {
+            "id": "hss_math_t15_st07",
+            "number": 7,
+            "title": "Accumulated change"
+          },
+          {
+            "id": "hss_math_t15_st08",
+            "number": 8,
+            "title": "Average value of a function — introduction"
+          },
+          {
+            "id": "hss_math_t15_st09",
+            "number": 9,
+            "title": "Setting up integrals from diagrams"
+          },
+          {
+            "id": "hss_math_t15_st10",
+            "number": 10,
+            "title": "Real-world applications of area and accumulation"
+          }
+        ],
+        "subtopicCount": 10
+      },
+      {
+        "id": "hss_math_t16",
+        "title": "Differential Equations",
+        "subtopics": [
+          {
+            "id": "hss_math_t16_st01",
+            "number": 1,
+            "title": "Introduction to differential equations"
+          },
+          {
+            "id": "hss_math_t16_st02",
+            "number": 2,
+            "title": "Order and degree"
+          },
+          {
+            "id": "hss_math_t16_st03",
+            "number": 3,
+            "title": "General and particular solutions"
+          },
+          {
+            "id": "hss_math_t16_st04",
+            "number": 4,
+            "title": "Formation of differential equations"
+          },
+          {
+            "id": "hss_math_t16_st05",
+            "number": 5,
+            "title": "Variable-separable differential equations"
+          },
+          {
+            "id": "hss_math_t16_st06",
+            "number": 6,
+            "title": "First-order linear differential equations"
+          },
+          {
+            "id": "hss_math_t16_st07",
+            "number": 7,
+            "title": "Initial-value problems"
+          },
+          {
+            "id": "hss_math_t16_st08",
+            "number": 8,
+            "title": "Exponential growth and decay models"
+          },
+          {
+            "id": "hss_math_t16_st09",
+            "number": 9,
+            "title": "Applications to physical and biological systems"
+          },
+          {
+            "id": "hss_math_t16_st10",
+            "number": 10,
+            "title": "Interpreting solutions and solution curves"
+          }
+        ],
+        "subtopicCount": 10
+      },
+      {
+        "id": "hss_math_t17",
+        "title": "Probability and Probability Distributions",
+        "subtopics": [
+          {
+            "id": "hss_math_t17_st01",
+            "number": 1,
+            "title": "Random experiments and sample spaces"
+          },
+          {
+            "id": "hss_math_t17_st02",
+            "number": 2,
+            "title": "Events and event operations"
+          },
+          {
+            "id": "hss_math_t17_st03",
+            "number": 3,
+            "title": "Axioms of probability"
+          },
+          {
+            "id": "hss_math_t17_st04",
+            "number": 4,
+            "title": "Addition rule of probability"
+          },
+          {
+            "id": "hss_math_t17_st05",
+            "number": 5,
+            "title": "Conditional probability"
+          },
+          {
+            "id": "hss_math_t17_st06",
+            "number": 6,
+            "title": "Independent events"
+          },
+          {
+            "id": "hss_math_t17_st07",
+            "number": 7,
+            "title": "Multiplication rule"
+          },
+          {
+            "id": "hss_math_t17_st08",
+            "number": 8,
+            "title": "Bayes’ theorem"
+          },
+          {
+            "id": "hss_math_t17_st09",
+            "number": 9,
+            "title": "Random variables"
+          },
+          {
+            "id": "hss_math_t17_st10",
+            "number": 10,
+            "title": "Probability distributions"
+          },
+          {
+            "id": "hss_math_t17_st11",
+            "number": 11,
+            "title": "Expected value and variance"
+          },
+          {
+            "id": "hss_math_t17_st12",
+            "number": 12,
+            "title": "Bernoulli trials"
+          },
+          {
+            "id": "hss_math_t17_st13",
+            "number": 13,
+            "title": "Binomial distribution"
+          },
+          {
+            "id": "hss_math_t17_st14",
+            "number": 14,
+            "title": "Applications of probability"
+          }
+        ],
+        "subtopicCount": 14
+      },
+      {
+        "id": "hss_math_t18",
+        "title": "Statistics and Mathematical Modelling",
+        "subtopics": [
+          {
+            "id": "hss_math_t18_st01",
+            "number": 1,
+            "title": "Data collection and sampling"
+          },
+          {
+            "id": "hss_math_t18_st02",
+            "number": 2,
+            "title": "Frequency distributions"
+          },
+          {
+            "id": "hss_math_t18_st03",
+            "number": 3,
+            "title": "Measures of central tendency"
+          },
+          {
+            "id": "hss_math_t18_st04",
+            "number": 4,
+            "title": "Variance and standard deviation"
+          },
+          {
+            "id": "hss_math_t18_st05",
+            "number": 5,
+            "title": "Correlation"
+          },
+          {
+            "id": "hss_math_t18_st06",
+            "number": 6,
+            "title": "Regression and lines of best fit"
+          },
+          {
+            "id": "hss_math_t18_st07",
+            "number": 7,
+            "title": "Interpreting statistical graphs"
+          },
+          {
+            "id": "hss_math_t18_st08",
+            "number": 8,
+            "title": "Mathematical modelling using equations"
+          },
+          {
+            "id": "hss_math_t18_st09",
+            "number": 9,
+            "title": "Linear and quadratic models"
+          },
+          {
+            "id": "hss_math_t18_st10",
+            "number": 10,
+            "title": "Exponential and logarithmic models"
+          },
+          {
+            "id": "hss_math_t18_st11",
+            "number": 11,
+            "title": "Optimisation and constraints"
+          },
+          {
+            "id": "hss_math_t18_st12",
+            "number": 12,
+            "title": "Modelling real-world situations"
+          },
+          {
+            "id": "hss_math_t18_st13",
+            "number": 13,
+            "title": "Checking assumptions and interpreting results"
+          }
+        ],
+        "subtopicCount": 13
+      }
+    ]
+  }
+}

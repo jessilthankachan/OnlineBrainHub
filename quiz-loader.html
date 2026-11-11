@@ -259,18 +259,28 @@
 
     async function initGame() {
       try {
-        if (!isDailyChallenge && (!dbSubject || !categoryName)) {
-          showLoadError('The quiz link is missing its subject or topic category. Return to the topic page and open the quiz again.');
-          return;
-        }
-        if (!isDailyChallenge && topicId && !dbLevel) {
-          showLoadError('The school level is missing from this quiz link. Please reopen the quiz from the Mathematics topic page.');
+        if (!isDailyChallenge && (!dbSubject || !categoryName || !dbLevel || !topicId)) {
+          showLoadError('The quiz link is missing its subject, category, school level or topic ID. Return to the topic page and open the quiz again.');
           return;
         }
 
-        let apiUrl = '/api/questions?nocache=' + Date.now();
-        if (dbSubject && !isDailyChallenge) apiUrl += '&subject=' + encodeURIComponent(dbSubject);
-        if (categoryName && !isDailyChallenge) apiUrl += '&category=' + encodeURIComponent(categoryName);
+        // Keep Daily Challenge on the existing Primary/general endpoint.
+        // Curriculum quizzes use the dedicated ID-based endpoint so D1 can
+        // apply the topic/subtopic indexes before returning question rows.
+        let apiUrl;
+        if (isDailyChallenge) {
+          apiUrl = '/api/questions?nocache=' + Date.now();
+        } else {
+          const apiParams = new URLSearchParams({
+            subject: dbSubject,
+            category: categoryName,
+            level: dbLevel,
+            topic_id: topicId
+          });
+          if (subtopicId) apiParams.set('subtopic_id', subtopicId);
+          if (targetDiff !== 'All') apiParams.set('difficulty', targetDiff);
+          apiUrl = '/api/questions-new?' + apiParams.toString();
+        }
 
         const response = await fetch(apiUrl, { cache: 'no-store' });
         if (!response.ok) throw new Error('Question database request failed (' + response.status + ').');
@@ -280,25 +290,9 @@
         if (isDailyChallenge) {
           gameQuestions = getDailyQuestions(rows, 5);
         } else {
-          // Use stable IDs whenever supplied. Never use partial-name matching.
-          let filtered = rows.filter(q => normalize(q.subject) === normalize(dbSubject)
-            && normalize(q.category) === normalize(categoryName));
-
-          if (dbLevel) filtered = filtered.filter(q => normalize(q.level) === normalize(dbLevel));
-
-          if (topicId) {
-            filtered = filtered.filter(q => String(q.topic_id || '') === topicId);
-          }
-          if (subtopicId) {
-            filtered = filtered.filter(q => String(q.subtopic_id || '') === subtopicId);
-          } else if (dbTopicName) {
-            filtered = filtered.filter(q => normalize(q.topic) === normalize(dbTopicName));
-          }
-
-          if (targetDiff !== 'All') {
-            filtered = filtered.filter(q => Number(q.difficulty) === Number(targetDiff));
-          }
-          gameQuestions = shuffle(filtered).slice(0, 10);
+          // The dedicated API has already applied subject/category/level/ID/
+          // difficulty filters in D1 and returns at most 10 random questions.
+          gameQuestions = shuffle(rows).slice(0, 10);
         }
 
         if (!gameQuestions.length) {

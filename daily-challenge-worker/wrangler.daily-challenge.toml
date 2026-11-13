@@ -1,0 +1,11 @@
+name = "obh-daily-challenge-scheduler"
+main = "src/index.js"
+compatibility_date = "2026-11-12"
+
+[triggers]
+crons = ["0 */6 * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "obh_qn_db"
+database_id = "04ea5396-cee4-46e1-923e-41d30cef39fd"

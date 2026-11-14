@@ -1,0 +1,1161 @@
+{
+  "subject": "math",
+  "topicId": "ms_math_t09",
+  "topicTitle": "Geometry: Lines, Angles and Polygons",
+  "grade": "Middle School",
+  "subtopics": {
+    "ms_math_t09_st01": {
+      "id": "ms_math_t09_st01",
+      "title": "Points, lines, rays and line segments",
+      "overview": "Before we can measure shapes or solve complex geometric puzzles, we need to understand the basic building blocks of geometry. Every shape and diagram is built from these four fundamental concepts.",
+      "key_concepts": [
+        {
+          "concept": "The Point",
+          "definition": "An exact, dimensionless location.",
+          "details": [
+            "It has no length, width, or height. We draw it as a dot and name it with a capital letter (e.g., Point $A$)."
+          ]
+        },
+        {
+          "concept": "The Line",
+          "definition": "A straight path that goes on forever.",
+          "details": [
+            "A line has no endpoints. It extends infinitely in both directions.",
+            "Written as $\\overleftrightarrow{AB}$."
+          ]
+        },
+        {
+          "concept": "The Line Segment",
+          "definition": "A measurable piece of a line.",
+          "details": [
+            "A line segment has two fixed endpoints. It stops on both sides.",
+            "Written as $\\overline{AB}$. Its length can be measured (e.g., $5\\text{ cm}$)."
+          ]
+        },
+        {
+          "concept": "The Ray",
+          "definition": "A path that starts and never stops.",
+          "details": [
+            "A ray has ONE endpoint and extends infinitely in ONE direction (like a laser pointer).",
+            "Written as $\\overrightarrow{AB}$. The first letter must be the starting point."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s01",
+          "title": "The Four Building Blocks of Geometry",
+          "type": "svg",
+          "caption": "Notice how the arrows dictate whether the path stops or continues forever.",
+          "alt_text": "Visual showing 4 geometric objects. 1. A dot labeled Point A. 2. A line with arrows on both ends passing through A and B, labeled Line. 3. A straight line stopping at dots A and B, labeled Line Segment. 4. A line starting at dot A and having an arrow past B, labeled Ray.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"100\" cy=\"60\" r=\"5\" fill=\"#0f172a\"/><text x=\"100\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#334155\" font-weight=\"bold\">Point A</text><path d=\"M 250 60 L 450 60\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><polygon points=\"250,60 260,55 260,65\" fill=\"#3b82f6\"/><polygon points=\"450,60 440,55 440,65\" fill=\"#3b82f6\"/><circle cx=\"300\" cy=\"60\" r=\"4\" fill=\"#1e3a8a\"/><circle cx=\"400\" cy=\"60\" r=\"4\" fill=\"#1e3a8a\"/><text x=\"300\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">A</text><text x=\"400\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">B</text><text x=\"350\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Line</text><path d=\"M 50 160 L 200 160\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"160\" r=\"5\" fill=\"#14532d\"/><circle cx=\"200\" cy=\"160\" r=\"5\" fill=\"#14532d\"/><text x=\"50\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">A</text><text x=\"200\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">B</text><text x=\"125\" y=\"140\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Line Segment</text><path d=\"M 300 160 L 450 160\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/><polygon points=\"450,160 440,155 440,165\" fill=\"#ea580c\"/><circle cx=\"300\" cy=\"160\" r=\"5\" fill=\"#9a3412\"/><circle cx=\"400\" cy=\"160\" r=\"4\" fill=\"#9a3412\"/><text x=\"300\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">A</text><text x=\"400\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">B</text><text x=\"375\" y=\"140\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">Ray</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Identify the object: A straight path between two trees measuring exactly $10$ meters.",
+          "solution_steps": [
+            "Step 1: The path is straight.",
+            "Step 2: It has two fixed endpoints (the two trees).",
+            "Step 3: Because it has endpoints and a measurable length, it is a line segment."
+          ],
+          "final_answer": "Line segment"
+        },
+        {
+          "problem": "What does the symbol $\\overrightarrow{XY}$ mean?",
+          "solution_steps": [
+            "Step 1: The symbol above the letters has one arrow pointing right.",
+            "Step 2: A symbol with one arrow represents a ray.",
+            "Step 3: The first letter ($X$) is the starting endpoint. It extends infinitely through $Y$."
+          ],
+          "final_answer": "A ray starting at $X$ and passing through $Y$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reversing ray notation.",
+          "correction": "$\\overrightarrow{AB}$ starts at $A$ and extends through $B$; $\\overrightarrow{BA}$ starts at $B$ and extends through $A$. The direction is determined by the order of the letters, not by whether the ray points right or left on the page."
+        },
+        {
+          "mistake": "Assuming a line can be measured.",
+          "correction": "In daily conversation, we say 'draw a line of $5\\text{ cm}$'. In geometry, this is mathematically incorrect. A true line is infinite. The correct term is 'draw a *line segment* of $5\\text{ cm}$'."
+        }
+      ],
+      "quick_summary": [
+        "**Point:** An exact spot (no dimensions).",
+        "**Line:** Infinite in both directions (arrows on both ends).",
+        "**Segment:** Fixed length (dots on both ends).",
+        "**Ray:** Infinite in one direction (dot on one end, arrow on the other)."
+      ]
+    },
+    "ms_math_t09_st02": {
+      "id": "ms_math_t09_st02",
+      "title": "Parallel and perpendicular lines",
+      "overview": "Lines can meet, stay apart, or meet at a right angle. Recognising these relationships helps us describe diagrams accurately and apply angle rules in later geometry problems.",
+      "key_concepts": [
+        {
+          "concept": "Parallel Lines",
+          "definition": "Lines in the same plane that never meet, even when extended.",
+          "details": [
+            "Parallel lines remain the same perpendicular distance apart at every point.",
+            "They are marked with matching arrow symbols in diagrams and written using the symbol $\\parallel$, for example $l \\parallel m$.",
+            "Railway tracks are a useful real-world model, although actual tracks are not perfect mathematical lines."
+          ]
+        },
+        {
+          "concept": "Perpendicular Lines",
+          "definition": "Lines that intersect to form a right angle of $90^\\circ$.",
+          "details": [
+            "Perpendicular lines meet at exactly $90^\\circ$.",
+            "The small square in a geometry diagram marks a right angle.",
+            "The symbol $\\perp$ is used for perpendicular lines, for example $p \\perp q$."
+          ]
+        },
+        {
+          "concept": "Intersecting Lines",
+          "definition": "Lines that cross at one point.",
+          "details": [
+            "Intersecting lines meet at a point, but they are not necessarily perpendicular.",
+            "They are perpendicular only when the angle at the intersection is $90^\\circ$.",
+            "In plane geometry, two distinct parallel lines do not intersect."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s02_parallel_perpendicular",
+          "title": "Parallel and Perpendicular Lines",
+          "type": "svg",
+          "caption": "Parallel lines do not meet; perpendicular lines meet at a right angle.",
+          "alt_text": "Two panels. The first shows two horizontal parallel lines labelled l and m with matching arrow marks. The second shows a horizontal line p and a vertical line q meeting at a right angle marked by a square.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 230\"><rect width=\"560\" height=\"230\" rx=\"12\" fill=\"#f8fafc\"/><rect x=\"18\" y=\"18\" width=\"250\" height=\"194\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><rect x=\"292\" y=\"18\" width=\"250\" height=\"194\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"143\" y=\"48\" font-family=\"sans-serif\" font-size=\"18\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1e3a8a\">Parallel</text><text x=\"417\" y=\"48\" font-family=\"sans-serif\" font-size=\"18\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#166534\">Perpendicular</text><line x1=\"55\" y1=\"100\" x2=\"230\" y2=\"100\" stroke=\"#2563eb\" stroke-width=\"4\"/><line x1=\"55\" y1=\"160\" x2=\"230\" y2=\"160\" stroke=\"#2563eb\" stroke-width=\"4\"/><path d=\"M55 100 l12 -6 v12 z M230 100 l-12 -6 v12 z M55 160 l12 -6 v12 z M230 160 l-12 -6 v12 z\" fill=\"#2563eb\"/><text x=\"240\" y=\"104\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e40af\">l</text><text x=\"240\" y=\"164\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e40af\">m</text><line x1=\"330\" y1=\"130\" x2=\"510\" y2=\"130\" stroke=\"#16a34a\" stroke-width=\"4\"/><line x1=\"420\" y1=\"65\" x2=\"420\" y2=\"195\" stroke=\"#16a34a\" stroke-width=\"4\"/><path d=\"M420 130 h-18 v-18\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"3\"/><text x=\"515\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#166534\">p</text><text x=\"428\" y=\"72\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#166534\">q</text><text x=\"143\" y=\"192\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">l and m are parallel</text><text x=\"417\" y=\"204\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">Meet at 90 degrees</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Lines $a$ and $b$ lie in the same plane and never meet, even when extended. What is their relationship?",
+          "solution_steps": [
+            "Step 1: Parallel lines in the same plane never intersect.",
+            "Step 2: The two lines satisfy this condition."
+          ],
+          "final_answer": "$a \\parallel b$; the lines are parallel."
+        },
+        {
+          "problem": "Two lines meet and form an angle of $90^\\circ$. What is their relationship?",
+          "solution_steps": [
+            "Step 1: Perpendicular lines meet at a right angle.",
+            "Step 2: The angle is exactly $90^\\circ$."
+          ],
+          "final_answer": "The lines are perpendicular."
+        },
+        {
+          "problem": "Two lines cross at an angle of $65^\\circ$. Are they perpendicular?",
+          "solution_steps": [
+            "Step 1: Intersecting lines meet, but this alone does not make them perpendicular.",
+            "Step 2: Perpendicular lines must form a $90^\\circ$ angle.",
+            "Step 3: Since $65^\\circ \\ne 90^\\circ$, the lines are not perpendicular."
+          ],
+          "final_answer": "No. They intersect, but they are not perpendicular."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming that every pair of intersecting lines is perpendicular.",
+          "correction": "Intersecting lines can form many different angles. They are perpendicular only when the angle at the intersection is exactly $90^\\circ$."
+        },
+        {
+          "mistake": "Thinking parallel lines are simply lines that do not meet in the part of the diagram shown.",
+          "correction": "Parallel lines in a plane remain the same distance apart and never meet, even when extended indefinitely."
+        }
+      ],
+      "quick_summary": [
+        "Parallel lines in the same plane never meet: $l \\parallel m$.",
+        "Perpendicular lines meet at $90^\\circ$: $p \\perp q$.",
+        "All perpendicular lines intersect, but not all intersecting lines are perpendicular."
+      ]
+    },
+    "ms_math_t09_st03": {
+      "id": "ms_math_t09_st03",
+      "title": "Types of angles",
+      "overview": "An angle measures the amount of turn between two rays with a common endpoint. This lesson introduces angle vocabulary, naming and protractor measurement, then classifies angles by their degree measures.",
+      "key_concepts": [
+        {
+          "concept": "The Anatomy of an Angle",
+          "definition": "Vertices and Arms.",
+          "details": [
+            "**Vertex:** The exact point where the two lines meet (the corner).",
+            "**Arms:** The two straight lines or rays that form the angle.",
+            "Angles are named using three letters, with the vertex ALWAYS in the middle (e.g., $\\angle AOB$ means $O$ is the corner)."
+          ]
+        },
+        {
+          "concept": "Degrees ($\\circ$)",
+          "definition": "The unit of rotation.",
+          "details": [
+            "A full circle (a complete turn) is $360^\\circ$.",
+            "A half turn (a straight line) is $180^\\circ$.",
+            "A quarter turn (a perfect corner) is $90^\\circ$."
+          ]
+        },
+        {
+          "concept": "Using a Protractor",
+          "definition": "The tool for measuring angles.",
+          "details": [
+            "Place the center cross/hole exactly on the vertex.",
+            "Align the $0^\\circ$ baseline exactly over one arm.",
+            "Read up from $0$ along the correct scale (inner or outer) to see where the second arm points."
+          ]
+        },
+        {
+          "concept": "The Three Main Sizes",
+          "definition": "Smaller than $90$, exactly $90$, or larger than $90$.",
+          "details": [
+            "**Acute Angle:** Greater than $0^{\\circ}$ but strictly less than $90^{\\circ}$. (Sharp and pointy).",
+            "**Right Angle:** Exactly $90^{\\circ}$. (A perfect square corner).",
+            "**Obtuse Angle:** Greater than $90^{\\circ}$ but strictly less than $180^{\\circ}$. (Wide and open)."
+          ]
+        },
+        {
+          "concept": "The Straight and Beyond",
+          "definition": "Angles $180^{\\circ}$ and larger.",
+          "details": [
+            "**Straight Angle:** Exactly $180^{\\circ}$. (A perfectly flat line).",
+            "**Reflex Angle:** Greater than $180^{\\circ}$ but less than $360^{\\circ}$. (Bending back on itself).",
+            "**Complete Angle:** Exactly $360^{\\circ}$. (A full circle)."
+          ]
+        },
+        {
+          "concept": "The Reflex Relationship",
+          "definition": "Two angles make a circle.",
+          "details": [
+            "For two distinct rays that are not opposite, the smaller angle and the reflex angle together make one complete turn.",
+            "Their measures add to $360^\\circ$.",
+            "$\\text{Reflex Angle} = 360^\\circ - \\text{Smaller Angle}$. A straight angle of exactly $180^\\circ$ is not classified as a reflex angle."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Reflex Angle",
+          "equation": "$$R=360^\\circ-\\theta$$",
+          "variables": {
+            "R": "Reflex angle, when the smaller angle $\\theta$ is less than $180^\\circ$"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s03_types",
+          "title": "The Angle Families",
+          "type": "svg",
+          "caption": "Classify an angle by comparing its measure with 90°, 180° and 360°; the inequalities are strict.",
+          "alt_text": "Six cards show acute angles between 0 and 90 degrees, a right angle of 90 degrees, an obtuse angle between 90 and 180 degrees, a straight angle of 180 degrees, a reflex angle between 180 and 360 degrees, and a complete angle of 360 degrees.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 250\"><rect width=\"600\" height=\"250\" rx=\"12\" fill=\"#f8fafc\"/><g font-family=\"sans-serif\" text-anchor=\"middle\"><rect x=\"15\" y=\"18\" width=\"180\" height=\"98\" rx=\"9\" fill=\"#dbeafe\" stroke=\"#60a5fa\"/><text x=\"105\" y=\"47\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e3a8a\">Acute</text><text x=\"105\" y=\"78\" font-size=\"16\" fill=\"#1e40af\">0° &lt; angle &lt; 90°</text><path d=\"M65 102 L105 102 L95 75\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><rect x=\"210\" y=\"18\" width=\"180\" height=\"98\" rx=\"9\" fill=\"#dcfce7\" stroke=\"#4ade80\"/><text x=\"300\" y=\"47\" font-size=\"18\" font-weight=\"bold\" fill=\"#166534\">Right</text><text x=\"300\" y=\"78\" font-size=\"16\" fill=\"#166534\">90°</text><path d=\"M260 102 L340 102 L340 62\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"3\"/><path d=\"M328 102 v-12 h12\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"2\"/><rect x=\"405\" y=\"18\" width=\"180\" height=\"98\" rx=\"9\" fill=\"#ffedd5\" stroke=\"#fb923c\"/><text x=\"495\" y=\"47\" font-size=\"18\" font-weight=\"bold\" fill=\"#9a3412\">Obtuse</text><text x=\"495\" y=\"78\" font-size=\"16\" fill=\"#9a3412\">90° &lt; angle &lt; 180°</text><path d=\"M450 102 L535 102 L475 70\" fill=\"none\" stroke=\"#c2410c\" stroke-width=\"3\"/><rect x=\"15\" y=\"132\" width=\"180\" height=\"98\" rx=\"9\" fill=\"#ede9fe\" stroke=\"#a78bfa\"/><text x=\"105\" y=\"161\" font-size=\"18\" font-weight=\"bold\" fill=\"#5b21b6\">Straight</text><text x=\"105\" y=\"192\" font-size=\"16\" fill=\"#5b21b6\">180°</text><path d=\"M55 210 L155 210\" fill=\"none\" stroke=\"#6d28d9\" stroke-width=\"3\"/><rect x=\"210\" y=\"132\" width=\"180\" height=\"98\" rx=\"9\" fill=\"#fce7f3\" stroke=\"#f472b6\"/><text x=\"300\" y=\"161\" font-size=\"18\" font-weight=\"bold\" fill=\"#9d174d\">Reflex</text><text x=\"300\" y=\"192\" font-size=\"16\" fill=\"#9d174d\">180° &lt; angle &lt; 360°</text><rect x=\"405\" y=\"132\" width=\"180\" height=\"98\" rx=\"9\" fill=\"#e0f2fe\" stroke=\"#38bdf8\"/><text x=\"495\" y=\"161\" font-size=\"18\" font-weight=\"bold\" fill=\"#075985\">Complete</text><text x=\"495\" y=\"192\" font-size=\"16\" fill=\"#075985\">360° (full turn)</text><circle cx=\"495\" cy=\"210\" r=\"14\" fill=\"none\" stroke=\"#0369a1\" stroke-width=\"3\"/><path d=\"M495 196 l-5 7 h10 z\" fill=\"#0369a1\"/></g></svg>"
+        },
+        {
+          "visual_id": "v09_s03_protractor",
+          "title": "Measuring an Angle with a Protractor",
+          "type": "svg",
+          "caption": "Place the protractor centre at the vertex, align the zero baseline with one arm, and read the scale that begins at that zero.",
+          "alt_text": "A protractor is aligned at a vertex. One arm follows the zero baseline and the other arm indicates an angle of 65 degrees.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\"><rect width=\"520\" height=\"230\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M90 175 A130 130 0 0 1 350 175\" fill=\"#dbeafe\" fill-opacity=\"0.65\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M110 175 A110 110 0 0 1 330 175\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"1\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M110 175 l0 -12 M132 111 l-7 -10 M177 61 l-10 -7 M220 45 l0 -13 M263 61 l10 -7 M308 111 l7 -10 M330 175 l0 -12\"/></g><line x1=\"90\" y1=\"175\" x2=\"350\" y2=\"175\" stroke=\"#0f172a\" stroke-width=\"4\"/><line x1=\"220\" y1=\"175\" x2=\"275\" y2=\"57\" stroke=\"#2563eb\" stroke-width=\"4\"/><path d=\"M265 175 A45 45 0 0 0 239 134\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"275\" y=\"130\" font-family=\"sans-serif\" font-size=\"20\" font-weight=\"bold\" fill=\"#c2410c\">65°</text><circle cx=\"220\" cy=\"175\" r=\"5\" fill=\"#0f172a\"/><text x=\"220\" y=\"204\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Vertex</text><text x=\"355\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\">0° baseline</text><text x=\"277\" y=\"48\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\">Second arm</text><text x=\"220\" y=\"22\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1e3a8a\">Measuring an angle with a protractor</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "You measure an angle with a protractor. The baseline is on the right-hand zero. The other arm passes through $65$ on the inner scale and $115$ on the outer scale. What is the angle?",
+          "solution_steps": [
+            "Step 1: Check which zero the baseline is aligned with.",
+            "Step 2: If the baseline is on the inner zero, you must read the numbers on the inner scale.",
+            "Step 3: Following the inner scale up from $0$, the arm stops at $65$."
+          ],
+          "final_answer": "$65^{\\circ}$"
+        },
+        {
+          "problem": "An angle measures $135^{\\circ}$. What type of angle is it?",
+          "solution_steps": [
+            "Step 1: Check the rules. $135^{\\circ}$ is greater than $90^{\\circ}$.",
+            "Step 2: $135^{\\circ}$ is less than $180^{\\circ}$.",
+            "Step 3: Angles between $90$ and $180$ are obtuse."
+          ],
+          "final_answer": "Obtuse angle"
+        },
+        {
+          "problem": "The smaller angle between two arms is $75^{\\circ}$. What is the reflex angle?",
+          "solution_steps": [
+            "Step 1: The smaller angle and the reflex angle make a complete circle ($360^{\\circ}$).",
+            "Step 2: Subtract the smaller angle from $360^{\\circ}$.",
+            "Step 3: $360^{\\circ} - 75^{\\circ} = 285^{\\circ}$."
+          ],
+          "final_answer": "$285^{\\circ}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking longer arms mean a bigger angle.",
+          "correction": "The length of the arms has absolutely no effect on the angle. An angle measures the amount of ROTATION between the lines, not their length."
+        },
+        {
+          "mistake": "Reading the wrong scale on a protractor.",
+          "correction": "A protractor has two numbered scales. Start at the zero mark aligned with the baseline and read the scale that starts at that zero. Do not choose a scale based only on whether it is printed on the inner or outer edge."
+        },
+        {
+          "mistake": "Calling a $90^{\\circ}$ angle an 'acute' angle.",
+          "correction": "Acute means strictly LESS than $90^{\\circ}$. $89.9^{\\circ}$ is acute. $90^{\\circ}$ is exactly a Right Angle."
+        },
+        {
+          "mistake": "Calling a $180^{\\circ}$ angle 'obtuse'.",
+          "correction": "Obtuse means strictly LESS than $180^{\\circ}$. Exactly $180^{\\circ}$ is a Straight Angle."
+        }
+      ],
+      "quick_summary": [
+        "Angles measure the turn between two rays meeting at a vertex.",
+        "A full turn is $360^{\\circ}$.",
+        "Name an angle using 3 letters (Vertex in the middle) or just the vertex letter if it's the only angle there.",
+        "Always align the protractor center to the vertex and start reading from $0^{\\circ}$.",
+        "Acute: $0 < x < 90$",
+        "Right: $x = 90$",
+        "Obtuse: $90 < x < 180$",
+        "Straight: $x = 180$",
+        "Reflex: $180 < x < 360$",
+        "Every interior angle has a matching exterior reflex angle that completes the $360^{\\circ}$ circle."
+      ]
+    },
+    "ms_math_t09_st04": {
+      "id": "ms_math_t09_st04",
+      "title": "Complementary and supplementary angles",
+      "overview": "Sometimes angles work together in pairs to form perfectly neat geometric shapes. By knowing how certain angle pairs combine to make right angles or straight lines, you can easily calculate missing measurements without a protractor.",
+      "key_concepts": [
+        {
+          "concept": "Complementary Angles",
+          "definition": "Two angles that add up to exactly 90°.",
+          "details": [
+            "Together, they form a perfect Right Angle.",
+            "Example: $30^\\circ$ and $60^\\circ$ are complementary."
+          ]
+        },
+        {
+          "concept": "Supplementary Angles",
+          "definition": "Two angles that add up to exactly 180°.",
+          "details": [
+            "Together, they form a Straight Angle (a flat line).",
+            "Example: $60^\\circ$ and $120^\\circ$ are supplementary."
+          ]
+        },
+        {
+          "concept": "Adjacent Angles",
+          "definition": "Angles that are right next to each other.",
+          "details": [
+            "Adjacent angles share a common vertex and one common arm between them, without overlapping.",
+            "Note: Complementary and supplementary angles do NOT have to be adjacent. They just need to mathematically add up to the correct total."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Complementary Angle Pair",
+          "equation": "$$ \\text{Angle 1} + \\text{Angle 2} = 90^\\circ $$",
+          "variables": {}
+        },
+        {
+          "name": "Supplementary Angle Pair",
+          "equation": "$$ \\text{Angle 1} + \\text{Angle 2} = 180^\\circ $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s04",
+          "title": "Complementary vs Supplementary",
+          "type": "svg",
+          "caption": "Complementary angles make a corner (90°). Supplementary angles make a flat line (180°).",
+          "alt_text": "Visual splitting the screen. Left side: Complementary Angles. A right angle split into 40 degrees and 50 degrees. Right side: Supplementary Angles. A straight line split into 40 degrees and 140 degrees.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"220\" height=\"160\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"130\" y=\"45\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Complementary</text><path d=\"M 60 140 L 130 140\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><path d=\"M 60 140 L 60 70\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><path d=\"M 60 140 L 115 85\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><path d=\"M 80 140 A 20 20 0 0 0 75 125\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"100\" y=\"125\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">50°</text><path d=\"M 75 125 A 25 25 0 0 0 60 115\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><text x=\"85\" y=\"100\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">40°</text><text x=\"130\" y=\"165\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#64748b\" font-weight=\"bold\">Total = 90°</text><rect x=\"260\" y=\"20\" width=\"220\" height=\"160\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"370\" y=\"45\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Supplementary</text><path d=\"M 290 140 L 450 140\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><path d=\"M 370 140 L 300 70\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><path d=\"M 400 140 A 30 30 0 0 0 355 125\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"405\" y=\"120\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">140°</text><path d=\"M 355 125 A 30 30 0 0 0 340 140\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><text x=\"335\" y=\"130\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">40°</text><text x=\"370\" y=\"165\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#64748b\" font-weight=\"bold\">Total = 180°</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "One angle is $35^\\circ$. Find its complementary angle.",
+          "solution_steps": [
+            "Step 1: Complementary angles add up to $90^\\circ$.",
+            "Step 2: Subtract the known angle from $90^\\circ$: $90^\\circ - 35^\\circ = 55^\\circ$."
+          ],
+          "final_answer": "$55^\\circ$"
+        },
+        {
+          "problem": "Two angles are supplementary. One is $x$, and the other is $115^\\circ$. Find $x$.",
+          "solution_steps": [
+            "Step 1: Supplementary angles add up to $180^\\circ$.",
+            "Step 2: Set up the equation: $x + 115^\\circ = 180^\\circ$.",
+            "Step 3: Subtract $115^\\circ$ from both sides: $x = 180^\\circ - 115^\\circ = 65^\\circ$."
+          ],
+          "final_answer": "$65^\\circ$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Mixing up Complementary and Supplementary.",
+          "correction": "Memory trick: 'C' comes before 'S' in the alphabet, and $90$ comes before $180$ on the number line. Complementary = 90, Supplementary = 180."
+        }
+      ],
+      "quick_summary": [
+        "Complementary angles sum to $90^\\circ$ (Right angle).",
+        "Supplementary angles sum to $180^\\circ$ (Straight line).",
+        "Use algebra to solve for unknown angles by setting their sum to the correct total."
+      ]
+    },
+    "ms_math_t09_st05": {
+      "id": "ms_math_t09_st05",
+      "title": "Angles on a straight line",
+      "overview": "A straight line is visually flat, meaning it has exactly $180^\\circ$ of rotation from one side to the other. If you slice that straight line into several smaller, adjacent angles, all those slices must still perfectly add up to $180^\\circ$.",
+      "key_concepts": [
+        {
+          "concept": "The Straight-Line Property",
+          "definition": "The golden rule of straight lines.",
+          "details": [
+            "Angles on a straight line add up to exactly $180^\\circ$.",
+            "This is a specific, real-world application of supplementary angles."
+          ]
+        },
+        {
+          "concept": "Three or More Angles",
+          "definition": "Multiple slices of the same pie.",
+          "details": [
+            "A straight line isn't limited to just two angles. If a line is divided into $3, 4$, or $5$ adjacent angles, their total sum is STILL $180^\\circ$."
+          ]
+        },
+        {
+          "concept": "Using Algebra",
+          "definition": "Solving for $x$.",
+          "details": [
+            "If angles on a line are given as algebraic expressions (like $2x$ and $3x$), add them all together, set them equal to $180^\\circ$, and solve the equation."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Angles on a Straight Line",
+          "equation": "$$ A + B + C + \\dots = 180^\\circ $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s05",
+          "title": "Slicing a Straight Line",
+          "type": "svg",
+          "caption": "No matter how many slices you make, the total angle across a straight line is always 180°.",
+          "alt_text": "Visual showing a straight horizontal line with a point in the middle. Three rays shoot up from the point, dividing the 180 degree span into three angles: 40°, 55°, and x. An arc shows the total is 180°.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 100 150 L 400 150\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"4\"/><path d=\"M 250 150 L 150 70\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><path d=\"M 250 150 L 250 50\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><path d=\"M 250 150 L 330 60\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><path d=\"M 150 150 A 100 100 0 0 1 350 150\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><text x=\"250\" y=\"35\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Total = 180°</text><text x=\"165\" y=\"135\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">40°</text><text x=\"215\" y=\"110\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#22c55e\" font-weight=\"bold\">55°</text><text x=\"300\" y=\"110\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">x</text><circle cx=\"250\" cy=\"150\" r=\"4\" fill=\"#0f172a\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Three adjacent angles on a straight line measure $40^\\circ$, $55^\\circ$, and $x$. Find $x$.",
+          "solution_steps": [
+            "Step 1: Set up the equation. The angles must add up to $180^\\circ$. $40^\\circ + 55^\\circ + x = 180^\\circ$.",
+            "Step 2: Add the known angles: $95^\\circ + x = 180^\\circ$.",
+            "Step 3: Subtract from $180^\\circ$: $x = 180^\\circ - 95^\\circ$.",
+            "Step 4: $x = 85^\\circ$."
+          ],
+          "final_answer": "$85^\\circ$"
+        },
+        {
+          "problem": "Two adjacent angles on a straight line are $x$ and $3x$. Find both angles.",
+          "solution_steps": [
+            "Step 1: Set up the equation: $x + 3x = 180^\\circ$.",
+            "Step 2: Combine like terms: $4x = 180^\\circ$.",
+            "Step 3: Divide by $4$: $x = 45^\\circ$.",
+            "Step 4: Calculate the second angle: $3(45^\\circ) = 135^\\circ$."
+          ],
+          "final_answer": "$45^\\circ$ and $135^\\circ$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding to 360° instead of 180°.",
+          "correction": "A straight line is a HALF circle. Always set the sum of angles on a straight line to $180^\\circ$."
+        },
+        {
+          "mistake": "Assuming the line MUST be horizontal.",
+          "correction": "A straight line can be diagonal, vertical, or tilted. As long as it is a perfectly straight line, the angles lying along it sum to $180^\\circ$."
+        }
+      ],
+      "quick_summary": [
+        "Angles on a straight line always sum to $180^\\circ$.",
+        "Subtract the known angle(s) from $180^\\circ$ to find the missing piece.",
+        "Use algebraic equations ($= 180$) when unknown variables like $x$ are involved."
+      ]
+    },
+    "ms_math_t09_st06": {
+      "id": "ms_math_t09_st06",
+      "title": "Angles around a point",
+      "overview": "When multiple lines or rays meet at a single central point (a vertex), they divide the space completely around that point into separate angles. Because these angles wrap all the way around the center like slices of a pizza, they form a perfect, complete circle.",
+      "key_concepts": [
+        {
+          "concept": "The 360° Rule",
+          "definition": "A full turn.",
+          "details": [
+            "The sum of all angles completely surrounding a single point is ALWAYS exactly $360^\\circ$."
+          ]
+        },
+        {
+          "concept": "Missing Angle Calculations",
+          "definition": "Finding the final piece.",
+          "details": [
+            "To find an unknown angle, add up all the given angles and subtract their total from $360^\\circ$."
+          ]
+        },
+        {
+          "concept": "Equal Slices",
+          "definition": "Symmetrical division.",
+          "details": [
+            "If a point is surrounded by equal angles, divide $360^\\circ$ by the number of angles.",
+            "Example: $4$ equal angles meet at a point. $360^\\circ \\div 4 = 90^\\circ$ each."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Angles Around a Point",
+          "equation": "$$ A + B + C + \\dots = 360^\\circ $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s06",
+          "title": "Completing the Circle",
+          "type": "svg",
+          "caption": "The angles around a central point will always add up to 360°, no matter how many rays there are.",
+          "alt_text": "Visual showing 4 rays meeting at a central dot. The angles are labeled 100°, 120°, 95°, and x. A large dashed circle wraps around the center indicating 360°.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"250\" cy=\"125\" r=\"80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><path d=\"M 250 125 L 350 125\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"4\"/><path d=\"M 250 125 L 250 25\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"4\"/><path d=\"M 250 125 L 130 180\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"4\"/><path d=\"M 250 125 L 320 210\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"4\"/><circle cx=\"250\" cy=\"125\" r=\"5\" fill=\"#0f172a\"/><text x=\"300\" y=\"80\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">90°</text><text x=\"190\" y=\"100\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#22c55e\" font-weight=\"bold\">115°</text><text x=\"210\" y=\"180\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#8b5cf6\" font-weight=\"bold\">100°</text><text x=\"310\" y=\"160\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">x</text><rect x=\"250\" y=\"105\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"100\" y=\"40\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Total = 360°</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Three angles around a point are $100^\\circ$, $120^\\circ$, and $x$. Find $x$.",
+          "solution_steps": [
+            "Step 1: Set up the equation based on the $360^\\circ$ rule: $100^\\circ + 120^\\circ + x = 360^\\circ$.",
+            "Step 2: Add the known angles: $220^\\circ + x = 360^\\circ$.",
+            "Step 3: Subtract from $360^\\circ$: $x = 360^\\circ - 220^\\circ = 140^\\circ$."
+          ],
+          "final_answer": "$140^\\circ$"
+        },
+        {
+          "problem": "The four angles around a point are $x, 2x, 3x$, and $4x$. Find the value of $x$.",
+          "solution_steps": [
+            "Step 1: Write the angle-sum equation: $x + 2x + 3x + 4x = 360^\\circ$.",
+            "Step 2: Combine all the $x$'s: $10x = 360^\\circ$.",
+            "Step 3: Divide by $10$: $x = 36^\\circ$."
+          ],
+          "final_answer": "$36^\\circ$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using 180° instead of 360°.",
+          "correction": "Angles on a straight line add up to $180^\\circ$. Angles making a complete circle around a point add up to $360^\\circ$."
+        },
+        {
+          "mistake": "Missing a Right Angle symbol.",
+          "correction": "Often, a $90^\\circ$ angle is just marked with a square box rather than the number '90'. Do not forget to add $90$ to your total before subtracting from $360$."
+        }
+      ],
+      "quick_summary": [
+        "Angles completely surrounding a single point sum to $360^\\circ$.",
+        "Add up the known angles and subtract from $360^\\circ$ to find the missing angle.",
+        "Set up an algebraic equation ($= 360^\\circ$) when angles are given as variables."
+      ]
+    },
+    "ms_math_t09_st07": {
+      "id": "ms_math_t09_st07",
+      "title": "Vertically opposite angles",
+      "overview": "When two straight lines cross, they create an 'X' intersection. This simple crossing produces a powerful geometric rule: the angles directly across from each other act like mirror images and are perfectly equal.",
+      "key_concepts": [
+        {
+          "concept": "The 'X' Intersection",
+          "definition": "Four angles around a central point.",
+          "details": [
+            "Intersecting lines always create two pairs of opposite angles.",
+            "These pairs are called **vertically opposite angles**."
+          ]
+        },
+        {
+          "concept": "The Equality Rule",
+          "definition": "Opposites are identical.",
+          "details": [
+            "Vertically opposite angles are ALWAYS equal to each other.",
+            "If the top angle is $120^\\circ$, the bottom angle is exactly $120^\\circ$."
+          ]
+        },
+        {
+          "concept": "Adjacent Angles at the Crossing",
+          "definition": "Neighbors form a straight line.",
+          "details": [
+            "While opposite angles are equal, *adjacent* angles (next to each other) sit on a straight line and therefore must add up to $180^\\circ$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Vertically Opposite Equality",
+          "equation": "$$ \\text{Angle } a = \\text{Angle } c \\quad \\text{and} \\quad \\text{Angle } b = \\text{Angle } d $$",
+          "variables": {
+            "a, c": "One pair of opposite angles",
+            "b, d": "The other pair of opposite angles"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s07",
+          "title": "Vertically Opposite Angles",
+          "type": "svg",
+          "caption": "Opposite angles are identical (a=c, b=d). Adjacent angles sum to 180° (a+b=180).",
+          "alt_text": "Visual showing an X made by two intersecting lines. Top angle is 'a', bottom is 'c', left is 'b', right is 'd'. Colors show a and c are equal, b and d are equal.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 100 50 L 400 200\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"4\"/><path d=\"M 100 200 L 400 50\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"4\"/><path d=\"M 230 115 A 35 35 0 0 1 270 115\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><path d=\"M 230 135 A 35 35 0 0 0 270 135\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><path d=\"M 215 110 A 35 35 0 0 0 215 140\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/><path d=\"M 285 110 A 35 35 0 0 1 285 140\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/><text x=\"250\" y=\"100\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">a</text><text x=\"250\" y=\"165\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">c</text><text x=\"200\" y=\"130\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">b</text><text x=\"300\" y=\"130\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">d</text><rect x=\"40\" y=\"20\" width=\"120\" height=\"40\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"100\" y=\"45\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">a = c</text><rect x=\"340\" y=\"20\" width=\"120\" height=\"40\" fill=\"#ffedd5\" rx=\"5\"/><text x=\"400\" y=\"45\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">b = d</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Two straight lines intersect. One angle is $75^\\circ$. Find the angle directly opposite it.",
+          "solution_steps": [
+            "Step 1: Recognize that the angles are vertically opposite.",
+            "Step 2: Apply the rule: vertically opposite angles are equal.",
+            "Step 3: The opposite angle must also be $75^\\circ$."
+          ],
+          "final_answer": "$75^\\circ$"
+        },
+        {
+          "problem": "Two straight lines intersect. One angle is $120^\\circ$. Find the other three angles.",
+          "solution_steps": [
+            "Step 1: The vertically opposite angle is identical. So, one of the unknown angles is $120^\\circ$.",
+            "Step 2: The adjacent angle forms a straight line with the $120^\\circ$ angle. $180^\\circ - 120^\\circ = 60^\\circ$.",
+            "Step 3: The angle opposite the $60^\\circ$ angle is also $60^\\circ$."
+          ],
+          "final_answer": "$120^\\circ, 60^\\circ, 60^\\circ$"
+        },
+        {
+          "problem": "Two vertically opposite angles are given as $3x + 10^\\circ$ and $5x - 30^\\circ$. Find $x$.",
+          "solution_steps": [
+            "Step 1: Vertically opposite angles are equal, so set them up as an equation: $3x + 10 = 5x - 30$.",
+            "Step 2: Subtract $3x$ from both sides: $10 = 2x - 30$.",
+            "Step 3: Add $30$ to both sides: $40 = 2x$.",
+            "Step 4: Divide by $2$: $x = 20$."
+          ],
+          "final_answer": "$x = 20$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming adjacent angles are equal.",
+          "correction": "In an 'X' intersection, the angles NEXT to each other are not equal (unless the lines cross at a perfect $90^\\circ$ angle). Adjacent angles add to $180^\\circ$. Only the OPPOSITE angles are equal."
+        }
+      ],
+      "quick_summary": [
+        "Intersecting straight lines create four angles.",
+        "Angles directly across from each other are perfectly equal.",
+        "Angles next to each other add up to $180^\\circ$."
+      ]
+    },
+    "ms_math_t09_st08": {
+      "id": "ms_math_t09_st08",
+      "title": "Angles formed by parallel lines",
+      "overview": "When a transversal crosses two parallel lines, it creates matching angle positions at both intersections. These positions lead to rules for corresponding, alternate and co-interior angles.",
+      "key_concepts": [
+        {
+          "concept": "Corresponding Angles (The F-Shape)",
+          "definition": "Angles in the exact same position at each intersection.",
+          "details": [
+            "Corresponding angles occupy the same relative position at the two intersections.",
+            "When the lines are parallel, corresponding angles are equal."
+          ]
+        },
+        {
+          "concept": "Alternate Interior/Exterior Angles (The Z-Shape)",
+          "definition": "Angles on opposite sides of the transversal.",
+          "details": [
+            "Alternate interior angles lie between the parallel lines on opposite sides of the transversal.",
+            "Alternate exterior angles lie outside the parallel lines on opposite sides of the transversal.",
+            "When the lines are parallel, alternate interior and alternate exterior angle pairs are equal."
+          ]
+        },
+        {
+          "concept": "Co-Interior Angles (The C-Shape)",
+          "definition": "Inside the parallel lines, on the SAME side of the transversal.",
+          "details": [
+            "Co-interior angles lie between the parallel lines on the same side of the transversal.",
+            "When the lines are parallel, co-interior angles add up to $180^\\circ$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s08",
+          "title": "Angle Pairs Formed by Parallel Lines",
+          "type": "svg",
+          "caption": "With parallel lines, corresponding angles are equal, alternate interior angles are equal, and co-interior angles sum to 180°.",
+          "alt_text": "Two horizontal parallel lines are crossed by a diagonal transversal. At the upper intersection angles 1, 2, 3 and 4 occupy the upper-left, upper-right, lower-right and lower-left positions. At the lower intersection angles 5, 6, 7 and 8 occupy the same positions. Corresponding pairs include 1 and 5; alternate interior pairs include 3 and 5; co-interior pairs include 4 and 5.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 280\"><rect width=\"560\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><line x1=\"70\" y1=\"82\" x2=\"500\" y2=\"82\" stroke=\"#1e293b\" stroke-width=\"4\"/><line x1=\"70\" y1=\"192\" x2=\"500\" y2=\"192\" stroke=\"#1e293b\" stroke-width=\"4\"/><path d=\"M70 82 l13 -7 v14 z M500 82 l-13 -7 v14 z M70 192 l13 -7 v14 z M500 192 l-13 -7 v14 z\" fill=\"#1e293b\"/><path d=\"M145 18 L355 258\" stroke=\"#dc2626\" stroke-width=\"4\"/><path d=\"M120 74 l10 16 M120 184 l10 16\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"505\" y=\"76\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">l</text><text x=\"505\" y=\"186\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">m</text><text x=\"375\" y=\"244\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#b91c1c\">Transversal</text><g font-family=\"sans-serif\" font-size=\"18\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1d4ed8\"><text x=\"181\" y=\"69\">1</text><text x=\"226\" y=\"69\">2</text><text x=\"226\" y=\"119\">3</text><text x=\"181\" y=\"119\">4</text><text x=\"260\" y=\"179\">5</text><text x=\"305\" y=\"179\">6</text><text x=\"305\" y=\"231\">7</text><text x=\"260\" y=\"231\">8</text></g><g font-family=\"sans-serif\" font-size=\"13\" fill=\"#475569\"><text x=\"80\" y=\"35\">Parallel lines</text><text x=\"80\" y=\"258\">Corresponding: 1 = 5</text><text x=\"255\" y=\"258\">Alternate interior: 3 = 5</text><text x=\"418\" y=\"258\">Co-interior: 4 + 5 = 180</text></g><path d=\"M170 60 Q200 45 220 62\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M249 170 Q278 151 299 171\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Two parallel lines are crossed by a transversal. A corresponding angle is $68^\\circ$. Find the other corresponding angle.",
+          "solution_steps": [
+            "Step 1: Identify the rule for corresponding angles.",
+            "Step 2: Corresponding angles are always equal.",
+            "Step 3: Therefore, the other angle is also $68^\\circ$."
+          ],
+          "final_answer": "$68^\\circ$"
+        },
+        {
+          "problem": "Two co-interior angles are $105^\\circ$ and $x$. Find $x$.",
+          "solution_steps": [
+            "Step 1: Identify the rule for co-interior angles.",
+            "Step 2: Co-interior angles add up to $180^\\circ$.",
+            "Step 3: Set up the equation: $105^\\circ + x = 180^\\circ$.",
+            "Step 4: Subtract: $x = 180^\\circ - 105^\\circ = 75^\\circ$."
+          ],
+          "final_answer": "$75^\\circ$"
+        },
+        {
+          "problem": "Two alternate interior angles are $3x + 15^\\circ$ and $5x - 25^\\circ$. Find $x$.",
+          "solution_steps": [
+            "Step 1: Alternate interior angles are equal, so set up the equation: $3x + 15 = 5x - 25$.",
+            "Step 2: Subtract $3x$ from both sides: $15 = 2x - 25$.",
+            "Step 3: Add $25$ to both sides: $40 = 2x$.",
+            "Step 4: Divide by $2$: $x = 20$."
+          ],
+          "final_answer": "$x = 20$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Setting co-interior angles equal to each other.",
+          "correction": "Corresponding and alternate angles are equal when the lines are parallel. Co-interior angles lie between the parallel lines on the same side of the transversal and add to $180^\\circ$; they may be equal in the special case where each is $90^\\circ$."
+        }
+      ],
+      "quick_summary": [
+        "Corresponding angles are equal when the two lines are parallel.",
+        "Alternate interior and alternate exterior angles are equal when the two lines are parallel.",
+        "Co-interior angles on the same side of the transversal add to $180^\\circ$."
+      ]
+    },
+    "ms_math_t09_st09": {
+      "id": "ms_math_t09_st09",
+      "title": "Interior and exterior angles of polygons",
+      "overview": "Polygons hide a beautiful mathematical secret: no matter how many sides they have, they can always be broken down into simple triangles. By counting these hidden triangles, we can easily calculate the total internal angle sum of any shape.",
+      "key_concepts": [
+        {
+          "concept": "The Interior Angle Sum Formula",
+          "definition": "How many triangles fit inside?",
+          "details": [
+            "If you draw lines from one vertex of a polygon to all other possible vertices, you split the shape into triangles.",
+            "The number of triangles is always **$n - 2$** (where $n$ is the number of sides).",
+            "Since a triangle holds $180^\\circ$, the formula for the total interior angle sum is **$S = (n - 2) \\times 180^\\circ$**."
+          ]
+        },
+        {
+          "concept": "Regular Polygons",
+          "definition": "Perfectly equal shapes.",
+          "details": [
+            "If a polygon is 'Regular', all its sides and angles are identical.",
+            "To find a single interior angle, just take the total sum and divide it evenly by the number of sides ($n$)."
+          ]
+        },
+        {
+          "concept": "The Magic of Exterior Angles",
+          "definition": "The outside turn.",
+          "details": [
+            "An exterior angle is formed by extending one side of the polygon at a vertex.",
+            "For a convex polygon, taking one exterior angle at each vertex in the same direction gives one complete turn.",
+            "**Rule:** The sum of these exterior angles is $360^\\circ$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sum of Interior Angles",
+          "equation": "$$ S = (n - 2) \\times 180^\\circ $$",
+          "variables": {
+            "n": "Number of sides"
+          }
+        },
+        {
+          "name": "Single Interior Angle (Regular)",
+          "equation": "$$ \\text{Angle} = \\frac{(n - 2) \\times 180^\\circ}{n} $$",
+          "variables": {}
+        },
+        {
+          "name": "Single Exterior Angle (Regular)",
+          "equation": "$$ \\text{Angle} = \\frac{360^\\circ}{n} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s09",
+          "title": "Interior and Exterior Relationship",
+          "type": "svg",
+          "caption": "An interior angle and its adjacent exterior angle always form a straight 180° line.",
+          "alt_text": "Visual showing a polygon corner. The interior angle is marked. The side extends past the vertex to form an exterior angle. An arc connects the interior and exterior angle showing they add to 180°.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 150 150 L 350 150\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"4\"/><path d=\"M 250 150 L 320 50\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"4\"/><path d=\"M 150 150 L 400 150\" stroke=\"#94a3b8\" stroke-width=\"4\" stroke-dasharray=\"6,6\"/><path d=\"M 270 150 A 20 20 0 0 0 260 135\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><text x=\"285\" y=\"125\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Interior</text><path d=\"M 285 150 A 35 35 0 0 1 270 120\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/><text x=\"320\" y=\"170\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">Exterior</text><path d=\"M 270 120 A 45 45 0 0 1 295 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"360\" y=\"110\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Total = 180°</text><text x=\"160\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#64748b\">Inside Polygon</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the sum of the interior angles of a pentagon.",
+          "solution_steps": [
+            "Step 1: A pentagon has $n = 5$ sides.",
+            "Step 2: Use the formula: $S = (5 - 2) \\times 180^\\circ$.",
+            "Step 3: $S = 3 \\times 180^\\circ = 540^\\circ$."
+          ],
+          "final_answer": "$540^\\circ$"
+        },
+        {
+          "problem": "Find each interior angle of a regular octagon.",
+          "solution_steps": [
+            "Step 1: An octagon has $n = 8$ sides.",
+            "Step 2: Find the total sum: $S = (8 - 2) \\times 180^\\circ = 6 \\times 180^\\circ = 1080^\\circ$.",
+            "Step 3: Divide the total sum by the $8$ equal corners: $1080^\\circ \\div 8 = 135^\\circ$."
+          ],
+          "final_answer": "$135^\\circ$"
+        },
+        {
+          "problem": "The sum of the interior angles of a polygon is $900^\\circ$. How many sides does it have?",
+          "solution_steps": [
+            "Step 1: Set up the equation: $(n - 2) \\times 180 = 900$.",
+            "Step 2: Divide both sides by $180$: $n - 2 = 5$.",
+            "Step 3: Add $2$ to both sides: $n = 7$."
+          ],
+          "final_answer": "$7$ sides (Heptagon)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking the exterior angle sum depends on the number of sides.",
+          "correction": "The interior angle sum gets bigger as the shape gets more sides. The exterior angle sum NEVER changes. It is ALWAYS exactly $360^\\circ$ for any convex polygon."
+        }
+      ],
+      "quick_summary": [
+        "Interior Sum $= (n-2) \\times 180^\\circ$.",
+        "Exterior Sum $= 360^\\circ$ always.",
+        "Interior + Exterior at the same corner $= 180^\\circ$."
+      ]
+    },
+    "ms_math_t09_st11": {
+      "id": "ms_math_t09_st11",
+      "title": "Properties of quadrilaterals",
+      "overview": "A quadrilateral is any closed 2D shape with exactly four straight sides. Just like triangles, quadrilaterals belong to different families (like squares, rectangles, and parallelograms) based on parallel lines, equal sides, and right angles.",
+      "key_concepts": [
+        {
+          "concept": "The Angle-Sum Property",
+          "definition": "The magic number 360.",
+          "details": [
+            "Every quadrilateral can be split diagonally into two triangles ($180^\\circ + 180^\\circ$).",
+            "Therefore, the four interior angles of ANY quadrilateral always add up to exactly $360^\\circ$."
+          ]
+        },
+        {
+          "concept": "The Parallelogram Family",
+          "definition": "Shapes with two pairs of parallel sides.",
+          "details": [
+            "**Parallelogram:** Opposite sides are parallel and equal. Opposite angles are equal.",
+            "**Rectangle:** A parallelogram where all four angles are exactly $90^\\circ$.",
+            "**Rhombus:** A parallelogram where all four sides are exactly equal.",
+            "**Square:** The ultimate quadrilateral. It is a rectangle AND a rhombus (4 equal sides, 4 right angles)."
+          ]
+        },
+        {
+          "concept": "The Trapezoid (Trapezium)",
+          "definition": "A quadrilateral with exactly one pair of parallel sides (the convention used in this note).",
+          "details": [
+            "The parallel sides are called the bases; the other two sides are the legs.",
+            "This shape is called a trapezium in many countries and a trapezoid in others. Some curricula use different definitions, so follow the convention specified by your course."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Quadrilateral Angle Sum",
+          "equation": "$$ A + B + C + D = 360^\\circ $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s11",
+          "title": "Common Quadrilaterals",
+          "type": "svg",
+          "caption": "Notice how the square inherits the right angles of the rectangle and the equal sides of the rhombus.",
+          "alt_text": "Visual showing 4 quadrilaterals. A Square (4 right angles, 4 equal sides). A Rectangle (4 right angles, 2 pairs of equal sides). A Rhombus (4 equal sides, slanted). A Parallelogram (2 pairs of equal sides, slanted).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"30\" y=\"50\" width=\"80\" height=\"80\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"70\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Square</text><rect x=\"140\" y=\"60\" width=\"100\" height=\"60\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"190\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Rectangle</text><polygon points=\"290,130 320,50 390,50 360,130\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"3\"/><text x=\"340\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Rhombus</text><polygon points=\"410,130 430,70 480,70 460,130\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"445\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">Parallelogram</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Three angles of a quadrilateral are $80^\\circ, 95^\\circ$, and $105^\\circ$. Find the fourth angle.",
+          "solution_steps": [
+            "Step 1: Add the known angles together: $80 + 95 + 105 = 280^\\circ$.",
+            "Step 2: The total interior angle sum of a quadrilateral is ALWAYS $360^\\circ$.",
+            "Step 3: Subtract from $360^\\circ$: $360^\\circ - 280^\\circ = 80^\\circ$."
+          ],
+          "final_answer": "$80^\\circ$"
+        },
+        {
+          "problem": "One angle of a parallelogram is $65^\\circ$. What are the other three angles?",
+          "solution_steps": [
+            "Step 1: In a parallelogram, opposite angles are strictly equal. The angle opposite the $65^\\circ$ angle is also $65^\\circ$.",
+            "Step 2: Adjacent angles (next to each other) in a parallelogram add up to $180^\\circ$ (co-interior rule).",
+            "Step 3: Find the adjacent angle: $180^\\circ - 65^\\circ = 115^\\circ$.",
+            "Step 4: The angle opposite the $115^\\circ$ angle is also $115^\\circ$."
+          ],
+          "final_answer": "$65^\\circ, 115^\\circ, 115^\\circ$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking every rhombus is a square.",
+          "correction": "A rhombus has four equal sides, but it can be 'slanted' or squished so its corners aren't $90^\\circ$. A square is a SPECIAL TYPE of rhombus that also has perfect $90^\\circ$ corners."
+        }
+      ],
+      "quick_summary": [
+        "Quadrilateral interior angles sum to $360^\\circ$.",
+        "**Square:** 4 equal sides, 4 right angles.",
+        "**Rectangle:** Opposite sides equal, 4 right angles.",
+        "**Parallelogram:** Opposite sides parallel and equal, opposite angles equal.",
+        "**Rhombus:** 4 equal sides, opposite angles equal."
+      ]
+    },
+    "ms_math_t09_st12": {
+      "id": "ms_math_t09_st12",
+      "title": "Regular and irregular polygons",
+      "overview": "A polygon is any closed 2D shape with straight sides. While we usually picture perfect, symmetrical shapes when we hear 'pentagon' or 'hexagon', those are specifically *Regular* polygons. Polygons come in all sorts of jagged, irregular shapes too.",
+      "key_concepts": [
+        {
+          "concept": "Naming Polygons",
+          "definition": "Names based on the number of sides ($n$).",
+          "details": [
+            "$3 =$ Triangle, $4 =$ Quadrilateral, $5 =$ Pentagon, $6 =$ Hexagon, $7 =$ Heptagon, $8 =$ Octagon, $9 =$ Nonagon, $10 =$ Decagon."
+          ]
+        },
+        {
+          "concept": "Regular Polygons",
+          "definition": "Perfectly balanced shapes.",
+          "details": [
+            "A polygon is ONLY 'Regular' if ALL its sides are the same length AND ALL its interior angles are exactly the same size.",
+            "Example: An equilateral triangle or a square."
+          ]
+        },
+        {
+          "concept": "Irregular Polygons",
+          "definition": "Lopsided shapes.",
+          "details": [
+            "A polygon is irregular if it does not have both all equal side lengths and all equal interior angles.",
+            "A rectangle that is not a square has four equal angles but not four equal sides, so it is not a regular polygon. It remains a rectangle."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s12",
+          "title": "Regular vs. Irregular Hexagons",
+          "type": "svg",
+          "caption": "Both shapes have 6 sides, making them both hexagons. Only the left one is Regular.",
+          "alt_text": "Visual showing two 6-sided shapes. Left is a perfect symmetrical regular hexagon. Right is an L-shaped block with 6 sides, labeled Irregular Hexagon.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><polygon points=\"150,30 200,60 200,120 150,150 100,120 100,60\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"4\"/><text x=\"150\" y=\"180\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Regular Hexagon</text><polygon points=\"300,30 400,30 400,80 350,80 350,150 300,150\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"4\"/><text x=\"350\" y=\"180\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Irregular Hexagon</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "An irregular pentagon has side lengths of $3\\text{ cm}, 5\\text{ cm}, 4\\text{ cm}, 6\\text{ cm},$ and $7\\text{ cm}$. What is its perimeter?",
+          "solution_steps": [
+            "Step 1: Perimeter is the total distance around the outside of the shape.",
+            "Step 2: Because it is irregular, you cannot just multiply. You must add up all the individual side lengths.",
+            "Step 3: $3 + 5 + 4 + 6 + 7 = 25$."
+          ],
+          "final_answer": "$25\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking 'Irregular' means 'not a real polygon'.",
+          "correction": "An irregular hexagon is just as much a hexagon as a perfect regular hexagon, so long as it is a closed shape with $6$ straight sides."
+        }
+      ],
+      "quick_summary": [
+        "A polygon is a closed two-dimensional shape made of straight line segments.",
+        "Regular means all side lengths are equal AND all interior angles are equal.",
+        "A polygon is irregular when it does not satisfy both regularity conditions."
+      ]
+    },
+    "ms_math_t09_st13": {
+      "id": "ms_math_t09_st13",
+      "title": "Angle-sum properties",
+      "overview": "Angle-sum properties give us absolute mathematical rules for the total number of degrees locked inside (or outside) of shapes and lines. These rules act as tools to find missing angles algebraically.",
+      "key_concepts": [
+        {
+          "concept": "The Core Constants",
+          "definition": "The numbers you must memorize.",
+          "details": [
+            "**Straight Line:** $180^\\circ$",
+            "**Around a Point (Full Turn):** $360^\\circ$",
+            "**Triangle Interior:** $180^\\circ$",
+            "**Quadrilateral Interior:** $360^\\circ$"
+          ]
+        },
+        {
+          "concept": "Polygon Interior Rule",
+          "definition": "$S = (n-2) \\times 180^\\circ$",
+          "details": [
+            "This calculates the total interior degrees for ANY polygon with $n$ sides.",
+            "Example for a Hexagon ($6$ sides): $(6-2) \\times 180 = 4 \\times 180 = 720^\\circ$ total."
+          ]
+        },
+        {
+          "concept": "Polygon Exterior Rule",
+          "definition": "Always 360°.",
+          "details": [
+            "If you stand on the edge of a convex polygon and trace its exterior angles all the way around, you will spin in exactly one complete circle ($360^\\circ$), regardless of how many sides the shape has."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Interior Sum",
+          "equation": "$$ \\text{Sum} = (n-2) \\times 180^\\circ $$",
+          "variables": {
+            "n": "Number of sides"
+          }
+        },
+        {
+          "name": "Single Interior Angle (Regular Only)",
+          "equation": "$$ \\text{Angle} = \\frac{(n-2) \\times 180^\\circ}{n} $$",
+          "variables": {}
+        },
+        {
+          "name": "Sum of Exterior Angles of a Convex Polygon",
+          "equation": "$$E=360^\\circ$$",
+          "variables": {
+            "E": "The sum of one exterior angle at each vertex, measured in the same direction"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s13",
+          "title": "Polygon Angle Formulas",
+          "type": "svg",
+          "caption": "Interior sums grow with sides. Exterior sums are locked at 360°.",
+          "alt_text": "Visual showing a summary board. Interior Sum = (n-2) x 180. Exterior Sum = 360. Each Interior (Regular) = Sum / n.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"460\" height=\"160\" fill=\"#1e293b\" rx=\"10\"/><text x=\"250\" y=\"60\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#38bdf8\" font-weight=\"bold\">Interior Sum = (n - 2) × 180°</text><text x=\"250\" y=\"105\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#4ade80\" font-weight=\"bold\">Exterior Sum = 360°</text><text x=\"250\" y=\"150\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#facc15\" font-weight=\"bold\">Regular Interior Angle = Sum ÷ n</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "The four angles of a quadrilateral are $x, x+20^\\circ, 2x,$ and $2x+40^\\circ$. Find $x$.",
+          "solution_steps": [
+            "Step 1: The interior angle sum of a quadrilateral is always $360^\\circ$.",
+            "Step 2: Set up the equation: $x + (x + 20) + 2x + (2x + 40) = 360$.",
+            "Step 3: Combine like terms: $6x + 60 = 360$.",
+            "Step 4: Subtract $60$: $6x = 300$.",
+            "Step 5: Divide by $6$: $x = 50^\\circ$."
+          ],
+          "final_answer": "$50^\\circ$"
+        },
+        {
+          "problem": "The sum of the interior angles of a convex polygon is $1260^\\circ$. How many sides does it have?",
+          "solution_steps": [
+            "Step 1: Use the sum formula: $(n - 2) \\times 180 = 1260$.",
+            "Step 2: Divide both sides by $180$: $n - 2 = 7$.",
+            "Step 3: Add $2$ to both sides: $n = 9$."
+          ],
+          "final_answer": "$9$ sides (Nonagon)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dividing the sum by 'n' for irregular polygons.",
+          "correction": "You can ONLY find a single interior angle by dividing the total sum by $n$ if the polygon is Regular (all angles are exactly the same size)."
+        }
+      ],
+      "quick_summary": [
+        "Triangle sum = $180^\\circ$, Quadrilateral sum = $360^\\circ$.",
+        "Use $(n-2) \\times 180^\\circ$ to find the total internal degrees of any polygon.",
+        "Set algebraic angle expressions equal to the shape's total sum to solve for missing variables."
+      ]
+    },
+    "ms_math_t09_st14": {
+      "id": "ms_math_t09_st14",
+      "title": "Geometric reasoning and missing-angle problems",
+      "overview": "Geometric reasoning is the ultimate test of your angle knowledge. It involves looking at a complex, tangled diagram of lines, shapes, and variables, and chaining together multiple geometric rules step-by-step to solve for the missing pieces.",
+      "key_concepts": [
+        {
+          "concept": "The Systematic Approach",
+          "definition": "How to tackle complex puzzles.",
+          "details": [
+            "**1. Identify:** What are you trying to find? What rules apply? (Look for parallel lines, triangles, or straight lines).",
+            "**2. Choose:** Select a geometric rule (e.g., 'Alternate interior angles are equal').",
+            "**3. Calculate:** Write the equation and solve.",
+            "**4. Justify:** State the geometric fact you used."
+          ]
+        },
+        {
+          "concept": "Chaining Rules Together",
+          "definition": "Solving multi-step problems.",
+          "details": [
+            "Often, you cannot find the target angle directly. You may have to find a vertically opposite angle first, which allows you to use a triangle interior sum, which finally gives you the target angle."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s14",
+          "title": "The Geometry Toolkit",
+          "type": "svg",
+          "caption": "Keep these tools in mind when attacking a complex diagram.",
+          "alt_text": "Visual showing a 2x2 grid of tools. 1. Straight Line (180). 2. Around a Point (360). 3. Triangle (180). 4. Vertically Opposite (Equal).",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"220\" height=\"95\" fill=\"#dbeafe\" rx=\"8\"/><text x=\"130\" y=\"50\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Straight Line = 180°</text><path d=\"M 60 70 L 200 70\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><path d=\"M 130 70 L 160 35\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><rect x=\"260\" y=\"20\" width=\"220\" height=\"95\" fill=\"#dcfce7\" rx=\"8\"/><text x=\"370\" y=\"50\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Around a Point = 360°</text><circle cx=\"370\" cy=\"75\" r=\"15\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\" stroke-dasharray=\"2,2\"/><rect x=\"20\" y=\"135\" width=\"220\" height=\"95\" fill=\"#fef08a\" rx=\"8\"/><text x=\"130\" y=\"165\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Triangle Sum = 180°</text><polygon points=\"90,210 170,210 130,175\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><rect x=\"260\" y=\"135\" width=\"220\" height=\"95\" fill=\"#ffedd5\" rx=\"8\"/><text x=\"370\" y=\"165\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">Vertically Opposite</text><path d=\"M 330 180 L 410 220\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><path d=\"M 330 220 L 410 180\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A triangle has an exterior angle of $125^\\circ$. One of its opposite interior angles is $55^\\circ$. Find the other opposite interior angle.",
+          "solution_steps": [
+            "Step 1: Identify the property. The exterior angle of a triangle is equal to the sum of its two opposite interior angles.",
+            "Step 2: Set up the equation: $125^\\circ = 55^\\circ + x$.",
+            "Step 3: Solve for $x$: $x = 125^\\circ - 55^\\circ = 70^\\circ$."
+          ],
+          "final_answer": "$70^\\circ$"
+        },
+        {
+          "problem": "Two parallel lines are crossed by a transversal. One of the acute angles is $65^\\circ$. Find the adjacent obtuse angle.",
+          "solution_steps": [
+            "Step 1: The acute angle and the adjacent obtuse angle sit together on a straight line (the transversal line itself).",
+            "Step 2: Angles on a straight line sum to $180^\\circ$.",
+            "Step 3: $x = 180^\\circ - 65^\\circ = 115^\\circ$."
+          ],
+          "final_answer": "$115^\\circ$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying parallel-line rules when the lines aren't parallel.",
+          "correction": "Just because two lines look like they don't cross in a small diagram doesn't mean they are parallel. You can only use Alternate, Corresponding, or Co-Interior rules if the lines are explicitly stated or marked as parallel (usually with little matching arrows drawn directly on the lines)."
+        }
+      ],
+      "quick_summary": [
+        "Break complex diagrams down into smaller pieces (triangles, parallel lines, straight lines).",
+        "Solve for one angle at a time, moving closer to the target angle.",
+        "Always double-check your final answer by ensuring all your angles on a straight line add to $180^\\circ$ and triangles add to $180^\\circ$."
+      ]
+    }
+  }
+}

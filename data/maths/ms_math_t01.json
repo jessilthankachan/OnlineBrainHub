@@ -1,0 +1,1265 @@
+{
+  "subject": "math",
+  "topicId": "ms_math_t01",
+  "topicTitle": "Number Systems",
+  "grade": "Middle School",
+  "subtopics": {
+    "ms_math_t01_st01": {
+      "id": "ms_math_t01_st01",
+      "title": "Natural numbers, whole numbers and integers",
+      "overview": "Numbers are the foundation of mathematics. In this lesson, we explore the fundamental sets of numbers we use for counting objects, representing nothingness (zero), and measuring things that go below zero, like temperatures or debts. The term “natural numbers” is used with two conventions: some definitions include zero, while others start at one. This course uses the convention that starts at $1$; whole numbers include zero.",
+      "key_concepts": [
+        {
+          "concept": "Natural Numbers",
+          "definition": "The numbers commonly used for counting objects. In this course, the natural numbers begin at $1$ (some conventions include $0$).",
+          "details": [
+            "Examples: $1, 2, 3, 4, 5, \\dots$",
+            "Does not include zero, negative numbers, or fractions."
+          ]
+        },
+        {
+          "concept": "Whole Numbers",
+          "definition": "The set of natural numbers together with zero, using the convention adopted in this course.",
+          "details": [
+            "Examples: $0, 1, 2, 3, 4, \\dots$",
+            "Represents counts including 'none' (e.g., $0$ apples)."
+          ]
+        },
+        {
+          "concept": "Integers",
+          "definition": "The set of all whole numbers and their negative counterparts.",
+          "details": [
+            "Examples: $\\dots, -3, -2, -1, 0, 1, 2, 3, \\dots$",
+            "Does not include fractions (like $\\frac{1}{2}$) or decimals (like $2.5$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s01",
+          "title": "Number Sets Relationship",
+          "type": "svg",
+          "caption": "Natural numbers are a subset of whole numbers, which are a subset of integers.",
+          "alt_text": "Concentric circles showing Natural Numbers inside Whole Numbers, inside Integers.",
+          "data": "<svg viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"300\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"200\" cy=\"150\" r=\"120\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"200\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#334155\" font-weight=\"bold\">Integers (..., -2, -1, 0, 1, 2, ...)</text><circle cx=\"200\" cy=\"170\" r=\"80\" fill=\"#cbd5e1\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"200\" y=\"120\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">Whole Numbers (0, 1, 2, ...)</text><circle cx=\"200\" cy=\"200\" r=\"40\" fill=\"#94a3b8\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"200\" y=\"205\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Natural</text><text x=\"200\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">(1, 2, ...)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify the number $0$.",
+          "solution_steps": [
+            "Step 1: Check if it is a counting number starting at $1$. It is not, so it is not a Natural number.",
+            "Step 2: Check if it belongs to Whole numbers. Whole numbers are $0, 1, 2, \\dots$ Yes, it does.",
+            "Step 3: Check if it is an Integer. Integers include all whole numbers. Yes, it does."
+          ],
+          "final_answer": "Whole number and Integer."
+        },
+        {
+          "problem": "Classify the number $-8$.",
+          "solution_steps": [
+            "Step 1: Is it a natural or whole number? No, because it is negative.",
+            "Step 2: It is a negative integer. Integers include negative whole-number values, zero and positive whole-number values."
+          ],
+          "final_answer": "Integer (and therefore also rational and real, although those sets are introduced later)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $-4$ is a whole number.",
+          "correction": "Whole numbers start at $0$ and only go up ($0, 1, 2, 3\\dots$). Negative numbers like $-4$ are Integers, but not Whole numbers."
+        },
+        {
+          "mistake": "Assuming fractions like $\\frac{1}{2}$ or decimals like $2.5$ are integers.",
+          "correction": "Integers represent full, unbroken units. Fractions and decimals are not integers."
+        }
+      ],
+      "quick_summary": [
+        "Natural numbers: $1, 2, 3, \\dots$",
+        "Whole numbers: $0, 1, 2, 3, \\dots$",
+        "Integers: $\\dots, -2, -1, 0, 1, 2, \\dots$",
+        "Every natural number is a whole number, and every whole number is an integer."
+      ]
+    },
+    "ms_math_t01_st02": {
+      "id": "ms_math_t01_st02",
+      "title": "Positive and negative numbers",
+      "overview": "In the real world, we need numbers to represent opposite directions: above and below zero. Positive and negative numbers allow us to measure temperatures below freezing, track financial debts, and record depths below sea level.",
+      "key_concepts": [
+        {
+          "concept": "Positive Numbers",
+          "definition": "Numbers that are greater than zero.",
+          "details": [
+            "Can be written with a plus sign (e.g., $+5$) or without (e.g., $5$).",
+            "Example: Gaining $5$ points in a game or $20\\text{ m}$ above sea level."
+          ]
+        },
+        {
+          "concept": "Negative Numbers",
+          "definition": "Numbers that are less than zero.",
+          "details": [
+            "Always written with a minus sign (e.g., $-4$).",
+            "Example: A temperature of $-4^\\circ\\text{C}$ or $10\\text{ m}$ below sea level."
+          ]
+        },
+        {
+          "concept": "Zero",
+          "definition": "The reference point between positive and negative numbers.",
+          "details": [
+            "Zero is neither positive nor negative."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s02",
+          "title": "Positive and Negative Elevation",
+          "type": "svg",
+          "caption": "Elevation is measured relative to sea level, which acts as zero.",
+          "alt_text": "Diagram showing a mountain peak at positive elevation, sea level at zero, and an ocean trench at negative elevation.",
+          "data": "<svg viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"300\" fill=\"#e0f2fe\" rx=\"10\"/><path d=\"M 0 150 L 400 150 L 400 300 L 0 300 Z\" fill=\"#0284c7\"/><path d=\"M 50 150 L 150 50 L 250 150 Z\" fill=\"#854d0e\"/><polygon points=\"150,50 120,80 180,80\" fill=\"white\"/><circle cx=\"150\" cy=\"50\" r=\"5\" fill=\"#22c55e\"/><text x=\"165\" y=\"45\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#166534\" font-weight=\"bold\">+1,500 m (Positive)</text><line x1=\"0\" y1=\"150\" x2=\"400\" y2=\"150\" stroke=\"white\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><text x=\"300\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e293b\" font-weight=\"bold\">Sea Level: 0 m</text><circle cx=\"280\" cy=\"250\" r=\"5\" fill=\"#ef4444\"/><text x=\"295\" y=\"255\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#7f1d1d\" font-weight=\"bold\">-800 m (Negative)</text><line x1=\"280\" y1=\"250\" x2=\"280\" y2=\"150\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Compare $+6$ and $-2$. Which is greater?",
+          "solution_steps": [
+            "Step 1: Identify the signs. $+6$ is positive, $-2$ is negative.",
+            "Step 2: Every positive number is greater than every negative number."
+          ],
+          "final_answer": "$+6 > -2$"
+        },
+        {
+          "problem": "Compare $-3$ and $-8$.",
+          "solution_steps": [
+            "Step 1: Note that both numbers are negative.",
+            "Step 2: On a number line, $-3$ is closer to zero and lies farther to the right than $-8$.",
+            "Step 3: A negative number closer to zero has a greater value."
+          ],
+          "final_answer": "$-3 > -8$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $-8$ is greater than $-3$ because $8$ is greater than $3$.",
+          "correction": "For negative numbers, the number with the larger digit is actually smaller because it is further below zero. $-3$ is greater than $-8$."
+        }
+      ],
+      "quick_summary": [
+        "Positive numbers are greater than zero; negative numbers are less than zero.",
+        "Zero is the reference point (neither positive nor negative).",
+        "Every positive number is greater than any negative number.",
+        "For negative numbers, the number closer to zero is greater."
+      ]
+    },
+    "ms_math_t01_st03": {
+      "id": "ms_math_t01_st03",
+      "title": "Number lines and ordering integers",
+      "overview": "A number line is a visual tool that maps numbers to points on a line. It provides a straightforward way to see the order of integers, calculate distances, and compare values visually.",
+      "key_concepts": [
+        {
+          "concept": "The Number Line Layout",
+          "definition": "A straight line marked with equally spaced values, with zero as the reference point, positive integers to its right and negative integers to its left.",
+          "details": [
+            "Moving right increases the value.",
+            "Moving left decreases the value."
+          ]
+        },
+        {
+          "concept": "Ascending vs. Descending",
+          "definition": "Ways to order sets of numbers.",
+          "details": [
+            "Ascending order: Smallest to largest (moving left to right on the line).",
+            "Descending order: Largest to smallest (moving right to left on the line)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s03",
+          "title": "The Integer Number Line",
+          "type": "svg",
+          "caption": "Values increase as you move to the right and decrease as you move to the left.",
+          "alt_text": "Number line from -5 to 5 with an arrow pointing right labeled 'Increasing Value'.",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#ffffff\"/><line x1=\"40\" y1=\"80\" x2=\"460\" y2=\"80\" stroke=\"#334155\" stroke-width=\"3\"/><polygon points=\"460,75 470,80 460,85\" fill=\"#334155\"/><polygon points=\"40,75 30,80 40,85\" fill=\"#334155\"/><g font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\"><line x1=\"250\" y1=\"70\" x2=\"250\" y2=\"90\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"250\" y=\"110\" font-weight=\"bold\">0</text><line x1=\"290\" y1=\"75\" x2=\"290\" y2=\"85\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"290\" y=\"110\">1</text><line x1=\"330\" y1=\"75\" x2=\"330\" y2=\"85\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"330\" y=\"110\">2</text><line x1=\"370\" y1=\"75\" x2=\"370\" y2=\"85\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"370\" y=\"110\">3</text><line x1=\"410\" y1=\"75\" x2=\"410\" y2=\"85\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"410\" y=\"110\">4</text><line x1=\"210\" y1=\"75\" x2=\"210\" y2=\"85\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"210\" y=\"110\">-1</text><line x1=\"170\" y1=\"75\" x2=\"170\" y2=\"85\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"170\" y=\"110\">-2</text><line x1=\"130\" y1=\"75\" x2=\"130\" y2=\"85\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"130\" y=\"110\">-3</text><line x1=\"90\" y1=\"75\" x2=\"90\" y2=\"85\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"90\" y=\"110\">-4</text></g><path d=\"M 250 40 Q 330 20 410 40\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"2\"/><polygon points=\"410,40 400,35 405,45\" fill=\"#22c55e\"/><text x=\"330\" y=\"25\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">Increases (Greater)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Arrange the integers $-3, 4, 0, -1, 2$ from smallest to largest (ascending order).",
+          "solution_steps": [
+            "Step 1: Locate the numbers on the number line. Start with the leftmost value and move right.",
+            "Step 2: The leftmost number is $-3$, followed by $-1$, then $0$, then $2$, and finally $4$.",
+            "Step 3: Write them using the less than symbol: $-3 < -1 < 0 < 2 < 4$."
+          ],
+          "final_answer": "$-3, -1, 0, 2, 4$"
+        },
+        {
+          "problem": "Which integers lie strictly between $-2$ and $3$?",
+          "solution_steps": [
+            "Step 1: Identify the endpoints: $-2$ and $3$.",
+            "Step 2: List the integers that fall on the number line between these two points without including the endpoints themselves.",
+            "Step 3: The integers are $-1, 0, 1, 2$."
+          ],
+          "final_answer": "$-1, 0, 1, 2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Including the endpoints when asked for numbers 'strictly between'.",
+          "correction": "The word 'between' excludes the starting and ending numbers. The integers between $1$ and $5$ are $2, 3, 4$ (not $1$ and $5$)."
+        }
+      ],
+      "quick_summary": [
+        "A number line shows integers in order, with zero separating negative values on the left from positive values on the right.",
+        "Values increase from left to right.",
+        "Ascending means smallest to largest; Descending means largest to smallest."
+      ]
+    },
+    "ms_math_t01_st04": {
+      "id": "ms_math_t01_st04",
+      "title": "Rational numbers",
+      "overview": "If we only had integers, we could not measure parts of a whole. Rational numbers fill in the gaps between integers on the number line, allowing us to represent fractions, parts, and divisions.",
+      "key_concepts": [
+        {
+          "concept": "Rational Number Definition",
+          "definition": "Any number that can be written as a fraction of two integers, where the denominator is not zero.",
+          "details": [
+            "Written as $\\frac{a}{b}$ where $a, b$ are integers and $b \\neq 0$.",
+            "The top number is the numerator, the bottom is the denominator."
+          ]
+        },
+        {
+          "concept": "Forms of Rational Numbers",
+          "definition": "Rational numbers can appear in multiple forms.",
+          "details": [
+            "**Integers:** Every integer is rational because it can be divided by $1$ (e.g., $5 = \\frac{5}{1}$).",
+            "**Terminating Decimals:** Decimals that end (e.g., $0.75 = \\frac{3}{4}$).",
+            "**Recurring Decimals:** Decimals with a repeating pattern (e.g., $0.333\\dots = \\frac{1}{3}$).",
+            "A decimal represents a rational number if and only if its decimal expansion terminates or eventually repeats."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Form of a Rational Number",
+          "equation": "$$ \\frac{a}{b} $$",
+          "variables": {
+            "a": "Numerator (an integer)",
+            "b": "Denominator (a non-zero integer)"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s04",
+          "title": "Rational Numbers on a Number Line",
+          "type": "svg",
+          "caption": "Rational numbers exist between whole numbers.",
+          "alt_text": "Number line from 0 to 1 divided into fourths.",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"80\" x2=\"450\" y2=\"80\" stroke=\"#334155\" stroke-width=\"3\"/><g font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\"><line x1=\"100\" y1=\"70\" x2=\"100\" y2=\"90\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"100\" y=\"115\" font-weight=\"bold\">0</text><line x1=\"200\" y1=\"75\" x2=\"200\" y2=\"85\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"200\" y=\"115\">1/4</text><line x1=\"300\" y1=\"70\" x2=\"300\" y2=\"90\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"300\" y=\"115\">1/2</text><line x1=\"400\" y1=\"75\" x2=\"400\" y2=\"85\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"400\" y=\"115\">3/4</text><line x1=\"500\" y1=\"70\" x2=\"500\" y2=\"90\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"500\" y=\"115\" font-weight=\"bold\">1</text></g><circle cx=\"200\" cy=\"80\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"300\" cy=\"80\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"400\" cy=\"80\" r=\"5\" fill=\"#2563eb\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Is $-6$ a rational number?",
+          "solution_steps": [
+            "Step 1: Check if it can be written as a fraction of two integers.",
+            "Step 2: Write $-6$ as $\\frac{-6}{1}$.",
+            "Step 3: Both numerator and denominator are integers, and the denominator is not zero."
+          ],
+          "final_answer": "Yes, $-6$ is a rational number."
+        },
+        {
+          "problem": "Is $\\frac{5}{0}$ rational?",
+          "solution_steps": [
+            "Step 1: Identify the numerator ($5$) and denominator ($0$).",
+            "Step 2: The definition of a rational number requires the denominator to not be zero.",
+            "Step 3: Division by zero is undefined."
+          ],
+          "final_answer": "No, it is undefined and not a rational number."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Believing that integers are not rational numbers.",
+          "correction": "Every integer is a rational number because it can be expressed as a fraction with $1$ as the denominator."
+        },
+        {
+          "mistake": "Thinking a repeating decimal is irrational.",
+          "correction": "Decimals with a repeating pattern (like $0.666\\dots$) are rational because they can be written as exact fractions (like $\\frac{2}{3}$)."
+        }
+      ],
+      "quick_summary": [
+        "Rational numbers can be written as fractions of integers with non-zero denominators.",
+        "Integers, fractions, terminating decimals, and recurring decimals are all rational.",
+        "Zero is rational because $0 = \\frac{0}{1}$."
+      ],
+      "utilities": [
+        {
+          "title": "Fraction Calculator",
+          "description": "Calculate and work with fractions.",
+          "url": "https://onlinetoolpad.com/math/FRACTION_CALCULATOR",
+          "icon": "🧮"
+        }
+      ]
+    },
+    "ms_math_t01_st05": {
+      "id": "ms_math_t01_st05",
+      "title": "Equivalent fractions and rational numbers",
+      "overview": "A rational number is not limited to a single fraction. The same amount can be represented by many different but equivalent fractions, just like slicing the same pizza into a different number of equal pieces.",
+      "key_concepts": [
+        {
+          "concept": "Equivalent Fractions",
+          "definition": "Fractions that represent the exact same value, even though their numerators and denominators are different.",
+          "details": [
+            "Example: $\\frac{1}{2} = \\frac{2}{4} = \\frac{3}{6}$."
+          ]
+        },
+        {
+          "concept": "Making Equivalent Fractions",
+          "definition": "Multiply or divide both the numerator and denominator by the same non-zero number.",
+          "details": [
+            "Multiplying: $\\frac{3}{5} = \\frac{3 \\times 2}{5 \\times 2} = \\frac{6}{10}$.",
+            "Dividing (Simplifying): $\\frac{12}{18} = \\frac{12 \\div 6}{18 \\div 6} = \\frac{2}{3}$."
+          ]
+        },
+        {
+          "concept": "Simplest Form",
+          "definition": "A fraction is in simplest form when the numerator and denominator have no common positive factor greater than $1$.",
+          "details": [
+            "Found by dividing by the Highest Common Factor (HCF)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s05",
+          "title": "Visualizing Equivalent Fractions",
+          "type": "svg",
+          "caption": "1/2 is exactly the same amount as 2/4. The whole is just divided into more pieces.",
+          "alt_text": "Two identical rectangles, one divided into 2 parts with 1 shaded, the other divided into 4 parts with 2 shaded.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#ffffff\"/><g transform=\"translate(50, 50)\"><rect width=\"150\" height=\"100\" fill=\"#bfdbfe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><rect width=\"75\" height=\"100\" fill=\"#2563eb\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"75\" y=\"140\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">1/2</text></g><text x=\"250\" y=\"110\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">=</text><g transform=\"translate(300, 50)\"><rect width=\"150\" height=\"100\" fill=\"#bfdbfe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><rect width=\"75\" height=\"100\" fill=\"#2563eb\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><line x1=\"0\" y1=\"50\" x2=\"150\" y2=\"50\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"75\" y=\"140\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">2/4</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify the fraction $\\frac{24}{36}$ to its lowest terms.",
+          "solution_steps": [
+            "Step 1: Find the Highest Common Factor (HCF) of $24$ and $36$. The HCF is $12$.",
+            "Step 2: Divide both numerator and denominator by $12$.",
+            "Step 3: $\\frac{24 \\div 12}{36 \\div 12} = \\frac{2}{3}$."
+          ],
+          "final_answer": "$\\frac{2}{3}$"
+        },
+        {
+          "problem": "Find $x$ if $\\frac{4}{7} = \\frac{x}{21}$.",
+          "solution_steps": [
+            "Step 1: Determine what the denominator $7$ was multiplied by to get $21$. ($7 \\times 3 = 21$)",
+            "Step 2: Multiply the numerator by the same number to keep the fraction equivalent.",
+            "Step 3: $x = 4 \\times 3 = 12$."
+          ],
+          "final_answer": "$x = 12$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding or subtracting to make equivalent fractions.",
+          "correction": "Equivalent fractions are ONLY made by multiplying or dividing. $\\frac{1}{2} \\neq \\frac{1+1}{2+1}$."
+        },
+        {
+          "mistake": "Changing only the top or bottom number.",
+          "correction": "You must perform the exact same multiplication or division on BOTH the numerator and the denominator."
+        }
+      ],
+      "quick_summary": [
+        "Multiply or divide top and bottom by the same number to find equivalent fractions.",
+        "To simplify fully, divide by the Highest Common Factor.",
+        "Equivalent fractions look different but hold the same value on the number line."
+      ],
+      "utilities": [
+        {
+          "title": "Fraction Calculator",
+          "description": "Calculate and work with fractions.",
+          "url": "https://onlinetoolpad.com/math/FRACTION_CALCULATOR",
+          "icon": "🧮"
+        }
+      ]
+    },
+    "ms_math_t01_st06": {
+      "id": "ms_math_t01_st06",
+      "title": "Comparing and ordering rational numbers",
+      "overview": "To order a set of fractions or decimals, we need a way to compare their true values. Using common denominators or converting to decimals makes it easy to see which rational number is greater.",
+      "key_concepts": [
+        {
+          "concept": "Comparison Symbols",
+          "definition": "Symbols used to state the relationship between numbers.",
+          "details": [
+            "$<$ means 'Less than' (e.g., $2 < 5$)",
+            "$>$ means 'Greater than' (e.g., $8 > 3$)",
+            "The open side of the symbol always faces the greater number."
+          ]
+        },
+        {
+          "concept": "Comparing Fractions with Different Denominators",
+          "definition": "Convert them to equivalent fractions with a common denominator.",
+          "details": [
+            "Once denominators are identical, compare the numerators.",
+            "Alternatively, convert the fractions to decimals and compare."
+          ]
+        },
+        {
+          "concept": "Comparing Negative Rational Numbers",
+          "definition": "On the negative side of the number line, values work in reverse.",
+          "details": [
+            "The negative number closer to zero is greater. Example: $-0.4 > -0.7$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s06",
+          "title": "Ordering Fractions",
+          "type": "svg",
+          "caption": "Finding a common denominator makes it easy to compare sizes.",
+          "alt_text": "Comparison of 2/3 and 3/4 by converting them to 8/12 and 9/12.",
+          "data": "<svg viewBox=\"0 0 500 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"180\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Compare 2/3 and 3/4</text><text x=\"150\" y=\"90\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#2563eb\">2/3</text><text x=\"250\" y=\"90\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#64748b\">vs</text><text x=\"350\" y=\"90\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#2563eb\">3/4</text><path d=\"M 150 100 Q 150 120 150 130\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"150,135 145,125 155,125\" fill=\"#94a3b8\"/><path d=\"M 350 100 Q 350 120 350 130\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"350,135 345,125 355,125\" fill=\"#94a3b8\"/><text x=\"150\" y=\"160\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">8/12</text><text x=\"250\" y=\"160\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">&lt;</text><text x=\"350\" y=\"160\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">9/12</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Which is greater, $\\frac{2}{3}$ or $\\frac{3}{5}$?",
+          "solution_steps": [
+            "Step 1: Find a common denominator. The least common multiple of $3$ and $5$ is $15$.",
+            "Step 2: Convert to equivalent fractions: $\\frac{2}{3} = \\frac{10}{15}$ and $\\frac{3}{5} = \\frac{9}{15}$.",
+            "Step 3: Compare numerators. $10$ is greater than $9$."
+          ],
+          "final_answer": "$\\frac{2}{3} > \\frac{3}{5}$"
+        },
+        {
+          "problem": "Arrange $-\\frac{1}{2}, \\frac{1}{4}, -\\frac{3}{4}, 0$ in ascending order (smallest to largest).",
+          "solution_steps": [
+            "Step 1: Identify the smallest numbers (the negatives). The negatives are $-\\frac{1}{2}$ and $-\\frac{3}{4}$.",
+            "Step 2: Compare the negatives using a common denominator of $4$. $-\\frac{1}{2} = -\\frac{2}{4}$. Since $-3 < -2$, $-\\frac{3}{4}$ is the smallest.",
+            "Step 3: Place $0$ between the negatives and positives.",
+            "Step 4: The only positive number, $\\frac{1}{4}$, is the largest."
+          ],
+          "final_answer": "$-\\frac{3}{4} < -\\frac{1}{2} < 0 < \\frac{1}{4}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Comparing fractions by only looking at the denominators.",
+          "correction": "A larger denominator does not mean a larger fraction. You must convert to common denominators or decimals to compare accurately."
+        },
+        {
+          "mistake": "Reversing negative comparisons.",
+          "correction": "Remember that $-\\frac{1}{2}$ is GREATER than $-\\frac{3}{4}$ because it is closer to zero on the number line."
+        }
+      ],
+      "quick_summary": [
+        "To compare fractions, convert them to have a common denominator or convert them to decimals.",
+        "Ascending order is smallest to largest; descending is largest to smallest.",
+        "Among negative numbers, the number closer to zero is greater."
+      ],
+      "utilities": [
+        {
+          "title": "Fraction Calculator",
+          "description": "Calculate and work with fractions.",
+          "url": "https://onlinetoolpad.com/math/FRACTION_CALCULATOR",
+          "icon": "🧮"
+        }
+      ]
+    },
+    "ms_math_t01_st07": {
+      "id": "ms_math_t01_st07",
+      "title": "Absolute value",
+      "overview": "Absolute value tells us how far a number is from zero on the number line, regardless of direction. It is a crucial concept for calculating distances and differences without worrying about negative signs.",
+      "key_concepts": [
+        {
+          "concept": "Absolute Value",
+          "definition": "The distance of a number from zero on the number line.",
+          "details": [
+            "Absolute value is non-negative: it is positive for any non-zero number and zero for zero.",
+            "The symbol for absolute value is a pair of vertical bars: $|x|$."
+          ]
+        },
+        {
+          "concept": "Distance Between Two Numbers",
+          "definition": "The distance between two numbers is the absolute value of their difference.",
+          "details": [
+            "Formula: Distance between $a$ and $b$ is $|a - b|$."
+          ]
+        },
+        {
+          "concept": "Solving Absolute Value Equations",
+          "definition": "An absolute value equation can often have two solutions.",
+          "details": [
+            "If $|x| = 9$, then $x$ could be $9$ or $-9$, because both are $9$ units away from zero."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Distance on a Number Line",
+          "equation": "$$ |a - b| $$",
+          "variables": {
+            "a": "First coordinate",
+            "b": "Second coordinate"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s07",
+          "title": "Absolute Value as Distance",
+          "type": "svg",
+          "caption": "Both 5 and -5 have an absolute value of 5 because they are 5 units from zero.",
+          "alt_text": "A number line showing jumps from 0 to 5 and 0 to -5, both labeled with a distance of 5.",
+          "data": "<svg viewBox=\"0 0 500 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"180\" fill=\"#ffffff\"/><line x1=\"40\" y1=\"100\" x2=\"460\" y2=\"100\" stroke=\"#334155\" stroke-width=\"3\"/><g font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\"><line x1=\"250\" y1=\"90\" x2=\"250\" y2=\"110\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"250\" y=\"130\" font-weight=\"bold\">0</text><line x1=\"400\" y1=\"95\" x2=\"400\" y2=\"105\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"400\" y=\"130\">5</text><line x1=\"100\" y1=\"95\" x2=\"100\" y2=\"105\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"100\" y=\"130\">-5</text></g><path d=\"M 250 85 Q 325 40 395 85\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><polygon points=\"395,85 385,80 390,90\" fill=\"#2563eb\"/><text x=\"325\" y=\"35\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Distance = 5</text><path d=\"M 250 85 Q 175 40 105 85\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><polygon points=\"105,85 110,90 115,80\" fill=\"#ef4444\"/><text x=\"175\" y=\"35\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Distance = 5</text><text x=\"250\" y=\"165\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\">|-5| = 5  and  |5| = 5</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate the expression $|-6| + 2$.",
+          "solution_steps": [
+            "Step 1: Find the absolute value of $-6$. Since it is $6$ units from zero, $|-6| = 6$.",
+            "Step 2: Substitute $6$ back into the expression: $6 + 2$.",
+            "Step 3: Add the numbers together."
+          ],
+          "final_answer": "$8$"
+        },
+        {
+          "problem": "Find the distance between $-2$ and $-7$ on the number line.",
+          "solution_steps": [
+            "Step 1: Use the distance formula $|a - b|$.",
+            "Step 2: Substitute the values: $|-2 - (-7)|$.",
+            "Step 3: Simplify the expression inside the bars: $|-2 + 7| = |5|$.",
+            "Step 4: The absolute value of $5$ is $5$."
+          ],
+          "final_answer": "$5$ units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking absolute value can be negative (e.g., $|-4| = -4$).",
+          "correction": "Absolute value measures distance, and distance cannot be negative. $|-4| = 4$."
+        },
+        {
+          "mistake": "Ignoring the expression inside the bars, like in $|-5 + 2|$.",
+          "correction": "You must calculate the inside expression FIRST ($-5 + 2 = -3$), and THEN take the absolute value ($|-3| = 3$)."
+        }
+      ],
+      "quick_summary": [
+        "Absolute value ($|x|$) is the distance from zero.",
+        "It is non-negative: positive for non-zero values and zero when the number is zero.",
+        "Distance between two numbers is $|a - b|$."
+      ]
+    },
+    "ms_math_t01_st08": {
+      "id": "ms_math_t01_st08",
+      "title": "Factors and multiples",
+      "overview": "Understanding how numbers break down into smaller parts or build up into larger quantities is fundamental to arithmetic. Factors are numbers that fit perfectly into another number, while multiples are the result of multiplying a number.",
+      "key_concepts": [
+        {
+          "concept": "Factors",
+          "definition": "A positive whole number that divides another positive whole number exactly, leaving no remainder.",
+          "details": [
+            "Every positive integer has a finite number of factors.",
+            "$1$ and the number itself are always factors."
+          ]
+        },
+        {
+          "concept": "Multiples",
+          "definition": "The result of multiplying a given positive whole number by a positive integer (in this lesson, we list positive multiples).",
+          "details": [
+            "A positive integer has infinitely many positive multiples.",
+            "Think of it like a multiplication table: $5, 10, 15, 20\\dots$"
+          ]
+        },
+        {
+          "concept": "Common Factors and Multiples",
+          "definition": "Values shared between two or more numbers.",
+          "details": [
+            "Common Factors: Numbers that divide two or more numbers exactly.",
+            "Common Multiples: Numbers that are multiples of two or more given numbers."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s08",
+          "title": "Factors vs Multiples of 12",
+          "type": "svg",
+          "caption": "Factors are limited and divide into the number. Multiples are infinite and grow larger.",
+          "alt_text": "Diagram showing factors of 12 (1, 2, 3, 4, 6, 12) inside a bounded box, and multiples of 12 (12, 24, 36...) extending infinitely to the right.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"50\" width=\"200\" height=\"120\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"120\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">Factors of 12</text><text x=\"120\" y=\"80\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\">(Finite)</text><text x=\"120\" y=\"110\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#14532d\">1, 2, 3, 4, 6, 12</text><text x=\"120\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">They divide 12 exactly.</text><rect x=\"280\" y=\"50\" width=\"200\" height=\"120\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"10\"/><text x=\"380\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Multiples of 12</text><text x=\"380\" y=\"80\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\">(Infinite)</text><text x=\"380\" y=\"110\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\">12, 24, 36, 48...</text><text x=\"380\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\">12 × 1, 12 × 2, 12 × 3...</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find all factors of $24$.",
+          "solution_steps": [
+            "Step 1: Check numbers in factor pairs starting from 1.",
+            "Step 2: $1 \\times 24 = 24$",
+            "Step 3: $2 \\times 12 = 24$",
+            "Step 4: $3 \\times 8 = 24$",
+            "Step 5: $4 \\times 6 = 24$",
+            "Step 6: List all unique numbers from the pairs."
+          ],
+          "final_answer": "$1, 2, 3, 4, 6, 8, 12, 24$"
+        },
+        {
+          "problem": "Find the common factors of $12$ and $18$.",
+          "solution_steps": [
+            "Step 1: List factors of 12: $1, 2, 3, 4, 6, 12$.",
+            "Step 2: List factors of 18: $1, 2, 3, 6, 9, 18$.",
+            "Step 3: Identify the numbers that appear in both lists."
+          ],
+          "final_answer": "$1, 2, 3, 6$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing factors with multiples.",
+          "correction": "Memory tip: Factors fit INTO a number exactly. Multiples are MULTIPLIED from a number."
+        },
+        {
+          "mistake": "Forgetting 1 and the number itself when listing factors.",
+          "correction": "1 and the number itself are always the first factor pair you should write down."
+        }
+      ],
+      "quick_summary": [
+        "Factors divide a number exactly (finite amount).",
+        "Multiples are generated by multiplying the number (infinite amount).",
+        "Common factors and multiples are shared between two or more numbers."
+      ],
+      "utilities": [
+        {
+          "title": "LCM and HCF Calculator",
+          "description": "Find the highest common factor and lowest common multiple.",
+          "url": "https://onlinetoolpad.com/others/LCM_and_HCF_Calculator",
+          "icon": "🧮"
+        }
+      ]
+    },
+    "ms_math_t01_st09": {
+      "id": "ms_math_t01_st09",
+      "title": "Prime factorisation",
+      "overview": "Every composite number is built from smaller prime numbers, like building blocks. Prime factorisation is the process of breaking a number down until only prime numbers remain.",
+      "key_concepts": [
+        {
+          "concept": "Prime vs. Composite",
+          "definition": "Classifying whole numbers based on their factors.",
+          "details": [
+            "**Prime Number:** Greater than $1$, has exactly two factors ($1$ and itself). Example: $2, 3, 5, 7$.",
+            "**Composite Number:** Greater than $1$, has more than two factors. Example: $4, 6, 9, 12$.",
+            "The number $1$ is neither prime nor composite because it has only one positive factor."
+          ]
+        },
+        {
+          "concept": "Prime Factorisation",
+          "definition": "Expressing a composite number as a product of only prime numbers.",
+          "details": [
+            "Can be found using a Factor Tree or Repeated Division.",
+            "Usually written using exponents for repeated factors (e.g., $2 \\times 2 \\times 3 = 2^2 \\times 3$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s09",
+          "title": "Factor Tree for 24",
+          "type": "svg",
+          "caption": "Breaking down 24 into its prime factors using a tree diagram.",
+          "alt_text": "Factor tree showing 24 splitting into 4 and 6. 4 splits into 2 and 2. 6 splits into 2 and 3. The prime factors are circled.",
+          "data": "<svg viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"250\" fill=\"#ffffff\"/><text x=\"200\" y=\"40\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">24</text><line x1=\"190\" y1=\"50\" x2=\"130\" y2=\"90\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"210\" y1=\"50\" x2=\"270\" y2=\"90\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"120\" y=\"115\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">4</text><text x=\"280\" y=\"115\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">6</text><line x1=\"110\" y1=\"125\" x2=\"80\" y2=\"165\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"130\" y1=\"125\" x2=\"160\" y2=\"165\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"75\" cy=\"185\" r=\"20\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"75\" y=\"192\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">2</text><circle cx=\"165\" cy=\"185\" r=\"20\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"165\" y=\"192\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">2</text><line x1=\"270\" y1=\"125\" x2=\"240\" y2=\"165\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"290\" y1=\"125\" x2=\"320\" y2=\"165\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"235\" cy=\"185\" r=\"20\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"235\" y=\"192\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">2</text><circle cx=\"325\" cy=\"185\" r=\"20\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"325\" y=\"192\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">3</text><text x=\"200\" y=\"235\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\">24 = 2 × 2 × 2 × 3 = 2³ × 3</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the prime factorisation of $60$ using repeated division.",
+          "solution_steps": [
+            "Step 1: Divide by the smallest prime, $2$. ($60 \\div 2 = 30$)",
+            "Step 2: Divide $30$ by $2$. ($30 \\div 2 = 15$)",
+            "Step 3: $15$ is not divisible by $2$, so try the next prime, $3$. ($15 \\div 3 = 5$)",
+            "Step 4: $5$ is a prime number, so divide by $5$. ($5 \\div 5 = 1$)",
+            "Step 5: Collect the prime divisors: $2, 2, 3, 5$."
+          ],
+          "final_answer": "$60 = 2^2 \\times 3 \\times 5$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Stopping at composite factors (e.g., writing $60 = 6 \\times 10$).",
+          "correction": "Prime factorisation requires EVERY factor to be prime. Neither $6$ nor $10$ are prime, so they must be broken down further."
+        },
+        {
+          "mistake": "Including 1 as a prime factor.",
+          "correction": "The number 1 is neither prime nor composite. It should never be included in prime factorisation."
+        }
+      ],
+      "quick_summary": [
+        "Prime numbers have exactly two factors (1 and itself).",
+        "Composite numbers have more than two factors.",
+        "Prime factorisation breaks a composite number down into a product of primes.",
+        "Use exponents to write repeated prime factors compactly."
+      ],
+      "utilities": [
+        {
+          "title": "Prime Factor Tree Calculator",
+          "description": "Explore the prime factorisation of a number.",
+          "url": "https://onlinetoolpad.com/others/Prime_Factor_Tree_Calculator",
+          "icon": "🌳"
+        }
+      ]
+    },
+    "ms_math_t01_st10": {
+      "id": "ms_math_t01_st10",
+      "title": "HCF and LCM",
+      "overview": "When comparing two numbers, we often want to find the largest building block they share or the smallest future point where they align. The Highest Common Factor (HCF) helps us group items equally, while the Lowest Common Multiple (LCM) helps us sync repeating events.",
+      "key_concepts": [
+        {
+          "concept": "Highest Common Factor (HCF)",
+          "definition": "The greatest positive integer that divides each of two or more positive integers exactly.",
+          "details": [
+            "Also known as the Greatest Common Divisor (GCD).",
+            "Useful when dividing items into the largest equal groups without leftovers.",
+            "Using prime factorisation: multiply the common prime factors with the smaller exponents."
+          ]
+        },
+        {
+          "concept": "Lowest Common Multiple (LCM)",
+          "definition": "The smallest positive integer that is a multiple of each of two or more positive integers.",
+          "details": [
+            "Useful when finding when repeating events coincide (like alarms ringing together).",
+            "Using prime factorisation: multiply all prime factors appearing in either number, taking the larger exponent for each."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s10",
+          "title": "HCF and LCM Exponent Rules",
+          "type": "svg",
+          "caption": "A quick visual guide on how to choose exponents for HCF and LCM.",
+          "alt_text": "Comparison showing HCF choosing the smaller exponent and LCM choosing the larger exponent for prime factors.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"30\" y=\"30\" width=\"200\" height=\"140\" fill=\"#fef2f2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"8\"/><text x=\"130\" y=\"60\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">HCF</text><text x=\"130\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#7f1d1d\">Highest Common Factor</text><circle cx=\"130\" cy=\"130\" r=\"25\" fill=\"#fca5a5\"/><text x=\"130\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#7f1d1d\" font-weight=\"bold\">SMALLER</text><text x=\"130\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#7f1d1d\">Exponents</text><rect x=\"270\" y=\"30\" width=\"200\" height=\"140\" fill=\"#f0fdf4\" stroke=\"#22c55e\" stroke-width=\"2\" rx=\"8\"/><text x=\"370\" y=\"60\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">LCM</text><text x=\"370\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\">Lowest Common Multiple</text><circle cx=\"370\" cy=\"130\" r=\"25\" fill=\"#86efac\"/><text x=\"370\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">LARGER</text><text x=\"370\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">Exponents</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the HCF of $24$ and $36$ using prime factorisation.",
+          "solution_steps": [
+            "Step 1: Write the prime factorisations: $24 = 2^3 \\times 3^1$ and $36 = 2^2 \\times 3^2$.",
+            "Step 2: Compare the exponents of the common prime factors.",
+            "Step 3: For prime $2$, the smaller exponent is $2$. For prime $3$, the smaller exponent is $1$.",
+            "Step 4: Multiply them: $2^2 \\times 3^1 = 4 \\times 3 = 12$."
+          ],
+          "final_answer": "$\\operatorname{HCF}(24,36) = 12$"
+        },
+        {
+          "problem": "One alarm rings every $6$ minutes and another rings every $8$ minutes. Both ring together now. After how many minutes will they next ring together?",
+          "solution_steps": [
+            "Step 1: This is a repeating event problem, so we need the LCM.",
+            "Step 2: Prime factorise: $6 = 2^1 \\times 3^1$ and $8 = 2^3$.",
+            "Step 3: Take the largest exponent of each prime factor present: $2^3 \\times 3^1$.",
+            "Step 4: Multiply: $8 \\times 3 = 24$."
+          ],
+          "final_answer": "$24$ minutes"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the larger exponents for HCF because of the word 'Highest'.",
+          "correction": "'Highest' refers to the numerical value of the final common factor, not the exponents. To find a factor (which is smaller than the original numbers), you must use the SMALLER exponents."
+        },
+        {
+          "mistake": "Using HCF instead of LCM for repeating events.",
+          "correction": "If things are repeating into the future, the numbers are multiplying. Always use LCM for overlapping schedules or repeating events."
+        }
+      ],
+      "quick_summary": [
+        "HCF is for grouping or dividing items equally. Use the smaller exponents in prime factorisation.",
+        "LCM is for finding when repeating cycles sync up. Use the larger exponents.",
+        "Listing factors and multiples works well for small numbers, but prime factorisation is faster for larger ones."
+      ],
+      "utilities": [
+        {
+          "title": "LCM and HCF Calculator",
+          "description": "Find the highest common factor and lowest common multiple.",
+          "url": "https://onlinetoolpad.com/others/LCM_and_HCF_Calculator",
+          "icon": "🧮"
+        }
+      ]
+    },
+    "ms_math_t01_st11": {
+      "id": "ms_math_t01_st11",
+      "title": "Divisibility rules",
+      "overview": "Divisibility rules are clever math shortcuts. They allow you to look at the digits of a large number and instantly know if it divides exactly by another number without having to do the long division.",
+      "key_concepts": [
+        {
+          "concept": "Divisibility by 2, 5, and 10",
+          "definition": "Check the last digit.",
+          "details": [
+            "**2:** Last digit is even ($0, 2, 4, 6, 8$).",
+            "**5:** Last digit is $0$ or $5$.",
+            "**10:** Last digit is $0$."
+          ]
+        },
+        {
+          "concept": "Divisibility by 3 and 9",
+          "definition": "Check the sum of the digits.",
+          "details": [
+            "**3:** The sum of all digits is divisible by $3$.",
+            "**9:** The sum of all digits is divisible by $9$."
+          ]
+        },
+        {
+          "concept": "Divisibility by 4, 6, and 8",
+          "definition": "Compound and multi-digit rules.",
+          "details": [
+            "**4:** The number formed by the last two digits is divisible by $4$.",
+            "**8:** The number formed by the last three digits is divisible by $8$.",
+            "**6:** The number passes BOTH the rule for $2$ and the rule for $3$."
+          ]
+        },
+        {
+          "concept": "Divisibility by 11",
+          "definition": "Alternating sum difference.",
+          "details": [
+            "Starting from either end, find the difference between the sums of digits in alternate positions. The number is divisible by $11$ if this difference is $0$ or a multiple of $11$ (using its absolute value)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s11",
+          "title": "Digit Sum Rule for 3 and 9",
+          "type": "svg",
+          "caption": "Adding the digits of 729 to check for divisibility.",
+          "alt_text": "Visual showing 7 + 2 + 9 = 18. Since 18 is divisible by 9 and 3, 729 is divisible by 9 and 3.",
+          "data": "<svg viewBox=\"0 0 500 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"180\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Is 729 divisible by 3 and 9?</text><rect x=\"100\" y=\"60\" width=\"300\" height=\"50\" fill=\"#e0e7ff\" stroke=\"#4f46e5\" stroke-width=\"2\" rx=\"10\"/><text x=\"250\" y=\"92\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#3730a3\" font-weight=\"bold\">7 + 2 + 9 = 18</text><path d=\"M 250 115 L 250 135\" stroke=\"#4f46e5\" stroke-width=\"2\"/><polygon points=\"250,140 245,130 255,130\" fill=\"#4f46e5\"/><text x=\"250\" y=\"160\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">18 ÷ 9 = 2 (Exact!)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Is $5,418$ divisible by $6$?",
+          "solution_steps": [
+            "Step 1: To be divisible by $6$, it must be divisible by both $2$ and $3$.",
+            "Step 2: Check for $2$: The last digit is $8$ (even), so yes.",
+            "Step 3: Check for $3$: Sum the digits $5 + 4 + 1 + 8 = 18$. $18$ is divisible by $3$, so yes.",
+            "Step 4: Since it passes both rules, it is divisible by $6$."
+          ],
+          "final_answer": "Yes"
+        },
+        {
+          "problem": "Is $1,331$ divisible by $11$?",
+          "solution_steps": [
+            "Step 1: Add alternating digits. First group: $1 + 3 = 4$.",
+            "Step 2: Second group: $3 + 1 = 4$.",
+            "Step 3: Find the difference: $4 - 4 = 0$.",
+            "Step 4: Since the difference is $0$ (which is a multiple of $11$), it is divisible by $11$."
+          ],
+          "final_answer": "Yes"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying the digit-sum rule to 4 or 8.",
+          "correction": "Adding the digits only works for 3 and 9. For 4, look at the last two digits. For 8, look at the last three digits."
+        }
+      ],
+      "quick_summary": [
+        "Rules for 2, 5, 10 look only at the last digit.",
+        "Rules for 4 and 8 look at the last two or three digits.",
+        "Rules for 3 and 9 require summing all the digits.",
+        "Rule for 6 combines the rules for 2 and 3."
+      ]
+    },
+    "ms_math_t01_st12": {
+      "id": "ms_math_t01_st12",
+      "title": "Powers and exponents",
+      "overview": "Writing out repeated multiplication takes too much time and space. Exponents provide a compact, powerful way to write numbers that are multiplied by themselves multiple times, forming the basis for scientific notation and algebra.",
+      "key_concepts": [
+        {
+          "concept": "Base and Exponent",
+          "definition": "The anatomy of a power.",
+          "details": [
+            "**Base:** The number being multiplied.",
+            "**Exponent:** For a positive whole-number exponent, it tells how many times the base appears as a factor."
+          ]
+        },
+        {
+          "concept": "Special Names",
+          "definition": "Specific powers have unique terms.",
+          "details": [
+            "$x^2$ is called '$x$ squared'.",
+            "$x^3$ is called '$x$ cubed'."
+          ]
+        },
+        {
+          "concept": "Negative Bases",
+          "definition": "The role of brackets is critical when dealing with negative numbers.",
+          "details": [
+            "$(-3)^2 = (-3) \\times (-3) = 9$.",
+            "$-3^2 = -(3 \\times 3) = -9$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Multiplying Powers with Same Base",
+          "equation": "$$ a^m \\times a^n = a^{m+n} $$",
+          "variables": {
+            "a": "Common base",
+            "m, n": "Positive whole-number exponents"
+          }
+        },
+        {
+          "name": "Dividing Powers with Same Base",
+          "equation": "$$ \\frac{a^m}{a^n}=a^{m-n} \\quad (a\\neq 0,\\ m\\geq n) $$",
+          "variables": {
+            "a": "Common base, with $a\\neq 0$",
+            "m, n": "Whole-number exponents, with $m\\geq n$ for this course"
+          }
+        },
+        {
+          "name": "Power of a Power",
+          "equation": "$$ (a^m)^n = a^{mn} $$",
+          "variables": {
+            "a": "Base",
+            "m, n": "Positive whole-number exponents"
+          }
+        },
+        {
+          "name": "Zero Exponent",
+          "equation": "$$ a^0 = 1 $$",
+          "variables": {
+            "a": "Any non-zero base"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s12",
+          "title": "Anatomy of an Exponent",
+          "type": "svg",
+          "caption": "3 is the base and 4 is the exponent.",
+          "alt_text": "3 raised to the power of 4, labeled as Base and Exponent, equaling 3 times 3 times 3 times 3.",
+          "data": "<svg viewBox=\"0 0 500 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"180\" fill=\"#ffffff\"/><text x=\"100\" y=\"100\" font-family=\"sans-serif\" font-size=\"64\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">3</text><text x=\"145\" y=\"60\" font-family=\"sans-serif\" font-size=\"40\" text-anchor=\"middle\" fill=\"#2563eb\" font-weight=\"bold\">4</text><path d=\"M 100 110 L 100 130 L 130 130\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"135\" y=\"135\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#475569\" font-weight=\"bold\">Base</text><path d=\"M 145 30 L 145 20 L 175 20\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"180\" y=\"25\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#1d4ed8\" font-weight=\"bold\">Exponent</text><text x=\"200\" y=\"85\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"350\" y=\"85\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#1e293b\">3 × 3 × 3 × 3</text><rect x=\"230\" y=\"110\" width=\"240\" height=\"40\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"350\" y=\"135\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">= 81</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify $2^3 \\times 2^2$.",
+          "solution_steps": [
+            "Step 1: Check if the bases are the same. Yes, both are $2$.",
+            "Step 2: Apply the multiplication law: add the exponents.",
+            "Step 3: $3 + 2 = 5$.",
+            "Step 4: Evaluate $2^5 = 2 \\times 2 \\times 2 \\times 2 \\times 2$."
+          ],
+          "final_answer": "$2^5 = 32$"
+        },
+        {
+          "problem": "Evaluate $\\frac{5^4}{5^2}$.",
+          "solution_steps": [
+            "Step 1: The bases are identical. This is a division problem.",
+            "Step 2: Apply the division law: subtract the exponents.",
+            "Step 3: $4 - 2 = 2$.",
+            "Step 4: Evaluate $5^2 = 5 \\times 5$."
+          ],
+          "final_answer": "$25$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying the base by the exponent (e.g., $3^4 = 12$).",
+          "correction": "The exponent tells you how many times to write the base in a multiplication problem. $3^4 = 3 \\times 3 \\times 3 \\times 3 = 81$."
+        },
+        {
+          "mistake": "Adding exponents with different bases (e.g., $2^2 \\times 3^2 = 6^4$).",
+          "correction": "The exponent addition law ONLY works when the bases are identical."
+        }
+      ],
+      "quick_summary": [
+        "An exponent indicates repeated multiplication of the base.",
+        "To multiply powers with the same base, add their exponents.",
+        "To divide powers with the same base, subtract their exponents.",
+        "Any non-zero base raised to the power of $0$ is $1$."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Evaluate powers, roots and other mathematical expressions.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "🧮"
+        }
+      ]
+    },
+    "ms_math_t01_st13": {
+      "id": "ms_math_t01_st13",
+      "title": "Squares, cubes and roots",
+      "overview": "Squaring and cubing numbers allow us to easily calculate areas and volumes. Roots act as a mathematical 'undo' button, letting us work backward to find original lengths and dimensions.",
+      "key_concepts": [
+        {
+          "concept": "Squares and Perfect Squares",
+          "definition": "The square of a number is the number multiplied by itself.",
+          "details": [
+            "Written as $a^2 = a \\times a$.",
+            "A 'perfect square' is the square of an integer (e.g., $36$ is a perfect square because $6^2 = 36$)."
+          ]
+        },
+        {
+          "concept": "Cubes and Perfect Cubes",
+          "definition": "The cube of a number is the number multiplied by itself three times.",
+          "details": [
+            "Written as $a^3 = a \\times a \\times a$.",
+            "Example: $4^3 = 4 \\times 4 \\times 4 = 64$."
+          ]
+        },
+        {
+          "concept": "Square Roots",
+          "definition": "Reverses the operation of squaring.",
+          "details": [
+            "If $6^2 = 36$, then the principal (positive) square root $\\sqrt{36} = 6$.",
+            "If a positive integer is not a perfect square, its square root is irrational and has a non-terminating, non-repeating decimal expansion (e.g., $\\sqrt{20}\\approx 4.47$)."
+          ]
+        },
+        {
+          "concept": "Cube Roots",
+          "definition": "Reverses the operation of cubing.",
+          "details": [
+            "If $5^3 = 125$, then $\\sqrt[3]{125} = 5$.",
+            "Unlike square roots, you CAN find the cube root of a negative number: $\\sqrt[3]{-27} = -3$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Area of a Square",
+          "equation": "$$ A = s^2 $$",
+          "variables": {
+            "A": "Area",
+            "s": "Side length"
+          }
+        },
+        {
+          "name": "Volume of a Cube",
+          "equation": "$$ V = s^3 $$",
+          "variables": {
+            "V": "Volume",
+            "s": "Side length"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s13",
+          "title": "Squares and Square Roots",
+          "type": "svg",
+          "caption": "Squaring a side length gives the area. The square root of the area gives back the side length.",
+          "alt_text": "A square divided into a 4x4 grid, showing a side of 4 and an area of 16.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(50, 40)\"><rect width=\"120\" height=\"120\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"30\" y1=\"0\" x2=\"30\" y2=\"120\" stroke=\"#60a5fa\" stroke-width=\"1\"/><line x1=\"60\" y1=\"0\" x2=\"60\" y2=\"120\" stroke=\"#60a5fa\" stroke-width=\"1\"/><line x1=\"90\" y1=\"0\" x2=\"90\" y2=\"120\" stroke=\"#60a5fa\" stroke-width=\"1\"/><line x1=\"0\" y1=\"30\" x2=\"120\" y2=\"30\" stroke=\"#60a5fa\" stroke-width=\"1\"/><line x1=\"0\" y1=\"60\" x2=\"120\" y2=\"60\" stroke=\"#60a5fa\" stroke-width=\"1\"/><line x1=\"0\" y1=\"90\" x2=\"120\" y2=\"90\" stroke=\"#60a5fa\" stroke-width=\"1\"/><text x=\"60\" y=\"-10\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Side = 4</text><text x=\"-15\" y=\"65\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">4</text><text x=\"60\" y=\"65\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Area = 16</text></g><path d=\"M 200 80 Q 275 40 350 80\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><polygon points=\"350,80 340,75 345,85\" fill=\"#16a34a\"/><text x=\"275\" y=\"35\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Square it: 4² = 16</text><path d=\"M 350 120 Q 275 160 200 120\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2\"/><polygon points=\"200,120 210,125 205,115\" fill=\"#d97706\"/><text x=\"275\" y=\"175\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b45309\" font-weight=\"bold\">Square Root: √16 = 4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\sqrt{121}$.",
+          "solution_steps": [
+            "Step 1: Identify what number multiplied by itself equals $121$.",
+            "Step 2: Check known perfect squares: $10 \\times 10 = 100$, $11 \\times 11 = 121$.",
+            "Step 3: The principal (positive) square root is $11$."
+          ],
+          "final_answer": "$11$"
+        },
+        {
+          "problem": "Evaluate $\\sqrt[3]{-8}$.",
+          "solution_steps": [
+            "Step 1: We are looking for a number that, when cubed, equals $-8$.",
+            "Step 2: Since the result is negative, the base must be negative.",
+            "Step 3: Test $-2$: $(-2) \\times (-2) \\times (-2) = 4 \\times (-2) = -8$."
+          ],
+          "final_answer": "$-2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $5^2$ means $5 \\times 2 = 10$.",
+          "correction": "Squaring means multiplying the number by itself. $5^2 = 5 \\times 5 = 25$."
+        },
+        {
+          "mistake": "Believing you can't take the cube root of a negative number.",
+          "correction": "While you cannot take the real square root of a negative number, you CAN take the cube root of a negative number (e.g., $\\sqrt[3]{-8} = -2$)."
+        }
+      ],
+      "quick_summary": [
+        "Squares ($x^2$) and cubes ($x^3$) are powers; for a square or cube with side length $x$, they also give the area or volume respectively.",
+        "Roots reverse powers.",
+        "Perfect squares and perfect cubes result in integer roots."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Evaluate powers, roots and other mathematical expressions.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "🧮"
+        }
+      ]
+    },
+    "ms_math_t01_st14": {
+      "id": "ms_math_t01_st14",
+      "title": "Irrational numbers — introduction",
+      "overview": "Some real numbers cannot be expressed as a ratio of two integers. These are called irrational numbers. Their decimal expansions continue without ending and do not repeat a fixed pattern.",
+      "key_concepts": [
+        {
+          "concept": "Irrational Number",
+          "definition": "A number that CANNOT be written as a fraction of two integers.",
+          "details": [
+            "Their decimal expansions never terminate (end) and never settle into a repeating pattern."
+          ]
+        },
+        {
+          "concept": "Square Roots of Non-Perfect Squares",
+          "definition": "The most common type of irrational number.",
+          "details": [
+            "The square root of a positive integer that is not a perfect square is irrational.",
+            "Examples: $\\sqrt{2}, \\sqrt{3}, \\sqrt{5}, \\sqrt{7}$."
+          ]
+        },
+        {
+          "concept": "The Number Pi ($\\pi$)",
+          "definition": "The ratio of a circle's circumference to its diameter.",
+          "details": [
+            "$\\pi \\approx 3.14159\\dots$",
+            "Fractions like $\\frac{22}{7}$ are just approximations; $\\pi$ cannot be written as an exact fraction."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s14",
+          "title": "Rational vs Irrational Decimals",
+          "type": "svg",
+          "caption": "Look at the decimal expansion to determine if a number is rational or irrational.",
+          "alt_text": "Comparison of 0.75 (terminates -> rational), 0.333... (repeats -> rational), and pi (never terminates or repeats -> irrational).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"140\" height=\"160\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"2\" rx=\"10\"/><text x=\"90\" y=\"50\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">0.75</text><text x=\"90\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0284c7\">Terminates</text><text x=\"90\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0284c7\">(Ends)</text><path d=\"M 90 120 L 90 140\" stroke=\"#0284c7\" stroke-width=\"2\"/><polygon points=\"90,145 85,135 95,135\" fill=\"#0284c7\"/><text x=\"90\" y=\"165\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">Rational</text><rect x=\"180\" y=\"20\" width=\"140\" height=\"160\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"2\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">0.333...</text><text x=\"250\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0284c7\">Repeats a</text><text x=\"250\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0284c7\">pattern</text><path d=\"M 250 120 L 250 140\" stroke=\"#0284c7\" stroke-width=\"2\"/><polygon points=\"250,145 245,135 255,135\" fill=\"#0284c7\"/><text x=\"250\" y=\"165\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">Rational</text><rect x=\"340\" y=\"20\" width=\"140\" height=\"160\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\" rx=\"10\"/><text x=\"410\" y=\"50\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">3.14159...</text><text x=\"410\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#ca8a04\">Never ends,</text><text x=\"410\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#ca8a04\">Never repeats</text><path d=\"M 410 120 L 410 140\" stroke=\"#ca8a04\" stroke-width=\"2\"/><polygon points=\"410,145 405,135 415,135\" fill=\"#ca8a04\"/><text x=\"410\" y=\"165\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Irrational</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify $\\sqrt{25}$ as rational or irrational.",
+          "solution_steps": [
+            "Step 1: Simplify the expression if possible.",
+            "Step 2: $25$ is a perfect square, so $\\sqrt{25} = 5$.",
+            "Step 3: $5$ can be written as the fraction $\\frac{5}{1}$."
+          ],
+          "final_answer": "Rational"
+        },
+        {
+          "problem": "Classify $0.454545\\dots$ as rational or irrational.",
+          "solution_steps": [
+            "Step 1: Check the decimal behavior. Does it end? No.",
+            "Step 2: Does it repeat a pattern? Yes, the block '45' repeats endlessly.",
+            "Step 3: Repeating decimals can always be converted into exact fractions."
+          ],
+          "final_answer": "Rational"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking every non-terminating decimal is irrational.",
+          "correction": "Only decimals that NEVER terminate AND NEVER repeat are irrational. If it repeats ($0.666\\dots$), it is rational."
+        },
+        {
+          "mistake": "Believing $\\frac{22}{7}$ is the exact value of $\\pi$.",
+          "correction": "$\\frac{22}{7}$ is just a useful fractional approximation. $\\pi$ itself is irrational and cannot be written as an exact fraction."
+        }
+      ],
+      "quick_summary": [
+        "Irrational numbers cannot be expressed as a ratio (fraction) of integers.",
+        "Their decimals never terminate and never repeat.",
+        "Common examples: $\\pi$ and square roots of non-perfect squares like $\\sqrt{2}$."
+      ]
+    },
+    "ms_math_t01_st15": {
+      "id": "ms_math_t01_st15",
+      "title": "Real numbers — introduction",
+      "overview": "Real numbers encompass every single number we can place on a number line, unifying rational fractions and irrational decimals into one complete, unbroken system.",
+      "key_concepts": [
+        {
+          "concept": "Real Numbers ($\\mathbb{R}$)",
+          "definition": "The set of all rational and irrational numbers.",
+          "details": [
+            "Every real number corresponds to exactly one point on the number line.",
+            "Real numbers can be positive, negative, or zero."
+          ]
+        },
+        {
+          "concept": "The Number System Hierarchy",
+          "definition": "Sets of numbers are nested within one another like Russian dolls.",
+          "details": [
+            "Natural $\\subset$ Whole $\\subset$ Integers $\\subset$ Rational $\\subset$ Real.",
+            "Irrational numbers are real numbers that are not rational. The rational and irrational numbers are disjoint sets, and together they make up all real numbers."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s15",
+          "title": "The Real Number System",
+          "type": "svg",
+          "caption": "How all the number sets fit together into the Real Number universe.",
+          "alt_text": "A large box labeled Real Numbers. Inside are two boxes: Rational Numbers (containing Integers, Whole, and Natural) and Irrational Numbers.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#ffffff\"/><rect x=\"10\" y=\"10\" width=\"480\" height=\"230\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"3\" rx=\"10\"/><text x=\"250\" y=\"35\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Real Numbers (ℝ)</text><rect x=\"20\" y=\"50\" width=\"300\" height=\"180\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"2\" rx=\"10\"/><text x=\"170\" y=\"75\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">Rational Numbers (ℚ)</text><text x=\"170\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0284c7\">(Fractions, repeating decimals)</text><rect x=\"40\" y=\"100\" width=\"260\" height=\"120\" fill=\"#bae6fd\" stroke=\"#0284c7\" stroke-width=\"1\" rx=\"10\"/><text x=\"170\" y=\"120\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">Integers (ℤ)</text><rect x=\"60\" y=\"130\" width=\"220\" height=\"80\" fill=\"#7dd3fc\" stroke=\"#0284c7\" stroke-width=\"1\" rx=\"10\"/><text x=\"170\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">Whole (0, 1...)</text><rect x=\"80\" y=\"160\" width=\"180\" height=\"40\" fill=\"#38bdf8\" stroke=\"#0284c7\" stroke-width=\"1\" rx=\"10\"/><text x=\"170\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Natural (1, 2...)</text><rect x=\"330\" y=\"50\" width=\"150\" height=\"180\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\" rx=\"10\"/><text x=\"405\" y=\"75\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Irrational</text><text x=\"405\" y=\"95\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#ca8a04\">Non-repeating</text><text x=\"405\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#ca8a04\">decimals</text><text x=\"405\" y=\"150\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#854d0e\">π, √2, √7</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify the number $-8$ into all applicable number sets.",
+          "solution_steps": [
+            "Step 1: Is it Natural or Whole? No, it is negative.",
+            "Step 2: Is it an Integer? Yes.",
+            "Step 3: Is it Rational? Yes, it can be written as $-\\frac{8}{1}$.",
+            "Step 4: Is it Real? Yes, all rational numbers are real numbers."
+          ],
+          "final_answer": "Integer, Rational, Real."
+        },
+        {
+          "problem": "Classify $\\sqrt{10}$.",
+          "solution_steps": [
+            "Step 1: Check if $10$ is a perfect square. It is not.",
+            "Step 2: Therefore, its square root is an infinite, non-repeating decimal, making it irrational.",
+            "Step 3: All irrational numbers are real numbers."
+          ],
+          "final_answer": "Irrational, Real."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking all real numbers are rational.",
+          "correction": "The Real number system includes BOTH rational and irrational numbers."
+        },
+        {
+          "mistake": "Believing that negative integers aren't rational.",
+          "correction": "Every integer, positive or negative, can be expressed as a fraction over $1$, making it rational."
+        }
+      ],
+      "quick_summary": [
+        "Real numbers include all rational and irrational numbers.",
+        "Every real number has a specific spot on the number line.",
+        "Natural $\\subset$ Whole $\\subset$ Integers $\\subset$ Rational $\\subset$ Real; irrational numbers are the real numbers that are not rational."
+      ]
+    }
+  }
+}

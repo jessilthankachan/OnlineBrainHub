@@ -118,6 +118,21 @@
     .notes-content .highlight { background: #fff3cd; padding: 2px 6px; border-radius: 4px; font-weight: bold; color: #856404; }
     .notes-content .example-box { background: #e8f8f5; border-left: 4px solid var(--primary); padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
 
+    /* Structured study-note sections */
+    .note-section { margin: 26px 0; }
+    .note-section h2 { color: var(--secondary); font-size: 1.45em; margin: 0 0 14px; }
+    .note-overview { font-size: 1.1em; line-height: 1.8; }
+    .concept-card, .formula-card, .example-card, .mistake-card, .visual-card { background: #f8fafc; border: 1px solid #e4eaf0; border-radius: 10px; padding: 17px; margin: 13px 0; }
+    .concept-card h3, .formula-card h3, .example-card h3, .mistake-card h3, .visual-card h3 { margin: 0 0 9px; color: #245b83; }
+    .note-section ul, .note-section ol { padding-left: 25px; }
+    .formula-equation { overflow-x: auto; padding: 8px 0; }
+    .formula-variables { margin: 8px 0 0; }
+    .visual-card svg { display: block; width: 100%; height: auto; max-height: 440px; margin: 10px auto; }
+    .visual-caption { color: #526575; font-size: .95em; margin: 8px 0 0; }
+    .final-answer { margin-top: 12px; padding: 10px 13px; background: #e8f8f5; border-left: 4px solid var(--primary); border-radius: 5px; }
+    .mistake-card { border-left: 4px solid #e0a12b; }
+    .summary-list { background: #f0f8ff; padding: 18px 22px 18px 42px; border-radius: 10px; }
+
     .utilities-section { margin-top: 30px; padding: 22px; background: #f7fbff; border: 1px solid #d6e9f8; border-radius: 12px; }
     .utilities-heading { margin: 0 0 15px; color: var(--secondary); font-size: 1.25em; }
     .utilities-list { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -199,10 +214,6 @@
         <!-- Diagnostic Error Box -->
         <div id="loading-error"></div>
         
-        <div class="notes-mode" id="notes-mode" style="display:none;margin:0 0 18px;gap:10px;flex-wrap:wrap;">
-          <button type="button" class="quiz-btn" id="short-note-btn" style="padding:10px 20px;font-size:.95em;">Short Note</button>
-          <button type="button" class="quiz-btn" id="detailed-note-btn" style="padding:10px 20px;font-size:.95em;">Detailed Note</button>
-        </div>
         <div class="notes-content" id="notes-content">
           <!-- ID-matched JSON content injected here -->
         </div>
@@ -265,136 +276,239 @@
     const progressSubject = params.get('progressSubject') || 'Maths';
     const progressKey = params.get('progressKey') || subtopicId;
     let activeRecord = null;
-    let activeMode = 'short';
 
     const titleEl = document.getElementById('notes-title');
     const contentEl = document.getElementById('notes-content');
     const errorEl = document.getElementById('loading-error');
-    const modeEl = document.getElementById('notes-mode');
-    const shortBtn = document.getElementById('short-note-btn');
-    const detailedBtn = document.getElementById('detailed-note-btn');
     const utilitiesSection = document.getElementById('utilities-section');
     const utilitiesList = document.getElementById('utilities-list');
-
-    function renderUtilities(utilities) {
-      utilitiesList.replaceChildren();
-      const validUtilities = Array.isArray(utilities)
-        ? utilities.filter(item => item && typeof item.title === 'string' &&
-            typeof item.url === 'string' && /^https:\/\//i.test(item.url))
-        : [];
-
-      if (!validUtilities.length) {
-        utilitiesSection.style.display = 'none';
-        return;
-      }
-
-      validUtilities.forEach(item => {
-        const link = document.createElement('a');
-        link.className = 'utility-link';
-        link.href = item.url;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-
-        const icon = document.createElement('span');
-        icon.className = 'utility-icon';
-        icon.setAttribute('aria-hidden', 'true');
-        icon.textContent = item.icon || '🧮';
-
-        const textWrap = document.createElement('span');
-        const title = document.createElement('span');
-        title.textContent = item.title;
-        textWrap.appendChild(title);
-
-        if (typeof item.description === 'string' && item.description.trim()) {
-          const description = document.createElement('span');
-          description.className = 'utility-description';
-          description.textContent = item.description;
-          textWrap.appendChild(description);
-        }
-
-        link.append(icon, textWrap);
-        utilitiesList.appendChild(link);
-      });
-
-      utilitiesSection.style.display = 'block';
-    }
-
-    titleEl.textContent = subtopicName || 'Mathematics Study Notes';
 
     function showError(message) {
       errorEl.textContent = message;
       errorEl.style.display = 'block';
-      contentEl.innerHTML = '';
-      modeEl.style.display = 'none';
+      contentEl.replaceChildren();
       utilitiesSection.style.display = 'none';
       utilitiesList.replaceChildren();
       document.getElementById('quiz-cta').style.display = 'none';
     }
 
-    function renderNote(mode) {
-      if (!activeRecord) return;
-      activeMode = mode;
-      const html = mode === 'detailed'
-        ? (activeRecord.content || activeRecord.detailedNote || '')
-        : (activeRecord.shortNote || '');
-      if (!html) return;
-
-      errorEl.style.display = 'none';
-      contentEl.innerHTML = html;
-      shortBtn.classList.toggle('active', mode === 'short');
-      detailedBtn.classList.toggle('active', mode === 'detailed');
-      if (window.MathJax && window.MathJax.typesetPromise) {
-        window.MathJax.typesetPromise([contentEl]).catch(err => console.warn('MathJax rendering issue', err));
-      }
+    // Render authored text as text nodes; preserve simple **bold** and MathJax notation safely.
+    function appendFormattedText(parent, value) {
+      const text = String(value ?? '');
+      const parts = text.split(/(\*\*[^*]+\*\*)/g);
+      parts.forEach(part => {
+        if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
+          const strong = document.createElement('strong');
+          strong.textContent = part.slice(2, -2);
+          parent.appendChild(strong);
+        } else {
+          parent.appendChild(document.createTextNode(part));
+        }
+      });
     }
 
-    shortBtn.addEventListener('click', () => renderNote('short'));
-    detailedBtn.addEventListener('click', () => renderNote('detailed'));
+    function makeSection(title, className = '') {
+      const section = document.createElement('section');
+      section.className = `note-section ${className}`.trim();
+      const heading = document.createElement('h2');
+      heading.textContent = title;
+      section.appendChild(heading);
+      return section;
+    }
+
+    function appendList(parent, items, ordered = false) {
+      if (!Array.isArray(items) || !items.length) return;
+      const list = document.createElement(ordered ? 'ol' : 'ul');
+      items.forEach(item => {
+        const li = document.createElement('li');
+        appendFormattedText(li, item);
+        list.appendChild(li);
+      });
+      parent.appendChild(list);
+    }
+
+    // SVG is parsed as XML and copied using a strict element/attribute allow-list.
+    function appendSafeSvg(parent, svgMarkup, altText) {
+      if (typeof svgMarkup !== 'string' || !svgMarkup.trim()) return false;
+      const parsed = new DOMParser().parseFromString(svgMarkup, 'image/svg+xml');
+      const root = parsed.documentElement;
+      if (!root || root.localName !== 'svg' || parsed.querySelector('parsererror')) return false;
+      const allowedTags = new Set(['svg','g','rect','circle','ellipse','line','polyline','polygon','path','text','tspan','defs','marker']);
+      const allowedAttrs = new Set(['viewBox','width','height','x','y','x1','x2','y1','y2','cx','cy','r','rx','ry','d','points','fill','stroke','stroke-width','stroke-linecap','stroke-linejoin','stroke-dasharray','font-size','font-family','font-weight','text-anchor','dominant-baseline','transform','opacity','id','marker-end','marker-start','refX','refY','orient','markerWidth','markerHeight']);
+      function copyNode(source) {
+        if (source.nodeType === Node.TEXT_NODE) return document.createTextNode(source.nodeValue || '');
+        if (source.nodeType !== Node.ELEMENT_NODE || !allowedTags.has(source.localName)) return null;
+        const target = document.createElementNS('http://www.w3.org/2000/svg', source.localName);
+        [...source.attributes].forEach(attr => {
+          if (allowedAttrs.has(attr.name) && !/^javascript:/i.test(attr.value)) target.setAttribute(attr.name, attr.value);
+        });
+        [...source.childNodes].forEach(child => { const copied = copyNode(child); if (copied) target.appendChild(copied); });
+        return target;
+      }
+      const safeSvg = copyNode(root);
+      if (!safeSvg) return false;
+      safeSvg.setAttribute('role', 'img');
+      safeSvg.setAttribute('aria-label', altText || 'Mathematical illustration');
+      parent.appendChild(safeSvg);
+      return true;
+    }
+
+    function renderOverview(record) {
+      if (typeof record.overview !== 'string' || !record.overview.trim()) return;
+      const section = makeSection('Overview');
+      const p = document.createElement('p'); p.className = 'note-overview';
+      appendFormattedText(p, record.overview); section.appendChild(p); contentEl.appendChild(section);
+    }
+
+    function renderConcepts(items) {
+      if (!Array.isArray(items) || !items.length) return;
+      const section = makeSection('Key Concepts');
+      items.forEach(item => {
+        if (!item || !(item.concept || item.definition || (Array.isArray(item.details) && item.details.length))) return;
+        const card = document.createElement('article'); card.className = 'concept-card';
+        if (item.concept) { const h = document.createElement('h3'); appendFormattedText(h, item.concept); card.appendChild(h); }
+        if (item.definition) { const p = document.createElement('p'); appendFormattedText(p, item.definition); card.appendChild(p); }
+        appendList(card, item.details);
+        section.appendChild(card);
+      });
+      if (section.children.length > 1) contentEl.appendChild(section);
+    }
+
+    function renderFormulas(items) {
+      if (!Array.isArray(items) || !items.length) return;
+      const section = makeSection('Important Formulas');
+      items.forEach(item => {
+        if (!item || !(item.name || item.equation)) return;
+        const card = document.createElement('article'); card.className = 'formula-card';
+        if (item.name) { const h = document.createElement('h3'); appendFormattedText(h, item.name); card.appendChild(h); }
+        if (item.equation) { const eq = document.createElement('div'); eq.className = 'formula-equation'; appendFormattedText(eq, item.equation); card.appendChild(eq); }
+        if (item.variables && typeof item.variables === 'object' && Object.keys(item.variables).length) {
+          const h = document.createElement('strong'); h.textContent = 'Where:'; card.appendChild(h);
+          const list = document.createElement('ul');
+          Object.entries(item.variables).forEach(([symbol, meaning]) => { const li = document.createElement('li'); li.appendChild(document.createTextNode(`${symbol}: `)); appendFormattedText(li, meaning); list.appendChild(li); });
+          card.appendChild(list);
+        }
+        section.appendChild(card);
+      });
+      if (section.children.length > 1) contentEl.appendChild(section);
+    }
+
+    function renderVisuals(items) {
+      if (!Array.isArray(items) || !items.length) return;
+      const section = makeSection('Visual Learning');
+      items.forEach(item => {
+        if (!item) return;
+        const card = document.createElement('figure'); card.className = 'visual-card';
+        if (item.title) { const h = document.createElement('h3'); appendFormattedText(h, item.title); card.appendChild(h); }
+        const ok = appendSafeSvg(card, item.data, item.alt_text);
+        if (!ok && item.alt_text) { const p = document.createElement('p'); p.textContent = item.alt_text; card.appendChild(p); }
+        if (item.caption) { const cap = document.createElement('figcaption'); cap.className = 'visual-caption'; appendFormattedText(cap, item.caption); card.appendChild(cap); }
+        if (card.children.length) section.appendChild(card);
+      });
+      if (section.children.length > 1) contentEl.appendChild(section);
+    }
+
+    function renderExamples(items) {
+      if (!Array.isArray(items) || !items.length) return;
+      const section = makeSection('Worked Examples');
+      items.forEach((item, index) => {
+        if (!item) return;
+        const card = document.createElement('article'); card.className = 'example-card';
+        const h = document.createElement('h3'); h.textContent = `Example ${index + 1}`; card.appendChild(h);
+        if (item.problem) { const p = document.createElement('p'); appendFormattedText(p, item.problem); card.appendChild(p); }
+        appendList(card, item.solution_steps, true);
+        if (item.final_answer) { const answer = document.createElement('p'); answer.className = 'final-answer'; const strong = document.createElement('strong'); strong.textContent = 'Final answer: '; answer.appendChild(strong); appendFormattedText(answer, item.final_answer); card.appendChild(answer); }
+        section.appendChild(card);
+      });
+      if (section.children.length > 1) contentEl.appendChild(section);
+    }
+
+    function renderMistakes(items) {
+      if (!Array.isArray(items) || !items.length) return;
+      const section = makeSection('Common Mistakes');
+      items.forEach(item => {
+        if (!item || !(item.mistake || item.correction)) return;
+        const card = document.createElement('article'); card.className = 'mistake-card';
+        if (item.mistake) { const p = document.createElement('p'); const b = document.createElement('strong'); b.textContent = 'Mistake: '; p.appendChild(b); appendFormattedText(p, item.mistake); card.appendChild(p); }
+        if (item.correction) { const p = document.createElement('p'); const b = document.createElement('strong'); b.textContent = 'Correction: '; p.appendChild(b); appendFormattedText(p, item.correction); card.appendChild(p); }
+        section.appendChild(card);
+      });
+      if (section.children.length > 1) contentEl.appendChild(section);
+    }
+
+    function renderSummary(items) {
+      if (!Array.isArray(items) || !items.length) return;
+      const section = makeSection('Quick Summary');
+      const list = document.createElement('ul'); list.className = 'summary-list';
+      items.forEach(item => { if (typeof item === 'string' && item.trim()) { const li = document.createElement('li'); appendFormattedText(li, item); list.appendChild(li); } });
+      if (list.children.length) { section.appendChild(list); contentEl.appendChild(section); }
+    }
+
+    function renderStructuredNote(record) {
+      contentEl.replaceChildren();
+      renderOverview(record);
+      renderConcepts(record.key_concepts);
+      renderFormulas(record.formulas);
+      renderVisuals(record.visual_aids);
+      renderExamples(record.worked_examples);
+      renderMistakes(record.common_mistakes);
+      renderSummary(record.quick_summary);
+      if (!contentEl.children.length) return false;
+      if (window.MathJax?.typesetPromise) {
+        window.MathJax.typesetPromise([contentEl]).catch(err => console.warn('MathJax rendering issue', err));
+      }
+      return true;
+    }
+
+    function renderUtilities(utilities) {
+      utilitiesList.replaceChildren();
+      const validUtilities = Array.isArray(utilities)
+        ? utilities.filter(item => item && typeof item.title === 'string' && typeof item.url === 'string' && /^https:\/\//i.test(item.url))
+        : [];
+      if (!validUtilities.length) { utilitiesSection.style.display = 'none'; return; }
+      validUtilities.forEach(item => {
+        const link = document.createElement('a'); link.className = 'utility-link'; link.href = item.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+        const icon = document.createElement('span'); icon.className = 'utility-icon'; icon.setAttribute('aria-hidden', 'true'); icon.textContent = item.icon || '🧮';
+        const wrap = document.createElement('span'); const title = document.createElement('span'); title.textContent = item.title; wrap.appendChild(title);
+        if (typeof item.description === 'string' && item.description.trim()) { const desc = document.createElement('span'); desc.className = 'utility-description'; desc.textContent = item.description; wrap.appendChild(desc); }
+        link.append(icon, wrap); utilitiesList.appendChild(link);
+      });
+      utilitiesSection.style.display = 'block';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const username = localStorage.getItem('brainhub_username');
+      const authBtn = document.getElementById('auth-btn');
+      if (username && authBtn) {
+        authBtn.textContent = 'Profile (' + username + ')';
+        authBtn.href = '/profile.html';
+        authBtn.style.background = '#00b894';
+      }
+    });
+
+    titleEl.textContent = subtopicName || 'Mathematics Study Notes';
 
     async function loadNotes() {
-      if (!topicId || !subtopicId) {
-        showError('Missing topic ID or subtopic ID. Please return to the Mathematics subtopic list and open the note again.');
-        return;
-      }
+      if (!topicId || !subtopicId) { showError('Missing topic ID or subtopic ID. Please return to the Mathematics subtopic list and open the note again.'); return; }
       const fileUrl = `/data/maths/${encodeURIComponent(topicId)}.json?nocache=${Date.now()}`;
       try {
         const response = await fetch(fileUrl, { cache: 'no-store' });
         if (!response.ok) throw new Error(`Could not find the topic notes file (${response.status}): ${fileUrl}`);
         const data = await response.json();
-        if (data.topicId && data.topicId !== topicId) {
-          throw new Error(`Topic ID mismatch: requested ${topicId}, but this file belongs to ${data.topicId}.`);
-        }
-        if (data.subject && data.subject !== subjectCode && !(subjectCode === 'maths' && data.subject === 'math')) {
-          throw new Error(`Subject mismatch in notes JSON: expected ${subjectCode}, found ${data.subject}.`);
-        }
+        if (data.topicId && data.topicId !== topicId) throw new Error(`Topic ID mismatch: requested ${topicId}, but this file belongs to ${data.topicId}.`);
+        if (data.subject && data.subject !== subjectCode && !(subjectCode === 'maths' && data.subject === 'math')) throw new Error(`Subject mismatch in notes JSON: expected ${subjectCode}, found ${data.subject}.`);
         activeRecord = data?.subtopics?.[subtopicId] || null;
-        if (!activeRecord) {
-          throw new Error(`Subtopic ID ${subtopicId} was not found in ${fileUrl}. Check the subtopics object key against the curriculum registry.`);
-        }
-        if (activeRecord.id && activeRecord.id !== subtopicId) {
-          throw new Error(`Subtopic ID mismatch: requested ${subtopicId}, but the note record declares ${activeRecord.id}.`);
-        }
-        renderUtilities(activeRecord.utilities);
+        if (!activeRecord) throw new Error(`Subtopic ID ${subtopicId} was not found in ${fileUrl}. Check the subtopics object key against the curriculum registry.`);
+        if (activeRecord.id && activeRecord.id !== subtopicId) throw new Error(`Subtopic ID mismatch: requested ${subtopicId}, but the note record declares ${activeRecord.id}.`);
         const exactTitle = activeRecord.title || subtopicName;
         titleEl.textContent = exactTitle;
         document.title = `${exactTitle} | ${topicName || data.topicTitle || 'Mathematics'} | OnlineBrainHub`;
         const description = document.getElementById('meta-description');
-        if (description) description.setAttribute('content', `Study ${exactTitle} with free Mathematics notes on OnlineBrainHub.`);
-        const hasShortNote = typeof activeRecord.shortNote === 'string' && activeRecord.shortNote.trim().length > 0;
-        const detailedContent = activeRecord.content || activeRecord.detailedNote || '';
-        const hasDetailedNote = typeof detailedContent === 'string' && detailedContent.trim().length > 0;
-
-        if (!hasShortNote && !hasDetailedNote) {
-          showError('Study notes for this subtopic are not available yet. Please check back later.');
-          return;
-        }
-
-        // Show the selector only when both note versions are available.
-        modeEl.style.display = hasShortNote && hasDetailedNote ? 'flex' : 'none';
+        if (description) description.setAttribute('content', `Study ${exactTitle} with free ${data.grade || 'Mathematics'} notes on OnlineBrainHub.`);
+        if (!renderStructuredNote(activeRecord)) { showError('Study notes for this subtopic are not available yet. Please check back later.'); return; }
+        renderUtilities(activeRecord.utilities);
+        errorEl.style.display = 'none';
         document.getElementById('quiz-cta').style.display = 'block';
-
-        // Open whichever version exists; prefer Short Note when both are available.
-        renderNote(hasShortNote ? 'short' : 'detailed');
       } catch (error) {
         console.error('Mathematics note loading failed:', error);
         showError(error.message || 'The requested Mathematics note could not be loaded.');
@@ -418,15 +532,6 @@
       window.location.href = '/quiz-loader.html?' + quizParams.toString();
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const username = localStorage.getItem('brainhub_username');
-      const authBtn = document.getElementById('auth-btn');
-      if (username && authBtn) {
-        authBtn.textContent = 'Profile (' + username + ')';
-        authBtn.href = '/profile.html';
-        authBtn.style.background = '#00b894';
-      }
-    });
 
     loadNotes();
   </script>

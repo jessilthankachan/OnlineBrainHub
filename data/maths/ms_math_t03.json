@@ -1,0 +1,1353 @@
+{
+  "subject": "math",
+  "topicId": "ms_math_t03",
+  "topicTitle": "Fractions, Decimals and Percentages",
+  "grade": "Middle School",
+  "subtopics": {
+    "ms_math_t03_st01": {
+      "id": "ms_math_t03_st01",
+      "title": "Simplifying fractions",
+      "overview": "A fraction represents part of a whole or a quantity divided into equal parts. Simplifying a fraction means writing it in an equivalent form using the smallest possible numbers, which makes calculations and comparisons much easier without changing the actual value.",
+      "key_concepts": [
+        {
+          "concept": "Parts of a Fraction",
+          "definition": "The top and bottom numbers of a fraction.",
+          "details": [
+            "**Numerator:** The top number. It tells you how many parts are being considered.",
+            "**Denominator:** The bottom number. It tells you the total number of equal parts in the whole."
+          ]
+        },
+        {
+          "concept": "Simplifying",
+          "definition": "Writing a fraction in its simplest form.",
+          "details": [
+            "Divide both the numerator and the denominator by the same non-zero common factor.",
+            "A fraction is in its simplest form when the numerator and denominator share no common factor greater than $1$."
+          ]
+        },
+        {
+          "concept": "The HCF Method",
+          "definition": "The fastest way to simplify.",
+          "details": [
+            "Find the Highest Common Factor (HCF) of the numerator and denominator.",
+            "Divide both by the HCF to reach the simplest form in one step."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s01",
+          "title": "Simplifying 4/8 to 1/2",
+          "type": "svg",
+          "caption": "Dividing both the numerator and denominator by 4 gives the simplest form.",
+          "alt_text": "Visual showing 4/8 transforming into 1/2 by dividing top and bottom by 4.",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"100\" y=\"80\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">4/8</text><path d=\"M 140 60 Q 200 20 260 60\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"260,60 250,55 255,65\" fill=\"#3b82f6\"/><text x=\"200\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">÷ 4</text><path d=\"M 140 90 Q 200 130 260 90\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"260,90 250,95 255,85\" fill=\"#3b82f6\"/><text x=\"200\" y=\"125\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">÷ 4</text><text x=\"300\" y=\"80\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">=</text><text x=\"380\" y=\"80\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">1/2</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify $\\frac{24}{36}$ using the HCF method.",
+          "solution_steps": [
+            "Step 1: Find the factors of $24$ and $36$.",
+            "Step 2: The Highest Common Factor (HCF) is $12$.",
+            "Step 3: Divide the numerator by $12$: $24 \\div 12 = 2$.",
+            "Step 4: Divide the denominator by $12$: $36 \\div 12 = 3$."
+          ],
+          "final_answer": "$\\frac{2}{3}$"
+        },
+        {
+          "problem": "Simplify $\\frac{48}{72}$ step by step.",
+          "solution_steps": [
+            "Step 1: If you don't know the HCF immediately, divide by a small common factor, like $2$.",
+            "Step 2: $\\frac{48 \\div 2}{72 \\div 2} = \\frac{24}{36}$.",
+            "Step 3: Divide by $2$ again: $\\frac{12}{18}$.",
+            "Step 4: Divide by $6$: $\\frac{2}{3}$. The result is the same as dividing by the HCF ($24$) in one step."
+          ],
+          "final_answer": "$\\frac{2}{3}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dividing the numerator but not the denominator.",
+          "correction": "You MUST perform the exact same operation (multiplication or division) on both the top and bottom to keep the fraction equivalent."
+        },
+        {
+          "mistake": "Stopping before the fraction reaches its simplest form.",
+          "correction": "Always check your final fraction. For example, $\\frac{6}{9}$ is not in simplest form because both $6$ and $9$ are still divisible by $3$."
+        }
+      ],
+      "quick_summary": [
+        "A fraction shows part of a whole.",
+        "Simplifying makes the numbers smaller but keeps the value exactly the same.",
+        "Divide the top and bottom by the Highest Common Factor (HCF) to simplify fully."
+      ]
+    },
+    "ms_math_t03_st02": {
+      "id": "ms_math_t03_st02",
+      "title": "Mixed numbers and improper fractions",
+      "overview": "When you have more than one whole, you need a way to express it. A fraction can represent less than one whole, more than one whole, or exactly one whole. Understanding how to flip between mixed numbers and improper fractions is essential for multiplication and division.",
+      "key_concepts": [
+        {
+          "concept": "Proper Fraction",
+          "definition": "The numerator is smaller than the denominator.",
+          "details": [
+            "Example: $\\frac{3}{4}$. Its value is always less than $1$."
+          ]
+        },
+        {
+          "concept": "Improper Fraction",
+          "definition": "The numerator is greater than or equal to the denominator.",
+          "details": [
+            "Example: $\\frac{9}{4}$. Its value is $1$ or greater."
+          ]
+        },
+        {
+          "concept": "Mixed Number",
+          "definition": "A whole number combined with a proper fraction.",
+          "details": [
+            "Example: $2\\frac{1}{4}$. This is identical in value to $\\frac{9}{4}$."
+          ]
+        },
+        {
+          "concept": "Converting Mixed to Improper",
+          "definition": "Multiply, Add, Keep.",
+          "details": [
+            "Multiply the whole number by the denominator.",
+            "Add the numerator to get the new top number.",
+            "Keep the denominator exactly the same."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s02",
+          "title": "Visualizing 9/4 and 2 1/4",
+          "type": "svg",
+          "caption": "Nine quarters is exactly the same as two wholes and one quarter.",
+          "alt_text": "Two full circles divided into quarters and a third circle with only one quarter shaded, labeled 9/4 = 2 1/4.",
+          "data": "<svg viewBox=\"0 0 500 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"180\" fill=\"#ffffff\"/><g transform=\"translate(80, 70)\"><circle cx=\"0\" cy=\"0\" r=\"40\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"-40\" y1=\"0\" x2=\"40\" y2=\"0\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"0\" y1=\"-40\" x2=\"0\" y2=\"40\" stroke=\"#1d4ed8\" stroke-width=\"2\"/></g><g transform=\"translate(180, 70)\"><circle cx=\"0\" cy=\"0\" r=\"40\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"-40\" y1=\"0\" x2=\"40\" y2=\"0\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"0\" y1=\"-40\" x2=\"0\" y2=\"40\" stroke=\"#1d4ed8\" stroke-width=\"2\"/></g><g transform=\"translate(280, 70)\"><circle cx=\"0\" cy=\"0\" r=\"40\" fill=\"#f8fafc\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><path d=\"M 0 0 L 40 0 A 40 40 0 0 1 0 40 Z\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"-40\" y1=\"0\" x2=\"0\" y2=\"0\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"0\" y1=\"-40\" x2=\"0\" y2=\"0\" stroke=\"#1d4ed8\" stroke-width=\"2\"/></g><text x=\"400\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">= 9/4</text><text x=\"180\" y=\"150\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">2 1/4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Convert $\\frac{17}{5}$ into a mixed number.",
+          "solution_steps": [
+            "Step 1: Divide the numerator by the denominator: $17 \\div 5$.",
+            "Step 2: The quotient is $3$ with a remainder of $2$.",
+            "Step 3: The quotient ($3$) becomes the whole number.",
+            "Step 4: The remainder ($2$) becomes the new numerator.",
+            "Step 5: The denominator ($5$) stays the same."
+          ],
+          "final_answer": "$3\\frac{2}{5}$"
+        },
+        {
+          "problem": "Convert $4\\frac{3}{7}$ into an improper fraction.",
+          "solution_steps": [
+            "Step 1: Multiply the whole number by the denominator: $4 \\times 7 = 28$.",
+            "Step 2: Add the numerator to that result: $28 + 3 = 31$.",
+            "Step 3: Place this new number over the original denominator."
+          ],
+          "final_answer": "$\\frac{31}{7}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding instead of multiplying when converting to improper fractions.",
+          "correction": "For $3\\frac{2}{5}$, you must calculate $(3 \\times 5) + 2 = 17$, NOT $(3 + 5) + 2 = 10$."
+        },
+        {
+          "mistake": "Writing the remainder as the whole number.",
+          "correction": "When dividing, the big whole number is the QUOTIENT (how many times it fits perfectly). The leftover is the REMAINDER which sits on top of the fraction."
+        }
+      ],
+      "quick_summary": [
+        "Proper fraction: Top < Bottom.",
+        "Improper fraction: Top ≥ Bottom.",
+        "To get a mixed number: Divide top by bottom (Quotient = Whole, Remainder = New Top).",
+        "To get an improper fraction: Multiply Whole by Bottom, then Add Top."
+      ]
+    },
+    "ms_math_t03_st03": {
+      "id": "ms_math_t03_st03",
+      "title": "Operations with fractions",
+      "overview": "Combining fractions relies on two main pathways: Addition and Subtraction require common denominators because you must be combining identical 'sized' pieces. Multiplication and Division are more flexible and are calculated straight across or via reciprocals.",
+      "key_concepts": [
+        {
+          "concept": "Adding & Subtracting",
+          "definition": "Requires equivalent fractions with a Lowest Common Denominator (LCD).",
+          "details": [
+            "Once denominators are equal, add or subtract the numerators only.",
+            "Keep the common denominator the same in the answer."
+          ]
+        },
+        {
+          "concept": "Multiplying",
+          "definition": "Straight across.",
+          "details": [
+            "Multiply Numerator $\\times$ Numerator.",
+            "Multiply Denominator $\\times$ Denominator.",
+            "Simplifying the fractions *before* multiplying can save time."
+          ]
+        },
+        {
+          "concept": "Dividing",
+          "definition": "Multiply by the reciprocal.",
+          "details": [
+            "Keep the first fraction, change division to multiplication, flip the second fraction.",
+            "Always convert mixed numbers to improper fractions before multiplying or dividing."
+          ]
+        },
+        {
+          "concept": "Operations with Mixed Numbers",
+          "definition": "Convert mixed numbers to improper fractions before multiplying or dividing.",
+          "details": [
+            "Convert mixed numbers into improper fractions before multiplying or dividing."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Dividing Fractions",
+          "equation": "$$ \\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c}, \\quad b\\ne0,\\ d\\ne0,\\ c\\ne0 $$",
+          "variables": {
+            "a,b": "Numerator and denominator of the first fraction",
+            "c,d": "Numerator and denominator of the divisor; the divisor must be non-zero"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s03",
+          "title": "Adding with Common Denominators",
+          "type": "svg",
+          "caption": "You cannot add halves and thirds directly. Convert them to sixths first.",
+          "alt_text": "Visual showing 1/2 + 1/3 converting into 3/6 + 2/6, which equals 5/6.",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"80\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">1/2</text><text x=\"130\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#475569\">+</text><text x=\"180\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">1/3</text><path d=\"M 130 100 Q 130 130 180 130 L 220 130\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"225,130 215,125 215,135\" fill=\"#3b82f6\"/><text x=\"280\" y=\"60\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#2563eb\" font-weight=\"bold\">Common Base: 6</text><text x=\"280\" y=\"90\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">3/6 + 2/6</text><text x=\"370\" y=\"90\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"420\" y=\"90\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">5/6</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate: $\\frac{3}{4} - \\frac{1}{6}$",
+          "solution_steps": [
+            "Step 1: Find the Lowest Common Denominator for $4$ and $6$, which is $12$.",
+            "Step 2: Convert: $\\frac{3}{4} = \\frac{9}{12}$ and $\\frac{1}{6} = \\frac{2}{12}$.",
+            "Step 3: Subtract numerators: $9 - 2 = 7$."
+          ],
+          "final_answer": "$\\frac{7}{12}$"
+        },
+        {
+          "problem": "Calculate: $1\\frac{1}{2} \\times 2\\frac{1}{3}$",
+          "solution_steps": [
+            "Step 1: Convert to improper fractions: $1\\frac{1}{2} = \\frac{3}{2}$ and $2\\frac{1}{3} = \\frac{7}{3}$.",
+            "Step 2: Multiply straight across: $\\frac{3}{2} \\times \\frac{7}{3} = \\frac{21}{6}$.",
+            "Step 3: Simplify by dividing top and bottom by $3$."
+          ],
+          "final_answer": "$\\frac{7}{2}$ or $3\\frac{1}{2}$"
+        },
+        {
+          "problem": "Calculate: $\\frac{3}{4} \\div \\frac{2}{5}$",
+          "solution_steps": [
+            "Step 1: Keep the first fraction, change to multiply, and flip the second (reciprocal).",
+            "Step 2: $\\frac{3}{4} \\times \\frac{5}{2}$.",
+            "Step 3: Multiply across: $\\frac{15}{8}$."
+          ],
+          "final_answer": "$1\\frac{7}{8}$"
+        },
+        {
+          "problem": "Calculate: $\\frac{1}{2} + \\frac{1}{3}$",
+          "solution_steps": [
+            "Step 1: The denominators are different ($2$ and $3$). Find the LCM.",
+            "Step 2: LCM of $2$ and $3$ is $6$.",
+            "Step 3: Convert fractions: $\\frac{1}{2} = \\frac{3}{6}$ and $\\frac{1}{3} = \\frac{2}{6}$.",
+            "Step 4: Add the numerators: $3 + 2 = 5$. Keep the denominator."
+          ],
+          "final_answer": "$\\frac{5}{6}$"
+        },
+        {
+          "problem": "Calculate: $\\frac{2}{3} \\div \\frac{4}{5}$",
+          "solution_steps": [
+            "Step 1: To divide, multiply by the reciprocal of the second fraction.",
+            "Step 2: The reciprocal of $\\frac{4}{5}$ is $\\frac{5}{4}$.",
+            "Step 3: Rewrite: $\\frac{2}{3} \\times \\frac{5}{4}$.",
+            "Step 4: Multiply straight across: $\\frac{2 \\times 5}{3 \\times 4} = \\frac{10}{12}$.",
+            "Step 5: Simplify the fraction by dividing top and bottom by $2$."
+          ],
+          "final_answer": "$\\frac{5}{6}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding denominators together (e.g., $\\frac{1}{2} + \\frac{1}{3} = \\frac{2}{5}$).",
+          "correction": "Never add denominators! Find a common denominator, then add the numerators only."
+        },
+        {
+          "mistake": "Flipping the first fraction instead of the second when dividing.",
+          "correction": "Always multiply by the reciprocal of the DIVISOR (the second fraction)."
+        },
+        {
+          "mistake": "Multiplying mixed numbers by multiplying wholes and fractions separately.",
+          "correction": "You cannot calculate $1\\frac{1}{2} \\times 2\\frac{1}{3}$ by just doing $1 \\times 2$ and $\\frac{1}{2} \\times \\frac{1}{3}$. You MUST convert to improper fractions first."
+        }
+      ],
+      "quick_summary": [
+        "Addition/Subtraction: Find common denominator, compute numerators.",
+        "Multiplication: Straight across.",
+        "Division: Multiply by reciprocal.",
+        "Mixed Numbers: Convert to improper fractions first for multiplication/division."
+      ],
+      "utilities": [
+        {
+          "title": "Fraction Calculator",
+          "description": "Check fraction addition, subtraction, multiplication and division calculations.",
+          "url": "https://onlinetoolpad.com/math/FRACTION_CALCULATOR",
+          "icon": "calculator"
+        },
+        {
+          "title": "Scientific Calculator",
+          "description": "Check decimal calculations and multi-step numerical results.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t03_st04": {
+      "id": "ms_math_t03_st04",
+      "title": "Terminating and recurring decimals",
+      "overview": "When you convert a fraction into a decimal, the division either comes to a neat end or loops forever in a repeating pattern. Understanding these two types of decimals helps us know when to use exact fractions instead of rounded numbers.",
+      "key_concepts": [
+        {
+          "concept": "Terminating Decimals",
+          "definition": "Decimals that come to an end (have a finite number of digits).",
+          "details": [
+            "Examples: $0.5, 0.25, 0.125, 3.75$.",
+            "A fraction in simplest form will terminate IF its denominator's only prime factors are $2$ and/or $5$."
+          ]
+        },
+        {
+          "concept": "Recurring Decimals",
+          "definition": "Decimals that have a digit or group of digits that repeat forever.",
+          "details": [
+            "Also called repeating decimals.",
+            "Examples: $0.3333\\dots, 0.272727\\dots$",
+            "We use a horizontal bar over the repeating part to write it compactly: $0.\\overline{3}$ or $0.\\overline{27}$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s04",
+          "title": "Denominator Prime Factor Rule",
+          "type": "svg",
+          "caption": "If the denominator's prime factors are only 2s or 5s, the decimal terminates.",
+          "alt_text": "Visual showing 3/8 -> denominator 8 is 2x2x2 (terminates). 5/12 -> denominator 12 is 2x2x3 (has a 3, so it recurs).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"220\" height=\"160\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"130\" y=\"50\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">3/8</text><text x=\"130\" y=\"80\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#166534\">Denominator 8 = 2 × 2 × 2</text><text x=\"130\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#166534\">Only 2s or 5s!</text><text x=\"130\" y=\"150\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Terminates (0.375)</text><rect x=\"260\" y=\"20\" width=\"220\" height=\"160\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"10\"/><text x=\"370\" y=\"50\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">5/12</text><text x=\"370\" y=\"80\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\">Denominator 12 = 2 × 2 × 3</text><text x=\"370\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\">Contains a 3!</text><text x=\"370\" y=\"150\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Recurs (0.4166...)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Convert $\\frac{3}{8}$ into a decimal.",
+          "solution_steps": [
+            "Step 1: Divide the numerator by the denominator: $3 \\div 8$.",
+            "Step 2: $3.0 \\div 8 = 0$ remainder $30$. $30 \\div 8 = 3$ remainder $6$. $60 \\div 8 = 7$ remainder $4$. $40 \\div 8 = 5$ remainder $0$.",
+            "Step 3: The division ends with a $0$ remainder, so it is a terminating decimal."
+          ],
+          "final_answer": "$0.375$"
+        },
+        {
+          "problem": "Convert $\\frac{2}{9}$ into a decimal.",
+          "solution_steps": [
+            "Step 1: Divide $2 \\div 9$.",
+            "Step 2: $2.0 \\div 9 = 0$ remainder $20$. $20 \\div 9 = 2$ remainder $2$. $20 \\div 9 = 2$ remainder $2$.",
+            "Step 3: The pattern repeats endlessly. This is a recurring decimal."
+          ],
+          "final_answer": "$0.2222\\dots$ or $0.\\overline{2}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating a rounded recurring decimal as an exact value.",
+          "correction": "$0.333$ is a terminating decimal. $0.\\overline{3}$ is a recurring decimal exactly equal to $\\frac{1}{3}$. They are not exactly equal to each other."
+        },
+        {
+          "mistake": "Using the prime factor rule on an unsimplified fraction.",
+          "correction": "Always simplify first. $\\frac{3}{30}$ has a denominator of $30$ ($2 \\times 3 \\times 5$), which suggests it recurs. But simplified, it is $\\frac{1}{10}$, which terminates ($0.1$)."
+        }
+      ],
+      "quick_summary": [
+        "Terminating decimals end; recurring decimals repeat infinitely.",
+        "Use a bar over the repeating block for recurring decimals.",
+        "A simplified fraction terminates if its denominator's prime factors are exclusively $2$ and/or $5$."
+      ]
+    },
+    "ms_math_t03_st13": {
+      "id": "ms_math_t03_st13",
+      "title": "Operations with decimals",
+      "overview": "Decimal operations are used with money, measurements and other quantities. Accurate calculations depend on place value: align decimal points for addition and subtraction, count decimal places when multiplying, and make the divisor a whole number when dividing.",
+      "key_concepts": [
+        {
+          "concept": "Adding and Subtracting Decimals",
+          "definition": "The most important rule is to align the decimal points.",
+          "details": [
+            "Align the numbers vertically so the decimal points line up.",
+            "Add placeholder zeros to the right if necessary (e.g., $4.5 = 4.50$).",
+            "Add or subtract exactly as you would with whole numbers, bringing the decimal point straight down."
+          ]
+        },
+        {
+          "concept": "Multiplying Decimals",
+          "definition": "Multiply as if they were whole numbers, then place the decimal point.",
+          "details": [
+            "Do NOT align decimal points.",
+            "Count the total number of decimal places in BOTH factors.",
+            "Place the decimal point in the product so it has the same total number of decimal places."
+          ]
+        },
+        {
+          "concept": "Dividing Decimals",
+          "definition": "Clear the decimal from the divisor before dividing.",
+          "details": [
+            "If dividing by a decimal, move the decimal point to the right until it is a whole number.",
+            "Move the decimal point in the dividend (the number being divided) the exact same number of places.",
+            "Bring the decimal point straight up into the quotient."
+          ]
+        },
+        {
+          "concept": "Powers of 10",
+          "definition": "Quick division shortcuts.",
+          "details": [
+            "Dividing by $10, 100, 1000$ moves the decimal point left by $1, 2, \\text{or } 3$ places."
+          ]
+        },
+        {
+          "concept": "Checking Decimal Calculations",
+          "definition": "Estimate the size of the answer before accepting a calculated result.",
+          "details": [
+            "Use rounding or compatible numbers to estimate the result.",
+            "Check that the decimal point and the size of the answer are reasonable."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s04",
+          "title": "Aligning Decimals for Addition",
+          "type": "svg",
+          "caption": "Always align the decimal points vertically before adding or subtracting. Add trailing zeros to help keep place values clear.",
+          "alt_text": "Addition setup of 12.45 and 3.70 with a highlighted vertical line running straight down through the decimal points.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"240\" y=\"30\" width=\"20\" height=\"140\" fill=\"#fef08a\" rx=\"4\"/><text x=\"200\" y=\"70\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"end\" fill=\"#1e293b\">12</text><text x=\"250\" y=\"70\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"middle\" fill=\"#ea580c\">.</text><text x=\"300\" y=\"70\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"start\" fill=\"#1e293b\">45</text><text x=\"130\" y=\"110\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"middle\" fill=\"#334155\">+</text><text x=\"200\" y=\"110\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"end\" fill=\"#1e293b\">3</text><text x=\"250\" y=\"110\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"middle\" fill=\"#ea580c\">.</text><text x=\"300\" y=\"110\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"start\" fill=\"#1e293b\">70</text><line x1=\"110\" y1=\"130\" x2=\"390\" y2=\"130\" stroke=\"#64748b\" stroke-width=\"3\"/><text x=\"200\" y=\"165\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"end\" fill=\"#1e293b\" font-weight=\"bold\">16</text><text x=\"250\" y=\"165\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">.</text><text x=\"300\" y=\"165\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"start\" fill=\"#1e293b\" font-weight=\"bold\">15</text><path d=\"M 250 30 L 250 170\" stroke=\"#ea580c\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate: $8.2 - 3.47$",
+          "solution_steps": [
+            "Step 1: Write the numbers vertically, aligning the decimal points.",
+            "Step 2: Add a placeholder zero to $8.2$ so it becomes $8.20$.",
+            "Step 3: Subtract: $8.20 - 3.47$.",
+            "Step 4: Subtract: $8.20 - 3.47 = 4.73$."
+          ],
+          "final_answer": "$4.73$"
+        },
+        {
+          "problem": "Calculate: $2.4 \\times 1.3$",
+          "solution_steps": [
+            "Step 1: Multiply as if they were whole numbers: $24 \\times 13 = 312$.",
+            "Step 2: Count the total decimal places in the original problem. $2.4$ has one, $1.3$ has one. Total = $2$ decimal places.",
+            "Step 3: The product has two decimal places: $3.12$."
+          ],
+          "final_answer": "$3.12$"
+        },
+        {
+          "problem": "Calculate: $4.68 \\div 0.6$",
+          "solution_steps": [
+            "Step 1: The divisor is $0.6$. Move the decimal one place right to make it $6$.",
+            "Step 2: Move the decimal in the dividend ($4.68$) one place right as well to make it $46.8$.",
+            "Step 3: Divide $46.8 \\div 6$.",
+            "Step 4: $46.8 \\div 6 = 7.8$."
+          ],
+          "final_answer": "$7.8$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Aligning the decimal points when multiplying.",
+          "correction": "You do not need to align decimals when multiplying. Just align the digits on the right, multiply like whole numbers, and count the decimal places at the end."
+        },
+        {
+          "mistake": "Dropping the decimal place in division.",
+          "correction": "Remember to move the decimal point in BOTH the divisor and the dividend by the same amount before dividing."
+        }
+      ],
+      "quick_summary": [
+        "Addition/Subtraction: Align decimal points vertically.",
+        "Multiplication: Count total decimal places; apply to the final product.",
+        "Division: Make the divisor a whole number by shifting decimals in both numbers equally.",
+        "Estimate first and check that the answer has a reasonable size and decimal placement."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check decimal calculations and multi-step numerical results.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t03_st14": {
+      "id": "ms_math_t03_st14",
+      "title": "Operations with rational numbers",
+      "overview": "Rational numbers include integers, fractions, terminating decimals and recurring decimals. To calculate with them, combine the appropriate fraction or decimal operation rules with the sign rules for positive and negative numbers. Convert between forms when this makes a calculation exact or easier.",
+      "key_concepts": [
+        {
+          "concept": "Combining Rules",
+          "definition": "Apply fraction/decimal arithmetic rules AND integer sign rules simultaneously.",
+          "details": [
+            "If signs are the same, multiplication and division yield a positive result.",
+            "If signs are different, multiplication and division yield a negative result.",
+            "Subtracting a negative rational number is the same as adding a positive one."
+          ]
+        },
+        {
+          "concept": "Form Conversion",
+          "definition": "Sometimes it is easier to convert between forms.",
+          "details": [
+            "To mix fractions and decimals (e.g., $0.75 - \\frac{2}{5}$), convert them both to the same format.",
+            "Converting to fractions is usually best when dealing with recurring decimals (e.g., $0.\\overline{3} = \\frac{1}{3}$)."
+          ]
+        },
+        {
+          "concept": "Zero and Division",
+          "definition": "Division by zero is undefined.",
+          "details": [
+            "A rational number divided by a non-zero rational number is rational.",
+            "The divisor must not be zero; zero has no reciprocal."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sign Rules for Multiplication and Division",
+          "equation": "$$ (+)\\times(+)=+;\\quad (-)\\times(-)=+;\\quad (+)\\times(-)=-;\\quad (-)\\times(+)=- $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s05",
+          "title": "Multiplying Negative Fractions",
+          "type": "svg",
+          "caption": "Apply the fraction multiplication rule straight across, and use integer rules for the signs.",
+          "alt_text": "Negative 4/7 multiplied by positive 14/15 resulting in negative 56/105, which simplifies to negative 8/15.",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"70\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">- 4/7</text><text x=\"130\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#334155\">×</text><text x=\"190\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#22c55e\" font-weight=\"bold\">14/15</text><text x=\"250\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"330\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">- 56/105</text><text x=\"410\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"460\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">- 8/15</text><path d=\"M 70 50 Q 200 10 330 50\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><text x=\"200\" y=\"25\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">Negative × Positive = Negative</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate: $\\frac{5}{6} - \\left(-\\frac{1}{3}\\right)$",
+          "solution_steps": [
+            "Step 1: Subtracting a negative is equivalent to adding its opposite: $\\frac{5}{6} + \\frac{1}{3}$.",
+            "Step 2: Find a common denominator. The LCM of $6$ and $3$ is $6$.",
+            "Step 3: Convert $\\frac{1}{3}$ to $\\frac{2}{6}$.",
+            "Step 4: Add the numerators: $\\frac{5}{6} + \\frac{2}{6} = \\frac{7}{6}$."
+          ],
+          "final_answer": "$\\frac{7}{6}$"
+        },
+        {
+          "problem": "Calculate: $-\\frac{5}{6} \\div \\frac{10}{9}$",
+          "solution_steps": [
+            "Step 1: To divide, multiply by the reciprocal of the second fraction: $-\\frac{5}{6} \\times \\frac{9}{10}$.",
+            "Step 2: Note the signs. A negative times a positive will be negative.",
+            "Step 3: Multiply numerators and denominators: $\\frac{-5 \\times 9}{6 \\times 10} = -\\frac{45}{60}$.",
+            "Step 4: Simplify by dividing top and bottom by $15$."
+          ],
+          "final_answer": "$-\\frac{3}{4}$"
+        },
+        {
+          "problem": "Calculate: $0.\\overline{3} + \\frac{1}{6}$",
+          "solution_steps": [
+            "Step 1: Convert the recurring decimal to a fraction. $0.\\overline{3} = \\frac{1}{3}$.",
+            "Step 2: The problem is now $\\frac{1}{3} + \\frac{1}{6}$.",
+            "Step 3: Find a common denominator ($6$). $\\frac{1}{3} = \\frac{2}{6}$.",
+            "Step 4: Add: $\\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6}$.",
+            "Step 5: Simplify."
+          ],
+          "final_answer": "$\\frac{1}{2}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding denominators when dealing with negative fractions.",
+          "correction": "The rule for common denominators never changes, regardless of whether the fraction is positive or negative."
+        },
+        {
+          "mistake": "Applying integer sign rules incorrectly to addition.",
+          "correction": "Remember that two negatives make a positive ONLY in multiplication and division. In addition, $-\\frac{1}{2} + -\\frac{1}{2} = -1$."
+        }
+      ],
+      "quick_summary": [
+        "Apply standard fraction rules for common denominators and reciprocals.",
+        "Apply standard integer rules for positive and negative signs.",
+        "Convert decimals to fractions to avoid errors with recurring digits.",
+        "Division by zero is undefined; when dividing, the divisor must be non-zero."
+      ],
+      "utilities": [
+        {
+          "title": "Fraction Calculator",
+          "description": "Check fraction addition, subtraction, multiplication and division calculations.",
+          "url": "https://onlinetoolpad.com/math/FRACTION_CALCULATOR",
+          "icon": "calculator"
+        },
+        {
+          "title": "Scientific Calculator",
+          "description": "Check decimal calculations and multi-step numerical results.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t03_st05": {
+      "id": "ms_math_t03_st05",
+      "title": "Converting fractions and decimals",
+      "overview": "Fractions and decimals are two different languages used to describe the same exact values. Being able to translate fluently between them allows you to choose whichever form is easier for a specific calculation.",
+      "key_concepts": [
+        {
+          "concept": "Fraction to Decimal",
+          "definition": "Divide the numerator by the denominator.",
+          "details": [
+            "Alternatively, scale the fraction so the denominator is a power of $10$ ($10, 100, 1000$), then write it as a decimal."
+          ]
+        },
+        {
+          "concept": "Terminating Decimal to Fraction",
+          "definition": "Use place value.",
+          "details": [
+            "One decimal place $\\rightarrow$ put over $10$.",
+            "Two decimal places $\\rightarrow$ put over $100$.",
+            "Three decimal places $\\rightarrow$ put over $1000$.",
+            "Always simplify the resulting fraction."
+          ]
+        },
+        {
+          "concept": "Recurring Decimal to Fraction",
+          "definition": "Algebraic elimination method.",
+          "details": [
+            "Set the decimal to $x$.",
+            "Multiply by $10$ (for $1$ repeating digit), $100$ (for $2$), etc., to shift the decimal point past the repeating block.",
+            "Subtract the original $x$ equation to eliminate the repeating part, then solve."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s05",
+          "title": "Place Value for Decimal Conversion",
+          "type": "svg",
+          "caption": "Identify the place value of the last digit to set your denominator.",
+          "alt_text": "Visual showing 0.45 = 45/100 because the 5 is in the hundredths place. Simplified to 9/20.",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"100\" y=\"80\" font-family=\"monospace\" font-size=\"40\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">0.45</text><path d=\"M 130 90 L 130 110 L 160 110\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"170\" y=\"115\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"start\" fill=\"#1d4ed8\">Hundredths place</text><text x=\"210\" y=\"80\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"300\" y=\"60\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">45</text><line x1=\"260\" y1=\"70\" x2=\"340\" y2=\"70\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"300\" y=\"105\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">100</text><text x=\"380\" y=\"80\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"450\" y=\"60\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">9</text><line x1=\"420\" y1=\"70\" x2=\"480\" y2=\"70\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"450\" y=\"105\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">20</text><text x=\"450\" y=\"135\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#15803d\">(Simplified)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Convert $0.125$ into a fraction.",
+          "solution_steps": [
+            "Step 1: The last digit is in the thousandths place, so write it over $1000$: $\\frac{125}{1000}$.",
+            "Step 2: Simplify by finding common factors. Both end in $5$, so divide by $25$: $\\frac{125 \\div 25}{1000 \\div 25} = \\frac{5}{40}$.",
+            "Step 3: Divide by $5$ again: $\\frac{5 \\div 5}{40 \\div 5} = \\frac{1}{8}$."
+          ],
+          "final_answer": "$\\frac{1}{8}$"
+        },
+        {
+          "problem": "Convert $0.\\overline{27}$ into a fraction.",
+          "solution_steps": [
+            "Step 1: Let $x = 0.272727\\dots$",
+            "Step 2: Since $2$ digits repeat, multiply by $100$: $100x = 27.272727\\dots$",
+            "Step 3: Subtract the original equation: $100x - x = 27.2727\\dots - 0.2727\\dots$",
+            "Step 4: This leaves $99x = 27$.",
+            "Step 5: Solve for $x$: $x = \\frac{27}{99}$.",
+            "Step 6: Simplify by dividing by $9$: $\\frac{3}{11}$."
+          ],
+          "final_answer": "$\\frac{3}{11}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ignoring zeros after the decimal point when forming the fraction.",
+          "correction": "$0.04$ is $\\frac{4}{100}$, not $\\frac{4}{10}$. The zero holds a critical place value."
+        },
+        {
+          "mistake": "Forgetting to simplify the final fraction.",
+          "correction": "Always check if the numerator and denominator share a common factor before finishing the problem."
+        }
+      ],
+      "quick_summary": [
+        "Fraction to decimal: Divide Top by Bottom.",
+        "Decimal to fraction: Put over $10, 100$, or $1000$ based on decimal places, then simplify.",
+        "Recurring decimals are exact fractions; use algebra ($10x, 100x$) to convert them."
+      ]
+    },
+    "ms_math_t03_st06": {
+      "id": "ms_math_t03_st06",
+      "title": "Converting fractions to percentages",
+      "overview": "A percentage is simply a specific type of fraction—one where the denominator is always exactly 100. Converting any fraction to a percentage means finding out how many parts out of 100 it represents.",
+      "key_concepts": [
+        {
+          "concept": "Percentage Meaning",
+          "definition": "A quantity expressed as a number out of 100.",
+          "details": [
+            "The symbol $\\%$ translates directly to 'per 100' or 'divided by 100'."
+          ]
+        },
+        {
+          "concept": "Method 1: Equivalent Fractions",
+          "definition": "Scale the denominator to 100.",
+          "details": [
+            "Best used when the denominator easily multiplies into $100$ (e.g., $2, 4, 5, 10, 20, 25, 50$).",
+            "Multiply top and bottom by the same factor."
+          ]
+        },
+        {
+          "concept": "Method 2: Convert to Decimal First",
+          "definition": "Divide the numerator by the denominator, then multiply by 100.",
+          "details": [
+            "Best used when the denominator does not easily scale to $100$ (e.g., $3, 7, 8$).",
+            "Formula: $\\text{Percentage} = \\text{Fraction} \\times 100\\%$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s06",
+          "title": "Scaling to 100 for Percentages",
+          "type": "svg",
+          "caption": "If you can scale the denominator to 100, the numerator becomes the percentage.",
+          "alt_text": "Visual showing 3/5 multiplied by 20/20 to equal 60/100, which is exactly 60%.",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"100\" y=\"60\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">3</text><line x1=\"70\" y1=\"75\" x2=\"130\" y2=\"75\" stroke=\"#0f172a\" stroke-width=\"3\"/><text x=\"100\" y=\"110\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">5</text><text x=\"180\" y=\"85\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#334155\">×</text><text x=\"260\" y=\"60\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#2563eb\" font-weight=\"bold\">20</text><line x1=\"230\" y1=\"75\" x2=\"290\" y2=\"75\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"260\" y=\"110\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#2563eb\" font-weight=\"bold\">20</text><text x=\"330\" y=\"85\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"400\" y=\"60\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">60</text><line x1=\"360\" y1=\"75\" x2=\"440\" y2=\"75\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"400\" y=\"110\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">100</text><path d=\"M 410 40 Q 450 10 480 40\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><polygon points=\"480,40 470,35 475,45\" fill=\"#ea580c\"/><text x=\"480\" y=\"70\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"start\" fill=\"#ea580c\" font-weight=\"bold\">60%</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Convert $\\frac{7}{20}$ to a percentage.",
+          "solution_steps": [
+            "Step 1: Notice that $20 \\times 5 = 100$.",
+            "Step 2: Multiply numerator and denominator by $5$: $\\frac{7 \\times 5}{20 \\times 5}$.",
+            "Step 3: This equals $\\frac{35}{100}$."
+          ],
+          "final_answer": "$35\\%$"
+        },
+        {
+          "problem": "Convert $\\frac{3}{8}$ to a percentage.",
+          "solution_steps": [
+            "Step 1: $8$ doesn't easily multiply into $100$. Divide $3$ by $8$ to get a decimal.",
+            "Step 2: $3 \\div 8 = 0.375$.",
+            "Step 3: Multiply the decimal by $100$: $0.375 \\times 100 = 37.5$."
+          ],
+          "final_answer": "$37.5\\%$"
+        },
+        {
+          "problem": "Convert the improper fraction $\\frac{5}{4}$ to a percentage.",
+          "solution_steps": [
+            "Step 1: An improper fraction will always be over $100\\%$.",
+            "Step 2: Method 1: $4 \\times 25 = 100$. Multiply top by $25$: $5 \\times 25 = 125$. $\\frac{125}{100} = 125\\%$.",
+            "Step 3: Method 2: $5 \\div 4 = 1.25$. $1.25 \\times 100 = 125\\%$."
+          ],
+          "final_answer": "$125\\%$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $0.4$ as a decimal is $0.4\\%$.",
+          "correction": "You must multiply by $100$ to get the percentage. $0.4 \\times 100 = 40\\%$. (Move the decimal point two spots right)."
+        },
+        {
+          "mistake": "Believing a percentage cannot be greater than $100\\%$.",
+          "correction": "Improper fractions and mixed numbers yield percentages over $100\\%$. This is completely valid (e.g., scoring bonus points, or calculating price inflation)."
+        }
+      ],
+      "quick_summary": [
+        "A percentage is just a fraction with a denominator of $100$.",
+        "If you can multiply the denominator to reach $100$, do the same to the numerator to find the percentage.",
+        "Otherwise, convert the fraction to a decimal, then multiply by $100$."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Check percentage calculations, increases, decreases and percentage applications.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "percent"
+        }
+      ]
+    },
+    "ms_math_t03_st08": {
+      "id": "ms_math_t03_st08",
+      "title": "Finding a percentage of a quantity",
+      "overview": "Finding a percentage of a quantity means finding a specified part of the whole. In mathematics, the word 'of' usually translates directly to multiplication.",
+      "key_concepts": [
+        {
+          "concept": "Fraction Method",
+          "definition": "Convert familiar percentages into fractions for quick mental math.",
+          "details": [
+            "$50\\% = \\frac{1}{2}$",
+            "$25\\% = \\frac{1}{4}$",
+            "$75\\% = \\frac{3}{4}$",
+            "$10\\% = \\frac{1}{10}$",
+            "$20\\% = \\frac{1}{5}$"
+          ]
+        },
+        {
+          "concept": "Decimal Method",
+          "definition": "Divide the percentage by 100 to get a decimal, then multiply.",
+          "details": [
+            "Formula: $\\text{Percentage of Quantity} = \\frac{\\text{Percent}}{100} \\times \\text{Quantity}$.",
+            "Example: $15\\% \\text{ of } 240 \\rightarrow 0.15 \\times 240 = 36$."
+          ]
+        },
+        {
+          "concept": "The 1% or 10% Building Block Method",
+          "definition": "Find $1\\%$ or $10\\%$ first, then scale up.",
+          "details": [
+            "To find $12\\%$ of $250$: Find $1\\%$ ($2.5$) and multiply by $12$ ($30$)."
+          ]
+        },
+        {
+          "concept": "Percentages > 100%",
+          "definition": "A percentage greater than 100% results in a value larger than the original.",
+          "details": [
+            "$125\\% \\text{ of } 64 = 1.25 \\times 64 = 80$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s08",
+          "title": "Mental Math Percentage Blocks",
+          "type": "svg",
+          "caption": "Break awkward percentages down into easy blocks of 10% and 5%.",
+          "alt_text": "Visual showing 35% of 80 being broken into three 10% blocks (8 each) and one 5% block (4), summing to 28.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Find 35% of 80</text><rect x=\"70\" y=\"70\" width=\"80\" height=\"50\" fill=\"#bae6fd\" rx=\"5\"/><text x=\"110\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0369a1\">10%</text><text x=\"110\" y=\"110\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">= 8</text><rect x=\"160\" y=\"70\" width=\"80\" height=\"50\" fill=\"#bae6fd\" rx=\"5\"/><text x=\"200\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0369a1\">10%</text><text x=\"200\" y=\"110\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">= 8</text><rect x=\"250\" y=\"70\" width=\"80\" height=\"50\" fill=\"#bae6fd\" rx=\"5\"/><text x=\"290\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0369a1\">10%</text><text x=\"290\" y=\"110\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">= 8</text><rect x=\"340\" y=\"70\" width=\"50\" height=\"50\" fill=\"#fef08a\" rx=\"5\"/><text x=\"365\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#a16207\">5%</text><text x=\"365\" y=\"110\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">= 4</text><path d=\"M 110 130 L 110 150 L 365 150 L 365 130\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"237\" y1=\"150\" x2=\"237\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"237\" y=\"180\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">Total = 28</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find $15\\%$ of $240$.",
+          "solution_steps": [
+            "Step 1: Convert $15\\%$ to a decimal: $0.15$.",
+            "Step 2: Multiply: $0.15 \\times 240$.",
+            "Step 3: Alternatively, find $10\\%$ ($24$) and $5\\%$ ($12$) and add them together ($24 + 12$)."
+          ],
+          "final_answer": "$36$"
+        },
+        {
+          "problem": "Find $75\\%$ of $80$.",
+          "solution_steps": [
+            "Step 1: Recognise that $75\\%$ is exactly $\\frac{3}{4}$.",
+            "Step 2: $\\frac{3}{4} \\times 80 = \\frac{240}{4}$.",
+            "Step 3: $240 \\div 4 = 60$."
+          ],
+          "final_answer": "$60$"
+        },
+        {
+          "problem": "Find $125\\%$ of $40$.",
+          "solution_steps": [
+            "Step 1: Convert to decimal: $1.25$.",
+            "Step 2: Multiply: $1.25 \\times 40 = 50$.",
+            "Step 3: Alternatively, $100\\%$ is $40$, and $25\\%$ (one-quarter) is $10$. $40 + 10 = 50$."
+          ],
+          "final_answer": "$50$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing the percentage with the answer.",
+          "correction": "$20\\%$ of $150$ is $30$, not $20$. Always perform the multiplication."
+        },
+        {
+          "mistake": "Dividing by 100 twice.",
+          "correction": "Either convert the percentage to a decimal ($0.20$) OR divide the percentage by $100$ in the formula. Do not do both ($0.0020$)."
+        }
+      ],
+      "quick_summary": [
+        "To find a percentage, translate 'of' to multiplication.",
+        "Convert the percentage to a decimal ($40\\% \\rightarrow 0.40$) and multiply.",
+        "Use familiar fractions (like $\\frac{1}{2}$ for $50\\%$) to speed up mental calculations."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Check percentage calculations, increases, decreases and percentage applications.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "percent"
+        }
+      ]
+    },
+    "ms_math_t03_st09": {
+      "id": "ms_math_t03_st09",
+      "title": "Finding the original quantity",
+      "overview": "Finding the original quantity is known as working with 'reverse percentages'. If you know the final sale price of an item after a discount, you must work backwards to find out what it originally cost before the percentage was applied.",
+      "key_concepts": [
+        {
+          "concept": "The Reverse Percentage Principle",
+          "definition": "The final amount represents a specific percentage of the original. To find the original, divide the final amount by the decimal multiplier.",
+          "details": [
+            "Formula: $\\text{Original} = \\frac{\\text{Final Quantity}}{\\text{Decimal Multiplier}}$"
+          ]
+        },
+        {
+          "concept": "Finding the Multiplier for a Discount",
+          "definition": "A discount decreases the percentage.",
+          "details": [
+            "If an item is $20\\%$ off, you are paying $80\\%$ of the original price.",
+            "The multiplier is $0.80$."
+          ]
+        },
+        {
+          "concept": "Finding the Multiplier for an Increase",
+          "definition": "An increase pushes the percentage above 100%.",
+          "details": [
+            "If a price increases by $15\\%$, the new price is $115\\%$ of the original.",
+            "The multiplier is $1.15$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Reverse Percentage Formula",
+          "equation": "$$ \\text{Original Quantity} = \\frac{\\text{Final Quantity}}{\\text{Decimal Percentage}} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s09",
+          "title": "Reverse Percentage Machine",
+          "type": "svg",
+          "caption": "Going forward uses multiplication. Working backward to the original requires division.",
+          "alt_text": "Flowchart showing Original Price multiplied by 0.80 equals 72. Reverse arrow shows 72 divided by 0.80 equals Original Price (90).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"70\" width=\"120\" height=\"60\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\" rx=\"8\"/><text x=\"110\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Original Price</text><text x=\"110\" y=\"115\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\">(?)</text><rect x=\"330\" y=\"70\" width=\"120\" height=\"60\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"8\"/><text x=\"390\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Sale Price</text><text x=\"390\" y=\"115\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\">$72</text><path d=\"M 170 85 Q 250 50 330 85\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"330,85 320,80 325,90\" fill=\"#3b82f6\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">× 0.80 (20% off)</text><path d=\"M 330 115 Q 250 150 170 115\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><polygon points=\"170,115 180,120 175,110\" fill=\"#ea580c\"/><text x=\"250\" y=\"165\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">÷ 0.80 = 90</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A pair of shoes costs $72$ after a $20\\%$ discount. Find the original price.",
+          "solution_steps": [
+            "Step 1: A $20\\%$ discount leaves $80\\%$ of the original price ($100\\% - 20\\% = 80\\%$).",
+            "Step 2: Convert $80\\%$ to a decimal: $0.80$.",
+            "Step 3: Divide the final price by the decimal: $72 \\div 0.80$.",
+            "Step 4: $72 \\div 0.8 = 90$."
+          ],
+          "final_answer": "$90$"
+        },
+        {
+          "problem": "A bicycle's price becomes $276$ after a $15\\%$ increase. Find its original price.",
+          "solution_steps": [
+            "Step 1: A $15\\%$ increase means the new price is $115\\%$ of the original ($100\\% + 15\\% = 115\\%$).",
+            "Step 2: Convert to decimal: $1.15$.",
+            "Step 3: Divide the final price by the decimal: $276 \\div 1.15$.",
+            "Step 4: $276 \\div 1.15 = 240$."
+          ],
+          "final_answer": "$240$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding or subtracting the percentage directly from the final value.",
+          "correction": "If a shirt is $\\$75$ after a $25\\%$ discount, the original price is NOT $\\$75 + 25\\%$ of $\\$75$. The $25\\%$ discount was taken out of the *original* price, so you must use division ($75 \\div 0.75 = 100$)."
+        }
+      ],
+      "quick_summary": [
+        "Identify the percentage the final value actually represents (e.g., $20\\%$ off = $80\\%$ remaining).",
+        "Convert that percentage to a decimal multiplier.",
+        "Divide the final quantity by the decimal multiplier to find the original quantity."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Check percentage calculations, increases, decreases and percentage applications.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "percent"
+        }
+      ]
+    },
+    "ms_math_t03_st07": {
+      "id": "ms_math_t03_st07",
+      "title": "Percentage increase and decrease",
+      "overview": "Percentage increase and decrease describe how much a quantity grows or shrinks relative to its original starting value. This is used everywhere in daily life, from tracking price markups and sales discounts to measuring population growth.",
+      "key_concepts": [
+        {
+          "concept": "Calculating Percentage Change",
+          "definition": "Finding what percentage the change represents out of the original amount.",
+          "details": [
+            "Find the absolute difference between the new and original values.",
+            "Divide that difference by the ORIGINAL value.",
+            "Multiply by $100\\%$."
+          ]
+        },
+        {
+          "concept": "Finding the New Value",
+          "definition": "Calculating the final amount after a percentage change.",
+          "details": [
+            "**Increase:** Calculate the increase and add it to the original, OR multiply the original by $(1 + \\frac{r}{100})$.",
+            "**Decrease:** Calculate the decrease and subtract it from the original, OR multiply the original by $(1 - \\frac{r}{100})$."
+          ]
+        },
+        {
+          "concept": "Percentage Multipliers",
+          "definition": "A fast way to calculate new values.",
+          "details": [
+            "Increase by $15\\%$ $\\rightarrow$ multiply by $1.15$.",
+            "Decrease by $20\\%$ $\\rightarrow$ multiply by $0.80$ (since $100\\% - 20\\% = 80\\%$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Percentage Change",
+          "equation": "$$ \\text{Percentage Change} = \\frac{|\\text{New} - \\text{Original}|}{\\text{Original}} \\times 100\\% $$",
+          "variables": {}
+        },
+        {
+          "name": "New Value (Multiplier Method)",
+          "equation": "$$ \\text{New} = \\text{Original} \\times \\text{Multiplier} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s07",
+          "title": "Percentage Multipliers",
+          "type": "svg",
+          "caption": "Using decimal multipliers is the fastest way to calculate percentage increases and decreases.",
+          "alt_text": "Visual showing 100% as the base (1.00). Arrow up 15% shows multiplier 1.15. Arrow down 20% shows multiplier 0.80.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"200\" y=\"80\" width=\"100\" height=\"40\" fill=\"#e2e8f0\" rx=\"5\"/><text x=\"250\" y=\"107\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">100% (1.00)</text><path d=\"M 250 80 L 250 40 L 350 40\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><polygon points=\"350,40 340,35 340,45\" fill=\"#22c55e\"/><text x=\"260\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"start\" fill=\"#15803d\" font-weight=\"bold\">+ 15% Increase</text><rect x=\"360\" y=\"20\" width=\"120\" height=\"40\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"420\" y=\"47\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">× 1.15</text><path d=\"M 250 120 L 250 160 L 350 160\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><polygon points=\"350,160 340,155 340,165\" fill=\"#ef4444\"/><text x=\"260\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"start\" fill=\"#b91c1c\" font-weight=\"bold\">- 20% Decrease</text><rect x=\"360\" y=\"140\" width=\"120\" height=\"40\" fill=\"#fee2e2\" rx=\"5\"/><text x=\"420\" y=\"167\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">× 0.80</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A book costs $40$. Its price rises to $50$. Find the percentage increase.",
+          "solution_steps": [
+            "Step 1: Find the absolute change: $50 - 40 = 10$.",
+            "Step 2: Divide the change by the ORIGINAL price ($40$): $\\frac{10}{40} = 0.25$.",
+            "Step 3: Convert the decimal to a percentage: $0.25 \\times 100\\% = 25\\%$."
+          ],
+          "final_answer": "$25\\%$"
+        },
+        {
+          "problem": "A pair of shoes costs $150$. It is discounted by $20\\%$. Find the sale price.",
+          "solution_steps": [
+            "Step 1: Find the multiplier. A $20\\%$ decrease means you pay $80\\%$ of the original.",
+            "Step 2: $80\\%$ as a decimal is $0.80$.",
+            "Step 3: Multiply: $150 \\times 0.80 = 120$."
+          ],
+          "final_answer": "$120$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dividing by the new value instead of the original value.",
+          "correction": "Percentage change is ALWAYS relative to the starting (original) value. If price goes $40 \\rightarrow 50$, you divide by $40$, not $50$."
+        },
+        {
+          "mistake": "Assuming a 20% increase followed by a 20% decrease returns you to the original number.",
+          "correction": "It doesn't! $100 \\times 1.20 = 120$. Then $120 \\times 0.80 = 96$. The final value is lower because the $20\\%$ decrease is taken from a larger base."
+        }
+      ],
+      "quick_summary": [
+        "Percentage Change = (Difference ÷ Original) × 100.",
+        "Increase multiplier = $1 + \\text{decimal percentage}$.",
+        "Decrease multiplier = $1 - \\text{decimal percentage}$."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Check percentage calculations, increases, decreases and percentage applications.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "percent"
+        }
+      ]
+    },
+    "ms_math_t03_st10": {
+      "id": "ms_math_t03_st10",
+      "title": "Percentage change",
+      "overview": "Percentage change measures how much a quantity grows or shrinks compared to its original starting value. This metric is essential for comparing changes across different scales, from small price adjustments to global population shifts.",
+      "key_concepts": [
+        {
+          "concept": "Calculating Percentage Change",
+          "definition": "The ratio of the absolute change to the original value, expressed as a percentage.",
+          "details": [
+            "Always use the ORIGINAL value as the denominator.",
+            "If the new value is larger, it is a percentage increase.",
+            "If the new value is smaller, it is a percentage decrease."
+          ]
+        },
+        {
+          "concept": "Successive Percentage Changes",
+          "definition": "Applying more than one percentage change in a row.",
+          "details": [
+            "Each new percentage is calculated based on the updated value, NOT the original starting value."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Percentage Change",
+          "equation": "$$ \\text{Percentage change} = \\frac{|\\text{New value} - \\text{Original value}|}{\\text{Original value}} \\times 100\\% $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s10",
+          "title": "Why the Original Value Matters",
+          "type": "svg",
+          "caption": "An increase of 10 units means a completely different percentage depending on where you started.",
+          "alt_text": "Visual comparing 50 to 60 (increase of 10, which is 20%) versus 100 to 110 (increase of 10, which is only 10%).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"30\" width=\"80\" height=\"50\" fill=\"#bfdbfe\" rx=\"5\"/><text x=\"90\" y=\"62\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">50</text><rect x=\"230\" y=\"30\" width=\"80\" height=\"50\" fill=\"#bfdbfe\" rx=\"5\"/><text x=\"270\" y=\"62\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">60</text><path d=\"M 140 55 L 220 55\" stroke=\"#2563eb\" stroke-width=\"3\"/><polygon points=\"220,55 210,50 210,60\" fill=\"#2563eb\"/><text x=\"180\" y=\"45\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">+10 units</text><text x=\"400\" y=\"62\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">= 20% Increase</text><rect x=\"50\" y=\"110\" width=\"80\" height=\"50\" fill=\"#bbf7d0\" rx=\"5\"/><text x=\"90\" y=\"142\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">100</text><rect x=\"230\" y=\"110\" width=\"80\" height=\"50\" fill=\"#bbf7d0\" rx=\"5\"/><text x=\"270\" y=\"142\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">110</text><path d=\"M 140 135 L 220 135\" stroke=\"#16a34a\" stroke-width=\"3\"/><polygon points=\"220,135 210,130 210,140\" fill=\"#16a34a\"/><text x=\"180\" y=\"125\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">+10 units</text><text x=\"400\" y=\"142\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">= 10% Increase</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A plant grows from $40\\text{ cm}$ to $50\\text{ cm}$. Find the percentage increase.",
+          "solution_steps": [
+            "Step 1: Find the absolute change: $50 - 40 = 10\\text{ cm}$.",
+            "Step 2: Divide by the ORIGINAL height: $\\frac{10}{40} = 0.25$.",
+            "Step 3: Convert to a percentage: $0.25 \\times 100\\% = 25\\%$."
+          ],
+          "final_answer": "$25\\%$"
+        },
+        {
+          "problem": "A product costs $\\$100$. Its price increases by $20\\%$, then decreases by $20\\%$. What is the final price?",
+          "solution_steps": [
+            "Step 1: Calculate the increase. $20\\%$ of $100 = 20$. New price is $100 + 20 = 120$.",
+            "Step 2: Calculate the decrease. Apply the $20\\%$ decrease to the NEW price ($120$).",
+            "Step 3: $20\\%$ of $120 = 24$.",
+            "Step 4: Subtract the decrease: $120 - 24 = 96$."
+          ],
+          "final_answer": "$\\$96$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the new value as the denominator.",
+          "correction": "Always divide the difference by the starting (original) value, never the final value."
+        },
+        {
+          "mistake": "Assuming an equal percentage increase and decrease cancel each other out.",
+          "correction": "Because the base value changes after the first step, a $20\\%$ increase followed by a $20\\%$ decrease results in a net loss (e.g., $100 \\rightarrow 120 \\rightarrow 96$)."
+        }
+      ],
+      "quick_summary": [
+        "Find the difference between the original and new values.",
+        "Divide the difference by the original value and multiply by $100$.",
+        "Successive percentage changes must be applied one step at a time to the updated values."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Check percentage calculations, increases, decreases and percentage applications.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "percent"
+        }
+      ]
+    },
+    "ms_math_t03_st11": {
+      "id": "ms_math_t03_st11",
+      "title": "Applications of percentages",
+      "overview": "Percentages are not just math theory; they drive everyday commerce. We use them to calculate store discounts, analyze profit and loss margins, add service charges to bills, and track test scores.",
+      "key_concepts": [
+        {
+          "concept": "Discounts and Sale Prices",
+          "definition": "Reductions from an original price.",
+          "details": [
+            "Sale Price = Original Price - Discount Amount.",
+            "Alternatively, if the discount is $25\\%$, the Sale Price is $75\\%$ of the Original Price."
+          ]
+        },
+        {
+          "concept": "Taxes and Service Charges",
+          "definition": "Additions to the original price.",
+          "details": [
+            "Total Bill = Original Price + Tax Amount.",
+            "Alternatively, an $8\\%$ tax means you multiply the original price by $1.08$."
+          ]
+        },
+        {
+          "concept": "Profit and Loss",
+          "definition": "Comparing the selling price to the cost price.",
+          "details": [
+            "Profit = Selling Price - Cost Price (when Selling Price is higher).",
+            "Loss = Cost Price - Selling Price (when Cost Price is higher).",
+            "The percentage is ALWAYS calculated relative to the COST price."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Profit Percentage",
+          "equation": "$$ \\text{Profit } \\% = \\frac{\\text{Profit}}{\\text{Cost Price}} \\times 100\\% $$",
+          "variables": {}
+        },
+        {
+          "name": "Loss Percentage",
+          "equation": "$$ \\text{Loss } \\% = \\frac{\\text{Loss}}{\\text{Cost Price}} \\times 100\\% $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s11",
+          "title": "Profit Percentage Calculation",
+          "type": "svg",
+          "caption": "Profit percentage is always calculated based on what you originally paid (Cost Price), not what you sold it for.",
+          "alt_text": "Visual showing a bag bought for 40 and sold for 50. The profit is 10. The profit percentage is 10/40 = 25%.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"30\" width=\"120\" height=\"60\" fill=\"#e2e8f0\" rx=\"8\"/><text x=\"110\" y=\"55\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#334155\" font-weight=\"bold\">Cost Price</text><text x=\"110\" y=\"80\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">$40</text><rect x=\"330\" y=\"30\" width=\"120\" height=\"60\" fill=\"#dcfce7\" rx=\"8\"/><text x=\"390\" y=\"55\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">Selling Price</text><text x=\"390\" y=\"80\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">$50</text><path d=\"M 170 60 L 330 60\" stroke=\"#22c55e\" stroke-width=\"3\"/><polygon points=\"330,60 320,55 320,65\" fill=\"#22c55e\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Profit = $10</text><rect x=\"100\" y=\"120\" width=\"300\" height=\"60\" fill=\"#fef08a\" rx=\"8\"/><text x=\"250\" y=\"155\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Profit % = 10 / 40 = 25%</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A jacket costs $80$ and has a $25\\%$ discount. Find the sale price.",
+          "solution_steps": [
+            "Step 1: Calculate the discount amount: $25\\% \\text{ of } 80 = \\frac{1}{4} \\times 80 = 20$.",
+            "Step 2: Subtract the discount from the original price: $80 - 20 = 60$."
+          ],
+          "final_answer": "$60$"
+        },
+        {
+          "problem": "A trader buys a bag for $40$ and sells it for $50$. Find the profit percentage.",
+          "solution_steps": [
+            "Step 1: Find the absolute profit: $50 - 40 = 10$.",
+            "Step 2: Divide the profit by the COST price ($40$): $\\frac{10}{40} = 0.25$.",
+            "Step 3: Convert to a percentage: $0.25 \\times 100\\% = 25\\%$."
+          ],
+          "final_answer": "$25\\%$"
+        },
+        {
+          "problem": "A product costs $\\$200$. It receives a $10\\%$ discount, followed by an additional $20\\%$ discount on the sale price. What is the final price?",
+          "solution_steps": [
+            "Step 1: Calculate the first discount: $10\\% \\text{ of } 200 = 20$. New price = $200 - 20 = 180$.",
+            "Step 2: Calculate the second discount based on the NEW price: $20\\% \\text{ of } 180 = 36$.",
+            "Step 3: Final price = $180 - 36 = 144$."
+          ],
+          "final_answer": "$\\$144$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating profit or loss relative to the selling price.",
+          "correction": "Profit and loss percentages MUST be calculated relative to the original Cost Price."
+        },
+        {
+          "mistake": "Adding successive discount rates together.",
+          "correction": "A $10\\%$ discount followed by a $20\\%$ discount is NOT a $30\\%$ discount. The second discount applies to the reduced price, making the total savings smaller than $30\\%$."
+        }
+      ],
+      "quick_summary": [
+        "Discounts reduce the price; Taxes and service charges increase it.",
+        "Profit and loss percentages always use the Cost Price as the denominator.",
+        "For successive discounts, calculate them one at a time on the updated price."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Check percentage calculations, increases, decreases and percentage applications.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "percent"
+        }
+      ]
+    },
+    "ms_math_t03_st12": {
+      "id": "ms_math_t03_st12",
+      "title": "Fraction-decimal-percentage problem-solving",
+      "overview": "Real-world problems rarely hand you just one type of number. You might need to combine a fraction of a discount with a decimal tax rate. Mastering conversions allows you to choose the most efficient mathematical tool for the job.",
+      "key_concepts": [
+        {
+          "concept": "The Equivalence Triangle",
+          "definition": "Fractions, decimals, and percentages are interchangeable representations of the same value.",
+          "details": [
+            "Fraction $\\rightarrow$ Decimal: Divide Numerator by Denominator.",
+            "Decimal $\\rightarrow$ Percentage: Multiply by 100.",
+            "Percentage $\\rightarrow$ Fraction: Place over 100 and simplify."
+          ]
+        },
+        {
+          "concept": "Choosing the Best Form",
+          "definition": "Select the format that makes the math easiest.",
+          "details": [
+            "Fractions are best for sharing or splitting into exact equal parts.",
+            "Decimals are best for calculator work and standard measurements.",
+            "Percentages are best for comparing rates, discounts, and statistics."
+          ]
+        },
+        {
+          "concept": "Comparing Mixed Forms",
+          "definition": "Standardize before you evaluate.",
+          "details": [
+            "To compare $\\frac{2}{3}$, $0.65$, and $60\\%$, convert them all to percentages or all to decimals first."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s12",
+          "title": "The Equivalence Triangle",
+          "type": "svg",
+          "caption": "Three different ways to represent the exact same value.",
+          "alt_text": "A triangle with 3/4 at the top, 0.75 at the bottom left, and 75% at the bottom right. Arrows indicate they are all equal.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"60\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#2563eb\" font-weight=\"bold\">3/4</text><text x=\"150\" y=\"180\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">0.75</text><text x=\"350\" y=\"180\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">75%</text><path d=\"M 230 80 L 170 140\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><path d=\"M 270 80 L 330 140\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><path d=\"M 200 170 L 300 170\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Which is greatest: $\\frac{2}{3}$, $0.65$, or $60\\%$?",
+          "solution_steps": [
+            "Step 1: Convert each to a percentage to easily compare them.",
+            "Step 2: $\\frac{2}{3} = 66.666\\dots\\%$.",
+            "Step 3: $0.65 = 65\\%$.",
+            "Step 4: $60\\% = 60\\%$.",
+            "Step 5: $66.666\\%$ is the largest."
+          ],
+          "final_answer": "$\\frac{2}{3}$"
+        },
+        {
+          "problem": "A library has $240$ books. Three-eighths are science books. How many science books are there?",
+          "solution_steps": [
+            "Step 1: Convert the word problem to math: $\\frac{3}{8} \\times 240$.",
+            "Step 2: It is easiest to divide by $8$ first: $240 \\div 8 = 30$.",
+            "Step 3: Then multiply by $3$: $30 \\times 3 = 90$."
+          ],
+          "final_answer": "$90$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Comparing values without standardizing.",
+          "correction": "Never try to guess which is larger between a fraction and a decimal directly. Convert them both to decimals (or percentages) first to eliminate guessing."
+        },
+        {
+          "mistake": "Applying logic backwards.",
+          "correction": "Always run a 'sanity check'. If you are looking for $20\\%$ of $400$ and your answer is $800$, recognize that a percentage less than $100\\%$ must result in a smaller number."
+        }
+      ],
+      "quick_summary": [
+        "Fractions, decimals, and percentages express the same numerical value.",
+        "Convert values to a common form before comparing them.",
+        "Fractions are great for exact mental math, decimals are great for calculators, and percentages are great for comparisons."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Check percentage calculations, increases, decreases and percentage applications.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "percent"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1104 @@
+{
+  "subject": "math",
+  "topicId": "ms_math_t04",
+  "topicTitle": "Ratio, Proportion and Rates",
+  "grade": "Middle School",
+  "subtopics": {
+    "ms_math_t04_st01": {
+      "id": "ms_math_t04_st01",
+      "title": "Simplifying ratios",
+      "overview": "A ratio is a mathematical way of comparing two or more quantities. Simplifying a ratio means expressing that same comparison using the smallest possible whole numbers, making the relationship much easier to understand at a glance.",
+      "key_concepts": [
+        {
+          "concept": "The Concept of a Ratio",
+          "definition": "A comparison showing how much of one quantity there is relative to another.",
+          "details": [
+            "Usually written with a colon, e.g., $6 : 9$.",
+            "Order matters! A ratio of red balls to blue balls ($6 : 9$) is different from blue balls to red balls ($9 : 6$)."
+          ]
+        },
+        {
+          "concept": "Simplifying Ratios",
+          "definition": "Expressing the ratio in its lowest terms.",
+          "details": [
+            "Divide all terms in the ratio by their Highest Common Factor (HCF).",
+            "If simplifying a ratio with three terms (e.g., $12 : 18 : 24$), divide ALL three numbers by the same common factor."
+          ]
+        },
+        {
+          "concept": "Ratios with Different Units",
+          "definition": "Units must match before simplifying.",
+          "details": [
+            "If comparing $2$ metres to $50$ centimetres, convert the metres to centimetres first ($200\\text{ cm} : 50\\text{ cm}$), then simplify ($4 : 1$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s01",
+          "title": "Simplifying Ratios Visually",
+          "type": "svg",
+          "caption": "Grouping items reveals the simplest whole-number relationship.",
+          "alt_text": "Visual showing 6 red circles and 9 blue circles. They are then grouped into clusters of 3, resulting in 2 groups of red and 3 groups of blue, illustrating the simplified ratio 2:3.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"120\" y=\"35\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">6 : 9</text><g transform=\"translate(50, 50)\"><circle cx=\"20\" cy=\"20\" r=\"10\" fill=\"#ef4444\"/><circle cx=\"50\" cy=\"20\" r=\"10\" fill=\"#ef4444\"/><circle cx=\"80\" cy=\"20\" r=\"10\" fill=\"#ef4444\"/><circle cx=\"20\" cy=\"50\" r=\"10\" fill=\"#ef4444\"/><circle cx=\"50\" cy=\"50\" r=\"10\" fill=\"#ef4444\"/><circle cx=\"80\" cy=\"50\" r=\"10\" fill=\"#ef4444\"/></g><g transform=\"translate(50, 120)\"><circle cx=\"20\" cy=\"0\" r=\"10\" fill=\"#3b82f6\"/><circle cx=\"50\" cy=\"0\" r=\"10\" fill=\"#3b82f6\"/><circle cx=\"80\" cy=\"0\" r=\"10\" fill=\"#3b82f6\"/><circle cx=\"20\" cy=\"30\" r=\"10\" fill=\"#3b82f6\"/><circle cx=\"50\" cy=\"30\" r=\"10\" fill=\"#3b82f6\"/><circle cx=\"80\" cy=\"30\" r=\"10\" fill=\"#3b82f6\"/><circle cx=\"20\" cy=\"60\" r=\"10\" fill=\"#3b82f6\"/><circle cx=\"50\" cy=\"60\" r=\"10\" fill=\"#3b82f6\"/><circle cx=\"80\" cy=\"60\" r=\"10\" fill=\"#3b82f6\"/></g><path d=\"M 200 100 L 260 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"4\"/><polygon points=\"260,100 250,90 250,110\" fill=\"#94a3b8\"/><text x=\"230\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#64748b\" font-weight=\"bold\">÷ 3</text><text x=\"380\" y=\"35\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2 : 3</text><g transform=\"translate(350, 60)\"><rect x=\"0\" y=\"0\" width=\"60\" height=\"30\" fill=\"#fecaca\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"30\" y=\"20\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">3 Red</text><rect x=\"0\" y=\"40\" width=\"60\" height=\"30\" fill=\"#fecaca\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"30\" y=\"60\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">3 Red</text></g><g transform=\"translate(350, 140)\"><rect x=\"-40\" y=\"0\" width=\"60\" height=\"30\" fill=\"#bfdbfe\" stroke=\"#3b82f6\" stroke-width=\"2\" rx=\"5\"/><text x=\"-10\" y=\"20\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">3 Blue</text><rect x=\"40\" y=\"0\" width=\"60\" height=\"30\" fill=\"#bfdbfe\" stroke=\"#3b82f6\" stroke-width=\"2\" rx=\"5\"/><text x=\"70\" y=\"20\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">3 Blue</text><rect x=\"0\" y=\"40\" width=\"60\" height=\"30\" fill=\"#bfdbfe\" stroke=\"#3b82f6\" stroke-width=\"2\" rx=\"5\"/><text x=\"30\" y=\"60\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">3 Blue</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify $42 : 56$.",
+          "solution_steps": [
+            "Step 1: Find the Highest Common Factor (HCF) of $42$ and $56$. The HCF is $14$.",
+            "Step 2: Divide both terms by $14$.",
+            "Step 3: $42 \\div 14 = 3$.",
+            "Step 4: $56 \\div 14 = 4$."
+          ],
+          "final_answer": "$3 : 4$"
+        },
+        {
+          "problem": "Simplify $12 : 18 : 24$.",
+          "solution_steps": [
+            "Step 1: Find a common factor for ALL THREE numbers. Let's try dividing by $2$.",
+            "Step 2: $12 \\div 2 = 6$; $18 \\div 2 = 9$; $24 \\div 2 = 12$. The ratio is now $6 : 9 : 12$.",
+            "Step 3: Can they be divided further? Yes, by $3$.",
+            "Step 4: $6 \\div 3 = 2$; $9 \\div 3 = 3$; $12 \\div 3 = 4$."
+          ],
+          "final_answer": "$2 : 3 : 4$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ignoring units before simplifying.",
+          "correction": "You cannot simplify $3\\text{ metres} : 75\\text{ centimetres}$ as $3 : 75$. You must first convert to the same unit ($300\\text{ cm} : 75\\text{ cm}$) and then simplify to get $4 : 1$."
+        },
+        {
+          "mistake": "Dividing terms by different numbers.",
+          "correction": "Every single term in the ratio must be divided by the exact same common factor."
+        }
+      ],
+      "quick_summary": [
+        "A ratio compares quantities using a colon ($:$).",
+        "To simplify, divide all parts by the Highest Common Factor.",
+        "Always standardize units before simplifying."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check arithmetic when simplifying larger ratios.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t04_st02": {
+      "id": "ms_math_t04_st02",
+      "title": "Equivalent ratios",
+      "overview": "Equivalent ratios look different but describe the exact same relationship. They work on the same principle as equivalent fractions: you can scale a ratio up or down by multiplying or dividing every term by the same number.",
+      "key_concepts": [
+        {
+          "concept": "Equivalent Ratios",
+          "definition": "Ratios that represent the same comparative relationship.",
+          "details": [
+            "Example: $2 : 3$, $4 : 6$, and $20 : 30$ are all equivalent.",
+            "Generate them by multiplying or dividing every term by the same non-zero number."
+          ]
+        },
+        {
+          "concept": "Checking for Equivalence",
+          "definition": "How to prove two ratios are equivalent.",
+          "details": [
+            "**Method 1 (Simplifying):** Simplify both ratios to their lowest terms. If the lowest terms match, they are equivalent.",
+            "**Method 2 (Cross-Multiplication):** If $a : b = c : d$, then $a \\times d = b \\times c$."
+          ]
+        },
+        {
+          "concept": "Finding Missing Terms",
+          "definition": "Solving a proportion equation.",
+          "details": [
+            "If $3 : 5 = 12 : x$, look at how $3$ became $12$ (multiplied by $4$). Apply the same multiplier to $5$ ($5 \\times 4 = 20$). Therefore $x = 20$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Cross-Multiplication for Ratios",
+          "equation": "$$ \\text{If } a:b = c:d \\text{, then } a \\times d = b \\times c $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s02",
+          "title": "Finding Missing Terms with Multipliers",
+          "type": "svg",
+          "caption": "Find the multiplier connecting the known terms, then apply it to the unknown side.",
+          "alt_text": "Visual showing 3:5 = 12:x. An arrow from 3 to 12 is labeled 'x 4'. A matching arrow from 5 to x is also labeled 'x 4', resolving x to 20.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"150\" y=\"100\" font-family=\"sans-serif\" font-size=\"40\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">3 : 5</text><text x=\"250\" y=\"100\" font-family=\"sans-serif\" font-size=\"40\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"350\" y=\"100\" font-family=\"sans-serif\" font-size=\"40\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">12 : x</text><path d=\"M 130 60 Q 230 10 330 60\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"330,60 320,55 325,65\" fill=\"#3b82f6\"/><text x=\"230\" y=\"35\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">× 4</text><path d=\"M 170 120 Q 270 170 370 120\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><polygon points=\"370,120 360,125 365,115\" fill=\"#22c55e\"/><text x=\"270\" y=\"165\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">× 4</text><rect x=\"395\" y=\"65\" width=\"50\" height=\"40\" fill=\"#bbf7d0\" rx=\"5\"/><text x=\"420\" y=\"93\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">20</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Check if $4 : 7$ and $12 : 21$ are equivalent.",
+          "solution_steps": [
+            "Step 1: Use the cross-multiplication method. Compare $(4 \\times 21)$ and $(7 \\times 12)$.",
+            "Step 2: $4 \\times 21 = 84$.",
+            "Step 3: $7 \\times 12 = 84$.",
+            "Step 4: The products are equal, so the ratios are equivalent."
+          ],
+          "final_answer": "Yes"
+        },
+        {
+          "problem": "Find $x$: $8 : 12 = x : 21$.",
+          "solution_steps": [
+            "Step 1: Notice that $12$ does not multiply cleanly into $21$.",
+            "Step 2: Simplify the first ratio: $8 : 12 = 2 : 3$.",
+            "Step 3: Now the problem is $2 : 3 = x : 21$.",
+            "Step 4: The multiplier connecting the second terms is $7$ ($3 \\times 7 = 21$).",
+            "Step 5: Apply the multiplier to the first term: $x = 2 \\times 7 = 14$."
+          ],
+          "final_answer": "$14$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding to create equivalent ratios.",
+          "correction": "Equivalent ratios are ONLY created by multiplying or dividing. You cannot add $2$ to both sides of a $1 : 2$ ratio to get a $3 : 4$ ratio."
+        }
+      ],
+      "quick_summary": [
+        "Equivalent ratios express the same mathematical relationship using different numbers.",
+        "Multiply or divide all terms by the same amount to scale the ratio.",
+        "Use cross-multiplication or simplify both sides to test for equivalence."
+      ]
+    },
+    "ms_math_t04_st03": {
+      "id": "ms_math_t04_st03",
+      "title": "Dividing quantities in a ratio",
+      "overview": "Dividing a quantity in a ratio means splitting a whole amount into unequal parts according to a given proportional relationship. Whether you are sharing a budget, mixing paint or ingredients, or distributing resources fairly, finding the value of one equal 'part' first makes the calculation straightforward.",
+      "key_concepts": [
+        {
+          "concept": "Total Parts Method",
+          "definition": "Finding the total number of equal shares represented by a ratio.",
+          "details": [
+            "Add all terms of the ratio together to get the total number of parts: for ratio $a : b$, total parts $= a + b$; for $a : b : c$, total parts $= a + b + c$.",
+            "Divide the total quantity by the total number of parts to find the value of $1$ part.",
+            "Ratio terms are positive numbers; the total-parts method applies when the quantities are expressed in compatible units."
+          ]
+        },
+        {
+          "concept": "Calculating Each Share",
+          "definition": "Scaling the value of one part back to each term in the ratio.",
+          "details": [
+            "Multiply the value of $1$ part by each individual term in the ratio.",
+            "Check the result by adding all calculated shares together—the sum must equal the original total quantity."
+          ]
+        },
+        {
+          "concept": "Finding the Whole or Another Share from One Known Share",
+          "definition": "Working from a single known part rather than the total.",
+          "details": [
+            "If a known share corresponds to $k$ parts, divide that share by $k$ to find $1$ part.",
+            "Multiply $1$ part by the desired term (or by total parts $a + b$) to find the missing value."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Value of One Part",
+          "equation": "$$ \\text{Value of } 1 \\text{ part} = \\frac{\\text{Total Quantity}}{a+b+\\cdots} $$",
+          "variables": {
+            "a, b, ...": "All terms of the ratio"
+          }
+        },
+        {
+          "name": "Individual Share",
+          "equation": "$$ \\text{Share for a term } r = r \\times \\left(\\frac{\\text{Total Quantity}}{a+b+\\cdots}\\right) $$",
+          "variables": {
+            "r": "The ratio term for the share being calculated",
+            "a+b+...": "Sum of all ratio terms"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s03",
+          "title": "Dividing $120 in the Ratio 3 : 2",
+          "type": "svg",
+          "caption": "Sum the ratio parts (3 + 2 = 5), divide the total by 5 to get 1 part ($24), then multiply by each share.",
+          "alt_text": "Bar diagram showing $120 divided into 5 equal blocks of $24 each. The first 3 blocks are shaded blue and labeled $72 (3 parts), and the last 2 blocks are shaded amber and labeled $48 (2 parts).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"32\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Divide $120 in ratio 3 : 2 (Total = 5 parts)</text><rect x=\"40\" y=\"55\" width=\"84\" height=\"44\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"4\"/><text x=\"82\" y=\"82\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">$24</text><rect x=\"124\" y=\"55\" width=\"84\" height=\"44\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"4\"/><text x=\"166\" y=\"82\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">$24</text><rect x=\"208\" y=\"55\" width=\"84\" height=\"44\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"4\"/><text x=\"250\" y=\"82\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">$24</text><rect x=\"292\" y=\"55\" width=\"84\" height=\"44\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\" rx=\"4\"/><text x=\"334\" y=\"82\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">$24</text><rect x=\"376\" y=\"55\" width=\"84\" height=\"44\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\" rx=\"4\"/><text x=\"418\" y=\"82\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">$24</text><rect x=\"40\" y=\"120\" width=\"252\" height=\"42\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\" rx=\"6\"/><text x=\"166\" y=\"146\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">3 parts = $72</text><rect x=\"292\" y=\"120\" width=\"168\" height=\"42\" fill=\"#fef9c3\" stroke=\"#a16207\" stroke-width=\"2\" rx=\"6\"/><text x=\"376\" y=\"146\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">2 parts = $48</text><text x=\"250\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Check: $72 + $48 = $120</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Share $\\$120$ between Alex and Sam in the ratio $3 : 2$.",
+          "solution_steps": [
+            "Step 1: Add the ratio terms to find the total parts: $3 + 2 = 5$ parts.",
+            "Step 2: Divide the total amount by $5$ to find $1$ part: $120 \\div 5 = \\$24$.",
+            "Step 3: Multiply by each share: Alex gets $3 \\times \\$24 = \\$72$, and Sam gets $2 \\times \\$24 = \\$48$.",
+            "Step 4: Check the sum: $\\$72 + \\$48 = \\$120$."
+          ],
+          "final_answer": "Alex gets $\\$72$, Sam gets $\\$48$"
+        },
+        {
+          "problem": "Divide $900\\text{ mL}$ of mixture in the ratio $2 : 3 : 4$.",
+          "solution_steps": [
+            "Step 1: Find the total number of parts: $2 + 3 + 4 = 9$ parts.",
+            "Step 2: Find the value of $1$ part: $900 \\div 9 = 100\\text{ mL}$.",
+            "Step 3: Multiply each part by $100\\text{ mL}$: $2 \\times 100 = 200\\text{ mL}$, $3 \\times 100 = 300\\text{ mL}$, and $4 \\times 100 = 400\\text{ mL}$.",
+            "Step 4: Check: $200 + 300 + 400 = 900\\text{ mL}$."
+          ],
+          "final_answer": "$200\\text{ mL}, 300\\text{ mL}, 400\\text{ mL}$"
+        },
+        {
+          "problem": "A sum of money is shared in the ratio $4 : 7$. The smaller share is $\\$36$. Find the larger share and the total amount.",
+          "solution_steps": [
+            "Step 1: The smaller share corresponds to $4$ parts, so $4 \\text{ parts} = \\$36$.",
+            "Step 2: Find $1$ part: $36 \\div 4 = \\$9$.",
+            "Step 3: Larger share ($7$ parts): $7 \\times \\$9 = \\$63$.",
+            "Step 4: Total amount ($4 + 7 = 11$ parts): $11 \\times \\$9 = \\$99$ (or $\\$36 + \\$63 = \\$99$)."
+          ],
+          "final_answer": "Larger share is $\\$63$; total is $\\$99$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dividing the total quantity by only one of the ratio terms instead of the sum of all parts.",
+          "correction": "For ratio $3 : 2$, there are $5$ total parts, not $3$ or $2$. Always add the terms first ($3 + 2 = 5$) before dividing the total."
+        },
+        {
+          "mistake": "Assigning the shares in the wrong order.",
+          "correction": "If money is shared between A and B in the ratio $3 : 5$, A gets $3$ parts and B gets $5$ parts—keep the order matched to the names."
+        },
+        {
+          "mistake": "Forgetting to convert units before sharing.",
+          "correction": "If sharing $2\\text{ m}$ of ribbon in the ratio $3 : 7$, convert $2\\text{ m}$ to $200\\text{ cm}$ first so each share is a clean whole number ($60\\text{ cm}$ and $140\\text{ cm}$)."
+        }
+      ],
+      "quick_summary": [
+        "Add all terms of the ratio to find the total number of parts.",
+        "Divide the total quantity by the total parts to get the value of $1$ part.",
+        "Multiply $1$ part by each ratio term, then check that the shares add up to the original total."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check calculations when dividing larger quantities in a ratio.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t04_st04": {
+      "id": "ms_math_t04_st04",
+      "title": "Direct proportion",
+      "overview": "Direct proportion describes a scenario where two quantities scale up or down together in lockstep. If you buy twice as many apples, it will cost you exactly twice as much. This predictable relationship allows us to easily solve for unknown values.",
+      "key_concepts": [
+        {
+          "concept": "Direct Proportion Definition",
+          "definition": "When one quantity changes by a factor, the other quantity changes by the exact same factor.",
+          "details": [
+            "If $x$ doubles, $y$ doubles. If $x$ is halved, $y$ is halved."
+          ]
+        },
+        {
+          "concept": "Constant of Proportionality",
+          "definition": "The fixed multiplier linking the two quantities.",
+          "details": [
+            "Formula: $y = kx$, where $k$ is the constant.",
+            "You can find the constant $k$ by dividing any $y$ value by its corresponding $x$ value ($k = \\frac{y}{x}$)."
+          ]
+        },
+        {
+          "concept": "Identifying Direct Proportion",
+          "definition": "Not everything that goes up together is directly proportional.",
+          "details": [
+            "Direct proportion requires a CONSTANT RATIO ($k = \\frac{y}{x}$).",
+            "A taxi fare with a flat starting fee is NOT directly proportional to distance, because the starting fee breaks the constant ratio."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Direct Proportion Formula",
+          "equation": "$$ y = kx $$",
+          "variables": {
+            "y": "Second quantity",
+            "x": "First quantity",
+            "k": "Constant of proportionality"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s04",
+          "title": "Direct Proportion Graph",
+          "type": "svg",
+          "caption": "A directly proportional relationship always forms a straight line starting at zero.",
+          "alt_text": "Line graph starting at (0,0) with points at (1,3), (2,6), (3,9), and (4,12) forming a perfect straight line.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"200\" x2=\"450\" y2=\"200\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"20\" stroke=\"#334155\" stroke-width=\"2\"/><path d=\"M 50 200 L 150 150 L 250 100 L 350 50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"50\" cy=\"200\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"150\" cy=\"150\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"250\" cy=\"100\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"350\" cy=\"50\" r=\"5\" fill=\"#2563eb\"/><text x=\"150\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">1</text><text x=\"250\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">2</text><text x=\"350\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">3</text><text x=\"30\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\">3</text><text x=\"30\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\">6</text><text x=\"30\" y=\"55\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\">9</text><line x1=\"50\" y1=\"150\" x2=\"450\" y2=\"150\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"4,4\"/><line x1=\"50\" y1=\"100\" x2=\"450\" y2=\"100\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"4,4\"/><line x1=\"50\" y1=\"50\" x2=\"450\" y2=\"50\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"4,4\"/><text x=\"250\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Constant Ratio: y/x = 3</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "If $4\\text{ kg}$ of apples cost $\\$12$, how much do $7\\text{ kg}$ cost at the same price per kilogram?",
+          "solution_steps": [
+            "Step 1: Find the constant of proportionality (the unit rate). $k = 12 \\div 4 = 3$.",
+            "Step 2: The cost is $\\$3$ per kilogram.",
+            "Step 3: Multiply the new quantity by the constant $k$: $7 \\times 3 = 21$."
+          ],
+          "final_answer": "$\\$21$"
+        },
+        {
+          "problem": "If $y$ is directly proportional to $x$, and $y=35$ when $x=5$, what is $y$ when $x=8$?",
+          "solution_steps": [
+            "Step 1: Find the constant $k$ using $k = \\frac{y}{x}$.",
+            "Step 2: $k = \\frac{35}{5} = 7$. The formula is $y = 7x$.",
+            "Step 3: Substitute $x=8$ into the formula.",
+            "Step 4: $y = 7 \\times 8 = 56$."
+          ],
+          "final_answer": "$56$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming all increasing quantities are directly proportional.",
+          "correction": "A person's height increases as they age, but age and height are NOT directly proportional. A $20$-year-old is not twice as tall as a $10$-year-old. Direct proportion requires a strict, constant mathematical ratio."
+        }
+      ],
+      "quick_summary": [
+        "In direct proportion, two quantities scale by the exact same multiplier.",
+        "The formula is $y = kx$.",
+        "Find the constant $k$ first, then use it to find any missing value."
+      ]
+    },
+    "ms_math_t04_st05": {
+      "id": "ms_math_t04_st05",
+      "title": "Inverse proportion",
+      "overview": "Inverse proportion describes a relationship where one quantity increases while another decreases at a proportional rate. A classic example is a team of workers: if you double the number of workers on a job, the time it takes to finish the job gets cut in half.",
+      "key_concepts": [
+        {
+          "concept": "Inverse Proportion Definition",
+          "definition": "When one quantity increases by a factor, the other quantity decreases by the same factor.",
+          "details": [
+            "Their PRODUCT always remains constant.",
+            "Examples include more speed giving less travel time for a fixed distance, and more equally productive workers taking less time for a fixed job, assuming conditions remain unchanged."
+          ]
+        },
+        {
+          "concept": "Constant Product ($k$)",
+          "definition": "The fixed value obtained by multiplying the two inversely proportional quantities together.",
+          "details": [
+            "Formula: $x \\times y = k$ or $y = \\frac{k}{x}$",
+            "If 4 machines take 12 hours, the constant work product $k = 4 \\times 12 = 48$ machine-hours."
+          ]
+        },
+        {
+          "concept": "Direct vs Inverse Proportion",
+          "definition": "Knowing which relationship to apply.",
+          "details": [
+            "**Direct:** Ratio is constant ($y/x = k$). Both go up together.",
+            "**Inverse:** Product is constant ($x \\times y = k$). One goes up, the other goes down."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Inverse Proportion Formula",
+          "equation": "$$ y = \\frac{k}{x} \\quad \\text{or} \\quad x \\times y = k $$",
+          "variables": {
+            "x, y": "The inversely proportional quantities",
+            "k": "Constant of proportionality"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s05",
+          "title": "Inverse Proportion (Workers and Time)",
+          "type": "svg",
+          "caption": "Doubling the machines halves the time. The total 'machine-hours' remains 48.",
+          "alt_text": "Visual showing 4 machines × 12 hours = 48. Below it, 8 machines × 6 hours = 48. An arrow shows machines doubling (x2) and time halving (÷2).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"30\" width=\"120\" height=\"50\" fill=\"#bfdbfe\" rx=\"5\"/><text x=\"110\" y=\"60\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">4 Machines</text><text x=\"200\" y=\"62\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#334155\">×</text><rect x=\"230\" y=\"30\" width=\"120\" height=\"50\" fill=\"#fef08a\" rx=\"5\"/><text x=\"290\" y=\"60\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">12 Hours</text><text x=\"380\" y=\"62\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#334155\">=</text><text x=\"430\" y=\"62\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">48</text><rect x=\"50\" y=\"120\" width=\"120\" height=\"50\" fill=\"#bfdbfe\" rx=\"5\"/><text x=\"110\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">8 Machines</text><text x=\"200\" y=\"152\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#334155\">×</text><rect x=\"230\" y=\"120\" width=\"120\" height=\"50\" fill=\"#fef08a\" rx=\"5\"/><text x=\"290\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">6 Hours</text><text x=\"380\" y=\"152\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#334155\">=</text><text x=\"430\" y=\"152\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">48</text><path d=\"M 110 85 L 110 115\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><polygon points=\"110,115 105,105 115,105\" fill=\"#2563eb\"/><text x=\"145\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">× 2</text><path d=\"M 290 85 L 290 115\" fill=\"none\" stroke=\"#ca8a04\" stroke-width=\"2\"/><polygon points=\"290,115 285,105 295,105\" fill=\"#ca8a04\"/><text x=\"325\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b45309\" font-weight=\"bold\">÷ 2</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Six workers can complete a job in $10$ days. How long would $15$ equally productive workers take to complete the same job?",
+          "solution_steps": [
+            "Step 1: Recognize this is inverse proportion (more workers = less time).",
+            "Step 2: Calculate the constant product (total worker-days): $6 \\times 10 = 60$.",
+            "Step 3: Set up the equation for the new scenario: $15 \\times \\text{days} = 60$.",
+            "Step 4: Solve for days: $60 \\div 15 = 4$."
+          ],
+          "final_answer": "$4 \\text{ days}$"
+        },
+        {
+          "problem": "A car takes $5$ hours to complete a journey at $60\\text{ km/h}$. How long would the journey take at $75\\text{ km/h}$?",
+          "solution_steps": [
+            "Step 1: Calculate the constant product (total distance): $60 \\times 5 = 300\\text{ km}$.",
+            "Step 2: Use the new speed to find the time: $300 \\div 75$.",
+            "Step 3: $300 \\div 75 = 4$."
+          ],
+          "final_answer": "$4 \\text{ hours}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using a direct proportion ratio (dividing instead of multiplying to find the constant).",
+          "correction": "For inverse proportion, the quantities multiply together to make a constant whole (like total distance or total worker-hours), they do not divide into a constant ratio. The relationship is inverse only when the other relevant conditions (such as fixed distance or fixed amount of work and equal productivity) remain unchanged."
+        }
+      ],
+      "quick_summary": [
+        "In inverse proportion, one value goes up while the other goes down.",
+        "Their product ($x \\times y$) is always constant.",
+        "Find the total 'constant' first, then divide by the new quantity."
+      ]
+    },
+    "ms_math_t04_st06": {
+      "id": "ms_math_t04_st06",
+      "title": "Unitary method",
+      "overview": "The unitary method is a practical two-step problem-solving technique: first, find the value of a single 'unit', and then use that single unit value to calculate the total value of any number of units.",
+      "key_concepts": [
+        {
+          "concept": "The Two Main Steps (Direct)",
+          "definition": "Used for costs, weights, and items.",
+          "details": [
+            "**Step 1:** Divide to find the value of $1$ unit. (e.g., If $5$ cost $\\$15$, then $1$ costs $15 \\div 5 = \\$3$).",
+            "**Step 2:** Multiply to find the required amount. (e.g., $8$ cost $8 \\times \\$3 = \\$24$)."
+          ]
+        },
+        {
+          "concept": "Unitary Method with Inverse Relationships",
+          "definition": "Used for workers, speed, and time.",
+          "details": [
+            "**Step 1:** MULTIPLY to find the 'one unit' total (e.g., $4$ workers take $15$ days, so $1$ worker would take $4 \\times 15 = 60$ days).",
+            "**Step 2:** DIVIDE by the required units (e.g., $10$ workers will take $60 \\div 10 = 6$ days)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s06",
+          "title": "Direct Unitary Method",
+          "type": "svg",
+          "caption": "Go down to 1 unit, then scale up to the target amount.",
+          "alt_text": "Visual showing 5 notebooks = $15. Arrow down (divide by 5) shows 1 notebook = $3. Arrow up (multiply by 8) shows 8 notebooks = $24.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"20\" width=\"140\" height=\"40\" fill=\"#e2e8f0\" rx=\"5\"/><text x=\"120\" y=\"45\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">5 Notebooks</text><text x=\"250\" y=\"47\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><rect x=\"310\" y=\"20\" width=\"140\" height=\"40\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"380\" y=\"45\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">$15</text><path d=\"M 120 70 L 120 90\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"120,95 115,85 125,85\" fill=\"#3b82f6\"/><text x=\"90\" y=\"87\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">÷ 5</text><rect x=\"50\" y=\"100\" width=\"140\" height=\"40\" fill=\"#bfdbfe\" rx=\"5\"/><text x=\"120\" y=\"125\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">1 Notebook</text><text x=\"250\" y=\"127\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><path d=\"M 380 70 L 380 90\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"380,95 375,85 385,85\" fill=\"#3b82f6\"/><text x=\"350\" y=\"87\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">÷ 5</text><rect x=\"310\" y=\"100\" width=\"140\" height=\"40\" fill=\"#bbf7d0\" rx=\"5\"/><text x=\"380\" y=\"125\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">$3</text><path d=\"M 120 150 L 170 180\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><polygon points=\"170,180 160,178 165,170\" fill=\"#ea580c\"/><text x=\"145\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">× 8</text><rect x=\"180\" y=\"150\" width=\"140\" height=\"40\" fill=\"#fef08a\" rx=\"5\"/><text x=\"250\" y=\"175\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">8 Notebooks</text><text x=\"340\" y=\"177\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><path d=\"M 380 150 L 330 180\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><polygon points=\"330,180 340,178 335,170\" fill=\"#ea580c\"/><text x=\"365\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">× 8</text><text x=\"420\" y=\"177\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">$24</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Six kilograms of apples cost $\\$18$. Find the cost of $10\\text{ kg}$.",
+          "solution_steps": [
+            "Step 1: Find the value of one unit (1 kg). $18 \\div 6 = 3$. So, $1\\text{ kg}$ costs $\\$3$.",
+            "Step 2: Multiply by the required number of units ($10$). $3 \\times 10 = 30$."
+          ],
+          "final_answer": "$\\$30$"
+        },
+        {
+          "problem": "Four workers complete a job in $15$ days. How many days would $10$ equally productive workers take?",
+          "solution_steps": [
+            "Step 1: Recognize this is an inverse relationship.",
+            "Step 2: Find the value for ONE worker. One worker would take $4 \\times 15 = 60$ days (total worker-days).",
+            "Step 3: Find the time for $10$ workers. $60 \\div 10 = 6$ days."
+          ],
+          "final_answer": "$6 \\text{ days}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying the direct unitary method (divide then multiply) to inverse problems.",
+          "correction": "Always ask yourself: 'If I have 1 worker instead of 4, will it take more time or less time?' It will take MORE time, so you must multiply to find the 1-unit value, not divide."
+        }
+      ],
+      "quick_summary": [
+        "Find the value of $1$ unit first.",
+        "For direct proportion (costs, items): Divide to find $1$ unit, Multiply to scale up.",
+        "For inverse proportion (workers, time): Multiply to find $1$ unit, Divide to scale up."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check unitary-method calculations.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t04_st07": {
+      "id": "ms_math_t04_st07",
+      "title": "Rates and unit rates",
+      "overview": "While a ratio compares quantities of the same type, a rate compares quantities measured in different units (like distance and time, or cost and weight). A unit rate simplifies this comparison down to a single unit, making it easy to compare deals, speeds, and efficiency.",
+      "key_concepts": [
+        {
+          "concept": "Rate vs Unit Rate",
+          "definition": "Scaling a rate down to a denominator of 1.",
+          "details": [
+            "**Rate:** $\\$120$ for $8$ hours.",
+            "**Unit Rate:** $\\$15$ per $1$ hour (calculated as $120 \\div 8$)."
+          ]
+        },
+        {
+          "concept": "Calculating Unit Rates",
+          "definition": "Divide the first quantity by the second quantity.",
+          "details": [
+            "Always include both units in the final answer, separated by 'per' or a slash ($/$), e.g., $\\text{km/h}$, $\\$ / \\text{kg}$."
+          ]
+        },
+        {
+          "concept": "Comparing Value for Money",
+          "definition": "Finding the cheapest option.",
+          "details": [
+            "Compare the unit rates (price per $100\\text{ g}$, price per litre) of different sized packages to find the better deal."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Unit Rate",
+          "equation": "$$ \\text{Unit rate} = \\frac{\\text{First quantity}}{\\text{Second quantity}} \\quad \\text{(per 1 unit of the second quantity)} $$",
+          "variables": {
+            "First quantity": "The quantity being measured per unit",
+            "Second quantity": "The reference quantity; divide by this to obtain a rate per 1 unit"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s07",
+          "title": "Comparing Unit Prices",
+          "type": "svg",
+          "caption": "To find the best deal, calculate the cost per standard unit (e.g., per 100g).",
+          "alt_text": "Visual comparing Package A ($8 for 400g) vs Package B ($10.50 for 600g). Pack A = $2.00 per 100g, Pack B = $1.75 per 100g. B is cheaper.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"30\" width=\"210\" height=\"140\" fill=\"#e0f2fe\" rx=\"10\"/><text x=\"125\" y=\"60\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">Package A</text><text x=\"125\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\">$8.00 for 400 g</text><rect x=\"45\" y=\"110\" width=\"160\" height=\"40\" fill=\"#bae6fd\" rx=\"5\"/><text x=\"125\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0284c7\" font-weight=\"bold\">$8 ÷ 4 = $2.00 / 100g</text><rect x=\"270\" y=\"30\" width=\"210\" height=\"140\" fill=\"#dcfce7\" stroke=\"#22c55e\" stroke-width=\"4\" rx=\"10\"/><text x=\"375\" y=\"60\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Package B</text><text x=\"375\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\">$10.50 for 600 g</text><rect x=\"295\" y=\"110\" width=\"160\" height=\"40\" fill=\"#bbf7d0\" rx=\"5\"/><text x=\"375\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">$10.50 ÷ 6 = $1.75 / 100g</text><rect x=\"220\" y=\"80\" width=\"60\" height=\"30\" fill=\"#fef08a\" rx=\"5\"/><text x=\"250\" y=\"100\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">VS</text><polygon points=\"375,185 365,175 385,175\" fill=\"#22c55e\"/><text x=\"375\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Better Deal</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A cyclist travels $45\\text{ km}$ in $3$ hours. Find the average speed (unit rate).",
+          "solution_steps": [
+            "Step 1: Identify quantities. Distance = $45\\text{ km}$, Time = $3$ hours.",
+            "Step 2: Divide distance by time: $45 \\div 3 = 15$."
+          ],
+          "final_answer": "$15 \\text{ km/h}$"
+        },
+        {
+          "problem": "A device downloads $900\\text{ MB}$ in $5$ minutes. Find the average download rate.",
+          "solution_steps": [
+            "Step 1: Divide data by time: $900 \\div 5$.",
+            "Step 2: $900 \\div 5 = 180$."
+          ],
+          "final_answer": "$180 \\text{ MB/min}$"
+        },
+        {
+          "problem": "A vehicle travels $30\\text{ km}$ in $30$ minutes. Find its average speed in km/h.",
+          "solution_steps": [
+            "Step 1: The requested unit is per HOUR. We must convert $30$ minutes to hours.",
+            "Step 2: $30\\text{ min} = 0.5\\text{ hours}$.",
+            "Step 3: Divide distance by the converted time: $30 \\div 0.5 = 60$."
+          ],
+          "final_answer": "$60 \\text{ km/h}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Mixing units or failing to convert them.",
+          "correction": "If a question asks for a rate in km/h, you cannot divide the kilometers by the minutes directly. Convert the minutes to a fraction of an hour first."
+        },
+        {
+          "mistake": "Dividing in the wrong order.",
+          "correction": "Cost per kilogram means $\\$ \\div \\text{kg}$. Kilograms per dollar means $\\text{kg} \\div \\$$. Match the math to the words 'per'."
+        }
+      ],
+      "quick_summary": [
+        "A rate compares two different units; a unit rate scales it down to a 'per 1' basis.",
+        "Divide the first quantity by the second to find the unit rate.",
+        "Always convert units (like minutes to hours) before dividing if the final rate requires it."
+      ],
+      "utilities": [
+        {
+          "title": "Unit Converter",
+          "description": "Convert units before calculating or comparing rates.",
+          "url": "https://onlinetoolpad.com/others/UNIT_CONVERTER",
+          "icon": "ruler"
+        },
+        {
+          "title": "Scientific Calculator",
+          "description": "Check unit-rate calculations.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t04_st08": {
+      "id": "ms_math_t04_st08",
+      "title": "Speed, distance and time",
+      "overview": "Speed, distance, and time are inextricably linked quantities that describe motion. Understanding how they relate to one another allows us to calculate travel times, plan journeys, and compare how fast things move.",
+      "key_concepts": [
+        {
+          "concept": "The Three Variables",
+          "definition": "The core components of motion.",
+          "details": [
+            "**Distance:** How far an object travels (e.g., km, m).",
+            "**Time:** How long the journey takes (e.g., hours, seconds).",
+            "**Speed:** The distance travelled per unit of time (e.g., km/h, m/s)."
+          ]
+        },
+        {
+          "concept": "Average Speed",
+          "definition": "The overall speed of a journey, taking into account stops or varying speeds.",
+          "details": [
+            "Average speed = total distance travelled ÷ total elapsed time for the journey, including stops when they are part of the elapsed journey time.",
+            "It is NOT necessarily the arithmetic mean of two different speeds."
+          ]
+        },
+        {
+          "concept": "Unit Conversions",
+          "definition": "Calculations only work when units match.",
+          "details": [
+            "If speed is in km/h, time MUST be in hours.",
+            "Convert minutes to hours by dividing by $60$ (e.g., $30 \\text{ mins} = 0.5 \\text{ hours}$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Speed Formula",
+          "equation": "$$ \\text{Speed} = \\frac{\\text{Distance}}{\\text{Time}} $$",
+          "variables": {}
+        },
+        {
+          "name": "Distance Formula",
+          "equation": "$$ \\text{Distance} = \\text{Speed} \\times \\text{Time} $$",
+          "variables": {}
+        },
+        {
+          "name": "Time Formula",
+          "equation": "$$ \\text{Time} = \\frac{\\text{Distance}}{\\text{Speed}} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s08",
+          "title": "The D-S-T Triangle",
+          "type": "svg",
+          "caption": "Use the triangle as a memory aid: distance = speed × time; speed = distance ÷ time; time = distance ÷ speed.",
+          "alt_text": "A triangle with distance D at the top and speed S and time T at the bottom. The horizontal line separates distance from the two quantities multiplied to find it; the lower vertical line separates speed and time.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><polygon points=\"250,20 150,170 350,170\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><line x1=\"183\" y1=\"120\" x2=\"317\" y2=\"120\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><line x1=\"250\" y1=\"120\" x2=\"250\" y2=\"170\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><text x=\"250\" y=\"90\" font-family=\"sans-serif\" font-size=\"48\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">D</text><text x=\"210\" y=\"160\" font-family=\"sans-serif\" font-size=\"36\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">S</text><text x=\"290\" y=\"160\" font-family=\"sans-serif\" font-size=\"36\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">T</text><text x=\"80\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Divide for S or T</text><path d=\"M 140 90 L 160 90\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"420\" y=\"155\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Multiply for D</text><path d=\"M 360 150 L 340 150\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A car travels $180\\text{ km}$ in $3$ hours. Find its average speed.",
+          "solution_steps": [
+            "Step 1: Write the formula for speed: $\\text{Speed} = \\frac{\\text{Distance}}{\\text{Time}}$.",
+            "Step 2: Substitute the values: $\\text{Speed} = \\frac{180}{3}$.",
+            "Step 3: Divide."
+          ],
+          "final_answer": "$60 \\text{ km/h}$"
+        },
+        {
+          "problem": "A bus travels $240\\text{ km}$ at an average speed of $80\\text{ km/h}$. How long does the journey take?",
+          "solution_steps": [
+            "Step 1: Write the formula for time: $\\text{Time} = \\frac{\\text{Distance}}{\\text{Speed}}$.",
+            "Step 2: Substitute the values: $\\text{Time} = \\frac{240}{80}$.",
+            "Step 3: Divide."
+          ],
+          "final_answer": "$3 \\text{ hours}$"
+        },
+        {
+          "problem": "A cyclist travels $24\\text{ km}$ in $30$ minutes. Find the average speed in km/h.",
+          "solution_steps": [
+            "Step 1: Since speed is required in km/h, convert time to hours. $30\\text{ minutes} = 0.5\\text{ hours}$.",
+            "Step 2: Use the formula: $\\text{Speed} = \\frac{\\text{Distance}}{\\text{Time}}$.",
+            "Step 3: $\\text{Speed} = 24 \\div 0.5 = 48$."
+          ],
+          "final_answer": "$48 \\text{ km/h}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using multiplication when you should divide.",
+          "correction": "Always use the DST triangle to remember the correct arrangement. Distance is the only one you multiply to find ($S \\times T$)."
+        },
+        {
+          "mistake": "Calculating average speed by taking the mean of two speeds.",
+          "correction": "If you drive $120\\text{ km/h}$ for one hour and $60\\text{ km/h}$ for two hours, your average speed is NOT $90\\text{ km/h}$. You MUST calculate Total Distance $\\div$ Total Time."
+        }
+      ],
+      "quick_summary": [
+        "Speed = Distance $\\div$ Time",
+        "Distance = Speed $\\times$ Time",
+        "Time = Distance $\\div$ Speed",
+        "Check that your units (kilometers, meters, hours, minutes) match before calculating."
+      ],
+      "utilities": [
+        {
+          "title": "Unit Converter",
+          "description": "Convert between distance and time units before calculating speed.",
+          "url": "https://onlinetoolpad.com/others/UNIT_CONVERTER",
+          "icon": "ruler"
+        },
+        {
+          "title": "Scientific Calculator",
+          "description": "Check speed, distance and time calculations.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t04_st09": {
+      "id": "ms_math_t04_st09",
+      "title": "Scale drawings and maps",
+      "overview": "A scale drawing represents a real object or place using a smaller or larger drawing while preserving its proportions perfectly. A map scale shows the exact relationship between a measured distance on a map and the corresponding real-world distance.",
+      "key_concepts": [
+        {
+          "concept": "Ratio Scale",
+          "definition": "A scale with no units because both sides use the same unit.",
+          "details": [
+            "Example: $1:50,000$ means $1\\text{ cm}$ on the map represents $50,000\\text{ cm}$ in reality."
+          ]
+        },
+        {
+          "concept": "Calculating Actual Distance",
+          "definition": "Scaling up from the map.",
+          "details": [
+            "$\\text{Actual Distance} = \\text{Map Distance} \\times \\text{Scale Factor}$.",
+            "Remember to convert the final answer to a sensible unit (like translating $100,000\\text{ cm}$ into $1\\text{ km}$)."
+          ]
+        },
+        {
+          "concept": "Calculating Map Distance",
+          "definition": "Scaling down to the map.",
+          "details": [
+            "$\\text{Map Distance} = \\frac{\\text{Actual Distance}}{\\text{Scale Factor}}$.",
+            "Convert the actual distance to a smaller unit (like cm) before dividing."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Actual Distance",
+          "equation": "$$ \\text{Actual Distance} = \\text{Map Distance} \\times \\text{Scale Factor} $$",
+          "variables": {}
+        },
+        {
+          "name": "Map Distance",
+          "equation": "$$ \\text{Map Distance} = \\frac{\\text{Actual Distance}}{\\text{Scale Factor}} $$",
+          "variables": {
+            "Scale factor": "Actual distance represented by one unit on the drawing, expressed in the same unit as map distance"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s09",
+          "title": "Scaling Up to Reality",
+          "type": "svg",
+          "caption": "Multiply the map distance by the scale factor, then convert to a real-world unit.",
+          "alt_text": "Visual showing a map distance of 4 cm. Scale is 1:25,000. Arrow shows 4 cm x 25,000 = 100,000 cm. A second arrow converts 100,000 cm to 1 km.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"30\" width=\"120\" height=\"60\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"2\" rx=\"5\"/><text x=\"110\" y=\"55\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">Map Distance</text><text x=\"110\" y=\"75\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">4 cm</text><rect x=\"330\" y=\"30\" width=\"140\" height=\"60\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"400\" y=\"55\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Actual Distance</text><text x=\"400\" y=\"75\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">100,000 cm</text><path d=\"M 170 60 L 330 60\" stroke=\"#ea580c\" stroke-width=\"3\"/><polygon points=\"330,60 320,55 320,65\" fill=\"#ea580c\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">Scale 1:25,000</text><text x=\"250\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">× 25,000</text><path d=\"M 400 90 L 400 130\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"400,130 395,120 405,120\" fill=\"#3b82f6\"/><rect x=\"330\" y=\"130\" width=\"140\" height=\"40\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"400\" y=\"157\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">= 1 km</text><text x=\"330\" y=\"115\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#1d4ed8\" font-weight=\"bold\">Convert Units</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A map has a scale of $1:25,000$. Two locations are $4\\text{ cm}$ apart on the map. Find the actual distance in metres.",
+          "solution_steps": [
+            "Step 1: Calculate the actual distance in centimeters: $4 \\times 25,000 = 100,000\\text{ cm}$.",
+            "Step 2: Convert centimeters to meters. Since there are $100\\text{ cm}$ in a meter, divide by $100$.",
+            "Step 3: $100,000 \\div 100 = 1,000\\text{ m}$."
+          ],
+          "final_answer": "$1,000\\text{ m}$ (or $1\\text{ km}$)"
+        },
+        {
+          "problem": "A road is $12\\text{ km}$ long. A map uses the scale $1\\text{ cm}$ represents $4\\text{ km}$. How long should the road be drawn on the map?",
+          "solution_steps": [
+            "Step 1: Since the scale explicitly relates cm to km ($1\\text{ cm} = 4\\text{ km}$), we can divide the actual kilometers directly.",
+            "Step 2: $\\text{Map distance} = \\frac{\\text{Actual distance}}{\\text{Scale factor}}$.",
+            "Step 3: $12 \\div 4 = 3\\text{ cm}$."
+          ],
+          "final_answer": "$3\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Mixing units during calculation.",
+          "correction": "If a ratio scale is $1:50,000$, and you measure $2\\text{ cm}$ on the map, the result ($100,000$) is in CENTIMETERS. You must convert it to meters or kilometers before providing your final answer."
+        },
+        {
+          "mistake": "Dividing instead of multiplying.",
+          "correction": "Map $\\rightarrow$ Reality = MULTIPLY by scale factor. Reality $\\rightarrow$ Map = DIVIDE by scale factor."
+        }
+      ],
+      "quick_summary": [
+        "A scale ratio (like $1:100$) means both measurements share the same unit.",
+        "Multiply map measurements by the scale factor to find the real size.",
+        "Always double-check your unit conversions ($1\\text{ km} = 1000\\text{ m}$, $1\\text{ m} = 100\\text{ cm}$)."
+      ],
+      "utilities": [
+        {
+          "title": "Unit Converter",
+          "description": "Convert map and real-world distances to compatible units.",
+          "url": "https://onlinetoolpad.com/others/UNIT_CONVERTER",
+          "icon": "ruler"
+        }
+      ]
+    },
+    "ms_math_t04_st10": {
+      "id": "ms_math_t04_st10",
+      "title": "Ratios in recipes and mixtures",
+      "overview": "Ratios help us combine ingredients in the correct proportions. Whether scaling a recipe, preparing a drink, or combining classroom-safe materials, ratios allow us to scale mixtures up or down while keeping the relative amounts consistent.",
+      "key_concepts": [
+        {
+          "concept": "Scaling a Recipe",
+          "definition": "Changing the total yield while keeping proportions identical.",
+          "details": [
+            "Find the multiplier by dividing the desired amount by the original amount.",
+            "Multiply EVERY ingredient by that exact same factor."
+          ]
+        },
+        {
+          "concept": "Finding a Missing Ingredient",
+          "definition": "Using one known ingredient to find the rest.",
+          "details": [
+            "If flour and butter are in a $5:2$ ratio, and you use $750\\text{g}$ of flour, the flour multiplier is $750 \\div 5 = 150$.",
+            "Multiply the butter ratio ($2$) by that multiplier ($150$) to get $300\\text{g}$."
+          ]
+        },
+        {
+          "concept": "Dividing a Total Mixture",
+          "definition": "Splitting a total volume into its component parts.",
+          "details": [
+            "Add all the parts of the ratio together to find the 'Total Parts'.",
+            "Divide the total mixture volume by the 'Total Parts' to find the volume of ONE part.",
+            "Multiply each ratio number by the volume of one part."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s10",
+          "title": "Dividing a Total Mixture",
+          "type": "svg",
+          "caption": "Find the total parts first, then calculate the value of a single part.",
+          "alt_text": "Visual showing Concentrate:Water in a 1:4 ratio. Total = 5 parts. 1000ml total divided by 5 parts = 200ml per part. Concentrate is 1 x 200ml, Water is 4 x 200ml.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"120\" height=\"40\" fill=\"#fef08a\" rx=\"5\"/><text x=\"80\" y=\"45\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Ratio: 1 : 4</text><text x=\"160\" y=\"45\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#334155\">→</text><rect x=\"180\" y=\"20\" width=\"140\" height=\"40\" fill=\"#fef08a\" rx=\"5\"/><text x=\"250\" y=\"45\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Total = 5 Parts</text><rect x=\"20\" y=\"80\" width=\"200\" height=\"40\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"120\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Total Volume = 1000 ml</text><text x=\"240\" y=\"105\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#334155\">→</text><rect x=\"260\" y=\"80\" width=\"220\" height=\"40\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"370\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">1 Part = 1000 ÷ 5 = 200 ml</text><rect x=\"20\" y=\"140\" width=\"220\" height=\"40\" fill=\"#e0f2fe\" rx=\"5\"/><text x=\"130\" y=\"165\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">Concentrate (1): 200 ml</text><rect x=\"260\" y=\"140\" width=\"220\" height=\"40\" fill=\"#e0f2fe\" rx=\"5\"/><text x=\"370\" y=\"165\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">Water (4): 800 ml</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A recipe uses flour and sugar in the ratio $4:1$. If $600\\text{ g}$ of flour is used, how much sugar is needed?",
+          "solution_steps": [
+            "Step 1: The flour ratio is $4$, and we have $600\\text{ g}$. Find the multiplier: $600 \\div 4 = 150$.",
+            "Step 2: The sugar ratio is $1$. Multiply by the same factor: $1 \\times 150 = 150$."
+          ],
+          "final_answer": "$150\\text{ g}$"
+        },
+        {
+          "problem": "A drink contains juice concentrate and water in the ratio $1:4$. The total mixture is $1,000\\text{ ml}$. Find the volume of each component.",
+          "solution_steps": [
+            "Step 1: Find total parts. $1 + 4 = 5$ parts.",
+            "Step 2: Find the volume of one part. $1000 \\div 5 = 200\\text{ ml}$.",
+            "Step 3: Concentrate = $1 \\times 200\\text{ ml} = 200\\text{ ml}$.",
+            "Step 4: Water = $4 \\times 200\\text{ ml} = 800\\text{ ml}$."
+          ],
+          "final_answer": "$200\\text{ ml concentrate, } 800\\text{ ml water}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing a part with the total.",
+          "correction": "If a mixture is 1 part concentrate to 4 parts water ($1:4$), there are 5 total parts, not 4. Do not divide the total volume by 4."
+        },
+        {
+          "mistake": "Using the wrong multiplier.",
+          "correction": "Always calculate the multiplier using the ingredient whose quantity is KNOWN, then apply it to the unknown."
+        }
+      ],
+      "quick_summary": [
+        "To scale a recipe, multiply or divide EVERY ingredient by the exact same factor.",
+        "To divide a total mixture, add up all the ratio parts first to find the total parts.",
+        "Find the value of $1$ part, then multiply by the ratio numbers."
+      ],
+      "utilities": [
+        {
+          "title": "Unit Converter",
+          "description": "Convert ingredient or mixture quantities between compatible measurement units.",
+          "url": "https://onlinetoolpad.com/others/UNIT_CONVERTER",
+          "icon": "ruler"
+        }
+      ]
+    },
+    "ms_math_t04_st11": {
+      "id": "ms_math_t04_st11",
+      "title": "Proportional reasoning",
+      "overview": "Proportional reasoning is the ability to compare quantities and understand how they change in relation to one another. It helps us decide whether two quantities change at the same rate, in opposite ways, or according to a more complex relationship.",
+      "key_concepts": [
+        {
+          "concept": "Direct vs. Inverse Proportion",
+          "definition": "Identifying the relationship type based on how the quantities interact.",
+          "details": [
+            "**Direct:** When one quantity is multiplied by a factor, the other is multiplied by the same factor; their ratio is constant ($y/x = k$). Both quantities can increase or decrease together.",
+            "**Inverse:** When one quantity is multiplied by a factor, the other is divided by that factor; their product is constant ($x \\times y = k$), under fixed conditions."
+          ]
+        },
+        {
+          "concept": "Scaling Factors",
+          "definition": "The multiplier used to resize quantities.",
+          "details": [
+            "To scale a recipe, find the scale factor by dividing the target amount by the original amount (e.g., $12 \\text{ servings} \\div 5 \\text{ servings} = 2.4$), then multiply all ingredients by that factor."
+          ]
+        },
+        {
+          "concept": "Non-Proportional Relationships",
+          "definition": "Relationships that do not scale perfectly from zero.",
+          "details": [
+            "If a situation involves a fixed starting fee (like a $\\$4$ taxi flat rate plus $\\$2$ per km), it breaks the constant ratio rule and is NOT directly proportional."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s11",
+          "title": "Direct vs Inverse Proportion",
+          "type": "svg",
+          "caption": "Direct proportion has a constant ratio. Inverse proportion has a constant product.",
+          "alt_text": "Split screen comparing Direct Proportion (y/x = k, both arrows point up) and Inverse Proportion (x * y = k, one arrow up, one arrow down).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"220\" height=\"160\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"2\" rx=\"10\"/><text x=\"130\" y=\"50\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">Direct Proportion</text><text x=\"130\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0284c7\" font-weight=\"bold\">y / x = k</text><text x=\"130\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0369a1\">(Constant Ratio)</text><path d=\"M 90 160 L 90 130\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"4\"/><polygon points=\"90,130 85,140 95,140\" fill=\"#0284c7\"/><path d=\"M 170 160 L 170 130\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"4\"/><polygon points=\"170,130 165,140 175,140\" fill=\"#0284c7\"/><rect x=\"260\" y=\"20\" width=\"220\" height=\"160\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\" rx=\"10\"/><text x=\"370\" y=\"50\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Inverse Proportion</text><text x=\"370\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ca8a04\" font-weight=\"bold\">x × y = k</text><text x=\"370\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#854d0e\">(Constant Product)</text><path d=\"M 330 160 L 330 130\" fill=\"none\" stroke=\"#ca8a04\" stroke-width=\"4\"/><polygon points=\"330,130 325,140 335,140\" fill=\"#ca8a04\"/><path d=\"M 410 130 L 410 160\" fill=\"none\" stroke=\"#ca8a04\" stroke-width=\"4\"/><polygon points=\"410,160 405,150 415,150\" fill=\"#ca8a04\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A recipe requires $250\\text{ g}$ of flour for $5$ servings. How much flour is required for $12$ servings?",
+          "solution_steps": [
+            "Step 1: Find the scale factor. $12 \\div 5 = 2.4$.",
+            "Step 2: Apply the scale factor to the flour quantity: $250 \\times 2.4$.",
+            "Step 3: $250 \\times 2 = 500$, and $0.4 \\times 250 = 100$. $500 + 100 = 600$."
+          ],
+          "final_answer": "$600\\text{ g}$"
+        },
+        {
+          "problem": "Six workers can complete a job in $12$ days. How many days would $8$ equally productive workers take?",
+          "solution_steps": [
+            "Step 1: Recognize this is inverse proportion (more workers = less time).",
+            "Step 2: Calculate the constant product (total worker-days): $6 \\times 12 = 72$.",
+            "Step 3: Divide by the new number of workers: $72 \\div 8 = 9$."
+          ],
+          "final_answer": "$9\\text{ days}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming that any two increasing quantities are directly proportional.",
+          "correction": "Always check for a constant ratio or a fixed starting fee. A taxi fare ($4$ base fee + $2$ per km) goes up as distance goes up, but it is NOT directly proportional because $1\\text{ km}$ costs $\\$6$, but $2\\text{ km}$ costs $\\$8$ (not $\\$12$)."
+        }
+      ],
+      "quick_summary": [
+        "Direct proportion means quantities scale by the same multiplier (constant ratio).",
+        "Inverse proportion means as one goes up, the other goes down (constant product).",
+        "Unit rates allow fair comparisons between different quantities."
+      ]
+    },
+    "ms_math_t04_st12": {
+      "id": "ms_math_t04_st12",
+      "title": "Real-world ratio and rate problems",
+      "overview": "Real-world problems often combine ratios, rates, proportions, unit conversions, and percentages. The key skill is identifying the relationship between the quantities (direct, inverse, or fractional parts) and systematically selecting the correct mathematical method.",
+      "key_concepts": [
+        {
+          "concept": "The 5-Step System",
+          "definition": "A reliable method for complex word problems.",
+          "details": [
+            "**1. Identify:** What is given and what must be found?",
+            "**2. Classify:** Is it a ratio, direct proportion, inverse proportion, or rate?",
+            "**3. Standardise:** Convert units (e.g., minutes to hours) if necessary.",
+            "**4. Calculate:** Apply the appropriate method.",
+            "**5. Check:** Verify units and reasonableness."
+          ]
+        },
+        {
+          "concept": "Dividing a Budget in a Ratio",
+          "definition": "Distributing a total amount proportionally.",
+          "details": [
+            "Add the ratio parts together to find the Total Parts.",
+            "Divide the total budget by the Total Parts to find the value of one part.",
+            "Multiply the value of one part by the original ratio numbers."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s12",
+          "title": "Dividing a Budget in a Ratio",
+          "type": "svg",
+          "caption": "To divide $12,000 in a 5:3 ratio, find the value of a single 'part' first.",
+          "alt_text": "Visual showing $12,000 divided into 8 blocks (5+3). 1 block = $1,500. 5 blocks = $7,500. 3 blocks = $4,500.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"35\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Divide $12,000 in ratio 5 : 3</text><text x=\"250\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#475569\">Total Parts = 5 + 3 = 8 Parts</text><rect x=\"50\" y=\"80\" width=\"400\" height=\"40\" fill=\"#e2e8f0\" rx=\"5\"/><rect x=\"50\" y=\"80\" width=\"250\" height=\"40\" fill=\"#bae6fd\" stroke=\"#ffffff\" stroke-width=\"2\" rx=\"5\"/><rect x=\"300\" y=\"80\" width=\"150\" height=\"40\" fill=\"#fef08a\" stroke=\"#ffffff\" stroke-width=\"2\" rx=\"5\"/><text x=\"175\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">5 Parts (Equipment)</text><text x=\"375\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">3 Parts (Training)</text><text x=\"250\" y=\"145\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">1 Part = $12,000 ÷ 8 = $1,500</text><text x=\"175\" y=\"175\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0284c7\" font-weight=\"bold\">$7,500</text><text x=\"375\" y=\"175\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#ca8a04\" font-weight=\"bold\">$4,500</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A community project has a budget of $\\$12,000$, divided between equipment and training in the ratio $5 : 3$. How much is allocated to each?",
+          "solution_steps": [
+            "Step 1: Find total parts. $5 + 3 = 8$ parts.",
+            "Step 2: Find the value of one part. $12,000 \\div 8 = 1,500$.",
+            "Step 3: Equipment gets $5$ parts: $5 \\times 1,500 = 7,500$.",
+            "Step 4: Training gets $3$ parts: $3 \\times 1,500 = 4,500$."
+          ],
+          "final_answer": "$\\$7,500 \\text{ for equipment, } \\$4,500 \\text{ for training}$"
+        },
+        {
+          "problem": "A cyclist travels $18\\text{ km}$ in $45$ minutes. Find the average speed in km/h.",
+          "solution_steps": [
+            "Step 1: Standardize units. Convert $45$ minutes to hours: $45 \\div 60 = 0.75$ hours.",
+            "Step 2: Calculate speed. $\\text{Speed} = \\text{Distance} \\div \\text{Time}$.",
+            "Step 3: $18 \\div 0.75 = 24$."
+          ],
+          "final_answer": "$24 \\text{ km/h}$"
+        },
+        {
+          "problem": "Package A costs $\\$3.20$ for $400\\text{ g}$. Package B costs $\\$5.25$ for $750\\text{ g}$. Which is cheaper per $100\\text{ g}$?",
+          "solution_steps": [
+            "Step 1: Calculate unit rate for A: $3.20 \\div 4 = \\$0.80$ per $100\\text{ g}$.",
+            "Step 2: Calculate unit rate for B: $5.25 \\div 7.5 = \\$0.70$ per $100\\text{ g}$."
+          ],
+          "final_answer": "Package B is cheaper."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Comparing package totals instead of unit prices.",
+          "correction": "A larger package is not automatically a better deal. Always divide to find the cost per standard unit (e.g., per $100\\text{ g}$ or per kg) before comparing."
+        },
+        {
+          "mistake": "Applying inverse proportion when productivity is not constant.",
+          "correction": "Inverse proportion problems about 'workers' assume every worker works at the exact same speed and they don't get in each other's way. Be aware of these assumptions in real-world logic."
+        }
+      ],
+      "quick_summary": [
+        "Use the 5-step method: Identify, Classify, Standardise, Calculate, Check.",
+        "Always make sure units match before calculating (e.g., converting minutes to hours).",
+        "When dividing a budget by a ratio, find the total number of parts first."
+      ],
+      "utilities": [
+        {
+          "title": "Unit Converter",
+          "description": "Standardise units in real-world rate problems.",
+          "url": "https://onlinetoolpad.com/others/UNIT_CONVERTER",
+          "icon": "ruler"
+        },
+        {
+          "title": "Scientific Calculator",
+          "description": "Check multi-step calculations.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    }
+  }
+}

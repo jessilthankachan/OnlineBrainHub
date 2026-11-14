@@ -1,0 +1,975 @@
+{
+  "subject": "math",
+  "topicId": "ms_math_t02",
+  "topicTitle": "Arithmetic and Numerical Operations",
+  "grade": "Middle School",
+  "subtopics": {
+    "ms_math_t02_st01": {
+      "id": "ms_math_t02_st01",
+      "title": "Order of operations (BODMAS/PEMDAS)",
+      "overview": "If we calculate $6 + 4 \\times 3$ by adding first, we get $30$. If we multiply first, we get $18$. To ensure everyone gets the same answer, mathematics uses a strict standard convention called the order of operations, often remembered by the acronyms BODMAS or PEMDAS.",
+      "key_concepts": [
+        {
+          "concept": "The BODMAS / PEMDAS Hierarchy",
+          "definition": "The standard sequence used to evaluate mathematical expressions.",
+          "details": [
+            "**B / P:** Brackets / Parentheses (evaluate inside first).",
+            "**O / E:** Orders / Exponents (including powers and roots).",
+            "**D & M / M & D:** Division and Multiplication have equal priority. Work from left to right.",
+            "**A & S / A & S:** Addition and Subtraction have equal priority. Work from left to right."
+          ]
+        },
+        {
+          "concept": "Left-to-Right Rule",
+          "definition": "Operations with equal priority must be processed in the order they appear from left to right.",
+          "details": [
+            "Do not automatically multiply before dividing if division comes first in the expression.",
+            "Do not automatically add before subtracting if subtraction comes first."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s01",
+          "title": "Order of Operations Pyramid",
+          "type": "svg",
+          "caption": "Work from the top of the pyramid down. Operations on the same level are read left-to-right.",
+          "alt_text": "A 4-tier pyramid showing Brackets at the top, then Orders, then Division/Multiplication on the same tier, then Addition/Subtraction on the bottom tier.",
+          "data": "<svg viewBox=\"0 0 500 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"300\" fill=\"#f8fafc\" rx=\"10\"/><polygon points=\"250,20 180,80 320,80\" fill=\"#ef4444\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"250\" y=\"65\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">Brackets</text><polygon points=\"180,80 130,140 370,140 320,80\" fill=\"#f97316\" stroke=\"#c2410c\" stroke-width=\"2\"/><text x=\"250\" y=\"120\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">Orders (Powers)</text><polygon points=\"130,140 70,210 430,210 370,140\" fill=\"#eab308\" stroke=\"#a16207\" stroke-width=\"2\"/><text x=\"250\" y=\"185\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">Division &amp; Multiplication (Left to Right)</text><polygon points=\"70,210 10,280 490,280 430,210\" fill=\"#22c55e\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"250\" y=\"255\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">Addition &amp; Subtraction (Left to Right)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate: $3 + 2^3 \\times 4$",
+          "solution_steps": [
+            "Step 1: Check for Brackets. None present.",
+            "Step 2: Check for Orders. Calculate the power: $2^3 = 8$. The expression becomes $3 + 8 \\times 4$.",
+            "Step 3: Multiplication comes before addition. Multiply $8 \\times 4 = 32$. The expression is now $3 + 32$.",
+            "Step 4: Add the remaining numbers: $3 + 32 = 35$."
+          ],
+          "final_answer": "$35$"
+        },
+        {
+          "problem": "Evaluate: $24 \\div 6 \\times 2$",
+          "solution_steps": [
+            "Step 1: The expression contains division and multiplication. These share equal priority.",
+            "Step 2: When priorities are equal, evaluate strictly from left to right.",
+            "Step 3: First, divide: $24 \\div 6 = 4$.",
+            "Step 4: Then, multiply: $4 \\times 2 = 8$."
+          ],
+          "final_answer": "$8$"
+        },
+        {
+          "problem": "Evaluate: $30 - 2 \\times (5 + 3)^2 \\div 4$",
+          "solution_steps": [
+            "Step 1: Brackets first. $(5 + 3) = 8$. Expression: $30 - 2 \\times 8^2 \\div 4$.",
+            "Step 2: Orders next. $8^2 = 64$. Expression: $30 - 2 \\times 64 \\div 4$.",
+            "Step 3: Multiply and divide left to right. $2 \\times 64 = 128$. Expression: $30 - 128 \\div 4$.",
+            "Step 4: Division before subtraction. $128 \\div 4 = 32$. Expression: $30 - 32$.",
+            "Step 5: Subtract."
+          ],
+          "final_answer": "$-2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Always performing multiplication before division.",
+          "correction": "Multiplication and Division have the EXACT SAME priority. You must solve them left to right. E.g., $10 \\div 2 \\times 5$ is $25$, not $1$."
+        },
+        {
+          "mistake": "Calculating expressions like $2 + 3^2$ as $5^2 = 25$.",
+          "correction": "Powers (Orders) must be resolved before addition. $2 + 3^2 = 2 + 9 = 11$."
+        }
+      ],
+      "quick_summary": [
+        "Use BODMAS or PEMDAS as a guide.",
+        "Brackets first, then Powers/Roots.",
+        "Multiplication and Division are equal; work left to right.",
+        "Addition and Subtraction are equal; work left to right."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check arithmetic expressions and calculations involving integers or decimals.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "🧮"
+        }
+      ]
+    },
+    "ms_math_t02_st02": {
+      "id": "ms_math_t02_st02",
+      "title": "Operations with integers",
+      "overview": "Integers include positive numbers, negative numbers, and zero. Operating on them requires careful attention to signs. Adding, subtracting, multiplying, and dividing integers follow specific rules to keep calculations consistent.",
+      "key_concepts": [
+        {
+          "concept": "Addition of Integers",
+          "definition": "Rules depend on whether the signs are the same or different.",
+          "details": [
+            "**Same signs:** Add the magnitudes and keep the sign. (e.g., $-5 + -3 = -8$)",
+            "**Different signs:** Subtract the smaller magnitude from the larger magnitude. Keep the sign of the larger magnitude. (e.g., $+9 + (-4) = +5$)"
+          ]
+        },
+        {
+          "concept": "Subtraction of Integers",
+          "definition": "Subtracting a number is identical to adding its opposite.",
+          "details": [
+            "$a - b = a + (-b)$."
+          ]
+        },
+        {
+          "concept": "Multiplication and Division of Integers",
+          "definition": "Multiply or divide the numbers normally, then apply the sign rule.",
+          "details": [
+            "**Same signs:** The result is always Positive ($+\\times+ = +$ and $-\\times- = +$).",
+            "**Different signs:** The result is always Negative ($+\\times- = -$ and $-\\times+ = -$).",
+            "Division by zero is undefined; the divisor must be non-zero.",
+            "If either factor is zero, the product is zero."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s02",
+          "title": "Sign Rules for Multiplication and Division",
+          "type": "svg",
+          "caption": "Equal signs result in positive. Different signs result in negative.",
+          "alt_text": "A 2x2 grid showing the rules: Pos x Pos = Pos, Neg x Neg = Pos, Pos x Neg = Neg, Neg x Pos = Neg.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#ffffff\"/><rect x=\"50\" y=\"30\" width=\"180\" height=\"60\" fill=\"#dcfce7\" stroke=\"#22c55e\" stroke-width=\"2\" rx=\"10\"/><text x=\"140\" y=\"65\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">(+) × (+) = (+)</text><rect x=\"270\" y=\"30\" width=\"180\" height=\"60\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"10\"/><text x=\"360\" y=\"65\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">(+) × (-) = (-)</text><rect x=\"50\" y=\"110\" width=\"180\" height=\"60\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"10\"/><text x=\"140\" y=\"145\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">(-) × (+) = (-)</text><rect x=\"270\" y=\"110\" width=\"180\" height=\"60\" fill=\"#dcfce7\" stroke=\"#22c55e\" stroke-width=\"2\" rx=\"10\"/><text x=\"360\" y=\"145\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">(-) × (-) = (+)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate: $-12 + 7$",
+          "solution_steps": [
+            "Step 1: The signs are different.",
+            "Step 2: Subtract the magnitudes: $12 - 7 = 5$.",
+            "Step 3: Apply the sign of the larger magnitude ($-12$ is larger in magnitude than $7$)."
+          ],
+          "final_answer": "$-5$"
+        },
+        {
+          "problem": "Calculate: $6 - (-8)$",
+          "solution_steps": [
+            "Step 1: Subtracting a negative is the same as adding a positive.",
+            "Step 2: Rewrite the expression: $6 + 8$."
+          ],
+          "final_answer": "$14$"
+        },
+        {
+          "problem": "Calculate: $20 \\div (-4) - 3$",
+          "solution_steps": [
+            "Step 1: Follow order of operations (divide first).",
+            "Step 2: Division of different signs gives a negative result: $20 \\div -4 = -5$.",
+            "Step 3: The expression becomes $-5 - 3$.",
+            "Step 4: Subtracting is adding the opposite: $-5 + (-3)$."
+          ],
+          "final_answer": "$-8$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking 'two negatives make a positive' applies to addition.",
+          "correction": "This rule is ONLY for multiplication and division. For addition, two negatives make a larger negative (e.g., $-4 + -3 = -7$)."
+        }
+      ],
+      "quick_summary": [
+        "Adding same signs: Add and keep the sign.",
+        "Adding different signs: Subtract and keep the sign of the larger magnitude.",
+        "Subtracting is adding the opposite.",
+        "Multiply/Divide: Same signs = positive, different signs = negative."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check arithmetic expressions and calculations involving integers or decimals.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "🧮"
+        }
+      ]
+    },
+    "ms_math_t02_st03": {
+      "id": "ms_math_t02_st03",
+      "title": "Operations with fractions",
+      "overview": "Fractions represent parts of a whole. To combine or split these parts, we apply specific rules for addition, subtraction, multiplication, and division, often relying on finding common denominators or using reciprocals.",
+      "key_concepts": [
+        {
+          "concept": "Adding and Subtracting Fractions",
+          "definition": "To add or subtract fractions, first express them with a common denominator.",
+          "details": [
+            "If denominators are different, find a common denominator (using the LCM) first.",
+            "Add or subtract the numerators and keep the common denominator unchanged."
+          ]
+        },
+        {
+          "concept": "Multiplying Fractions",
+          "definition": "Multiply straight across.",
+          "details": [
+            "Multiply the numerators together to get the new numerator.",
+            "Multiply the denominators together to get the new denominator.",
+            "Simplify the result."
+          ]
+        },
+        {
+          "concept": "Dividing Fractions",
+          "definition": "Multiply by the reciprocal.",
+          "details": [
+            "Flip the second fraction (the divisor) upside down to find its reciprocal.",
+            "Change the division sign to multiplication, use the reciprocal of the second fraction (the divisor), and multiply.",
+            "The divisor fraction must not be zero; its numerator must therefore be non-zero."
+          ]
+        },
+        {
+          "concept": "Mixed Numbers",
+          "definition": "Fractions combined with whole numbers.",
+          "details": [
+            "Convert mixed numbers into improper fractions before multiplying or dividing."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Fraction Division",
+          "equation": "$$ \\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c}, \\quad b\\ne0,\\ d\\ne0,\\ c\\ne0 $$",
+          "variables": {
+            "a,b": "Numerator and denominator of the first fraction",
+            "c,d": "Numerator and denominator of the divisor"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s03",
+          "title": "Dividing by a Fraction",
+          "type": "svg",
+          "caption": "To divide by a fraction, flip the second fraction and multiply.",
+          "alt_text": "Visual showing a/b divided by c/d transforming into a/b multiplied by d/c with an arrow pointing to the flipped fraction.",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"100\" y=\"80\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2/3</text><text x=\"160\" y=\"80\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#334155\">÷</text><text x=\"220\" y=\"80\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">4/5</text><text x=\"280\" y=\"80\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"340\" y=\"80\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2/3</text><text x=\"390\" y=\"80\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#334155\">×</text><text x=\"440\" y=\"80\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#22c55e\" font-weight=\"bold\">5/4</text><path d=\"M 220 100 Q 330 140 430 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><polygon points=\"430,100 420,105 425,95\" fill=\"#94a3b8\"/><text x=\"325\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#475569\">Reciprocal (Flip)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate: $\\frac{1}{2} + \\frac{1}{3}$",
+          "solution_steps": [
+            "Step 1: The denominators are different ($2$ and $3$). Find the LCM.",
+            "Step 2: LCM of $2$ and $3$ is $6$.",
+            "Step 3: Convert fractions: $\\frac{1}{2} = \\frac{3}{6}$ and $\\frac{1}{3} = \\frac{2}{6}$.",
+            "Step 4: Add the numerators: $3 + 2 = 5$. Keep the denominator."
+          ],
+          "final_answer": "$\\frac{5}{6}$"
+        },
+        {
+          "problem": "Calculate: $\\frac{2}{3} \\div \\frac{4}{5}$",
+          "solution_steps": [
+            "Step 1: To divide, multiply by the reciprocal of the second fraction.",
+            "Step 2: The reciprocal of $\\frac{4}{5}$ is $\\frac{5}{4}$.",
+            "Step 3: Rewrite: $\\frac{2}{3} \\times \\frac{5}{4}$.",
+            "Step 4: Multiply straight across: $\\frac{2 \\times 5}{3 \\times 4} = \\frac{10}{12}$.",
+            "Step 5: Simplify the fraction by dividing top and bottom by $2$."
+          ],
+          "final_answer": "$\\frac{5}{6}$"
+        },
+        {
+          "problem": "Calculate: $1\\frac{1}{2} \\times 2\\frac{1}{3}$",
+          "solution_steps": [
+            "Step 1: Convert mixed numbers to improper fractions.",
+            "Step 2: $1\\frac{1}{2} = \\frac{3}{2}$ and $2\\frac{1}{3} = \\frac{7}{3}$.",
+            "Step 3: Multiply: $\\frac{3}{2} \\times \\frac{7}{3} = \\frac{21}{6}$.",
+            "Step 4: Simplify by dividing top and bottom by $3$, yielding $\\frac{7}{2}$."
+          ],
+          "final_answer": "$\\frac{7}{2}$ or $3\\frac{1}{2}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding the denominators together (e.g., $\\frac{1}{2} + \\frac{1}{3} = \\frac{2}{5}$).",
+          "correction": "You must find a common denominator first, and then ONLY add the numerators."
+        },
+        {
+          "mistake": "Flipping the first fraction when dividing.",
+          "correction": "Always flip the SECOND fraction (the divisor), not the first."
+        }
+      ],
+      "quick_summary": [
+        "Add/Subtract: Need a common denominator.",
+        "Multiply: Straight across (num $\\times$ num, den $\\times$ den).",
+        "Divide: Multiply by the reciprocal of the second fraction.",
+        "Always simplify final answers."
+      ],
+      "utilities": [
+        {
+          "title": "Fraction Calculator",
+          "description": "Add, subtract, multiply and divide fractions, and simplify results.",
+          "url": "https://onlinetoolpad.com/math/FRACTION_CALCULATOR",
+          "icon": "➗"
+        }
+      ]
+    },
+    "ms_math_t02_st04": {
+      "id": "ms_math_t02_st04",
+      "title": "Operations with decimals",
+      "overview": "Decimals allow us to express precise values between whole numbers. Whether you are dealing with currency, precise measurements, or detailed statistics, knowing how to add, subtract, multiply, and divide decimal numbers accurately is an essential real-world skill.",
+      "key_concepts": [
+        {
+          "concept": "Adding and Subtracting Decimals",
+          "definition": "The most important rule is to align the decimal points.",
+          "details": [
+            "Align the numbers vertically so the decimal points line up.",
+            "Add placeholder zeros to the right if necessary (e.g., $4.5 = 4.50$).",
+            "Add or subtract exactly as you would with whole numbers, bringing the decimal point straight down."
+          ]
+        },
+        {
+          "concept": "Multiplying Decimals",
+          "definition": "Multiply as if they were whole numbers, then place the decimal point.",
+          "details": [
+            "Do NOT align decimal points.",
+            "Count the total number of decimal places in BOTH factors.",
+            "Place the decimal point in the product so that the product has the same total number of decimal places as the two original factors combined. Add a leading zero if needed."
+          ]
+        },
+        {
+          "concept": "Dividing Decimals",
+          "definition": "Clear the decimal from the divisor before dividing.",
+          "details": [
+            "If dividing by a decimal, move the decimal point to the right until it is a whole number.",
+            "Move the decimal point in the dividend (the number being divided) the same number of places to the right.",
+            "Bring the decimal point straight up into the quotient."
+          ]
+        },
+        {
+          "concept": "Powers of 10",
+          "definition": "Powers of ten provide quick decimal-place shifts.",
+          "details": [
+            "Dividing by $10$, $100$, or $1000$ moves the decimal point left by $1$, $2$, or $3$ places, respectively."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s04",
+          "title": "Aligning Decimals for Addition",
+          "type": "svg",
+          "caption": "Always align the decimal points vertically before adding or subtracting. Add trailing zeros to help keep place values clear.",
+          "alt_text": "Addition setup of 12.45 and 3.70 with a highlighted vertical line running straight down through the decimal points.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"240\" y=\"30\" width=\"20\" height=\"140\" fill=\"#fef08a\" rx=\"4\"/><text x=\"200\" y=\"70\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"end\" fill=\"#1e293b\">12</text><text x=\"250\" y=\"70\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"middle\" fill=\"#ea580c\">.</text><text x=\"300\" y=\"70\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"start\" fill=\"#1e293b\">45</text><text x=\"130\" y=\"110\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"middle\" fill=\"#334155\">+</text><text x=\"200\" y=\"110\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"end\" fill=\"#1e293b\">3</text><text x=\"250\" y=\"110\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"middle\" fill=\"#ea580c\">.</text><text x=\"300\" y=\"110\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"start\" fill=\"#1e293b\">70</text><line x1=\"110\" y1=\"130\" x2=\"390\" y2=\"130\" stroke=\"#64748b\" stroke-width=\"3\"/><text x=\"200\" y=\"165\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"end\" fill=\"#1e293b\" font-weight=\"bold\">16</text><text x=\"250\" y=\"165\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">.</text><text x=\"300\" y=\"165\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"start\" fill=\"#1e293b\" font-weight=\"bold\">15</text><path d=\"M 250 30 L 250 170\" stroke=\"#ea580c\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate: $8.2 - 3.47$",
+          "solution_steps": [
+            "Step 1: Write the numbers vertically, aligning the decimal points.",
+            "Step 2: Add a placeholder zero to $8.2$ so it becomes $8.20$.",
+            "Step 3: Subtract: $8.20 - 3.47$.",
+            "Step 4: Bring the decimal point straight down."
+          ],
+          "final_answer": "$4.73$"
+        },
+        {
+          "problem": "Calculate: $2.4 \\times 1.3$",
+          "solution_steps": [
+            "Step 1: Multiply as if they were whole numbers: $24 \\times 13 = 312$.",
+            "Step 2: Count the total decimal places in the original problem. $2.4$ has one, $1.3$ has one. Total = $2$ decimal places.",
+            "Step 3: Place the decimal point in $312$ so that there are two decimal places."
+          ],
+          "final_answer": "$3.12$"
+        },
+        {
+          "problem": "Calculate: $4.68 \\div 0.6$",
+          "solution_steps": [
+            "Step 1: The divisor is $0.6$. Move the decimal one place right to make it $6$.",
+            "Step 2: Move the decimal in the dividend ($4.68$) one place right as well to make it $46.8$.",
+            "Step 3: Divide $46.8 \\div 6$.",
+            "Step 4: $46 \\div 6 = 7$ remainder $4$. Bring down the $8$. $48 \\div 6 = 8$. Bring the decimal point straight up."
+          ],
+          "final_answer": "$7.8$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Aligning the decimal points when multiplying.",
+          "correction": "You do not need to align decimals when multiplying. Just align the digits on the right, multiply like whole numbers, and count the decimal places at the end."
+        },
+        {
+          "mistake": "Dropping the decimal place in division.",
+          "correction": "Remember to move the decimal point in BOTH the divisor and the dividend by the same amount before dividing."
+        }
+      ],
+      "quick_summary": [
+        "Addition/Subtraction: Align decimal points vertically.",
+        "Multiplication: Count total decimal places; apply to the final product.",
+        "Division: Make the divisor a whole number by shifting decimals in both numbers equally."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check arithmetic expressions and calculations involving integers or decimals.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "🧮"
+        }
+      ]
+    },
+    "ms_math_t02_st05": {
+      "id": "ms_math_t02_st05",
+      "title": "Operations with rational numbers",
+      "overview": "Rational numbers include integers, fractions, terminating decimals, and recurring decimals. When we perform operations on rational numbers, we combine the rules we learned for fractions and decimals with the positive/negative sign rules we learned for integers.",
+      "key_concepts": [
+        {
+          "concept": "Combining Rules",
+          "definition": "Apply fraction/decimal arithmetic rules AND integer sign rules simultaneously.",
+          "details": [
+            "For multiplication and division, equal signs give a positive result and different signs give a negative result (with a non-zero divisor).",
+            "If signs are different, multiplication and division yield a negative result.",
+            "Subtracting a negative rational number is equivalent to adding the corresponding positive number."
+          ]
+        },
+        {
+          "concept": "Form Conversion",
+          "definition": "Sometimes it is easier to convert between forms.",
+          "details": [
+            "To mix fractions and decimals (e.g., $0.75 - \\frac{2}{5}$), convert them both to the same format.",
+            "Converting to fractions is usually best when dealing with recurring decimals (e.g., $0.\\overline{3} = \\frac{1}{3}$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s05",
+          "title": "Multiplying Negative Fractions",
+          "type": "svg",
+          "caption": "Apply the fraction multiplication rule straight across, and use integer rules for the signs.",
+          "alt_text": "Negative 4/7 multiplied by positive 14/15 resulting in negative 56/105, which simplifies to negative 8/15.",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"70\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">- 4/7</text><text x=\"130\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#334155\">×</text><text x=\"190\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#22c55e\" font-weight=\"bold\">14/15</text><text x=\"250\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"330\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">- 56/105</text><text x=\"410\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"460\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">- 8/15</text><path d=\"M 70 50 Q 200 10 330 50\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><text x=\"200\" y=\"25\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">Negative × Positive = Negative</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate: $\\frac{5}{6} - \\left(-\\frac{1}{3}\\right)$",
+          "solution_steps": [
+            "Step 1: Subtracting a negative is equivalent to adding its opposite: $\\frac{5}{6} + \\frac{1}{3}$.",
+            "Step 2: Find a common denominator. The LCM of $6$ and $3$ is $6$.",
+            "Step 3: Convert $\\frac{1}{3}$ to $\\frac{2}{6}$.",
+            "Step 4: Add the numerators: $\\frac{5}{6} + \\frac{2}{6} = \\frac{7}{6}$."
+          ],
+          "final_answer": "$\\frac{7}{6}$"
+        },
+        {
+          "problem": "Calculate: $-\\frac{5}{6} \\div \\frac{10}{9}$",
+          "solution_steps": [
+            "Step 1: To divide, multiply by the reciprocal of the second fraction: $-\\frac{5}{6} \\times \\frac{9}{10}$.",
+            "Step 2: Note the signs. A negative times a positive will be negative.",
+            "Step 3: Multiply numerators and denominators: $\\frac{-5 \\times 9}{6 \\times 10} = -\\frac{45}{60}$.",
+            "Step 4: Simplify by dividing top and bottom by $15$."
+          ],
+          "final_answer": "$-\\frac{3}{4}$"
+        },
+        {
+          "problem": "Calculate: $0.\\overline{3} + \\frac{1}{6}$",
+          "solution_steps": [
+            "Step 1: Convert the recurring decimal to a fraction. $0.\\overline{3} = \\frac{1}{3}$.",
+            "Step 2: The problem is now $\\frac{1}{3} + \\frac{1}{6}$.",
+            "Step 3: Find a common denominator ($6$). $\\frac{1}{3} = \\frac{2}{6}$.",
+            "Step 4: Add: $\\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6}$.",
+            "Step 5: Simplify: $\\frac{3}{6}=\\frac{1}{2}$."
+          ],
+          "final_answer": "$\\frac{1}{2}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding denominators when dealing with negative fractions.",
+          "correction": "The rule for common denominators never changes, regardless of whether the fraction is positive or negative."
+        },
+        {
+          "mistake": "Applying integer sign rules incorrectly to addition.",
+          "correction": "Remember that two negatives make a positive ONLY in multiplication and division. In addition, $-\\frac{1}{2} + -\\frac{1}{2} = -1$."
+        }
+      ],
+      "quick_summary": [
+        "Apply standard fraction rules for common denominators and reciprocals.",
+        "Apply standard integer rules for positive and negative signs.",
+        "Convert decimals to fractions to avoid errors with recurring digits."
+      ],
+      "utilities": [
+        {
+          "title": "Fraction Calculator",
+          "description": "Add, subtract, multiply and divide fractions, and simplify results.",
+          "url": "https://onlinetoolpad.com/math/FRACTION_CALCULATOR",
+          "icon": "➗"
+        }
+      ]
+    },
+    "ms_math_t02_st06": {
+      "id": "ms_math_t02_st06",
+      "title": "Estimation and approximation",
+      "overview": "We don't always need exact numbers. Estimation helps us find a reasonable answer quickly in our heads, which is highly useful for comparing prices, budgeting, or checking if a calculator answer is plausible. Approximation is providing a value that is close to the exact value.",
+      "key_concepts": [
+        {
+          "concept": "Rounding Rules",
+          "definition": "The standard method for approximating a number.",
+          "details": [
+            "Identify the place value you want to round to.",
+            "Look at the digit immediately to its right.",
+            "If it is $5$ or more, round UP (increase the rounding digit by $1$).",
+            "If it is $4$ or less, leave the rounding digit unchanged.",
+            "When rounding to a place value to the left of the decimal point, replace the digits to its right with zeros. When rounding decimal places, remove the digits after the retained place."
+          ]
+        },
+        {
+          "concept": "Estimating Addition, Subtraction, and Multiplication",
+          "definition": "Round to convenient values.",
+          "details": [
+            "Round numbers to nearby tens, hundreds, or whole numbers that are easy to process mentally."
+          ]
+        },
+        {
+          "concept": "Estimating Division with Compatible Numbers",
+          "definition": "Compatible numbers are values close to the original numbers that make a calculation easier.",
+          "details": [
+            "For example, estimate $598 \\div 19$ using $600 \\div 20 = 30$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s06",
+          "title": "Rounding Hill",
+          "type": "svg",
+          "caption": "If the next digit is 4 or less, stay. If it is 5 or more, round up.",
+          "alt_text": "A curved hill showing numbers 0,1,2,3,4 rolling back to the left (round down) and 5,6,7,8,9 rolling forward to the right (round up).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 50 180 Q 250 20 450 180\" fill=\"none\" stroke=\"#334155\" stroke-width=\"4\"/><circle cx=\"250\" cy=\"85\" r=\"25\" fill=\"#eab308\"/><text x=\"250\" y=\"92\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#713f12\" font-weight=\"bold\">5</text><text x=\"160\" y=\"110\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\">1, 2, 3, 4</text><path d=\"M 160 120 L 100 160\" stroke=\"#ef4444\" stroke-width=\"2\"/><polygon points=\"100,160 110,155 105,150\" fill=\"#ef4444\"/><text x=\"110\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Stay (Round Down)</text><text x=\"340\" y=\"110\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\">6, 7, 8, 9</text><path d=\"M 340 120 L 400 160\" stroke=\"#22c55e\" stroke-width=\"2\"/><polygon points=\"400,160 390,155 395,150\" fill=\"#22c55e\"/><text x=\"390\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Round Up (+1)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Estimate $398 + 207$ to the nearest hundred.",
+          "solution_steps": [
+            "Step 1: Round $398$ to the nearest hundred. The tens digit is $9$, so round up to $400$.",
+            "Step 2: Round $207$ to the nearest hundred. The tens digit is $0$, so stay at $200$.",
+            "Step 3: Add the rounded numbers: $400 + 200$."
+          ],
+          "final_answer": "$600$"
+        },
+        {
+          "problem": "Estimate $598 \\div 19$ using compatible numbers.",
+          "solution_steps": [
+            "Step 1: Strict rounding might give $600 \\div 20$, which works perfectly here.",
+            "Step 2: The numbers are compatible because $600$ is divisible by $20$.",
+            "Step 3: Calculate $600 \\div 20 = 30$."
+          ],
+          "final_answer": "$30$"
+        },
+        {
+          "problem": "Estimate $\\frac{7}{12} + \\frac{5}{11}$.",
+          "solution_steps": [
+            "Step 1: Evaluate the fractions relative to benchmarks like $0$, $\\frac{1}{2}$, and $1$.",
+            "Step 2: $\\frac{7}{12}$ is slightly more than $\\frac{6}{12}$ (which is $\\frac{1}{2}$).",
+            "Step 3: $\\frac{5}{11}$ is slightly less than $\\frac{5.5}{11}$ (which is $\\frac{1}{2}$).",
+            "Step 4: Approximate both as $\\frac{1}{2}$. Estimate: $\\frac{1}{2} + \\frac{1}{2}$."
+          ],
+          "final_answer": "$1$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rounding to the wrong place value.",
+          "correction": "Always double-check what the problem asks for (nearest ten, hundred, tenth, etc.) before looking at the digit to the right."
+        },
+        {
+          "mistake": "Strictly rounding instead of using compatible numbers for division.",
+          "correction": "Do not force every division estimate to use the nearest ten or hundred. Choose nearby compatible numbers that make the division easy. For example, $598 \\div 19$ can be estimated by $600 \\div 20 = 30$."
+        }
+      ],
+      "quick_summary": [
+        "If the next digit is $5$ or higher, round up. If $4$ or lower, keep it the same.",
+        "Round before calculating to make mental math easy.",
+        "Use compatible numbers (numbers that divide cleanly) for estimating division.",
+        "Use estimation to double-check if your exact calculations are reasonable."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Compare an estimate with an exact calculation to check whether it is reasonable.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "🧮"
+        }
+      ]
+    },
+    "ms_math_t02_st07": {
+      "id": "ms_math_t02_st07",
+      "title": "Rounding and significant figures — introduction",
+      "overview": "Rounding makes numbers easier to read, compare, and calculate with. Significant figures help us express measurements at an appropriate level of precision, ensuring we don't claim a number is more exact than our tools can actually measure.",
+      "key_concepts": [
+        {
+          "concept": "Rounding Rules (Decimal Places and Whole Numbers)",
+          "definition": "Replacing a number with a nearby value based on the digit to the right of the target place.",
+          "details": [
+            "If the next digit is $0, 1, 2, 3, \\text{or } 4$, keep the rounding digit unchanged.",
+            "If the next digit is $5, 6, 7, 8, \\text{or } 9$, increase the rounding digit by $1$.",
+            "Decimal places count digits specifically *after* the decimal point."
+          ]
+        },
+        {
+          "concept": "Significant Figures (Sig Figs)",
+          "definition": "The digits that contribute to the actual precision of a number.",
+          "details": [
+            "**Non-zero digits:** Always significant (e.g., $347$ has $3$ sig figs).",
+            "**Trapped zeros:** Zeros between non-zero digits are always significant (e.g., $4.08$ has $3$ sig figs).",
+            "**Leading zeros:** Zeros at the beginning of a decimal are NEVER significant; they only locate the decimal point (e.g., $0.0062$ has $2$ sig figs).",
+            "**Trailing zeros:** Zeros at the end of a decimal number ARE significant (e.g., $2.500$ has $4$ sig figs).",
+            "Trailing zeros in whole numbers without a decimal point can be ambiguous (for example, $53,800$). Scientific notation makes the number of significant figures clear."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s07",
+          "title": "Identifying Significant Figures",
+          "type": "svg",
+          "caption": "Leading zeros don't count, trapped zeros do count, and trailing zeros after a decimal point count.",
+          "alt_text": "The number 0.005060 with leading zeros marked 'Not Significant', the 5, 0, and 6 marked 'Significant', and the final 0 marked 'Significant'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"80\" font-family=\"monospace\" font-size=\"48\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\"><tspan fill=\"#94a3b8\">0.00</tspan><tspan fill=\"#2563eb\">5</tspan><tspan fill=\"#2563eb\">0</tspan><tspan fill=\"#2563eb\">6</tspan><tspan fill=\"#16a34a\">0</tspan></text><path d=\"M 180 90 L 180 120 L 120 120\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"110\" y=\"125\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"end\" fill=\"#64748b\" font-weight=\"bold\">Leading Zeros (NO)</text><path d=\"M 250 90 L 250 140\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"250\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Non-zeros &amp; Trapped (YES)</text><path d=\"M 320 90 L 320 120 L 380 120\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"390\" y=\"125\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"start\" fill=\"#15803d\" font-weight=\"bold\">Trailing Decimal Zero (YES)</text><text x=\"250\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Total: 4 Significant Figures</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Round $53,782$ to three significant figures.",
+          "solution_steps": [
+            "Step 1: Identify the first three significant digits starting from the left: $5, 3, 7$.",
+            "Step 2: Inspect the next digit, which is $8$.",
+            "Step 3: Since $8$ is $5$ or more, round the $7$ up to an $8$.",
+            "Step 4: The rounded value is $53,800$. Write it as $5.38 \\times 10^4$ to show unambiguously that it has three significant figures."
+          ],
+          "final_answer": "$5.38 \\times 10^4$ (or $53,800$ to the nearest hundred)."
+        },
+        {
+          "problem": "Round $0.004683$ to two significant figures.",
+          "solution_steps": [
+            "Step 1: Ignore the leading zeros. The first two significant digits are $4$ and $6$.",
+            "Step 2: The next digit is $8$, so we round the $6$ up to a $7$.",
+            "Step 3: Remove the trailing digits."
+          ],
+          "final_answer": "$0.0047$"
+        },
+        {
+          "problem": "Round $8.376$ to two decimal places.",
+          "solution_steps": [
+            "Step 1: Count two places AFTER the decimal point. The target digit is $7$.",
+            "Step 2: The next digit is $6$, so round the $7$ up to an $8$.",
+            "Step 3: Drop the digits after the rounded place."
+          ],
+          "final_answer": "$8.38$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing decimal places with significant figures.",
+          "correction": "Rounding $0.004786$ to $2$ decimal places is $0.00$. Rounding it to $2$ significant figures is $0.0048$. They are very different operations."
+        },
+        {
+          "mistake": "Thinking trailing zeros in decimals don't matter.",
+          "correction": "In measurement, writing $2.500$ instead of $2.5$ tells the reader that the instrument is precise to the thousandths place. Those zeros are significant."
+        }
+      ],
+      "quick_summary": [
+        "Decimal places count digits after the decimal point.",
+        "Significant figures start counting at the first non-zero digit.",
+        "Use the standard $5$-and-up rounding rule for the final retained digit."
+      ]
+    },
+    "ms_math_t02_st08": {
+      "id": "ms_math_t02_st08",
+      "title": "Mental arithmetic strategies",
+      "overview": "Mental arithmetic means performing calculations in your head without a calculator or written working. By breaking numbers into easier parts or using number patterns, you can calculate faster and confidently check the reasonableness of complex answers.",
+      "key_concepts": [
+        {
+          "concept": "Compensation Strategy",
+          "definition": "Adjusting a number to make a calculation easier, then correcting the result at the end.",
+          "details": [
+            "Example for Addition: $198 + 56 \\rightarrow (200 + 56) - 2 = 254$.",
+            "Example for Subtraction: $503 - 198 \\rightarrow (503 - 200) + 2 = 305$."
+          ]
+        },
+        {
+          "concept": "Distributive Property in Mental Math",
+          "definition": "Splitting a number into a sum or difference to multiply easily.",
+          "details": [
+            "Example: $16 \\times 7 = (10 + 6) \\times 7 = 70 + 42 = 112$."
+          ]
+        },
+        {
+          "concept": "Multiplication Shortcuts",
+          "definition": "Patterns for specific numbers.",
+          "details": [
+            "**$\\times 5$:** Multiply by $10$, then halve (e.g., $38 \\times 5 = 380 \\div 2 = 190$).",
+            "**$\\times 9$:** Multiply by $10$, then subtract the number once (e.g., $47 \\times 9 = 470 - 47 = 423$).",
+            "**$\\times 25$:** Multiply by $100$, then divide by $4$ (e.g., $36 \\times 25 = 3600 \\div 4 = 900$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s08",
+          "title": "Compensation Method",
+          "type": "svg",
+          "caption": "Adjust to a friendly number like 200, perform the math, and balance the scales at the end.",
+          "alt_text": "Visual showing 198 + 56 transforming into (198 + 2) + 56 - 2, which becomes 200 + 56 - 2 = 254.",
+          "data": "<svg viewBox=\"0 0 500 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"180\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">198 + 56</text><path d=\"M 200 50 Q 150 80 150 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M 300 50 Q 350 80 350 100\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><rect x=\"100\" y=\"100\" width=\"100\" height=\"40\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"150\" y=\"127\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">+ 2</text><rect x=\"300\" y=\"100\" width=\"100\" height=\"40\" fill=\"#fee2e2\" rx=\"5\"/><text x=\"350\" y=\"127\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">- 2</text><text x=\"250\" y=\"127\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">Balance</text><text x=\"250\" y=\"165\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">200 + 56 - 2 = 254</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate $84 - 29$ mentally.",
+          "solution_steps": [
+            "Step 1: $29$ is very close to $30$. Let's subtract $30$ instead.",
+            "Step 2: $84 - 30 = 54$.",
+            "Step 3: Since we subtracted $1$ too many, we must add $1$ back.",
+            "Step 4: $54 + 1 = 55$."
+          ],
+          "final_answer": "$55$"
+        },
+        {
+          "problem": "Calculate $25 \\times 16$ mentally.",
+          "solution_steps": [
+            "Step 1: Rewrite $16$ as $4 \\times 4$.",
+            "Step 2: The problem becomes $25 \\times 4 \\times 4$.",
+            "Step 3: We know $25 \\times 4 = 100$.",
+            "Step 4: Now just multiply $100 \\times 4 = 400$."
+          ],
+          "final_answer": "$400$"
+        },
+        {
+          "problem": "Find $15\\%$ of $240$.",
+          "solution_steps": [
+            "Step 1: Break $15\\%$ into $10\\% + 5\\%$.",
+            "Step 2: Find $10\\%$ by dividing by $10$: $240 \\div 10 = 24$.",
+            "Step 3: Find $5\\%$ by halving the $10\\%$ amount: $24 \\div 2 = 12$.",
+            "Step 4: Add them together: $24 + 12 = 36$."
+          ],
+          "final_answer": "$36$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying compensation backwards in subtraction.",
+          "correction": "If you calculate $503 - 198$ by subtracting $200$, you have subtracted TOO MUCH. Therefore, you must ADD the $2$ back at the end ($303 + 2 = 305$), not subtract it again."
+        }
+      ],
+      "quick_summary": [
+        "Break numbers into friendly parts (tens, hundreds).",
+        "Use compensation when a number is very close to a multiple of $10$ or $100$.",
+        "For percentages, find $10\\%$ or $1\\%$ first and build from there."
+      ]
+    },
+    "ms_math_t02_st09": {
+      "id": "ms_math_t02_st09",
+      "title": "Laws of arithmetic operations",
+      "overview": "Arithmetic laws describe reliable rules for adding, subtracting, multiplying, and dividing. These rules are the invisible engine behind mental math strategies and algebraic simplification, showing us exactly when we can rearrange numbers without altering the final answer.",
+      "key_concepts": [
+        {
+          "concept": "Commutative Law",
+          "definition": "Order doesn't matter.",
+          "details": [
+            "**Addition:** $a + b = b + a$ (e.g., $8 + 13 = 13 + 8$)",
+            "**Multiplication:** $a \\times b = b \\times a$",
+            "Does NOT apply to subtraction or division."
+          ]
+        },
+        {
+          "concept": "Associative Law",
+          "definition": "Grouping doesn't matter.",
+          "details": [
+            "**Addition:** $(a + b) + c = a + (b + c)$",
+            "**Multiplication:** $(a \\times b) \\times c = a \\times (b \\times c)$",
+            "Does NOT apply to subtraction or division."
+          ]
+        },
+        {
+          "concept": "Distributive Law",
+          "definition": "Multiplication distributes over addition or subtraction.",
+          "details": [
+            "Formula: $a(b + c) = ab + ac$",
+            "Example: $7(10 + 3) = 70 + 21 = 91$"
+          ]
+        },
+        {
+          "concept": "Identity and Inverse Properties",
+          "definition": "Values that leave a number unchanged, or cancel it out.",
+          "details": [
+            "**Additive Identity:** $0$ ($a + 0 = a$)",
+            "**Multiplicative Identity:** $1$ ($a \\times 1 = a$)",
+            "**Additive Inverse:** The number that adds to give $0$ (e.g., inverse of $5$ is $-5$).",
+            "**Multiplicative Inverse:** For any non-zero number $a$, its reciprocal $\\frac{1}{a}$ multiplies with it to give $1$ (e.g., the inverse of $4$ is $\\frac{1}{4}$). Zero has no multiplicative inverse."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Distributive Law",
+          "equation": "$$ a(b \\pm c) = ab \\pm ac $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s09",
+          "title": "Commutative vs Associative Laws",
+          "type": "svg",
+          "caption": "Commutative changes the order. Associative changes the brackets (grouping).",
+          "alt_text": "Visual showing A+B = B+A for Commutative (items swapping places) and (A+B)+C = A+(B+C) for Associative (brackets shifting).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"460\" height=\"70\" fill=\"#e0f2fe\" rx=\"8\"/><text x=\"250\" y=\"45\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">Commutative Law (Order changes)</text><text x=\"250\" y=\"75\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A + B = B + A</text><rect x=\"20\" y=\"110\" width=\"460\" height=\"70\" fill=\"#dcfce7\" rx=\"8\"/><text x=\"250\" y=\"135\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Associative Law (Brackets change)</text><text x=\"250\" y=\"165\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">(A + B) + C = A + (B + C)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate $25 \\times 17 \\times 4$ efficiently.",
+          "solution_steps": [
+            "Step 1: Use the commutative law to swap $17$ and $4$: $25 \\times 4 \\times 17$.",
+            "Step 2: Use the associative law to group the first two: $(25 \\times 4) \\times 17$.",
+            "Step 3: $25 \\times 4 = 100$.",
+            "Step 4: $100 \\times 17 = 1,700$."
+          ],
+          "final_answer": "$1,700$"
+        },
+        {
+          "problem": "Use the distributive law to calculate $19 \\times 26$.",
+          "solution_steps": [
+            "Step 1: Rewrite $19$ as $(20 - 1)$.",
+            "Step 2: Apply distributive law: $(20 - 1) \\times 26 = (20 \\times 26) - (1 \\times 26)$.",
+            "Step 3: $20 \\times 26 = 520$.",
+            "Step 4: $520 - 26 = 494$."
+          ],
+          "final_answer": "$494$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming division is commutative (e.g., $12 \\div 3 = 3 \\div 12$).",
+          "correction": "Division and subtraction do NOT follow the commutative or associative laws. The order matters!"
+        },
+        {
+          "mistake": "Confusing the Additive Identity with the Multiplicative Identity.",
+          "correction": "Adding $0$ changes nothing (Identity is $0$). Multiplying by $1$ changes nothing (Identity is $1$)."
+        }
+      ],
+      "quick_summary": [
+        "Commutative = Swap order (Add/Multiply only).",
+        "Associative = Shift grouping brackets (Add/Multiply only).",
+        "Distributive = Multiply outside term by each inside term.",
+        "Zero Property = Any number times $0$ is $0$.",
+        "The multiplicative inverse exists only for non-zero numbers."
+      ]
+    },
+    "ms_math_t02_st10": {
+      "id": "ms_math_t02_st10",
+      "title": "Multi-step numerical problems",
+      "overview": "Real-world math rarely requires just one calculation. A multi-step numerical problem requires two or more calculations to reach the final answer. You might need to add, subtract, multiply, divide, work with fractions, or combine several operations in a specific order.",
+      "key_concepts": [
+        {
+          "concept": "The 4-Step Problem-Solving Method",
+          "definition": "A reliable framework for tackling complex problems.",
+          "details": [
+            "**Step 1 — Understand:** Identify what is known and exactly what you need to find.",
+            "**Step 2 — Plan:** Choose the correct operations (addition, subtraction, multiplication, division).",
+            "**Step 3 — Solve:** Calculate in the correct order, following BODMAS/PEMDAS. Use brackets if needed.",
+            "**Step 4 — Check:** Verify your arithmetic, check the units, and use estimation to see if the result makes sense."
+          ]
+        },
+        {
+          "concept": "Translating Words to Math",
+          "definition": "Converting English phrases into mathematical operations.",
+          "details": [
+            "'Total', 'altogether', 'sum' usually mean Addition.",
+            "'Difference', 'remaining', 'left' usually mean Subtraction.",
+            "'Each', 'per', 'times' usually mean Multiplication.",
+            "'Split', 'share equally', 'per day' (when finding a rate) usually mean Division.",
+            "These are clues, not fixed rules: read the whole problem to decide which operation is appropriate."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s10",
+          "title": "The 4-Step Method",
+          "type": "svg",
+          "caption": "Follow these four steps to conquer any word problem without getting overwhelmed.",
+          "alt_text": "A flow chart showing four steps: 1. Understand (magnifying glass), 2. Plan (lightbulb), 3. Solve (gears), 4. Check (checkmark).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"60\" width=\"100\" height=\"80\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"2\" rx=\"8\"/><text x=\"70\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0369a1\" font-weight=\"bold\">1. Understand</text><text x=\"70\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0284c7\">Find the goal</text><path d=\"M 120 100 L 140 100\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"145,100 135,95 135,105\" fill=\"#64748b\"/><rect x=\"150\" y=\"60\" width=\"90\" height=\"80\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\" rx=\"8\"/><text x=\"195\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">2. Plan</text><text x=\"195\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#ca8a04\">Choose math</text><path d=\"M 240 100 L 260 100\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"265,100 255,95 255,105\" fill=\"#64748b\"/><rect x=\"270\" y=\"60\" width=\"90\" height=\"80\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"8\"/><text x=\"315\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">3. Solve</text><text x=\"315\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#ea580c\">Calculate</text><path d=\"M 360 100 L 380 100\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"385,100 375,95 375,105\" fill=\"#64748b\"/><rect x=\"390\" y=\"60\" width=\"90\" height=\"80\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"8\"/><text x=\"435\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">4. Check</text><text x=\"435\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#16a34a\">Makes sense?</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A student buys $3$ notebooks costing $\\$4$ each and $2$ pens costing $\\$1.50$ each. How much does the student spend altogether?",
+          "solution_steps": [
+            "Step 1 (Plan): We need to multiply to find the total notebook cost, multiply to find the total pen cost, and then add them together.",
+            "Step 2 (Solve Notebooks): $3 \\times \\$4 = \\$12$.",
+            "Step 3 (Solve Pens): $2 \\times \\$1.50 = \\$3$.",
+            "Step 4 (Solve Total): $\\$12 + \\$3 = \\$15$."
+          ],
+          "final_answer": "$\\$15$"
+        },
+        {
+          "problem": "A water tank contains $250$ litres. A family uses $35$ litres per day for $4$ days. How much water remains?",
+          "solution_steps": [
+            "Step 1 (Plan): Find total water used (multiplication), then subtract from the starting amount.",
+            "Step 2 (Solve Used Water): $35 \\times 4 = 140$ litres.",
+            "Step 3 (Solve Remaining): $250 - 140 = 110$ litres."
+          ],
+          "final_answer": "$110 \\text{ L}$"
+        },
+        {
+          "problem": "A recipe requires $\\frac{3}{4}$ cup of flour per batch. How much flour is needed for $3$ batches if you have already used $\\frac{1}{2}$ cup?",
+          "solution_steps": [
+            "Step 1 (Plan): Multiply to find total flour needed, then subtract what was already used.",
+            "Step 2 (Solve Total Needed): $3 \\times \\frac{3}{4} = \\frac{9}{4} = 2\\frac{1}{4}$ cups.",
+            "Step 3 (Solve Remaining): $2\\frac{1}{4} - \\frac{1}{2} = \\frac{9}{4} - \\frac{2}{4} = \\frac{7}{4}$.",
+            "Step 4 (Convert): $\\frac{7}{4} = 1\\frac{3}{4}$."
+          ],
+          "final_answer": "$1\\frac{3}{4} \\text{ cups}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding before multiplying in a single expression.",
+          "correction": "If you write out the problem as a single equation like $5 + 3 \\times 4$, you MUST follow the order of operations. Multiply first to get $5 + 12 = 17$."
+        },
+        {
+          "mistake": "Using the wrong starting quantity.",
+          "correction": "Always subtract amounts *used* from the *original starting amount*, not from an unrelated number."
+        },
+        {
+          "mistake": "Ignoring units.",
+          "correction": "Make sure you aren't adding dollars to liters, or kilometers to hours. Keep units consistent."
+        }
+      ],
+      "quick_summary": [
+        "Break a complicated problem into smaller steps.",
+        "Identify the correct operations before calculating.",
+        "Follow the order of operations (BODMAS/PEMDAS) and use brackets when needed.",
+        "Always check your final result for arithmetic accuracy and reasonableness."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check arithmetic expressions and calculations involving integers or decimals.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "🧮"
+        },
+        {
+          "title": "Fraction Calculator",
+          "description": "Add, subtract, multiply and divide fractions, and simplify results.",
+          "url": "https://onlinetoolpad.com/math/FRACTION_CALCULATOR",
+          "icon": "➗"
+        }
+      ]
+    }
+  }
+}

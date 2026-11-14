@@ -7,25 +7,50 @@
   <title>Daily Brain Sprint | OnlineBrainHub</title>
   <style>
     :root{--bg:#f4f7fb;--card:#fff;--ink:#172033;--muted:#667085;--accent:#5b5bd6;--good:#16834a;--bad:#c0392b;--line:#e5e9f2}
-    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
-    .wrap{width:min(760px,calc(100% - 28px));margin:32px auto}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
-    a{color:var(--accent);text-decoration:none;font-weight:700}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,4vw,34px);box-shadow:0 12px 34px rgba(22,34,60,.06)}
-    .eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.09em;color:var(--accent);text-transform:uppercase}h1{font-size:clamp(1.7rem,5vw,2.35rem);margin:8px 0}
-    .muted{color:var(--muted);line-height:1.6}.meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0;color:var(--muted);font-size:.92rem}
-    .progress{height:8px;background:#edf0f6;border-radius:20px;overflow:hidden;margin:18px 0 24px}.bar{height:100%;width:0;background:var(--accent);transition:width .2s}
-    #question{font-size:1.22rem;line-height:1.55;font-weight:700;margin:12px 0 20px}.options{display:grid;gap:11px}
-    .option{width:100%;text-align:left;padding:15px 16px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:1rem;color:var(--ink);cursor:pointer}
-    .option:hover:not(:disabled){border-color:var(--accent);background:#f7f7ff}.option:disabled{cursor:default}
-    .option.correct{border-color:var(--good);background:#edfaf2}.option.wrong{border-color:var(--bad);background:#fff0ef}
-    .feedback{margin-top:16px;padding:14px;border-radius:12px;background:#f5f7fb;color:var(--muted);line-height:1.55;display:none}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+    a{color:var(--accent);text-decoration:none;font-weight:700}
+    .page-layout{width:min(1200px,calc(100% - 28px));margin:32px auto;display:grid;grid-template-columns:minmax(0,760px) 300px;gap:30px;align-items:start;justify-content:center}
+    .main-content{min-width:0;display:flex;flex-direction:column;gap:16px}
+    .sidebar{width:300px;min-width:0}
+    .ad-space{display:flex;align-items:center;justify-content:center;text-align:center;color:#7b8494;background:#fff;border:1px dashed #c8cfdb;border-radius:12px;font-size:.88rem;line-height:1.45;padding:12px}
+    .top-ad{width:100%;min-height:90px}
+    .sticky-ad{width:300px;height:600px;position:sticky;top:20px}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,4vw,34px);box-shadow:0 12px 34px rgba(22,34,60,.06)}
+    .eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.09em;color:var(--accent);text-transform:uppercase}
+    h1{font-size:clamp(1.7rem,5vw,2.35rem);margin:8px 0}
+    .muted{color:var(--muted);line-height:1.6}
+    .meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0;color:var(--muted);font-size:.92rem}
+    .progress{height:8px;background:#edf0f6;border-radius:20px;overflow:hidden;margin:18px 0 24px}
+    .bar{height:100%;width:0;background:var(--accent);transition:width .2s}
+    #question{font-size:1.22rem;line-height:1.55;font-weight:700;margin:12px 0 20px;overflow-wrap:anywhere}
+    .options{display:grid;gap:11px}
+    .option{width:100%;text-align:left;padding:15px 16px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:1rem;color:var(--ink);cursor:pointer;overflow-wrap:anywhere}
+    .option:hover:not(:disabled){border-color:var(--accent);background:#f7f7ff}
+    .option:disabled{cursor:default}
+    .option.correct{border-color:var(--good);background:#edfaf2}
+    .option.wrong{border-color:var(--bad);background:#fff0ef}
+    .feedback{margin-top:16px;padding:14px;border-radius:12px;background:#f5f7fb;color:var(--muted);line-height:1.55;display:none;overflow-wrap:anywhere}
     button.primary{margin-top:20px;border:0;border-radius:12px;padding:13px 20px;background:var(--accent);color:#fff;font-size:1rem;font-weight:800;cursor:pointer}
-    button:disabled{opacity:.5;cursor:not-allowed}.center{text-align:center}.hidden{display:none!important}.hearts{font-size:1.15rem;letter-spacing:3px}
-    .notice{padding:14px;border-radius:12px;background:#fff8e7;color:#76520b;line-height:1.5;margin-top:16px}@media(max-width:520px){.wrap{margin:16px auto}}
+    button:disabled{opacity:.5;cursor:not-allowed}
+    .center{text-align:center}.hidden{display:none!important}.hearts{font-size:1.15rem;letter-spacing:3px}
+    .notice{padding:14px;border-radius:12px;background:#fff8e7;color:#76520b;line-height:1.5;margin-top:16px}
+    .signup-prompt{margin-top:18px;padding:16px;border-radius:12px;background:#f2f1ff;color:#39358c;line-height:1.55}
+    @media(max-width:900px){
+      .page-layout{width:min(760px,calc(100% - 28px));grid-template-columns:minmax(0,1fr);margin:16px auto}
+      .sidebar{display:none}
+      .top-ad{min-height:70px}
+    }
+    @media(max-width:520px){.page-layout{width:calc(100% - 24px)}.top{margin-bottom:14px}.top-ad{min-height:60px}.card{padding:20px}}
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <div class="top"><a href="/">← OnlineBrainHub</a><span class="hearts" id="hearts">❤️❤️❤️</span></div>
+  <main class="page-layout">
+    <div class="main-content">
+      <!-- AdSense placeholder: insert the approved responsive ad unit here when available. -->
+      <div class="ad-space top-ad" aria-label="Advertisement">Top banner advertisement</div>
+      <div class="top"><a href="/">← OnlineBrainHub</a><span class="hearts" id="hearts">❤️❤️❤️</span></div>
     <section class="card" id="loading"><div class="eyebrow">Daily Challenge · 2× XP</div><h1>Today's Brain Sprint</h1><p class="muted">Loading today's five questions…</p></section>
     <section class="card hidden" id="intro">
       <div class="eyebrow">Daily Challenge · 2× XP</div><h1>Today's Brain Sprint</h1><p class="muted" id="date-label"></p>
@@ -42,16 +67,23 @@
     </section>
     <section class="card center hidden" id="result">
       <div class="eyebrow">Daily Challenge result</div><h1 id="result-title">Challenge complete</h1>
-      <p id="result-score" class="muted"></p><h2 id="result-xp"></h2><p class="muted" id="result-detail"></p><a href="/">Return to OnlineBrainHub</a>
+      <p id="result-score" class="muted"></p><h2 id="result-xp"></h2><p class="muted" id="result-detail"></p>
+      <div class="signup-prompt hidden" id="guest-signup">Want to keep your XP and learning history? <a href="/register.html">Create a free account</a> or <a href="/login.html">log in</a>.</div>
+      <p><a href="/">Return to OnlineBrainHub</a></p>
     </section>
     <section class="card hidden" id="message">
       <div class="eyebrow">Daily Challenge</div><h1 id="message-title">Challenge unavailable</h1><p class="muted" id="message-text"></p><a id="login-link" class="hidden" href="/login.html">Log in to continue</a><br><a href="/">Return to homepage</a>
     </section>
+    </div>
+    <!-- Desktop-only AdSense placeholder; hidden on screens 900px wide or narrower. -->
+    <aside class="sidebar" aria-label="Advertisement">
+      <div class="ad-space sticky-ad">Right sidebar advertisement</div>
+    </aside>
   </main>
 <script>
 (() => {
   const $ = id => document.getElementById(id);
-  let challenge=null, attempt=null, questions=[], current=0, lives=3, xp=0, locked=false;
+  let challenge=null, attempt=null, questions=[], current=0, lives=3, xp=0, locked=false, isGuest=false;
   function show(id){["loading","intro","game","result","message"].forEach(k=>$(k).classList.toggle("hidden",k!==id));}
   function fail(title,message){$("message-title").textContent=title;$("message-text").textContent=message;$("login-link").classList.toggle("hidden",!String(message).toLowerCase().includes("log in"));show("message");}
   async function api(method,body){
@@ -97,7 +129,12 @@
       $("result-title").textContent=result.heartsRemaining===0?"Out of hearts!":"Challenge complete!";
       $("result-score").textContent=`Your score: ${result.score} / 5`;
       $("result-xp").textContent=`+${result.xpEarned} XP`;
-      $("result-detail").textContent=result.xpAwarded?"Your result and XP have been saved. You have used today's attempt.":"Your result has been recorded.";
+      if(result.guest){
+        $("result-detail").textContent="Your score and challenge reward are shown for this visit. Create a free account to save XP and track your learning progress.";
+        $("guest-signup").classList.remove("hidden");
+      }else{
+        $("result-detail").textContent=result.xpAwarded?"Your result and XP have been saved. You have used today's attempt.":"Your result has been recorded.";
+      }
       $("progress").style.width="100%";show("result");
     }catch(error){$("next-btn").disabled=false;fail("Could not save your result",error.message+" Your attempt remains saved; return and try finishing again.");}
   }
@@ -108,10 +145,10 @@
   $("start-btn").addEventListener("click",async()=>{
     $("start-btn").disabled=true;
     try{
-      const data=await api("POST",{action:"start"});attempt=data.attempt;questions=data.questions;
+      const data=await api("POST",{action:"start"});attempt=data.attempt;questions=data.questions;isGuest=Boolean(data.guest);
       if(attempt.status==="completed"){
         $("result-title").textContent="Today's attempt is complete";$("result-score").textContent=`Your score: ${attempt.score} / 5`;
-        $("result-xp").textContent=`+${attempt.xpEarned} XP`;$("result-detail").textContent="You have already used today's Daily Challenge attempt.";show("result");return;
+        $("result-xp").textContent=`+${attempt.xpEarned} XP`;$("result-detail").textContent="You have already used today's Daily Challenge attempt.";if(isGuest)$("guest-signup").classList.remove("hidden");show("result");return;
       }
       current=Number(attempt.currentPosition)||0;lives=Number(attempt.heartsRemaining);xp=Number(attempt.xpEarned)||0;updateStatus();
       if(current>=5||lives===0)return finish();
@@ -121,12 +158,12 @@
   });
   async function init(){
     try{
-      const data=await api("GET");challenge=data.challenge;questions=data.questions;
+      const data=await api("GET");challenge=data.challenge;questions=data.questions;isGuest=Boolean(data.guest);
       if(!questions||questions.length!==5)throw new Error("Today's question set is incomplete.");
       $("date-label").textContent=`Challenge date: ${challenge.date} (UTC)`;
       if(data.attempt?.status==="completed"){
         $("result-title").textContent="Today's attempt is complete";$("result-score").textContent=`Your score: ${data.attempt.score} / 5`;
-        $("result-xp").textContent=`+${data.attempt.xpEarned} XP`;$("result-detail").textContent="You have already used today's Daily Challenge attempt.";show("result");return;
+        $("result-xp").textContent=`+${data.attempt.xpEarned} XP`;$("result-detail").textContent="You have already used today's Daily Challenge attempt.";if(isGuest)$("guest-signup").classList.remove("hidden");show("result");return;
       }
       if(data.attempt?.status==="in_progress")$("resume-note").classList.remove("hidden");
       show("intro");

@@ -111,6 +111,14 @@
     if(!response.ok)throw new Error(data.error||"Request failed.");return data;
   }
   function updateStatus(){ $("hearts").textContent="❤️".repeat(lives)+"🖤".repeat(3-lives);$("xp").textContent=`${xp} XP`; }
+  function shuffleOptions(options){
+    const shuffled=options.map((label,originalIndex)=>({label,originalIndex}));
+    for(let i=shuffled.length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];
+    }
+    return shuffled;
+  }
   function renderQuestion(){
     const q=questions[current];locked=false;
     $("question-count").textContent=`Question ${current+1} of 5`;
@@ -118,9 +126,10 @@
     [...$("challenge-steps").children].forEach((step,index)=>{step.classList.toggle("done",index<current);step.classList.toggle("active",index===current);});
     $("question").textContent=q.question;$("options").replaceChildren();
     $("feedback").style.display="none";$("next-btn").classList.add("hidden");
-    q.options.forEach((label,index)=>{
-      const b=document.createElement("button");b.className="option";b.textContent=`${String.fromCharCode(65+index)}. ${label}`;
-      b.addEventListener("click",()=>choose(index,b));$("options").append(b);
+    shuffleOptions(q.options).forEach((option,displayIndex)=>{
+      const b=document.createElement("button");b.className="option";b.textContent=`${String.fromCharCode(65+displayIndex)}. ${option.label}`;
+      // Submit the original D1 option index, not its shuffled display position.
+      b.addEventListener("click",()=>choose(option.originalIndex,b));$("options").append(b);
     });
   }
   async function choose(selectedIndex,selectedButton){

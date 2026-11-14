@@ -1,0 +1,1032 @@
+{
+  "subject": "math",
+  "topicId": "ms_math_t05",
+  "topicTitle": "Algebraic Expressions",
+  "grade": "Middle School",
+  "subtopics": {
+    "ms_math_t05_st01": {
+      "id": "ms_math_t05_st01",
+      "title": "Variables, constants and coefficients",
+      "overview": "Algebra uses letters and numbers to represent quantities and describe mathematical relationships. To read and speak the language of algebra, you first need to identify the three main components of any expression: variables, constants, and coefficients.",
+      "key_concepts": [
+        {
+          "concept": "Variable",
+          "definition": "A letter or symbol that represents a number whose value may change or is not yet known.",
+          "details": [
+            "Common variables include $x, y, a, b,$ and $n$.",
+            "Example: In $x + 5$, the variable is $x$."
+          ]
+        },
+        {
+          "concept": "Constant",
+          "definition": "A fixed numerical value that stands alone and does not change.",
+          "details": [
+            "Example: In $x + 8$, the constant is $8$.",
+            "Example: In $5x - 3$, the constant is $-3$ (always include the sign!)."
+          ]
+        },
+        {
+          "concept": "Coefficient",
+          "definition": "The numerical factor that directly multiplies a variable.",
+          "details": [
+            "Example: In $4x$, the coefficient is $4$.",
+            "Example: In $-7y$, the coefficient is $-7$.",
+            "**Implied Coefficients:** If a variable stands alone like $x$, its coefficient is $1$. For $-y$, the coefficient is $-1$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s01",
+          "title": "Anatomy of an Algebraic Expression",
+          "type": "svg",
+          "caption": "Identifying the three building blocks of algebra.",
+          "alt_text": "Visual breaking down the expression 6x - 9. 6 is labeled 'Coefficient', x is labeled 'Variable', and -9 is labeled 'Constant'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"90\" font-family=\"sans-serif\" font-size=\"48\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">6x - 9</text><path d=\"M 205 100 L 205 130 L 120 130\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"120,130 130,125 130,135\" fill=\"#3b82f6\"/><text x=\"110\" y=\"135\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"end\" fill=\"#1d4ed8\" font-weight=\"bold\">Coefficient</text><path d=\"M 235 100 L 235 150 L 250 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><polygon points=\"250,150 240,145 240,155\" fill=\"#16a34a\"/><text x=\"260\" y=\"155\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"start\" fill=\"#15803d\" font-weight=\"bold\">Variable</text><path d=\"M 285 100 L 285 130 L 380 130\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><polygon points=\"380,130 370,125 370,135\" fill=\"#ea580c\"/><text x=\"390\" y=\"135\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"start\" fill=\"#c2410c\" font-weight=\"bold\">Constant (-9)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Identify the variable, coefficient, and constant in the expression $-4y + 7$.",
+          "solution_steps": [
+            "Step 1: Identify the letter representing the unknown value. This is the variable ($y$).",
+            "Step 2: Identify the number attached to the variable, including its sign. This is the coefficient ($-4$).",
+            "Step 3: Identify the standalone number, including its sign. This is the constant ($7$)."
+          ],
+          "final_answer": "Variable = $y$, Coefficient = $-4$, Constant = $7$"
+        },
+        {
+          "problem": "Identify the coefficient of $a$ in the expression $a - 5$.",
+          "solution_steps": [
+            "Step 1: Locate the variable $a$.",
+            "Step 2: There is no visible number multiplying $a$.",
+            "Step 3: When a variable is alone, there is an implied $1$ in front of it ($1a = a$)."
+          ],
+          "final_answer": "$1$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ignoring the negative sign when identifying coefficients or constants.",
+          "correction": "In the expression $9y - 4$, the constant is NOT $4$, it is $-4$. The sign immediately to the left always belongs to the number."
+        },
+        {
+          "mistake": "Calling a variable a coefficient.",
+          "correction": "In $5p$, $5$ is the coefficient and $p$ is the variable. They are two different parts of the term."
+        }
+      ],
+      "quick_summary": [
+        "**Variables** are the letters ($x, y$).",
+        "**Coefficients** are the numbers attached to the letters ($3$ in $3x$).",
+        "**Constants** are the numbers sitting by themselves without letters ($+7$, $-4$)."
+      ]
+    },
+    "ms_math_t05_st02": {
+      "id": "ms_math_t05_st02",
+      "title": "Terms and algebraic expressions",
+      "overview": "Just like a sentence is made up of words, an algebraic expression is made up of terms. Understanding how to count and identify these terms is the first step to simplifying and solving algebraic problems.",
+      "key_concepts": [
+        {
+          "concept": "Term",
+          "definition": "A single part of an expression.",
+          "details": [
+            "A term can be a number, a variable, or a product of numbers and variables (e.g., $7$, $x$, $-3a$, $5xy$).",
+            "**Crucial Rule:** Terms are separated ONLY by addition ($+$) and subtraction ($-$) signs."
+          ]
+        },
+        {
+          "concept": "Expression vs. Equation",
+          "definition": "Expressions represent quantities; equations state equality.",
+          "details": [
+            "**Expression:** $3x + 5$ (No equals sign).",
+            "**Equation:** $3x + 5 = 11$ (Has an equals sign)."
+          ]
+        },
+        {
+          "concept": "Types of Expressions",
+          "definition": "Classified by the number of terms.",
+          "details": [
+            "**Monomial:** 1 term (e.g., $7x$)",
+            "**Binomial:** 2 terms (e.g., $x + 4$)",
+            "**Trinomial:** 3 terms (e.g., $2a + b - 6$)"
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s02",
+          "title": "Splitting Expressions into Terms",
+          "type": "svg",
+          "caption": "Chop the expression into pieces right BEFORE every plus or minus sign.",
+          "alt_text": "Visual showing 9a - 2b + 4c - 10 being split by vertical dashed lines before the signs into four distinct boxes: 9a, -2b, +4c, and -10.",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">9a - 2b + 4c - 10</text><line x1=\"160\" y1=\"20\" x2=\"160\" y2=\"130\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"6,6\"/><line x1=\"255\" y1=\"20\" x2=\"255\" y2=\"130\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"6,6\"/><line x1=\"355\" y1=\"20\" x2=\"355\" y2=\"130\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"6,6\"/><rect x=\"70\" y=\"80\" width=\"70\" height=\"40\" fill=\"#dcfce7\" stroke=\"#22c55e\" stroke-width=\"2\" rx=\"5\"/><text x=\"105\" y=\"107\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">9a</text><rect x=\"170\" y=\"80\" width=\"70\" height=\"40\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"205\" y=\"107\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">-2b</text><rect x=\"270\" y=\"80\" width=\"70\" height=\"40\" fill=\"#dcfce7\" stroke=\"#22c55e\" stroke-width=\"2\" rx=\"5\"/><text x=\"305\" y=\"107\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">+4c</text><rect x=\"370\" y=\"80\" width=\"70\" height=\"40\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"405\" y=\"107\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">-10</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Identify the terms in the expression $4a - 7b + 3$.",
+          "solution_steps": [
+            "Step 1: Read left to right and split the expression at the addition and subtraction signs.",
+            "Step 2: Keep the signs attached to the number that follows them.",
+            "Step 3: The pieces are $4a$, $-7b$, and $+3$."
+          ],
+          "final_answer": "Three terms: $4a$, $-7b$, and $3$ (Trinomial)"
+        },
+        {
+          "problem": "How many terms are in the expression $3mn$?",
+          "solution_steps": [
+            "Step 1: Look for addition ($+$) or subtraction ($-$) signs.",
+            "Step 2: There are none. The $3$, $m$, and $n$ are multiplied together (they are factors, not terms).",
+            "Step 3: Since it is an unbroken product, it is a single term."
+          ],
+          "final_answer": "One term (Monomial)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Counting factors as terms.",
+          "correction": "$4xy$ is ONE term, not three. Multiplication does not separate terms."
+        },
+        {
+          "mistake": "Dropping the negative sign when listing terms.",
+          "correction": "In $x - 6$, the second term is $-6$, not just $6$."
+        }
+      ],
+      "quick_summary": [
+        "Terms are separated by $+$ and $-$ signs.",
+        "The sign always belongs to the term immediately following it.",
+        "Monomial = $1$ term, Binomial = $2$ terms, Trinomial = $3$ terms."
+      ]
+    },
+    "ms_math_t05_st03": {
+      "id": "ms_math_t05_st03",
+      "title": "Writing expressions from words",
+      "overview": "Algebra is a language. Being able to translate real-world word problems and English phrases into mathematical notation is one of the most critical skills you will learn, allowing you to build formulas to solve complex problems.",
+      "key_concepts": [
+        {
+          "concept": "Addition and Subtraction Phrases",
+          "definition": "Words that mean $+$, and words that mean $-$.",
+          "details": [
+            "**Addition ($+$):** Sum, plus, increased by, more than (e.g., '$5$ more than $x$' $\\rightarrow x + 5$).",
+            "**Subtraction ($-$):** Difference, minus, decreased by, less than (e.g., '$4$ less than $x$' $\\rightarrow x - 4$)."
+          ]
+        },
+        {
+          "concept": "Multiplication and Division Phrases",
+          "definition": "Words that mean $\\times$, and words that mean $\\div$.",
+          "details": [
+            "**Multiplication ($\\times$):** Product, times, multiplied by, twice ($2x$).",
+            "**Division ($\\div$):** Quotient, divided by, half ($\\frac{x}{2}$)."
+          ]
+        },
+        {
+          "concept": "The Importance of Order",
+          "definition": "Order matters heavily for subtraction and division.",
+          "details": [
+            "'$8$ less than a number' means $x - 8$. (You start with $x$ and take $8$ away).",
+            "'The difference between 8 and a number' is commonly represented as $8-x$ when the order is stated in that way; read the wording carefully because reversing the order changes the expression."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s03",
+          "title": "Translating \"Less Than\"",
+          "type": "svg",
+          "caption": "The phrase 'less than' always flips the order of the numbers in algebra.",
+          "alt_text": "Visual showing the phrase '8 less than x' with crossing arrows indicating that x goes first, and - 8 goes second, resulting in the expression x - 8.",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">\"8 less than x\"</text><path d=\"M 180 70 Q 250 100 320 120\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><polygon points=\"320,120 310,115 315,125\" fill=\"#ef4444\"/><path d=\"M 320 70 Q 250 100 180 120\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><polygon points=\"180,120 190,115 185,125\" fill=\"#2563eb\"/><text x=\"160\" y=\"135\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">x</text><text x=\"250\" y=\"135\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">-</text><text x=\"340\" y=\"135\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">8</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Write an algebraic expression for: 'Twice the sum of a number and 4'.",
+          "solution_steps": [
+            "Step 1: Let the number be $x$.",
+            "Step 2: Translate 'the sum of a number and 4': $x + 4$.",
+            "Step 3: Translate 'Twice' the sum. This means we must multiply the ENTIRE sum by $2$.",
+            "Step 4: Use brackets to group the sum before multiplying."
+          ],
+          "final_answer": "$2(x + 4)$"
+        },
+        {
+          "problem": "A taxi ride costs a fixed fee of $\\$4$ plus $\\$2$ for every kilometre travelled. Write an expression for a journey of $d$ kilometres.",
+          "solution_steps": [
+            "Step 1: The fixed fee is $4$.",
+            "Step 2: The distance charge is $2 \\times d$, or $2d$.",
+            "Step 3: The total cost is the fixed fee PLUS the distance charge."
+          ],
+          "final_answer": "$4 + 2d$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reversing subtraction order.",
+          "correction": "'$6$ less than $x$' translates to $x - 6$, NOT $6 - x$."
+        },
+        {
+          "mistake": "Omitting necessary brackets.",
+          "correction": "'Three times the sum of $x$ and $4$' is $3(x + 4)$, NOT $3x + 4$. Without brackets, only the $x$ is multiplied by $3$."
+        },
+        {
+          "mistake": "Adding an equals sign to an expression.",
+          "correction": "An expression represents a quantity (e.g., $x + 3$). Do not add '= 0' or '= y' unless the word problem explicitly states equality (e.g., 'is equal to')."
+        }
+      ],
+      "quick_summary": [
+        "Identify the unknown and assign a variable (like $x$).",
+        "Look for key words: sum ($+$), difference ($-$), product ($\\times$), quotient ($\\div$).",
+        "Be extremely careful with the order of terms when you see 'less than' or 'divided by'."
+      ]
+    },
+    "ms_math_t05_st04": {
+      "id": "ms_math_t05_st04",
+      "title": "Evaluating expressions",
+      "overview": "An algebraic expression can represent different numerical values depending on the values assigned to its variables. Evaluating an expression means substituting the given numbers for its variables and calculating the final result.",
+      "key_concepts": [
+        {
+          "concept": "The Substitution Method",
+          "definition": "Replacing variables with specific numbers.",
+          "details": [
+            "Write down the given value of each variable.",
+            "Replace each variable with its given value, using brackets around negative numbers to prevent sign errors.",
+            "Calculate the final answer."
+          ]
+        },
+        {
+          "concept": "Order of Operations (BODMAS/PEMDAS)",
+          "definition": "The sequence in which calculations must be performed after substitution.",
+          "details": [
+            "**1. Brackets:** Calculate inside first (e.g., $3(4+2) = 3(6) = 18$).",
+            "**2. Powers (Orders):** Calculate exponents before multiplying (e.g., $2(3^2) = 2(9) = 18$).",
+            "**3. Multiplication & Division:** Left to right.",
+            "**4. Addition & Subtraction:** Left to right."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s04",
+          "title": "Evaluating by Substitution",
+          "type": "svg",
+          "caption": "Replace the variable with a number inside brackets, then calculate.",
+          "alt_text": "Visual showing the expression 2x + 5. An arrow indicates 'Substitute x = 3'. The expression becomes 2(3) + 5. Next step is 6 + 5. Final result is 11.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"30\" width=\"120\" height=\"50\" fill=\"#e2e8f0\" rx=\"5\"/><text x=\"110\" y=\"62\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2<tspan fill=\"#2563eb\">x</tspan> + 5</text><path d=\"M 110 80 Q 110 120 170 140 L 190 140\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"190,140 180,135 180,145\" fill=\"#3b82f6\"/><text x=\"130\" y=\"115\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">Substitute x = 3</text><rect x=\"200\" y=\"115\" width=\"120\" height=\"50\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"260\" y=\"147\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2<tspan fill=\"#1d4ed8\">(3)</tspan> + 5</text><path d=\"M 320 140 L 350 140\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"350,140 340,135 340,145\" fill=\"#64748b\"/><rect x=\"360\" y=\"115\" width=\"100\" height=\"50\" fill=\"#bbf7d0\" rx=\"5\"/><text x=\"410\" y=\"147\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">6 + 5</text><path d=\"M 410 105 L 410 80\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><polygon points=\"410,80 405,90 415,90\" fill=\"#16a34a\"/><rect x=\"360\" y=\"30\" width=\"100\" height=\"50\" fill=\"#fef08a\" rx=\"5\"/><text x=\"410\" y=\"62\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">= 11</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $5x - 4$ when $x = 6$.",
+          "solution_steps": [
+            "Step 1: Substitute $6$ for $x$: $5(6) - 4$.",
+            "Step 2: Follow order of operations (multiply first): $30 - 4$.",
+            "Step 3: Subtract."
+          ],
+          "final_answer": "$26$"
+        },
+        {
+          "problem": "Evaluate $x^2 + 3x$ when $x = -2$.",
+          "solution_steps": [
+            "Step 1: Substitute $-2$ using brackets: $(-2)^2 + 3(-2)$.",
+            "Step 2: Calculate the power first. A negative times a negative is positive: $(-2)^2 = 4$.",
+            "Step 3: Multiply the second term: $3(-2) = -6$.",
+            "Step 4: Combine: $4 - 6 = -2$."
+          ],
+          "final_answer": "$-2$"
+        },
+        {
+          "problem": "Evaluate $3a + 2b$ when $a = 4$ and $b = 5$.",
+          "solution_steps": [
+            "Step 1: Substitute both variables: $3(4) + 2(5)$.",
+            "Step 2: Multiply: $12 + 10$.",
+            "Step 3: Add."
+          ],
+          "final_answer": "$22$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ignoring the order of operations.",
+          "correction": "In $4(5) + 3$, if you add before multiplying you get $4(8) = 32$. The correct way is multiplying first to get $20 + 3 = 23$."
+        },
+        {
+          "mistake": "Handling a negative value substituted into a squared variable.",
+          "correction": "If $x=-3$, then $x^2=(-3)^2=9$. The brackets show that the negative value is squared; this is different from $-3^2$, which means $-(3^2)=-9$ under the usual order of operations."
+        }
+      ],
+      "quick_summary": [
+        "Replace variables with given numbers.",
+        "Always use brackets when substituting negative numbers.",
+        "Strictly follow BODMAS/PEMDAS to calculate the final value."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check numerical results after substituting values into algebraic expressions.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t05_st05": {
+      "id": "ms_math_t05_st05",
+      "title": "Like and unlike terms",
+      "overview": "Algebraic expressions often contain several terms. Some terms can be combined to make the expression shorter, while others cannot. The key is distinguishing between 'like terms' and 'unlike terms'.",
+      "key_concepts": [
+        {
+          "concept": "Like Terms",
+          "definition": "Terms that have exactly the same variable part and exponents.",
+          "details": [
+            "Examples: $3x$ and $7x$; $5xy$ and $9xy$; $2x^2$ and $6x^2$.",
+            "The numerical coefficients can be different."
+          ]
+        },
+        {
+          "concept": "Unlike Terms",
+          "definition": "Terms that have different variable parts or different exponents.",
+          "details": [
+            "Examples: $3x$ and $3y$ (different variables).",
+            "Examples: $4a$ and $4a^2$ (different powers).",
+            "Unlike terms CANNOT be combined into a single term by addition or subtraction."
+          ]
+        },
+        {
+          "concept": "Combining Like Terms",
+          "definition": "Adding or subtracting the coefficients of like terms.",
+          "details": [
+            "Keep the variable part exactly the same.",
+            "Example: $3x + 5x = 8x$ (Three $x$'s plus five $x$'s equals eight $x$'s)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s05",
+          "title": "Combining Like Terms (Fruit Analogy)",
+          "type": "svg",
+          "caption": "You can combine apples with apples, but you cannot combine apples with bananas.",
+          "alt_text": "Visual showing 3a (3 red apples) + 2b (2 yellow bananas) + 4a (4 red apples). Below it shows them grouped as (3a + 4a) + 2b, resulting in 7a + 2b.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"30\" y=\"20\" width=\"120\" height=\"50\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"90\" y=\"52\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">3a (Apples)</text><text x=\"165\" y=\"52\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#334155\">+</text><rect x=\"180\" y=\"20\" width=\"130\" height=\"50\" fill=\"#fef08a\" stroke=\"#eab308\" stroke-width=\"2\" rx=\"5\"/><text x=\"245\" y=\"52\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">2b (Bananas)</text><text x=\"325\" y=\"52\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#334155\">+</text><rect x=\"340\" y=\"20\" width=\"120\" height=\"50\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"400\" y=\"52\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">4a (Apples)</text><path d=\"M 90 70 L 90 100 L 210 100 L 210 120\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><path d=\"M 400 70 L 400 100 L 210 100\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><rect x=\"150\" y=\"120\" width=\"120\" height=\"50\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"210\" y=\"152\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">7a (Apples)</text><path d=\"M 245 70 L 245 100 L 360 100 L 360 120\" fill=\"none\" stroke=\"#eab308\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><text x=\"290\" y=\"152\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#334155\">+</text><rect x=\"310\" y=\"120\" width=\"100\" height=\"50\" fill=\"#fef08a\" stroke=\"#eab308\" stroke-width=\"2\" rx=\"5\"/><text x=\"360\" y=\"152\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">2b</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify: $9a - 4a$",
+          "solution_steps": [
+            "Step 1: Check if they are like terms. Both have the variable $a$.",
+            "Step 2: Subtract the coefficients: $9 - 4 = 5$.",
+            "Step 3: Keep the variable part."
+          ],
+          "final_answer": "$5a$"
+        },
+        {
+          "problem": "Group and combine the like terms in: $4x + 3y + 2x - y + 6$",
+          "solution_steps": [
+            "Step 1: Group the $x$ terms together: $4x + 2x = 6x$.",
+            "Step 2: Group the $y$ terms together: $3y - 1y = 2y$ (remember, $-y$ has an implied coefficient of $-1$).",
+            "Step 3: The constant term $6$ stands alone."
+          ],
+          "final_answer": "$6x + 2y + 6$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding unlike terms.",
+          "correction": "$3x + 4y$ cannot be simplified to $7xy$. The variables are different, so they cannot be merged."
+        },
+        {
+          "mistake": "Ignoring exponents.",
+          "correction": "$2x$ and $3x^2$ are UNLIKE terms. You cannot combine them into $5x^2$ or $5x^3$."
+        },
+        {
+          "mistake": "Forgetting that variable order in multiplication doesn't matter.",
+          "correction": "$3xy$ and $8yx$ ARE like terms because $xy = yx$ (commutative law of multiplication)."
+        }
+      ],
+      "quick_summary": [
+        "Like terms share the exact same variables AND the exact same exponents.",
+        "Add or subtract the coefficients to combine like terms.",
+        "Do not change the variable or the exponent when combining."
+      ]
+    },
+    "ms_math_t05_st06": {
+      "id": "ms_math_t05_st06",
+      "title": "Simplifying expressions",
+      "overview": "Simplifying an algebraic expression means rewriting it in a shorter, cleaner form without changing its true value. This keeps algebra organized and makes equations much easier to solve later.",
+      "key_concepts": [
+        {
+          "concept": "The Simplification Process",
+          "definition": "A systematic approach to cleaning up an expression.",
+          "details": [
+            "**1. Identify:** Find all the like terms (variables that match exactly, and standalone constants).",
+            "**2. Group:** Rearrange the expression to put like terms next to each other.",
+            "**3. Calculate:** Add or subtract the coefficients, carrying the sign that is directly in front of the term.",
+            "**4. Write:** Present the final, shortened expression."
+          ]
+        },
+        {
+          "concept": "Keep the Signs",
+          "definition": "The sign directly in front of a term travels with it.",
+          "details": [
+            "In $4a + 3 - 2a$, the minus sign belongs to the $2a$. Grouping gives $(4a - 2a) + 3$."
+          ]
+        },
+        {
+          "concept": "Simplifying vs. Solving",
+          "definition": "They are not the same thing.",
+          "details": [
+            "**Simplify:** $3x + 2x \\rightarrow 5x$ (Tidying up).",
+            "**Solve:** $5x = 10 \\rightarrow x = 2$ (Finding the unknown value)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s06",
+          "title": "Grouping and Simplifying",
+          "type": "svg",
+          "caption": "Reorder the expression to group matching terms, keeping their signs attached.",
+          "alt_text": "Visual showing 7m - 2 + 4m + 9 being rearranged to (7m + 4m) + (-2 + 9), resulting in 11m + 7.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">7m - 2 + 4m + 9</text><path d=\"M 180 50 L 180 80 L 130 80 L 130 110\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 270 50 L 270 80 L 370 80 L 370 110\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 320 50 L 320 65 L 180 65 L 180 110\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 400 50 L 400 65 L 420 65 L 420 110\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><rect x=\"100\" y=\"110\" width=\"120\" height=\"40\" fill=\"#dcfce7\" stroke=\"#22c55e\" stroke-width=\"2\" rx=\"5\"/><text x=\"160\" y=\"135\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">7m + 4m</text><rect x=\"330\" y=\"110\" width=\"120\" height=\"40\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"5\"/><text x=\"390\" y=\"135\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">- 2 + 9</text><path d=\"M 160 150 L 160 170\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><polygon points=\"160,170 155,160 165,160\" fill=\"#22c55e\"/><path d=\"M 390 150 L 390 170\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><polygon points=\"390,170 385,160 395,160\" fill=\"#ea580c\"/><text x=\"160\" y=\"190\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">11m</text><text x=\"275\" y=\"190\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">+</text><text x=\"390\" y=\"190\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">7</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify: $7m - 2 + 4m + 9$",
+          "solution_steps": [
+            "Step 1: Group the variable terms together: $(7m + 4m)$.",
+            "Step 2: Group the constant terms together: $(-2 + 9)$. (Note the minus sign belongs to the $2$!).",
+            "Step 3: Combine variable coefficients: $7 + 4 = 11$, so $11m$.",
+            "Step 4: Combine constants: $-2 + 9 = 7$."
+          ],
+          "final_answer": "$11m + 7$"
+        },
+        {
+          "problem": "Simplify: $6p + 4 - 2p + 3 - p - 1$",
+          "solution_steps": [
+            "Step 1: Group $p$ terms: $6p - 2p - p$. Remember $-p$ is $-1p$.",
+            "Step 2: Group constants: $+4 + 3 - 1$.",
+            "Step 3: Combine $p$'s: $(6 - 2 - 1)p = 3p$.",
+            "Step 4: Combine constants: $4 + 3 - 1 = 6$."
+          ],
+          "final_answer": "$3p + 6$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Combining constants with variable terms.",
+          "correction": "$4x + 6$ cannot become $10x$. A constant and a variable term are permanently unlike."
+        },
+        {
+          "mistake": "Losing the negative sign when grouping.",
+          "correction": "In $5x - 8x$, the answer is $-3x$, not $3x$. Always calculate exactly what the signs tell you to do."
+        }
+      ],
+      "quick_summary": [
+        "Find and group like terms (matching variables with variables, constants with constants).",
+        "Add or subtract their coefficients.",
+        "Always keep the sign attached to the term immediately following it."
+      ]
+    },
+    "ms_math_t05_st07": {
+      "id": "ms_math_t05_st07",
+      "title": "Addition and subtraction of expressions",
+      "overview": "Adding and subtracting algebraic expressions is all about gathering like terms together. The most critical skill is learning how to correctly remove brackets, especially when a subtraction sign is sitting right outside them.",
+      "key_concepts": [
+        {
+          "concept": "Adding Expressions",
+          "definition": "Combining groups of terms.",
+          "details": [
+            "Simply drop the brackets, group the like terms together, and combine their coefficients.",
+            "Example: $(3x + 2) + (4x + 5) \\rightarrow 3x + 4x + 2 + 5 \\rightarrow 7x + 7$."
+          ]
+        },
+        {
+          "concept": "Subtracting Expressions",
+          "definition": "Taking away a group of terms.",
+          "details": [
+            "**The Golden Rule:** When subtracting a bracketed expression, you MUST change the sign of EVERY term inside that bracket before combining.",
+            "Example: $-(2x + 3)$ becomes $-2x - 3$.",
+            "Example: $-(3a - 4)$ becomes $-3a + 4$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s07",
+          "title": "Subtracting an Expression",
+          "type": "svg",
+          "caption": "The minus sign distributes to every term inside the brackets, flipping their signs.",
+          "alt_text": "Visual showing (8x + 6) - (3x + 2). Arrows from the minus sign point to 3x (making it -3x) and to +2 (making it -2). Resulting expression is 8x + 6 - 3x - 2.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">(8x + 6) - (3x + 2)</text><text x=\"165\" y=\"90\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">8x + 6</text><text x=\"225\" y=\"90\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">-</text><rect x=\"240\" y=\"65\" width=\"100\" height=\"35\" fill=\"#fee2e2\" rx=\"5\"/><text x=\"290\" y=\"90\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">3x + 2</text><path d=\"M 225 100 Q 240 130 260 130 L 265 130\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><polygon points=\"270,130 260,125 260,135\" fill=\"#ef4444\"/><path d=\"M 225 100 Q 270 150 310 130 L 315 125\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><polygon points=\"320,120 310,125 315,130\" fill=\"#ef4444\"/><rect x=\"235\" y=\"150\" width=\"130\" height=\"35\" fill=\"#fecaca\" rx=\"5\"/><text x=\"165\" y=\"175\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">= 8x + 6</text><text x=\"300\" y=\"175\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">- 3x - 2</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Add: $(x + 2) + (3x - 4) + (2x + 5)$.",
+          "solution_steps": [
+            "Step 1: Remove the brackets: $x + 2 + 3x - 4 + 2x + 5$.",
+            "Step 2: Group the variables: $(x + 3x + 2x) = 6x$.",
+            "Step 3: Group the constants: $(2 - 4 + 5) = 3$."
+          ],
+          "final_answer": "$6x + 3$"
+        },
+        {
+          "problem": "Subtract $2x + 3$ from $7x + 9$.",
+          "solution_steps": [
+            "Step 1: Set up the subtraction in the correct order: $(7x + 9) - (2x + 3)$.",
+            "Step 2: Remove brackets and flip the signs of the second expression: $7x + 9 - 2x - 3$.",
+            "Step 3: Combine $x$ terms: $7x - 2x = 5x$.",
+            "Step 4: Combine constants: $9 - 3 = 6$."
+          ],
+          "final_answer": "$5x + 6$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Subtracting in the wrong order.",
+          "correction": "'Subtract A from B' translates to $B - A$, NOT $A - B$."
+        },
+        {
+          "mistake": "Forgetting to change EVERY sign inside a subtracted bracket.",
+          "correction": "When calculating $(5x + 3) - (2x - 1)$, many students write $5x + 3 - 2x - 1$. The correct expansion is $5x + 3 - 2x + 1$, because $-(-1) = +1$."
+        }
+      ],
+      "quick_summary": [
+        "Add expressions by dropping brackets and combining like terms.",
+        "Subtract expressions by taking away every term in the second expression (flip all signs inside the subtracted bracket!).",
+        "Keep variable terms and constant terms strictly separate."
+      ]
+    },
+    "ms_math_t05_st08": {
+      "id": "ms_math_t05_st08",
+      "title": "Multiplication and division of expressions",
+      "overview": "Unlike terms may be multiplied to form a product. A monomial term may also be divided by another monomial term, subject to a non-zero denominator. These operations combine numerical coefficients and use exponent rules when the variable bases match.",
+      "key_concepts": [
+        {
+          "concept": "Multiplying Algebraic Terms",
+          "definition": "Combining terms through multiplication.",
+          "details": [
+            "Multiply the numerical coefficients first.",
+            "Multiply the variables. If they are different, just write them next to each other (e.g., $2a \\times 3b = 6ab$).",
+            "If they are the same variable, ADD their exponents ($x^2 \\times x^3 = x^5$)."
+          ]
+        },
+        {
+          "concept": "Dividing Algebraic Terms",
+          "definition": "Splitting terms through division.",
+          "details": [
+            "Divide the numerical coefficients.",
+            "For matching non-zero bases, subtract the exponent in the denominator from the exponent in the numerator ($x^5 \\div x^2 = x^3$).",
+            "Division by zero is undefined, so variable denominators assume $x \\neq 0$."
+          ]
+        },
+        {
+          "concept": "Sign Rules",
+          "definition": "Applying standard integer rules.",
+          "details": [
+            "Positive $\\times$ Positive = Positive",
+            "Negative $\\times$ Negative = Positive",
+            "Positive $\\times$ Negative = Negative",
+            "Negative $\\times$ Positive = Negative"
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Product of Powers",
+          "equation": "$$ x^a \\times x^b = x^{a+b} \\quad \\text{(same base)} $$",
+          "variables": {
+            "a, b": "Non-negative integer exponents in this introductory context"
+          }
+        },
+        {
+          "name": "Quotient of Powers",
+          "equation": "$$ \\frac{x^a}{x^b} = x^{a-b} \\quad (x \\neq 0,\\ a \\geq b) $$",
+          "variables": {
+            "a, b": "Non-negative integer exponents, with $a \\geq b$ in this introductory context"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s08",
+          "title": "Adding Exponents during Multiplication",
+          "type": "svg",
+          "caption": "When multiplying the same variable, you add the exponents because you are adding to the total count of multiplied variables.",
+          "alt_text": "Visual showing x² times x³ equals (x·x) times (x·x·x) which equals x⁵.",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"100\" y=\"60\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">x²</text><text x=\"160\" y=\"60\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">×</text><text x=\"220\" y=\"60\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">x³</text><text x=\"280\" y=\"60\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"340\" y=\"60\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">x⁵</text><rect x=\"50\" y=\"90\" width=\"100\" height=\"40\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"100\" y=\"117\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">(x · x)</text><text x=\"160\" y=\"117\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">×</text><rect x=\"170\" y=\"90\" width=\"100\" height=\"40\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"220\" y=\"117\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">(x · x · x)</text><text x=\"280\" y=\"117\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><rect x=\"290\" y=\"90\" width=\"160\" height=\"40\" fill=\"#ffedd5\" rx=\"5\"/><text x=\"370\" y=\"117\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">(x · x · x · x · x)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify: $3x \\times 4x$",
+          "solution_steps": [
+            "Step 1: Multiply the coefficients: $3 \\times 4 = 12$.",
+            "Step 2: Multiply the variables: $x \\times x = x^2$."
+          ],
+          "final_answer": "$12x^2$"
+        },
+        {
+          "problem": "Simplify: $\\frac{12a^4}{3a^2}$",
+          "solution_steps": [
+            "Step 1: Divide the coefficients: $12 \\div 3 = 4$.",
+            "Step 2: Subtract the exponents of the variables: $a^{4 - 2} = a^2$."
+          ],
+          "final_answer": "$4a^2 \\quad (a \\neq 0)$"
+        },
+        {
+          "problem": "Simplify: $(-3x)(4x)$",
+          "solution_steps": [
+            "Step 1: Multiply the coefficients (a negative times a positive is negative): $-3 \\times 4 = -12$.",
+            "Step 2: Multiply the variables: $x \\times x = x^2$."
+          ],
+          "final_answer": "$-12x^2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding coefficients instead of multiplying.",
+          "correction": "$3x \\times 4x$ equals $12x^2$, NOT $7x$. Multiply the coefficients and multiply the variable factors; do not use the addition rule."
+        },
+        {
+          "mistake": "Forgetting to multiply the variables.",
+          "correction": "$2a \\times 3a = 6a^2$. A common error is writing $6a$, completely dropping the exponent."
+        },
+        {
+          "mistake": "Adding exponents during division.",
+          "correction": "$\\frac{x^5}{x^2} = x^3$, NOT $x^7$. Always subtract exponents when dividing."
+        }
+      ],
+      "quick_summary": [
+        "Multiply coefficients and add exponents when multiplying powers with the same base.",
+        "Divide coefficients and subtract exponents when dividing powers with the same non-zero base (with a non-negative result exponent in this introductory context).",
+        "Unlike terms CAN be multiplied or divided."
+      ]
+    },
+    "ms_math_t05_st09": {
+      "id": "ms_math_t05_st09",
+      "title": "Using the distributive property",
+      "overview": "The distributive property is a powerful algebraic tool that lets you multiply a single term by a group of terms hidden inside brackets. It 'distributes' the outside multiplier evenly to everything inside.",
+      "key_concepts": [
+        {
+          "concept": "The Distributive Rule",
+          "definition": "Multiply the term outside the brackets by EVERY term inside the brackets.",
+          "details": [
+            "$a(b+c) = ab + ac$",
+            "Example: $3(x + 4) = 3x + 12$ (NOT $3x + 4$)."
+          ]
+        },
+        {
+          "concept": "Distributing Negatives",
+          "definition": "Applying the sign rule when expanding brackets.",
+          "details": [
+            "Multiplying by a negative number flips the sign of every term inside.",
+            "Example: $-2(3x - 5) \\rightarrow (-2)(3x) + (-2)(-5) \\rightarrow -6x + 10$."
+          ]
+        },
+        {
+          "concept": "Simplifying After Distributing",
+          "definition": "Combining like terms after the brackets are removed.",
+          "details": [
+            "Once you expand the brackets, look at the rest of the expression to see if you can group any matching variables or constants."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Distributive Property",
+          "equation": "$$ a(b+c)=ab+ac \\qquad a(b-c)=ab-ac $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s09",
+          "title": "Distributing the Multiplier",
+          "type": "svg",
+          "caption": "The number outside the bracket must visit every term inside the bracket.",
+          "alt_text": "Visual showing 4(x + 3). An arrow points from 4 to x (resulting in 4x). A second arrow points from 4 to +3 (resulting in +12).",
+          "data": "<svg viewBox=\"0 0 500 150\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"150\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"150\" y=\"100\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">4(x + 3)</text><path d=\"M 140 65 Q 160 30 180 65 L 185 75\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"188,78 178,75 185,70\" fill=\"#3b82f6\"/><text x=\"160\" y=\"35\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">× x</text><path d=\"M 140 65 Q 190 10 230 65 L 235 75\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><polygon points=\"238,78 228,75 235,70\" fill=\"#16a34a\"/><text x=\"210\" y=\"15\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">× 3</text><text x=\"260\" y=\"100\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">=</text><rect x=\"290\" y=\"65\" width=\"120\" height=\"45\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"350\" y=\"98\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">4x + 12</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify: $4(x + 3)$",
+          "solution_steps": [
+            "Step 1: Multiply $4$ by the first term: $4 \\times x = 4x$.",
+            "Step 2: Multiply $4$ by the second term: $4 \\times 3 = 12$.",
+            "Step 3: Combine the results."
+          ],
+          "final_answer": "$4x + 12$"
+        },
+        {
+          "problem": "Simplify: $-3(x + 4)$",
+          "solution_steps": [
+            "Step 1: Multiply $-3$ by the first term: $(-3) \\times x = -3x$.",
+            "Step 2: Multiply $-3$ by the second term: $(-3) \\times 4 = -12$.",
+            "Step 3: Combine."
+          ],
+          "final_answer": "$-3x - 12$"
+        },
+        {
+          "problem": "Simplify: $2(x + 3) + 4x$",
+          "solution_steps": [
+            "Step 1: Distribute the $2$: $2x + 6$.",
+            "Step 2: Add the remaining $4x$: $2x + 6 + 4x$.",
+            "Step 3: Combine like terms ($2x + 4x$).",
+            "Step 4: $6x + 6$."
+          ],
+          "final_answer": "$6x + 6$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying only the first term.",
+          "correction": "$3(x + 4)$ becomes $3x + 12$. A common mistake is writing $3x + 4$ by forgetting to distribute to the second term."
+        },
+        {
+          "mistake": "Losing the negative sign inside a subtraction.",
+          "correction": "$-3(x - 5)$ equals $-3x + 15$ because $(-3) \\times (-5) = +15$. Remember that negative $\\times$ negative is positive."
+        }
+      ],
+      "quick_summary": [
+        "Multiply the outside factor by EVERY single term inside.",
+        "Watch your signs carefully, especially with negative multipliers.",
+        "Combine like terms after expanding if there are other parts to the expression."
+      ]
+    },
+    "ms_math_t05_st10": {
+      "id": "ms_math_t05_st10",
+      "title": "Expanding brackets",
+      "overview": "Expanding brackets means removing the brackets by multiplying the term on the outside by every single term on the inside. It is the direct application of the distributive property and is an essential skill for simplifying complex equations.",
+      "key_concepts": [
+        {
+          "concept": "The Golden Rule of Expansion",
+          "definition": "The outside multiplier must visit every term inside.",
+          "details": [
+            "Formula: $a(b+c) = ab + ac$ and $a(b-c) = ab - ac$."
+          ]
+        },
+        {
+          "concept": "Negative Multipliers",
+          "definition": "Handling minus signs outside the bracket.",
+          "details": [
+            "A negative multiplier changes the sign of EVERY term inside the bracket.",
+            "Example: $-3(x + 5) = -3x - 15$.",
+            "Example: $-2(3x - 4) = -6x + 8$ (Negative $\\times$ Negative = Positive)."
+          ]
+        },
+        {
+          "concept": "Multiple Brackets",
+          "definition": "Expanding more than one bracketed expression.",
+          "details": [
+            "Expand each bracketed part completely first, then collect and combine all the like terms.",
+            "Example: $3(x + 2) + 2(x + 5) \\rightarrow 3x + 6 + 2x + 10 \\rightarrow 5x + 16$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s10",
+          "title": "Expanding and Simplifying",
+          "type": "svg",
+          "caption": "Expand each bracket separately, then collect the like terms to find the final simplified expression.",
+          "alt_text": "Visual showing 2(x+4) + 3(x-2). Arrows show expansions to 2x + 8 and 3x - 6. The like terms (2x+3x) and (8-6) are combined to form 5x + 2.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2(x + 4) + 3(x - 2)</text><path d=\"M 180 50 L 180 70\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"180,75 175,65 185,65\" fill=\"#3b82f6\"/><path d=\"M 320 50 L 320 70\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"320,75 315,65 325,65\" fill=\"#3b82f6\"/><rect x=\"100\" y=\"80\" width=\"140\" height=\"40\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"170\" y=\"107\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">2x + 8</text><text x=\"250\" y=\"107\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">+</text><rect x=\"270\" y=\"80\" width=\"140\" height=\"40\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"340\" y=\"107\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">3x - 6</text><path d=\"M 170 125 L 170 145\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M 340 125 L 340 145\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M 170 145 L 250 160 L 340 145\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"180\" y=\"150\" width=\"140\" height=\"40\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"250\" y=\"177\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">5x + 2</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Expand $-2(3x - 4)$.",
+          "solution_steps": [
+            "Step 1: Multiply $-2$ by the first term ($3x$): $(-2)(3x) = -6x$.",
+            "Step 2: Multiply $-2$ by the second term ($-4$): $(-2)(-4) = +8$.",
+            "Step 3: Combine the expanded terms."
+          ],
+          "final_answer": "$-6x + 8$"
+        },
+        {
+          "problem": "Simplify $4(x + 3) - 2(x + 1)$.",
+          "solution_steps": [
+            "Step 1: Expand the first bracket: $4x + 12$.",
+            "Step 2: Expand the second bracket carefully. The $-2$ multiplies everything inside: $-2x - 2$.",
+            "Step 3: Write out the full expansion: $4x + 12 - 2x - 2$.",
+            "Step 4: Group and combine like terms: $(4x - 2x) + (12 - 2) = 2x + 10$."
+          ],
+          "final_answer": "$2x + 10$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Losing a negative sign when subtracting a bracket.",
+          "correction": "$4x + 8 - (2x + 3)$ becomes $4x + 8 - 2x - 3$. Make sure the minus sign distributes to the $+3$ to make it $-3$."
+        },
+        {
+          "mistake": "Forgetting to simplify after expanding.",
+          "correction": "$2x + 3x + 4$ is not finished; you must combine the like terms to get $5x + 4$."
+        }
+      ],
+      "quick_summary": [
+        "Multiply the outside term by EVERY term inside the brackets.",
+        "Be extremely careful with negative multipliers—they flip all signs inside.",
+        "Always combine like terms to finish the simplification."
+      ]
+    },
+    "ms_math_t05_st11": {
+      "id": "ms_math_t05_st11",
+      "title": "Factorising simple expressions",
+      "overview": "Factorising is the exact reverse of expanding brackets. Instead of multiplying to remove brackets, you find the Highest Common Factor (HCF) to put the brackets back in. This breaks the expression down into simpler, multiplied parts.",
+      "key_concepts": [
+        {
+          "concept": "The Highest Common Factor (HCF)",
+          "definition": "The largest factor shared by every term in the expression.",
+          "details": [
+            "The factor can be a number (e.g., $4$ in $8x + 12$).",
+            "The factor can be a variable (e.g., $x$ in $x^2 + 4x$).",
+            "The factor can be both (e.g., $6x$ in $12x^2 + 18x$)."
+          ]
+        },
+        {
+          "concept": "The Factorising Process",
+          "definition": "Extracting the HCF.",
+          "details": [
+            "**Step 1:** Find the HCF of all terms.",
+            "**Step 2:** Write the HCF outside the brackets.",
+            "**Step 3:** Divide each original term by the HCF and put the results inside the brackets.",
+            "**Step 4:** Check your work by expanding."
+          ]
+        },
+        {
+          "concept": "Negative Common Factors",
+          "definition": "Taking out a minus sign.",
+          "details": [
+            "If the leading term is negative, it is often useful to factor out a negative number (e.g., $-6x - 12 = -6(x + 2)$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s11",
+          "title": "Factorising: The Reverse of Expanding",
+          "type": "svg",
+          "caption": "Find the HCF, pull it outside, and leave the divided remainders inside.",
+          "alt_text": "Visual showing 12x² + 18x. The HCF is identified as 6x. 6x is pulled outside a bracket. Inside the bracket is (12x²/6x) + (18x/6x), which simplifies to (2x + 3). Result: 6x(2x + 3).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">12x² + 18x</text><rect x=\"150\" y=\"60\" width=\"200\" height=\"35\" fill=\"#fef08a\" rx=\"5\"/><text x=\"250\" y=\"83\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">HCF = 6x</text><path d=\"M 250 95 L 250 120\" fill=\"none\" stroke=\"#a16207\" stroke-width=\"2\"/><polygon points=\"250,125 245,115 255,115\" fill=\"#a16207\"/><text x=\"160\" y=\"160\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">6x</text><text x=\"210\" y=\"160\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\">(</text><rect x=\"225\" y=\"135\" width=\"60\" height=\"35\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"255\" y=\"160\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">2x</text><text x=\"295\" y=\"160\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">+</text><rect x=\"310\" y=\"135\" width=\"40\" height=\"35\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"330\" y=\"160\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">3</text><text x=\"365\" y=\"160\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\">)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Factorise $10x + 15$.",
+          "solution_steps": [
+            "Step 1: Find the HCF of $10x$ and $15$. The largest number that divides both $10$ and $15$ is $5$.",
+            "Step 2: Divide each term by $5$: $10x \\div 5 = 2x$, and $15 \\div 5 = 3$.",
+            "Step 3: Write the HCF outside the brackets and the quotients inside."
+          ],
+          "final_answer": "$5(2x + 3)$"
+        },
+        {
+          "problem": "Factorise $12x^2 + 18x$.",
+          "solution_steps": [
+            "Step 1: Find the numerical HCF of $12$ and $18$, which is $6$.",
+            "Step 2: Find the variable HCF. Both terms have an $x$.",
+            "Step 3: The total HCF is $6x$.",
+            "Step 4: Divide: $12x^2 \\div 6x = 2x$. $18x \\div 6x = 3$.",
+            "Step 5: Write the $6x$ outside the brackets."
+          ],
+          "final_answer": "$6x(2x + 3)$"
+        },
+        {
+          "problem": "Factorise $6x + 9y + 12$.",
+          "solution_steps": [
+            "Step 1: The numerical HCF of $6, 9$, and $12$ is $3$. There are no common variables.",
+            "Step 2: Divide every term by $3$: $2x, 3y$, and $4$.",
+            "Step 3: Write $3$ outside the brackets."
+          ],
+          "final_answer": "$3(2x + 3y + 4)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Taking out a factor that is not the HIGHEST common factor.",
+          "correction": "Factorising $8x + 12$ as $2(4x + 6)$ is incomplete because $4x$ and $6$ can still be divided by $2$. The full factorisation is $4(2x + 3)$."
+        },
+        {
+          "mistake": "Losing a variable when factoring.",
+          "correction": "When factoring $x^2 + 4x$, the answer is $x(x + 4)$. Do not write $x(x^2 + 4)$."
+        }
+      ],
+      "quick_summary": [
+        "Factorising is writing an expression as a product with brackets.",
+        "Find the HCF (number, variable, or both) of all terms and pull it out front.",
+        "Always check your work by quickly expanding the brackets in your head."
+      ]
+    },
+    "ms_math_t05_st12": {
+      "id": "ms_math_t05_st12",
+      "title": "Algebraic word problems",
+      "overview": "Algebraic word problems describe a situation using words and ask us to represent it using algebra. The main skill is translating English phrases into mathematical operations and building formulas to solve real-world problems.",
+      "key_concepts": [
+        {
+          "concept": "Translating Keywords",
+          "definition": "Converting phrases to operations.",
+          "details": [
+            "**Addition:** More than, sum, increased by.",
+            "**Subtraction:** Less than, difference, decreased by.",
+            "**Multiplication:** Twice, times, product.",
+            "**Division:** Half, quotient, divided by."
+          ]
+        },
+        {
+          "concept": "Expressions vs Equations",
+          "definition": "Knowing what to build.",
+          "details": [
+            "**Expression:** Represents a quantity (e.g., 'Three times a number plus 5' $\\rightarrow 3x + 5$).",
+            "**Equation:** States that two quantities are equal (e.g., 'Three times a number plus 5 is 20' $\\rightarrow 3x + 5 = 20$)."
+          ]
+        },
+        {
+          "concept": "Problem-Solving Method",
+          "definition": "A systematic approach to word problems.",
+          "details": [
+            "1. Read and identify the unknown.",
+            "2. Choose a variable (e.g., $x$).",
+            "3. Translate the phrases using operations and brackets.",
+            "4. Simplify the expression or form an equation if the problem states that two quantities are equal.",
+            "5. If an equation is formed, solve it only when the question asks for an unknown value; check the result in the original context."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s12",
+          "title": "Translating a Word Problem",
+          "type": "svg",
+          "caption": "Break the sentence down into distinct mathematical components.",
+          "alt_text": "Visual mapping 'A taxi costs a $4 fixed fee plus $2 for every km'. '$4 fixed fee' maps to 4. 'plus' maps to +. '$2 for every km' maps to 2d. Final expression: 4 + 2d.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">\"A taxi costs a $4 fixed fee plus $2 for every km\"</text><rect x=\"40\" y=\"60\" width=\"130\" height=\"40\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"105\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">$4 fixed fee</text><rect x=\"180\" y=\"60\" width=\"80\" height=\"40\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"220\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">plus</text><rect x=\"270\" y=\"60\" width=\"190\" height=\"40\" fill=\"#ffedd5\" rx=\"5\"/><text x=\"365\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">$2 for every km (d)</text><path d=\"M 105 110 L 105 130\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"105,135 100,125 110,125\" fill=\"#3b82f6\"/><path d=\"M 220 110 L 220 130\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"2\"/><polygon points=\"220,135 215,125 225,125\" fill=\"#22c55e\"/><path d=\"M 365 110 L 365 130\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><polygon points=\"365,135 360,125 370,125\" fill=\"#ea580c\"/><text x=\"105\" y=\"170\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">4</text><text x=\"220\" y=\"170\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">+</text><text x=\"365\" y=\"170\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">2d</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Write an expression for three times the difference between a number and 5.",
+          "solution_steps": [
+            "Step 1: Let the number be $x$.",
+            "Step 2: The difference between the number and $5$ is $x - 5$.",
+            "Step 3: Multiply the ENTIRE difference by $3$. Use brackets to group the difference."
+          ],
+          "final_answer": "$3(x - 5)$"
+        },
+        {
+          "problem": "A number is $n$. Write an expression for the next two consecutive integers.",
+          "solution_steps": [
+            "Step 1: Consecutive integers go up by $1$ each time (like $4, 5, 6$).",
+            "Step 2: If the first number is $n$, the next number is $n + 1$.",
+            "Step 3: The following number is $n + 2$."
+          ],
+          "final_answer": "$n, n+1, n+2$"
+        },
+        {
+          "problem": "A rectangle has a length of $x+3$ centimetres and a width of $x$ centimetres. Write an expression for its perimeter.",
+          "solution_steps": [
+            "Step 1: The perimeter is the sum of all four sides: Length + Width + Length + Width.",
+            "Step 2: $P = (x + 3) + x + (x + 3) + x$.",
+            "Step 3: Group like terms: $(x + x + x + x) + (3 + 3)$.",
+            "Step 4: Combine."
+          ],
+          "final_answer": "$4x + 6$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reversing subtraction order.",
+          "correction": "'5 less than x' means you start with $x$ and take $5$ away ($x - 5$). It is NOT $5 - x$."
+        },
+        {
+          "mistake": "Omitting brackets when operations apply to groups.",
+          "correction": "'Three times the sum of $x$ and 4' is $3(x + 4)$, NOT $3x + 4$."
+        },
+        {
+          "mistake": "Confusing perimeter with area.",
+          "correction": "Perimeter is the distance around the outside (addition). Area is the space inside (multiplication)."
+        }
+      ],
+      "quick_summary": [
+        "Choose a variable for the unknown quantity.",
+        "Translate English keywords into mathematical operations.",
+        "Use brackets when an operation applies to an entire sum or difference.",
+        "Only use an equals sign if the problem explicitly states that two things are equal."
+      ]
+    }
+  }
+}

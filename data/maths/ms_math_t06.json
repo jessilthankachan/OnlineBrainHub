@@ -1,0 +1,1047 @@
+{
+  "subject": "math",
+  "topicId": "ms_math_t06",
+  "topicTitle": "Equations and Inequalities",
+  "grade": "Middle School",
+  "subtopics": {
+    "ms_math_t06_st01": {
+      "id": "ms_math_t06_st01",
+      "title": "Understanding equations",
+      "overview": "An equation is a mathematical statement built around an equals sign ($=$), declaring that the expressions on the left and right sides have exactly the same value. Think of it as a balanced scale: whatever you do to one side, you must do to the other to keep it balanced.",
+      "key_concepts": [
+        {
+          "concept": "Expression vs. Equation",
+          "definition": "The difference is the equals sign.",
+          "details": [
+            "**Expression:** $3x + 5$ (Represents a quantity, no equals sign).",
+            "**Equation:** $3x + 5 = 20$ (States that two quantities are perfectly equal)."
+          ]
+        },
+        {
+          "concept": "The Solution",
+          "definition": "The value that makes the equation true.",
+          "details": [
+            "If $x + 6 = 14$, replacing $x$ with $8$ makes the statement $14 = 14$ true. Therefore, $8$ is the solution."
+          ]
+        },
+        {
+          "concept": "Number of Solutions",
+          "definition": "Equations don't always have just one answer.",
+          "details": [
+            "**One Solution:** $x + 4 = 9$ (Only $x = 5$ works).",
+            "**No Solution:** $x + 2 = x + 7$ (Impossible, $2$ never equals $7$).",
+            "**Infinite Solutions:** $2(x + 3) = 2x + 6$ (Both sides are identical, so ANY number works)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s01",
+          "title": "The Balanced Scale",
+          "type": "svg",
+          "caption": "An equation is like a balanced scale. To keep it balanced, whatever you remove from one side must be removed from the other.",
+          "alt_text": "A balanced scale. Left side has a box labeled 'x' and 3 small blocks. Right side has 8 small blocks. Underneath, 3 blocks are removed from both sides, leaving 'x' on the left and 5 blocks on the right.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 250 160 L 200 80 L 300 80 Z\" fill=\"#94a3b8\"/><rect x=\"245\" y=\"160\" width=\"10\" height=\"30\" fill=\"#475569\"/><line x1=\"100\" y1=\"80\" x2=\"400\" y2=\"80\" stroke=\"#334155\" stroke-width=\"6\"/><path d=\"M 100 80 L 120 120 L 80 120 Z\" fill=\"#cbd5e1\"/><path d=\"M 400 80 L 420 120 L 380 120 Z\" fill=\"#cbd5e1\"/><rect x=\"80\" y=\"40\" width=\"40\" height=\"40\" fill=\"#3b82f6\" rx=\"4\"/><text x=\"100\" y=\"65\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">x</text><rect x=\"130\" y=\"60\" width=\"20\" height=\"20\" fill=\"#22c55e\" rx=\"2\"/><rect x=\"130\" y=\"35\" width=\"20\" height=\"20\" fill=\"#22c55e\" rx=\"2\"/><rect x=\"100\" y=\"15\" width=\"20\" height=\"20\" fill=\"#22c55e\" rx=\"2\"/><text x=\"100\" y=\"140\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x + 3</text><rect x=\"370\" y=\"60\" width=\"20\" height=\"20\" fill=\"#22c55e\" rx=\"2\"/><rect x=\"395\" y=\"60\" width=\"20\" height=\"20\" fill=\"#22c55e\" rx=\"2\"/><rect x=\"370\" y=\"35\" width=\"20\" height=\"20\" fill=\"#22c55e\" rx=\"2\"/><rect x=\"395\" y=\"35\" width=\"20\" height=\"20\" fill=\"#22c55e\" rx=\"2\"/><rect x=\"420\" y=\"60\" width=\"20\" height=\"20\" fill=\"#22c55e\" rx=\"2\"/><rect x=\"420\" y=\"35\" width=\"20\" height=\"20\" fill=\"#22c55e\" rx=\"2\"/><rect x=\"395\" y=\"10\" width=\"20\" height=\"20\" fill=\"#22c55e\" rx=\"2\"/><rect x=\"370\" y=\"10\" width=\"20\" height=\"20\" fill=\"#22c55e\" rx=\"2\"/><text x=\"400\" y=\"140\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">8</text><text x=\"250\" y=\"140\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">=</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Determine if $x = 5$ is a solution to the equation $x + 6 = 14$.",
+          "solution_steps": [
+            "Step 1: Substitute $5$ for $x$ in the equation: $5 + 6 = 14$.",
+            "Step 2: Calculate the left side: $5 + 6 = 11$.",
+            "Step 3: Compare left and right sides: $11 \\neq 14$.",
+            "Step 4: Since the sides are not equal, $5$ is NOT a solution."
+          ],
+          "final_answer": "No"
+        },
+        {
+          "problem": "Solve: $x + 7 = 15$",
+          "solution_steps": [
+            "Step 1: To isolate $x$, we must remove the $+7$.",
+            "Step 2: The opposite of adding $7$ is subtracting $7$. Subtract $7$ from BOTH sides to maintain balance.",
+            "Step 3: $x + 7 - 7 = 15 - 7$.",
+            "Step 4: $x = 8$."
+          ],
+          "final_answer": "$x = 8$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying an operation to only one side.",
+          "correction": "If you subtract $3$ from the left side, you MUST subtract $3$ from the right side. Otherwise, the 'scale' tips and the equals sign is no longer true."
+        }
+      ],
+      "quick_summary": [
+        "An equation has an equals sign ($=$); an expression does not.",
+        "A solution is a number that makes both sides of the equation perfectly equal.",
+        "The golden rule of algebra: Whatever you do to one side, do exactly the same to the other."
+      ]
+    },
+    "ms_math_t06_st02": {
+      "id": "ms_math_t06_st02",
+      "title": "One-step linear equations",
+      "overview": "A one-step equation requires exactly one mathematical operation to isolate the variable (get it by itself). You solve these by using 'inverse operations', which are mathematical opposites that undo each other.",
+      "key_concepts": [
+        {
+          "concept": "Inverse Operations",
+          "definition": "Operations that reverse each other.",
+          "details": [
+            "**Addition ($+$)** is undone by **Subtraction ($-$)**.",
+            "**Subtraction ($-$)** is undone by **Addition ($+$)**.",
+            "**Multiplication ($\\times$)** is undone by **Division ($\\div$)**.",
+            "**Division ($\\div$)** is undone by **Multiplication ($\\times$)**."
+          ]
+        },
+        {
+          "concept": "Isolating the Variable",
+          "definition": "Getting the letter completely alone on one side of the equals sign.",
+          "details": [
+            "Look at what is happening to the variable.",
+            "Apply the inverse operation to BOTH sides of the equation to 'cancel out' the number next to the variable."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s02",
+          "title": "Inverse Operations Table",
+          "type": "svg",
+          "caption": "Use the opposite operation to cancel a number out.",
+          "alt_text": "Two rows pair inverse operations: addition with subtraction, and multiplication with division.",
+          "data": "<svg viewBox=\"0 0 500 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"180\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"28\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Inverse Operations</text><rect x=\"55\" y=\"48\" width=\"170\" height=\"48\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\" rx=\"8\"/><text x=\"140\" y=\"78\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Addition (+)</text><path d=\"M 235 60 L 265 60 M 265 84 L 235 84\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"265,60 257,55 257,65\" fill=\"#64748b\"/><polygon points=\"235,84 243,79 243,89\" fill=\"#64748b\"/><rect x=\"275\" y=\"48\" width=\"170\" height=\"48\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"8\"/><text x=\"360\" y=\"78\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Subtraction (−)</text><rect x=\"55\" y=\"112\" width=\"170\" height=\"48\" fill=\"#dcfce7\" stroke=\"#22c55e\" stroke-width=\"2\" rx=\"8\"/><text x=\"140\" y=\"142\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Multiplication (×)</text><path d=\"M 235 124 L 265 124 M 265 148 L 235 148\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"265,124 257,119 257,129\" fill=\"#64748b\"/><polygon points=\"235,148 243,143 243,153\" fill=\"#64748b\"/><rect x=\"275\" y=\"112\" width=\"170\" height=\"48\" fill=\"#fef3c7\" stroke=\"#ca8a04\" stroke-width=\"2\" rx=\"8\"/><text x=\"360\" y=\"142\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Division (÷)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve: $x - 9 = 4$",
+          "solution_steps": [
+            "Step 1: The variable $x$ has $9$ subtracted from it. The inverse of subtracting $9$ is adding $9$.",
+            "Step 2: Add $9$ to both sides: $x - 9 + 9 = 4 + 9$.",
+            "Step 3: Simplify: $x = 13$."
+          ],
+          "final_answer": "$x = 13$"
+        },
+        {
+          "problem": "Solve: $6x = 42$",
+          "solution_steps": [
+            "Step 1: The variable $x$ is multiplied by $6$. The inverse of multiplying by $6$ is dividing by $6$.",
+            "Step 2: Divide both sides by $6$: $\\frac{6x}{6} = \\frac{42}{6}$.",
+            "Step 3: Simplify: $x = 7$."
+          ],
+          "final_answer": "$x = 7$"
+        },
+        {
+          "problem": "Solve: $\\frac{x}{5} = 7$",
+          "solution_steps": [
+            "Step 1: The variable $x$ is divided by $5$. The inverse of dividing by $5$ is multiplying by $5$.",
+            "Step 2: Multiply both sides by $5$: $\\frac{x}{5} \\times 5 = 7 \\times 5$.",
+            "Step 3: Simplify: $x = 35$."
+          ],
+          "final_answer": "$x = 35$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the same operation instead of the inverse.",
+          "correction": "For $x + 5 = 12$, do NOT add $5$ to both sides. You must SUBTRACT $5$ to cancel it out."
+        },
+        {
+          "mistake": "Confusing signs when dividing by a negative coefficient.",
+          "correction": "If $-3x = 18$, divide both sides by $-3$. The answer is $18 \\div (-3) = -6$. The negative sign travels with the coefficient during division."
+        }
+      ],
+      "quick_summary": [
+        "Identify what is happening to the variable (added, subtracted, multiplied, divided).",
+        "Perform the OPPOSITE (inverse) operation to BOTH sides of the equation.",
+        "Check your answer by plugging it back into the original equation."
+      ],
+      "utilities": [
+        {
+          "title": "Linear Equation Solver",
+          "description": "Check solutions to linear equations and compare your algebraic working with a numerical result.",
+          "url": "https://onlinetoolpad.com/math/Linear%20Equation%20solver",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t06_st03": {
+      "id": "ms_math_t06_st03",
+      "title": "Two-step linear equations",
+      "overview": "A two-step equation requires two inverse operations to isolate the variable. The secret is knowing which operation to undo first. You must reverse the operations in the opposite order they were applied to the variable—think of it like peeling an onion from the outside in.",
+      "key_concepts": [
+        {
+          "concept": "The Reverse Order Rule",
+          "definition": "Undo addition or subtraction BEFORE undoing multiplication or division.",
+          "details": [
+            "In $3x + 5 = 20$, the $x$ was multiplied by $3$, then $5$ was added.",
+            "To solve, go backwards: first subtract the $5$, then divide by the $3$."
+          ]
+        },
+        {
+          "concept": "Handling Negative Coefficients",
+          "definition": "The minus sign stays with the multiplier until the final division step.",
+          "details": [
+            "In $-3x + 4 = 19$, first subtract $4$, leaving $-3x = 15$. Then divide by $-3$ to get $x = -5$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s03",
+          "title": "Unwrapping a Two-Step Equation",
+          "type": "svg",
+          "caption": "Peel away the isolated constant first (addition/subtraction), then strip away the coefficient (multiplication/division).",
+          "alt_text": "A clear sequence: 3x + 5 = 20; subtract 5 from both sides to get 3x = 15; divide both sides by 3 to get x = 5.",
+          "data": "<svg viewBox=\"0 0 500 190\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"190\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"30\" font-family=\"sans-serif\" font-size=\"22\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Solve 3x + 5 = 20</text><rect x=\"95\" y=\"48\" width=\"310\" height=\"35\" fill=\"#fee2e2\" rx=\"6\"/><text x=\"250\" y=\"71\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#991b1b\">Subtract 5 from both sides</text><path d=\"M 250 84 L 250 100\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"250,105 244,95 256,95\" fill=\"#64748b\"/><rect x=\"150\" y=\"108\" width=\"200\" height=\"32\" fill=\"#dbeafe\" rx=\"6\"/><text x=\"250\" y=\"130\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1e40af\" font-weight=\"bold\">3x = 15</text><text x=\"250\" y=\"158\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#334155\">Divide both sides by 3</text><text x=\"250\" y=\"181\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">x = 5</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve: $4x + 3 = 19$",
+          "solution_steps": [
+            "Step 1: First, undo the addition. Subtract $3$ from both sides: $4x = 19 - 3$, so $4x = 16$.",
+            "Step 2: Next, undo the multiplication. Divide both sides by $4$: $x = 16 \\div 4$.",
+            "Step 3: $x = 4$."
+          ],
+          "final_answer": "$x = 4$"
+        },
+        {
+          "problem": "Solve: $\\frac{x}{4} + 3 = 8$",
+          "solution_steps": [
+            "Step 1: Undo the addition. Subtract $3$ from both sides: $\\frac{x}{4} = 8 - 3$, so $\\frac{x}{4} = 5$.",
+            "Step 2: Undo the division. Multiply both sides by $4$: $x = 5 \\times 4$.",
+            "Step 3: $x = 20$."
+          ],
+          "final_answer": "$x = 20$"
+        },
+        {
+          "problem": "Solve: $5x - 8 = 22$",
+          "solution_steps": [
+            "Step 1: Undo the subtraction. Add $8$ to both sides: $5x = 22 + 8$, so $5x = 30$.",
+            "Step 2: Undo the multiplication. Divide by $5$: $x = 30 \\div 5$.",
+            "Step 3: $x = 6$."
+          ],
+          "final_answer": "$x = 6$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dividing before subtracting.",
+          "correction": "In $3x + 4 = 16$, if you try to divide by $3$ first, you MUST divide everything by $3$, creating messy fractions ($x + \\frac{4}{3} = \\frac{16}{3}$). Always undo the isolated addition/subtraction constant first."
+        }
+      ],
+      "quick_summary": [
+        "Use the reverse order of operations to solve.",
+        "Step 1: Add or subtract to remove the constant term.",
+        "Step 2: Multiply or divide to remove the coefficient attached to the variable.",
+        "Check your answer by substituting it back into the original equation."
+      ],
+      "utilities": [
+        {
+          "title": "Linear Equation Solver",
+          "description": "Check solutions to linear equations and compare your algebraic working with a numerical result.",
+          "url": "https://onlinetoolpad.com/math/Linear%20Equation%20solver",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t06_st04": {
+      "id": "ms_math_t06_st04",
+      "title": "Multi-step linear equations",
+      "overview": "A multi-step linear equation requires several algebraic steps to isolate the variable. These equations may contain brackets, like terms on the same side, or variables on both sides of the equals sign.",
+      "key_concepts": [
+        {
+          "concept": "The 5-Step Strategy",
+          "definition": "A reliable process for complex equations.",
+          "details": [
+            "**1. Expand brackets:** Use the distributive property to remove brackets.",
+            "**2. Collect like terms:** Combine variables and constants on each side independently.",
+            "**3. Group across the equals sign:** Move all variable terms to one side and constants to the other.",
+            "**4. Isolate the variable:** Use inverse operations (multiply/divide).",
+            "**5. Check:** Substitute your answer back into the original equation."
+          ]
+        },
+        {
+          "concept": "Variables on Both Sides",
+          "definition": "Managing equations like $5x + 7 = 2x + 19$.",
+          "details": [
+            "To solve, you must eliminate the variable from one side. It is usually easier to subtract the smaller variable term (e.g., subtract $2x$ from both sides to get $3x + 7 = 19$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s04",
+          "title": "Variables on Both Sides",
+          "type": "svg",
+          "caption": "Move the variables to one side and the constants to the other.",
+          "alt_text": "Visual showing 5x + 7 = 2x + 19. Arrows show subtracting 2x from both sides to get 3x + 7 = 19, then subtracting 7 to get 3x = 12, then dividing by 3 to get x = 4.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">5x + 7 = 2x + 19</text><path d=\"M 320 50 Q 250 80 180 50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><polygon points=\"180,50 190,45 185,55\" fill=\"#3b82f6\"/><text x=\"250\" y=\"75\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Subtract 2x</text><rect x=\"170\" y=\"90\" width=\"160\" height=\"40\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"250\" y=\"117\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">3x + 7 = 19</text><path d=\"M 200 135 Q 250 165 300 135\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><polygon points=\"300,135 290,130 295,140\" fill=\"#ea580c\"/><text x=\"250\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">Subtract 7</text><rect x=\"200\" y=\"175\" width=\"100\" height=\"40\" fill=\"#ffedd5\" rx=\"5\"/><text x=\"250\" y=\"202\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">3x = 12</text><path d=\"M 310 195 L 340 195\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"370\" y=\"200\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">x = 4</text><text x=\"325\" y=\"185\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">÷3</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve: $3x + 4x - 5 = 16$",
+          "solution_steps": [
+            "Step 1: Combine the like terms on the left side: $7x - 5 = 16$.",
+            "Step 2: Add $5$ to both sides: $7x = 16 + 5$, so $7x = 21$.",
+            "Step 3: Divide by $7$: $x = 3$."
+          ],
+          "final_answer": "$x = 3$"
+        },
+        {
+          "problem": "Solve: $2(x + 3) + 4 = 18$",
+          "solution_steps": [
+            "Step 1: Expand the brackets: $2x + 6 + 4 = 18$.",
+            "Step 2: Combine the constants on the left: $2x + 10 = 18$.",
+            "Step 3: Subtract $10$ from both sides: $2x = 8$.",
+            "Step 4: Divide by $2$: $x = 4$."
+          ],
+          "final_answer": "$x = 4$"
+        },
+        {
+          "problem": "Solve: $-2(x - 4) + 3 = 17$",
+          "solution_steps": [
+            "Step 1: Expand the brackets (watch the signs!): $-2x + 8 + 3 = 17$.",
+            "Step 2: Combine constants: $-2x + 11 = 17$.",
+            "Step 3: Subtract $11$ from both sides: $-2x = 6$.",
+            "Step 4: Divide by $-2$: $x = 6 \\div (-2) = -3$."
+          ],
+          "final_answer": "$x = -3$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Moving terms without changing their signs.",
+          "correction": "You cannot simply 'move' a $2x$ from the right side to the left side without performing an inverse operation (subtracting $2x$ from both sides)."
+        }
+      ],
+      "quick_summary": [
+        "If you see brackets, expand them first.",
+        "If you see like terms on the same side, combine them.",
+        "If you have variables on both sides, subtract one to group them together on a single side."
+      ],
+      "utilities": [
+        {
+          "title": "Linear Equation Solver",
+          "description": "Check solutions to linear equations and compare your algebraic working with a numerical result.",
+          "url": "https://onlinetoolpad.com/math/Linear%20Equation%20solver",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t06_st05": {
+      "id": "ms_math_t06_st05",
+      "title": "Equations with brackets",
+      "overview": "Brackets group terms together and show which operations belong together. To solve equations with brackets, you must free the variable trapped inside. You can do this by either expanding the brackets or dividing out the multiplier.",
+      "key_concepts": [
+        {
+          "concept": "Method 1: Expand First",
+          "definition": "Multiply the outside factor by every term inside.",
+          "details": [
+            "Example: $3(x + 4) = 24 \\rightarrow 3x + 12 = 24$.",
+            "Then subtract $12$ and divide by $3$."
+          ]
+        },
+        {
+          "concept": "Method 2: Divide First",
+          "definition": "If the number outside divides cleanly into the other side, do that first.",
+          "details": [
+            "If the outside multiplier is non-zero, divide both sides by it first. For example, $5(x + 2) = 35$ becomes $x + 2 = 7$.",
+            "Then simply subtract $2$ to get $x = 5$."
+          ]
+        },
+        {
+          "concept": "Negative Signs Before Brackets",
+          "definition": "A minus sign acts like a multiplier of -1.",
+          "details": [
+            "Example: $-(x - 6) = -x + 6$. Every sign inside the bracket flips."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s05",
+          "title": "Two Paths to Solve",
+          "type": "svg",
+          "caption": "You can expand first, or divide first if the numbers are friendly.",
+          "alt_text": "Visual showing 3(x+4)=24. Path 1: Expand -> 3x+12=24 -> 3x=12 -> x=4. Path 2: Divide by 3 -> x+4=8 -> x=4. Both reach the same answer.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"35\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">3(x + 4) = 24</text><path d=\"M 230 45 L 140 80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"140,80 150,75 145,70\" fill=\"#3b82f6\"/><text x=\"160\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Method 1: Expand</text><rect x=\"60\" y=\"90\" width=\"150\" height=\"35\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"135\" y=\"113\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">3x + 12 = 24</text><rect x=\"60\" y=\"135\" width=\"150\" height=\"35\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"135\" y=\"158\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">3x = 12</text><path d=\"M 270 45 L 360 80\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><polygon points=\"360,80 350,75 355,70\" fill=\"#16a34a\"/><text x=\"360\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Method 2: Divide by 3</text><rect x=\"290\" y=\"90\" width=\"150\" height=\"35\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"365\" y=\"113\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">x + 4 = 8</text><path d=\"M 135 180 L 220 220\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 365 135 L 280 220\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"210\" y=\"200\" width=\"80\" height=\"35\" fill=\"#fef08a\" rx=\"5\"/><text x=\"250\" y=\"223\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">x = 4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve: $4(x - 3) = 20$",
+          "solution_steps": [
+            "Step 1: Divide both sides by $4$: $x - 3 = 5$.",
+            "Step 2: Add $3$ to both sides: $x = 8$."
+          ],
+          "final_answer": "$x = 8$"
+        },
+        {
+          "problem": "Solve: $-2(x + 3) = 10$",
+          "solution_steps": [
+            "Step 1: Divide both sides by $-2$: $x + 3 = -5$.",
+            "Step 2: Subtract $3$ from both sides: $x = -5 - 3 = -8$."
+          ],
+          "final_answer": "$x = -8$"
+        },
+        {
+          "problem": "Solve: $2(x + 4) = x + 11$",
+          "solution_steps": [
+            "Step 1: Expand the left side: $2x + 8 = x + 11$.",
+            "Step 2: Subtract $x$ from both sides: $x + 8 = 11$.",
+            "Step 3: Subtract $8$ from both sides: $x = 3$."
+          ],
+          "final_answer": "$x = 3$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the 'Divide First' method when the numbers don't divide cleanly.",
+          "correction": "If you have $3(x + 4) = 10$, dividing by $3$ gives $x + 4 = \\frac{10}{3}$. It is usually much easier to expand the brackets first to avoid fractions until the final step."
+        }
+      ],
+      "quick_summary": [
+        "Brackets group terms together and indicate multiplication.",
+        "You can solve by expanding the brackets (distributive property) OR by dividing both sides by the outside multiplier.",
+        "Always distribute a negative sign to EVERY term inside the bracket."
+      ],
+      "utilities": [
+        {
+          "title": "Linear Equation Solver",
+          "description": "Check solutions to linear equations and compare your algebraic working with a numerical result.",
+          "url": "https://onlinetoolpad.com/math/Linear%20Equation%20solver",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t06_st06": {
+      "id": "ms_math_t06_st06",
+      "title": "Equations involving fractions",
+      "overview": "Fractions in an equation can make it look complicated, but they are easy to remove. By using multiplication (the inverse operation of division) or by finding a Least Common Multiple (LCM), you can 'clear' the fractions and turn the problem into a standard linear equation.",
+      "key_concepts": [
+        {
+          "concept": "Undoing Division",
+          "definition": "Eliminating a single denominator.",
+          "details": [
+            "If an entire side is divided by a number, multiply both sides by that number.",
+            "Example: $\\frac{x}{5} = 8 \\rightarrow x = 8 \\times 5 = 40$."
+          ]
+        },
+        {
+          "concept": "Fractional Coefficients",
+          "definition": "Multiplying by the reciprocal.",
+          "details": [
+            "If you have $\\frac{2}{3}x = 10$, multiply both sides by the flipped fraction ($\\frac{3}{2}$).",
+            "$x = 10 \\times \\frac{3}{2} = 15$."
+          ]
+        },
+        {
+          "concept": "Clearing Denominators",
+          "definition": "Using the LCM to eliminate multiple fractions.",
+          "details": [
+            "Find the Least Common Multiple of ALL denominators in the equation.",
+            "Multiply EVERY term on BOTH sides by that LCM, including whole-number terms, so the equality is preserved."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s06",
+          "title": "Clearing Denominators with LCM",
+          "type": "svg",
+          "caption": "Multiply the entire equation by the LCM of the denominators to wipe out the fractions instantly.",
+          "alt_text": "Visual showing x/2 + x/3 = 10. The LCM of 2 and 3 is 6. Multiplying all terms by 6 gives 3x + 2x = 60, resulting in 5x = 60.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"160\" y=\"40\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x/2 + x/3 = 10</text><rect x=\"280\" y=\"15\" width=\"150\" height=\"35\" fill=\"#fef08a\" rx=\"5\"/><text x=\"355\" y=\"38\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">LCM of 2 and 3 = 6</text><rect x=\"50\" y=\"70\" width=\"400\" height=\"45\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"250\" y=\"100\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Multiply EVERYTHING by 6:</text><text x=\"150\" y=\"150\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">6(x/2) + 6(x/3) = 6(10)</text><rect x=\"110\" y=\"160\" width=\"280\" height=\"35\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"250\" y=\"184\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">3x + 2x = 60</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve: $\\frac{x}{4} + 3 = 9$",
+          "solution_steps": [
+            "Step 1: Isolate the fraction first by subtracting $3$ from both sides: $\\frac{x}{4} = 6$.",
+            "Step 2: Multiply both sides by $4$: $x = 6 \\times 4$.",
+            "Step 3: $x = 24$."
+          ],
+          "final_answer": "$x = 24$"
+        },
+        {
+          "problem": "Solve: $\\frac{x}{2} = \\frac{x}{4} + 3$",
+          "solution_steps": [
+            "Step 1: The denominators are $2$ and $4$. The LCM is $4$.",
+            "Step 2: Multiply every single term by $4$: $4(\\frac{x}{2}) = 4(\\frac{x}{4}) + 4(3)$.",
+            "Step 3: Simplify the fractions: $2x = x + 12$.",
+            "Step 4: Subtract $x$ from both sides: $x = 12$."
+          ],
+          "final_answer": "$x = 12$"
+        },
+        {
+          "problem": "Solve: $-\\frac{x}{3} = 4$",
+          "solution_steps": [
+            "Step 1: Multiply both sides by $-3$.",
+            "Step 2: $x = 4 \\times (-3)$.",
+            "Step 3: $x = -12$."
+          ],
+          "final_answer": "$x = -12$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying only the fraction terms by the LCM.",
+          "correction": "In $\\frac{x}{2} + \\frac{x}{3} = 10$, you must multiply the $10$ by the LCM ($6$) as well. If you only clear the fractions, the equation becomes unbalanced."
+        }
+      ],
+      "quick_summary": [
+        "If the whole side is divided by a number, multiply by that number.",
+        "For fractional coefficients (like $\\frac{2}{3}$), multiply by the reciprocal ($\\frac{3}{2}$).",
+        "If there are multiple fractions, multiply EVERY term in the equation by the LCM of the denominators to turn it into an equation with only whole numbers."
+      ],
+      "utilities": [
+        {
+          "title": "Linear Equation Solver",
+          "description": "Check solutions to linear equations and compare your algebraic working with a numerical result.",
+          "url": "https://onlinetoolpad.com/math/Linear%20Equation%20solver",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t06_st07": {
+      "id": "ms_math_t06_st07",
+      "title": "Forming equations from word problems",
+      "overview": "Many real-life problems describe situations using words rather than mathematical symbols. To solve them using algebra, we must act as translators, converting English sentences into mathematical equations that we can solve.",
+      "key_concepts": [
+        {
+          "concept": "Translating Vocabulary",
+          "definition": "Identifying the mathematical operations hidden in text.",
+          "details": [
+            "**Addition:** Sum, total, increased by, more than.",
+            "**Subtraction:** Difference, decreased by, less than.",
+            "**Multiplication:** Product, twice, double, 'of'.",
+            "**Division:** Half, one-third, ratio.",
+            "**Equality:** Is, equals, gives, results in."
+          ]
+        },
+        {
+          "concept": "The 6-Step Formation Method",
+          "definition": "A systematic approach to word problems.",
+          "details": [
+            "1. **Identify the unknown:** What are you trying to find?",
+            "2. **Choose a variable:** Assign a letter (like $x$) to the unknown.",
+            "3. **Translate:** Convert the phrases into expressions.",
+            "4. **Form the equation:** Connect the expressions with an equals sign.",
+            "5. **Solve:** Isolate the variable.",
+            "6. **Check:** Ensure the answer makes sense in the real-world context."
+          ]
+        },
+        {
+          "concept": "Word Order Traps",
+          "definition": "Subtractions require careful reading.",
+          "details": [
+            "'$5$ less than a number' means $x - 5$.",
+            "'A number less than 5' means $5-x$; '5 less than a number' means $x-5$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s07",
+          "title": "Mapping Words to an Equation",
+          "type": "svg",
+          "caption": "Translate each piece of the sentence directly into math.",
+          "alt_text": "Visual showing the sentence 'Five less than twice a number is 17'. 'Twice a number' maps to 2x. 'Five less than' maps to - 5. 'is 17' maps to = 17. The final equation is 2x - 5 = 17.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">\"Five less than twice a number is 17\"</text><rect x=\"40\" y=\"80\" width=\"130\" height=\"40\" fill=\"#fee2e2\" rx=\"5\"/><text x=\"105\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Five less than</text><rect x=\"180\" y=\"80\" width=\"140\" height=\"40\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"250\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">twice a number</text><rect x=\"330\" y=\"80\" width=\"130\" height=\"40\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"395\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">is 17</text><path d=\"M 250 125 L 250 145\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"250,150 245,140 255,140\" fill=\"#3b82f6\"/><text x=\"250\" y=\"180\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">2x</text><path d=\"M 105 125 L 105 155 L 205 155\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><polygon points=\"210,155 200,150 200,160\" fill=\"#ef4444\"/><text x=\"150\" y=\"180\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">- 5</text><path d=\"M 395 125 L 395 145\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><polygon points=\"395,150 390,140 400,140\" fill=\"#22c55e\"/><text x=\"395\" y=\"180\" font-family=\"sans-serif\" font-size=\"28\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">= 17</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "The sum of two consecutive integers is $41$. Find the integers.",
+          "solution_steps": [
+            "Step 1: Let the first integer be $x$.",
+            "Step 2: The next consecutive integer is $x + 1$.",
+            "Step 3: Form the equation: $x + (x + 1) = 41$.",
+            "Step 4: Simplify: $2x + 1 = 41$.",
+            "Step 5: Solve: $2x = 40 \\rightarrow x = 20$.",
+            "Step 6: The first integer is $20$. The next is $20 + 1 = 21$."
+          ],
+          "final_answer": "$20$ and $21$"
+        },
+        {
+          "problem": "A rectangle has a length that is $4\\text{ cm}$ greater than its width. Its perimeter is $28\\text{ cm}$. Find its length and width.",
+          "solution_steps": [
+            "Step 1: Let the width be $x$. The length is $x + 4$.",
+            "Step 2: Perimeter = $2(\\text{length} + \\text{width})$. Form the equation: $2((x + 4) + x) = 28$.",
+            "Step 3: Simplify inside brackets: $2(2x + 4) = 28$.",
+            "Step 4: Expand brackets: $4x + 8 = 28$.",
+            "Step 5: Solve: $4x = 20 \\rightarrow x = 5$.",
+            "Step 6: Width is $5\\text{ cm}$. Length is $5 + 4 = 9\\text{ cm}$."
+          ],
+          "final_answer": "Width = $5\\text{ cm}$, Length = $9\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing an expression with an equation.",
+          "correction": "If a problem asks you to 'write an expression for the cost of 5 pens', you write $5p$. Do not write $5p = 0$ or $5p = c$. Only use an equals sign if a total or relationship is explicitly given (e.g., 'the total is 15')."
+        }
+      ],
+      "quick_summary": [
+        "Read the problem and identify what you don't know.",
+        "Assign a variable to the unknown value.",
+        "Build the equation piece by piece using mathematical operations.",
+        "Solve it and check if your answer makes sense in the real world."
+      ],
+      "utilities": [
+        {
+          "title": "Linear Equation Solver",
+          "description": "Check solutions to linear equations and compare your algebraic working with a numerical result.",
+          "url": "https://onlinetoolpad.com/math/Linear%20Equation%20solver",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t06_st08": {
+      "id": "ms_math_t06_st08",
+      "title": "Checking solutions",
+      "overview": "Solving an equation is only half the battle; verifying your answer guarantees it is correct. Checking a solution means substituting your calculated value back into the original equation to see if the left side perfectly balances the right side.",
+      "key_concepts": [
+        {
+          "concept": "The Substitution Method",
+          "definition": "Plugging your answer back in.",
+          "details": [
+            "Write the original equation.",
+            "Replace the variable with your proposed value.",
+            "Simplify the Left-Hand Side (LHS) and the Right-Hand Side (RHS) separately.",
+            "If $\\text{LHS} = \\text{RHS}$, the solution is correct."
+          ]
+        },
+        {
+          "concept": "Extraneous Solutions",
+          "definition": "Answers that look right but break the rules.",
+          "details": [
+            "Sometimes, the math produces an answer that doesn't actually work in the original equation.",
+            "**Zero Denominators:** If your solution makes the denominator of any fraction zero, the expression is undefined, so that value cannot be a solution.",
+            "**Real-World Context:** If an equation gives you $-3$ as the length of a rectangle, you must reject it because length cannot be negative."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s08",
+          "title": "Checking a Solution",
+          "type": "svg",
+          "caption": "Evaluate the left side independently of the right side to ensure they match.",
+          "alt_text": "Visual showing the check for x=4 in 3x+2=14. LHS is 3(4)+2 = 12+2 = 14. RHS is 14. LHS = RHS, so x=4 is verified.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"30\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Check: Does x = 4 satisfy 3x + 2 = 14?</text><rect x=\"50\" y=\"50\" width=\"180\" height=\"100\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\" rx=\"10\"/><text x=\"140\" y=\"75\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">LHS</text><text x=\"140\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\">3(4) + 2</text><text x=\"140\" y=\"135\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\">= 12 + 2 = 14</text><rect x=\"270\" y=\"50\" width=\"180\" height=\"100\" fill=\"#dcfce7\" stroke=\"#22c55e\" stroke-width=\"2\" rx=\"10\"/><text x=\"360\" y=\"75\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">RHS</text><text x=\"360\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\">14</text><text x=\"250\" y=\"100\" font-family=\"sans-serif\" font-size=\"32\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">=</text><rect x=\"150\" y=\"165\" width=\"200\" height=\"30\" fill=\"#fef08a\" rx=\"5\"/><text x=\"250\" y=\"185\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">14 = 14 ✅ Verified!</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Check whether $x = 8$ satisfies $\\frac{x}{4} + 3 = 5$.",
+          "solution_steps": [
+            "Step 1: Substitute $8$ into the Left-Hand Side (LHS): $\\frac{8}{4} + 3$.",
+            "Step 2: Simplify LHS: $2 + 3 = 5$.",
+            "Step 3: The Right-Hand Side (RHS) is $5$.",
+            "Step 4: Since $5 = 5$, the solution is verified."
+          ],
+          "final_answer": "Yes, $x = 8$ is a valid solution."
+        },
+        {
+          "problem": "Is $x = 5$ a solution of $3x + 4 = 20$?",
+          "solution_steps": [
+            "Step 1: Substitute $5$ into the LHS: $3(5) + 4$.",
+            "Step 2: Simplify LHS: $15 + 4 = 19$.",
+            "Step 3: The RHS is $20$.",
+            "Step 4: Since $19 \\neq 20$, the solution is incorrect."
+          ],
+          "final_answer": "No, it is not a solution."
+        },
+        {
+          "problem": "Is $x = 2$ a valid solution of $\\frac{6}{x - 2} = 3$?",
+          "solution_steps": [
+            "Step 1: Substitute $2$ into the LHS: $\\frac{6}{2 - 2}$.",
+            "Step 2: Simplify LHS: $\\frac{6}{0}$.",
+            "Step 3: Division by zero is mathematically undefined. Therefore, the value breaks the equation."
+          ],
+          "final_answer": "No, it causes a zero denominator."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Substituting into only one side of the equation.",
+          "correction": "If there are variables on both sides (e.g., $2x + 1 = x + 5$), you must plug the number into BOTH sides and ensure they evaluate to the exact same value."
+        },
+        {
+          "mistake": "Ignoring the order of operations when checking.",
+          "correction": "When checking $3(x+2)$, if you plug in $4$, you must do $4+2=6$, then $3 \\times 6 = 18$. Do not ignore brackets."
+        }
+      ],
+      "quick_summary": [
+        "A solution is only correct if substituting it into the original equation makes both sides equal.",
+        "Calculate the left side and the right side entirely separately.",
+        "Reject any solutions that result in dividing by zero or that make no sense in a word problem."
+      ],
+      "utilities": [
+        {
+          "title": "Linear Equation Solver",
+          "description": "Check solutions to linear equations and compare your algebraic working with a numerical result.",
+          "url": "https://onlinetoolpad.com/math/Linear%20Equation%20solver",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t06_st09": {
+      "id": "ms_math_t06_st09",
+      "title": "Linear inequalities",
+      "overview": "While equations state that two things are exactly equal, inequalities compare two things to show how they differ. They describe boundaries, limits, and ranges of possible values rather than a single fixed answer.",
+      "key_concepts": [
+        {
+          "concept": "Inequality Symbols",
+          "definition": "The operators used to compare values.",
+          "details": [
+            "**$>$ (Greater than):** e.g., $x > 5$ (Values like $6, 7, 10$).",
+            "**$<$ (Less than):** e.g., $x < 5$ (Values like $4, 3, 0$).",
+            "**$\\geq$ (Greater than or equal to):** Includes the boundary value (e.g., $x \\geq 5$ includes $5$).",
+            "**$\\leq$ (Less than or equal to):** Includes the boundary value (e.g., $x \\leq 5$ includes $5$)."
+          ]
+        },
+        {
+          "concept": "Translating Real-World Limits",
+          "definition": "Matching phrases to symbols.",
+          "details": [
+            "**'At least' or 'Minimum of':** Use $\\geq$. (e.g., 'At least $18$ years old' $\\rightarrow x \\geq 18$).",
+            "**'At most' or 'Maximum of':** Use $\\leq$. (e.g., 'At most $600\\text{ kg}$' $\\rightarrow x \\leq 600$).",
+            "**'More than':** Use $>$.",
+            "**'Fewer than' / 'Less than':** Use $<$."
+          ]
+        },
+        {
+          "concept": "The Negative Rule",
+          "definition": "The special property of inequalities.",
+          "details": [
+            "Adding, subtracting, or multiplying/dividing by positive numbers works just like equations.",
+            "**CRITICAL RULE:** If you multiply or divide both sides by a **NEGATIVE** number, you MUST reverse the direction of the inequality sign ($<$ becomes $>$, and $\\leq$ becomes $\\geq$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s09",
+          "title": "Flipping the Inequality Sign",
+          "type": "svg",
+          "caption": "Multiplying both sides of an inequality by a negative number reverses the inequality sign.",
+          "alt_text": "Visual showing x > 4. An arrow indicates multiplying both sides by -2. The new inequality is shown as -2x < -8, with a bright red circular arrow highlighting the flipped sign.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"40\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x <tspan fill=\"#2563eb\">></tspan> 4</text><path d=\"M 250 70 L 250 110\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"3\"/><polygon points=\"250,120 240,110 260,110\" fill=\"#64748b\"/><rect x=\"180\" y=\"80\" width=\"140\" height=\"30\" fill=\"#fee2e2\" rx=\"5\"/><text x=\"250\" y=\"100\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Multiply by -2</text><text x=\"250\" y=\"160\" font-family=\"sans-serif\" font-size=\"40\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">-2x <tspan fill=\"#ef4444\">&lt;</tspan> -8</text><path d=\"M 250 165 C 270 185 230 185 250 165\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"340\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"start\" fill=\"#b91c1c\" font-weight=\"bold\">FLIP THE SIGN!</text><path d=\"M 330 145 L 280 155\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><polygon points=\"280,155 290,150 288,160\" fill=\"#ef4444\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Write an inequality: A student has a budget of $\\$40$ for books.",
+          "solution_steps": [
+            "Step 1: The student can spend exactly $\\$40$ or anything less than $\\$40$.",
+            "Step 2: 'Less than or equal to' translates to $\\leq$.",
+            "Step 3: Let the amount spent be $x$."
+          ],
+          "final_answer": "$x \\leq 40$"
+        },
+        {
+          "problem": "Write an inequality: A person must be at least 18 years old.",
+          "solution_steps": [
+            "Step 1: 'At least 18' means 18 is the minimum. The age can be $18$, $19$, $20$, etc.",
+            "Step 2: 'Greater than or equal to' translates to $\\geq$.",
+            "Step 3: Let age be $a$."
+          ],
+          "final_answer": "$a \\geq 18$"
+        },
+        {
+          "problem": "If $x > 4$, what is the result of multiplying both sides by $-3$?",
+          "solution_steps": [
+            "Step 1: Multiply $x$ by $-3 \\rightarrow -3x$.",
+            "Step 2: Multiply $4$ by $-3 \\rightarrow -12$.",
+            "Step 3: Because we multiplied by a NEGATIVE number, flip the sign from $>$ to $<$."
+          ],
+          "final_answer": "$-3x < -12$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using $>$ for 'at least'.",
+          "correction": "'At least 10' means 10 is included, so you must use $\\geq$. Using $>$ means $10$ is excluded."
+        },
+        {
+          "mistake": "Using $<$ for 'at most'.",
+          "correction": "'At most 20' means 20 is the maximum limit (it is included), so you must use $\\leq$."
+        },
+        {
+          "mistake": "Forgetting to reverse the sign when dividing by a negative number.",
+          "correction": "If $-2x < 10$, dividing by $-2$ makes it $x > -5$. You MUST flip the sign."
+        }
+      ],
+      "quick_summary": [
+        "Inequalities show boundaries instead of exact values.",
+        "The wide, open side of the symbol always faces the larger number.",
+        "If you multiply or divide by a negative number, the inequality symbol must flip directions."
+      ]
+    },
+    "ms_math_t06_st10": {
+      "id": "ms_math_t06_st10",
+      "title": "Representing inequalities on number lines",
+      "overview": "A number line is a visual tool that helps us see all the possible solutions to an inequality at a single glance. Since inequalities usually have an infinite number of solutions, drawing an arrow on a number line is much easier than trying to write every possible number down.",
+      "key_concepts": [
+        {
+          "concept": "Open Circles ( $\\circ$ )",
+          "definition": "Used for strict inequalities ($<$ and $>$).",
+          "details": [
+            "An open circle indicates that the boundary number is NOT included in the solution.",
+            "Example: For $x > 3$, place an open circle at $3$."
+          ]
+        },
+        {
+          "concept": "Closed Circles ( $\\bullet$ )",
+          "definition": "Used for inclusive inequalities ($\\leq$ and $\\geq$).",
+          "details": [
+            "A closed, filled-in circle indicates that the boundary number IS included in the solution.",
+            "Example: For $x \\leq 5$, place a closed circle at $5$."
+          ]
+        },
+        {
+          "concept": "Shading Direction",
+          "definition": "The direction the arrow points shows where the solutions are.",
+          "details": [
+            "**Greater than ($>$ or $\\geq$):** Shade to the RIGHT.",
+            "**Less than ($<$ or $\\leq$):** Shade to the LEFT."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s10",
+          "title": "Number Line Representations",
+          "type": "svg",
+          "caption": "Open circles exclude the number; closed circles include it. Arrows point toward the solutions.",
+          "alt_text": "Visual showing two number lines. Top: x > 2. Open circle at 2, arrow pointing right. Bottom: x ≤ -1. Closed circle at -1, arrow pointing left.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"80\" y=\"50\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">x > 2</text><line x1=\"150\" y1=\"60\" x2=\"450\" y2=\"60\" stroke=\"#64748b\" stroke-width=\"4\"/><line x1=\"250\" y1=\"50\" x2=\"250\" y2=\"70\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"350\" y1=\"50\" x2=\"350\" y2=\"70\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"450\" y1=\"50\" x2=\"450\" y2=\"70\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"250\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#64748b\">0</text><text x=\"350\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#64748b\">2</text><text x=\"450\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#64748b\">4</text><path d=\"M 365 40 L 450 40\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><polygon points=\"450,40 440,35 440,45\" fill=\"#3b82f6\"/><circle cx=\"350\" cy=\"40\" r=\"8\" fill=\"#f8fafc\" stroke=\"#3b82f6\" stroke-width=\"4\"/><text x=\"80\" y=\"160\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">x ≤ -1</text><line x1=\"150\" y1=\"170\" x2=\"450\" y2=\"170\" stroke=\"#64748b\" stroke-width=\"4\"/><line x1=\"150\" y1=\"160\" x2=\"150\" y2=\"180\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"250\" y1=\"160\" x2=\"250\" y2=\"180\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"350\" y1=\"160\" x2=\"350\" y2=\"180\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"150\" y=\"200\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#64748b\">-3</text><text x=\"250\" y=\"200\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#64748b\">-1</text><text x=\"350\" y=\"200\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#64748b\">1</text><path d=\"M 250 150 L 150 150\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"4\"/><polygon points=\"150,150 160,145 160,155\" fill=\"#ef4444\"/><circle cx=\"250\" cy=\"150\" r=\"8\" fill=\"#ef4444\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Represent $x > 4$ on a number line.",
+          "solution_steps": [
+            "Step 1: Identify the boundary number, which is $4$.",
+            "Step 2: Check the symbol. Since it is $>$, use an OPEN circle at $4$ (because $4$ is not included).",
+            "Step 3: Check the direction. 'Greater than' means shading to the RIGHT."
+          ],
+          "final_answer": "Open circle at 4, arrow pointing right."
+        },
+        {
+          "problem": "Represent $x \\leq -2$ on a number line.",
+          "solution_steps": [
+            "Step 1: Identify the boundary number: $-2$.",
+            "Step 2: Check the symbol. Since it is $\\leq$, use a CLOSED circle at $-2$ (because $-2$ is included).",
+            "Step 3: Check the direction. 'Less than' means shading to the LEFT."
+          ],
+          "final_answer": "Closed circle at -2, arrow pointing left."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using a closed circle for a strict inequality ($<$ or $>$).",
+          "correction": "A closed circle means 'equals'. If $x > 5$, $x$ cannot BE $5$, so the circle must remain open."
+        },
+        {
+          "mistake": "Shading in the wrong direction for negative numbers.",
+          "correction": "The rules are exactly the same for negative numbers. Greater than is ALWAYS to the right, and less than is ALWAYS to the left."
+        }
+      ],
+      "quick_summary": [
+        "Open circle ($\\circ$) for $<$ and $>$.",
+        "Closed circle ($\\bullet$) for $\\leq$ and $\\geq$.",
+        "Arrow points right for greater than, left for less than."
+      ]
+    },
+    "ms_math_t06_st11": {
+      "id": "ms_math_t06_st11",
+      "title": "Solving simple inequalities",
+      "overview": "Solving a linear inequality is almost identical to solving a standard linear equation. You use the exact same inverse operations (addition, subtraction, multiplication, and division) to isolate the variable. However, there is one critical rule you must remember when negative numbers are involved.",
+      "key_concepts": [
+        {
+          "concept": "The Core Rule",
+          "definition": "Solve it like an equation.",
+          "details": [
+            "Add, subtract, multiply, or divide both sides by positive numbers just as you would with an equals sign.",
+            "Example: $x + 5 < 12 \\rightarrow x < 12 - 5 \\rightarrow x < 7$."
+          ]
+        },
+        {
+          "concept": "The Negative Flip Rule",
+          "definition": "The most important difference between equations and inequalities.",
+          "details": [
+            "When multiplying or dividing BOTH SIDES by a NEGATIVE number, you MUST reverse the inequality sign.",
+            "Example: $-2x > 10$. Divide by $-2$ on both sides. Flip the sign: $x < -5$."
+          ]
+        },
+        {
+          "concept": "Checking Inequality Solutions",
+          "definition": "Verifying the range.",
+          "details": [
+            "Because an inequality represents a range, test a number that falls within your final range to see if it makes the original statement true."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s11",
+          "title": "The Negative Flip Rule",
+          "type": "svg",
+          "caption": "Whenever you divide an inequality by a negative number, the sign must instantly flip.",
+          "alt_text": "Visual showing -3x ≤ 15. Arrow pointing down labeled 'Divide by -3'. The next line shows x ≥ -5. A bright red circular arrow emphasizes the sign flipping from ≤ to ≥.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"40\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">-3x <tspan fill=\"#ea580c\">≤</tspan> 15</text><path d=\"M 250 70 L 250 110\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"3\"/><polygon points=\"250,120 240,110 260,110\" fill=\"#64748b\"/><rect x=\"180\" y=\"80\" width=\"140\" height=\"30\" fill=\"#fee2e2\" rx=\"5\"/><text x=\"250\" y=\"100\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Divide by -3</text><text x=\"250\" y=\"160\" font-family=\"sans-serif\" font-size=\"40\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x <tspan fill=\"#ef4444\">≥</tspan> -5</text><path d=\"M 250 165 C 270 185 230 185 250 165\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"340\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"start\" fill=\"#b91c1c\" font-weight=\"bold\">FLIP THE SIGN!</text><path d=\"M 330 145 L 280 155\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><polygon points=\"280,155 290,150 288,160\" fill=\"#ef4444\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve: $x - 4 \\geq 8$",
+          "solution_steps": [
+            "Step 1: Isolate $x$ by adding $4$ to both sides.",
+            "Step 2: $x \\geq 8 + 4$.",
+            "Step 3: $x \\geq 12$."
+          ],
+          "final_answer": "$x \\geq 12$"
+        },
+        {
+          "problem": "Solve: $-2x + 4 \\leq 12$",
+          "solution_steps": [
+            "Step 1: Subtract $4$ from both sides: $-2x \\leq 12 - 4 \\rightarrow -2x \\leq 8$.",
+            "Step 2: Divide both sides by $-2$.",
+            "Step 3: Because you are dividing by a negative number, you MUST reverse the inequality sign ($\\leq$ becomes $\\geq$).",
+            "Step 4: $x \\geq 8 \\div (-2) \\rightarrow x \\geq -4$."
+          ],
+          "final_answer": "$x \\geq -4$"
+        },
+        {
+          "problem": "Solve: $3x > 15$",
+          "solution_steps": [
+            "Step 1: Divide both sides by $3$.",
+            "Step 2: Because $3$ is a POSITIVE number, the inequality sign stays exactly the same.",
+            "Step 3: $x > 5$."
+          ],
+          "final_answer": "$x > 5$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Flipping the sign when adding or subtracting a negative number.",
+          "correction": "The sign ONLY flips when you MULTIPLY or DIVIDE both sides by a negative number. Subtraction does not trigger the flip."
+        },
+        {
+          "mistake": "Flipping the sign when dividing into a negative number.",
+          "correction": "If $2x < -10$, you divide by a POSITIVE $2$. Because the divisor ($2$) is positive, the sign does NOT flip. $x < -5$ is the correct answer."
+        }
+      ],
+      "quick_summary": [
+        "Use inverse operations just like you would for normal equations.",
+        "When multiplying or dividing by a negative number, FLIP the inequality sign.",
+        "Check your answer by testing a number from your final range in the original inequality."
+      ]
+    },
+    "ms_math_t06_st12": {
+      "id": "ms_math_t06_st12",
+      "title": "Rearranging simple formulas",
+      "overview": "A formula is a mathematical rule that describes the relationship between two or more quantities (like calculating Area from Length and Width). Rearranging a formula (often called 'changing the subject') means shifting the variables around so that a different letter sits alone on one side of the equals sign.",
+      "key_concepts": [
+        {
+          "concept": "The Subject of a Formula",
+          "definition": "The variable that is isolated on one side of the equals sign.",
+          "details": [
+            "In $A = lw$, the subject is $A$.",
+            "If we want to find the length instead, we must make $l$ the subject ($l = \\frac{A}{w}$)."
+          ]
+        },
+        {
+          "concept": "Using Inverse Operations",
+          "definition": "Treat the other variables like numbers.",
+          "details": [
+            "To move a variable or constant to the other side, apply its opposite operation.",
+            "Addition is undone by Subtraction.",
+            "Multiplication is undone by Division.",
+            "Squares are undone by Square Roots."
+          ]
+        },
+        {
+          "concept": "Rearranging with Brackets and Fractions",
+          "definition": "Handling complex formulas.",
+          "details": [
+            "If a variable is stuck in a fraction, multiply by the denominator to free it.",
+            "If a variable is multiplied by an entire bracket (e.g., $P = 2(l + w)$), divide by the multiplier outside the bracket first."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s12",
+          "title": "Changing the Subject",
+          "type": "svg",
+          "caption": "Use inverse operations to isolate the variable you want to be the new subject.",
+          "alt_text": "Visual showing A = lw. A highlight is on the l. To get l by itself, w must be moved. An arrow shows dividing both sides by w, resulting in the new formula l = A / w.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"30\" width=\"120\" height=\"50\" fill=\"#e2e8f0\" rx=\"5\"/><text x=\"110\" y=\"62\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A = <tspan fill=\"#2563eb\">l</tspan>w</text><path d=\"M 110 80 L 110 120 L 210 120 L 210 140\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"210,145 205,135 215,135\" fill=\"#3b82f6\"/><text x=\"160\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Divide by w</text><rect x=\"150\" y=\"145\" width=\"120\" height=\"50\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"210\" y=\"177\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">A/w = <tspan fill=\"#2563eb\">l</tspan></text><path d=\"M 270 170 L 320 170\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"320,170 310,165 310,175\" fill=\"#64748b\"/><rect x=\"330\" y=\"145\" width=\"120\" height=\"50\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"390\" y=\"177\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\"><tspan fill=\"#2563eb\">l</tspan> = A/w</text><text x=\"390\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">New Subject</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Make $x$ the subject: $y = x + 7$",
+          "solution_steps": [
+            "Step 1: We need to get $x$ by itself.",
+            "Step 2: The $x$ has $7$ added to it. We must subtract $7$ from both sides.",
+            "Step 3: $y - 7 = x$."
+          ],
+          "final_answer": "$x = y - 7$"
+        },
+        {
+          "problem": "Make $w$ the subject of the perimeter formula: $P = 2(l + w)$",
+          "solution_steps": [
+            "Step 1: Divide both sides by the outside multiplier ($2$): $\\frac{P}{2} = l + w$.",
+            "Step 2: Subtract $l$ from both sides to isolate $w$: $\\frac{P}{2} - l = w$."
+          ],
+          "final_answer": "$w = \\frac{P}{2} - l$"
+        },
+        {
+          "problem": "Make $r$ the subject of the area of a circle formula: $A = \\pi r^2$",
+          "solution_steps": [
+            "Step 1: Divide both sides by $\\pi$ to isolate the $r^2$: $\\frac{A}{\\pi} = r^2$.",
+            "Step 2: Take the square root of both sides to get $r$. Since radius cannot be negative in the real world, we take the positive square root.",
+            "Step 3: $r = \\sqrt{\\frac{A}{\\pi}}$."
+          ],
+          "final_answer": "$r = \\sqrt{\\frac{A}{\\pi}}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying an operation to only part of a side.",
+          "correction": "When you divide or multiply to rearrange a formula, you must divide or multiply the ENTIRE side of the equation."
+        },
+        {
+          "mistake": "Confusing the subject with another variable.",
+          "correction": "Always double-check what the question asks for. If it asks to make $x$ the subject, your final answer MUST look like '$x = \\dots$'."
+        }
+      ],
+      "quick_summary": [
+        "The 'subject' is the variable isolated on one side of the equals sign.",
+        "Use inverse operations (like subtraction to undo addition) to move variables across the equals sign.",
+        "Whatever you do to one side of the formula, you MUST do to the entire other side."
+      ]
+    }
+  }
+}

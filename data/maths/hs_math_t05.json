@@ -1,0 +1,1212 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t05",
+  "topicTitle": "Polynomials",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t05_st01": {
+      "id": "hs_math_t05_st01",
+      "title": "Definition and classification of polynomials",
+      "overview": "A polynomial is a finite sum of terms made from constants and variables, joined using addition, subtraction and multiplication. In each term, every variable must have a non-negative integer exponent. Polynomials can contain fractional or decimal coefficients; restrictions apply to the exponents, not to the coefficients.",
+      "key_concepts": [
+        {
+          "concept": "The Strict Rules",
+          "definition": "What makes a polynomial?",
+          "details": [
+            "**Allowed:** non-negative integer exponents ($0,1,2,\\ldots$), such as $x^2$, $x^3$ and constant terms; coefficients may be integers, fractions or decimals (for example, $\frac12x$).",
+            "**Not allowed:** a variable with a negative exponent ($x^{-2}$), in a denominator ($\frac{3}{x}$), under a radical ($\\sqrt{x}$), or with a fractional exponent ($x^{1/2}$).",
+            "The same rule applies to every variable in a multivariable term. For example, $3x^2y^3$ is a polynomial term because both exponents are non-negative integers."
+          ]
+        },
+        {
+          "concept": "Classification by Terms",
+          "definition": "How many pieces?",
+          "details": [
+            "**Monomial:** 1 term (e.g., $5x^2$)",
+            "**Binomial:** 2 terms (e.g., $3x + 4$)",
+            "**Trinomial:** 3 terms (e.g., $x^2 - 2x + 1$)",
+            "If it has more than three terms, it is generally just called a 'Polynomial'."
+          ]
+        },
+        {
+          "concept": "Classification by Degree",
+          "definition": "The highest power.",
+          "details": [
+            "The **Degree** is the highest exponent present in the expression.",
+            "0 = Constant ($5$), 1 = Linear ($2x+3$), 2 = Quadratic ($x^2-x$), 3 = Cubic ($x^3+1$), 4 = Quartic ($x^4$)."
+          ]
+        },
+        {
+          "concept": "Standard Form",
+          "definition": "Sorting the powers.",
+          "details": [
+            "For a polynomial in one variable, standard form lists powers in descending order, from the highest power down to the constant term.",
+            "The term with the highest non-zero power is the **leading term**, and its numerical multiplier is the **leading coefficient**.",
+            "A missing power may be represented by a zero coefficient when a full coefficient list is useful."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Standard Polynomial Form",
+          "equation": "$$P(x)=a_nx^n+a_{n-1}x^{n-1}+\\dots+a_1x+a_0,\\quad a_n\\ne0$$",
+          "variables": {
+            "n": "The degree of the non-zero polynomial",
+            "a_n": "The leading coefficient"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s01",
+          "title": "Anatomy of a Polynomial",
+          "type": "svg",
+          "caption": "Identifying the key components of a polynomial in standard form.",
+          "alt_text": "Visual showing the polynomial -4x^3 + 2x^2 - x + 7. An arrow points to -4 labeled 'Leading Coefficient'. An arrow points to the 3 labeled 'Degree (Highest Power)'. An arrow points to the 7 labeled 'Constant Term'. The whole expression is labeled 'Cubic Polynomial (4 Terms)'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"100\" font-family=\"monospace\" font-size=\"28\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">-4x³ + 2x² - x + 7</text><path d=\"M 145 110 L 145 140\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"145,110 140,120 150,120\" fill=\"#3b82f6\"/><text x=\"145\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Leading Coeff</text><path d=\"M 185 70 L 185 40\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><polygon points=\"185,70 180,60 190,60\" fill=\"#ea580c\"/><text x=\"185\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">Degree = 3</text><path d=\"M 360 110 L 360 140\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><polygon points=\"360,110 355,120 365,120\" fill=\"#16a34a\"/><text x=\"360\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Constant</text><rect x=\"170\" y=\"175\" width=\"160\" height=\"20\" fill=\"#e2e8f0\" rx=\"5\"/><text x=\"250\" y=\"190\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"bold\">Cubic (4 terms)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify $P(x) = 5x + 3x^4 - 2x^2 + 7$ by degree and number of terms. State the leading coefficient.",
+          "solution_steps": [
+            "Step 1: Rewrite in standard form (descending powers): $P(x) = 3x^4 - 2x^2 + 5x + 7$.",
+            "Step 2: The highest power is 4, so it is a Quartic polynomial.",
+            "Step 3: There are 4 distinct non-zero terms.",
+            "Step 4: The multiplier on the highest power term ($3x^4$) is $3$."
+          ],
+          "final_answer": "Quartic, 4 terms, Leading Coefficient = 3."
+        },
+        {
+          "problem": "Determine if $\\frac{3}{x} + 2x^2$ is a polynomial.",
+          "solution_steps": [
+            "Step 1: Analyze the terms. $2x^2$ is a valid polynomial term (positive integer exponent).",
+            "Step 2: Analyze $\\frac{3}{x}$. This can be rewritten as $3x^{-1}$.",
+            "Step 3: Polynomials cannot have negative exponents."
+          ],
+          "final_answer": "Not a polynomial."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking the first number written is the leading coefficient.",
+          "correction": "In $5 - 2x^3$, the leading coefficient is NOT $5$. You must rewrite it in standard form first: $-2x^3 + 5$. The leading coefficient is $-2$."
+        },
+        {
+          "mistake": "Rejecting fractional coefficients.",
+          "correction": "$\\frac{1}{2}x^2$ IS a valid polynomial term. The coefficient can be a fraction or a decimal. It is only the EXPONENT that is strictly forbidden from being a fraction or negative."
+        }
+      ],
+      "quick_summary": [
+        "Polynomials have variables with non-negative, integer powers ONLY.",
+        "Degree = the highest exponent.",
+        "Standard Form = Highest power down to the constant.",
+        "Leading Coefficient = The number attached to the highest power variable."
+      ]
+    },
+    "hs_math_t05_st02": {
+      "id": "hs_math_t05_st02",
+      "title": "Degree and coefficients",
+      "overview": "The degree of a non-zero polynomial is determined by its highest-degree term after like terms have been combined. In several variables, the degree of a term is the sum of the exponents of its variables; the degree of the polynomial is the largest such total.",
+      "key_concepts": [
+        {
+          "concept": "Multivariable Degree",
+          "definition": "Adding the powers.",
+          "details": [
+            "For a single term containing more than one variable, add the exponents to find its total degree.",
+            "Example: the term $4x^3y^2$ has total degree $3+2=5$."
+          ]
+        },
+        {
+          "concept": "The Degree of the Polynomial",
+          "definition": "The reigning champion.",
+          "details": [
+            "Find the total degree of each non-zero term. The largest total is the degree of the polynomial.",
+            "Combine like terms first: terms that cancel completely do not determine the degree.",
+            "Example: $3x^2y^3+4xy^2$ has term degrees $5$ and $3$, so its total degree is $5$."
+          ]
+        },
+        {
+          "concept": "Missing Terms (Zero Coefficients)",
+          "definition": "The invisible placeholders.",
+          "details": [
+            "A polynomial such as $x^3-8$ has no $x^2$ or $x$ term. For a coefficient list, write it as $x^3+0x^2+0x-8$.",
+            "These zero coefficients are placeholders, especially useful when performing polynomial or synthetic division. They do not create additional non-zero terms."
+          ]
+        },
+        {
+          "concept": "The Zero Polynomial",
+          "definition": "The void.",
+          "details": [
+            "Every non-zero constant polynomial has degree $0$.",
+            "The **zero polynomial** $P(x)=0$ is a special case. Its degree is left undefined at this level."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Degree of a multivariable term",
+          "equation": "$$\\deg\\left(cx_1^{m_1}x_2^{m_2}\\cdots x_k^{m_k}\\right)=m_1+m_2+\\cdots+m_k$$",
+          "variables": {
+            "m_1,\\ldots,m_k": "Non-negative integer exponents"
+          }
+        },
+        {
+          "name": "Degree of a non-zero polynomial",
+          "equation": "$$\\deg P=\\max\\{\\text{total degrees of its non-zero terms}\\}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s02",
+          "title": "Multivariable Term Degree",
+          "type": "svg",
+          "caption": "Sum the exponents within each term to find the reigning degree.",
+          "alt_text": "Visual showing the terms 4x³y², 5xy⁴ and −3x² with total degrees 5, 5 and 2. The highest total degree is 5.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"60\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">4x³y² + 5xy⁴ - 3x²</text><rect x=\"90\" y=\"80\" width=\"80\" height=\"30\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"130\" y=\"100\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\">3+2 = 5</text><path d=\"M 130 70 L 130 80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><rect x=\"210\" y=\"80\" width=\"80\" height=\"30\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"250\" y=\"100\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\">1+4 = 5</text><path d=\"M 250 70 L 250 80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><rect x=\"330\" y=\"80\" width=\"80\" height=\"30\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"370\" y=\"100\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\">2 = 2</text><path d=\"M 370 70 L 370 80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><rect x=\"100\" y=\"130\" width=\"300\" height=\"40\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"155\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Highest sum is 5; Degree = 5</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the degree of $P(x) = 4x^4 + 3x^3 - 4x^4 + 2x^2 + 5$.",
+          "solution_steps": [
+            "Step 1: ALWAYS simplify by combining like terms before determining the degree.",
+            "Step 2: The $4x^4$ and $-4x^4$ cancel each other out ($0x^4$).",
+            "Step 3: The simplified polynomial is $3x^3 + 2x^2 + 5$.",
+            "Step 4: The highest remaining exponent is 3."
+          ],
+          "final_answer": "Degree = $3$"
+        },
+        {
+          "problem": "Write $P(x) = 5x^4 - 2x + 6$ in descending powers, showing all missing coefficients.",
+          "solution_steps": [
+            "Step 1: Identify the highest power ($4$) and count down to $0$.",
+            "Step 2: Check for $x^3$: None present. Coefficient is $0$.",
+            "Step 3: Check for $x^2$: None present. Coefficient is $0$.",
+            "Step 4: Write the full sequence: $5x^4 + 0x^3 + 0x^2 - 2x + 6$."
+          ],
+          "final_answer": "$5x^4 + 0x^3 + 0x^2 - 2x + 6$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding exponents across different terms.",
+          "correction": "In $4x^3 + 2x^2$, the degree is $3$. Do NOT add $3 + 2 = 5$. You only add exponents if they are multiplied together inside the EXACT SAME TERM (e.g., $x^3y^2$)."
+        }
+      ],
+      "quick_summary": [
+        "Multivariable Term Degree = Sum of exponents in that specific term.",
+        "Polynomial Degree = The highest term degree in the entire expression.",
+        "Always combine like terms before checking the degree.",
+        "Missing powers in a sequence have a coefficient of 0."
+      ]
+    },
+    "hs_math_t05_st03": {
+      "id": "hs_math_t05_st03",
+      "title": "Addition and subtraction of polynomials",
+      "overview": "To add or subtract polynomials, combine coefficients of like powers of the same variables. During subtraction, the negative sign applies to every term in the polynomial being subtracted.",
+      "key_concepts": [
+        {
+          "concept": "The Like Terms Rule",
+          "definition": "Apples to apples.",
+          "details": [
+            "You can only add or subtract terms that have the exact same variables raised to the exact same powers.",
+            "$3x^2 + 5x^2 = 8x^2$.",
+            "$3x^2 + 5x$ cannot be combined."
+          ]
+        },
+        {
+          "concept": "The Subtraction Trap",
+          "definition": "Flip the signs.",
+          "details": [
+            "When subtracting a polynomial, the minus sign applies to EVERY term inside the bracket.",
+            "Example: $-(2x^2 - 3x + 1) = -2x^2 + 3x - 1$."
+          ]
+        },
+        {
+          "concept": "Vertical Method vs Horizontal Method",
+          "definition": "Formatting choices.",
+          "details": [
+            "**Horizontal:** Write it all in one long line, distribute negatives, and underline matching terms to combine.",
+            "**Vertical:** Stack the polynomials so that like terms align perfectly in columns (use $0x$ for missing terms). This is much safer for large polynomials."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Addition and subtraction",
+          "equation": "$$\\left(\\sum a_kx^k\\right)\\pm\\left(\\sum b_kx^k\\right)=\\sum(a_k\\pm b_k)x^k$$",
+          "variables": {
+            "a_k,b_k": "Coefficients of the corresponding powers"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s03",
+          "title": "Vertical Polynomial Addition",
+          "type": "svg",
+          "caption": "Stacking by powers ensures you only combine like terms.",
+          "alt_text": "Visual showing vertical addition. Top row: 5x^3 + 2x^2 - 4x + 7. Bottom row: 3x^3 - 5x^2 + 6x - 2. A plus sign is on the left. A line is drawn underneath. The sums are written in columns straight down: 8x^3 - 3x^2 + 2x + 5.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"160\" y=\"50\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"end\" fill=\"#0f172a\">5x³</text><text x=\"190\" y=\"50\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">+</text><text x=\"240\" y=\"50\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"end\" fill=\"#0f172a\">2x²</text><text x=\"270\" y=\"50\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">-</text><text x=\"320\" y=\"50\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"end\" fill=\"#0f172a\">4x</text><text x=\"350\" y=\"50\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">+</text><text x=\"390\" y=\"50\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"end\" fill=\"#0f172a\">7</text><text x=\"90\" y=\"90\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#2563eb\" font-weight=\"bold\">+</text><text x=\"160\" y=\"90\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"end\" fill=\"#0f172a\">3x³</text><text x=\"190\" y=\"90\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">-</text><text x=\"240\" y=\"90\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"end\" fill=\"#0f172a\">5x²</text><text x=\"270\" y=\"90\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">+</text><text x=\"320\" y=\"90\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"end\" fill=\"#0f172a\">6x</text><text x=\"350\" y=\"90\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">-</text><text x=\"390\" y=\"90\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"end\" fill=\"#0f172a\">2</text><line x1=\"110\" y1=\"110\" x2=\"410\" y2=\"110\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"160\" y=\"140\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"end\" fill=\"#1d4ed8\" font-weight=\"bold\">8x³</text><text x=\"190\" y=\"140\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">-</text><text x=\"240\" y=\"140\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"end\" fill=\"#1d4ed8\" font-weight=\"bold\">3x²</text><text x=\"270\" y=\"140\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">+</text><text x=\"320\" y=\"140\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"end\" fill=\"#1d4ed8\" font-weight=\"bold\">2x</text><text x=\"350\" y=\"140\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">+</text><text x=\"390\" y=\"140\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"end\" fill=\"#1d4ed8\" font-weight=\"bold\">5</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Subtract $(2x^2 + 3x + 1)$ from $(5x^2 + 4x + 7)$.",
+          "solution_steps": [
+            "Step 1: Set up the subtraction. $(5x^2 + 4x + 7) - (2x^2 + 3x + 1)$.",
+            "Step 2: Distribute the negative sign to remove the second bracket. $-2x^2 - 3x - 1$.",
+            "Step 3: Combine with the first polynomial: $5x^2 + 4x + 7 - 2x^2 - 3x - 1$.",
+            "Step 4: Group like terms: $(5x^2 - 2x^2) + (4x - 3x) + (7 - 1)$.",
+            "Step 5: Simplify: $3x^2 + x + 6$."
+          ],
+          "final_answer": "$3x^2 + x + 6$"
+        },
+        {
+          "problem": "Add: $(3x^3 + 2x - 5) + (2x^3 - x^2 + 4)$.",
+          "solution_steps": [
+            "Step 1: Notice the first polynomial has no $x^2$ term, and the second has no $x$ term.",
+            "Step 2: Group like terms carefully: $(3x^3 + 2x^3) + (-x^2) + (2x) + (-5 + 4)$.",
+            "Step 3: Combine: $5x^3 - x^2 + 2x - 1$."
+          ],
+          "final_answer": "$5x^3 - x^2 + 2x - 1$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying a negative sign to only the first term in subtraction.",
+          "correction": "When doing $(4x^2+3x-5) - (2x^2-5x+7)$, a common error is writing $- 2x^2 - 5x + 7$. The negative sign applies to the ENTIRE bracket, turning it into $-2x^2 + 5x - 7$."
+        }
+      ],
+      "quick_summary": [
+        "Only add or subtract terms with the exact same variables and powers.",
+        "Add/Subtract the coefficients, leave the exponents alone.",
+        "Subtraction flips the sign of every term in the following polynomial."
+      ]
+    },
+    "hs_math_t05_st04": {
+      "id": "hs_math_t05_st04",
+      "title": "Multiplication of polynomials",
+      "overview": "Polynomial multiplication uses the distributive property: every term in one factor multiplies every term in the other. The resulting products are then collected by combining like terms.",
+      "key_concepts": [
+        {
+          "concept": "Exponent Laws for Multiplication",
+          "definition": "Add the powers.",
+          "details": [
+            "When multiplying terms, you multiply the coefficients normally, but you ADD the exponents of matching variables.",
+            "Example: $3x^2 \\times 4x^3 = 12x^5$."
+          ]
+        },
+        {
+          "concept": "Monomial by Polynomial",
+          "definition": "The simple distribution.",
+          "details": [
+            "Distribute the single outside term to every term inside the bracket.",
+            "Example: $2x(x^2 - 3) = 2x^3 - 6x$."
+          ]
+        },
+        {
+          "concept": "Binomial by Binomial (FOIL)",
+          "definition": "The standard cross-multiply.",
+          "details": [
+            "First, Outer, Inner, Last ensures no combination is missed.",
+            "Example: $(x+2)(x+3) = x^2 + 3x + 2x + 6 = x^2 + 5x + 6$."
+          ]
+        },
+        {
+          "concept": "Large Polynomials",
+          "definition": "The brute force method.",
+          "details": [
+            "For a Binomial $\\times$ Trinomial (e.g., $(x+2)(x^2+x+1)$), take the first term ($x$) and multiply it by all three terms in the second bracket. Then take the second term ($2$) and multiply it by all three. Combine the 6 resulting terms."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Exponent law for like bases",
+          "equation": "$$x^m\\times x^n=x^{m+n}$$",
+          "variables": {
+            "m,n": "Non-negative integer exponents"
+          }
+        },
+        {
+          "name": "Degree of a product",
+          "equation": "$$\\deg(PQ)=\\deg(P)+\\deg(Q)$$",
+          "variables": {
+            "P,Q": "Non-zero polynomials over the real numbers"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s04",
+          "title": "Degree of a Product",
+          "type": "svg",
+          "caption": "When you multiply polynomials, their highest degrees add together.",
+          "alt_text": "Visual showing (3x^2 + ...) multiplied by (2x^3 - ...). An arrow points from x^2 to a box labeled 'Degree 2'. An arrow points from x^3 to a box labeled 'Degree 3'. A plus sign is between the boxes, resulting in an arrow pointing to 'Resulting Degree = 5'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"60\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">(3x² + ...) × (2x³ - ...)</text><path d=\"M 190 70 L 190 90\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><rect x=\"150\" y=\"90\" width=\"80\" height=\"30\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"190\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Degree 2</text><path d=\"M 320 70 L 320 90\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><rect x=\"280\" y=\"90\" width=\"80\" height=\"30\" fill=\"#ffedd5\" rx=\"5\"/><text x=\"320\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">Degree 3</text><text x=\"255\" y=\"110\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">+</text><path d=\"M 255 130 L 255 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><polygon points=\"255,150 250,140 260,140\" fill=\"#16a34a\"/><rect x=\"175\" y=\"150\" width=\"160\" height=\"30\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"255\" y=\"170\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Resulting Degree = 5</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Multiply: $(x+2)(x^2+3x+4)$",
+          "solution_steps": [
+            "Step 1: Distribute the $x$ to the trinomial: $x(x^2) + x(3x) + x(4) = x^3 + 3x^2 + 4x$.",
+            "Step 2: Distribute the $2$ to the trinomial: $2(x^2) + 2(3x) + 2(4) = 2x^2 + 6x + 8$.",
+            "Step 3: Combine all terms: $x^3 + 3x^2 + 4x + 2x^2 + 6x + 8$.",
+            "Step 4: Group like terms: $x^3 + (3x^2 + 2x^2) + (4x + 6x) + 8$.",
+            "Step 5: Simplify: $x^3 + 5x^2 + 10x + 8$."
+          ],
+          "final_answer": "$x^3 + 5x^2 + 10x + 8$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding exponents when terms are added.",
+          "correction": "When multiplying $(x^2)(x^3)$, the answer is $x^5$. However, students often continue this logic to addition, writing $x^2 + x^3 = x^5$, which is completely false. You cannot combine different powers through addition."
+        },
+        {
+          "mistake": "Using FOIL for a binomial and trinomial.",
+          "correction": "FOIL ONLY works for a binomial times a binomial (2x2 terms). For a binomial times a trinomial (2x3 terms), you must just use the general distributive rule, which will yield 6 terms to combine, not 4."
+        }
+      ],
+      "quick_summary": [
+        "Multiply coefficients, ADD exponents.",
+        "Every term in the first bracket multiplies every term in the second.",
+        "The Degree of the final product is the sum of the degrees of the two polynomials being multiplied."
+      ]
+    },
+    "hs_math_t05_st05": {
+      "id": "hs_math_t05_st05",
+      "title": "Polynomial identities",
+      "overview": "Polynomial identities are equalities that hold for every permitted value of their variables. In this lesson, they are used to expand, verify and factorise polynomial expressions, especially square and cube patterns.",
+      "key_concepts": [
+        {
+          "concept": "The Square Identities",
+          "definition": "Squaring binomials.",
+          "details": [
+            "For polynomial expressions $A$ and $B$, the square patterns are $(A+B)^2=A^2+2AB+B^2$ and $(A-B)^2=A^2-2AB+B^2$.",
+            "The middle term is essential; squaring a sum or difference is not done by squaring each term separately."
+          ]
+        },
+        {
+          "concept": "Difference of Two Squares",
+          "definition": "The collapsing middle.",
+          "details": [
+            "The identity $(A+B)(A-B)=A^2-B^2$ applies to polynomial expressions as well as numbers.",
+            "The two middle products cancel because the factors have opposite signs."
+          ]
+        },
+        {
+          "concept": "Cubic Identities",
+          "definition": "Powers of three.",
+          "details": [
+            "Cube of a sum: $(A+B)^3=A^3+3A^2B+3AB^2+B^3$.",
+            "Cube of a difference: $(A-B)^3=A^3-3A^2B+3AB^2-B^3$.",
+            "Sum of cubes: $A^3+B^3=(A+B)(A^2-AB+B^2)$.",
+            "Difference of cubes: $A^3-B^3=(A-B)(A^2+AB+B^2)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Square of a sum",
+          "equation": "$$(A+B)^2=A^2+2AB+B^2$$",
+          "variables": {}
+        },
+        {
+          "name": "Square of a difference",
+          "equation": "$$ (A-B)^2=A^2-2AB+B^2 $$",
+          "variables": {}
+        },
+        {
+          "name": "Difference of two squares",
+          "equation": "$$A^2-B^2=(A-B)(A+B)$$",
+          "variables": {}
+        },
+        {
+          "name": "Cube of a sum",
+          "equation": "$$(A+B)^3=A^3+3A^2B+3AB^2+B^3$$",
+          "variables": {}
+        },
+        {
+          "name": "Cube of a difference",
+          "equation": "$$(A-B)^3=A^3-3A^2B+3AB^2-B^3$$",
+          "variables": {}
+        },
+        {
+          "name": "Sum of cubes",
+          "equation": "$$A^3+B^3=(A+B)(A^2-AB+B^2)$$",
+          "variables": {}
+        },
+        {
+          "name": "Difference of cubes",
+          "equation": "$$A^3-B^3=(A-B)(A^2+AB+B^2)$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s05",
+          "title": "Sum and Difference of Cubes: SOAP Method",
+          "type": "svg",
+          "caption": "A sign reminder for the difference-of-cubes factorisation pattern.",
+          "alt_text": "The difference-of-cubes identity A³ − B³ = (A − B)(A² + AB + B²), with three labelled reminders: same sign in the first factor, opposite sign in the middle term of the quadratic factor, and a positive final term.",
+          "data": "<svg viewBox=\"0 0 520 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"220\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"38\" text-anchor=\"middle\" font-family=\"monospace\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">A³ - B³ = (A - B)(A² + AB + B²)</text>\n<rect x=\"22\" y=\"78\" width=\"145\" height=\"92\" rx=\"9\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"94\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e3a8a\">SAME</text><text x=\"94\" y=\"137\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#1e3a8a\">First sign: -</text>\n<rect x=\"187\" y=\"78\" width=\"145\" height=\"92\" rx=\"9\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"260\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#9a3412\">OPPOSITE</text><text x=\"260\" y=\"137\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#9a3412\">Middle sign: +</text>\n<rect x=\"352\" y=\"78\" width=\"145\" height=\"92\" rx=\"9\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"424\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#14532d\">ALWAYS POSITIVE</text><text x=\"424\" y=\"137\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#14532d\">Last sign: +</text>\n<text x=\"260\" y=\"198\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\">SOAP is a memory aid for the signs in the quadratic factor.</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Expand $(2x-5)^3$ using a polynomial identity.",
+          "solution_steps": [
+            "Step 1: Use $(A-B)^3=A^3-3A^2B+3AB^2-B^3$, with $A=2x$ and $B=5$.",
+            "Step 2: Substitute: $(2x)^3-3(2x)^2(5)+3(2x)(5^2)-5^3$.",
+            "Step 3: Simplify each term: $8x^3-60x^2+150x-125$."
+          ],
+          "final_answer": "$8x^3-60x^2+150x-125$"
+        },
+        {
+          "problem": "Factorise $8x^3+27$ using the sum-of-cubes identity.",
+          "solution_steps": [
+            "Step 1: Recognise $8x^3=(2x)^3$ and $27=3^3$. Set $A=2x$ and $B=3$.",
+            "Step 2: Apply $A^3+B^3=(A+B)(A^2-AB+B^2)$.",
+            "Step 3: Substitute and simplify: $(2x+3)(4x^2-6x+9)$.",
+            "Step 4: Check by expansion: the cross terms cancel to leave $8x^3+27$."
+          ],
+          "final_answer": "$(2x+3)(4x^2-6x+9)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing a sum of cubes with the cube of a sum.",
+          "correction": "$A^3+B^3$ is a two-term sum that factorises as $(A+B)(A^2-AB+B^2)$. By contrast, $(A+B)^3$ expands to four terms: $A^3+3A^2B+3AB^2+B^3$."
+        },
+        {
+          "mistake": "Omitting the middle terms when squaring or cubing a binomial.",
+          "correction": "Expand or apply the full identity. For example, $(A+B)^2$ includes $2AB$; it is not $A^2+B^2$."
+        }
+      ],
+      "quick_summary": [
+        "Identities are shortcuts that are universally true.",
+        "Squaring binomials creates trinomials.",
+        "Difference of two squares collapses the middle terms.",
+        "Use SOAP to remember the signs for factoring sums and differences of cubes."
+      ]
+    },
+    "hs_math_t05_st06": {
+      "id": "hs_math_t05_st06",
+      "title": "Polynomial factorisation",
+      "overview": "Polynomial factorisation applies familiar algebraic methods to polynomial structure, including higher-degree expressions. The emphasis here is on recognising patterns, using substitution for expressions in powers such as x², and factoring completely; the elementary HCF, grouping and quadratic procedures are assumed from HS T03.",
+      "key_concepts": [
+        {
+          "concept": "Choose a polynomial structure",
+          "definition": "Look beyond the number of terms.",
+          "details": [
+            "First check for a common factor, then look for a polynomial identity or a useful grouping. The number of terms alone does not determine the method.",
+            "For a four-term cubic, grouping can reveal a common polynomial factor. For an expression in $x^4$, $x^2$ and constants, substitution $u=x^2$ may reveal a quadratic pattern."
+          ]
+        },
+        {
+          "concept": "Use substitution for higher powers",
+          "definition": "Treat a repeated power as one temporary variable.",
+          "details": [
+            "If an expression contains only even powers such as $x^4$ and $x^2$, let $u=x^2$, factor the quadratic in $u$, then substitute $x^2$ back.",
+            "After substituting back, factorise any difference of squares or other recognisable polynomial factors."
+          ]
+        },
+        {
+          "concept": "Factorise completely and verify",
+          "definition": "Continue until no factor can be simplified further over the chosen number system.",
+          "details": [
+            "A polynomial may factor into several factors after the first step. Check each factor for another common factor or identity.",
+            "Not every polynomial factorises into linear factors with integer coefficients. State the form reached and the number system being used when that matters.",
+            "Expand the final product to verify that it reproduces the original polynomial."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s06",
+          "title": "Choosing a Polynomial Factorisation Strategy",
+          "type": "svg",
+          "caption": "Check for a common factor, recognise a polynomial pattern, then verify the complete factorisation.",
+          "alt_text": "Flowchart showing a common-factor check followed by three polynomial structure strategies: identities, substitution such as u = x squared, or grouping to reveal a common polynomial factor. All lead to complete factorisation and expansion to verify.",
+          "data": "<svg viewBox=\"0 0 520 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"250\" rx=\"12\" fill=\"#f8fafc\"/>\n<rect x=\"150\" y=\"12\" width=\"220\" height=\"36\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"260\" y=\"35\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\">Check for a common factor</text>\n<path d=\"M260 48 V67\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M255 61 L260 68 L265 61\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<rect x=\"150\" y=\"68\" width=\"220\" height=\"36\" rx=\"8\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"260\" y=\"91\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#334155\">Recognise the structure</text>\n<path d=\"M260 104 V122 H88 V139 M260 122 V139 M260 122 H432 V139\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<path d=\"M83 132 L88 140 L93 132 M255 132 L260 140 L265 132 M427 132 L432 140 L437 132\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<rect x=\"12\" y=\"140\" width=\"152\" height=\"76\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"88\" y=\"165\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\">Identities</text><text x=\"88\" y=\"186\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#14532d\">Squares / cubes</text><text x=\"88\" y=\"201\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#14532d\">patterns</text>\n<rect x=\"184\" y=\"140\" width=\"152\" height=\"76\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"260\" y=\"165\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#854d0e\">Substitution</text><text x=\"260\" y=\"186\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#854d0e\">For example,</text><text x=\"260\" y=\"201\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#854d0e\">u = x²</text>\n<rect x=\"356\" y=\"140\" width=\"152\" height=\"76\" rx=\"8\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"432\" y=\"165\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#991b1b\">Grouping</text><text x=\"432\" y=\"186\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#991b1b\">Expose a common</text><text x=\"432\" y=\"201\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#991b1b\">polynomial factor</text>\n<text x=\"260\" y=\"238\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\">Factor every remaining factor, then expand to check.</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Factorise completely: $2x^3+x^2-8x-4$.",
+          "solution_steps": [
+            "Step 1: Group terms to expose a common quadratic factor: $(2x^3-8x)+(x^2-4)$.",
+            "Step 2: Factor each group: $2x(x^2-4)+1(x^2-4)$.",
+            "Step 3: Extract the common factor: $(2x+1)(x^2-4)$.",
+            "Step 4: Factorise the difference of squares: $(2x+1)(x-2)(x+2)$.",
+            "Step 5: Expanding the factors gives the original cubic, so the factorisation is verified."
+          ],
+          "final_answer": "$(2x+1)(x-2)(x+2)$"
+        },
+        {
+          "problem": "Factorise completely: $x^4-5x^2+4$.",
+          "solution_steps": [
+            "Step 1: Let $u=x^2$. Then the expression becomes $u^2-5u+4$.",
+            "Step 2: Factorise the quadratic: $u^2-5u+4=(u-1)(u-4)$.",
+            "Step 3: Substitute $u=x^2$ back: $(x^2-1)(x^2-4)$.",
+            "Step 4: Factorise both differences of squares: $(x-1)(x+1)(x-2)(x+2)$. "
+          ],
+          "final_answer": "$(x-1)(x+1)(x-2)(x+2)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Stopping after the first factorisation step.",
+          "correction": "Inspect every remaining factor. In $x^4-5x^2+4$, the first result $(x^2-1)(x^2-4)$ is not complete because both factors are differences of squares."
+        },
+        {
+          "mistake": "Using substitution but forgetting to replace the temporary variable.",
+          "correction": "After factorising in $u$, substitute $u=x^2$ back before giving the final answer."
+        },
+        {
+          "mistake": "Assuming every polynomial factorises over the integers.",
+          "correction": "Some polynomials have no non-trivial factorisation with integer coefficients. Do not claim complete linear factorisation unless the factors exist in the number system being used."
+        }
+      ],
+      "quick_summary": [
+        "Always extract the Highest Common Factor (HCF) first.",
+        "Use the number of terms to decide your method (2 = identities, 3 = quadratics, 4 = grouping).",
+        "Check every bracket at the end to make sure it cannot be factored further."
+      ]
+    },
+    "hs_math_t05_st07": {
+      "id": "hs_math_t05_st07",
+      "title": "Zeros and roots of polynomials",
+      "overview": "A zero or root of a polynomial is a value of the variable that makes the polynomial equal to zero. When the polynomial is viewed as a function, a real zero gives an x-intercept of its graph. A repeated factor gives a root with multiplicity greater than one.",
+      "key_concepts": [
+        {
+          "concept": "Zeros and roots",
+          "definition": "An equation and its graph.",
+          "details": [
+            "A **root** is a solution of the polynomial equation $P(x)=0$. The same input is called a **zero** of the polynomial function.",
+            "If $r$ is a real zero, the graph has an x-intercept at the point $(r,0)$. A graph may touch the axis or cross it at that point."
+          ]
+        },
+        {
+          "concept": "Factors and the zero-product property",
+          "definition": "Reading roots from a factorisation.",
+          "details": [
+            "If $P(x)=(x-r)Q(x)$, then $r$ is a root because the factor $(x-r)$ becomes zero at $x=r$.",
+            "If a product of factors is zero, at least one factor must be zero. Set each factor equal to zero to find the roots."
+          ]
+        },
+        {
+          "concept": "Multiplicity",
+          "definition": "How many times a factor occurs.",
+          "details": [
+            "If $P(x)$ contains $(x-r)^m$ and the remaining factor is non-zero at $r$, then $r$ has multiplicity $m$.",
+            "An even multiplicity makes the graph touch the x-axis and turn back. An odd multiplicity makes it cross the axis; a larger multiplicity usually makes the graph flatter near the intercept."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s07",
+          "title": "Multiplicity on a Graph",
+          "type": "svg",
+          "caption": "How powers on a factor dictate the behavior at the x-intercept.",
+          "alt_text": "Visual showing a curve bouncing off the x-axis at -2, and cutting straight through at 3. Text for -2 says '(x+2)^2 -> Even Multiplicity Bounces'. Text for 3 says '(x-3)^1 -> Odd Multiplicity Crosses'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"20\" y1=\"100\" x2=\"480\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"3\"/><path d=\"M 50 30 Q 120 180 180 30\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"120\" cy=\"100\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"120\" y=\"120\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x = -2</text><text x=\"120\" y=\"145\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">(x+2)²</text><text x=\"120\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">Even Multiplicity Bounces</text><path d=\"M 320 30 Q 350 100 400 170\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><circle cx=\"355\" cy=\"100\" r=\"5\" fill=\"#9a3412\"/><text x=\"375\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\" font-weight=\"bold\">x = 3</text><text x=\"355\" y=\"145\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">(x-3)¹</text><text x=\"355\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#9a3412\">Odd Multiplicity Crosses</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $P(x)=(x-1)(x-2)^2(x+4)^3$, identify the real roots, their multiplicities and their graph behaviour.",
+          "solution_steps": [
+            "Step 1: The factor $(x-1)$ gives root $x=1$ with multiplicity $1$ (odd), so the graph crosses the x-axis.",
+            "Step 2: The factor $(x-2)^2$ gives root $x=2$ with multiplicity $2$ (even), so the graph touches the axis and turns back.",
+            "Step 3: The factor $(x+4)^3$ gives root $x=-4$ with multiplicity $3$ (odd), so the graph crosses the axis and is flatter near the intercept."
+          ],
+          "final_answer": "Roots: $1$ (multiplicity 1, crosses), $2$ (multiplicity 2, touches), and $-4$ (multiplicity 3, crosses)."
+        },
+        {
+          "problem": "Find the real zeros of $P(x)=x^3-4x$.",
+          "solution_steps": [
+            "Step 1: Set $P(x)=0$: $x^3-4x=0$.",
+            "Step 2: Factor out the common factor $x$: $x(x^2-4)=0$.",
+            "Step 3: Factor the difference of squares: $x(x-2)(x+2)=0$.",
+            "Step 4: Set each factor equal to zero: $x=0$, $x=2$ or $x=-2$."
+          ],
+          "final_answer": "Real zeros: $-2,\\;0,\\;2$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ignoring a factor equal to $x$.",
+          "correction": "In $P(x)=x(x-3)$, the factor $x$ gives the zero $x=0$ as well as the zero $x=3$ from the other factor."
+        },
+        {
+          "mistake": "Treating a repeated root as several different x-intercepts.",
+          "correction": "The factor $(x-2)^2$ gives one distinct x-intercept at $(2,0)$, but the root has multiplicity 2."
+        },
+        {
+          "mistake": "Assuming every polynomial has a real x-intercept.",
+          "correction": "For example, $x^2+4$ is positive for every real $x$, so its graph has no real x-intercept. The study of complex zeros is developed at Higher Secondary level."
+        }
+      ],
+      "quick_summary": [
+        "Roots and Zeros are found by setting the polynomial to $0$.",
+        "The number of roots (including repeats and complex) exactly matches the degree of the polynomial.",
+        "Even power factors bounce off the axis. Odd power factors cross the axis."
+      ]
+    },
+    "hs_math_t05_st11": {
+      "id": "hs_math_t05_st11",
+      "title": "Polynomial division",
+      "overview": "Polynomial division finds a quotient and a remainder. Long division follows the same divide–multiply–subtract process as numerical long division. Synthetic division is a compact coefficient method for division by a monic linear factor of the form x − a.",
+      "key_concepts": [
+        {
+          "concept": "Polynomial long division",
+          "definition": "Divide, multiply, subtract and bring down.",
+          "details": [
+            "Arrange the dividend and divisor in descending powers. Insert zero-coefficient placeholders for any missing powers.",
+            "Divide the leading term of the current expression by the leading term of the divisor to obtain the next quotient term.",
+            "Multiply the whole divisor by that term, subtract, and continue until the remaining expression has degree smaller than the divisor."
+          ]
+        },
+        {
+          "concept": "The division identity",
+          "definition": "Dividend = divisor × quotient + remainder.",
+          "details": [
+            "The result can always be written as $P(x)=D(x)Q(x)+R(x)$, where $D(x)$ is the divisor, $Q(x)$ is the quotient and $R(x)$ is the remainder.",
+            "The remainder is zero or has degree less than the degree of the divisor."
+          ]
+        },
+        {
+          "concept": "Synthetic division",
+          "definition": "A coefficient shortcut for a linear divisor.",
+          "details": [
+            "For a divisor $x-a$, write the coefficients of the dividend in descending powers, including zeros for missing terms.",
+            "Bring down the first coefficient, multiply by $a$, add to the next coefficient, and repeat. The final entry is the remainder; the preceding entries are the quotient coefficients.",
+            "At this level, use synthetic division only for divisors of the form $x-a$. Use long division for other divisors."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Polynomial division identity",
+          "equation": "$$P(x)=D(x)Q(x)+R(x),\\qquad R(x)=0\\;\\text{or}\\;\\deg R<\\deg D$$",
+          "variables": {
+            "P(x)": "Dividend",
+            "D(x)": "Non-zero divisor",
+            "Q(x)": "Quotient",
+            "R(x)": "Remainder"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s11",
+          "title": "Synthetic Division Workflow",
+          "type": "svg",
+          "caption": "Bring down, multiply by the corner box, add, repeat.",
+          "alt_text": "Visual representing synthetic division. Divisor box has '2'. Top row coefficients: 1, -6, 11, -6. Arrow pointing down from 1 to the bottom row. Arrow pointing diagonally up from 1 to the second row (multiply by 2). This creates the sequence of adding columns to get the final quotient 1, -4, 3 and remainder 0.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"30\" y=\"30\" width=\"40\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"50\" y=\"57\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">2</text><text x=\"120\" y=\"57\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">1</text><text x=\"180\" y=\"57\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">-6</text><text x=\"240\" y=\"57\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">11</text><text x=\"300\" y=\"57\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">-6</text><line x1=\"90\" y1=\"120\" x2=\"330\" y2=\"120\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"180\" y=\"100\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#16a34a\">2</text><text x=\"240\" y=\"100\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#16a34a\">-8</text><text x=\"300\" y=\"100\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#16a34a\">6</text><path d=\"M 120 70 L 120 135\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><polygon points=\"120,135 115,125 125,125\" fill=\"#94a3b8\"/><path d=\"M 130 145 L 165 110\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"2\"/><polygon points=\"165,110 155,110 165,120\" fill=\"#22c55e\"/><text x=\"120\" y=\"160\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">1</text><text x=\"180\" y=\"160\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">-4</text><text x=\"240\" y=\"160\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">3</text><rect x=\"280\" y=\"135\" width=\"40\" height=\"35\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"300\" y=\"160\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">0</text><text x=\"380\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#475569\">Add down.</text><text x=\"380\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#475569\">Multiply diagonally.</text></svg>"
+        },
+        {
+          "visual_id": "v05_s11_long",
+          "title": "Polynomial Long Division",
+          "type": "svg",
+          "caption": "The quotient is 2x² − x − 3 and the remainder is 12.",
+          "alt_text": "A worked polynomial long-division layout for dividing 2x cubed plus 3x squared minus 5x plus 6 by x plus 2. It shows quotient 2x squared minus x minus 3 and remainder 12.",
+          "data": "<svg viewBox=\"0 0 560 285\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"560\" height=\"285\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"280\" y=\"27\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Divide 2x³ + 3x² - 5x + 6 by x + 2</text>\n<text x=\"118\" y=\"69\" text-anchor=\"end\" font-family=\"monospace\" font-size=\"18\" fill=\"#1e3a8a\" font-weight=\"bold\">x + 2</text>\n<path d=\"M130 44 V78 H535\" fill=\"none\" stroke=\"#1f2937\" stroke-width=\"2\"/>\n<text x=\"145\" y=\"104\" font-family=\"monospace\" font-size=\"18\" fill=\"#0f172a\">2x² - x - 3</text>\n<text x=\"145\" y=\"135\" font-family=\"monospace\" font-size=\"18\" fill=\"#0f172a\">2x³ + 3x² - 5x + 6</text>\n<text x=\"182\" y=\"165\" font-family=\"monospace\" font-size=\"17\" fill=\"#2563eb\">-(2x³ + 4x²)</text>\n<line x1=\"145\" y1=\"174\" x2=\"525\" y2=\"174\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n<text x=\"215\" y=\"199\" font-family=\"monospace\" font-size=\"17\" fill=\"#0f172a\">-x² - 5x + 6</text>\n<text x=\"215\" y=\"224\" font-family=\"monospace\" font-size=\"17\" fill=\"#2563eb\">-(-x² - 2x)</text>\n<line x1=\"210\" y1=\"232\" x2=\"525\" y2=\"232\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n<text x=\"280\" y=\"255\" font-family=\"monospace\" font-size=\"17\" fill=\"#0f172a\">-3x + 6</text>\n<text x=\"410\" y=\"255\" font-family=\"monospace\" font-size=\"17\" fill=\"#b45309\" font-weight=\"bold\">remainder 12</text>\n<text x=\"280\" y=\"278\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\">Quotient: 2x² - x - 3</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Use polynomial long division to divide $2x^3+3x^2-5x+6$ by $x+2$.",
+          "solution_steps": [
+            "Step 1: Divide the leading terms: $2x^3\\div x=2x^2$. Write $2x^2$ as the first quotient term.",
+            "Step 2: Multiply: $2x^2(x+2)=2x^3+4x^2$. Subtract from the dividend to obtain $-x^2-5x+6$.",
+            "Step 3: Divide the new leading terms: $-x^2\\div x=-x$. Multiply: $-x(x+2)=-x^2-2x$. Subtract to obtain $-3x+6$.",
+            "Step 4: Divide again: $-3x\\div x=-3$. Multiply: $-3(x+2)=-3x-6$. Subtract to obtain the remainder $12$.",
+            "Step 5: Check: $(x+2)(2x^2-x-3)+12=2x^3+3x^2-5x+6$."
+          ],
+          "final_answer": "Quotient: $2x^2-x-3$; remainder: $12$."
+        },
+        {
+          "problem": "Use synthetic division to divide $x^4-5x^2+4$ by $x-2$.",
+          "solution_steps": [
+            "Step 1: Insert zero coefficients for the missing powers: $1,\\;0,\\;-5,\\;0,\\;4$. The divisor $x-2$ gives $a=2$.",
+            "Step 2: Bring down $1$. Multiply by $2$ to get $2$; add to $0$ to get $2$.",
+            "Step 3: Multiply $2$ by $2$ to get $4$; add to $-5$ to get $-1$.",
+            "Step 4: Multiply $-1$ by $2$ to get $-2$; add to $0$ to get $-2$.",
+            "Step 5: Multiply $-2$ by $2$ to get $-4$; add to $4$ to get remainder $0$.",
+            "Step 6: The quotient coefficients are $1,2,-1,-2$, so the quotient is $x^3+2x^2-x-2$."
+          ],
+          "final_answer": "Quotient: $x^3+2x^2-x-2$; remainder: $0$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting a placeholder zero for a missing power.",
+          "correction": "Write $x^3-4x+5$ as $x^3+0x^2-4x+5$ before using synthetic division. Each coefficient must match its power."
+        },
+        {
+          "mistake": "Stopping before the remainder has lower degree than the divisor.",
+          "correction": "Continue dividing until the remaining expression is zero or has degree smaller than the divisor."
+        },
+        {
+          "mistake": "Using synthetic division for any polynomial divisor.",
+          "correction": "The coefficient shortcut taught here is for a monic linear divisor $x-a$. Use polynomial long division for other divisors."
+        }
+      ],
+      "quick_summary": [
+        "Long division works for everything but takes time.",
+        "Synthetic division is lightning fast but only works for linear $(x-a)$ divisors.",
+        "Insert $0$ for any missing powers in the sequence before dividing."
+      ]
+    },
+    "hs_math_t05_st09": {
+      "id": "hs_math_t05_st09",
+      "title": "Remainder theorem",
+      "overview": "The Remainder Theorem gives the remainder when a polynomial is divided by a linear polynomial. It avoids carrying out the full division when only the remainder is required.",
+      "key_concepts": [
+        {
+          "concept": "The Division Identity",
+          "definition": "The structural rule.",
+          "details": [
+            "Just like numerical division ($17 \\div 5 = 3$ remainder $2$), polynomials have a division identity.",
+            "$P(x) = D(x)Q(x) + R(x)$ (Dividend = Divisor $\\times$ Quotient + Remainder)."
+          ]
+        },
+        {
+          "concept": "The Remainder Theorem Shortcut",
+          "definition": "Plug and play.",
+          "details": [
+            "When $P(x)$ is divided by $x-a$, the remainder is the number $P(a)$.",
+            "Find the value of $a$ by solving $x-a=0$, then evaluate the original polynomial at that value."
+          ]
+        },
+        {
+          "concept": "Divisors with Coefficients",
+          "definition": "The $(ax - b)$ rule.",
+          "details": [
+            "For a linear divisor such as $2x-6$, first solve $2x-6=0$ to get its zero $x=3$.",
+            "The remainder is $P(3)$. More generally, when dividing by $mx-n$ with $m\ne0$, the remainder is $P(n/m)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Remainder Theorem",
+          "equation": "$$R=P(a)\\quad\\text{when dividing }P(x)\\text{ by }x-a$$",
+          "variables": {
+            "P(x)": "The dividend polynomial",
+            "a": "The zero of the linear divisor",
+            "R": "The constant remainder"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s09",
+          "title": "The Sign Flip Rule for Substitutions",
+          "type": "svg",
+          "caption": "Always flip the sign of the divisor before substituting it into the polynomial.",
+          "alt_text": "Visual showing the divisor (x - 2) leading to a substitution of x = +2. Another box shows the divisor (x + 3) leading to a substitution of x = -3. Text says 'Set divisor = 0 and solve for x'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"40\" y=\"40\" width=\"180\" height=\"120\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"10\"/><text x=\"130\" y=\"70\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Divisor: (x - 2)</text><path d=\"M 130 85 L 130 115\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><polygon points=\"130,115 125,105 135,105\" fill=\"#1d4ed8\"/><text x=\"130\" y=\"140\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Plug in: P(2)</text><rect x=\"280\" y=\"40\" width=\"180\" height=\"120\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"10\"/><text x=\"370\" y=\"70\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">Divisor: (x + 3)</text><path d=\"M 370 85 L 370 115\" fill=\"none\" stroke=\"#b91c1c\" stroke-width=\"2\"/><polygon points=\"370,115 365,105 375,105\" fill=\"#b91c1c\"/><text x=\"370\" y=\"140\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Plug in: P(-3)</text><rect x=\"150\" y=\"175\" width=\"200\" height=\"20\" fill=\"#fef08a\" rx=\"5\"/><text x=\"250\" y=\"190\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Rule: Set divisor = 0 to find x</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the remainder when $P(x) = 2x^3 - 5x^2 + 4x - 7$ is divided by $(x - 3)$.",
+          "solution_steps": [
+            "Step 1: Set the divisor to zero to find the input: $x - 3 = 0 \\implies x = 3$.",
+            "Step 2: Use the Remainder Theorem and substitute $x = 3$ into $P(x)$.",
+            "Step 3: $P(3) = 2(3)^3 - 5(3)^2 + 4(3) - 7$.",
+            "Step 4: $P(3) = 2(27) - 5(9) + 12 - 7$.",
+            "Step 5: $P(3) = 54 - 45 + 12 - 7 = 14$."
+          ],
+          "final_answer": "Remainder = $14$"
+        },
+        {
+          "problem": "When $P(x) = x^2 + kx + 5$ is divided by $(x - 2)$, the remainder is $11$. Find $k$.",
+          "solution_steps": [
+            "Step 1: By the Remainder Theorem, $P(2) = 11$.",
+            "Step 2: Substitute $x=2$ into the polynomial and set it equal to $11$.",
+            "Step 3: $(2)^2 + k(2) + 5 = 11 \\implies 4 + 2k + 5 = 11$.",
+            "Step 4: Combine terms: $2k + 9 = 11$.",
+            "Step 5: Solve for $k$: $2k = 2 \\implies k = 1$."
+          ],
+          "final_answer": "$k = 1$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the wrong sign when substituting.",
+          "correction": "If asked to divide by $(x + 4)$, you must evaluate $P(-4)$, not $P(4)$. Always think: 'What value of $x$ makes the bracket zero?'"
+        }
+      ],
+      "quick_summary": [
+        "The Remainder Theorem finds the remainder without doing long division.",
+        "Set the linear divisor to zero to find your $a$ value.",
+        "Evaluate $P(a)$. The result is your remainder."
+      ]
+    },
+    "hs_math_t05_st10": {
+      "id": "hs_math_t05_st10",
+      "title": "Factor theorem",
+      "overview": "The Factor Theorem is simply a special case of the Remainder Theorem. If you use the Remainder Theorem and the answer comes out to exactly zero, it means the division was perfect, making the divisor a true mathematical 'factor' of the polynomial.",
+      "key_concepts": [
+        {
+          "concept": "The Zero Rule",
+          "definition": "The perfect fit.",
+          "details": [
+            "If $P(a) = 0$, then the remainder is zero. Therefore, $(x-a)$ divides into the polynomial perfectly and is officially a **Factor**.",
+            "Conversely, if you know $(x-a)$ is a factor, you are guaranteed that $P(a) = 0$."
+          ]
+        },
+        {
+          "concept": "Finding Unknown Coefficients",
+          "definition": "Working backwards.",
+          "details": [
+            "If a problem states that $(x-2)$ is a factor of $x^3 + kx - 6$, you can instantly set up the equation $P(2) = 0$ to solve for $k$."
+          ]
+        },
+        {
+          "concept": "Factoring Higher-Degree Polynomials",
+          "definition": "Cracking the code.",
+          "details": [
+            "For a cubic polynomial, test suitable simple integer candidates by evaluating $P(x)$. If a value $a$ gives $P(a)=0$, the Factor Theorem confirms that $(x-a)$ is a factor.",
+            "Then use polynomial division to find the remaining quadratic factor. Factor that quadratic if possible using methods already studied."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Factor Theorem",
+          "equation": "$$ (x - a) \\text{ is a factor of } P(x) \\iff P(a) = 0 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s10",
+          "title": "The Factor Theorem Cycle",
+          "type": "svg",
+          "caption": "Roots, Factors, and Zeros are all completely interconnected.",
+          "alt_text": "Visual showing three interconnected boxes in a triangle. Top: 'P(a) = 0'. Bottom Left: 'x = a is a Root/Zero'. Bottom Right: '(x - a) is a Factor'. Double-sided arrows connect all three boxes showing they all mean the exact same thing mathematically.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"180\" y=\"20\" width=\"140\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"45\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">P(a) = 0</text><rect x=\"40\" y=\"130\" width=\"200\" height=\"40\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"140\" y=\"155\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">x = a is a Root/Zero</text><rect x=\"260\" y=\"130\" width=\"200\" height=\"40\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"5\"/><text x=\"360\" y=\"155\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">(x - a) is a Factor</text><path d=\"M 180 50 L 140 120\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"140,120 145,110 135,115\" fill=\"#64748b\"/><polygon points=\"180,50 175,60 185,55\" fill=\"#64748b\"/><path d=\"M 320 50 L 360 120\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"360,120 365,115 355,110\" fill=\"#64748b\"/><polygon points=\"320,50 315,55 325,60\" fill=\"#64748b\"/><path d=\"M 250 140 L 250 140\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"245\" y1=\"150\" x2=\"255\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"245,150 250,145 250,155\" fill=\"#64748b\"/><polygon points=\"255,150 250,145 250,155\" fill=\"#64748b\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Determine whether $(x + 2)$ is a factor of $P(x) = x^3 - 3x^2 - 4x + 12$.",
+          "solution_steps": [
+            "Step 1: The proposed factor is $(x + 2)$, so we must evaluate $P(-2)$.",
+            "Step 2: $P(-2) = (-2)^3 - 3(-2)^2 - 4(-2) + 12$.",
+            "Step 3: Calculate: $-8 - 3(4) + 8 + 12 = -8 - 12 + 8 + 12 = 0$.",
+            "Step 4: Because $P(-2) = 0$, the remainder is exactly zero."
+          ],
+          "final_answer": "Yes, $(x+2)$ is a factor."
+        },
+        {
+          "problem": "Find $a$ and $b$ if $(x - 1)$ and $(x + 2)$ are both factors of $P(x) = x^3 + ax^2 + bx - 6$.",
+          "solution_steps": [
+            "Step 1: Condition 1 ($(x-1)$ is a factor): $P(1) = 0 \\implies 1 + a + b - 6 = 0 \\implies a + b = 5$.",
+            "Step 2: Condition 2 ($(x+2)$ is a factor): $P(-2) = 0 \\implies -8 + 4a - 2b - 6 = 0 \\implies 4a - 2b = 14 \\implies 2a - b = 7$.",
+            "Step 3: Solve the simultaneous equations: $(a+b=5)$ and $(2a-b=7)$.",
+            "Step 4: Add them together: $3a = 12 \\implies a = 4$.",
+            "Step 5: Substitute back to find $b$: $4 + b = 5 \\implies b = 1$."
+          ],
+          "final_answer": "$a = 4, b = 1$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing a root with its corresponding factor.",
+          "correction": "If $P(3)=0$, the root is the number $3$ and the corresponding linear factor is $(x-3)$. The sign in the factor is opposite to the root."
+        },
+        {
+          "mistake": "Assuming an arbitrary tested number is a root.",
+          "correction": "A candidate is confirmed only when substitution gives exactly $P(a)=0$. A non-zero value is a remainder, not proof of a factor."
+        }
+      ],
+      "quick_summary": [
+        "If $P(a) = 0$, then $(x-a)$ is a guaranteed factor of the polynomial.",
+        "The Factor Theorem is the ultimate tool for finding unknown coefficients inside a polynomial.",
+        "It is the first step in factorising large cubic and quartic equations."
+      ]
+    },
+    "hs_math_t05_st08": {
+      "id": "hs_math_t05_st08",
+      "title": "Relationship between roots and coefficients",
+      "overview": "For a quadratic equation, the sum and product of its roots can be read directly from its coefficients. These relationships, commonly called Vieta’s formulas, also allow a monic quadratic equation to be constructed when the sum and product are known.",
+      "key_concepts": [
+        {
+          "concept": "Sum and product of quadratic roots",
+          "definition": "Read the root relationships from the coefficients.",
+          "details": [
+            "For $ax^2+bx+c=0$, where $a\ne0$, let the roots be $\u0007lpha$ and $\beta$.",
+            "Their sum is $\u0007lpha+\beta=-\frac ba$, and their product is $\u0007lpha\beta=\frac ca$.",
+            "These relationships hold for real or complex roots, although complex-root analysis is developed more fully at Higher Secondary level."
+          ]
+        },
+        {
+          "concept": "Constructing a monic quadratic from its roots",
+          "definition": "Build the equation from the sum and product.",
+          "details": [
+            "If the sum of two roots is $S$ and their product is $P$, the monic quadratic is $x^2-Sx+P=0$.",
+            "The coefficient of $x$ is the negative of the sum; the constant term is the product."
+          ]
+        },
+        {
+          "concept": "Scope at High School",
+          "definition": "Quadratic relationships only.",
+          "details": [
+            "This lesson focuses on familiar quadratic relationships and simple applications. Generalised root–coefficient formulas for cubic and higher-degree polynomials, and advanced symmetric expressions, are reserved for Higher Secondary Topic 3."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Vieta's formulas for a quadratic",
+          "equation": "$$\\alpha+\\beta=-\\frac ba\\qquad\\text{and}\\qquad\\alpha\\beta=\\frac ca$$",
+          "variables": {
+            "a,b,c": "Coefficients in $ax^2+bx+c=0$, with $a\ne0$",
+            "\u0007lpha,\beta": "The two roots"
+          }
+        },
+        {
+          "name": "Constructing a monic quadratic",
+          "equation": "$$x^2-(\\alpha+\\beta)x+\\alpha\\beta=0$$",
+          "variables": {
+            "\u0007lpha,\beta": "The two roots"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s08",
+          "title": "Quadratic Root–Coefficient Relationships",
+          "type": "svg",
+          "caption": "For a quadratic, the coefficients determine the sum and product of its two roots.",
+          "alt_text": "A quadratic equation 2x² − 8x + 6 = 0 with a=2, b=−8 and c=6. It shows the sum of roots −b/a=4 and product c/a=3.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2x² - 8x + 6 = 0</text><path d=\"M 190 60 L 190 80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"190\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">a=2</text><path d=\"M 250 60 L 250 80\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"250\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">b=-8</text><path d=\"M 310 60 L 310 80\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"310\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">c=6</text><rect x=\"50\" y=\"110\" width=\"180\" height=\"50\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"5\"/><text x=\"140\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">SUM (-b/a)</text><text x=\"140\" y=\"150\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\">-(-8)/2 = 4</text><rect x=\"270\" y=\"110\" width=\"180\" height=\"50\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"360\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">PRODUCT (c/a)</text><text x=\"360\" y=\"150\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\">6/2 = 3</text><text x=\"250\" y=\"185\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" font-style=\"italic\">Roots must add to 4 and multiply to 3.</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the sum and product of the roots of $3x^2+5x-2=0$.",
+          "solution_steps": [
+            "Step 1: Identify $a=3$, $b=5$ and $c=-2$.",
+            "Step 2: Sum of roots $=-\frac ba=-\frac53$.",
+            "Step 3: Product of roots $=\frac ca=-\frac23$."
+          ],
+          "final_answer": "Sum: $-\frac53$; product: $-\frac23$."
+        },
+        {
+          "problem": "Construct a monic quadratic equation whose roots have sum $9$ and product $20$.",
+          "solution_steps": [
+            "Step 1: Use $x^2-(\text{sum})x+(\text{product})=0$.",
+            "Step 2: Substitute the given values: $x^2-9x+20=0$.",
+            "Step 3: Check: $(x-4)(x-5)=x^2-9x+20$, so the roots have sum $9$ and product $20$."
+          ],
+          "final_answer": "$x^2-9x+20=0$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting the negative sign in the sum of roots.",
+          "correction": "The sum is $-b/a$, not $b/a$. For $x^2+6x+8=0$, the sum is $-6$."
+        },
+        {
+          "mistake": "Assuming the leading coefficient is always 1.",
+          "correction": "For $2x^2-8x+3=0$, divide by $a=2$: the sum is $-(-8)/2=4$, not $8$."
+        }
+      ],
+      "quick_summary": [
+        "Sum of roots = $-b/a$. Product of roots = $c/a$.",
+        "If building an equation: $x^2 - Sx + P = 0$.",
+        "For cubics, signs alternate: $-b/a$, $+c/a$, $-d/a$."
+      ]
+    },
+    "hs_math_t05_st12": {
+      "id": "hs_math_t05_st12",
+      "title": "Graphs of polynomial functions",
+      "overview": "A polynomial function has a continuous, smooth graph with no gaps or sharp corners. Its leading term determines the end behaviour, while its real zeros and multiplicities determine how the graph meets the x-axis.",
+      "key_concepts": [
+        {
+          "concept": "End Behaviour",
+          "definition": "Where the arms point.",
+          "details": [
+            "The Leading Term dictates the ends of the graph.",
+            "**Even Degree (e.g., $x^2, x^4$):** Both arms point the SAME way. Up if the coefficient is positive, down if it is negative.",
+            "**Odd Degree (e.g., $x^3, x^5$):** The arms point in OPPOSITE directions. If positive, it goes from bottom-left to top-right (like a rising line). If negative, it goes top-left to bottom-right."
+          ]
+        },
+        {
+          "concept": "Intercepts",
+          "definition": "Crossing the axes.",
+          "details": [
+            "The **y-intercept** is found by setting $x=0$. For $P(x)=a_nx^n+\\cdots+a_1x+a_0$, it is the point $(0,a_0)$.",
+            "The **x-intercepts** occur at the real zeros: solve $P(x)=0$ and plot each real zero as $(r,0)$.",
+            "Count distinct real zeros to find the number of distinct x-intercepts. Multiplicity determines whether the graph crosses or touches the axis at each intercept."
+          ]
+        },
+        {
+          "concept": "Turning Points",
+          "definition": "The peaks and valleys.",
+          "details": [
+            "A turning point is a local maximum or local minimum where the graph changes direction.",
+            "A polynomial of degree $n$ can have at most $n-1$ turning points. This is an upper bound, not a guarantee."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "End behaviour from degree and leading coefficient",
+          "equation": "$$\\begin{aligned}\\text{even degree, }a_n>0 &: P(x)\\to+\\infty\\text{ at both ends}\\\\\\text{even degree, }a_n<0 &: P(x)\\to-\\infty\\text{ at both ends}\\\\\\text{odd degree, }a_n>0 &: P(x)\\to-\\infty\\text{ as }x\\to-\\infty,\\;P(x)\\to+\\infty\\text{ as }x\\to+\\infty\\\\\\text{odd degree, }a_n<0 &: P(x)\\to+\\infty\\text{ as }x\\to-\\infty,\\;P(x)\\to-\\infty\\text{ as }x\\to+\\infty\\end{aligned}$$",
+          "variables": {
+            "a_n": "Leading coefficient"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s12",
+          "title": "Predicting End Behaviour",
+          "type": "svg",
+          "caption": "The Leading Term completely controls the far left and far right of the graph.",
+          "alt_text": "Visual showing a 2x2 grid. Top Left: Even Degree, Positive (+x^2). Graph is a U-shape opening up. Top Right: Even Degree, Negative (-x^2). Graph is an upside-down U opening down. Bottom Left: Odd Degree, Positive (+x^3). Graph enters bottom-left and exits top-right. Bottom Right: Odd Degree, Negative (-x^3). Graph enters top-left and exits bottom-right.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"250\" y1=\"10\" x2=\"250\" y2=\"240\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><line x1=\"10\" y1=\"125\" x2=\"490\" y2=\"125\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><text x=\"125\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Even Degree, Positive (+)</text><path d=\"M 65 50 Q 125 110 185 50\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><polygon points=\"65,50 60,60 70,60\" fill=\"#22c55e\" transform=\"rotate(-45 65 50)\"/><polygon points=\"185,50 180,60 190,60\" fill=\"#22c55e\" transform=\"rotate(45 185 50)\"/><text x=\"375\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Even Degree, Negative (-)</text><path d=\"M 315 100 Q 375 40 435 100\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><polygon points=\"315,100 310,90 320,90\" fill=\"#ef4444\" transform=\"rotate(-135 315 100)\"/><polygon points=\"435,100 430,90 440,90\" fill=\"#ef4444\" transform=\"rotate(135 435 100)\"/><text x=\"125\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Odd Degree, Positive (+)</text><path d=\"M 65 220 C 105 220, 105 160, 185 160\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><polygon points=\"65,220 75,215 75,225\" fill=\"#22c55e\"/><polygon points=\"185,160 175,155 175,165\" fill=\"#22c55e\"/><text x=\"375\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Odd Degree, Negative (-)</text><path d=\"M 315 160 C 395 160, 395 220, 435 220\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><polygon points=\"315,160 325,155 325,165\" fill=\"#ef4444\"/><polygon points=\"435,220 425,215 425,225\" fill=\"#ef4444\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Identify the degree, leading coefficient, y-intercept and end behaviour of $f(x)=-3x^4+2x^3-5x+7$.",
+          "solution_steps": [
+            "Step 1: The highest power is $4$, so the degree is even and the leading coefficient is $-3$.",
+            "Step 2: An even degree with a negative leading coefficient means both ends of the graph fall: $f(x)\to-\\infty$ as $x\to\\pm\\infty$.",
+            "Step 3: Set $x=0$. Then $f(0)=7$, so the y-intercept is $(0,7)$."
+          ],
+          "final_answer": "Degree $4$; leading coefficient $-3$; y-intercept $(0,7)$; both ends fall."
+        },
+        {
+          "problem": "For $f(x)=(x+2)^2(x-3)^3$, state the x-intercepts and whether the graph crosses or touches at each.",
+          "solution_steps": [
+            "Step 1: The factor $(x+2)^2$ gives the x-intercept $(-2,0)$ with even multiplicity $2$, so the graph touches and turns back.",
+            "Step 2: The factor $(x-3)^3$ gives the x-intercept $(3,0)$ with odd multiplicity $3$, so the graph crosses the axis, flattening near the intercept."
+          ],
+          "final_answer": "The graph touches at $(-2,0)$ and crosses at $(3,0)$. "
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming a polynomial of degree $n$ always has exactly $n-1$ turning points.",
+          "correction": "A degree-$n$ polynomial has at most $n-1$ turning points. For example, $f(x)=x^3$ is increasing and has no turning point."
+        },
+        {
+          "mistake": "Equating the number of real roots with the degree.",
+          "correction": "The degree gives an upper bound on the number of distinct real zeros. Some polynomials have fewer real zeros, and repeated roots count as one distinct x-intercept."
+        }
+      ],
+      "quick_summary": [
+        "Even degrees match on both ends; Odd degrees go in opposite directions.",
+        "The constant term is always the $y$-intercept.",
+        "The roots of the factored polynomial are the $x$-intercepts.",
+        "Polynomial graphs never have sharp corners or breaks."
+      ]
+    },
+    "hs_math_t05_st13": {
+      "id": "hs_math_t05_st13",
+      "title": "Polynomial equations and applications",
+      "overview": "Polynomial equations are equations of the form P(x)=0. At this stage, use polynomial structure, the Factor Theorem and polynomial division to solve suitable cubic and higher-degree equations, then interpret the solutions in context. Routine linear and quadratic solving methods are covered in HS T04 and are assumed here.",
+      "key_concepts": [
+        {
+          "concept": "Set a polynomial equation equal to zero",
+          "definition": "Create the equation P(x)=0.",
+          "details": [
+            "Move every term to one side so the other side is zero, then simplify and factor out any common factor.",
+            "Use methods from earlier lessons for factors that are quadratic or simpler; do not repeat the full quadratic-solving procedures from HS T04."
+          ]
+        },
+        {
+          "concept": "Solve higher-degree polynomial equations",
+          "definition": "Use roots, factors and division together.",
+          "details": [
+            "For a cubic or suitable higher-degree polynomial, test appropriate simple candidates in $P(x)$. A value $a$ for which $P(a)=0$ gives a factor $(x-a)$ by the Factor Theorem.",
+            "Use polynomial division to reduce the degree. Continue by solving the remaining factor(s) using methods already studied.",
+            "Check every proposed solution in the original polynomial equation."
+          ]
+        },
+        {
+          "concept": "Interpret solutions in an application",
+          "definition": "Select values that fit the situation.",
+          "details": [
+            "A polynomial model may produce several mathematical roots, but the context determines which values are admissible.",
+            "If $x$ represents a length, time or count, reject values that violate the stated domain (for example, a negative length). State the units and check the result in the original model."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v05_s13",
+          "title": "Polynomial Roots and Contextual Restrictions",
+          "type": "svg",
+          "caption": "A model can have several mathematical roots; the context determines which values are admissible.",
+          "alt_text": "A number line marks the polynomial roots −2, 3 and 4 for a model in which x is a length. The negative root is rejected; the positive values 3 cm and 4 cm are admissible.",
+          "data": "<svg viewBox=\"0 0 520 230\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"230\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"monospace\" font-size=\"18\" font-weight=\"bold\" fill=\"#0f172a\">P(x) = x³ − 5x² − 2x + 24</text>\n<text x=\"260\" y=\"55\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#475569\">x is a length in centimetres</text>\n<line x1=\"65\" y1=\"123\" x2=\"455\" y2=\"123\" stroke=\"#64748b\" stroke-width=\"3\"/>\n<polygon points=\"455,123 444,117 444,129\" fill=\"#64748b\"/>\n<line x1=\"130\" y1=\"113\" x2=\"130\" y2=\"133\" stroke=\"#b91c1c\" stroke-width=\"2\"/><circle cx=\"130\" cy=\"123\" r=\"7\" fill=\"#ef4444\"/><text x=\"130\" y=\"151\" text-anchor=\"middle\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" fill=\"#b91c1c\">−2</text>\n<line x1=\"325\" y1=\"113\" x2=\"325\" y2=\"133\" stroke=\"#15803d\" stroke-width=\"2\"/><circle cx=\"325\" cy=\"123\" r=\"7\" fill=\"#16a34a\"/><text x=\"325\" y=\"151\" text-anchor=\"middle\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" fill=\"#15803d\">3</text>\n<line x1=\"390\" y1=\"113\" x2=\"390\" y2=\"133\" stroke=\"#15803d\" stroke-width=\"2\"/><circle cx=\"390\" cy=\"123\" r=\"7\" fill=\"#16a34a\"/><text x=\"390\" y=\"151\" text-anchor=\"middle\" font-family=\"monospace\" font-size=\"15\" font-weight=\"bold\" fill=\"#15803d\">4</text>\n<rect x=\"52\" y=\"175\" width=\"150\" height=\"35\" rx=\"7\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"1.5\"/><text x=\"127\" y=\"197\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#991b1b\">Reject: negative length</text>\n<rect x=\"270\" y=\"175\" width=\"210\" height=\"35\" rx=\"7\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"375\" y=\"197\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\">Admissible: 3 cm and 4 cm</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve the cubic equation $x^3-4x^2+x+6=0$.",
+          "solution_steps": [
+            "Step 1: Let $P(x)=x^3-4x^2+x+6$. Test $x=-1$: $P(-1)=-1-4-1+6=0$, so $(x+1)$ is a factor.",
+            "Step 2: Divide by $(x+1)$ (using long or synthetic division) to obtain the quotient $x^2-5x+6$.",
+            "Step 3: Factor the quotient: $x^2-5x+6=(x-2)(x-3)$.",
+            "Step 4: Write the complete factorisation: $(x+1)(x-2)(x-3)=0$.",
+            "Step 5: Set each factor equal to zero and check the values in the original equation."
+          ],
+          "final_answer": "$x=-1,\\;2,\\;3$."
+        },
+        {
+          "problem": "A design constraint for a component gives the model $x^3-5x^2-2x+24=0$, where $x$ is a possible length in centimetres. Find the candidate lengths and identify the admissible ones.",
+          "solution_steps": [
+            "Step 1: Let $P(x)=x^3-5x^2-2x+24$. Testing $x=-2$ gives $P(-2)=-8-20+4+24=0$, so $(x+2)$ is a factor.",
+            "Step 2: Divide by $(x+2)$ to obtain $x^2-7x+12$.",
+            "Step 3: Factorise the quadratic: $x^2-7x+12=(x-3)(x-4)$.",
+            "Step 4: The candidate values are $x=-2$, $x=3$ and $x=4$.",
+            "Step 5: Since $x$ is a length, reject the negative value. Both positive candidate lengths satisfy the model."
+          ],
+          "final_answer": "Admissible lengths: $3$ cm and $4$ cm."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to use the zero-product property before the equation is written as a product equal to zero.",
+          "correction": "First rewrite the equation as $P(x)=0$, then factorise. The zero-product property applies to a product equal to zero."
+        },
+        {
+          "mistake": "Assuming a candidate value is a root without checking it.",
+          "correction": "Substitute the value into the original polynomial. It is a root only if the result is exactly zero."
+        },
+        {
+          "mistake": "Keeping a mathematically valid root that is impossible in the context.",
+          "correction": "Apply the stated domain and units. A negative algebraic root cannot represent a physical length or elapsed time."
+        }
+      ],
+      "quick_summary": [
+        "Read the problem and define variables clearly.",
+        "Translate relationships into a polynomial equation.",
+        "Set the equation equal to zero ($P(x) = 0$).",
+        "Solve for $x$ and discard any roots that break the laws of physics or common sense."
+      ]
+    }
+  }
+}

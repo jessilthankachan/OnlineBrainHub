@@ -1,0 +1,1203 @@
+{
+  "subject": "math",
+  "topicId": "ms_math_t13",
+  "topicTitle": "Statistics and Data Handling",
+  "grade": "Middle School",
+  "subtopics": {
+    "ms_math_t13_st01": {
+      "id": "ms_math_t13_st01",
+      "title": "Collecting and organising data",
+      "overview": "Data is a collection of facts, figures, and information gathered to answer questions and identify patterns. Before we can analyze data, we must collect it responsibly and organize it clearly.",
+      "key_concepts": [
+        {
+          "concept": "Primary vs. Secondary Data",
+          "definition": "Where the data comes from.",
+          "details": [
+            "**Primary Data:** Information collected directly by you for a specific investigation (e.g., surveying your classmates).",
+            "**Secondary Data:** Information that someone else already collected for a different purpose (e.g., looking up historical weather records online)."
+          ]
+        },
+        {
+          "concept": "Methods of Collection",
+          "definition": "How we gather information.",
+          "details": [
+            "Data can be gathered through **Surveys & Questionnaires** (asking questions), **Interviews**, **Observations** (watching and counting), and **Experiments**."
+          ]
+        },
+        {
+          "concept": "Tally Marks",
+          "definition": "Recording raw data efficiently.",
+          "details": [
+            "Tally marks are used to quickly record observations one by one. The fifth mark always crosses the first four to create a 'bundle of five', which makes counting large numbers much faster."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s01",
+          "title": "Tally Mark Bundles",
+          "type": "svg",
+          "caption": "Tally marks group data into sets of 5 for rapid counting.",
+          "alt_text": "Visual showing tally marks. 1 is one vertical line, 2 is two, 3 is three, 4 is four, and 5 is four vertical lines with a diagonal line striking through them.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Counting with Tally Marks</text><g stroke=\"#2563eb\" stroke-width=\"4\" stroke-linecap=\"round\"><line x1=\"80\" y1=\"80\" x2=\"80\" y2=\"130\"/><line x1=\"150\" y1=\"80\" x2=\"150\" y2=\"130\"/><line x1=\"165\" y1=\"80\" x2=\"165\" y2=\"130\"/><line x1=\"230\" y1=\"80\" x2=\"230\" y2=\"130\"/><line x1=\"245\" y1=\"80\" x2=\"245\" y2=\"130\"/><line x1=\"260\" y1=\"80\" x2=\"260\" y2=\"130\"/><line x1=\"320\" y1=\"80\" x2=\"320\" y2=\"130\"/><line x1=\"335\" y1=\"80\" x2=\"335\" y2=\"130\"/><line x1=\"350\" y1=\"80\" x2=\"350\" y2=\"130\"/><line x1=\"365\" y1=\"80\" x2=\"365\" y2=\"130\"/><line x1=\"420\" y1=\"80\" x2=\"420\" y2=\"130\"/><line x1=\"435\" y1=\"80\" x2=\"435\" y2=\"130\"/><line x1=\"450\" y1=\"80\" x2=\"450\" y2=\"130\"/><line x1=\"465\" y1=\"80\" x2=\"465\" y2=\"130\"/><line x1=\"410\" y1=\"120\" x2=\"475\" y2=\"90\" stroke=\"#ef4444\"/></g><text x=\"80\" y=\"160\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">1</text><text x=\"157\" y=\"160\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">2</text><text x=\"245\" y=\"160\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">3</text><text x=\"342\" y=\"160\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">4</text><text x=\"442\" y=\"160\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">5</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Organize the following raw data representing favorite fruits into a tally count: Apple, Banana, Apple, Orange, Banana, Apple, Apple.",
+          "solution_steps": [
+            "Step 1: Identify the distinct categories: Apple, Banana, Orange.",
+            "Step 2: Go through the list one by one and add a tally mark for each.",
+            "Step 3: Apples receive 4 tallies (||||). Bananas receive 2 tallies (||). Oranges receive 1 tally (|)."
+          ],
+          "final_answer": "Apple: 4, Banana: 2, Orange: 1"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using a biased question in a survey.",
+          "correction": "A question like 'Don't you agree that summer is the best season?' forces an opinion. A survey question must be completely neutral: 'What is your favorite season?'"
+        }
+      ],
+      "quick_summary": [
+        "Data helps us find patterns and make informed decisions.",
+        "Primary Data = You collected it. Secondary Data = Someone else collected it.",
+        "Tally marks speed up manual counting by grouping observations into fives."
+      ]
+    },
+    "ms_math_t13_st02": {
+      "id": "ms_math_t13_st02",
+      "title": "Qualitative and quantitative data",
+      "overview": "Not all data consists of numbers. Data can be categorized into distinct types based on whether it describes descriptive qualities (like colors or opinions) or numerical quantities (like height or count).",
+      "key_concepts": [
+        {
+          "concept": "Qualitative Data (Categorical)",
+          "definition": "Words and descriptions.",
+          "details": [
+            "**Nominal Data:** Categories with no natural order (e.g., eye color: brown, blue, green).",
+            "**Ordinal Data:** Categories that have a meaningful ranking or order (e.g., satisfaction level: unhappy, neutral, happy)."
+          ]
+        },
+        {
+          "concept": "Quantitative Data (Numerical)",
+          "definition": "Numbers and measurements.",
+          "details": [
+            "**Discrete Data:** Counted in distinct, separate whole numbers (e.g., number of siblings: $0, 1, 2...$ you cannot have $1.5$ siblings).",
+            "**Continuous Data:** Measured values that can take any number within a range, including decimals (e.g., height: $152.4\\text{ cm}$, time: $12.35\\text{ s}$)."
+          ]
+        },
+        {
+          "concept": "Numbers as Labels",
+          "definition": "Not all numbers are quantitative.",
+          "details": [
+            "Things like phone numbers, zip codes, or bus route numbers are actually Qualitative (Nominal) data because they act as identification labels, not mathematical quantities."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s02",
+          "title": "The Data Family Tree",
+          "type": "svg",
+          "caption": "How to classify the information you collect.",
+          "alt_text": "Visual showing a flowchart. Top box is DATA. Splits into QUALITATIVE (Words) and QUANTITATIVE (Numbers). Qualitative splits into Nominal (No Order) and Ordinal (Ordered). Quantitative splits into Discrete (Counted) and Continuous (Measured).",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/>\n<rect x=\"200\" y=\"10\" width=\"100\" height=\"38\" fill=\"#334155\" rx=\"6\"/>\n<text x=\"250\" y=\"35\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">DATA</text>\n<path d=\"M 250 48 L 250 68 L 125 68 L 125 88 M 250 68 L 375 68 L 375 88\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2\"/>\n<rect x=\"35\" y=\"88\" width=\"180\" height=\"48\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"6\"/>\n<text x=\"125\" y=\"108\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">QUALITATIVE</text>\n<text x=\"125\" y=\"124\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1e3a8a\">Categories / words</text>\n<rect x=\"285\" y=\"88\" width=\"180\" height=\"48\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"6\"/>\n<text x=\"375\" y=\"108\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">QUANTITATIVE</text>\n<text x=\"375\" y=\"124\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#14532d\">Numbers / measures</text>\n<path d=\"M 125 136 L 125 154 L 70 154 L 70 174 M 125 154 L 180 154 L 180 174\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<path d=\"M 375 136 L 375 154 L 320 154 L 320 174 M 375 154 L 430 154 L 430 174\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n<rect x=\"25\" y=\"174\" width=\"90\" height=\"48\" fill=\"#bfdbfe\" rx=\"5\"/>\n<text x=\"70\" y=\"194\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Nominal</text>\n<text x=\"70\" y=\"209\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1e3a8a\">No order</text>\n<rect x=\"135\" y=\"174\" width=\"90\" height=\"48\" fill=\"#bfdbfe\" rx=\"5\"/>\n<text x=\"180\" y=\"194\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Ordinal</text>\n<text x=\"180\" y=\"209\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1e3a8a\">Ordered</text>\n<rect x=\"275\" y=\"174\" width=\"90\" height=\"48\" fill=\"#bbf7d0\" rx=\"5\"/>\n<text x=\"320\" y=\"194\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Discrete</text>\n<text x=\"320\" y=\"209\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#14532d\">Counted</text>\n<rect x=\"385\" y=\"174\" width=\"90\" height=\"48\" fill=\"#bbf7d0\" rx=\"5\"/>\n<text x=\"430\" y=\"194\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Continuous</text>\n<text x=\"430\" y=\"209\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#14532d\">Measured</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify the following data: 'The time taken for 5 students to run a 100m race.'",
+          "solution_steps": [
+            "Step 1: Determine if it is words or numbers. Time is numerical, so it is Quantitative.",
+            "Step 2: Determine if it is counted or measured. Time is measured and can include decimals (e.g., $12.45\\text{ s}$).",
+            "Step 3: Therefore, it is Continuous."
+          ],
+          "final_answer": "Quantitative (Continuous)"
+        },
+        {
+          "problem": "Classify the following data: 'Survey responses rating a restaurant from 1 Star to 5 Stars.'",
+          "solution_steps": [
+            "Step 1: Star ratings act as labels for opinions/quality, so it is Qualitative.",
+            "Step 2: There is a clear ranking (5 Stars is better than 1 Star).",
+            "Step 3: Because the categories have a meaningful order, it is Ordinal."
+          ],
+          "final_answer": "Qualitative (Ordinal)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating age as discrete in every context.",
+          "correction": "Age is a measurement of time and can be treated as continuous when recorded precisely (for example, years, months, days and hours). If a survey records only completed whole years, the recorded values are discrete. Classify the data according to how it was measured and recorded."
+        }
+      ],
+      "quick_summary": [
+        "Qualitative = Words/Categories. Quantitative = Numbers/Math.",
+        "Discrete = Counted (whole items). Continuous = Measured (can have infinite decimal possibilities).",
+        "Nominal = No order. Ordinal = Ranked order."
+      ]
+    },
+    "ms_math_t13_st03": {
+      "id": "ms_math_t13_st03",
+      "title": "Frequency tables",
+      "overview": "Raw data collected from a survey is just a messy, unorganized list of responses. A frequency table transforms this chaos into a clean, structured table that instantly shows you how often every single category or value appeared.",
+      "key_concepts": [
+        {
+          "concept": "Frequency ($f$)",
+          "definition": "The count.",
+          "details": [
+            "Frequency simply means the number of times a particular value or category occurs in your data set.",
+            "The sum of all frequencies ($\\sum f$) must perfectly equal the total number of people surveyed or items observed."
+          ]
+        },
+        {
+          "concept": "Relative Frequency",
+          "definition": "The proportion.",
+          "details": [
+            "Relative frequency is the frequency of one category divided by the total frequency.",
+            "It can be written as a decimal, fraction, or percentage. The sum of all relative frequencies must equal $1$ (or $100\\%$)."
+          ]
+        },
+        {
+          "concept": "Cumulative Frequency",
+          "definition": "The running total.",
+          "details": [
+            "Cumulative frequency is the running total of frequencies as you move through **ordered values or class intervals**.",
+            "It is useful for numerical data arranged from low to high. It is not normally meaningful for unordered categories such as favourite fruit.",
+            "The final cumulative frequency must match the total number of observations."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Total Frequency",
+          "equation": "$$ \\text{Total} = \\sum f = n $$",
+          "variables": {
+            "f": "individual frequencies",
+            "n": "total observations"
+          }
+        },
+        {
+          "name": "Relative Frequency",
+          "equation": "$$ \\text{Relative Frequency} = \\frac{\\text{Frequency}}{\\text{Total Frequency}} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s03",
+          "title": "Structure of a Frequency Table",
+          "type": "svg",
+          "caption": "A frequency table clearly summarizes raw data into a readable format.",
+          "alt_text": "Visual showing a table with 3 columns: Category (Apple, Banana, Orange), Tally, and Frequency (4, 3, 1). Total at the bottom is 8.",
+          "data": "<svg viewBox=\"0 0 500 220\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"500\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<text x=\"250\" y=\"28\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Example Frequency Table</text>\n<rect x=\"65\" y=\"48\" width=\"370\" height=\"34\" fill=\"#334155\" rx=\"4\"/>\n<text x=\"125\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">Category</text>\n<text x=\"275\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">Tally</text>\n<text x=\"390\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">Frequency</text>\n<g stroke=\"#cbd5e1\" stroke-width=\"1\">\n<line x1=\"65\" y1=\"116\" x2=\"435\" y2=\"116\"/><line x1=\"65\" y1=\"150\" x2=\"435\" y2=\"150\"/><line x1=\"65\" y1=\"184\" x2=\"435\" y2=\"184\"/>\n</g>\n<g font-family=\"sans-serif\" font-size=\"15\" fill=\"#0f172a\">\n<text x=\"125\" y=\"105\" text-anchor=\"middle\">Apple</text><text x=\"125\" y=\"139\" text-anchor=\"middle\">Banana</text><text x=\"125\" y=\"173\" text-anchor=\"middle\">Orange</text>\n<text x=\"390\" y=\"105\" text-anchor=\"middle\" font-weight=\"bold\">4</text><text x=\"390\" y=\"139\" text-anchor=\"middle\" font-weight=\"bold\">2</text><text x=\"390\" y=\"173\" text-anchor=\"middle\" font-weight=\"bold\">1</text>\n</g>\n<g stroke=\"#2563eb\" stroke-width=\"3\" stroke-linecap=\"round\">\n<line x1=\"235\" y1=\"91\" x2=\"235\" y2=\"109\"/><line x1=\"247\" y1=\"91\" x2=\"247\" y2=\"109\"/><line x1=\"259\" y1=\"91\" x2=\"259\" y2=\"109\"/><line x1=\"271\" y1=\"91\" x2=\"271\" y2=\"109\"/>\n<line x1=\"235\" y1=\"125\" x2=\"235\" y2=\"143\"/><line x1=\"247\" y1=\"125\" x2=\"247\" y2=\"143\"/>\n<line x1=\"235\" y1=\"159\" x2=\"235\" y2=\"177\"/>\n</g>\n<rect x=\"65\" y=\"184\" width=\"370\" height=\"28\" fill=\"#e2e8f0\"/>\n<text x=\"125\" y=\"203\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">TOTAL</text>\n<text x=\"390\" y=\"203\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">7</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "In a survey of $20$ students, $8$ chose Bus, $5$ chose Car, $4$ chose Walking, and $3$ chose Bicycle. Find the relative frequency of students who travel by Bus, as a percentage.",
+          "solution_steps": [
+            "Step 1: Identify the frequency for the Bus category: $8$.",
+            "Step 2: Identify the total frequency: $20$.",
+            "Step 3: Calculate the relative frequency: $\\frac{8}{20}$.",
+            "Step 4: Convert to a percentage: $\\frac{8}{20} \\times 100 = 40\\%$."
+          ],
+          "final_answer": "$40\\%$"
+        },
+        {
+          "problem": "A numerical dataset is grouped into three ordered class intervals with frequencies $2, 5,$ and $4$. Calculate the cumulative frequencies.",
+          "solution_steps": [
+            "Step 1: The first cumulative frequency is the first frequency: $2$.",
+            "Step 2: Add the second frequency to the running total: $2 + 5 = 7$.",
+            "Step 3: Add the third frequency: $7 + 4 = 11$."
+          ],
+          "final_answer": "Cumulative frequencies are $2, 7, 11$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Not checking the final total frequency.",
+          "correction": "Always sum up your frequency column at the end. If the problem states 'A survey of 30 learners...' and your frequencies add up to 29, you have missed a tally mark and must recount the raw data."
+        }
+      ],
+      "quick_summary": [
+        "Frequency = How many times a data point appears.",
+        "Total frequency MUST equal the total number of survey responses.",
+        "Relative frequency shows the proportion (fraction/decimal/percentage) of the whole."
+      ]
+    },
+    "ms_math_t13_st04": {
+      "id": "ms_math_t13_st04",
+      "title": "Grouped and ungrouped data",
+      "overview": "If you are recording test scores for 1,000 students, an ungrouped table listing every possible score from 0 to 100 would be overwhelmingly long. Grouped data solves this by condensing individual values into 'Class Intervals' (ranges), sacrificing a bit of exact detail to reveal the big-picture trends.",
+      "key_concepts": [
+        {
+          "concept": "Ungrouped vs. Grouped",
+          "definition": "Detail vs. Summary.",
+          "details": [
+            "**Ungrouped Data:** Lists every individual value exactly as it was collected (great for small datasets).",
+            "**Grouped Data:** Lumps values into ranges, like $10-19$ or $20-29$ (great for massive datasets)."
+          ]
+        },
+        {
+          "concept": "Class Limits vs. Boundaries",
+          "definition": "The edges of the group.",
+          "details": [
+            "**Class Limits:** The actual lowest and highest written numbers in the interval (e.g., $10$ and $19$).",
+            "For whole-number measurements recorded to the nearest unit, class boundaries are halfway between adjacent class limits (for example, $10$–$19$ has boundaries $9.5$ and $19.5$). Use boundaries appropriate to the precision and type of data."
+          ]
+        },
+        {
+          "concept": "Class Midpoint and Width",
+          "definition": "The center and the size.",
+          "details": [
+            "**Midpoint:** The exact average of the class limits. Used later to estimate the mean.",
+            "For the whole-number interval $10$–$19$, the class width is $10$ units. It can be found by subtracting the class boundaries: $19.5 - 9.5 = 10$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Class Midpoint",
+          "equation": "$$ \\text{Midpoint} = \\frac{\\text{Lower Limit} + \\text{Upper Limit}}{2} $$",
+          "variables": {}
+        },
+        {
+          "name": "Class Width",
+          "equation": "$$ \\text{Width} = \\text{Upper Boundary} - \\text{Lower Boundary} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s04",
+          "title": "Anatomy of a Class Interval",
+          "type": "svg",
+          "caption": "The interval 10-19 has a width of 10 and a midpoint of 14.5.",
+          "alt_text": "Visual showing a number line for the interval 10 to 19. Boundaries are marked at 9.5 and 19.5. The Midpoint is marked at 14.5 in the center.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"50\" y1=\"100\" x2=\"450\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"4\"/><rect x=\"100\" y=\"80\" width=\"300\" height=\"40\" fill=\"#bfdbfe\" opacity=\"0.5\"/><line x1=\"100\" y1=\"70\" x2=\"100\" y2=\"130\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><line x1=\"400\" y1=\"70\" x2=\"400\" y2=\"130\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><text x=\"100\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Boundary: 9.5</text><text x=\"400\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Boundary: 19.5</text><circle cx=\"250\" cy=\"100\" r=\"6\" fill=\"#ea580c\"/><text x=\"250\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">Midpoint: 14.5</text><path d=\"M 100 60 Q 250 20 400 60\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><polygon points=\"400,60 395,50 390,60\" fill=\"#16a34a\" transform=\"rotate(60 400 60)\"/><polygon points=\"100,60 105,50 110,60\" fill=\"#16a34a\" transform=\"rotate(-60 100 60)\"/><text x=\"250\" y=\"45\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Class Width = 10</text><text x=\"130\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\">Limit: 10</text><text x=\"320\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\">Limit: 19</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the class midpoint for the class interval $20 - 29$.",
+          "solution_steps": [
+            "Step 1: Use the midpoint formula: $\\frac{\\text{Lower Limit} + \\text{Upper Limit}}{2}$.",
+            "Step 2: Add the limits: $20 + 29 = 49$.",
+            "Step 3: Divide by 2: $49 \\div 2 = 24.5$."
+          ],
+          "final_answer": "$24.5$"
+        },
+        {
+          "problem": "What is the class width of the interval $30 - 39$ if it represents whole-number data?",
+          "solution_steps": [
+            "Step 1: Find the class boundaries. The lower boundary is $29.5$ and the upper boundary is $39.5$.",
+            "Step 2: Subtract the lower boundary from the upper boundary: $39.5 - 29.5 = 10$.",
+            "Step 3: (Alternatively, count the whole numbers: $30, 31, 32, 33, 34, 35, 36, 37, 38, 39$ = $10$ numbers)."
+          ],
+          "final_answer": "$10$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating class width by simply subtracting limits.",
+          "correction": "If you do $19 - 10 = 9$, you get the wrong width. The interval $10-19$ actually holds $10$ distinct numbers. You must either count them or subtract the true class *boundaries* ($19.5 - 9.5 = 10$)."
+        }
+      ],
+      "quick_summary": [
+        "Ungrouped Data = Exact individual numbers. Grouped Data = Ranges/Intervals.",
+        "Class Limits are the written numbers ($10-19$); Class Boundaries are the invisible decimal borders ($9.5-19.5$).",
+        "Grouping data makes huge sets readable, but you lose the exact individual values."
+      ]
+    },
+    "ms_math_t13_st05": {
+      "id": "ms_math_t13_st05",
+      "title": "Bar charts",
+      "overview": "A bar chart transforms a list of category frequencies into a clear visual picture. By using rectangular bars of equal width, it makes comparing different groups instantly intuitive—the taller or longer the bar, the higher the frequency.",
+      "key_concepts": [
+        {
+          "concept": "The Anatomy of a Bar Chart",
+          "definition": "The essential parts.",
+          "details": [
+            "Every bar chart needs a **Title**, clearly labeled **Axes** (x and y), a consistent **Scale**, and the **Bars** themselves."
+          ]
+        },
+        {
+          "concept": "The Golden Rules of Bars",
+          "definition": "Spacing and sizing.",
+          "details": [
+            "**Equal Width:** Every bar must be exactly the same width.",
+            "**Gaps:** Because categories (like 'Apples' and 'Oranges') are separate, there MUST be equal gaps between the bars.",
+            "**Start at Zero:** The numerical scale on the axis should almost always start at 0 to ensure fair visual comparisons."
+          ]
+        },
+        {
+          "concept": "Vertical vs. Horizontal",
+          "definition": "Orientation.",
+          "details": [
+            "**Vertical Bar Charts:** Categories on the bottom, numbers climbing up the side.",
+            "**Horizontal Bar Charts:** Categories on the side, numbers stretching across the bottom (great for long category names)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s05",
+          "title": "A Standard Vertical Bar Chart",
+          "type": "svg",
+          "caption": "Notice the equal gaps between the bars and the scale starting evenly from 0.",
+          "alt_text": "Visual showing a vertical bar chart. Y-axis is labeled 'Frequency' with scale 0, 5, 10, 15. X-axis has 4 categories. Bars are drawn to 12, 8, 6, and 4. There are clear gaps between each blue bar.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"60\" y1=\"200\" x2=\"460\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"60\" y1=\"20\" x2=\"60\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"40\" y=\"205\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\">0</text><text x=\"40\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\">5</text><text x=\"40\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\">10</text><text x=\"40\" y=\"55\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\">15</text><line x1=\"60\" y1=\"150\" x2=\"460\" y2=\"150\" stroke=\"#cbd5e1\" stroke-width=\"1\" stroke-dasharray=\"4,4\"/><line x1=\"60\" y1=\"100\" x2=\"460\" y2=\"100\" stroke=\"#cbd5e1\" stroke-width=\"1\" stroke-dasharray=\"4,4\"/><line x1=\"60\" y1=\"50\" x2=\"460\" y2=\"50\" stroke=\"#cbd5e1\" stroke-width=\"1\" stroke-dasharray=\"4,4\"/><rect x=\"90\" y=\"80\" width=\"50\" height=\"120\" fill=\"#3b82f6\" rx=\"2\"/><rect x=\"180\" y=\"120\" width=\"50\" height=\"80\" fill=\"#3b82f6\" rx=\"2\"/><rect x=\"270\" y=\"140\" width=\"50\" height=\"60\" fill=\"#3b82f6\" rx=\"2\"/><rect x=\"360\" y=\"160\" width=\"50\" height=\"40\" fill=\"#3b82f6\" rx=\"2\"/><text x=\"115\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">Football</text><text x=\"205\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">Basket</text><text x=\"295\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">Swim</text><text x=\"385\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">Tennis</text><text x=\"15\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" transform=\"rotate(-90 15 110)\">Frequency</text><text x=\"260\" y=\"15\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Favourite Sports</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A bar chart shows 'Football' reaching a height of $12$ on the frequency axis, and 'Tennis' reaching a height of $4$. How many more learners chose Football than Tennis?",
+          "solution_steps": [
+            "Step 1: Read the value for Football: $12$.",
+            "Step 2: Read the value for Tennis: $4$.",
+            "Step 3: Subtract to find the difference: $12 - 4 = 8$."
+          ],
+          "final_answer": "$8$ learners"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Squishing bars together with no gaps.",
+          "correction": "If the bars touch, it is a Histogram (used for continuous number ranges, like $10-20$). Bar charts are for distinct categories (like Red, Blue, Green), so they must have gaps between the bars."
+        },
+        {
+          "mistake": "Starting the scale at an arbitrary number (like $50$).",
+          "correction": "If a bar chart starts at $50$ instead of $0$, a bar that ends at $55$ will look $5$ times smaller than a bar that ends at $75$. The scale must usually start at $0$ for a fair visual comparison."
+        }
+      ],
+      "quick_summary": [
+        "Bar charts compare categories using rectangular bars.",
+        "The height (or length) of the bar shows the frequency.",
+        "Always leave equal gaps between the bars.",
+        "Use a consistent scale that starts at $0$."
+      ]
+    },
+    "ms_math_t13_st06": {
+      "id": "ms_math_t13_st06",
+      "title": "Double bar charts",
+      "overview": "A double bar chart is perfect for side-by-side comparisons. Instead of a single bar per category, each category gets a paired set of bars, allowing you to instantly compare two related groups, like 'Boys vs. Girls' or 'Last Year vs. This Year'.",
+      "key_concepts": [
+        {
+          "concept": "Paired Bars",
+          "definition": "Two bars, one category.",
+          "details": [
+            "For each category, the two bars are placed side by side as a pair. Keep the spacing consistent, and leave a clear gap between different categories."
+          ]
+        },
+        {
+          "concept": "The Legend (Key)",
+          "definition": "Color coding.",
+          "details": [
+            "Because there are two bars per category, they must be colored or patterned differently. A **Legend** is required to explain what each color represents."
+          ]
+        },
+        {
+          "concept": "Calculating Differences and Totals",
+          "definition": "Math from the chart.",
+          "details": [
+            "**Difference:** Subtract the smaller bar from the larger bar in a category.",
+            "**Combined Total:** Add the two bars in a category together.",
+            "**Overall Total:** Add up all the bars for one specific color across the whole chart."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s06",
+          "title": "A Double Bar Chart",
+          "type": "svg",
+          "caption": "Compare Town A and Town B side-by-side for each month.",
+          "alt_text": "Visual showing a double bar chart. X-axis has months Jan, Feb, Mar. Y-axis is Rainfall in mm. Each month has a blue bar (Town A) and a green bar (Town B) touching each other. A legend in the top right shows Blue = Town A, Green = Town B.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"60\" y1=\"200\" x2=\"460\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"60\" y1=\"20\" x2=\"60\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"40\" y=\"205\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\">0</text><text x=\"40\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\">30</text><text x=\"40\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\">60</text><line x1=\"60\" y1=\"140\" x2=\"460\" y2=\"140\" stroke=\"#cbd5e1\" stroke-width=\"1\" stroke-dasharray=\"4,4\"/><line x1=\"60\" y1=\"80\" x2=\"460\" y2=\"80\" stroke=\"#cbd5e1\" stroke-width=\"1\" stroke-dasharray=\"4,4\"/><rect x=\"100\" y=\"120\" width=\"30\" height=\"80\" fill=\"#3b82f6\" rx=\"2\"/><rect x=\"130\" y=\"140\" width=\"30\" height=\"60\" fill=\"#22c55e\" rx=\"2\"/><rect x=\"220\" y=\"100\" width=\"30\" height=\"100\" fill=\"#3b82f6\" rx=\"2\"/><rect x=\"250\" y=\"80\" width=\"30\" height=\"120\" fill=\"#22c55e\" rx=\"2\"/><rect x=\"340\" y=\"60\" width=\"30\" height=\"140\" fill=\"#3b82f6\" rx=\"2\"/><rect x=\"370\" y=\"100\" width=\"30\" height=\"100\" fill=\"#22c55e\" rx=\"2\"/><text x=\"130\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">Jan</text><text x=\"250\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">Feb</text><text x=\"370\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">Mar</text><rect x=\"350\" y=\"20\" width=\"100\" height=\"40\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><rect x=\"360\" y=\"25\" width=\"10\" height=\"10\" fill=\"#3b82f6\"/><text x=\"375\" y=\"35\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#0f172a\">Town A</text><rect x=\"360\" y=\"40\" width=\"10\" height=\"10\" fill=\"#22c55e\"/><text x=\"375\" y=\"50\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#0f172a\">Town B</text><text x=\"15\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" transform=\"rotate(-90 15 110)\">Rainfall (mm)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "In January, Town A recorded $40\\text{ mm}$ of rain, and Town B recorded $30\\text{ mm}$. What was the combined total rainfall for both towns in January?",
+          "solution_steps": [
+            "Step 1: Read Town A's value: $40$.",
+            "Step 2: Read Town B's value: $30$.",
+            "Step 3: Add them together: $40 + 30 = 70$."
+          ],
+          "final_answer": "$70\\text{ mm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting the legend.",
+          "correction": "A double bar chart is completely useless without a legend (key) to tell the reader what the two different colors represent."
+        }
+      ],
+      "quick_summary": [
+        "A double bar chart compares two related data sets.",
+        "Place the two bars for each category side by side; leave clear gaps between category groups.",
+        "A legend is mandatory.",
+        "Both data sets must share the exact same scale and units."
+      ]
+    },
+    "ms_math_t13_st07": {
+      "id": "ms_math_t13_st07",
+      "title": "Line graphs",
+      "overview": "While bar charts are great for comparing separate categories, line graphs are specifically designed to track how a single numerical value changes over a continuous period of time. By connecting the data points with lines, we can instantly see trends, spikes, and drops.",
+      "key_concepts": [
+        {
+          "concept": "Time on the X-Axis",
+          "definition": "The steady march forward.",
+          "details": [
+            "In almost all line graphs, time (hours, days, months, years) runs horizontally across the bottom x-axis, and the quantity being measured (temperature, distance, sales) goes up the y-axis."
+          ]
+        },
+        {
+          "concept": "Reading the Trends",
+          "definition": "What the slope tells you.",
+          "details": [
+            "**Upward slope (Increasing):** The value is going up over time.",
+            "**Downward slope (Decreasing):** The value is dropping over time.",
+            "**Flat horizontal line (Constant):** No change. The value stayed exactly the same.",
+            "**Jagged peaks and valleys (Fluctuating):** The value goes up and down repeatedly."
+          ]
+        },
+        {
+          "concept": "Calculating Changes",
+          "definition": "Finding the difference.",
+          "details": [
+            "To find how much something changed between two points in time, subtract the initial value from the final value."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Average Rate of Change",
+          "equation": "$$ \\text{Average Rate of Change} = \\frac{\\text{Final Value} - \\text{Initial Value}}{\\text{Final Time} - \\text{Initial Time}} $$",
+          "variables": {
+            "Final Value − Initial Value": "Change in the measured quantity",
+            "Final Time − Initial Time": "Elapsed time"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s07",
+          "title": "Interpreting Line Graph Slopes",
+          "type": "svg",
+          "caption": "The angle of the line tells the story of what is happening over time.",
+          "alt_text": "Visual showing a line graph with a point at x=1, y=20. The line goes up to x=2, y=40 (Labeled Increasing). The line goes flat to x=3, y=40 (Labeled Constant). The line goes down to x=4, y=10 (Labeled Decreasing).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"60\" y1=\"180\" x2=\"460\" y2=\"180\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"60\" y1=\"20\" x2=\"60\" y2=\"180\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 100 140 L 200 40 L 300 40 L 400 160\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"100\" cy=\"140\" r=\"5\" fill=\"#1d4ed8\"/><circle cx=\"200\" cy=\"40\" r=\"5\" fill=\"#1d4ed8\"/><circle cx=\"300\" cy=\"40\" r=\"5\" fill=\"#1d4ed8\"/><circle cx=\"400\" cy=\"160\" r=\"5\" fill=\"#1d4ed8\"/><text x=\"100\" y=\"195\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">1pm</text><text x=\"200\" y=\"195\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">2pm</text><text x=\"300\" y=\"195\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">3pm</text><text x=\"400\" y=\"195\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">4pm</text><text x=\"130\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\" transform=\"rotate(-45 130 90)\">Increasing</text><text x=\"250\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">Constant</text><text x=\"370\" y=\"100\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#dc2626\" font-weight=\"bold\" transform=\"rotate(50 370 100)\">Decreasing</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A line graph tracks a cyclist's distance. At Hour 2, the distance is $30\\text{ km}$. At Hour 3, the distance is still $30\\text{ km}$. What does this horizontal section of the line indicate?",
+          "solution_steps": [
+            "Step 1: Check the y-axis value at both times. It remained at $30\\text{ km}$.",
+            "Step 2: If the distance did not change while time passed, the cyclist was not moving.",
+            "Step 3: The cyclist stopped for a rest."
+          ],
+          "final_answer": "The cyclist stopped / rested."
+        },
+        {
+          "problem": "The temperature at 8:00 AM was $18^\\circ\\text{C}$ and at 11:00 AM it was $24^\\circ\\text{C}$. What is the average rate of change in temperature per hour?",
+          "solution_steps": [
+            "Step 1: Find the change in temperature: $24 - 18 = 6^\\circ\\text{C}$.",
+            "Step 2: Find the change in time: $11:00 - 8:00 = 3\\text{ hours}$.",
+            "Step 3: Divide the change in value by the change in time: $6 \\div 3 = 2$."
+          ],
+          "final_answer": "$2^\\circ\\text{C}$ per hour"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Connecting points to the zero origin when the data doesn't start there.",
+          "correction": "If your first data point is on Monday at $20^\\circ\\text{C}$, do not draw a line from $0$ up to Monday. The line should only connect the actual recorded data points."
+        }
+      ],
+      "quick_summary": [
+        "Line graphs are the best way to show how things change over time.",
+        "A line going up means an increase, a line going down means a decrease.",
+        "A completely flat, horizontal line means the value stayed exactly the same."
+      ]
+    },
+    "ms_math_t13_st08": {
+      "id": "ms_math_t13_st08",
+      "title": "Pie charts — introduction",
+      "overview": "A pie chart transforms data into a tasty visual—a circular graph sliced into sectors. Because a circle represents a 'whole' (100% or 360°), the size of each slice perfectly shows what proportion that category takes up compared to the entire data set.",
+      "key_concepts": [
+        {
+          "concept": "The 360° Whole",
+          "definition": "The complete circle.",
+          "details": [
+            "A full circle is exactly $360^\\circ$. This represents the entire dataset ($100\\%$).",
+            "Every sector (slice) takes up a fraction of that $360^\\circ$ based on its frequency.",
+            "The categories in a pie chart should be mutually exclusive and together account for the entire dataset."
+          ]
+        },
+        {
+          "concept": "Calculating Sector Angles",
+          "definition": "Slicing the pie.",
+          "details": [
+            "To find how many degrees a category gets, divide its frequency by the TOTAL frequency, then multiply by $360^\\circ$."
+          ]
+        },
+        {
+          "concept": "Working Backwards",
+          "definition": "From angle to frequency.",
+          "details": [
+            "If you know a sector's angle and the total number of people surveyed, you can find how many people are in that sector by dividing the angle by $360^\\circ$ and multiplying by the total people."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sector Angle Formula",
+          "equation": "$$ \\text{Sector Angle} = \\frac{\\text{Category Frequency}}{\\text{Total Frequency}} \\times 360^\\circ $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s08",
+          "title": "Pie Chart Angles vs. Percentages",
+          "type": "svg",
+          "caption": "A 90° slice is exactly 25% (one quarter) of the whole pie.",
+          "alt_text": "Visual showing a pie chart divided into three sections: one half (180 degrees / 50%), and two quarters (90 degrees / 25% each). Labels show the relationship between angles and percentages.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 150 100 L 230 100 A 80 80 0 0 0 70 100 Z\" fill=\"#3b82f6\" stroke=\"#ffffff\" stroke-width=\"2\"/><path d=\"M 150 100 L 70 100 A 80 80 0 0 0 150 180 Z\" fill=\"#22c55e\" stroke=\"#ffffff\" stroke-width=\"2\"/><path d=\"M 150 100 L 150 180 A 80 80 0 0 0 230 100 Z\" fill=\"#ea580c\" stroke=\"#ffffff\" stroke-width=\"2\"/><text x=\"150\" y=\"65\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">180° = 50%</text><text x=\"110\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">90° = 25%</text><text x=\"190\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">90° = 25%</text><rect x=\"280\" y=\"50\" width=\"180\" height=\"100\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"370\" y=\"80\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Total Circle = 360°</text><text x=\"370\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Half = 180°</text><text x=\"370\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Quarter = 90°</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "In a survey of $40$ learners, $15$ chose bananas as their favorite fruit. Calculate the sector angle for bananas on a pie chart.",
+          "solution_steps": [
+            "Step 1: Write the formula: $\\text{Angle} = \\frac{\\text{Frequency}}{\\text{Total}} \\times 360^\\circ$.",
+            "Step 2: Substitute the values: $\\frac{15}{40} \\times 360^\\circ$.",
+            "Step 3: Simplify: $\\frac{15}{40} = \\frac{3}{8}$.",
+            "Step 4: Multiply: $\\frac{3}{8} \\times 360 = 135^\\circ$."
+          ],
+          "final_answer": "$135^\\circ$"
+        },
+        {
+          "problem": "A survey includes $200$ people. The sector for 'Cycling' has an angle of $90^\\circ$. How many people prefer cycling?",
+          "solution_steps": [
+            "Step 1: Set up the equation working backwards: $\\text{Frequency} = \\frac{\\text{Angle}}{360^\\circ} \\times \\text{Total}$.",
+            "Step 2: Substitute the values: $\\frac{90}{360} \\times 200$.",
+            "Step 3: Simplify the fraction: $\\frac{90}{360} = \\frac{1}{4}$.",
+            "Step 4: Multiply: $\\frac{1}{4} \\times 200 = 50$."
+          ],
+          "final_answer": "$50$ people"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying by 100 instead of 360.",
+          "correction": "If you multiply the fraction by 100, you get the PERCENTAGE (%). To draw a pie chart with a protractor, you need the ANGLE, so you must multiply by $360^\\circ$."
+        },
+        {
+          "mistake": "Forgetting to find the total frequency first.",
+          "correction": "You cannot find a sector angle without knowing the grand total. Always add up all the categories to find the 'Total Frequency' before using the formula."
+        }
+      ],
+      "quick_summary": [
+        "A full pie chart represents 100% of the data and contains $360^\\circ$.",
+        "$\\text{Sector Angle} = \\frac{\\text{Part}}{\\text{Whole}} \\times 360^\\circ$.",
+        "Pie charts are best for showing how a whole is divided up into proportional pieces."
+      ]
+    },
+    "ms_math_t13_st09": {
+      "id": "ms_math_t13_st09",
+      "title": "Histograms — introduction",
+      "overview": "At first glance, a histogram looks like a bar chart, but they are fundamentally different! Histograms are designed specifically for 'Continuous Data' (measurements like height, time, or weight) grouped into class intervals, which is why the bars are squished together with zero gaps.",
+      "key_concepts": [
+        {
+          "concept": "No Gaps Allowed",
+          "definition": "Continuous flow.",
+          "details": [
+            "Because continuous data doesn't stop (e.g., a person's height flows smoothly from $149.9\\text{ cm}$ right into $150.0\\text{ cm}$), the bars on a histogram MUST touch each other."
+          ]
+        },
+        {
+          "concept": "The X-Axis is a Number Line",
+          "definition": "Boundaries, not labels.",
+          "details": [
+            "In a bar chart, the x-axis has words (Red, Blue). In a histogram, the x-axis is a continuous number line marking the boundaries of the class intervals (e.g., $10, 20, 30$)."
+          ]
+        },
+        {
+          "concept": "Frequency vs. Frequency Density",
+          "definition": "A preview of advanced histograms.",
+          "details": [
+            "If all class intervals have the same width, bar heights can be drawn in proportion to their frequencies.",
+            "If class intervals have different widths, the **area** of each bar represents its frequency. The bar height represents frequency density.",
+            "Frequency density is calculated by dividing frequency by class width."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Frequency Density (Unequal Widths)",
+          "equation": "$$ \\text{Frequency Density} = \\frac{\\text{Frequency}}{\\text{Class Width}} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s09",
+          "title": "Bar Chart vs. Histogram",
+          "type": "svg",
+          "caption": "Bar charts separate distinct categories with gaps. Histograms connect continuous measurement intervals.",
+          "alt_text": "Visual showing a split screen. Left side: Bar chart with gaps between blue bars, x-axis labeled Cats, Dogs, Birds. Right side: Histogram with touching green bars, x-axis labeled 10, 20, 30, 40 (number line).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"220\" height=\"160\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"130\" y=\"45\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Bar Chart (Categories)</text><line x1=\"40\" y1=\"150\" x2=\"220\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"60\" y=\"70\" width=\"30\" height=\"80\" fill=\"#3b82f6\"/><rect x=\"110\" y=\"100\" width=\"30\" height=\"50\" fill=\"#3b82f6\"/><rect x=\"160\" y=\"120\" width=\"30\" height=\"30\" fill=\"#3b82f6\"/><text x=\"75\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#0f172a\">Cat</text><text x=\"125\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#0f172a\">Dog</text><text x=\"175\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#0f172a\">Bird</text><text x=\"130\" y=\"100\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\" opacity=\"0.7\">GAPS!</text><rect x=\"260\" y=\"20\" width=\"220\" height=\"160\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"370\" y=\"45\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Histogram (Continuous)</text><line x1=\"280\" y1=\"150\" x2=\"460\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"300\" y=\"100\" width=\"40\" height=\"50\" fill=\"#22c55e\" stroke=\"#ffffff\" stroke-width=\"1\"/><rect x=\"340\" y=\"70\" width=\"40\" height=\"80\" fill=\"#22c55e\" stroke=\"#ffffff\" stroke-width=\"1\"/><rect x=\"380\" y=\"110\" width=\"40\" height=\"40\" fill=\"#22c55e\" stroke=\"#ffffff\" stroke-width=\"1\"/><text x=\"300\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#0f172a\">10</text><text x=\"340\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#0f172a\">20</text><text x=\"380\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#0f172a\">30</text><text x=\"420\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#0f172a\">40</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A histogram groups all recorded learner heights into intervals beginning at $140$–$149\\text{ cm}$. This first interval contains $7$ learners. How many learners in the dataset are shorter than $150\\text{ cm}$?",
+          "solution_steps": [
+            "Step 1: The interval $140$–$149\\text{ cm}$ is the first and lowest interval, and it contains all observations below $150\\text{ cm}$.",
+            "Step 2: Read its frequency from the histogram: $7$."
+          ],
+          "final_answer": "$7$ learners"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Drawing gaps between the bars of a histogram.",
+          "correction": "This is a severe error. Because the x-axis is a continuous number line (e.g., $10, 20, 30$), the end of one bar ($20$) is the exact start of the next bar ($20$). There is no physical space for a gap."
+        }
+      ],
+      "quick_summary": [
+        "Histograms = Continuous data (measured). Bar charts = Categorical data (counted).",
+        "Histogram bars must always touch.",
+        "The x-axis of a histogram represents class boundaries on a number line."
+      ]
+    },
+    "ms_math_t13_st10": {
+      "id": "ms_math_t13_st10",
+      "title": "Mean, median and mode",
+      "overview": "When looking at a massive list of numbers, we often just want to know what is 'normal' or 'typical'. Mean, Median, and Mode are three different ways to find the 'center' of a dataset, known as Measures of Central Tendency.",
+      "key_concepts": [
+        {
+          "concept": "Mean (The Arithmetic Average)",
+          "definition": "Share everything equally.",
+          "details": [
+            "Found by adding all the numbers together and dividing by how many numbers there are.",
+            "The mean is highly sensitive to **extreme values** (outliers). One massive number will pull the mean way up."
+          ]
+        },
+        {
+          "concept": "Median (The Middle)",
+          "definition": "The exact center of the line.",
+          "details": [
+            "Found by ordering the numbers from smallest to largest and picking the one exactly in the middle.",
+            "If there is an even number of values, take the two middle numbers and find their mean (add them and divide by 2)."
+          ]
+        },
+        {
+          "concept": "Mode (Most Frequent)",
+          "definition": "The popularity contest.",
+          "details": [
+            "Found by identifying the number that appears the most often.",
+            "A dataset can have no mode, one mode, or multiple modes (e.g., bimodal)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Mean",
+          "equation": "$$ \\text{Mean} = \\frac{\\text{Sum of all values}}{\\text{Total number of values}} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s10",
+          "title": "Finding the Median (Even vs Odd)",
+          "type": "svg",
+          "caption": "Always sort the numbers first! If it's an even set, average the two middle numbers.",
+          "alt_text": "Visual showing two lists of numbers. Top list (Odd): 3, 5, 7, 9, 11. 7 is circled as the Median. Bottom list (Even): 4, 6, 8, 10, 12, 14. 8 and 10 are bracketed. Arrow points to (8+10)/2 = 9 as the Median.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"460\" height=\"75\" fill=\"#dbeafe\" rx=\"8\"/><text x=\"70\" y=\"65\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#1e3a8a\">3</text><text x=\"130\" y=\"65\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#1e3a8a\">5</text><text x=\"190\" y=\"65\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#1d4ed8\" font-weight=\"bold\">7</text><text x=\"250\" y=\"65\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#1e3a8a\">9</text><text x=\"310\" y=\"65\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#1e3a8a\">11</text><circle cx=\"196\" cy=\"58\" r=\"15\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"400\" y=\"65\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">Median = 7</text><text x=\"70\" y=\"40\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\">Odd Count (5 numbers):</text><rect x=\"20\" y=\"105\" width=\"460\" height=\"75\" fill=\"#dcfce7\" rx=\"8\"/><text x=\"70\" y=\"125\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\">Even Count (6 numbers):</text><text x=\"60\" y=\"150\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#14532d\">4</text><text x=\"110\" y=\"150\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#14532d\">6</text><text x=\"160\" y=\"150\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#15803d\" font-weight=\"bold\">8</text><text x=\"210\" y=\"150\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#15803d\" font-weight=\"bold\">10</text><text x=\"270\" y=\"150\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#14532d\">12</text><text x=\"320\" y=\"150\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#14532d\">14</text><path d=\"M 160 160 L 160 170 L 225 170 L 225 160\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"400\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">Avg(8,10) = 9</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the median of the following dataset: $12, 5, 9, 18, 2$.",
+          "solution_steps": [
+            "Step 1: ALWAYS sort the data from smallest to largest first! $2, 5, 9, 12, 18$.",
+            "Step 2: Since there are $5$ numbers (odd), pick the one exactly in the middle.",
+            "Step 3: The middle number is $9$."
+          ],
+          "final_answer": "$9$"
+        },
+        {
+          "problem": "Find the mean of $20, 22, 24, 25, 109$.",
+          "solution_steps": [
+            "Step 1: Add all the values together: $20 + 22 + 24 + 25 + 109 = 200$.",
+            "Step 2: Count how many values there are: $5$ values.",
+            "Step 3: Divide the sum by the count: $200 \\div 5 = 40$."
+          ],
+          "final_answer": "$40$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Finding the median without sorting the numbers first.",
+          "correction": "If you just pick the middle number of an unsorted list (like picking 9 from $12, 5, 9, 18, 2$), it is purely random. The numbers MUST be in ascending order first."
+        },
+        {
+          "mistake": "Thinking every dataset has a mode.",
+          "correction": "If the dataset is $3, 5, 7, 9, 11$, no number repeats. The mode is NOT 0. The correct answer is 'No Mode'."
+        }
+      ],
+      "quick_summary": [
+        "**Mean:** Add them all up, divide by the count.",
+        "**Median:** Sort them, find the exact middle.",
+        "**Mode:** The number you see the most often."
+      ],
+      "utilities": [
+        {
+          "title": "Statistics Calculator",
+          "description": "Check numerical summaries such as mean, median and range alongside your own working.",
+          "url": "https://onlinetoolpad.com/math/Statistics_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t13_st11": {
+      "id": "ms_math_t13_st11",
+      "title": "Range",
+      "overview": "While averages tell you where the middle of the data is, the Range tells you how far the data spreads out. It is the simplest measure of 'spread' or 'variation'—showing the distance between the absolute highest and lowest values.",
+      "key_concepts": [
+        {
+          "concept": "Calculating the Range",
+          "definition": "Maximum minus Minimum.",
+          "details": [
+            "Simply find the largest number in the data set and subtract the smallest number from it.",
+            "$\\text{Range} = \\text{Highest Value} - \\text{Lowest Value}$."
+          ]
+        },
+        {
+          "concept": "The Spread of Data",
+          "definition": "Consistency vs. Variation.",
+          "details": [
+            "A **Small Range** means the numbers are tightly packed together (highly consistent).",
+            "A **Large Range** means the numbers are widely spread out (high variation or unpredictability)."
+          ]
+        },
+        {
+          "concept": "The Outlier Trap",
+          "definition": "Extreme values.",
+          "details": [
+            "Because the range only looks at the two extreme ends of the data, a single unusually high or low number (an outlier) can make the range look massive, even if all the other numbers are grouped closely together."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Range",
+          "equation": "$$ \\text{Range} = \\text{Highest Value} - \\text{Lowest Value} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s11",
+          "title": "Visualizing Range",
+          "type": "svg",
+          "caption": "The range ignores everything in the middle and only measures the gap between the extremes.",
+          "alt_text": "Visual showing a number line from 0 to 30. Dots are placed at 5, 12, 15, 18, and 27. An arrow stretches from the lowest dot (5) to the highest dot (27). Text above reads 'Range = 27 - 5 = 22'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"50\" y1=\"130\" x2=\"450\" y2=\"130\" stroke=\"#94a3b8\" stroke-width=\"4\"/><text x=\"50\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#64748b\">0</text><text x=\"450\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#64748b\">30</text><circle cx=\"116\" cy=\"130\" r=\"6\" fill=\"#3b82f6\"/><circle cx=\"210\" cy=\"130\" r=\"6\" fill=\"#3b82f6\"/><circle cx=\"250\" cy=\"130\" r=\"6\" fill=\"#3b82f6\"/><circle cx=\"290\" cy=\"130\" r=\"6\" fill=\"#3b82f6\"/><circle cx=\"410\" cy=\"130\" r=\"6\" fill=\"#3b82f6\"/><text x=\"116\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Min: 5</text><text x=\"410\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Max: 27</text><path d=\"M 116 100 Q 263 50 410 100\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><polygon points=\"410,100 400,95 405,105\" fill=\"#ea580c\" transform=\"rotate(30 410 100)\"/><polygon points=\"116,100 126,95 121,105\" fill=\"#ea580c\" transform=\"rotate(-30 116 100)\"/><rect x=\"180\" y=\"20\" width=\"160\" height=\"40\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"260\" y=\"45\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">Range = 27 - 5 = 22</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "The marks obtained by six learners in a math test are: $42, 65, 78, 55, 90, 70$. Find the range.",
+          "solution_steps": [
+            "Step 1: Identify the highest mark. Highest $= 90$.",
+            "Step 2: Identify the lowest mark. Lowest $= 42$.",
+            "Step 3: Subtract the lowest from the highest: $90 - 42 = 48$."
+          ],
+          "final_answer": "$48$ marks"
+        },
+        {
+          "problem": "Group A running times are $12, 13, 14, 15, 16$ seconds. Group B times are $8, 12, 14, 17, 20$ seconds. Which group is more consistent?",
+          "solution_steps": [
+            "Step 1: Find the range for Group A: $16 - 12 = 4\\text{ s}$.",
+            "Step 2: Find the range for Group B: $20 - 8 = 12\\text{ s}$.",
+            "Step 3: A smaller range means the data is more tightly grouped (more consistent)."
+          ],
+          "final_answer": "Group A is more consistent."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding the highest and lowest values together.",
+          "correction": "Range is a measure of DIFFERENCE, not a total. You must subtract the lowest value from the highest value."
+        }
+      ],
+      "quick_summary": [
+        "Range = Maximum Value - Minimum Value.",
+        "Small range = highly consistent data. Large range = widely spread data.",
+        "A single extreme value (outlier) can drastically change the range."
+      ],
+      "utilities": [
+        {
+          "title": "Statistics Calculator",
+          "description": "Check numerical summaries such as mean, median and range alongside your own working.",
+          "url": "https://onlinetoolpad.com/math/Statistics_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t13_st12": {
+      "id": "ms_math_t13_st12",
+      "title": "Choosing appropriate averages",
+      "overview": "Mean, Median, and Mode all claim to find the 'typical' value of a dataset, but they each have different strengths. Choosing the wrong average can give a completely false impression of the data. You must pick the one that best fits the story the data is telling.",
+      "key_concepts": [
+        {
+          "concept": "When to use the Mean",
+          "definition": "The balanced scale.",
+          "details": [
+            "Best used when the data is **reasonably balanced** with no extreme high or low numbers.",
+            "It is the only average that uses every single numerical value in its calculation."
+          ]
+        },
+        {
+          "concept": "When to use the Median",
+          "definition": "The outlier dodger.",
+          "details": [
+            "Best used when the data contains **extreme values (outliers)** or is highly skewed.",
+            "The median is resistant to extreme values. For example, if four people earn $\\$20,000$ and one person earns $\\$1,000,000$, the median is $\\$20,000$ because it is the middle value after sorting the five incomes. The mean is pulled upward by the high income."
+          ]
+        },
+        {
+          "concept": "When to use the Mode",
+          "definition": "The popularity contest.",
+          "details": [
+            "Best used when dealing with **categorical data** (words, colors, brands) or when you need to know the absolute most popular/frequent choice.",
+            "You cannot calculate a mean or median for 'Favorite Shoe Brand', so Mode is the only option."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s12",
+          "title": "Which Average Should I Use?",
+          "type": "svg",
+          "caption": "A quick flowchart for choosing the best measure of central tendency.",
+          "alt_text": "Visual flowchart. Top box 'What type of data?'. Branch left to 'Categories/Words' -> Use MODE. Branch right to 'Numbers'. Under Numbers, branch left to 'Has Extreme Outliers' -> Use MEDIAN. Branch right to 'Balanced Data' -> Use MEAN.",
+          "data": "<svg viewBox=\"0 0 600 270\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"600\" height=\"270\" fill=\"#f8fafc\" rx=\"10\"/>\n<rect x=\"200\" y=\"12\" width=\"200\" height=\"38\" rx=\"7\" fill=\"#334155\"/>\n<text x=\"300\" y=\"36\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">What type of data?</text>\n<path d=\"M 300 50 L 300 68 L 110 68 L 110 88\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2.5\"/>\n<path d=\"M 300 68 L 490 68 L 490 88\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2.5\"/>\n<polygon points=\"110,88 104,78 116,78\" fill=\"#64748b\"/><polygon points=\"490,88 484,78 496,78\" fill=\"#64748b\"/>\n<rect x=\"25\" y=\"92\" width=\"170\" height=\"42\" rx=\"7\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/>\n<text x=\"110\" y=\"118\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#92400e\" font-weight=\"bold\">Categories / words</text>\n<rect x=\"405\" y=\"92\" width=\"170\" height=\"42\" rx=\"7\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<text x=\"490\" y=\"118\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Numerical data</text>\n<path d=\"M 110 134 L 110 177\" stroke=\"#d97706\" stroke-width=\"2.5\"/><polygon points=\"110,177 104,167 116,167\" fill=\"#d97706\"/>\n<rect x=\"35\" y=\"182\" width=\"150\" height=\"45\" rx=\"7\" fill=\"#ffffff\" stroke=\"#d97706\" stroke-width=\"2.5\"/>\n<text x=\"110\" y=\"210\" font-family=\"sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#92400e\" font-weight=\"bold\">Use MODE</text>\n<path d=\"M 490 134 L 490 153\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><polygon points=\"490,153 484,143 496,143\" fill=\"#2563eb\"/>\n<rect x=\"390\" y=\"158\" width=\"200\" height=\"40\" rx=\"7\" fill=\"#e2e8f0\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<text x=\"490\" y=\"183\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#334155\" font-weight=\"bold\">Are there outliers or skew?</text>\n<path d=\"M 440 198 L 345 225\" stroke=\"#16a34a\" stroke-width=\"2.5\" fill=\"none\"/><polygon points=\"345,225 356,222 353,233\" fill=\"#16a34a\"/>\n<path d=\"M 540 198 L 535 225\" stroke=\"#2563eb\" stroke-width=\"2.5\" fill=\"none\"/><polygon points=\"535,225 529,215 541,215\" fill=\"#2563eb\"/>\n<text x=\"380\" y=\"216\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#15803d\" font-weight=\"bold\">Yes</text>\n<text x=\"550\" y=\"216\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1d4ed8\" font-weight=\"bold\">No</text>\n<rect x=\"260\" y=\"230\" width=\"135\" height=\"32\" rx=\"6\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n<text x=\"327\" y=\"251\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Use MEDIAN</text>\n<rect x=\"450\" y=\"230\" width=\"125\" height=\"32\" rx=\"6\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<text x=\"512\" y=\"251\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Use MEAN</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A property researcher studies house prices in a small town. Four houses cost $\\$100,000$, and one mansion costs $\\$5,000,000$. Which average should they use to report a 'typical' house price?",
+          "solution_steps": [
+            "Step 1: The data contains a massive extreme value (an outlier: $\\$5,000,000$).",
+            "Step 2: If we calculate the mean, it will be pulled incredibly high, making the town look much richer than it is.",
+            "Step 3: After sorting the five prices, the middle value is $\\$100,000$. The median is less affected by the extreme mansion price than the mean."
+          ],
+          "final_answer": "Median"
+        },
+        {
+          "problem": "A shoe store manager wants to know which shoe size to stock the most of next month. Should they calculate the mean, median, or mode of last month's sales?",
+          "solution_steps": [
+            "Step 1: The manager needs to know the most frequent/popular size to order more of it.",
+            "Step 2: An arithmetic 'average' shoe size might result in a size $8.3$, which doesn't exist.",
+            "Step 3: The mode specifically identifies the most frequently occurring category."
+          ],
+          "final_answer": "Mode"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the mean for categorical data.",
+          "correction": "You cannot calculate the mean of 'Blue, Red, Blue, Green'. You can only use the Mode for non-numerical categorical data."
+        }
+      ],
+      "quick_summary": [
+        "**Mean:** Best for balanced, numerical data.",
+        "**Median:** Best when the data has extreme high or low outliers.",
+        "**Mode:** Best for finding the most popular choice, or for categorical (word) data."
+      ],
+      "utilities": [
+        {
+          "title": "Statistics Calculator",
+          "description": "Check numerical summaries such as mean, median and range alongside your own working.",
+          "url": "https://onlinetoolpad.com/math/Statistics_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t13_st13": {
+      "id": "ms_math_t13_st13",
+      "title": "Interpreting misleading graphs",
+      "overview": "Data doesn't lie, but the way it is drawn on a graph absolutely can. News outlets, advertisers, and companies often manipulate the scales, axes, or visuals of a graph to exaggerate differences and mislead viewers into jumping to the wrong conclusions.",
+      "key_concepts": [
+        {
+          "concept": "The Truncated Y-Axis",
+          "definition": "Skipping the zero.",
+          "details": [
+            "If a bar chart's y-axis starts at $80$ instead of $0$, a bar that reaches $100$ will look *twice* as tall as a bar that reaches $90$, even though the actual difference is only a tiny percentage. **Always check if the y-axis starts at 0!**"
+          ]
+        },
+        {
+          "concept": "Misleading Pictographs",
+          "definition": "The 2D area trap.",
+          "details": [
+            "If sales double, an advertiser might double the height AND the width of a picture of a money bag. This makes the new money bag take up $4$ times the area on the page, tricking the brain into thinking sales quadrupled instead of doubled."
+          ]
+        },
+        {
+          "concept": "Unequal Intervals",
+          "definition": "Stretching the scale.",
+          "details": [
+            "Equal distances on an axis must represent equal numerical steps. For example, $10, 20, 30, 40$ should be spaced evenly. If unequal steps are shown at equal distances, the graph distorts the pattern."
+          ]
+        },
+        {
+          "concept": "Correlation vs. Causation",
+          "definition": "A famous logic trap.",
+          "details": [
+            "Just because a line graph shows ice cream sales and sunburns rising at the same time does NOT mean eating ice cream causes sunburns. They are both caused by a third hidden factor: hot summer weather."
+          ]
+        },
+        {
+          "concept": "Interpreting Percentage Change",
+          "definition": "Comparing a change with the original value.",
+          "details": [
+            "A positive percentage change indicates an increase; a negative result indicates a decrease.",
+            "The original value must not be zero, because division by zero is undefined."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Percentage Change",
+          "equation": "$$ \\text{Percentage Change} = \\frac{\\text{New} - \\text{Original}}{\\text{Original}} \\times 100 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s13",
+          "title": "The Truncated Axis Trick",
+          "type": "svg",
+          "caption": "Both charts show the exact same data (90 vs 100), but the chart starting at 80 makes the difference look massive.",
+          "alt_text": "Visual showing two bar charts side by side. Left chart (Honest): y-axis starts at 0, goes to 100. Bar A is 90, Bar B is 100. They look almost the same height. Right chart (Misleading): y-axis starts at 80, goes to 100. Bar A (90) looks half the height of Bar B (100).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"220\" height=\"160\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"130\" y=\"40\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Honest (Starts at 0)</text><line x1=\"50\" y1=\"150\" x2=\"220\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"40\" y=\"155\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"end\" fill=\"#64748b\">0</text><text x=\"40\" y=\"105\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"end\" fill=\"#64748b\">50</text><text x=\"40\" y=\"55\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"end\" fill=\"#64748b\">100</text><rect x=\"80\" y=\"60\" width=\"40\" height=\"90\" fill=\"#3b82f6\"/><rect x=\"150\" y=\"50\" width=\"40\" height=\"100\" fill=\"#3b82f6\"/><text x=\"100\" y=\"170\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">A (90)</text><text x=\"170\" y=\"170\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">B (100)</text><rect x=\"260\" y=\"20\" width=\"220\" height=\"160\" fill=\"#ffffff\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"10\"/><text x=\"370\" y=\"40\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Misleading (Starts at 80)</text><line x1=\"290\" y1=\"150\" x2=\"460\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"290\" y1=\"50\" x2=\"290\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"280\" y=\"155\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"end\" fill=\"#64748b\">80</text><text x=\"280\" y=\"105\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"end\" fill=\"#64748b\">90</text><text x=\"280\" y=\"55\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"end\" fill=\"#64748b\">100</text><rect x=\"320\" y=\"100\" width=\"40\" height=\"50\" fill=\"#ef4444\"/><rect x=\"390\" y=\"50\" width=\"40\" height=\"100\" fill=\"#ef4444\"/><text x=\"340\" y=\"170\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">A (90)</text><text x=\"410\" y=\"170\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">B (100)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A company states: 'Sales exploded from 95 units to 100 units!'. They show a bar chart where the 100 unit bar looks twice as tall as the 95 unit bar. What makes this graph misleading?",
+          "solution_steps": [
+            "Step 1: Check the vertical (y) axis.",
+            "Step 2: If the 100 bar is twice as tall as the 95 bar, the axis does not start at 0. It likely starts at 90.",
+            "Step 3: This truncated axis artificially exaggerates a tiny 5-unit increase to make it look like a massive $100\\%$ jump."
+          ],
+          "final_answer": "The vertical axis is truncated (does not start at 0)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trusting the visual size of a shape instead of reading the axis numbers.",
+          "correction": "Read the numerical scale and check where the axis begins before judging the size of a difference. A truncated axis may exaggerate a difference, even when the plotted values are correct."
+        }
+      ],
+      "quick_summary": [
+        "**Truncated Axes:** Y-axis doesn't start at 0, exaggerating small differences.",
+        "**Unequal Intervals:** Axis numbers jump by inconsistent amounts, distorting slopes.",
+        "**Correlation $\\neq$ Causation:** Just because two things rise together doesn't mean one causes the other."
+      ]
+    },
+    "ms_math_t13_st14": {
+      "id": "ms_math_t13_st14",
+      "title": "Comparing data sets",
+      "overview": "Comparing two data sets means looking at both their typical values and how widely their values are spread. A fair comparison uses the same type of measure and units for both sets, and considers how the data was collected.",
+      "key_concepts": [
+        {
+          "concept": "Compare the Centre",
+          "definition": "Where the values are typically located.",
+          "details": [
+            "Use the **mean** or **median** to compare typical values in numerical data.",
+            "The mean uses every value and is affected by extreme values. The median is often more useful when data is skewed or contains outliers.",
+            "Use the same measure for both data sets when making a direct comparison."
+          ]
+        },
+        {
+          "concept": "Compare the Spread",
+          "definition": "How much the values vary.",
+          "details": [
+            "The **range** gives a simple measure of spread: highest value minus lowest value.",
+            "A smaller range means the values cover a narrower interval; a larger range means they are more spread out.",
+            "Two data sets can have the same median but different ranges, so comparing only the centre may hide important differences."
+          ]
+        },
+        {
+          "concept": "Make a Fair Comparison",
+          "definition": "Check that the data sets are comparable.",
+          "details": [
+            "Check that both data sets measure the same quantity in the same units and were collected in similar ways.",
+            "Consider the number of observations and whether the groups are representative of the populations being compared.",
+            "Use numerical summaries together with the actual values or graphs; a single statistic may not describe the whole pattern."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Range",
+          "equation": "$$ \\text{Range} = \\text{Highest Value} - \\text{Lowest Value} $$",
+          "variables": {}
+        },
+        {
+          "name": "Mean",
+          "equation": "$$ \\text{Mean} = \\frac{\\text{Sum of Values}}{\\text{Number of Values}} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s14",
+          "title": "Compare Centre and Spread",
+          "type": "svg",
+          "caption": "Both groups have a median of 7, but Group B has a wider range.",
+          "alt_text": "Visual table comparing Group A values 6, 7, 7, 8, 9 with median 7 and range 3, and Group B values 4, 7, 7, 9, 13 with median 7 and range 9.",
+          "data": "<svg viewBox=\"0 0 520 230\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"520\" height=\"230\" fill=\"#f8fafc\" rx=\"10\"/>\n<text x=\"260\" y=\"28\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Two Data Sets</text>\n<rect x=\"35\" y=\"48\" width=\"450\" height=\"68\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\" rx=\"8\"/>\n<text x=\"55\" y=\"72\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#1e3a8a\" font-weight=\"bold\">Group A</text>\n<text x=\"180\" y=\"73\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#0f172a\">6, 7, 7, 8, 9</text>\n<text x=\"180\" y=\"99\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Median = 7   |   Range = 9 − 6 = 3</text>\n<rect x=\"35\" y=\"130\" width=\"450\" height=\"68\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.5\" rx=\"8\"/>\n<text x=\"55\" y=\"154\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#14532d\" font-weight=\"bold\">Group B</text>\n<text x=\"180\" y=\"155\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#0f172a\">4, 7, 7, 9, 13</text>\n<text x=\"180\" y=\"181\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Median = 7   |   Range = 13 − 4 = 9</text>\n<text x=\"260\" y=\"220\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#334155\">Same median, different spread</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "The scores for two groups are: Group A: $6, 7, 7, 8, 9$; Group B: $4, 7, 7, 9, 13$. Compare their medians and ranges.",
+          "solution_steps": [
+            "Step 1: Both sets are already in ascending order. The middle value in each set is $7$, so both medians are $7$.",
+            "Step 2: Find Group A's range: $9 - 6 = 3$.",
+            "Step 3: Find Group B's range: $13 - 4 = 9$.",
+            "Step 4: The medians are equal, but Group B has the larger range and therefore a wider spread."
+          ],
+          "final_answer": "Both medians are $7$. Group A's range is $3$; Group B's range is $9$. Group B is more spread out."
+        },
+        {
+          "problem": "Two classes took the same test. Class X had a mean score of $68$ and Class Y had a mean score of $74$. Which class had the higher average score, and by how many marks?",
+          "solution_steps": [
+            "Step 1: Read the two means: Class X = $68$ and Class Y = $74$.",
+            "Step 2: Subtract the lower mean from the higher mean: $74 - 68 = 6$.",
+            "Step 3: Compare like with like: both means describe marks on the same test."
+          ],
+          "final_answer": "Class Y had the higher mean by $6$ marks."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Comparing the mean of one group with the median of another.",
+          "correction": "Use the same measure for both groups. For example, compare mean with mean or median with median."
+        },
+        {
+          "mistake": "Deciding which group is more consistent from the mean alone.",
+          "correction": "The mean describes a centre, not the spread. Compare a measure of spread such as the range as well."
+        }
+      ],
+      "quick_summary": [
+        "Compare typical values using the same measure (mean or median) for both data sets.",
+        "Compare spread using the range or by inspecting the values/graphs.",
+        "Check that the groups, units and collection methods are comparable before drawing a conclusion."
+      ],
+      "utilities": [
+        {
+          "title": "Statistics Calculator",
+          "description": "Check numerical summaries such as mean, median and range alongside your own working.",
+          "url": "https://onlinetoolpad.com/math/Statistics_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t13_st15": {
+      "id": "ms_math_t13_st15",
+      "title": "Drawing conclusions from data",
+      "overview": "A conclusion explains what the collected data suggests in relation to the question being investigated. A good conclusion is supported by specific values or patterns, recognises the limits of the data, and does not claim more than the evidence allows.",
+      "key_concepts": [
+        {
+          "concept": "Answer the Investigation Question",
+          "definition": "Keep the conclusion focused.",
+          "details": [
+            "Begin by identifying the question the data was collected to answer.",
+            "State the main pattern, comparison or result that is visible in the table, chart or summary.",
+            "Use actual numbers or clear references to the data to support the statement."
+          ]
+        },
+        {
+          "concept": "Support Claims with Evidence",
+          "definition": "Show how the data supports the conclusion.",
+          "details": [
+            "Refer to relevant frequencies, averages, ranges, percentages or trends rather than relying on a visual impression.",
+            "Distinguish an observation (what the data shows) from a possible explanation (why it may have happened).",
+            "Avoid claiming that one factor caused another unless the investigation provides suitable evidence for causation."
+          ]
+        },
+        {
+          "concept": "Recognise Limitations",
+          "definition": "Understand what the data cannot establish.",
+          "details": [
+            "Consider the sample size, how participants or observations were selected, and whether the sample represents the group being discussed.",
+            "A survey of one class may describe that class, but it may not represent the whole school.",
+            "Mention missing information, unusual values or other limits that could affect how confidently the result can be applied."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s15",
+          "title": "From Data to a Supported Conclusion",
+          "type": "svg",
+          "caption": "Use the evidence, then check the limits before making a conclusion.",
+          "alt_text": "Four connected steps: identify the question, read the data, support a statement with evidence, and check the limitations.",
+          "data": "<svg viewBox=\"0 0 520 240\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"520\" height=\"240\" fill=\"#f8fafc\" rx=\"10\"/>\n<text x=\"260\" y=\"28\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A Careful Data Conclusion</text>\n<rect x=\"25\" y=\"58\" width=\"205\" height=\"58\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<text x=\"127\" y=\"82\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">1. Identify the</text>\n<text x=\"127\" y=\"101\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">question</text>\n<path d=\"M 230 87 L 285 87\" stroke=\"#64748b\" stroke-width=\"3\"/><polygon points=\"285,87 275,81 275,93\" fill=\"#64748b\"/>\n<rect x=\"290\" y=\"58\" width=\"205\" height=\"58\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n<text x=\"392\" y=\"82\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">2. Read the data</text>\n<text x=\"392\" y=\"101\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">Tables, charts, summaries</text>\n<path d=\"M 392 116 L 392 145 L 285 145\" stroke=\"#64748b\" stroke-width=\"3\" fill=\"none\"/><polygon points=\"285,145 295,139 295,151\" fill=\"#64748b\"/>\n<rect x=\"25\" y=\"155\" width=\"260\" height=\"58\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/>\n<text x=\"155\" y=\"179\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#92400e\" font-weight=\"bold\">3. State a conclusion</text>\n<text x=\"155\" y=\"198\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#92400e\">Quote relevant evidence</text>\n<path d=\"M 285 184 L 330 184\" stroke=\"#64748b\" stroke-width=\"3\"/><polygon points=\"330,184 320,178 320,190\" fill=\"#64748b\"/>\n<rect x=\"335\" y=\"155\" width=\"160\" height=\"58\" rx=\"8\" fill=\"#fce7f3\" stroke=\"#db2777\" stroke-width=\"2\"/>\n<text x=\"415\" y=\"179\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9d174d\" font-weight=\"bold\">4. Check limits</text>\n<text x=\"415\" y=\"198\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#9d174d\">Sample and uncertainty</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A survey asked $30$ learners in one Grade 7 class how they travel to school. Eighteen walk, nine travel by bus and three cycle. Write one conclusion supported by the data and identify one limitation.",
+          "solution_steps": [
+            "Step 1: Compare the frequencies: walking = $18$, bus = $9$, cycling = $3$.",
+            "Step 2: Walking is the most common response in this class. Its proportion is $\\frac{18}{30} = 60\\%$.",
+            "Step 3: State the conclusion within the scope of the sample: most learners surveyed in this Grade 7 class walk to school.",
+            "Step 4: The survey covers only one class, so it may not represent every learner in the school."
+          ],
+          "final_answer": "Most learners surveyed in this Grade 7 class walk to school ($60\\%$). The result should not automatically be generalised to the whole school."
+        },
+        {
+          "problem": "A line graph records the temperature as $16^\\circ\\text{C}$ at 8:00 AM, $18^\\circ\\text{C}$ at 9:00 AM, $22^\\circ\\text{C}$ at 10:00 AM and $22^\\circ\\text{C}$ at 11:00 AM. Describe the pattern shown.",
+          "solution_steps": [
+            "Step 1: Compare consecutive readings: the temperature rises from $16^\\circ\\text{C}$ to $18^\\circ\\text{C}$, then to $22^\\circ\\text{C}$.",
+            "Step 2: From 10:00 AM to 11:00 AM, the reading remains at $22^\\circ\\text{C}$.",
+            "Step 3: Describe only the recorded period; the data does not show what happened after 11:00 AM."
+          ],
+          "final_answer": "The temperature increased from 8:00 AM to 10:00 AM, then remained at $22^\\circ\\text{C}$ until 11:00 AM."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Making a claim about a larger population from a small or unrepresentative sample.",
+          "correction": "State exactly who or what was observed. Explain when the sample may not represent the wider group."
+        },
+        {
+          "mistake": "Giving an opinion without referring to the data.",
+          "correction": "Support each conclusion with relevant values, frequencies, comparisons or trends from the table or graph."
+        }
+      ],
+      "quick_summary": [
+        "Answer the investigation question using specific evidence from the data.",
+        "Separate what the data shows from possible explanations.",
+        "Acknowledge limits such as small samples, selection bias or missing information."
+      ]
+    }
+  }
+}

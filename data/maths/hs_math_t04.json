@@ -1,0 +1,1591 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t04",
+  "topicTitle": "Equations and Inequalities",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t04_st01": {
+      "id": "hs_math_t04_st01",
+      "title": "Linear equations in one variable",
+      "overview": "A linear equation in one variable states that two expressions have the same value. Solving it means finding the value of the variable that makes the equality true. The key principle is to preserve equality by performing the same valid operation on both sides.",
+      "key_concepts": [
+        {
+          "concept": "The Equality Principle",
+          "definition": "Maintain balance on both sides.",
+          "details": [
+            "An equation such as $x+5=12$ states that its left-hand and right-hand sides have equal values.",
+            "To isolate the variable, use inverse operations and apply each operation to both sides. For example, subtract $5$ from both sides to obtain $x=7$."
+          ]
+        },
+        {
+          "concept": "Standard Form",
+          "definition": "A simplified linear equation.",
+          "details": [
+            "After collecting all variable terms on one side and constants on the other, a linear equation in one variable can be written as $ax+b=0$.",
+            "When $a\\ne0$, the equation has the unique solution $x=-\\frac{b}{a}$. If simplification gives $0=b$ with $b\\ne0$, there is no solution; if it gives $0=0$, every permitted real value is a solution."
+          ]
+        },
+        {
+          "concept": "Checking a Solution",
+          "definition": "Substitute the value into the original equation.",
+          "details": [
+            "A value is a solution only if it makes the original left-hand and right-hand sides equal.",
+            "Substitution is an effective way to check the result and can reveal sign or arithmetic errors."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Standard Form of a Linear Equation",
+          "equation": "$$ax+b=0,\\quad a\\ne0$$",
+          "variables": {
+            "a": "Non-zero coefficient of the variable",
+            "b": "Constant term"
+          }
+        },
+        {
+          "name": "Solution of a Linear Equation",
+          "equation": "$$x=-\\frac{b}{a}$$",
+          "variables": {
+            "a": "Non-zero coefficient",
+            "b": "Constant term"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_01",
+          "title": "Solving a Linear Equation Step by Step",
+          "type": "svg",
+          "caption": "Apply the same operation to both sides to maintain equality.",
+          "alt_text": "Three panels show 3x + 5 = 20, then 3x = 15 after subtracting 5, and x = 5 after dividing by 3, with a substitution check.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\" text-anchor=\"middle\">\n  <rect x=\"18\" y=\"36\" width=\"158\" height=\"112\" rx=\"9\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n  <text x=\"97\" y=\"61\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">Start</text>\n  <text x=\"97\" y=\"101\" font-size=\"23\" fill=\"#0f172a\" font-weight=\"bold\">3x + 5 = 20</text>\n  <text x=\"97\" y=\"127\" font-size=\"12\" fill=\"#1e3a8a\">Subtract 5 from both sides</text>\n  <path d=\"M178 92 H202\" stroke=\"#64748b\" stroke-width=\"2.5\"/><path d=\"M202 92 l-8 -5 v10 z\" fill=\"#64748b\"/>\n  <rect x=\"208\" y=\"36\" width=\"142\" height=\"112\" rx=\"9\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n  <text x=\"279\" y=\"61\" font-size=\"14\" fill=\"#14532d\" font-weight=\"bold\">Then</text>\n  <text x=\"279\" y=\"101\" font-size=\"23\" fill=\"#0f172a\" font-weight=\"bold\">3x = 15</text>\n  <text x=\"279\" y=\"127\" font-size=\"12\" fill=\"#14532d\">Divide both sides by 3</text>\n  <path d=\"M352 92 H376\" stroke=\"#64748b\" stroke-width=\"2.5\"/><path d=\"M376 92 l-8 -5 v10 z\" fill=\"#64748b\"/>\n  <rect x=\"382\" y=\"36\" width=\"140\" height=\"112\" rx=\"9\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/>\n  <text x=\"452\" y=\"61\" font-size=\"14\" fill=\"#92400e\" font-weight=\"bold\">Solution</text>\n  <text x=\"452\" y=\"101\" font-size=\"25\" fill=\"#78350f\" font-weight=\"bold\">x = 5</text>\n  <text x=\"452\" y=\"127\" font-size=\"12\" fill=\"#92400e\">Check: 3(5)+5 = 20</text>\n  <text x=\"270\" y=\"190\" font-size=\"14\" fill=\"#475569\">The same operation is applied to both sides at each step.</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve $4(x-2)=2x+10$ and check the result.",
+          "solution_steps": [
+            "Step 1: Expand the bracket: $4x-8=2x+10$.",
+            "Step 2: Subtract $2x$ from both sides: $2x-8=10$.",
+            "Step 3: Add $8$ to both sides: $2x=18$.",
+            "Step 4: Divide by $2$: $x=9$.",
+            "Step 5: Check: $4(9-2)=28$ and $2(9)+10=28$."
+          ],
+          "final_answer": "$x=9$"
+        },
+        {
+          "problem": "Solve $\\frac{x}{2}+\\frac{x}{3}=10$.",
+          "solution_steps": [
+            "Step 1: The least common multiple of $2$ and $3$ is $6$.",
+            "Step 2: Multiply every term by $6$: $3x+2x=60$.",
+            "Step 3: Combine like terms: $5x=60$.",
+            "Step 4: Divide by $5$: $x=12$."
+          ],
+          "final_answer": "$x=12$"
+        },
+        {
+          "problem": "Determine whether $3(x+2)=3x+5$ has a solution.",
+          "solution_steps": [
+            "Step 1: Expand: $3x+6=3x+5$.",
+            "Step 2: Subtract $3x$ from both sides: $6=5$.",
+            "Step 3: This is false, so no value of $x$ can satisfy the equation."
+          ],
+          "final_answer": "No solution"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Performing an operation on only one side of an equation.",
+          "correction": "To preserve equality, apply the same operation to both sides. For example, subtracting $5$ on the left requires subtracting $5$ on the right."
+        },
+        {
+          "mistake": "Treating every simplified equation as having one solution.",
+          "correction": "After simplifying, check the resulting statement. A false constant equality means no solution; a true identity means infinitely many solutions."
+        }
+      ],
+      "quick_summary": [
+        "A linear equation in one variable has the variable to the first power.",
+        "Use inverse operations on both sides to isolate the variable.",
+        "Substitute the answer into the original equation to check it.",
+        "After simplification, an equation may have one solution, no solution or infinitely many solutions."
+      ],
+      "utilities": [
+        {
+          "title": "Linear Equation Solver",
+          "description": "Check a simple one-variable linear equation after completing the algebraic working.",
+          "url": "https://onlinetoolpad.com/math/Linear%20Equation%20solver",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t04_st02": {
+      "id": "hs_math_t04_st02",
+      "title": "Linear equations in two variables",
+      "overview": "A linear equation in two variables describes all ordered pairs that make the equation true. When the coefficients are real and the equation represents a non-degenerate linear relation, its graph is a straight line. Each point on that line is a solution pair.",
+      "key_concepts": [
+        {
+          "concept": "Ordered-Pair Solutions",
+          "definition": "A pair that satisfies the equation.",
+          "details": [
+            "A solution is written as $(x,y)$. For $x+y=10$, the pair $(2,8)$ is a solution because $2+8=10$.",
+            "One linear equation in two variables generally has infinitely many real solution pairs, which form a straight line when plotted."
+          ]
+        },
+        {
+          "concept": "Slope-Intercept Form",
+          "definition": "The form that shows gradient and vertical intercept.",
+          "details": [
+            "For a non-vertical line, the equation can be written as $y=mx+c$.",
+            "The slope or gradient $m$ measures vertical change divided by horizontal change. The $y$-intercept is the point $(0,c)$.",
+            "A vertical line has equation $x=k$ and an undefined slope, so it cannot be written as $y=mx+c$."
+          ]
+        },
+        {
+          "concept": "Intercepts and Slope",
+          "definition": "Reading key features from an equation or two points.",
+          "details": [
+            "Find the $y$-intercept by setting $x=0$, and find the $x$-intercept by setting $y=0$, when those intercepts exist.",
+            "For two points with different $x$-coordinates, the slope is the change in $y$ divided by the change in $x$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Linear Equation in Two Variables",
+          "equation": "$$ax+by+c=0,\\quad (a,b)\\ne(0,0)$$",
+          "variables": {
+            "a, b, c": "Real coefficients, with at least one of a and b non-zero"
+          }
+        },
+        {
+          "name": "Slope-Intercept Form",
+          "equation": "$$y=mx+c$$",
+          "variables": {
+            "m": "Slope or gradient",
+            "c": "y-intercept value"
+          }
+        },
+        {
+          "name": "Slope Between Two Points",
+          "equation": "$$m=\\frac{y_2-y_1}{x_2-x_1},\\quad x_2\\ne x_1$$",
+          "variables": {
+            "(x_1,y_1), (x_2,y_2)": "Two distinct points on the line"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_02",
+          "title": "Slope and y-Intercept of a Straight Line",
+          "type": "svg",
+          "caption": "The line y = 2x + 1 has slope 2 and crosses the y-axis at 1.",
+          "alt_text": "Coordinate graph of y = 2x + 1 showing the points (0,1) and (1,3), with a run of 1 and rise of 2.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\">\n  <line x1=\"70\" y1=\"190\" x2=\"485\" y2=\"190\" stroke=\"#64748b\" stroke-width=\"2\"/>\n  <line x1=\"150\" y1=\"205\" x2=\"150\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"2\"/>\n  <path d=\"M80 220 L290 40\" stroke=\"#2563eb\" stroke-width=\"3\" fill=\"none\"/>\n  <g fill=\"#0f172a\" font-size=\"11\">\n    <text x=\"480\" y=\"207\">x</text><text x=\"132\" y=\"22\">y</text>\n    <text x=\"145\" y=\"207\">0</text><text x=\"220\" y=\"207\">1</text><text x=\"290\" y=\"207\">2</text>\n    <text x=\"127\" y=\"164\">1</text><text x=\"127\" y=\"104\">3</text><text x=\"127\" y=\"44\">5</text>\n  </g>\n  <circle cx=\"150\" cy=\"160\" r=\"5\" fill=\"#16a34a\"/>\n  <circle cx=\"220\" cy=\"100\" r=\"5\" fill=\"#16a34a\"/>\n  <text x=\"163\" y=\"151\" fill=\"#166534\" font-size=\"12\">(0, 1)</text>\n  <text x=\"230\" y=\"94\" fill=\"#166534\" font-size=\"12\">(1, 3)</text>\n  <path d=\"M150 160 H220 V100\" stroke=\"#ea580c\" stroke-width=\"2.5\" stroke-dasharray=\"5 3\" fill=\"none\"/>\n  <text x=\"185\" y=\"177\" fill=\"#c2410c\" font-size=\"12\">Run = 1</text>\n  <text x=\"228\" y=\"135\" fill=\"#c2410c\" font-size=\"12\">Rise = 2</text>\n  <rect x=\"320\" y=\"42\" width=\"185\" height=\"78\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n  <text x=\"412\" y=\"67\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-size=\"16\" font-weight=\"bold\">y = 2x + 1</text>\n  <text x=\"412\" y=\"91\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-size=\"13\">Slope m = 2</text>\n  <text x=\"412\" y=\"108\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-size=\"13\">y-intercept c = 1</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Write $3x+y=9$ in slope-intercept form and identify its slope and $y$-intercept.",
+          "solution_steps": [
+            "Step 1: Isolate $y$: subtract $3x$ from both sides to obtain $y=-3x+9$.",
+            "Step 2: Compare with $y=mx+c$.",
+            "Step 3: The slope is $m=-3$, and the $y$-intercept is $(0,9)$."
+          ],
+          "final_answer": "$y=-3x+9$; slope $=-3$; $y$-intercept $(0,9)$"
+        },
+        {
+          "problem": "Find both intercepts of $4x+2y=16$.",
+          "solution_steps": [
+            "Step 1: For the $x$-intercept, set $y=0$: $4x=16$, so $x=4$.",
+            "Step 2: For the $y$-intercept, set $x=0$: $2y=16$, so $y=8$."
+          ],
+          "final_answer": "$x$-intercept $(4,0)$; $y$-intercept $(0,8)$"
+        },
+        {
+          "problem": "Find the slope of the line through $(1,3)$ and $(3,7)$.",
+          "solution_steps": [
+            "Step 1: Use $m=\\frac{y_2-y_1}{x_2-x_1}$.",
+            "Step 2: Substitute: $m=\\frac{7-3}{3-1}=\\frac{4}{2}=2$."
+          ],
+          "final_answer": "$m=2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing the slope with the $y$-intercept.",
+          "correction": "In $y=mx+c$, the coefficient of $x$ is the slope, while the constant $c$ gives the $y$-intercept $(0,c)$."
+        },
+        {
+          "mistake": "Using the slope formula when the two $x$-coordinates are equal.",
+          "correction": "If $x_2=x_1$, the line is vertical and its slope is undefined."
+        }
+      ],
+      "quick_summary": [
+        "An ordered pair is a solution if it makes the equation true.",
+        "A non-vertical straight line can be written as $y=mx+c$.",
+        "Slope is rise divided by run; the $y$-intercept is $(0,c)$.",
+        "Vertical lines have undefined slope."
+      ],
+      "utilities": [
+        {
+          "title": "Line Calculator",
+          "description": "Explore the equation and graph features of a straight line.",
+          "url": "https://onlinetoolpad.com/math/LINE_CALCULATOR",
+          "icon": "calculator"
+        },
+        {
+          "title": "Line Slope Calculator",
+          "description": "Check a gradient from two coordinate points.",
+          "url": "https://onlinetoolpad.com/math/Line_slope_calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t04_st03": {
+      "id": "hs_math_t04_st03",
+      "title": "Simultaneous linear equations",
+      "overview": "A system of simultaneous linear equations is a collection of two or more linear equations considered together. A solution to a two-equation system is an ordered pair that satisfies both equations at the same time, not just one of them.",
+      "key_concepts": [
+        {
+          "concept": "A System of Equations",
+          "definition": "Equations considered together.",
+          "details": [
+            "A system may contain two linear equations in the same two variables, such as $2x+y=7$ and $x-y=2$.",
+            "The equations impose conditions on the same unknown values, so their solutions must satisfy every equation in the system."
+          ]
+        },
+        {
+          "concept": "A Common Solution Pair",
+          "definition": "One pair that satisfies every equation.",
+          "details": [
+            "For a system in $x$ and $y$, a solution is an ordered pair $(x,y)$ that makes each equation true when substituted.",
+            "A pair that satisfies only one equation is not a solution of the system."
+          ]
+        },
+        {
+          "concept": "Possible Numbers of Solutions",
+          "definition": "One, none or infinitely many.",
+          "details": [
+            "Two non-parallel distinct lines meet at one point, giving one solution.",
+            "Parallel distinct lines have no common point, so the system has no solution.",
+            "Coincident lines are the same line, so every point on that line is a common solution and the system has infinitely many solutions. The graphical interpretation is developed in the next lesson."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Condition for a Solution Pair",
+          "equation": "$$\\begin{cases}a_1x+b_1y=c_1\\\\a_2x+b_2y=c_2\\end{cases}$$",
+          "variables": {
+            "(x,y)": "A common solution must satisfy both equations"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_03",
+          "title": "A Common Solution Satisfies Both Equations",
+          "type": "svg",
+          "caption": "The pair (3,1) makes each equation true.",
+          "alt_text": "Two equation panels verify the ordered pair (3,1): substituting it gives 2(3)+1=7 and 3-1=2, so both equations are true.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\">\n  <rect x=\"18\" y=\"25\" width=\"220\" height=\"145\" rx=\"9\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n  <text x=\"128\" y=\"50\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-size=\"15\" font-weight=\"bold\">Equation 1</text>\n  <text x=\"128\" y=\"83\" text-anchor=\"middle\" fill=\"#0f172a\" font-size=\"21\">2x + y = 7</text>\n  <text x=\"128\" y=\"119\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"17\" font-weight=\"bold\">2(3) + 1 = 7  TRUE</text>\n  <rect x=\"302\" y=\"25\" width=\"220\" height=\"145\" rx=\"9\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n  <text x=\"412\" y=\"50\" text-anchor=\"middle\" fill=\"#14532d\" font-size=\"15\" font-weight=\"bold\">Equation 2</text>\n  <text x=\"412\" y=\"83\" text-anchor=\"middle\" fill=\"#0f172a\" font-size=\"21\">x − y = 2</text>\n  <text x=\"412\" y=\"119\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"17\" font-weight=\"bold\">3 - 1 = 2  TRUE</text>\n  <rect x=\"198\" y=\"178\" width=\"144\" height=\"30\" rx=\"7\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.5\"/>\n  <text x=\"270\" y=\"198\" text-anchor=\"middle\" fill=\"#92400e\" font-size=\"15\" font-weight=\"bold\">Common pair (3, 1)</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Check whether $(3,1)$ is a solution of the system $2x+y=7$ and $x-y=2$.",
+          "solution_steps": [
+            "Step 1: Substitute $x=3$, $y=1$ into the first equation: $2(3)+1=7$. This is true.",
+            "Step 2: Substitute into the second equation: $3-1=2$. This is also true.",
+            "Step 3: The pair satisfies both equations, so it is a common solution."
+          ],
+          "final_answer": "Yes, $(3,1)$ is a solution of the system."
+        },
+        {
+          "problem": "Check whether $(2,3)$ is a solution of $x+y=5$ and $2x-y=1$.",
+          "solution_steps": [
+            "Step 1: First equation: $2+3=5$, which is true.",
+            "Step 2: Second equation: $2(2)-3=1$, which is true.",
+            "Step 3: Both conditions are satisfied."
+          ],
+          "final_answer": "Yes, $(2,3)$ is a solution of the system."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Checking a proposed pair in only one equation.",
+          "correction": "Substitute the pair into every equation. It is a solution of the system only if all equations are satisfied."
+        },
+        {
+          "mistake": "Assuming every system has exactly one solution.",
+          "correction": "A system of two linear equations may have one solution, no solution or infinitely many solutions."
+        }
+      ],
+      "quick_summary": [
+        "A simultaneous system is a group of equations in the same variables.",
+        "A solution pair must satisfy every equation in the system.",
+        "A system of two linear equations may have one, no or infinitely many solutions.",
+        "Graphical and algebraic ways to determine the solutions are covered in the next lessons."
+      ]
+    },
+    "hs_math_t04_st04": {
+      "id": "hs_math_t04_st04",
+      "title": "Graphical solutions of simultaneous equations",
+      "overview": "A graphical solution of a simultaneous linear system is the point where the graphs of the equations meet. Plot both lines on the same coordinate plane, then identify any common point. The number and position of intersections show how many solutions the system has.",
+      "key_concepts": [
+        {
+          "concept": "Plotting Both Equations",
+          "definition": "Draw both lines on the same axes.",
+          "details": [
+            "Rewrite each equation in a form that makes plotting convenient, or find at least two points on each line.",
+            "Use the same coordinate scale for both equations and draw both straight lines on the same set of axes.",
+            "The intersection coordinate is the graphical solution of the system."
+          ]
+        },
+        {
+          "concept": "Interpreting the Intersection",
+          "definition": "One, none or infinitely many solutions.",
+          "details": [
+            "If the lines cross at one point, there is one solution.",
+            "If the lines are parallel and distinct, they never meet and there is no solution.",
+            "If the lines coincide, every point on the line is shared and there are infinitely many solutions."
+          ]
+        },
+        {
+          "concept": "Accuracy of a Graph",
+          "definition": "Read coordinates with care.",
+          "details": [
+            "A graph drawn on paper may give an approximate intersection, especially when the coordinates are not integers.",
+            "Use substitution or elimination when an exact solution is required. The algebraic methods are taught in the next subtopic."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "A Graphical Solution",
+          "equation": "$$\\text{Solution}=(x,y)\\text{ at the intersection of both lines}$$",
+          "variables": {
+            "(x,y)": "A common point on the two graphs"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_04",
+          "title": "Three Possible Graphical Relationships",
+          "type": "svg",
+          "caption": "The line relationship determines the number of common solutions.",
+          "alt_text": "Three coordinate panels show intersecting lines with one solution, parallel distinct lines with no solution, and coincident lines with infinitely many solutions.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\" text-anchor=\"middle\">\n  <g transform=\"translate(12,18)\">\n    <rect width=\"164\" height=\"176\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n    <line x1=\"18\" y1=\"90\" x2=\"146\" y2=\"90\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n    <line x1=\"82\" y1=\"16\" x2=\"82\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n    <path d=\"M24 140 L140 35\" stroke=\"#2563eb\" stroke-width=\"3\" fill=\"none\"/>\n    <path d=\"M24 32 L140 140\" stroke=\"#ea580c\" stroke-width=\"3\" fill=\"none\"/>\n    <circle cx=\"82\" cy=\"90\" r=\"4\" fill=\"#0f172a\"/>\n    <text x=\"82\" y=\"160\" font-size=\"14\" fill=\"#166534\" font-weight=\"bold\">One solution</text>\n    <text x=\"82\" y=\"173\" font-size=\"10\" fill=\"#475569\">Intersecting lines</text>\n  </g>\n  <g transform=\"translate(188,18)\">\n    <rect width=\"164\" height=\"176\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n    <line x1=\"18\" y1=\"90\" x2=\"146\" y2=\"90\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n    <line x1=\"82\" y1=\"16\" x2=\"82\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n    <path d=\"M22 130 L142 36\" stroke=\"#2563eb\" stroke-width=\"3\" fill=\"none\"/>\n    <path d=\"M22 100 L142 6\" stroke=\"#ea580c\" stroke-width=\"3\" fill=\"none\"/>\n    <text x=\"82\" y=\"160\" font-size=\"14\" fill=\"#b91c1c\" font-weight=\"bold\">No solution</text>\n    <text x=\"82\" y=\"173\" font-size=\"10\" fill=\"#475569\">Parallel lines</text>\n  </g>\n  <g transform=\"translate(364,18)\">\n    <rect width=\"164\" height=\"176\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n    <line x1=\"18\" y1=\"90\" x2=\"146\" y2=\"90\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n    <line x1=\"82\" y1=\"16\" x2=\"82\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n    <path d=\"M22 132 L142 35\" stroke=\"#2563eb\" stroke-width=\"5\" fill=\"none\"/>\n    <path d=\"M22 132 L142 35\" stroke=\"#ea580c\" stroke-width=\"2\" stroke-dasharray=\"5 4\" fill=\"none\"/>\n    <text x=\"82\" y=\"160\" font-size=\"14\" fill=\"#6d28d9\" font-weight=\"bold\">Infinite solutions</text>\n    <text x=\"82\" y=\"173\" font-size=\"10\" fill=\"#475569\">Coincident lines</text>\n  </g>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the graphical solution of $y=2x+1$ and $y=-x+7$.",
+          "solution_steps": [
+            "Step 1: For $y=2x+1$, plot points such as $(0,1)$ and $(2,5)$.",
+            "Step 2: For $y=-x+7$, plot points such as $(0,7)$ and $(2,5)$.",
+            "Step 3: Draw both straight lines. They meet at $(2,5)$.",
+            "Step 4: The common point is the solution because it lies on both lines."
+          ],
+          "final_answer": "The lines intersect at $(2,5)$."
+        },
+        {
+          "problem": "Describe the number of solutions when the graphs of two equations are parallel and distinct.",
+          "solution_steps": [
+            "Step 1: Parallel distinct lines have the same direction but different positions.",
+            "Step 2: They do not intersect at any point.",
+            "Step 3: Therefore, no ordered pair satisfies both equations."
+          ],
+          "final_answer": "No solution."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Plotting the two equations on different coordinate scales.",
+          "correction": "Use the same axes and scale for both graphs so the intersection can be identified correctly."
+        },
+        {
+          "mistake": "Treating a visually estimated coordinate as exact.",
+          "correction": "A graph may provide only an approximation. Verify the exact point algebraically when exact values are needed."
+        }
+      ],
+      "quick_summary": [
+        "Plot both equations on the same coordinate plane.",
+        "The intersection point is a common solution pair.",
+        "Intersecting, parallel and coincident lines give one, no and infinitely many solutions respectively.",
+        "A graphical estimate may need algebraic verification."
+      ],
+      "utilities": [
+        {
+          "title": "Line Calculator",
+          "description": "Explore and check straight-line graphs when plotting simultaneous equations.",
+          "url": "https://onlinetoolpad.com/math/LINE_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t04_st05": {
+      "id": "hs_math_t04_st05",
+      "title": "Substitution and elimination methods",
+      "overview": "Substitution and elimination are algebraic methods for finding the exact common solution of a system of two linear equations. Choose a method that keeps the arithmetic manageable, then check the resulting ordered pair in both original equations.",
+      "key_concepts": [
+        {
+          "concept": "Substitution Method",
+          "definition": "Express one variable and replace it.",
+          "details": [
+            "Rearrange one equation to make a variable the subject, such as $y=12-x$.",
+            "Substitute that complete expression into the other equation. Solve the resulting equation in one variable, then substitute back to find the second variable."
+          ]
+        },
+        {
+          "concept": "Elimination Method",
+          "definition": "Combine equations to remove a variable.",
+          "details": [
+            "Write the equations in aligned form.",
+            "Multiply one or both equations by suitable non-zero constants so that the coefficients of one variable are equal or opposites.",
+            "Add or subtract the equations to eliminate that variable, solve for the remaining variable, and substitute back."
+          ]
+        },
+        {
+          "concept": "Special Cases",
+          "definition": "Recognising inconsistent and dependent systems.",
+          "details": [
+            "If elimination produces a false statement such as $0=3$, the system has no solution.",
+            "If elimination produces a true statement such as $0=0$, the equations represent the same line and the system has infinitely many solutions."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s05",
+          "title": "The Elimination Strike",
+          "type": "svg",
+          "caption": "Stack them up, match the coefficients, and subtract straight down.",
+          "alt_text": "Visual showing two stacked equations. Top: 3x + 2y = 16. Bottom: 3x - y = 7. A minus sign is on the left. An arrow points down. 3x - 3x crosses out to 0. 2y - (-y) becomes 3y. 16 - 7 becomes 9. Result is 3y = 9, so y = 3.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"160\" y=\"50\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"end\" fill=\"#0f172a\" font-weight=\"bold\">3x</text><text x=\"190\" y=\"50\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">+</text><text x=\"240\" y=\"50\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"end\" fill=\"#0f172a\" font-weight=\"bold\">2y</text><text x=\"280\" y=\"50\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"340\" y=\"50\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"end\" fill=\"#0f172a\" font-weight=\"bold\">16</text><text x=\"70\" y=\"90\" font-family=\"monospace\" font-size=\"32\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">-</text><text x=\"95\" y=\"90\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ef4444\">(</text><text x=\"160\" y=\"90\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"end\" fill=\"#0f172a\" font-weight=\"bold\">3x</text><text x=\"190\" y=\"90\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">-</text><text x=\"240\" y=\"90\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"end\" fill=\"#0f172a\" font-weight=\"bold\">y</text><text x=\"280\" y=\"90\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"340\" y=\"90\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"end\" fill=\"#0f172a\" font-weight=\"bold\">7</text><text x=\"365\" y=\"90\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ef4444\">)</text><line x1=\"100\" y1=\"110\" x2=\"360\" y2=\"110\" stroke=\"#0f172a\" stroke-width=\"4\"/><text x=\"160\" y=\"150\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"end\" fill=\"#94a3b8\" font-weight=\"bold\">0</text><text x=\"190\" y=\"150\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">+</text><text x=\"240\" y=\"150\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"end\" fill=\"#15803d\" font-weight=\"bold\">3y</text><text x=\"280\" y=\"150\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"340\" y=\"150\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"end\" fill=\"#15803d\" font-weight=\"bold\">9</text><path d=\"M 100 40 L 160 100\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\" opacity=\"0.5\"/><text x=\"430\" y=\"145\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">y = 3</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve using substitution: $x + y = 12$ and $2x - y = 3$.",
+          "solution_steps": [
+            "Step 1: Make $y$ the subject of the first equation: $y = 12 - x$.",
+            "Step 2: Substitute this entire block into the second equation: $2x - (12 - x) = 3$.",
+            "Step 3: Distribute the negative sign: $2x - 12 + x = 3$.",
+            "Step 4: Combine like terms: $3x = 15 \\implies x = 5$.",
+            "Step 5: Plug $x=5$ back into $y = 12 - x$ to get $y = 12 - 5 = 7$."
+          ],
+          "final_answer": "$(5, 7)$"
+        },
+        {
+          "problem": "Solve using elimination: $2x + 3y = 13$ and $3x + 2y = 12$.",
+          "solution_steps": [
+            "Step 1: Neither variable matches. Multiply the top by $3$ and the bottom by $2$ to force the $x$ coefficients to match at $6$.",
+            "Step 2: Top becomes $6x + 9y = 39$. Bottom becomes $6x + 4y = 24$.",
+            "Step 3: Subtract the bottom from the top: $(6x - 6x) + (9y - 4y) = 39 - 24 \\implies 5y = 15 \\implies y = 3$.",
+            "Step 4: Plug $y=3$ into the original first equation: $2x + 3(3) = 13 \\implies 2x + 9 = 13 \\implies 2x = 4 \\implies x = 2$."
+          ],
+          "final_answer": "$(2, 3)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting to multiply every term when scaling an equation.",
+          "correction": "When multiplying an equation by a constant, multiply every term on both sides, including the constant term."
+        },
+        {
+          "mistake": "Stopping after finding the first variable.",
+          "correction": "Substitute back to find the second variable, then check the ordered pair in both original equations."
+        }
+      ],
+      "quick_summary": [
+        "Substitution replaces one variable with an equivalent expression.",
+        "Elimination combines equations to remove one variable.",
+        "A false constant statement means no solution; a true identity means infinitely many solutions.",
+        "Check the final pair in both original equations."
+      ]
+    },
+    "hs_math_t04_st06": {
+      "id": "hs_math_t04_st06",
+      "title": "Quadratic equations by factorisation",
+      "overview": "A quadratic equation (degree 2) forms a U-shaped parabola on a graph. Solving it tells us exactly where that parabola hits the floor (the $x$-axis). We call these floor-hitting spots the 'roots' of the equation.",
+      "key_concepts": [
+        {
+          "concept": "The Standard Form",
+          "definition": "Setting the stage.",
+          "details": [
+            "Before you can factorise, you MUST move all terms to one side so the equation equals zero: $ax^2 + bx + c = 0$."
+          ]
+        },
+        {
+          "concept": "The Zero-Product Property",
+          "definition": "The magic trick.",
+          "details": [
+            "If you multiply two things together and the answer is $0$, one of those things MUST be zero. $A \\times B = 0 \\implies A = 0$ or $B = 0$.",
+            "This allows us to split a factored equation like $(x-2)(x+3)=0$ into two separate, tiny equations: $x-2=0$ and $x+3=0$."
+          ]
+        },
+        {
+          "concept": "Finding the Roots",
+          "definition": "Flipping the signs.",
+          "details": [
+            "Once factored into brackets, the actual roots (solutions) are the values that make the bracket zero.",
+            "If the factor is $(x - 5)$, the root is $+5$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Standard Form (Quadratic)",
+          "equation": "$$ ax^2 + bx + c = 0 $$",
+          "variables": {
+            "a, b, c": "Real number coefficients, a \\neq 0"
+          }
+        },
+        {
+          "name": "Zero-Product Property",
+          "equation": "$$ \\text{If } AB = 0, \\text{ then } A = 0 \\text{ or } B = 0 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s06",
+          "title": "From Factors to Roots",
+          "type": "svg",
+          "caption": "The Zero-Product Property splits one hard problem into two easy ones.",
+          "alt_text": "Visual showing (x - 4)(x + 5) = 0. Two arrows split outward. The left arrow points to 'x - 4 = 0', resulting in 'x = 4'. The right arrow points to 'x + 5 = 0', resulting in 'x = -5'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">(x - 4)(x + 5) = 0</text><path d=\"M 220 60 Q 150 90 150 120\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"150,120 145,110 155,110\" fill=\"#3b82f6\"/><path d=\"M 280 60 Q 350 90 350 120\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><polygon points=\"350,120 345,110 355,110\" fill=\"#16a34a\"/><rect x=\"80\" y=\"130\" width=\"140\" height=\"50\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"10\"/><text x=\"150\" y=\"150\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">x - 4 = 0</text><text x=\"150\" y=\"170\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">x = 4</text><rect x=\"280\" y=\"130\" width=\"140\" height=\"50\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"350\" y=\"150\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">x + 5 = 0</text><text x=\"350\" y=\"170\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">x = -5</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve: $x^2 + 7x + 12 = 0$.",
+          "solution_steps": [
+            "Step 1: Check standard form. It already equals zero.",
+            "Step 2: Factorise. Find numbers that multiply to $12$ and add to $7$. The numbers are $3$ and $4$.",
+            "Step 3: Write in bracket form: $(x + 3)(x + 4) = 0$.",
+            "Step 4: Use Zero-Product property. $x + 3 = 0 \\implies x = -3$. $x + 4 = 0 \\implies x = -4$."
+          ],
+          "final_answer": "$x = -3, x = -4$"
+        },
+        {
+          "problem": "Solve: $2x^2 = 8x$.",
+          "solution_steps": [
+            "Step 1: Force standard form! Subtract $8x$ to set it to zero: $2x^2 - 8x = 0$.",
+            "Step 2: Factorise out the common factor of $2x$: $2x(x - 4) = 0$.",
+            "Step 3: Use Zero-Product property. Either $2x = 0 \\implies x = 0$, or $x - 4 = 0 \\implies x = 4$."
+          ],
+          "final_answer": "$x = 0, x = 4$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dividing both sides by a variable.",
+          "correction": "If $2x^2 = 8x$, dividing both sides by $x$ gives $2x = 8 \\implies x = 4$. You just deleted $x=0$, which is a valid root! NEVER divide by a variable. Move it over and factorise it out instead."
+        },
+        {
+          "mistake": "Applying Zero-Product to a number other than zero.",
+          "correction": "If $(x-2)(x-3) = 12$, you CANNOT say $x-2 = 12$ and $x-3 = 12$. The property only works with ZERO. You must expand it, subtract 12 to equal zero, and re-factorise."
+        }
+      ],
+      "quick_summary": [
+        "Always set the equation equal to ZERO before doing anything.",
+        "Factorise the quadratic into brackets.",
+        "Set each bracket equal to zero to find the roots."
+      ]
+    },
+    "hs_math_t04_st07": {
+      "id": "hs_math_t04_st07",
+      "title": "Completing the square",
+      "overview": "Completing the square rewrites a quadratic expression as a squared binomial plus or minus a constant. This makes it possible to solve quadratic equations that do not factorise neatly and reveals the vertex form of a quadratic graph.",
+      "key_concepts": [
+        {
+          "concept": "Completing the Square for a Monic Quadratic",
+          "definition": "Create a perfect-square trinomial.",
+          "details": [
+            "For $x^2+bx=c$, take half the coefficient of $x$, square that value, and add it to both sides.",
+            "The left side becomes $(x+\\frac{b}{2})^2$, which can then be solved using square roots."
+          ]
+        },
+        {
+          "concept": "When the Leading Coefficient Is Not One",
+          "definition": "Make the coefficient of x squared equal to one first.",
+          "details": [
+            "For $ax^2+bx+c=0$ with $a\\ne0$, divide through by $a$ before completing the square.",
+            "After dividing, halve the coefficient of $x$ and square it. Add this value to both sides to form a perfect square."
+          ]
+        },
+        {
+          "concept": "Vertex Form",
+          "definition": "Read the turning point of a quadratic graph.",
+          "details": [
+            "A quadratic written as $y=a(x-h)^2+k$ has vertex $(h,k)$.",
+            "When $a>0$ the graph opens upward and the vertex is a minimum; when $a<0$ it opens downward and the vertex is a maximum."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Completing the Square (Monic Form)",
+          "equation": "$$x^2+bx=\\left(x+\\frac{b}{2}\\right)^2-\\left(\\frac{b}{2}\\right)^2$$",
+          "variables": {
+            "b": "Coefficient of x"
+          }
+        },
+        {
+          "name": "General Vertex Form",
+          "equation": "$$y=a(x-h)^2+k,\\quad a\\ne0$$",
+          "variables": {
+            "(h,k)": "Vertex of the parabola"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_07",
+          "title": "Completing the Square",
+          "type": "svg",
+          "caption": "Half the x-coefficient, square it, then add that value to both sides.",
+          "alt_text": "The visual shows x squared plus 8x equals 5. Half of 8 is 4, its square is 16, and adding 16 gives (x+4) squared equals 21.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\" text-anchor=\"middle\">\n  <text x=\"270\" y=\"31\" fill=\"#1e3a8a\" font-size=\"18\" font-weight=\"bold\">x² + 8x = 5</text>\n  <rect x=\"18\" y=\"53\" width=\"116\" height=\"78\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n  <text x=\"76\" y=\"82\" fill=\"#1e3a8a\" font-size=\"13\">Half of 8</text>\n  <text x=\"76\" y=\"108\" fill=\"#1e3a8a\" font-size=\"20\" font-weight=\"bold\">8 ÷ 2 = 4</text>\n  <path d=\"M136 92 H155\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M155 92 l-7 -5 v10 z\" fill=\"#64748b\"/>\n  <rect x=\"160\" y=\"53\" width=\"112\" height=\"78\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.5\"/>\n  <text x=\"216\" y=\"82\" fill=\"#14532d\" font-size=\"13\">Square it</text>\n  <text x=\"216\" y=\"108\" fill=\"#14532d\" font-size=\"20\" font-weight=\"bold\">4² = 16</text>\n  <path d=\"M274 92 H293\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M293 92 l-7 -5 v10 z\" fill=\"#64748b\"/>\n  <rect x=\"298\" y=\"53\" width=\"224\" height=\"78\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.5\"/>\n  <text x=\"410\" y=\"82\" fill=\"#92400e\" font-size=\"13\">Add 16 to both sides</text>\n  <text x=\"410\" y=\"108\" fill=\"#78350f\" font-size=\"18\" font-weight=\"bold\">x² + 8x + 16 = 21</text>\n  <rect x=\"95\" y=\"151\" width=\"350\" height=\"48\" rx=\"8\" fill=\"#f1f5f9\" stroke=\"#cbd5e1\"/>\n  <text x=\"270\" y=\"181\" fill=\"#0f172a\" font-size=\"21\" font-weight=\"bold\">(x + 4)² = 21</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve by completing the square: $x^2+6x-5=0$.",
+          "solution_steps": [
+            "Step 1: Move the constant: $x^2+6x=5$.",
+            "Step 2: Half of $6$ is $3$; its square is $9$.",
+            "Step 3: Add $9$ to both sides: $x^2+6x+9=14$.",
+            "Step 4: Write the left side as $(x+3)^2=14$.",
+            "Step 5: Take square roots: $x+3=\\pm\\sqrt{14}$."
+          ],
+          "final_answer": "$x=-3\\pm\\sqrt{14}$"
+        },
+        {
+          "problem": "Solve $2x^2+8x-10=0$ by completing the square.",
+          "solution_steps": [
+            "Step 1: Divide every term by $2$: $x^2+4x-5=0$.",
+            "Step 2: Move the constant: $x^2+4x=5$.",
+            "Step 3: Half of $4$ is $2$; square it to get $4$. Add $4$ to both sides: $x^2+4x+4=9$.",
+            "Step 4: Write $(x+2)^2=9$.",
+            "Step 5: Take square roots: $x+2=3$ or $x+2=-3$."
+          ],
+          "final_answer": "$x=1$ or $x=-5$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the completing term $(b/2)^2$ before making the coefficient of $x^2$ equal to one.",
+          "correction": "First divide the entire equation by the leading coefficient $a$ when $a\\ne1$. Then halve the new coefficient of $x$ and square it."
+        },
+        {
+          "mistake": "Forgetting the plus and minus when taking a square root.",
+          "correction": "For a positive number $q$, the equation $u^2=q$ has two solutions: $u=\\sqrt q$ and $u=-\\sqrt q$."
+        }
+      ],
+      "quick_summary": [
+        "For a monic quadratic, add the square of half the x-coefficient to both sides.",
+        "If the leading coefficient is not one, divide through by it first.",
+        "Use both positive and negative square roots when solving.",
+        "Vertex form $y=a(x-h)^2+k$ has vertex $(h,k)$."
+      ]
+    },
+    "hs_math_t04_st08": {
+      "id": "hs_math_t04_st08",
+      "title": "Quadratic formula",
+      "overview": "The quadratic formula gives the solutions of any quadratic equation with real coefficients, provided the equation is written in standard form and the leading coefficient is non-zero. It is especially useful when factorisation is difficult or does not produce simple rational roots.",
+      "key_concepts": [
+        {
+          "concept": "The Quadratic Formula",
+          "definition": "Substitute the coefficients from standard form.",
+          "details": [
+            "First write the equation as $ax^2+bx+c=0$, with $a\\ne0$.",
+            "Identify the values of $a$, $b$ and $c$, including their signs, then substitute them into the formula."
+          ]
+        },
+        {
+          "concept": "The Plus-Minus Symbol",
+          "definition": "Evaluate both branches.",
+          "details": [
+            "The symbol $\\pm$ means calculate once using addition and once using subtraction.",
+            "The two values may be distinct or equal, depending on the discriminant."
+          ]
+        },
+        {
+          "concept": "Exact and Approximate Answers",
+          "definition": "Keep surds exact unless an estimate is required.",
+          "details": [
+            "An exact answer retains a simplified radical, such as $\\frac{3\\pm\\sqrt5}{2}$.",
+            "An approximate answer is a decimal rounded to a stated number of places. Keep the exact form during working to avoid rounding error."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Quadratic Formula",
+          "equation": "$$x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a},\\quad a\\ne0$$",
+          "variables": {
+            "a, b, c": "Coefficients in $ax^2+bx+c=0$"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_08",
+          "title": "Structure of the Quadratic Formula",
+          "type": "svg",
+          "caption": "The formula uses the coefficients and the discriminant.",
+          "alt_text": "The quadratic formula is displayed in ASCII mathematical notation, with the negative b, plus or minus square root of b squared minus four a c, all divided by two a.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\" text-anchor=\"middle\">\n  <text x=\"270\" y=\"42\" fill=\"#1e3a8a\" font-size=\"17\" font-weight=\"bold\">For ax^2 + bx + c = 0, where a is not zero</text>\n  <rect x=\"28\" y=\"68\" width=\"484\" height=\"98\" rx=\"10\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n  <text x=\"270\" y=\"124\" fill=\"#0f172a\" font-family=\"monospace\" font-size=\"17\" font-weight=\"bold\">x = (-b +/- sqrt(b^2 - 4ac)) / (2a)</text>\n  <text x=\"270\" y=\"198\" fill=\"#92400e\" font-size=\"13\">The expression b^2 - 4ac is the discriminant.</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve $2x^2-7x+3=0$ using the quadratic formula.",
+          "solution_steps": [
+            "Step 1: Identify $a=2$, $b=-7$ and $c=3$.",
+            "Step 2: Substitute: $x=\\frac{-(-7)\\pm\\sqrt{(-7)^2-4(2)(3)}}{2(2)}$.",
+            "Step 3: Simplify the discriminant: $49-24=25$.",
+            "Step 4: $x=\\frac{7\\pm5}{4}$.",
+            "Step 5: Evaluate both cases: $x=\\frac{12}{4}=3$ or $x=\\frac{2}{4}=\\frac12$."
+          ],
+          "final_answer": "$x=3$ or $x=\\frac12$"
+        },
+        {
+          "problem": "Find the exact roots of $x^2-4x+1=0$.",
+          "solution_steps": [
+            "Step 1: $a=1$, $b=-4$, $c=1$.",
+            "Step 2: $x=\\frac{4\\pm\\sqrt{16-4}}{2}$.",
+            "Step 3: Simplify: $x=\\frac{4\\pm\\sqrt{12}}{2}=\\frac{4\\pm2\\sqrt3}{2}$."
+          ],
+          "final_answer": "$x=2\\pm\\sqrt3$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Substituting $b$ without its sign.",
+          "correction": "In $-b$ and $b^2$, preserve the sign of the coefficient. If $b=-7$, then $-b=7$ and $b^2=(-7)^2=49$."
+        },
+        {
+          "mistake": "Using the formula without writing the equation in standard form.",
+          "correction": "Move all terms to one side first so that $ax^2+bx+c=0$ and identify all three coefficients correctly."
+        }
+      ],
+      "quick_summary": [
+        "Write the quadratic in standard form first.",
+        "Identify $a$, $b$ and $c$, including signs.",
+        "Substitute into the quadratic formula and calculate both branches of $\\pm$.",
+        "Keep exact surd forms until a decimal approximation is requested."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Evaluate square roots and decimal approximations after obtaining exact quadratic roots.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t04_st09": {
+      "id": "hs_math_t04_st09",
+      "title": "Nature of roots and discriminant",
+      "overview": "The discriminant is the part of the quadratic formula under the square root. Its sign determines whether a quadratic equation has two distinct real roots, one repeated real root or no real roots.",
+      "key_concepts": [
+        {
+          "concept": "The Discriminant",
+          "definition": "A quantity that classifies the roots.",
+          "details": [
+            "For $ax^2+bx+c=0$, the discriminant is $\\Delta=b^2-4ac$.",
+            "It is the expression under the square root in the quadratic formula."
+          ]
+        },
+        {
+          "concept": "The Three Cases",
+          "definition": "Interpret the sign of the discriminant.",
+          "details": [
+            "If $\\Delta>0$, there are two distinct real roots and the parabola crosses the $x$-axis twice.",
+            "If $\\Delta=0$, there is one repeated real root and the parabola touches the $x$-axis at its vertex.",
+            "If $\\Delta<0$, there are no real roots. For real coefficients, the equation has two non-real complex conjugate roots."
+          ]
+        },
+        {
+          "concept": "Rational and Irrational Roots",
+          "definition": "Use the coefficient assumptions.",
+          "details": [
+            "When $a$, $b$ and $c$ are rational and $\\Delta>0$, a perfect-square rational discriminant gives rational roots.",
+            "When $a$, $b$ and $c$ are rational and $\\Delta>0$ is not a perfect square rational number, the roots are irrational.",
+            "The sign of the discriminant alone determines the number of real roots; whether the roots are rational also depends on the coefficients."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Discriminant",
+          "equation": "$$\\Delta=b^2-4ac$$",
+          "variables": {
+            "a, b, c": "Coefficients of the quadratic equation"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_09",
+          "title": "Discriminant and the Number of Real Roots",
+          "type": "svg",
+          "caption": "The sign of the discriminant determines where a parabola meets the x-axis.",
+          "alt_text": "Three parabolas show two x-intersections for positive discriminant, one tangency for zero discriminant and no x-intersections for negative discriminant.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\" text-anchor=\"middle\">\n  <g transform=\"translate(10,16)\">\n    <rect width=\"164\" height=\"178\" rx=\"8\" fill=\"#fff\" stroke=\"#cbd5e1\"/>\n    <line x1=\"15\" y1=\"92\" x2=\"149\" y2=\"92\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n    <path d=\"M24 27 Q82 170 140 27\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n    <circle cx=\"53\" cy=\"92\" r=\"4\" fill=\"#1e3a8a\"/><circle cx=\"111\" cy=\"92\" r=\"4\" fill=\"#1e3a8a\"/>\n    <text x=\"82\" y=\"145\" fill=\"#1d4ed8\" font-size=\"16\" font-weight=\"bold\">Δ &gt; 0</text>\n    <text x=\"82\" y=\"163\" fill=\"#475569\" font-size=\"11\">Two distinct real roots</text>\n  </g>\n  <g transform=\"translate(188,16)\">\n    <rect width=\"164\" height=\"178\" rx=\"8\" fill=\"#fff\" stroke=\"#cbd5e1\"/>\n    <line x1=\"15\" y1=\"92\" x2=\"149\" y2=\"92\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n    <path d=\"M24 27 Q82 157 140 27\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n    <circle cx=\"82\" cy=\"92\" r=\"4\" fill=\"#14532d\"/>\n    <text x=\"82\" y=\"145\" fill=\"#15803d\" font-size=\"16\" font-weight=\"bold\">Δ = 0</text>\n    <text x=\"82\" y=\"163\" fill=\"#475569\" font-size=\"11\">One repeated real root</text>\n  </g>\n  <g transform=\"translate(366,16)\">\n    <rect width=\"164\" height=\"178\" rx=\"8\" fill=\"#fff\" stroke=\"#cbd5e1\"/>\n    <line x1=\"15\" y1=\"120\" x2=\"149\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n    <path d=\"M24 65 Q82 10 140 65\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3\"/>\n    <text x=\"82\" y=\"145\" fill=\"#b91c1c\" font-size=\"16\" font-weight=\"bold\">Δ &lt; 0</text>\n    <text x=\"82\" y=\"163\" fill=\"#475569\" font-size=\"11\">No real roots</text>\n  </g>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Determine the nature of the roots of $x^2-5x+6=0$.",
+          "solution_steps": [
+            "Step 1: $a=1$, $b=-5$ and $c=6$.",
+            "Step 2: $\\Delta=(-5)^2-4(1)(6)=25-24=1$.",
+            "Step 3: Since $\\Delta>0$, there are two distinct real roots. Since the coefficients are rational and $\\Delta=1$ is a perfect square, both roots are rational."
+          ],
+          "final_answer": "Two distinct rational real roots."
+        },
+        {
+          "problem": "Find $k$ if $x^2+6x+k=0$ has equal roots.",
+          "solution_steps": [
+            "Step 1: Equal roots require $\\Delta=0$.",
+            "Step 2: $6^2-4(1)(k)=0$.",
+            "Step 3: $36-4k=0$, so $k=9$."
+          ],
+          "final_answer": "$k=9$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating a negative discriminant as meaning the quadratic has no roots of any kind.",
+          "correction": "A negative discriminant means there are no real roots. With real coefficients, there are two non-real complex conjugate roots."
+        },
+        {
+          "mistake": "Using the perfect-square test without considering the coefficients.",
+          "correction": "The conclusion about rational versus irrational roots stated here assumes rational coefficients. The sign of the discriminant alone classifies the real-root cases."
+        }
+      ],
+      "quick_summary": [
+        "Calculate $\\Delta=b^2-4ac$.",
+        "Positive: two distinct real roots; zero: one repeated real root; negative: no real roots.",
+        "For rational coefficients, a positive perfect-square discriminant gives rational roots; a non-square rational discriminant gives irrational roots."
+      ]
+    },
+    "hs_math_t04_st10": {
+      "id": "hs_math_t04_st10",
+      "title": "Linear inequalities",
+      "overview": "Inequalities describe a world of possibilities rather than a single fixed answer. Solving them works almost exactly like solving equations, with one crucial, rule-breaking exception involving negative numbers.",
+      "key_concepts": [
+        {
+          "concept": "The Sign Flip Rule",
+          "definition": "The big exception.",
+          "details": [
+            "When you multiply or divide BOTH sides of an inequality by a **NEGATIVE** number, the inequality sign MUST flip to face the other direction.",
+            "Example: $-2x > 8 \\implies x < -4$."
+          ]
+        },
+        {
+          "concept": "Number Line Representation",
+          "definition": "Drawing the boundary.",
+          "details": [
+            "**Open Circle ($\\circ$):** Used for $<$ and $>$. The boundary number is excluded.",
+            "**Closed Circle ($\\bullet$):** Used for $\\le$ and $\\ge$. The boundary number is included.",
+            "The arrow points in the direction of the solution."
+          ]
+        },
+        {
+          "concept": "Interval Notation",
+          "definition": "The shorthand bracket code.",
+          "details": [
+            "**Parentheses ( ):** Endpoint is excluded (matches open circle). ALWAYS used for Infinity ($\\infty$ or $-\\infty$).",
+            "**Square Brackets [ ]:** Endpoint is included (matches closed circle)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v04_10",
+          "title": "Number-Line and Interval Representations",
+          "type": "svg",
+          "caption": "Open and closed endpoints show whether a boundary is excluded or included.",
+          "alt_text": "Two number lines show x greater than or equal to 2 as a closed point and rightward ray, and x less than 5 as an open point and leftward ray, with matching interval notation.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\">\n  <text x=\"24\" y=\"38\" fill=\"#1e3a8a\" font-size=\"15\" font-weight=\"bold\">x ≥ 2</text>\n  <line x1=\"115\" y1=\"34\" x2=\"375\" y2=\"34\" stroke=\"#94a3b8\" stroke-width=\"2\"/>\n  <line x1=\"230\" y1=\"34\" x2=\"366\" y2=\"34\" stroke=\"#2563eb\" stroke-width=\"5\"/>\n  <path d=\"M366 25 L380 34 L366 43 Z\" fill=\"#2563eb\"/>\n  <circle cx=\"230\" cy=\"34\" r=\"7\" fill=\"#2563eb\"/>\n  <text x=\"230\" y=\"60\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-size=\"12\">2</text>\n  <text x=\"410\" y=\"39\" fill=\"#1e3a8a\" font-size=\"15\">[2, ∞)</text>\n  <text x=\"24\" y=\"116\" fill=\"#991b1b\" font-size=\"15\" font-weight=\"bold\">x &lt; 5</text>\n  <line x1=\"115\" y1=\"112\" x2=\"375\" y2=\"112\" stroke=\"#94a3b8\" stroke-width=\"2\"/>\n  <line x1=\"126\" y1=\"112\" x2=\"280\" y2=\"112\" stroke=\"#dc2626\" stroke-width=\"5\"/>\n  <path d=\"M126 103 L112 112 L126 121 Z\" fill=\"#dc2626\"/>\n  <circle cx=\"280\" cy=\"112\" r=\"7\" fill=\"#f8fafc\" stroke=\"#dc2626\" stroke-width=\"3\"/>\n  <text x=\"280\" y=\"138\" text-anchor=\"middle\" fill=\"#991b1b\" font-size=\"12\">5</text>\n  <text x=\"410\" y=\"117\" fill=\"#991b1b\" font-size=\"15\">(-∞, 5)</text>\n  <text x=\"270\" y=\"184\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"13\">Closed endpoint: included   |   Open endpoint: excluded</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve: $2 - 3x < 11$.",
+          "solution_steps": [
+            "Step 1: Subtract $2$ from both sides: $-3x < 9$.",
+            "Step 2: Divide both sides by $-3$.",
+            "Step 3: Because we divided by a NEGATIVE, the $<$ sign MUST flip to $>$.",
+            "Step 4: $x > -3$."
+          ],
+          "final_answer": "$x > -3$"
+        },
+        {
+          "problem": "Solve: $\\frac{2x - 1}{4} \\le \\frac{x + 2}{3}$.",
+          "solution_steps": [
+            "Step 1: Clear the fractions by multiplying both sides by the LCM ($12$).",
+            "Step 2: $3(2x - 1) \\le 4(x + 2)$.",
+            "Step 3: Expand: $6x - 3 \\le 4x + 8$.",
+            "Step 4: Subtract $4x$: $2x - 3 \\le 8$. Add $3$: $2x \\le 11$. Divide by $2$ (positive, so no flip): $x \\le 11/2$."
+          ],
+          "final_answer": "$x \\le 11/2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Flipping the sign when subtracting.",
+          "correction": "If you have $x + 5 < 2$, subtracting $5$ gives $x < -3$. You DO NOT flip the sign. You only flip the sign when MULTIPLYING or DIVIDING by a negative number."
+        },
+        {
+          "mistake": "Using a square bracket for Infinity.",
+          "correction": "You can never physically 'reach' or 'include' infinity. Therefore, $[2, \\infty]$ is fundamentally incorrect math notation. It must always be $[2, \\infty)$."
+        }
+      ],
+      "quick_summary": [
+        "Solve exactly like equations.",
+        "FLIP the inequality sign if you multiply or divide by a negative.",
+        "Solid dot = included ($\\le, \\ge, [ ]$).",
+        "Open dot = excluded ($<, >, ( )$)."
+      ]
+    },
+    "hs_math_t04_st11": {
+      "id": "hs_math_t04_st11",
+      "title": "Compound inequalities",
+      "overview": "Compound inequalities combine two separate conditions into a single mathematical sentence using the words 'AND' or 'OR'. They are used to define bounded ranges or completely separate, diverging intervals.",
+      "key_concepts": [
+        {
+          "concept": "AND Inequalities (Intersection)",
+          "definition": "The 'Sandwich'.",
+          "details": [
+            "Both conditions MUST be true at the same time.",
+            "Usually written as a double inequality, bounding the variable between a floor and a ceiling: $-3 < x \\le 5$.",
+            "On a number line, this looks like a continuous line segment drawn between two endpoints."
+          ]
+        },
+        {
+          "concept": "OR Inequalities (Union)",
+          "definition": "The 'Split'.",
+          "details": [
+            "Only ONE of the conditions needs to be true.",
+            "Usually written as two separate inequalities: $x < 2 \\text{ OR } x > 7$.",
+            "On a number line, this looks like two arrows shooting in opposite directions, leaving an empty gap in the middle. Interval notation uses the Union symbol $\\cup$."
+          ]
+        },
+        {
+          "concept": "Solving Double Inequalities",
+          "definition": "The three-part balance.",
+          "details": [
+            "To solve an expression like $1 < x + 4 < 10$, whatever you do to the middle, you must do to the LEFT and the RIGHT. Subtract $4$ from all three zones: $-3 < x < 6$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v04_11",
+          "title": "AND and OR on a Number Line",
+          "type": "svg",
+          "caption": "AND gives the overlap; OR includes either solution region.",
+          "alt_text": "The top number line shows a bounded AND interval from negative one included to three excluded. The bottom shows an OR solution in two separate rays, with negative two excluded and four included.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\">\n  <text x=\"22\" y=\"32\" fill=\"#166534\" font-size=\"15\" font-weight=\"bold\">AND: −1 ≤ x &lt; 3</text>\n  <line x1=\"85\" y1=\"60\" x2=\"455\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"2\"/>\n  <line x1=\"200\" y1=\"60\" x2=\"350\" y2=\"60\" stroke=\"#16a34a\" stroke-width=\"6\"/>\n  <circle cx=\"200\" cy=\"60\" r=\"7\" fill=\"#16a34a\"/><circle cx=\"350\" cy=\"60\" r=\"7\" fill=\"#f8fafc\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n  <text x=\"200\" y=\"84\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"12\">−1 included</text><text x=\"350\" y=\"84\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"12\">3 excluded</text>\n  <text x=\"22\" y=\"132\" fill=\"#9a3412\" font-size=\"15\" font-weight=\"bold\">OR: x &lt; −2 or x ≥ 4</text>\n  <line x1=\"85\" y1=\"158\" x2=\"455\" y2=\"158\" stroke=\"#94a3b8\" stroke-width=\"2\"/>\n  <line x1=\"90\" y1=\"158\" x2=\"190\" y2=\"158\" stroke=\"#ea580c\" stroke-width=\"6\"/>\n  <path d=\"M90 148 L76 158 L90 168 Z\" fill=\"#ea580c\"/>\n  <circle cx=\"190\" cy=\"158\" r=\"7\" fill=\"#f8fafc\" stroke=\"#ea580c\" stroke-width=\"3\"/>\n  <circle cx=\"350\" cy=\"158\" r=\"7\" fill=\"#ea580c\"/>\n  <line x1=\"350\" y1=\"158\" x2=\"450\" y2=\"158\" stroke=\"#ea580c\" stroke-width=\"6\"/>\n  <path d=\"M450 148 L464 158 L450 168 Z\" fill=\"#ea580c\"/>\n  <text x=\"190\" y=\"184\" text-anchor=\"middle\" fill=\"#9a3412\" font-size=\"12\">−2 open</text><text x=\"350\" y=\"184\" text-anchor=\"middle\" fill=\"#9a3412\" font-size=\"12\">4 closed</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve: $-6 \\le 2x + 4 < 12$.",
+          "solution_steps": [
+            "Step 1: Subtract $4$ from ALL THREE parts: $-10 \\le 2x < 8$.",
+            "Step 2: Divide ALL THREE parts by $2$ (positive, so no signs flip): $-5 \\le x < 4$."
+          ],
+          "final_answer": "$-5 \\le x < 4$ (Interval: $[-5, 4)$)"
+        },
+        {
+          "problem": "Solve: $x > 5$ AND $x < 2$.",
+          "solution_steps": [
+            "Step 1: 'AND' means a number must satisfy both conditions at the exact same time.",
+            "Step 2: Is there a number that is greater than 5 while simultaneously being less than 2?",
+            "Step 3: No such real number exists."
+          ],
+          "final_answer": "No Solution ($\\varnothing$)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Writing impossible double inequalities.",
+          "correction": "Writing $5 < x < 2$ implies that 5 is less than 2, which is false. Double inequalities must always be written with the smaller number on the left and the larger number on the right."
+        },
+        {
+          "mistake": "Forgetting to flip BOTH signs when dividing by a negative.",
+          "correction": "If you have $-4 < -2x \\le 10$, dividing by $-2$ gives $2 > x \\ge -5$. You must then flip the whole thing around to be readable: $-5 \\le x < 2$."
+        }
+      ],
+      "quick_summary": [
+        "AND inequalities trap the variable between two boundaries.",
+        "OR inequalities point outwards in opposite directions.",
+        "Whatever operation you perform on a double inequality must be done to the Left, Middle, and Right simultaneously."
+      ]
+    },
+    "hs_math_t04_st12": {
+      "id": "hs_math_t04_st12",
+      "title": "Quadratic inequalities",
+      "overview": "Solving quadratic inequalities requires finding the roots of the parabola and then determining which sections of the curve dip below the x-axis (negative) or rise above it (positive).",
+      "key_concepts": [
+        {
+          "concept": "Find the Critical Points",
+          "definition": "Locate the real roots of the quadratic.",
+          "details": [
+            "Move all terms to one side and find the real roots of the associated quadratic equation.",
+            "The roots divide the number line into intervals on which the quadratic expression keeps a constant sign, provided the polynomial is not identically zero."
+          ]
+        },
+        {
+          "concept": "Use Sign Analysis",
+          "definition": "Test the sign in each interval.",
+          "details": [
+            "Choose one test value from each interval and substitute it into the factored expression, or use the signs of its factors.",
+            "Select the intervals where the expression is positive or negative as required by the inequality."
+          ]
+        },
+        {
+          "concept": "Include or Exclude Boundary Values",
+          "definition": "Read the inequality sign.",
+          "details": [
+            "For a strict inequality ($< $ or $>$), roots where the expression equals zero are excluded.",
+            "For a non-strict inequality ($\\le$ or $\\ge$), include any real roots that satisfy the original inequality."
+          ]
+        },
+        {
+          "concept": "Graphical Interpretation",
+          "definition": "Use the position of the parabola relative to the x-axis.",
+          "details": [
+            "For an upward-opening parabola with two distinct roots, the quadratic is negative between the roots and positive outside them.",
+            "For a downward-opening parabola, the sign pattern is reversed. Sign analysis works in both cases and is safer than memorising only the upward-opening pattern."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v04_12",
+          "title": "Sign Analysis for a Quadratic Inequality",
+          "type": "svg",
+          "caption": "The expression is negative between its roots and positive outside them in this example.",
+          "alt_text": "A number line for (x−1)(x−5) less than zero marks roots 1 and 5, with positive signs outside and a negative sign between them.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\">\n  <text x=\"24\" y=\"32\" fill=\"#1e3a8a\" font-size=\"16\" font-weight=\"bold\">Solve x² − 6x + 5 &lt; 0</text>\n  <text x=\"24\" y=\"63\" fill=\"#475569\" font-size=\"13\">Factor: (x − 1)(x − 5) &lt; 0</text>\n  <line x1=\"75\" y1=\"126\" x2=\"465\" y2=\"126\" stroke=\"#64748b\" stroke-width=\"2\"/>\n  <line x1=\"185\" y1=\"126\" x2=\"355\" y2=\"126\" stroke=\"#16a34a\" stroke-width=\"7\"/>\n  <circle cx=\"185\" cy=\"126\" r=\"7\" fill=\"#f8fafc\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n  <circle cx=\"355\" cy=\"126\" r=\"7\" fill=\"#f8fafc\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n  <text x=\"185\" y=\"151\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-size=\"14\">1</text>\n  <text x=\"355\" y=\"151\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-size=\"14\">5</text>\n  <text x=\"110\" y=\"104\" text-anchor=\"middle\" fill=\"#b91c1c\" font-size=\"18\" font-weight=\"bold\">+</text>\n  <text x=\"270\" y=\"104\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"18\" font-weight=\"bold\">−</text>\n  <text x=\"420\" y=\"104\" text-anchor=\"middle\" fill=\"#b91c1c\" font-size=\"18\" font-weight=\"bold\">+</text>\n  <text x=\"270\" y=\"190\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"15\" font-weight=\"bold\">Solution: 1 &lt; x &lt; 5</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve $x^2-6x+5<0$.",
+          "solution_steps": [
+            "Step 1: Factorise: $(x-1)(x-5)<0$.",
+            "Step 2: The critical points are $1$ and $5$.",
+            "Step 3: Test the intervals. At $x=0$, the product is positive; at $x=2$, it is negative; at $x=6$, it is positive.",
+            "Step 4: Choose the interval where the expression is negative. Because the inequality is strict, exclude both roots."
+          ],
+          "final_answer": "$1<x<5$"
+        },
+        {
+          "problem": "Solve $-4t^2+16t+20\\\\ge20$.",
+          "solution_steps": [
+            "Step 1: Subtract $20$: $-4t^2+16t\\ge0$.",
+            "Step 2: Factorise: $-4t(t-4)\\ge0$.",
+            "Step 3: Divide by $-4$ and reverse the inequality: $t(t-4)\\le0$.",
+            "Step 4: The product is non-positive between the roots, including the endpoints."
+          ],
+          "final_answer": "$0\\le t\\le4$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Solving it like a linear inequality.",
+          "correction": "If you have $x^2 > 9$, you CANNOT just take the square root and say $x > 3$. You are completely missing the negative root! $x^2 - 9 > 0 \\implies (x-3)(x+3) > 0$. The correct answer is $x > 3$ OR $x < -3$."
+        }
+      ],
+      "quick_summary": [
+        "Find the critical points by factoring.",
+        "Use a number line test or visualize the parabola.",
+        "$> 0$ usually means OR (outside the roots).",
+        "$< 0$ usually means AND (between the roots)."
+      ]
+    },
+    "hs_math_t04_st13": {
+      "id": "hs_math_t04_st13",
+      "title": "Equations involving rational expressions",
+      "overview": "A rational equation contains one or more algebraic fractions in which the variable may appear in a denominator. Solve by identifying forbidden denominator values, clearing fractions with a common denominator, and checking every candidate in the original equation.",
+      "key_concepts": [
+        {
+          "concept": "Domain Restrictions",
+          "definition": "Values that make an original denominator zero are excluded.",
+          "details": [
+            "Before solving, set each original denominator equal to zero and record the values that are not allowed.",
+            "These restrictions remain in force even if a factor cancels during simplification."
+          ]
+        },
+        {
+          "concept": "Clear the Denominators",
+          "definition": "Multiply every term by the least common denominator.",
+          "details": [
+            "Find the least common denominator of all rational terms.",
+            "Multiply every term on both sides by that denominator, making sure no term is omitted. Solve the resulting polynomial equation."
+          ]
+        },
+        {
+          "concept": "Check for Extraneous Solutions",
+          "definition": "Reject candidates outside the original domain.",
+          "details": [
+            "Clearing denominators may produce candidate values that make an original denominator zero.",
+            "Substitute each candidate into the original equation. Reject any value that makes the original expression undefined or does not satisfy the equation."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v04_13",
+          "title": "Rejecting a Candidate That Violates a Domain Restriction",
+          "type": "svg",
+          "caption": "The numerator gives two candidates, but the original denominator excludes x = 2.",
+          "alt_text": "A rational equation (x squared minus 4) over (x minus 2) equals zero has the original restriction x not equal to 2. Candidate roots 2 and negative 2 are shown; 2 is rejected and negative 2 is retained.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\" text-anchor=\"middle\">\n  <rect x=\"20\" y=\"18\" width=\"500\" height=\"50\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n  <text x=\"270\" y=\"48\" fill=\"#1e3a8a\" font-size=\"19\" font-weight=\"bold\">(x² − 4) / (x − 2) = 0</text>\n  <text x=\"270\" y=\"95\" fill=\"#b91c1c\" font-size=\"15\" font-weight=\"bold\">Original restriction: x ≠ 2</text>\n  <rect x=\"32\" y=\"116\" width=\"218\" height=\"74\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.5\"/>\n  <text x=\"141\" y=\"143\" fill=\"#92400e\" font-size=\"14\">Numerator gives candidates</text>\n  <text x=\"141\" y=\"172\" fill=\"#78350f\" font-size=\"20\" font-weight=\"bold\">x = 2 or x = −2</text>\n  <path d=\"M252 153 H286\" stroke=\"#64748b\" stroke-width=\"2.5\"/><path d=\"M286 153 l-8 -5 v10 z\" fill=\"#64748b\"/>\n  <rect x=\"294\" y=\"116\" width=\"218\" height=\"74\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.5\"/>\n  <text x=\"403\" y=\"143\" fill=\"#14532d\" font-size=\"14\">Check the restriction</text>\n  <text x=\"403\" y=\"171\" fill=\"#14532d\" font-size=\"17\" font-weight=\"bold\">Reject 2; keep −2</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve $\\frac{2}{x}+\\frac{3}{x+1}=2$.",
+          "solution_steps": [
+            "Step 1: Restrictions: $x\\ne0$ and $x\\ne-1$.",
+            "Step 2: The least common denominator is $x(x+1)$. Multiply every term by it: $2(x+1)+3x=2x(x+1)$.",
+            "Step 3: Expand and collect: $2x+2+3x=2x^2+2x$, so $2x^2-3x-2=0$.",
+            "Step 4: Factorise: $(2x+1)(x-2)=0$, giving candidates $x=-\\frac12$ and $x=2$.",
+            "Step 5: Neither candidate is excluded by the original restrictions, so both are valid."
+          ],
+          "final_answer": "$x=-\\frac12$ or $x=2$"
+        },
+        {
+          "problem": "Solve $\\frac{x^2-4}{x-2}=0$.",
+          "solution_steps": [
+            "Step 1: The original denominator requires $x\\ne2$.",
+            "Step 2: A fraction is zero when its numerator is zero and its denominator is non-zero. Solve $x^2-4=0$.",
+            "Step 3: Factorise: $(x-2)(x+2)=0$, giving candidates $x=2$ and $x=-2$.",
+            "Step 4: Reject $x=2$ because it makes the original denominator zero. The value $x=-2$ is valid."
+          ],
+          "final_answer": "$x=-2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting to multiply the constant term by the LCD.",
+          "correction": "When clearing fractions in $\\frac{x}{3} = \\frac{2}{x} + 4$, you must multiply the $4$ by the LCD as well! It becomes $x^2 = 6 + 12x$, NOT $x^2 = 6 + 4$."
+        },
+        {
+          "mistake": "Accepting all answers blindly.",
+          "correction": "You MUST check your final roots against the original denominators. If an answer makes any original denominator zero, you must cross it out."
+        }
+      ],
+      "quick_summary": [
+        "Find domain restrictions immediately.",
+        "Multiply every term by the LCD to destroy all fractions.",
+        "Solve the resulting linear or quadratic equation.",
+        "Reject any extraneous solutions."
+      ]
+    },
+    "hs_math_t04_st14": {
+      "id": "hs_math_t04_st14",
+      "title": "Equations involving radicals",
+      "overview": "Radical equations feature variables trapped inside square roots, cube roots, or higher powers. To free the variable, we must isolate the radical and raise both sides of the equation to the matching power.",
+      "key_concepts": [
+        {
+          "concept": "Isolate the Radical First",
+          "definition": "Clear the area.",
+          "details": [
+            "Before you square both sides, the square root must be completely alone on one side of the equals sign.",
+            "If you have $\\sqrt{x} + 3 = 8$, you MUST subtract $3$ first to get $\\sqrt{x} = 5$ before squaring."
+          ]
+        },
+        {
+          "concept": "The Squaring Danger",
+          "definition": "Creating fake answers.",
+          "details": [
+            "Squaring both sides of an equation is not a perfectly reversible operation (e.g., $(-3)^2 = 9$ and $3^2 = 9$).",
+            "Because of this, squaring both sides can create **extraneous solutions** that work in the squared version but fail in the original equation. You MUST plug answers back in to check."
+          ]
+        },
+        {
+          "concept": "Domain of Even Roots",
+          "definition": "No negative insides.",
+          "details": [
+            "For a real square root (or 4th root, 6th root), the inside (radicand) must be $\\ge 0$.",
+            "Odd roots (cube roots, 5th roots) are fine with negative numbers (e.g., $\\sqrt[3]{-8} = -2$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s14",
+          "title": "Squaring a Binomial Warning",
+          "type": "svg",
+          "caption": "When squaring a side with multiple terms, you must FOIL.",
+          "alt_text": "Visual showing an equation: √(x+1) = x - 1. Arrow points down showing squaring both sides. Left side becomes just 'x+1'. Right side shows (x - 1)^2. A red warning box highlights that (x-1)^2 becomes x^2 - 2x + 1, NOT just x^2 + 1.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">√(x + 1) = x - 1</text><path d=\"M 250 50 L 250 80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"290\" y=\"70\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1d4ed8\">Square both sides</text><text x=\"250\" y=\"110\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x + 1 = (x - 1)²</text><rect x=\"100\" y=\"130\" width=\"300\" height=\"50\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">WARNING: You must FOIL the right side!</text><text x=\"250\" y=\"170\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">x + 1 = x² - 2x + 1</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve: $\\sqrt{x + 5} = x - 1$",
+          "solution_steps": [
+            "Step 1: The radical is isolated. Square both sides: $x + 5 = (x - 1)^2$.",
+            "Step 2: FOIL the right side: $x + 5 = x^2 - 2x + 1$.",
+            "Step 3: Move everything to one side to form a quadratic: $0 = x^2 - 3x - 4$.",
+            "Step 4: Factorise: $0 = (x - 4)(x + 1) \\implies x = 4, x = -1$.",
+            "Step 5: Check $x = 4$: $\\sqrt{4+5} = 4-1 \\implies \\sqrt{9} = 3 \\implies 3=3$. (Valid).",
+            "Step 6: Check $x = -1$: $\\sqrt{-1+5} = -1-1 \\implies \\sqrt{4} = -2 \\implies 2 = -2$. (False! Extraneous)."
+          ],
+          "final_answer": "$x = 4$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Squaring individual terms.",
+          "correction": "If you have $\\sqrt{x} + 2 = 5$, squaring both sides means $(\\sqrt{x} + 2)^2 = 5^2$. It does NOT mean $x + 4 = 25$. This is why you must ALWAYS isolate the radical first, so you are just squaring $(\\sqrt{x})^2 = 3^2$."
+        },
+        {
+          "mistake": "Assuming all calculated roots are valid.",
+          "correction": "Radical equations are notorious for generating fake (extraneous) solutions. Checking your answers by plugging them back into the original prompt is a mandatory step, not an optional one."
+        }
+      ],
+      "quick_summary": [
+        "Isolate the radical on one side of the equals sign.",
+        "Raise both sides to the power of the index (square for square roots, cube for cube roots).",
+        "Solve the resulting equation.",
+        "Check all answers in the original equation to weed out extraneous solutions."
+      ]
+    },
+    "hs_math_t04_st17": {
+      "id": "hs_math_t04_st17",
+      "title": "Equations and inequalities involving absolute values",
+      "overview": "Absolute value measures distance on the number line and is never negative. Equations involving absolute values can have two solutions, one solution or no solution, while inequalities describe one or more intervals of values. Use distance and number-line reasoning to solve and represent these solution sets.",
+      "key_concepts": [
+        {
+          "concept": "Absolute Value as Distance",
+          "definition": "Distance from zero or from a specified centre.",
+          "details": [
+            "$|x|$ is the non-negative distance of $x$ from zero.",
+            "$|x-a|$ is the distance between $x$ and $a$. For example, $|x-3|=2$ means that $x$ is two units from $3$."
+          ]
+        },
+        {
+          "concept": "Absolute Value Equations",
+          "definition": "Split into two cases.",
+          "details": [
+            "For $a\\ge0$, $|u|=a$ means $u=a$ or $u=-a$.",
+            "If the right-hand side is negative, an equation of the form $|u|=a$ has no real solution because absolute value cannot be negative.",
+            "Both candidate values must be checked in the original equation."
+          ]
+        },
+        {
+          "concept": "Absolute Value Inequalities",
+          "definition": "Translate a distance condition into an interval or two rays.",
+          "details": [
+            "For $a>0$, $|u|<a$ is equivalent to $-a<u<a$, and $|u|\\le a$ is equivalent to $-a\\le u\\le a$.",
+            "For $a>0$, $|u|>a$ is equivalent to $u<-a$ or $u>a$; the non-strict form uses $\\le$ and $\\ge$.",
+            "Less-than inequalities describe values within a distance; greater-than inequalities describe values outside that distance."
+          ]
+        },
+        {
+          "concept": "Number Lines and Interval Notation",
+          "definition": "Show which endpoints belong to the solution.",
+          "details": [
+            "Use a closed endpoint when the boundary is included and an open endpoint when it is excluded.",
+            "Use a single interval for values between two boundaries, and a union of two intervals for values outside two boundaries."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Absolute Value Equation",
+          "equation": "$$|u|=a\\iff u=a\\text{ or }u=-a,\\quad a\\ge0$$",
+          "variables": {
+            "u": "An expression involving the variable",
+            "a": "A non-negative constant"
+          }
+        },
+        {
+          "name": "Absolute Value Less-Than Inequality",
+          "equation": "$$|u|<a\\iff -a<u<a,\\quad a>0$$",
+          "variables": {
+            "u": "An expression involving the variable",
+            "a": "A positive constant"
+          }
+        },
+        {
+          "name": "Absolute Value Greater-Than Inequality",
+          "equation": "$$|u|>a\\iff u<-a\\text{ or }u>a,\\quad a>0$$",
+          "variables": {
+            "u": "An expression involving the variable",
+            "a": "A positive constant"
+          }
+        },
+        {
+          "name": "Absolute Value Non-Strict Inequalities",
+          "equation": "$$|u|\\le a\\iff -a\\le u\\le a,\\quad |u|\\ge a\\iff u\\le-a\\text{ or }u\\ge a,\\quad a\\ge0$$",
+          "variables": {
+            "u": "An expression involving the variable",
+            "a": "A non-negative constant"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_17",
+          "title": "Absolute Value Inequality as a Distance Interval",
+          "type": "svg",
+          "caption": "The values within two units of 3 form the closed interval [1,5].",
+          "alt_text": "A number line shows the solution to absolute value of x minus 3 less than or equal to 2, with closed endpoints at 1 and 5 and the interval between them highlighted.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\">\n  <text x=\"22\" y=\"32\" fill=\"#1e3a8a\" font-size=\"15\" font-weight=\"bold\">Example: |x − 3| ≤ 2</text>\n  <text x=\"22\" y=\"59\" fill=\"#475569\" font-size=\"13\">Distance from 3 is at most 2, so 1 ≤ x ≤ 5.</text>\n  <line x1=\"78\" y1=\"122\" x2=\"466\" y2=\"122\" stroke=\"#64748b\" stroke-width=\"2\"/>\n  <line x1=\"192\" y1=\"122\" x2=\"382\" y2=\"122\" stroke=\"#2563eb\" stroke-width=\"7\"/>\n  <circle cx=\"192\" cy=\"122\" r=\"7\" fill=\"#2563eb\"/>\n  <circle cx=\"382\" cy=\"122\" r=\"7\" fill=\"#2563eb\"/>\n  <circle cx=\"287\" cy=\"122\" r=\"5\" fill=\"#0f172a\"/>\n  <text x=\"192\" y=\"148\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-size=\"13\">1</text>\n  <text x=\"287\" y=\"148\" text-anchor=\"middle\" fill=\"#0f172a\" font-size=\"13\">3</text>\n  <text x=\"382\" y=\"148\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-size=\"13\">5</text>\n  <path d=\"M287 88 V108 M192 88 V108 M382 88 V108\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/>\n  <text x=\"287\" y=\"185\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"15\" font-weight=\"bold\">Solution interval: [1, 5]</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve $|x-3|=5$.",
+          "solution_steps": [
+            "Step 1: Split into two cases: $x-3=5$ or $x-3=-5$.",
+            "Step 2: Solve the first case: $x=8$.",
+            "Step 3: Solve the second case: $x=-2$.",
+            "Step 4: Both values are five units from $3$, so both satisfy the equation."
+          ],
+          "final_answer": "$x=8$ or $x=-2$"
+        },
+        {
+          "problem": "Solve $|2x+1|\\\\le7$ and write the answer in interval notation.",
+          "solution_steps": [
+            "Step 1: Convert to a compound inequality: $-7\\le2x+1\\le7$.",
+            "Step 2: Subtract $1$ throughout: $-8\\le2x\\le6$.",
+            "Step 3: Divide throughout by $2$: $-4\\le x\\le3$."
+          ],
+          "final_answer": "$[-4,3]$"
+        },
+        {
+          "problem": "Solve $|x+2|>4$.",
+          "solution_steps": [
+            "Step 1: Use the outside-interval rule: $x+2<-4$ or $x+2>4$.",
+            "Step 2: Solve each part: $x<-6$ or $x>2$.",
+            "Step 3: Both endpoints are excluded because the inequality is strict."
+          ],
+          "final_answer": "$(-\\infty,-6)\\cup(2,\\infty)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Writing only one solution for $|x-a|=b$ when $b>0$.",
+          "correction": "An absolute-value equation usually produces two cases, one on either side of the centre. Solve both unless the cases coincide."
+        },
+        {
+          "mistake": "Using AND instead of OR for a greater-than absolute-value inequality.",
+          "correction": "A value more than a units away lies on either side of the centre, so the result is two separate intervals joined by OR."
+        },
+        {
+          "mistake": "Including endpoints in a strict inequality.",
+          "correction": "For $<$ or $>$, the boundary is excluded. Use open endpoints and parentheses in interval notation."
+        }
+      ],
+      "quick_summary": [
+        "Absolute value represents non-negative distance.",
+        "$|u|=a$ gives two cases when $a>0$ and no solution when $a<0$.",
+        "Less-than inequalities describe an interval between boundaries; greater-than inequalities describe two outside intervals.",
+        "Use number lines and interval notation to represent the solution set."
+      ]
+    },
+    "hs_math_t04_st15": {
+      "id": "hs_math_t04_st15",
+      "title": "Word problems using equations",
+      "overview": "Mathematics models the real world. Solving word problems is the art of translating English sentences into algebraic equations to find unknown quantities.",
+      "key_concepts": [
+        {
+          "concept": "Defining Variables",
+          "definition": "Naming the unknown.",
+          "details": [
+            "Before writing any equations, explicitly state what your variable represents (e.g., 'Let $x$ be the child's age').",
+            "If there are multiple unknowns, relate them to the first variable (e.g., 'Then the parent's age is $3x$')."
+          ]
+        },
+        {
+          "concept": "Translation Keys",
+          "definition": "English to Math.",
+          "details": [
+            "**Addition:** Sum, increased by, more than.",
+            "**Subtraction:** Difference, decreased by, less than. (Note: '5 less than x' is $x - 5$, NOT $5 - x$).",
+            "**Multiplication:** Product, twice, times, of (e.g., 'half of x' is $\\frac{1}{2}x$).",
+            "**Equality:** Is, equals, yields, results in."
+          ]
+        },
+        {
+          "concept": "Common Frameworks",
+          "definition": "Standard setups.",
+          "details": [
+            "**Consecutive Integers:** $x$, $x+1$, $x+2$.",
+            "**Consecutive Even/Odd Integers:** $x$, $x+2$, $x+4$.",
+            "**Distance/Speed/Time:** Distance = Speed $\\times$ Time ($D = ST$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s15",
+          "title": "Translation Dictionary",
+          "type": "svg",
+          "caption": "Common phrases and their exact algebraic translations.",
+          "alt_text": "Visual table. Left column 'English', Right column 'Algebra'. Row 1: '5 more than twice a number' -> '2x + 5'. Row 2: '7 less than a number' -> 'x - 7'. Row 3: 'The product of two consecutive integers' -> 'x(x+1)'. Row 4: 'A 20% discount on x' -> '0.80x'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"460\" height=\"160\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><line x1=\"250\" y1=\"20\" x2=\"250\" y2=\"180\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><line x1=\"20\" y1=\"50\" x2=\"480\" y2=\"50\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><text x=\"135\" y=\"40\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">English Phrase</text><text x=\"365\" y=\"40\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Algebraic Translation</text><text x=\"135\" y=\"75\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#334155\">5 more than twice a number</text><text x=\"365\" y=\"75\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">2x + 5</text><line x1=\"20\" y1=\"90\" x2=\"480\" y2=\"90\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><text x=\"135\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#334155\">7 less than a number</text><text x=\"365\" y=\"105\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">x - 7</text><line x1=\"20\" y1=\"120\" x2=\"480\" y2=\"120\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><text x=\"135\" y=\"135\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#334155\">Product of 2 consecutive ints</text><text x=\"365\" y=\"135\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">x(x + 1)</text><line x1=\"20\" y1=\"150\" x2=\"480\" y2=\"150\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><text x=\"135\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#334155\">A 20% discount on price x</text><text x=\"365\" y=\"165\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">0.80x</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A parent is three times as old as their child. Their combined age is 48 years. Find their present ages.",
+          "solution_steps": [
+            "Step 1: Define variables. Let $x$ = child's age. Then the parent's age = $3x$.",
+            "Step 2: Translate the relationship to an equation. Combined age is 48, so $x + 3x = 48$.",
+            "Step 3: Solve. $4x = 48 \\implies x = 12$.",
+            "Step 4: Answer the prompt. Child is 12. Parent is $3(12) = 36$."
+          ],
+          "final_answer": "Child is 12, Parent is 36"
+        },
+        {
+          "problem": "The product of two consecutive positive integers is 90. Find the integers.",
+          "solution_steps": [
+            "Step 1: Define variables. Let $x$ = first integer. Let $x+1$ = second integer.",
+            "Step 2: Form equation: $x(x+1) = 90$.",
+            "Step 3: Expand and set to zero: $x^2 + x - 90 = 0$.",
+            "Step 4: Factorise: $(x+10)(x-9) = 0$. Solutions: $x = -10$ or $x = 9$.",
+            "Step 5: Context check. The problem specified POSITIVE integers, so reject $-10$."
+          ],
+          "final_answer": "9 and 10"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Translating 'less than' backwards.",
+          "correction": "'Ten less than a number' is translated as $x - 10$. Many students write $10 - x$, which is completely incorrect and will ruin the equation."
+        },
+        {
+          "mistake": "Accepting mathematically valid but physically impossible answers.",
+          "correction": "If your quadratic equation says a rectangle's width is $-5$ meters, you must reject it. Always interpret the math back into the real-world context."
+        }
+      ],
+      "quick_summary": [
+        "Explicitly define your variables first.",
+        "Translate English keywords into math operations.",
+        "Solve the equation.",
+        "Check if the answer makes sense in the real world (no negative ages or distances)."
+      ]
+    },
+    "hs_math_t04_st16": {
+      "id": "hs_math_t04_st16",
+      "title": "Systems of equations and applications",
+      "overview": "Some real-world problems contain two unknown quantities connected by two different conditions. A system of simultaneous equations models both conditions together, allowing the unknown quantities to be determined consistently. This lesson focuses on constructing and interpreting the model; the algebraic solution methods are covered earlier.",
+      "key_concepts": [
+        {
+          "concept": "Identify the Unknown Quantities",
+          "definition": "Choose variables that represent the quantities in context.",
+          "details": [
+            "Define each variable clearly, including its unit where relevant.",
+            "Use the wording of the problem to identify the conditions that connect the unknowns."
+          ]
+        },
+        {
+          "concept": "Build Two Equations",
+          "definition": "Translate each independent condition into an equation.",
+          "details": [
+            "A total-count condition may produce an equation such as $x+y=35$.",
+            "A cost or revenue condition may produce another equation, such as $12x+8y=340$.",
+            "Each equation represents a separate condition, and both must be satisfied by the same values."
+          ]
+        },
+        {
+          "concept": "Interpret and Check the Result",
+          "definition": "Return to the real-world meaning.",
+          "details": [
+            "Solve the system using substitution or elimination from the previous lesson.",
+            "Check the values in both original conditions, confirm units and consider any context restrictions such as whole-number counts or non-negative quantities.",
+            "State the answer in words, not only as an ordered pair."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Two-Condition Model",
+          "equation": "$$\\begin{cases}a_1x+b_1y=c_1\\\\a_2x+b_2y=c_2\\end{cases}$$",
+          "variables": {
+            "x, y": "Unknown quantities defined by the problem",
+            "a_i, b_i, c_i": "Constants obtained from the two conditions"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_16",
+          "title": "Modelling a Ticket-Sales Problem",
+          "type": "svg",
+          "caption": "Two separate conditions form a system that determines the ticket counts.",
+          "alt_text": "A ticket-sales context is translated into a total-count equation and a revenue equation, leading to 15 adult tickets and 20 student tickets.",
+          "data": "<svg viewBox=\"0 0 540 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"540\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<g font-family=\"Arial,sans-serif\">\n  <rect x=\"18\" y=\"20\" width=\"240\" height=\"176\" rx=\"9\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n  <text x=\"138\" y=\"46\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-size=\"15\" font-weight=\"bold\">Ticket information</text>\n  <text x=\"34\" y=\"77\" fill=\"#0f172a\" font-size=\"14\">Adult tickets: 12 units each</text>\n  <text x=\"34\" y=\"103\" fill=\"#0f172a\" font-size=\"14\">Student tickets: 8 units each</text>\n  <text x=\"34\" y=\"137\" fill=\"#0f172a\" font-size=\"14\">Total tickets: 35</text>\n  <text x=\"34\" y=\"163\" fill=\"#0f172a\" font-size=\"14\">Total revenue: 340 units</text>\n  <path d=\"M263 110 H290\" stroke=\"#64748b\" stroke-width=\"2.5\"/><path d=\"M290 110 l-8 -5 v10 z\" fill=\"#64748b\"/>\n  <rect x=\"300\" y=\"20\" width=\"222\" height=\"176\" rx=\"9\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.5\"/>\n  <text x=\"411\" y=\"46\" text-anchor=\"middle\" fill=\"#14532d\" font-size=\"15\" font-weight=\"bold\">Model and result</text>\n  <text x=\"411\" y=\"80\" text-anchor=\"middle\" fill=\"#0f172a\" font-size=\"17\">a + s = 35</text>\n  <text x=\"411\" y=\"108\" text-anchor=\"middle\" fill=\"#0f172a\" font-size=\"17\">12a + 8s = 340</text>\n  <line x1=\"323\" y1=\"125\" x2=\"499\" y2=\"125\" stroke=\"#86efac\" stroke-width=\"1.5\"/>\n  <text x=\"411\" y=\"151\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"16\" font-weight=\"bold\">a = 15, s = 20</text>\n  <text x=\"411\" y=\"177\" text-anchor=\"middle\" fill=\"#14532d\" font-size=\"12\">15 adults, 20 students</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A school event sells 35 tickets. Adult tickets cost 12 units each and student tickets cost 8 units each. Total revenue is 340 units. How many of each ticket were sold?",
+          "solution_steps": [
+            "Step 1: Let $a$ be the number of adult tickets and $s$ be the number of student tickets.",
+            "Step 2: Total ticket count gives $a+s=35$.",
+            "Step 3: Total revenue gives $12a+8s=340$.",
+            "Step 4: From the first equation, $s=35-a$. Substitute: $12a+8(35-a)=340$.",
+            "Step 5: Simplify: $12a+280-8a=340$, so $4a=60$ and $a=15$.",
+            "Step 6: Then $s=35-15=20$. Check revenue: $12(15)+8(20)=180+160=340$."
+          ],
+          "final_answer": "15 adult tickets and 20 student tickets."
+        },
+        {
+          "problem": "A stationery order contains 40 items made up of notebooks and pens. Each notebook costs 3 units and each pen costs 2 units. The total cost is 95 units. Find the number of each item.",
+          "solution_steps": [
+            "Step 1: Let $n$ be the number of notebooks and $p$ the number of pens.",
+            "Step 2: The item count gives $n+p=40$.",
+            "Step 3: The cost gives $3n+2p=95$.",
+            "Step 4: From $p=40-n$, substitute into the cost equation: $3n+2(40-n)=95$.",
+            "Step 5: Simplify: $n+80=95$, so $n=15$ and $p=25$.",
+            "Step 6: Check: $15+25=40$ items and $3(15)+2(25)=95$ units."
+          ],
+          "final_answer": "15 notebooks and 25 pens."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using only one condition to build a model.",
+          "correction": "A system needs one equation for each independent condition in the problem. Define the variables first, then translate every relevant condition."
+        },
+        {
+          "mistake": "Giving an answer that does not make sense in context.",
+          "correction": "Ticket counts and item counts must be whole numbers and cannot be negative. Check the solution against the original wording and units."
+        }
+      ],
+      "quick_summary": [
+        "Define the unknown quantities clearly.",
+        "Translate each independent condition into an equation.",
+        "Solve the simultaneous system using a method from ST05.",
+        "Check both equations and interpret the answer in context."
+      ]
+    }
+  }
+}

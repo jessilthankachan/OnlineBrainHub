@@ -1,0 +1,1143 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t02",
+  "topicTitle": "Sets, Relations and Functions",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t02_st01": {
+      "id": "hs_math_t02_st01",
+      "title": "Set notation and representation",
+      "overview": "In mathematics, a set is a well-defined collection of distinct objects. Sets allow us to group numbers, items, or concepts together logically and manipulate them using strict mathematical rules.",
+      "key_concepts": [
+        {
+          "concept": "Elements and Membership",
+          "definition": "Belonging to a set.",
+          "details": [
+            "The objects inside a set are called its **elements** or members.",
+            "We use the symbol $\\in$ to mean 'is an element of' (e.g., $4 \\in \\{2, 4, 6\\}$).",
+            "We use $\\notin$ to mean 'is NOT an element of' (e.g., $3 \\notin \\{2, 4, 6\\}$)."
+          ]
+        },
+        {
+          "concept": "The Roster Method",
+          "definition": "The list format.",
+          "details": [
+            "All elements are explicitly listed inside curly brackets, separated by commas.",
+            "Example: The vowels in the English alphabet can be written as $V = \\{a, e, i, o, u\\}$."
+          ]
+        },
+        {
+          "concept": "The Set-Builder Method",
+          "definition": "The rule format.",
+          "details": [
+            "Instead of listing every item, a mathematical rule or condition is given.",
+            "Example: $A = \\{x \\in \\mathbb{N} \\mid x < 6\\}$ means 'the set of all $x$ in the Natural Numbers such that $x$ is less than 6'. This generates the set $\\{1, 2, 3, 4, 5\\}$.",
+            "In this curriculum, $\\mathbb{N}$ denotes the positive natural numbers $\\{1,2,3,\\ldots\\}$; some texts include zero, so check the stated convention."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Set-Builder General Form",
+          "equation": "$$ A = \\{x \\in U \\mid \\text{condition on }x\\} $$",
+          "variables": {
+            "U": "The stated universal set or reference set"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s01",
+          "title": "Roster vs Set-Builder Notation",
+          "type": "svg",
+          "caption": "Two different ways to write the exact same mathematical set.",
+          "alt_text": "Visual showing a split comparison. Left side: Roster Method, showing A = {2, 4, 6, 8, 10}. Right side: Set-Builder Method, showing A = {x ∈ ℕ | x ≤ 10, x is even}. Arrows indicate they both mean the same thing.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"40\" width=\"210\" height=\"120\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"10\"/><text x=\"125\" y=\"70\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Roster Method</text><text x=\"125\" y=\"110\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">A = {2, 4, 6, 8, 10}</text><rect x=\"270\" y=\"40\" width=\"210\" height=\"120\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"375\" y=\"70\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Set-Builder Method</text><text x=\"375\" y=\"100\" font-family=\"monospace\" font-size=\"11\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">A = {x ∈ ℕ | x ≤ 10,</text><text x=\"375\" y=\"122\" font-family=\"monospace\" font-size=\"11\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">x is even}</text><path d=\"M 230 100 L 270 100\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><text x=\"250\" y=\"90\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#64748b\">=</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Convert the set $B = \\{5, 10, 15, 20, 25\\}$ into set-builder notation.",
+          "solution_steps": [
+            "Step 1: Identify the pattern. Each element is a positive multiple of $5$.",
+            "Step 2: Identify the range. The elements are greater than $0$ and less than or equal to $25$.",
+            "Step 3: Write the condition mathematically: $x = 5n$ where $n$ is a natural number from $1$ to $5$."
+          ],
+          "final_answer": "$B = \\{x \\in \\mathbb{N} \\mid x = 5n, 1 \\le n \\le 5\\}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Repeating elements in roster notation.",
+          "correction": "A set is a collection of DISTINCT objects. Writing $\\{1, 2, 2, 3\\}$ is mathematically the exact same set as $\\{1, 2, 3\\}$. Never write duplicates."
+        },
+        {
+          "mistake": "Using parentheses $( )$ instead of curly brackets $\\{ \\}$.",
+          "correction": "In math, $(1, 2)$ means an ordered coordinate pair, or an open interval. A set MUST be written with curly brackets: $\\{1, 2\\}$."
+        }
+      ],
+      "quick_summary": [
+        "A set is a well-defined collection of distinct objects.",
+        "$\\in$ means 'belongs to'.",
+        "Roster method lists every element out.",
+        "Set-builder method describes the mathematical rules the elements must follow."
+      ]
+    },
+    "hs_math_t02_st02": {
+      "id": "hs_math_t02_st02",
+      "title": "Types of sets",
+      "overview": "Sets can be categorized based on the number of elements they contain or how their elements compare to other sets. Understanding these types is essential for formal set theory.",
+      "key_concepts": [
+        {
+          "concept": "Empty, Singleton, Finite, and Infinite",
+          "definition": "Sizing the set.",
+          "details": [
+            "**Empty Set ($\\varnothing$ or $\\{\\}$):** A set with absolutely no elements.",
+            "**Singleton Set:** A set with exactly one element (e.g., $\\{5\\}$).",
+            "**Finite Set:** A set where you can count the elements and eventually stop (e.g., the days of the week).",
+            "**Infinite Set:** A set that goes on forever (e.g., the set of all integers, $\\mathbb{Z}$)."
+          ]
+        },
+        {
+          "concept": "Equal vs. Equivalent Sets",
+          "definition": "Matching elements vs Matching counts.",
+          "details": [
+            "**Equal Sets ($A = B$):** They have the exact same elements. $\\{1, 2, 3\\}$ and $\\{3, 1, 2\\}$ are equal.",
+            "**Equivalent Sets:** They have the same *number* of elements (same cardinality). $\\{1, 2, 3\\}$ and $\\{a, b, c\\}$ are equivalent because they both have 3 items, even though the items are different."
+          ]
+        },
+        {
+          "concept": "Universal Set ($U$)",
+          "definition": "The overarching container.",
+          "details": [
+            "The Universal Set ($U$) is the master set containing all possible elements under consideration for a specific problem. For example, if you are talking about even and odd numbers on a die, $U = \\{1, 2, 3, 4, 5, 6\\}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Cardinality",
+          "equation": "$$ n(A) $$",
+          "variables": {
+            "n(A)": "The number of distinct elements in set A"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s02",
+          "title": "Equal vs Equivalent Sets",
+          "type": "svg",
+          "caption": "Equal means exact same contents. Equivalent just means same size.",
+          "alt_text": "Visual showing Set A = {1, 2, 3}, Set B = {3, 1, 2}, and Set C = {x, y, z}. An arrow between A and B says 'Equal (A = B)'. An arrow between A and C says 'Equivalent: n(A) = n(C) = 3'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"120\" height=\"60\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"80\" y=\"45\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Set A</text><text x=\"80\" y=\"65\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\">{1, 2, 3}</text><rect x=\"360\" y=\"20\" width=\"120\" height=\"60\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"420\" y=\"45\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Set B</text><text x=\"420\" y=\"65\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\">{3, 1, 2}</text><path d=\"M 140 50 L 360 50\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"250\" y=\"40\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">EQUAL (A = B)</text><rect x=\"190\" y=\"120\" width=\"120\" height=\"60\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"145\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">Set C</text><text x=\"250\" y=\"165\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\">{x, y, z}</text><path d=\"M 80 80 L 80 150 L 190 150\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"130\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">EQUIVALENT</text><text x=\"130\" y=\"175\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#c2410c\">n(A) = n(C) = 3</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Identify the type of set: $A = \\{x \\in \\mathbb{Z} \\mid x > 5 \\text{ and } x < 5\\}$.",
+          "solution_steps": [
+            "Step 1: Read the condition. We need an integer that is strictly greater than 5 AND strictly less than 5 at the same time.",
+            "Step 2: No such integer exists.",
+            "Step 3: Therefore, the set contains no elements."
+          ],
+          "final_answer": "Empty Set ($\\varnothing$)"
+        },
+        {
+          "problem": "Given $A = \\{2, 4, 6, 8\\}$ and $B = \\{a, b, c, d\\}$, are sets A and B equal or equivalent?",
+          "solution_steps": [
+            "Step 1: Compare elements. They do not contain the same elements, so they are NOT equal.",
+            "Step 2: Check cardinality. $n(A) = 4$ elements. $n(B) = 4$ elements.",
+            "Step 3: Because $n(A) = n(B)$, they are equivalent."
+          ],
+          "final_answer": "Equivalent"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Writing the empty set as $\\{\\varnothing\\}$.",
+          "correction": "The empty set is written as just $\\varnothing$ or just $\\{\\}$. If you write $\\{\\varnothing\\}$, you have created a set that *contains* one element (the empty set itself), so it is a Singleton Set, not an Empty Set!"
+        }
+      ],
+      "quick_summary": [
+        "Empty Set = No elements.",
+        "Equal Sets = Exact same items inside.",
+        "Equivalent Sets = Same *number* of items inside."
+      ]
+    },
+    "hs_math_t02_st03": {
+      "id": "hs_math_t02_st03",
+      "title": "Subsets and power sets",
+      "overview": "A set can contain smaller collections of its own elements. If you take some (or all, or none) of the items from a set and bundle them together, you have created a Subset. The ultimate list of all possible subsets is called the Power Set.",
+      "key_concepts": [
+        {
+          "concept": "Subsets vs Proper Subsets",
+          "definition": "Parts of the whole.",
+          "details": [
+            "**Subset ($\\subseteq$):** Set A is a subset of Set B if every element in A is also in B. Every set is a subset of itself ($A \\subseteq A$).",
+            "**Proper Subset ($\\subsetneq$):** A subset that is NOT strictly equal to the original set. It must be missing at least one item from the original set."
+          ]
+        },
+        {
+          "concept": "The Empty Set Rule",
+          "definition": "The invisible subset.",
+          "details": [
+            "The Empty Set ($\\varnothing$) is considered a subset of EVERY set. Think of it as the option of 'choosing nothing'."
+          ]
+        },
+        {
+          "concept": "Power Sets and Combinatorics",
+          "definition": "The set of all sets.",
+          "details": [
+            "The **Power Set** $P(A)$ is a master set containing every possible subset of $A$.",
+            "For a finite set with $n$ elements, the total number of subsets is exactly $2^n$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Number of Subsets",
+          "equation": "$$ \\text{Total Subsets} = 2^n $$",
+          "variables": {
+            "n": "Number of elements in the finite set A"
+          }
+        },
+        {
+          "name": "Number of Proper Subsets",
+          "equation": "$$ \\text{Proper Subsets} = 2^n - 1 $$",
+          "variables": {
+            "n": "Number of elements in the finite set A; the empty set is included among proper subsets"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s03",
+          "title": "Constructing a Power Set",
+          "type": "svg",
+          "caption": "For set A = {1, 2}, there are 2² = 4 possible subsets.",
+          "alt_text": "Visual showing A = {1, 2}. Below it are 4 boxes representing subsets. Box 1: Empty Set { }. Box 2: {1}. Box 3: {2}. Box 4: {1, 2}. Arrows point from these to a large bracketed set labeled P(A).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"30\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A = {1, 2}</text><rect x=\"40\" y=\"60\" width=\"90\" height=\"40\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"2\" rx=\"5\"/><text x=\"85\" y=\"85\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#475569\">∅</text><text x=\"85\" y=\"115\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">Empty Set</text><rect x=\"150\" y=\"60\" width=\"90\" height=\"40\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"2\" rx=\"5\"/><text x=\"195\" y=\"85\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\">{1}</text><text x=\"195\" y=\"115\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">Singleton</text><rect x=\"260\" y=\"60\" width=\"90\" height=\"40\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"2\" rx=\"5\"/><text x=\"305\" y=\"85\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\">{2}</text><text x=\"305\" y=\"115\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">Singleton</text><rect x=\"370\" y=\"60\" width=\"90\" height=\"40\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"2\" rx=\"5\"/><text x=\"415\" y=\"85\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\">{1, 2}</text><text x=\"415\" y=\"115\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">The Set Itself</text><rect x=\"40\" y=\"150\" width=\"420\" height=\"30\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"170\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">P(A) = { ∅, {1}, {2}, {1, 2} }</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A set contains five elements. Find its total number of subsets and proper subsets.",
+          "solution_steps": [
+            "Step 1: The formula for total subsets is $2^n$, where $n=5$.",
+            "Step 2: $2^5 = 32$ total subsets.",
+            "Step 3: The formula for proper subsets is $2^n - 1$ (excluding the set itself).",
+            "Step 4: $32 - 1 = 31$ proper subsets."
+          ],
+          "final_answer": "Total: $32$, Proper: $31$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting the empty set when writing subsets.",
+          "correction": "The empty set $\\varnothing$ is universally a subset of every single set. It must always be included in the Power Set."
+        }
+      ],
+      "quick_summary": [
+        "A subset contains only elements from the original set.",
+        "The empty set is a subset of every set, and every set is a subset of itself.",
+        "For a finite set with n elements, the power set has $2^n$ subsets.",
+        "The number of proper subsets of a finite set is $2^n-1$."
+      ]
+    },
+    "hs_math_t02_st04": {
+      "id": "hs_math_t02_st04",
+      "title": "Union, intersection, difference and complement",
+      "overview": "Set operations allow us to combine groups of data, find commonalities between them, or exclude elements. These operations are the exact foundation for logic operators in computer programming (OR, AND, NOT).",
+      "key_concepts": [
+        {
+          "concept": "The Four Fundamental Set Operations",
+          "definition": "Combining, comparing and excluding elements.",
+          "details": [
+            "**Union ($A \\cup B$):** Elements in $A$ or $B$ or both. Each distinct element is included once.",
+            "**Intersection ($A \\cap B$):** Elements that belong to both $A$ and $B$.",
+            "**Set Difference ($A \\setminus B$):** Elements that belong to $A$ but not to $B$. In general, $A \\setminus B$ is not the same as $B \\setminus A$.",
+            "**Complement ($A'$):** Elements in the universal set $U$ that do not belong to $A$."
+          ]
+        },
+        {
+          "concept": "The Inclusion-Exclusion Principle",
+          "definition": "Don't double count.",
+          "details": [
+            "If you want to know how many total items are in $A \\cup B$, you cannot just add the counts of A and B together. Elements in the overlap (Intersection) would be counted twice!",
+            "You must add A and B, then SUBTRACT the intersection once to balance it out."
+          ]
+        },
+        {
+          "concept": "De Morgan's Laws",
+          "definition": "Flipping the operators.",
+          "details": [
+            "$(A \\cup B)' = A' \\cap B'$ (The complement of a union is the intersection of their complements).",
+            "$(A \\cap B)' = A' \\cup B'$ (The complement of an intersection is the union of their complements)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Inclusion-Exclusion Principle",
+          "equation": "$$ n(A \\cup B) = n(A) + n(B) - n(A \\cap B) $$",
+          "variables": {}
+        },
+        {
+          "name": "Set Difference",
+          "equation": "$$ A \\setminus B = A \\cap B' $$",
+          "variables": {
+            "B'": "The complement of B in the stated universal set"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s04",
+          "title": "The Four Set Operations",
+          "type": "svg",
+          "caption": "Union, intersection, difference and complement highlight different regions.",
+          "alt_text": "Four panels showing union A union B, intersection A intersect B, difference A minus B (A-only region), and complement A-prime outside set A in the universal set.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 280\">\n<rect width=\"500\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/>\n<g font-family=\"sans-serif\" text-anchor=\"middle\">\n  <g transform=\"translate(15,15)\">\n    <rect width=\"225\" height=\"110\" rx=\"8\" fill=\"#fff\" stroke=\"#94a3b8\"/>\n    <circle cx=\"95\" cy=\"52\" r=\"31\" fill=\"#93c5fd\" fill-opacity=\".95\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n    <circle cx=\"130\" cy=\"52\" r=\"31\" fill=\"#86efac\" fill-opacity=\".9\" stroke=\"#16a34a\" stroke-width=\"1.5\"/>\n    <text x=\"112\" y=\"101\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">Union  A ∪ B</text>\n  </g>\n  <g transform=\"translate(260,15)\">\n    <rect width=\"225\" height=\"110\" rx=\"8\" fill=\"#fff\" stroke=\"#94a3b8\"/>\n    <circle cx=\"95\" cy=\"52\" r=\"31\" fill=\"#fff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n    <circle cx=\"130\" cy=\"52\" r=\"31\" fill=\"#fff\" stroke=\"#16a34a\" stroke-width=\"1.5\"/>\n    <path d=\"M112.5 23.5 A31 31 0 0 0 112.5 80.5 A31 31 0 0 0 112.5 23.5 Z\" fill=\"#22c55e\"/>\n    <text x=\"112\" y=\"101\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\">Intersection  A ∩ B</text>\n  </g>\n  <g transform=\"translate(15,150)\">\n    <rect width=\"225\" height=\"110\" rx=\"8\" fill=\"#fff\" stroke=\"#94a3b8\"/>\n    <circle cx=\"95\" cy=\"52\" r=\"31\" fill=\"#93c5fd\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n    <circle cx=\"130\" cy=\"52\" r=\"31\" fill=\"#fff\" stroke=\"#16a34a\" stroke-width=\"1.5\"/>\n    <text x=\"112\" y=\"101\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">Difference  A \\ B</text>\n  </g>\n  <g transform=\"translate(260,150)\">\n    <rect width=\"225\" height=\"110\" rx=\"8\" fill=\"#fee2e2\" stroke=\"#94a3b8\"/>\n    <circle cx=\"112\" cy=\"52\" r=\"31\" fill=\"#fff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n    <text x=\"112\" y=\"101\" font-size=\"13\" font-weight=\"bold\" fill=\"#991b1b\">Complement  A′</text>\n  </g>\n</g>\n<text x=\"250\" y=\"275\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">A′ is taken relative to the stated universal set U.</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $A = \\{1, 2, 3, 4, 5\\}$ and $B = \\{4, 5, 6, 7, 8\\}$, find $A \\cup B$, $A \\cap B$, $A \\setminus B$ and $B \\setminus A$.",
+          "solution_steps": [
+            "Step 1: For the union, list every distinct element in either set: $\\{1,2,3,4,5,6,7,8\\}$.",
+            "Step 2: For the intersection, keep only the elements in both sets: $\\{4,5\\}$.",
+            "Step 3: For $A \\setminus B$, keep elements in A that are not in B: $\\{1,2,3\\}$.",
+            "Step 4: For $B \\setminus A$, keep elements in B that are not in A: $\\{6,7,8\\}$."
+          ],
+          "final_answer": "$A \\cup B = \\{1,2,3,4,5,6,7,8\\}$; $A \\cap B = \\{4,5\\}$; $A \\setminus B = \\{1,2,3\\}$; $B \\setminus A = \\{6,7,8\\}$."
+        },
+        {
+          "problem": "In a group of 60 people, 35 like reading, 30 like music, and 15 like both. How many like at least one of these activities?",
+          "solution_steps": [
+            "Step 1: Use the Inclusion-Exclusion formula: $n(A \\cup B) = n(A) + n(B) - n(A \\cap B)$.",
+            "Step 2: Substitute the values: $n(A \\cup B) = 35 + 30 - 15$.",
+            "Step 3: Calculate: $65 - 15 = 50$."
+          ],
+          "final_answer": "$50$ people"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding elements twice in a Union.",
+          "correction": "If $3$ is in Set A and Set B, you only write it ONCE in the Union set. A set cannot contain duplicate items."
+        },
+        {
+          "mistake": "Confusing the Union symbol ($\\cup$) with the Intersection symbol ($\\cap$).",
+          "correction": "Remember: $\\cup$ looks like a 'U' for Union. $\\cap$ looks like an 'n' for iNtersection."
+        }
+      ],
+      "quick_summary": [
+        "Union ($\\cup$) contains elements in either set or both.",
+        "Intersection ($\\cap$) contains elements common to both sets.",
+        "Difference ($A \\setminus B$) contains elements in A but not B; order matters.",
+        "Complement ($A'$) contains the elements of the universal set that are not in A.",
+        "For finite sets, $n(A \\cup B)=n(A)+n(B)-n(A \\cap B)$."
+      ]
+    },
+    "hs_math_t02_st05": {
+      "id": "hs_math_t02_st05",
+      "title": "Venn diagrams",
+      "overview": "A Venn diagram is a powerful visual tool for mapping out sets and their relationships. By representing the Universal Set as a rectangle and individual sets as overlapping circles, we can instantly see how groups of data interact.",
+      "key_concepts": [
+        {
+          "concept": "The Standard Regions",
+          "definition": "What the shapes mean.",
+          "details": [
+            "**Rectangle:** The Universal Set ($U$). Everything being considered lives inside this box.",
+            "**Circles:** The individual sets (Set $A$, Set $B$).",
+            "**Overlap:** The Intersection ($A \\cap B$). Elements shared by both sets.",
+            "**Outside the circles:** The Complement ($(A \\cup B)'$). Elements belonging to neither set."
+          ]
+        },
+        {
+          "concept": "Three-Set Venn Diagrams",
+          "definition": "Handling complex overlap.",
+          "details": [
+            "Three overlapping circles create $8$ distinct regions. The very center is the **Triple Intersection** ($A \\cap B \\cap C$), representing elements that belong to all three sets.",
+            "When filling out a 3-set Venn diagram, **always start from the center** and work your way outwards."
+          ]
+        },
+        {
+          "concept": "Inclusion-Exclusion Principle",
+          "definition": "Counting carefully.",
+          "details": [
+            "For two sets: $n(A \\cup B) = n(A) + n(B) - n(A \\cap B)$.",
+            "For three sets: $n(A \\cup B \\cup C) = n(A) + n(B) + n(C) - n(A \\cap B) - n(A \\cap C) - n(B \\cap C) + n(A \\cap B \\cap C)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "3-Set Inclusion-Exclusion",
+          "equation": "$$ n(A \\cup B \\cup C) = n(A) + n(B) + n(C) - n(A \\cap B) - n(A \\cap C) - n(B \\cap C) + n(A \\cap B \\cap C) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s05",
+          "title": "Anatomy of a Two-Set Venn Diagram",
+          "type": "svg",
+          "caption": "The four distinct regions of a standard Venn diagram.",
+          "alt_text": "Visual showing a rectangle labeled U. Two overlapping circles inside, labeled A and B. Region 1 (A only) is shaded light blue. Region 2 (Overlap/Intersection) is shaded dark blue. Region 3 (B only) is shaded light green. Region 4 (Outside/Neither) is white.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"30\" width=\"400\" height=\"190\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"3\"/><text x=\"70\" y=\"55\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#334155\" font-weight=\"bold\">U</text><circle cx=\"200\" cy=\"130\" r=\"70\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" opacity=\"0.8\"/><circle cx=\"300\" cy=\"130\" r=\"70\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" opacity=\"0.8\"/><path d=\"M 250 70 A 70 70 0 0 0 250 190 A 70 70 0 0 0 250 70 Z\" fill=\"#1e3a8a\"/><text x=\"160\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">A Only</text><text x=\"250\" y=\"135\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">A ∩ B</text><text x=\"340\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">B Only</text><text x=\"130\" y=\"55\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">A</text><text x=\"370\" y=\"55\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">B</text><text x=\"250\" y=\"212\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"bold\">Neither: (A ∪ B)′</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "In a group of $40$ learners, $24$ study math, $18$ study science, and $10$ study both. How many study only math? How many study neither?",
+          "solution_steps": [
+            "Step 1: Start with the intersection. The overlap is $10$.",
+            "Step 2: Math only = Total Math - Overlap = $24 - 10 = 14$ learners.",
+            "Step 3: Science only = Total Science - Overlap = $18 - 10 = 8$ learners.",
+            "Step 4: Total in the circles = Math Only + Science Only + Both = $14 + 8 + 10 = 32$.",
+            "Step 5: Neither = Total Learners - Total in circles = $40 - 32 = 8$ learners."
+          ],
+          "final_answer": "Math only: $14$. Neither: $8$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the total set size as the 'A only' region.",
+          "correction": "If a problem states '24 study math', do NOT put 24 in the outer crescent of circle A. The number 24 applies to the ENTIRE circle A (including the overlap). You must subtract the intersection to find the 'Math only' region."
+        }
+      ],
+      "quick_summary": [
+        "Venn diagrams visually sort data into distinct, non-overlapping regions.",
+        "Always fill a Venn diagram from the inside out (start at the intersection).",
+        "Subtract the overlaps to find the 'only' regions."
+      ]
+    },
+    "hs_math_t02_st06": {
+      "id": "hs_math_t02_st06",
+      "title": "Cartesian products",
+      "overview": "If you have a set of shirts and a set of pants, how do you list every possible outfit mathematically? A Cartesian Product is an operation that pairs every element from one set with every element from another set to create 'Ordered Pairs'.",
+      "key_concepts": [
+        {
+          "concept": "Ordered Pairs $(a, b)$",
+          "definition": "Order matters.",
+          "details": [
+            "An ordered pair combines two elements. The first element comes from the first set, the second from the second set.",
+            "Because order matters, $(2, 5)$ is entirely different from $(5, 2)$. They are only equal if both corresponding parts are equal."
+          ]
+        },
+        {
+          "concept": "The Cartesian Product ($A \\times B$)",
+          "definition": "The master pairing.",
+          "details": [
+            "The Cartesian Product $A \\times B$ is the set of all possible ordered pairs $(a, b)$ where $a \\in A$ and $b \\in B$.",
+            "Example: If $A = \\{1, 2\\}$ and $B = \\{x, y\\}$, then $A \\times B = \\{(1,x), (1,y), (2,x), (2,y)\\}."
+          ]
+        },
+        {
+          "concept": "Cardinality Rule",
+          "definition": "Counting the pairs.",
+          "details": [
+            "To find how many pairs will be in the final product, multiply the sizes of the two sets.",
+            "For finite sets A and B, the number of ordered pairs in the Cartesian product is $n(A \\times B) = n(A) \\times n(B)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Cartesian Cardinality",
+          "equation": "$$ n(A \\times B) = n(A) \\times n(B) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s06",
+          "title": "Mapping the Cartesian Product",
+          "type": "svg",
+          "caption": "Every element in Set A branches out to every element in Set B.",
+          "alt_text": "Visual showing a branching mapping diagram. Set A has elements 1 and 2. Set B has elements x and y. Arrows point from 1 to x, 1 to y, 2 to x, 2 to y. The results are listed as (1,x), (1,y), (2,x), (2,y).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"30\" width=\"60\" height=\"140\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"10\"/><text x=\"80\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Set A</text><circle cx=\"80\" cy=\"90\" r=\"15\" fill=\"#ffffff\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"80\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">1</text><circle cx=\"80\" cy=\"140\" r=\"15\" fill=\"#ffffff\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"80\" y=\"145\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">2</text><rect x=\"200\" y=\"30\" width=\"60\" height=\"140\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"230\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Set B</text><circle cx=\"230\" cy=\"90\" r=\"15\" fill=\"#ffffff\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"230\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">x</text><circle cx=\"230\" cy=\"140\" r=\"15\" fill=\"#ffffff\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"230\" y=\"145\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">y</text><path d=\"M 95 90 L 215 90\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"215,90 205,85 205,95\" fill=\"#94a3b8\"/><path d=\"M 95 90 L 215 140\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"215,140 205,135 210,145\" fill=\"#94a3b8\" transform=\"rotate(30 215 140)\"/><path d=\"M 95 140 L 215 90\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"215,90 205,95 210,85\" fill=\"#94a3b8\" transform=\"rotate(-30 215 90)\"/><path d=\"M 95 140 L 215 140\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"215,140 205,135 205,145\" fill=\"#94a3b8\"/><rect x=\"330\" y=\"30\" width=\"140\" height=\"140\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"400\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A × B</text><text x=\"400\" y=\"80\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\">(1, x)</text><text x=\"400\" y=\"105\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\">(1, y)</text><text x=\"400\" y=\"130\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\">(2, x)</text><text x=\"400\" y=\"155\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\">(2, y)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $A = \\{2, 4\\}$ and $B = \\{p, q, r\\}$, find the Cartesian product $A \\times B$.",
+          "solution_steps": [
+            "Step 1: Pair the first element of A ($2$) with every element of B: $(2, p), (2, q), (2, r)$.",
+            "Step 2: Pair the second element of A ($4$) with every element of B: $(4, p), (4, q), (4, r)$.",
+            "Step 3: Combine them all into a set using curly brackets."
+          ],
+          "final_answer": "$A \\times B = \\{(2, p), (2, q), (2, r), (4, p), (4, q), (4, r)\\}$"
+        },
+        {
+          "problem": "Find $x$ and $y$ if the ordered pairs $(x+2, 5)$ and $(7, y-3)$ are equal.",
+          "solution_steps": [
+            "Step 1: Since ordered pairs are equal, their corresponding components must match exactly.",
+            "Step 2: First components: $x + 2 = 7 \\implies x = 5$.",
+            "Step 3: Second components: $5 = y - 3 \\implies y = 8$."
+          ],
+          "final_answer": "$x = 5, y = 8$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming $A \\times B = B \\times A$.",
+          "correction": "Cartesian products are NOT commutative! Because order matters in an ordered pair, $(1, x)$ is not the same thing as $(x, 1)$."
+        }
+      ],
+      "quick_summary": [
+        "A Cartesian Product ($A \\times B$) pairs every item from A with every item from B.",
+        "The results are written as Ordered Pairs $(a,b)$.",
+        "The number of pairs created is the sizes of the two sets multiplied together."
+      ]
+    },
+    "hs_math_t02_st07": {
+      "id": "hs_math_t02_st07",
+      "title": "Relations and ordered pairs",
+      "overview": "A Cartesian Product pairs *everything* together. A Relation is a more specific rule that selects only a *subset* of those pairs. Relations are the stepping stone to understanding functions and coordinate graphs.",
+      "key_concepts": [
+        {
+          "concept": "Defining a Relation",
+          "definition": "The connection rule.",
+          "details": [
+            "A Relation $R$ from set $A$ to set $B$ is ANY subset of the Cartesian product $A \\times B$.",
+            "Example: If $A = \\{1, 2, 3\\}$ and $B = \\{2, 4, 6\\}$, the relation '$y$ is double $x$' creates the pairs $R = \\{(1, 2), (2, 4), (3, 6)\\}$."
+          ]
+        },
+        {
+          "concept": "Mapping Classifications",
+          "definition": "How lines cross.",
+          "details": [
+            "**One-to-One:** Unique input leads to unique output.",
+            "**One-to-Many:** One input splits into multiple outputs (e.g., $(1,a)$ and $(1,b)$).",
+            "**Many-to-One:** Multiple inputs funnel into a single output.",
+            "**Many-to-Many:** A complex, overlapping web of inputs and outputs."
+          ]
+        },
+        {
+          "concept": "A Relation Is Not Necessarily a Function",
+          "definition": "A relation has fewer restrictions than a function.",
+          "details": [
+            "A general relation may pair one element of the first set with more than one element of the second set.",
+            "A relation may also leave an element of the first set without a partner.",
+            "A function is a special kind of relation in which every element of the domain has exactly one output."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s07",
+          "title": "A Relation as a Set of Ordered Pairs",
+          "type": "svg",
+          "caption": "Each arrow represents one ordered pair in the relation R.",
+          "alt_text": "Mapping diagram from A = {1, 2, 3} to B = {2, 4, 6} with arrows 1 to 2, 2 to 4 and 3 to 6. The relation is a subset of A times B.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 230\">\n<rect width=\"500\" height=\"230\" rx=\"12\" fill=\"#f8fafc\"/>\n<g font-family=\"sans-serif\">\n  <text x=\"100\" y=\"28\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e3a8a\">Set A</text>\n  <text x=\"390\" y=\"28\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#14532d\">Set B</text>\n  <rect x=\"55\" y=\"42\" width=\"90\" height=\"150\" rx=\"12\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n  <rect x=\"355\" y=\"42\" width=\"90\" height=\"150\" rx=\"12\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n  <g fill=\"#fff\" stroke=\"#2563eb\" stroke-width=\"2\">\n    <circle cx=\"100\" cy=\"75\" r=\"15\"/><circle cx=\"100\" cy=\"117\" r=\"15\"/><circle cx=\"100\" cy=\"159\" r=\"15\"/>\n  </g>\n  <g fill=\"#fff\" stroke=\"#16a34a\" stroke-width=\"2\">\n    <circle cx=\"400\" cy=\"75\" r=\"15\"/><circle cx=\"400\" cy=\"117\" r=\"15\"/><circle cx=\"400\" cy=\"159\" r=\"15\"/>\n  </g>\n  <g text-anchor=\"middle\" font-size=\"14\" fill=\"#0f172a\">\n    <text x=\"100\" y=\"80\">1</text><text x=\"100\" y=\"122\">2</text><text x=\"100\" y=\"164\">3</text>\n    <text x=\"400\" y=\"80\">2</text><text x=\"400\" y=\"122\">4</text><text x=\"400\" y=\"164\">6</text>\n  </g>\n  <g fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\">\n    <path d=\"M116 75 L384 75\"/><path d=\"M116 117 L384 117\"/><path d=\"M116 159 L384 159\"/>\n  </g>\n  <g fill=\"#64748b\">\n    <path d=\"M384 75 l-9 -5 v10 z\"/><path d=\"M384 117 l-9 -5 v10 z\"/><path d=\"M384 159 l-9 -5 v10 z\"/>\n  </g>\n  <text x=\"250\" y=\"213\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#334155\">R = {(1, 2), (2, 4), (3, 6)} ⊆ A × B</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Let $A=\\{1,2,3\\}$ and $B=\\{2,4,6\\}$. The relation is $R=\\{(1,2),(2,4),(3,6)\\}$. Explain why $R$ is a relation from A to B.",
+          "solution_steps": [
+            "Step 1: A relation from A to B must be a subset of the Cartesian product $A \\times B$.",
+            "Step 2: Each ordered pair in R has its first component in A and its second component in B.",
+            "Step 3: Therefore, every pair in R belongs to $A \\times B$, so $R \\subseteq A \\times B$."
+          ],
+          "final_answer": "$R$ is a relation from A to B because $R \\subseteq A \\times B$."
+        },
+        {
+          "problem": "Identify the mapping type of the relation $R = \\{(1, 3), (2, 3), (3, 3)\\}$.",
+          "solution_steps": [
+            "Step 1: Look at the inputs (first components): $1, 2, 3$.",
+            "Step 2: Look at the outputs (second components): $3, 3, 3$.",
+            "Step 3: Multiple different inputs all funneled into the exact same output. This is a Many-to-One relation."
+          ],
+          "final_answer": "Many-to-One"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming every relation is a function.",
+          "correction": "A relation may assign more than one output to an input, or may leave a domain element without an output. A function must assign exactly one output to every element of its domain."
+        }
+      ],
+      "quick_summary": [
+        "A relation from A to B is any subset of $A \\times B$.",
+        "A relation is a set of ordered pairs.",
+        "Relations may be one-to-one, one-to-many, many-to-one or many-to-many.",
+        "A function is a special relation with exactly one output for every domain input."
+      ]
+    },
+    "hs_math_t02_st09": {
+      "id": "hs_math_t02_st09",
+      "title": "Definition of a function",
+      "overview": "A function is the most important type of relation in mathematics. You can think of it as a highly reliable machine: if you put a specific input into the machine, it must give you exactly one predictable output every single time.",
+      "key_concepts": [
+        {
+          "concept": "The Strict Rule",
+          "definition": "One output per input.",
+          "details": [
+            "A relation from a domain A to a codomain B is a function if **every element of A has exactly one output in B**.",
+            "An input cannot be left without an output, and one input cannot be assigned two different outputs."
+          ]
+        },
+        {
+          "concept": "Many-to-One is Okay",
+          "definition": "Sharing outputs.",
+          "details": [
+            "It is perfectly fine for two *different* inputs to result in the *same* output. For example, in $f(x) = x^2$, both $2$ and $-2$ give the output $4$. This is a 'Many-to-One' function, and it is entirely valid."
+          ]
+        },
+        {
+          "concept": "The Vertical Line Test",
+          "definition": "The graphical check.",
+          "details": [
+            "If you look at a graph, you can instantly tell if it is a function. If you can draw a perfectly straight vertical line anywhere on the graph and it hits the line more than once, it is NOT a function (because one $x$ input has multiple $y$ outputs)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Function Mapping",
+          "equation": "$$ f: A \\rightarrow B $$",
+          "variables": {
+            "A": "The domain (input set)",
+            "B": "The codomain (target set)"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s09",
+          "title": "The Vertical Line Test",
+          "type": "svg",
+          "caption": "A parabola passes the test. A circle fails it.",
+          "alt_text": "Visual showing two graphs. Left graph shows a U-shaped parabola. A vertical dashed line drops through it, hitting it exactly once. Text: 'PASSES (Function)'. Right graph shows a circle. A vertical dashed line drops through it, hitting it twice (top and bottom). Text: 'FAILS (Not a Function)'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"250\" y1=\"20\" x2=\"250\" y2=\"180\" stroke=\"#cbd5e1\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><g transform=\"translate(50, 0)\"><line x1=\"20\" y1=\"100\" x2=\"180\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"180\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 40 40 Q 100 180 160 40\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><line x1=\"130\" y1=\"20\" x2=\"130\" y2=\"180\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><circle cx=\"130\" cy=\"89\" r=\"5\" fill=\"#dc2626\"/><text x=\"100\" y=\"190\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">PASSES (Function)</text></g><g transform=\"translate(300, 0)\"><line x1=\"20\" y1=\"100\" x2=\"180\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"180\" stroke=\"#94a3b8\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"100\" r=\"50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><line x1=\"130\" y1=\"20\" x2=\"130\" y2=\"180\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><circle cx=\"130\" cy=\"60\" r=\"5\" fill=\"#dc2626\"/><circle cx=\"130\" cy=\"140\" r=\"5\" fill=\"#dc2626\"/><text x=\"100\" y=\"190\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">FAILS (Not a Function)</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Let $A=\\{1,2,3,4\\}$ and $B=\\{4,5,6,7\\}$. Determine whether $R=\\{(1,4),(2,5),(3,6),(4,7)\\}$ defines a function from A to B.",
+          "solution_steps": [
+            "Step 1: Check every element of the domain A: $1,2,3,4$.",
+            "Step 2: Each domain element appears exactly once as a first component in R.",
+            "Step 3: Each of these inputs is paired with one output in B."
+          ],
+          "final_answer": "Yes. R defines a function from A to B."
+        },
+        {
+          "problem": "Let $A=\\{1,2\\}$ and $B=\\{2,4,5\\}$. Determine whether $R=\\{(1,2),(1,4),(2,5)\\}$ defines a function from A to B.",
+          "solution_steps": [
+            "Step 1: Check the inputs in the domain A: $1$ and $2$.",
+            "Step 2: The input $1$ is paired with two different outputs, $2$ and $4$.",
+            "Step 3: A function cannot assign two different outputs to the same input."
+          ],
+          "final_answer": "No. R is not a function from A to B."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking 'Many-to-One' means it is not a function.",
+          "correction": "If $x=2$ gives $y=4$ and $x=-2$ gives $y=4$, that is perfectly fine. Multiple inputs can go to the same output. It's only broken if ONE input goes to MULTIPLE outputs (One-to-Many)."
+        }
+      ],
+      "quick_summary": [
+        "A function $f:A\\to B$ assigns exactly one output in B to every input in A.",
+        "Different inputs may share the same output (many-to-one is allowed).",
+        "One input cannot have two different outputs.",
+        "The vertical line test checks whether a graph represents y as a function of x."
+      ]
+    },
+    "hs_math_t02_st08": {
+      "id": "hs_math_t02_st08",
+      "title": "Domain, codomain and range",
+      "overview": "To fully understand a function, you must know what numbers you are allowed to put in, what numbers it is theoretically supposed to spit out, and what numbers it *actually* spits out. These are the Domain, Codomain, and Range.",
+      "key_concepts": [
+        {
+          "concept": "The Definitions",
+          "definition": "Inputs and Outputs.",
+          "details": [
+            "**Domain:** The set of all permitted Input values ($x$).",
+            "**Codomain:** The target set specified as part of the function definition. It is not determined by the formula alone.",
+            "**Range:** The set of actual Output values ($y$) that the function physically produces."
+          ]
+        },
+        {
+          "concept": "Domain Restrictions in Algebra",
+          "definition": "Mathematical red flags.",
+          "details": [
+            "The natural domain is the set of real inputs for which the given rule is defined, unless a different domain is stated.",
+            "1. **Fractions:** Every denominator expression must be non-zero. For example, $\\frac{1}{2x+6}$ requires $2x+6 \\ne 0$.",
+            "2. **Even roots:** The radicand of a real even root must be non-negative, for example $\\sqrt{x-3}$ requires $x-3 \\ge 0$.",
+            "3. **Logarithms:** The argument of a real logarithm must be strictly positive."
+          ]
+        },
+        {
+          "concept": "Visualizing from a Graph",
+          "definition": "Shadows on the axes.",
+          "details": [
+            "The **Domain** is the 'shadow' the graph casts on the horizontal $x$-axis.",
+            "The **Range** is the 'shadow' the graph casts on the vertical $y$-axis."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s08",
+          "title": "Codomain vs. Range",
+          "type": "svg",
+          "caption": "The Range is always a subset of the Codomain. It is only the values actually hit by the inputs.",
+          "alt_text": "Visual showing two ovals representing sets. Left oval is 'Domain' containing inputs 1, 2, 3. Right oval is 'Codomain' containing 2, 4, 6, 8. Arrows point from 1->2, 2->4, 3->6. A dotted green circle loops around 2, 4, 6, labeled 'Range'. The number 8 is in the Codomain but outside the Range.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><ellipse cx=\"120\" cy=\"110\" rx=\"50\" ry=\"70\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"120\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Domain</text><text x=\"120\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">1</text><text x=\"120\" y=\"115\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">2</text><text x=\"120\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">3</text><ellipse cx=\"380\" cy=\"110\" rx=\"50\" ry=\"70\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"380\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#334155\" font-weight=\"bold\">Codomain</text><ellipse cx=\"380\" cy=\"100\" rx=\"35\" ry=\"45\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"380\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">2</text><text x=\"380\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">4</text><text x=\"380\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">6</text><text x=\"380\" y=\"170\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#94a3b8\">8</text><text x=\"450\" y=\"100\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\">Range</text><path d=\"M 450 105 L 415 105\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><polygon points=\"415,105 420,100 420,110\" fill=\"#16a34a\"/><path d=\"M 140 65 L 350 65\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"350,65 340,60 340,70\" fill=\"#94a3b8\"/><path d=\"M 140 110 L 350 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"350,100 340,95 340,105\" fill=\"#94a3b8\" transform=\"rotate(-3 350 100)\"/><path d=\"M 140 155 L 350 135\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"350,135 340,130 340,140\" fill=\"#94a3b8\" transform=\"rotate(-5 350 135)\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the natural domain of $f(x) = \\frac{3}{2x + 6}$.",
+          "solution_steps": [
+            "Step 1: Check for restrictions. It is a fraction, so the denominator cannot equal $0$.",
+            "Step 2: Set the denominator equal to $0$ to find the illegal number: $2x + 6 = 0$.",
+            "Step 3: Solve for $x$: $2x = -6 \\implies x = -3$.",
+            "Step 4: The domain is all real numbers EXCEPT $-3$."
+          ],
+          "final_answer": "$\\mathbb{R} \\setminus \\{-3\\}$"
+        },
+        {
+          "problem": "Find the natural domain and range of $f(x) = x^2 + 4$.",
+          "solution_steps": [
+            "Step 1: There are no denominator or root restrictions, so every real number is allowed as an input. Domain = $\\mathbb{R}$.",
+            "Step 2: To find the range, remember that $x^2$ is ALWAYS $\\ge 0$.",
+            "Step 3: Therefore, the lowest possible value of $x^2 + 4$ is $0 + 4 = 4$.",
+            "Step 4: The outputs are all real numbers greater than or equal to 4. If the codomain is specified as $\\mathbb{R}$, the range is $[4,\\infty)$."
+          ],
+          "final_answer": "Domain: $\\mathbb{R}$, Range: $[4, \\infty)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing Codomain and Range.",
+          "correction": "The codomain is the target set stated in the function definition. The range contains only the outputs actually produced. For $f:\\mathbb{R}\\to\\mathbb{R}$ defined by $f(x)=x^2$, the codomain is $\\mathbb{R}$ but the range is $[0,\\infty)$."
+        }
+      ],
+      "quick_summary": [
+        "Domain = Inputs (x). Range = Actual Outputs (y).",
+        "Denominators $\\neq 0$. Square Roots $\\ge 0$.",
+        "Range is always a subset of the Codomain."
+      ]
+    },
+    "hs_math_t02_st10": {
+      "id": "hs_math_t02_st10",
+      "title": "Types of functions",
+      "overview": "Not all functions behave the same way. By looking at how the Domain (inputs) maps to the Codomain (targets), we can classify functions into specific categories that tell us about their mathematical structure and reversibility.",
+      "key_concepts": [
+        {
+          "concept": "Injective (One-to-One)",
+          "definition": "No sharing allowed.",
+          "details": [
+            "A function is **injective (one-to-one)** if different inputs always produce different outputs.",
+            "Equivalently, if $f(a)=f(b)$, then $a=b$.",
+            "An element of the codomain may remain unused; each element in the range has exactly one preimage.",
+            "Example: $f(x)=2x+1$ is injective when its domain is $\\mathbb{R}$."
+          ]
+        },
+        {
+          "concept": "Surjective (Onto)",
+          "definition": "No target left behind.",
+          "details": [
+            "Every single element in the Codomain is actually hit by an input. The Range is perfectly equal to the Codomain.",
+            "If the target is 'All Real Numbers', the function must be capable of producing every single real number."
+          ]
+        },
+        {
+          "concept": "Bijective",
+          "definition": "The perfect pair.",
+          "details": [
+            "A function is **bijective** if it is both injective (one-to-one) and surjective (onto).",
+            "For a specified function $f:A\\to B$, bijectivity means every element of B is reached by exactly one element of A.",
+            "A function has an inverse $f^{-1}:B\\to A$ precisely when it is bijective."
+          ]
+        },
+        {
+          "concept": "Constant and Identity Functions",
+          "definition": "Special behaviors.",
+          "details": [
+            "**Constant:** $f(x) = 5$. No matter what you put in, you get $5$. (A flat horizontal line).",
+            "**Identity:** $f(x) = x$. Whatever you put in, you get back exactly the same thing. (A diagonal line through the origin)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s10",
+          "title": "Function Mappings: Injective, Surjective, Bijective",
+          "type": "svg",
+          "caption": "How inputs (dots) connect to targets (squares).",
+          "alt_text": "Visual showing 3 mapping diagrams. 1) Injective: 3 dots go to 3 separate squares, but one square is left empty (Not onto). 2) Surjective: 3 dots go to 2 squares. One square gets hit twice (Not one-to-one), but all squares are hit. 3) Bijective: 3 dots go to exactly 3 squares. Perfect 1-to-1 matching.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(20, 40)\"><circle cx=\"30\" cy=\"20\" r=\"5\" fill=\"#3b82f6\"/><circle cx=\"30\" cy=\"60\" r=\"5\" fill=\"#3b82f6\"/><circle cx=\"30\" cy=\"100\" r=\"5\" fill=\"#3b82f6\"/><rect x=\"80\" y=\"15\" width=\"10\" height=\"10\" fill=\"#22c55e\"/><rect x=\"80\" y=\"42\" width=\"10\" height=\"10\" fill=\"#22c55e\"/><rect x=\"80\" y=\"68\" width=\"10\" height=\"10\" fill=\"#22c55e\"/><rect x=\"80\" y=\"95\" width=\"10\" height=\"10\" fill=\"#f1f5f9\" stroke=\"#22c55e\" stroke-width=\"2\"/><path d=\"M 35 20 L 75 20\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 35 60 L 75 47\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 35 100 L 75 73\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"60\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Injective</text><text x=\"60\" y=\"155\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">(1-to-1, not Onto)</text></g><g transform=\"translate(180, 40)\"><circle cx=\"30\" cy=\"20\" r=\"5\" fill=\"#3b82f6\"/><circle cx=\"30\" cy=\"60\" r=\"5\" fill=\"#3b82f6\"/><circle cx=\"30\" cy=\"100\" r=\"5\" fill=\"#3b82f6\"/><rect x=\"80\" y=\"35\" width=\"10\" height=\"10\" fill=\"#22c55e\"/><rect x=\"80\" y=\"80\" width=\"10\" height=\"10\" fill=\"#22c55e\"/><path d=\"M 35 20 L 75 40\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 35 60 L 75 40\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 35 100 L 75 85\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"60\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Surjective</text><text x=\"60\" y=\"155\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">(Onto, not 1-to-1)</text></g><g transform=\"translate(340, 40)\"><circle cx=\"30\" cy=\"20\" r=\"5\" fill=\"#3b82f6\"/><circle cx=\"30\" cy=\"60\" r=\"5\" fill=\"#3b82f6\"/><circle cx=\"30\" cy=\"100\" r=\"5\" fill=\"#3b82f6\"/><rect x=\"80\" y=\"15\" width=\"10\" height=\"10\" fill=\"#22c55e\"/><rect x=\"80\" y=\"55\" width=\"10\" height=\"10\" fill=\"#22c55e\"/><rect x=\"80\" y=\"95\" width=\"10\" height=\"10\" fill=\"#22c55e\"/><path d=\"M 35 20 L 75 20\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 35 60 L 75 60\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 35 100 L 75 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"60\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Bijective</text><text x=\"60\" y=\"155\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">(1-to-1 AND Onto)</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify the function $f: \\mathbb{R} \\rightarrow \\mathbb{R}$, defined by $f(x) = x^2$.",
+          "solution_steps": [
+            "Step 1: Check Injective (One-to-One). Does every input give a unique output? No. $f(2) = 4$ and $f(-2) = 4$. It is Many-to-One.",
+            "Step 2: Check surjectivity (onto). The codomain is $\\mathbb{R}$, but $x^2$ produces only non-negative values. Its range is $[0,\\infty)$, which is not all of $\\mathbb{R}$. Therefore, it is into, not onto.",
+            "Step 3: It is Many-to-One and Into."
+          ],
+          "final_answer": "Many-to-One and Into"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the vertical line test to check for Injective (One-to-One).",
+          "correction": "The vertical line test checks if a graph is a *function* at all. To check if a function is *One-to-One*, you must use the **Horizontal Line Test**. If a horizontal line hits the graph twice, it is Many-to-One."
+        }
+      ],
+      "quick_summary": [
+        "Injective = One-to-One (Passes horizontal line test).",
+        "Surjective = Onto (Range hits every single thing in the Codomain).",
+        "Bijective = Both. (Has a perfect inverse function)."
+      ]
+    },
+    "hs_math_t02_st11": {
+      "id": "hs_math_t02_st11",
+      "title": "Function notation and evaluation",
+      "overview": "Function notation is the mathematical way of labeling our equations. Instead of just writing $y = 2x + 3$, we write $f(x) = 2x + 3$. This explicitly tells us that the rule is called '$f$', and the input variable it takes is '$x$'.",
+      "key_concepts": [
+        {
+          "concept": "Evaluating $f(x)$",
+          "definition": "Plugging in the input.",
+          "details": [
+            "If $f(x) = 4x + 7$, finding $f(3)$ means you simply replace every '$x$' in the formula with the number $3$.",
+            "$f(3) = 4(3) + 7 = 12 + 7 = 19$."
+          ]
+        },
+        {
+          "concept": "Negative Inputs",
+          "definition": "The bracket rule.",
+          "details": [
+            "When plugging in a negative number, ALWAYS wrap it in brackets to avoid sign errors.",
+            "If $f(x) = x^2$ and you need $f(-2)$, write $(-2)^2 = 4$. If you just write $-2^2$, a calculator will read it as $-(2^2) = -4$, which is wrong!"
+          ]
+        },
+        {
+          "concept": "Algebraic Inputs",
+          "definition": "Functions within functions.",
+          "details": [
+            "You can plug entire algebraic expressions into a function.",
+            "If $f(x) = x^2$ and you want $f(a+1)$, you plug the whole group in: $(a+1)^2$. Then you must expand it properly: $a^2 + 2a + 1$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s11",
+          "title": "The Function Machine",
+          "type": "svg",
+          "caption": "f(x) is not multiplication. It is the label on the factory machine.",
+          "alt_text": "Visual showing a factory machine box labeled 'f(x) = 2x + 5'. An arrow points in on the left labeled 'Input: x = 3'. Inside the machine, text reads '2(3) + 5'. An arrow points out on the right labeled 'Output: f(3) = 11'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 100 100 L 160 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><polygon points=\"160,100 150,90 150,110\" fill=\"#3b82f6\"/><text x=\"80\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Input</text><text x=\"80\" y=\"110\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">x = 3</text><rect x=\"170\" y=\"50\" width=\"160\" height=\"100\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"3\" rx=\"10\"/><text x=\"250\" y=\"80\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">f(x) = 2x + 5</text><line x1=\"180\" y1=\"95\" x2=\"320\" y2=\"95\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"250\" y=\"120\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">2(3) + 5</text><path d=\"M 340 100 L 400 100\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"4\"/><polygon points=\"400,100 390,90 390,110\" fill=\"#22c55e\"/><text x=\"430\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Output</text><text x=\"430\" y=\"110\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">f(3) = 11</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $g(x) = x^2 - 5x + 6$, find $g(2)$.",
+          "solution_steps": [
+            "Step 1: Replace every $x$ in the equation with $2$.",
+            "Step 2: $g(2) = (2)^2 - 5(2) + 6$.",
+            "Step 3: $g(2) = 4 - 10 + 6$.",
+            "Step 4: $g(2) = -6 + 6 = 0$."
+          ],
+          "final_answer": "$0$"
+        },
+        {
+          "problem": "Given $f(x) = 3x + 4$. Find $x$ if $f(x) = 19$.",
+          "solution_steps": [
+            "Step 1: This is a reverse problem. We are given the output, not the input.",
+            "Step 2: Set the whole function equal to $19$: $3x + 4 = 19$.",
+            "Step 3: Subtract $4$: $3x = 15$.",
+            "Step 4: Divide by $3$: $x = 5$."
+          ],
+          "final_answer": "$5$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $f(x)$ means $f$ multiplied by $x$.",
+          "correction": "$f$ is the name of the rule, not a variable! You cannot divide by $f$ to isolate $x$."
+        },
+        {
+          "mistake": "Expanding $f(a+1) = a^2 + 1$ (if $f(x) = x^2$).",
+          "correction": "You must substitute the whole expression $(a+1)$ in brackets. $(a+1)^2 = (a+1)(a+1) = a^2 + 2a + 1$."
+        }
+      ],
+      "quick_summary": [
+        "$f(x)$ is the output. $x$ is the input.",
+        "Always use brackets when substituting negative numbers.",
+        "You can evaluate functions at numbers, variables, or entire algebraic expressions."
+      ]
+    },
+    "hs_math_t02_st12": {
+      "id": "hs_math_t02_st12",
+      "title": "Composite functions",
+      "overview": "A composite function is formed when you take the output of one function and immediately feed it as the input into a second function. It is a mathematical assembly line.",
+      "key_concepts": [
+        {
+          "concept": "The Notation",
+          "definition": "Inside out.",
+          "details": [
+            "The composition of function $f$ and function $g$ is written as $(f \\circ g)(x)$ or $f(g(x))$.",
+            "Always work from the **inside out**. The function closest to $x$ (in this case, $g$) acts first. You take the result of $g$ and plug it into $f$."
+          ]
+        },
+        {
+          "concept": "Order Matters!",
+          "definition": "Not commutative.",
+          "details": [
+            "Putting on your socks then your shoes gives a very different result than putting on your shoes then your socks. The same is true for functions.",
+            "Function composition is **not commutative in general**: $f(g(x))$ and $g(f(x))$ usually give different results, although they can coincide for particular functions or inputs."
+          ]
+        },
+        {
+          "concept": "Domain Restrictions",
+          "definition": "The double check.",
+          "details": [
+            "For a composite function to work, the initial input $x$ must be valid for the first function ($g$), AND the output $g(x)$ must be valid to go into the second function ($f$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Composite Function",
+          "equation": "$$ (f \\circ g)(x) = f(g(x)) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s12",
+          "title": "The Assembly Line",
+          "type": "svg",
+          "caption": "In f(g(x)), function g does its job first, then hands the part over to f.",
+          "alt_text": "Visual showing an assembly line. An input 'x=2' enters a machine labeled 'g(x) = x^2'. The output '4' travels along a conveyor belt into a second machine labeled 'f(x) = 2x+3'. The final output is '11'. The whole process is labeled 'f(g(2)) = 11'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"40\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x=2</text><path d=\"M 65 100 L 105 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"105,100 95,95 95,105\" fill=\"#3b82f6\"/><rect x=\"110\" y=\"60\" width=\"80\" height=\"80\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"150\" y=\"90\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">g(x)</text><text x=\"150\" y=\"115\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\">x²</text><path d=\"M 190 100 L 260 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"4\" stroke-dasharray=\"6,4\"/><polygon points=\"260,100 250,90 250,110\" fill=\"#94a3b8\"/><text x=\"225\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">4</text><rect x=\"265\" y=\"60\" width=\"100\" height=\"80\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"315\" y=\"90\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">f(x)</text><text x=\"315\" y=\"115\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\">2x + 3</text><path d=\"M 365 100 L 415 100\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><polygon points=\"415,100 405,95 405,105\" fill=\"#22c55e\"/><text x=\"445\" y=\"105\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">11</text><rect x=\"130\" y=\"160\" width=\"240\" height=\"30\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1\" rx=\"5\"/><text x=\"250\" y=\"180\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">f(g(2)) = 11</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $f(x) = 3x - 2$ and $g(x) = x + 4$, find $(f \\circ g)(2)$.",
+          "solution_steps": [
+            "Step 1: Understand the notation. $(f \\circ g)(2)$ means $f(g(2))$.",
+            "Step 2: Calculate the inner function first. $g(2) = 2 + 4 = 6$.",
+            "Step 3: Plug this result into the outer function. $f(6) = 3(6) - 2$.",
+            "Step 4: $18 - 2 = 16$."
+          ],
+          "final_answer": "$16$"
+        },
+        {
+          "problem": "Given $f(x) = x^2 + 2$ and $g(x) = 3x - 1$. Find the algebraic expression for $(f \\circ g)(x)$.",
+          "solution_steps": [
+            "Step 1: Write it as $f(g(x))$. This means plug the entire $g(x)$ equation into the '$x$' of $f(x)$.",
+            "Step 2: $f(3x - 1) = (3x - 1)^2 + 2$.",
+            "Step 3: Expand the squared binomial: $(3x - 1)(3x - 1) = 9x^2 - 6x + 1$.",
+            "Step 4: Add the 2 on the end: $9x^2 - 6x + 1 + 2 = 9x^2 - 6x + 3$."
+          ],
+          "final_answer": "$9x^2 - 6x + 3$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying the left-hand function first.",
+          "correction": "When reading $f(g(x))$ from left to right, it's tempting to do $f$ first. But the function closest to the $x$ variable inside the parentheses acts first! Always work inside-out."
+        }
+      ],
+      "quick_summary": [
+        "$(f \\circ g)(x)$ is identical to writing $f(g(x))$.",
+        "Always evaluate the inner function first, then feed that answer to the outer function.",
+        "The order of composition completely changes the final answer."
+      ]
+    },
+    "hs_math_t02_st13": {
+      "id": "hs_math_t02_st13",
+      "title": "Inverse functions",
+      "overview": "If a function is a machine that turns an input into an output, an Inverse Function is a machine that runs in reverse, taking the output and handing you back the original input.",
+      "key_concepts": [
+        {
+          "concept": "The One-to-One Rule",
+          "definition": "The prerequisite for reversing.",
+          "details": [
+            "A function is injective if different inputs have different outputs. This is exactly the condition needed for an inverse to be a function from the original range back to the original domain.",
+            "For a specified function $f:A\\to B$, an inverse defined on the entire codomain B, $f^{-1}:B\\to A$, exists precisely when f is bijective (both injective and surjective).",
+            "The **Horizontal Line Test** checks whether a graph is one-to-one."
+          ]
+        },
+        {
+          "concept": "The Algebraic Swap",
+          "definition": "How to find it.",
+          "details": [
+            "To find the equation of an inverse function: 1) Replace $f(x)$ with $y$. 2) Swap every $x$ with $y$. 3) Solve the new equation for $y$. 4) Replace $y$ with $f^{-1}(x)$."
+          ]
+        },
+        {
+          "concept": "Domain and Range Swap",
+          "definition": "Flipping the script.",
+          "details": [
+            "The Domain of the original function becomes the Range of the inverse.",
+            "The Range of the original function becomes the Domain of the inverse."
+          ]
+        },
+        {
+          "concept": "Graphical Reflection",
+          "definition": "The mirror line.",
+          "details": [
+            "On a coordinate plane, the graph of an inverse function $f^{-1}(x)$ is a perfect reflection of $f(x)$ across the diagonal line $y = x$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Inverse Verification",
+          "equation": "$$ f(f^{-1}(x)) = x \\quad (x\\in\\operatorname{Range}(f)), \\qquad f^{-1}(f(x)) = x \\quad (x\\in A) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s13",
+          "title": "A Function and Its Inverse",
+          "type": "svg",
+          "caption": "The graph of a one-to-one function and its inverse are reflections across y = x.",
+          "alt_text": "Coordinate graph of the restricted function f(x) = x squared for x greater than or equal to zero, and its inverse f inverse of x = square root of x. The point (2, 4) reflects to (4, 2) across y = x.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\">\n<rect width=\"500\" height=\"260\" rx=\"12\" fill=\"#f8fafc\"/>\n<g stroke=\"#94a3b8\" stroke-width=\"2\" fill=\"none\">\n  <path d=\"M70 220 H470\"/><path d=\"M70 220 V18\"/>\n</g>\n<g font-family=\"sans-serif\" fill=\"#475569\" font-size=\"11\">\n  <text x=\"475\" y=\"224\">x</text><text x=\"60\" y=\"16\">y</text><text x=\"58\" y=\"236\">0</text>\n</g>\n<path d=\"M70 220 L280 10\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/>\n<text x=\"270\" y=\"22\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#64748b\">y = x</text>\n<path d=\"M70 220 L73.0 219.7 L76.0 218.8 L79.0 217.3 L82.0 215.2 L85.0 212.5 L88.0 209.2 L91.0 205.3 L94.0 200.8 L97.0 195.7 L100.0 190.0 L103.0 183.7 L106.0 176.8 L109.0 169.3 L112.0 161.2 L115.0 152.5 L118.0 143.2 L121.0 133.3 L124.0 122.8 L127.0 111.7 L130.0 100.0 L133.0 87.7 L136.0 74.8 L139.0 61.3 L142.0 47.2 L145.0 32.5\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<path d=\"M70 220 L70.3 217.0 L71.2 214.0 L72.7 211.0 L74.8 208.0 L77.5 205.0 L80.8 202.0 L84.7 199.0 L89.2 196.0 L94.3 193.0 L100.0 190.0 L106.3 187.0 L113.2 184.0 L120.7 181.0 L128.8 178.0 L137.5 175.0 L146.8 172.0 L156.7 169.0 L167.2 166.0 L178.3 163.0 L190.0 160.0 L202.3 157.0 L215.2 154.0 L228.7 151.0 L242.8 148.0 L257.5 145.0\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n<circle cx=\"130\" cy=\"100\" r=\"5\" fill=\"#1d4ed8\"/>\n<circle cx=\"190\" cy=\"160\" r=\"5\" fill=\"#15803d\"/>\n<g font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\">\n  <text x=\"110\" y=\"88\" fill=\"#1d4ed8\">f(x) = x²</text>\n  <text x=\"278\" y=\"151\" fill=\"#15803d\">f⁻¹(x) = √x</text>\n  <text x=\"102\" y=\"115\" fill=\"#1d4ed8\">(2, 4)</text>\n  <text x=\"197\" y=\"178\" fill=\"#15803d\">(4, 2)</text>\n</g>\n<text x=\"250\" y=\"250\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#64748b\">The inverse graph is the reflection of the restricted function across y = x.</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the inverse of $f(x) = 5x - 10$.",
+          "solution_steps": [
+            "Step 1: Write as $y = 5x - 10$.",
+            "Step 2: Swap variables: $x = 5y - 10$.",
+            "Step 3: Solve for $y$. Add $10$ to both sides: $x + 10 = 5y$.",
+            "Step 4: Divide by $5$: $y = \\frac{x + 10}{5}$.",
+            "Step 5: Rewrite with inverse notation."
+          ],
+          "final_answer": "$f^{-1}(x) = \\frac{x + 10}{5}$"
+        },
+        {
+          "problem": "Let $f:[0,\\infty)\\to[4,\\infty)$ be defined by $f(x)=x^2+4$. Find $f^{-1}(x)$.",
+          "solution_steps": [
+            "Step 1: Write $y=x^2+4$.",
+            "Step 2: Swap x and y: $x=y^2+4$.",
+            "Step 3: Isolate the square: $y^2=x-4$.",
+            "Step 4: Since the inverse outputs values from the original domain $[0,\\infty)$, take the non-negative root: $y=\\sqrt{x-4}$.",
+            "Step 5: The inverse has domain $[4,\\infty)$ and range $[0,\\infty)$."
+          ],
+          "final_answer": "$f^{-1}(x)=\\sqrt{x-4}$, for $x\\ge 4$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $f^{-1}(x) = \\frac{1}{f(x)}$.",
+          "correction": "In arithmetic, $x^{-1}$ means the reciprocal $\\frac{1}{x}$. But in function notation, $f^{-1}(x)$ means the INVERSE function. It does NOT mean $1 \\div f(x)$."
+        },
+        {
+          "mistake": "Forgetting the domain restriction on quadratic inverses.",
+          "correction": "The full parabola $y=x^2$ is not one-to-one, so it has no inverse function on its full real domain. Restrict its domain to $x\\ge0$ or $x\\le0$ to obtain a one-to-one function. If a function $f:A\\to B$ is required to have an inverse defined on all of B, it must also be onto B."
+        }
+      ],
+      "quick_summary": [
+        "An inverse function undoes the original function.",
+        "To find it algebraically: swap $x$ and $y$, then solve for $y$.",
+        "The graph is a reflection across the line $y = x$."
+      ]
+    },
+    "hs_math_t02_st14": {
+      "id": "hs_math_t02_st14",
+      "title": "Transformations of function graphs",
+      "overview": "Transformations allow us to take a simple 'Parent Function' (like a basic parabola $y=x^2$) and shift it, stretch it, or flip it anywhere on the graph just by tweaking its equation.",
+      "key_concepts": [
+        {
+          "concept": "Vertical Transformations",
+          "definition": "Outside the function.",
+          "details": [
+            "Changes outside the function affect the y-values (vertical transformations).",
+            "**Translation:** $f(x)+k$ moves the graph up by k; $f(x)-k$ moves it down by k.",
+            "**Stretch/compression:** $a f(x)$ changes vertical distances from the x-axis by a factor of $|a|$; values $|a|>1$ stretch, while $0<|a|<1$ compress.",
+            "**Reflection:** $-f(x)$ reflects the graph across the x-axis."
+          ]
+        },
+        {
+          "concept": "Horizontal Transformations",
+          "definition": "Inside the function.",
+          "details": [
+            "Changes inside the function affect the x-values (horizontal transformations).",
+            "**Translation:** $f(x-h)$ moves the graph right by h; $f(x+h)$ moves it left by h.",
+            "**Stretch/compression:** $f(bx)$ changes horizontal distances from the y-axis by a factor of $1/|b|$; $|b|>1$ compresses and $0<|b|<1$ stretches.",
+            "**Reflection:** $f(-x)$ reflects the graph across the y-axis."
+          ]
+        },
+        {
+          "concept": "The Master Equation",
+          "definition": "Putting it all together.",
+          "details": [
+            "$g(x)=a\\,f(b(x-h))+k$, with $a\\ne0$ and $b\\ne0$ for these non-degenerate stretch/reflection transformations.",
+            "$|a|$ is the vertical scale factor; a negative a also reflects across the x-axis.",
+            "$1/|b|$ is the horizontal scale factor; a negative b introduces a horizontal reflection.",
+            "$h$ is the horizontal translation and $k$ is the vertical translation."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Transformation Form",
+          "equation": "$$ g(x) = a f(b(x - h)) + k $$",
+          "variables": {
+            "a": "Non-zero vertical scale factor; negative values also reflect across the x-axis",
+            "b": "Non-zero horizontal parameter; the horizontal scale factor is 1/|b|",
+            "h": "Horizontal translation",
+            "k": "Vertical translation"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s14",
+          "title": "Horizontal Translations are Counter-Intuitive",
+          "type": "svg",
+          "caption": "(x - 3) moves the graph to the positive (right) side.",
+          "alt_text": "Visual showing a coordinate plane with a parabola at the origin (y=x^2). An arrow points right to a new parabola shifted 3 units on the x-axis. Text labels the new parabola as y = (x-3)^2. An arrow points left from the origin to a parabola shifted -2 units. Text labels it y = (x+2)^2.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"250\" y1=\"20\" x2=\"250\" y2=\"180\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"50\" y1=\"150\" x2=\"450\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 210 50 Q 250 170 290 50\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"250\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">0</text><path d=\"M 310 50 Q 350 170 390 50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><text x=\"350\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\">+3</text><text x=\"395\" y=\"40\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">y = (x-3)²</text><path d=\"M 250 120 L 320 120\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"320,120 310,115 310,125\" fill=\"#3b82f6\"/><text x=\"285\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\">RIGHT</text><path d=\"M 130 50 Q 170 170 210 50\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"170\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c2410c\">-2</text><text x=\"105\" y=\"40\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">y = (x+2)²</text><path d=\"M 250 90 L 190 90\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><polygon points=\"190,90 200,85 200,95\" fill=\"#ea580c\"/><text x=\"220\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c2410c\">LEFT</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Describe the transformations applied to the parent function $f(x) = x^2$ to get $g(x) = -2(x - 4)^2 + 3$. Identify the new vertex.",
+          "solution_steps": [
+            "Step 1: Read the horizontal shift. $(x - 4)$ means shifted RIGHT by $4$.",
+            "Step 2: Read the vertical stretch/flip. The $-2$ in front means it is reflected upside down (across the x-axis) and stretched vertically by a factor of $2$.",
+            "Step 3: Read the vertical shift. $+3$ means shifted UP by $3$.",
+            "Step 4: The original vertex $(0,0)$ shifts right 4 and up 3."
+          ],
+          "final_answer": "Right 4, Up 3, Flipped, Stretched by 2. Vertex: $(4, 3)$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $f(x+3)$ shifts the graph to the right.",
+          "correction": "Horizontal shifts always feel backwards. A $+3$ inside the parentheses means the inputs happen 3 units *sooner* (on the negative side of the axis), shifting the entire graph LEFT."
+        }
+      ],
+      "quick_summary": [
+        "Outside the function $\\rightarrow$ affects $y$ (Up/Down, Vertical stretch, intuitive).",
+        "Inside the function $\\rightarrow$ affects $x$ (Left/Right, Horizontal stretch, counter-intuitive).",
+        "$-f(x)$ flips over the x-axis. $f(-x)$ flips over the y-axis."
+      ]
+    }
+  }
+}

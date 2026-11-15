@@ -1,0 +1,1113 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t01",
+  "topicTitle": "Number Systems and Real Numbers",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t01_st01": {
+      "id": "hs_math_t01_st01",
+      "title": "Natural numbers, integers and rational numbers",
+      "overview": "Number systems are the foundational building blocks of mathematics. As human needs expanded from simply counting physical objects to measuring debt, temperature, and precise parts of a whole, our number systems evolved to accommodate these concepts.",
+      "key_concepts": [
+        {
+          "concept": "Natural and Whole Numbers",
+          "definition": "The counting blocks.",
+          "details": [
+            "**Natural Numbers ($\\mathbb{N}$):** The positive counting numbers ($1, 2, 3, \\ldots$). They do not include zero, fractions, or negative numbers.",
+            "**Whole Numbers ($W$):** The set of all natural numbers, plus zero ($0, 1, 2, 3, \\ldots$).",
+            "In these notes, natural numbers are defined as $1, 2, 3, \\ldots$; some textbooks include $0$ in the natural numbers, so always check the convention being used. The symbol $W$ is used here for whole numbers."
+          ]
+        },
+        {
+          "concept": "Integers ($\\mathbb{Z}$)",
+          "definition": "Adding direction.",
+          "details": [
+            "Integers include all whole numbers and their negative counterparts ($\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots$).",
+            "They are used for concepts with direction, such as temperatures below zero or bank withdrawals."
+          ]
+        },
+        {
+          "concept": "Rational Numbers ($\\mathbb{Q}$)",
+          "definition": "The ratios.",
+          "details": [
+            "A rational number is any number that can be written as a fraction $\\frac{p}{q}$, where $p$ and $q$ are integers, and $q \\neq 0$.",
+            "This includes terminating decimals (e.g., $0.75 = \\frac{3}{4}$) and repeating decimals (e.g., $0.333\\dots = \\frac{1}{3}$).",
+            "All integers are rational because they can be written over $1$ (e.g., $5 = \\frac{5}{1}$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Rational Number Definition",
+          "equation": "$$ \\frac{p}{q}, \\quad p,q \\in \\mathbb{Z}, \\quad q \\neq 0 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s01",
+          "title": "The Number System Hierarchy",
+          "type": "svg",
+          "caption": "Each set of numbers fits entirely within the larger sets.",
+          "alt_text": "Nested rectangles show the number-set hierarchy: natural numbers are inside whole numbers, whole numbers are inside integers, and integers are inside rational numbers. Examples are shown in each set.",
+          "data": "<svg viewBox=\"0 0 500 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"280\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"18\" width=\"460\" height=\"244\" rx=\"12\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"42\" y=\"45\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#1e3a8a\" font-weight=\"bold\">Rational numbers (Q)</text><text x=\"42\" y=\"67\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#1e3a8a\">Examples: 1/2, -0.75, 3.333...</text><rect x=\"68\" y=\"85\" width=\"390\" height=\"158\" rx=\"10\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"90\" y=\"111\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#1e3a8a\" font-weight=\"bold\">Integers (Z)</text><text x=\"90\" y=\"132\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#1e3a8a\">..., -3, -2, -1, 0, 1, 2, 3, ...</text><rect x=\"125\" y=\"148\" width=\"275\" height=\"78\" rx=\"9\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"145\" y=\"173\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">Whole numbers (W)</text><text x=\"145\" y=\"193\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">0, 1, 2, 3, ...</text><rect x=\"215\" y=\"200\" width=\"145\" height=\"22\" rx=\"6\" fill=\"#60a5fa\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><text x=\"287\" y=\"215\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Natural: 1, 2, 3, ...</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Convert the repeating decimal $0.3333\\dots$ into a rational fraction.",
+          "solution_steps": [
+            "Step 1: Let $x = 0.3333\\dots$",
+            "Step 2: Multiply both sides by 10 (since one digit repeats): $10x = 3.3333\\dots$",
+            "Step 3: Subtract the original equation ($x = 0.3333\\dots$) from the new equation.",
+            "Step 4: $10x - x = 3.3333\\dots - 0.3333\\dots \\implies 9x = 3$.",
+            "Step 5: Solve for $x$: $x = \\frac{3}{9} = \\frac{1}{3}$."
+          ],
+          "final_answer": "$\\frac{1}{3}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking negative fractions aren't rational.",
+          "correction": "A rational number is any $\\frac{p}{q}$ where $p$ and $q$ are integers. Since integers can be negative, numbers like $-\\frac{5}{6}$ are perfectly valid rational numbers."
+        }
+      ],
+      "quick_summary": [
+        "**Natural numbers ($\\mathbb{N}$):** $1, 2, 3, \\ldots$ in this course.",
+        "**Whole numbers ($W$):** $0, 1, 2, 3, \\ldots$.",
+        "**Integers ($\\mathbb{Z}$):** Negative whole numbers, zero and positive whole numbers.",
+        "**Rational numbers ($\\mathbb{Q}$):** Numbers expressible as $p/q$, where $p,q$ are integers and $q\\ne0$."
+      ],
+      "utilities": [
+        {
+          "title": "Fraction Calculator",
+          "description": "Check fraction calculations and equivalent rational-number forms.",
+          "url": "https://onlinetoolpad.com/math/FRACTION_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t01_st02": {
+      "id": "hs_math_t01_st02",
+      "title": "Irrational numbers",
+      "overview": "While most numbers we use daily can be written cleanly as fractions or terminating decimals, the universe relies heavily on numbers that refuse to conform. Irrational numbers are numbers whose decimal expansions go on forever without ever settling into a repeating pattern.",
+      "key_concepts": [
+        {
+          "concept": "Defining Irrationality",
+          "definition": "The unruly decimals.",
+          "details": [
+            "An irrational number CANNOT be expressed as a simple fraction $\\frac{p}{q}$.",
+            "When written as a decimal, it is **non-terminating** (it never ends) and **non-repeating** (it never falls into a loop)."
+          ]
+        },
+        {
+          "concept": "Common Irrationals",
+          "definition": "Roots and Constants.",
+          "details": [
+            "**Square roots of positive integers:** If a positive integer is not a perfect square, its square root is irrational (for example, $\\sqrt{2}, \\sqrt{3}, \\sqrt{5}$).",
+            "**Mathematical Constants:** $\\pi$ (approx. $3.14159\\dots$) and Euler's number $e$ (approx. $2.718\\dots$) are famously irrational."
+          ]
+        },
+        {
+          "concept": "Combining Rationals and Irrationals",
+          "definition": "Contagious irrationality.",
+          "details": [
+            "Adding or subtracting a rational number and an irrational number ALWAYS produces an irrational result (e.g., $3 + \\sqrt{2}$).",
+            "Multiplying a non-zero rational by an irrational ALWAYS produces an irrational result (e.g., $2\\sqrt{3}$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s02",
+          "title": "Irrational Roots on a Number Line",
+          "type": "svg",
+          "caption": "Even though they go on forever as decimals, they still have an exact, pinpoint location on the number line.",
+          "alt_text": "A number line from 1 to 3 marks sqrt(2) at about 1.41 and sqrt(3) at about 1.73, both between 1 and 2.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"50\" y1=\"120\" x2=\"450\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"4\"/><circle cx=\"100\" cy=\"120\" r=\"5\" fill=\"#0f172a\"/><circle cx=\"250\" cy=\"120\" r=\"5\" fill=\"#0f172a\"/><circle cx=\"400\" cy=\"120\" r=\"5\" fill=\"#0f172a\"/><text x=\"100\" y=\"150\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">1</text><text x=\"250\" y=\"150\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2</text><text x=\"400\" y=\"150\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">3</text><circle cx=\"162\" cy=\"120\" r=\"6\" fill=\"#ef4444\"/><path d=\"M 162 110 L 162 65\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"140\" y=\"48\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">sqrt(2)</text><text x=\"140\" y=\"63\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#b91c1c\">about 1.41</text><circle cx=\"210\" cy=\"120\" r=\"6\" fill=\"#3b82f6\"/><path d=\"M 210 110 L 210 65\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"232\" y=\"48\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">sqrt(3)</text><text x=\"232\" y=\"63\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1d4ed8\">about 1.73</text><text x=\"250\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">Both irrational values lie between 1 and 2.</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Identify which of the following are irrational: $\\sqrt{9}$, $\\sqrt{13}$, $\\pi$, $0.454545\\dots$",
+          "solution_steps": [
+            "Step 1: $\\sqrt{9} = 3$, which is an integer. (Rational)",
+            "Step 2: $13$ is not a perfect square, so $\\sqrt{13}$ has a non-terminating, non-repeating decimal. (Irrational)",
+            "Step 3: $\\pi$ is a fundamental constant that never ends or repeats. (Irrational)",
+            "Step 4: $0.454545\\dots$ repeats endlessly. Because it repeats, it can be written as a fraction $\\frac{45}{99}$. (Rational)"
+          ],
+          "final_answer": "$\\sqrt{13}$ and $\\pi$ are irrational."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Believing $\\pi$ is exactly $\\frac{22}{7}$ or exactly $3.14$.",
+          "correction": "These are only *rational approximations* used to make math easier in middle school. $\\pi$ is actually irrational and cannot be written exactly as any fraction."
+        },
+        {
+          "mistake": "Assuming two irrationals multiplied together are always irrational.",
+          "correction": "While $\\sqrt{2} \\times \\sqrt{3} = \\sqrt{6}$ (irrational), $\\sqrt{2} \\times \\sqrt{2} = 2$ (rational!). Multiplying an irrational by an irrational can sometimes create a rational number."
+        }
+      ],
+      "quick_summary": [
+        "Irrational numbers cannot be written as fractions.",
+        "Their decimals go on forever without repeating.",
+        "Square roots of non-perfect squares are always irrational."
+      ]
+    },
+    "hs_math_t01_st03": {
+      "id": "hs_math_t01_st03",
+      "title": "Real number system",
+      "overview": "When you take the structured, predictable world of Rational numbers and combine it with the chaotic, endless decimals of Irrational numbers, you create the Real Number System. This master set contains every number that can be pinned to a continuous number line.",
+      "key_concepts": [
+        {
+          "concept": "The Real Number Line",
+          "definition": "The master set ($\\mathbb{R}$).",
+          "details": [
+            "The Real Number System ($\\mathbb{R}$) consists of all rational numbers ($\\mathbb{Q}$) and all irrational numbers ($\\mathbb{I}$).",
+            "$\\mathbb{R} = \\mathbb{Q} \\cup \\mathbb{I}$ and $\\mathbb{Q} \\cap \\mathbb{I} = \\varnothing$.",
+            "Every point on the continuous real number line corresponds to exactly one real number."
+          ]
+        },
+        {
+          "concept": "Subsets and Symbols",
+          "definition": "Reading the shorthand.",
+          "details": [
+            "$\\in$ means 'belongs to' (for example, $5 \\in \\mathbb{N}$).",
+            "$\\subset$ means 'is a proper subset of'.",
+            "Using this course's convention for natural numbers: $\\mathbb{N} \\subset W \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$."
+          ]
+        },
+        {
+          "concept": "Basic Properties of Reals",
+          "definition": "The rules of the game.",
+          "details": [
+            "**Closure:** Adding or multiplying two real numbers always gives another real number.",
+            "**Identity:** Adding $0$ changes nothing (Additive Identity). Multiplying by $1$ changes nothing (Multiplicative Identity).",
+            "**Inverse:** Every real number $a$ has an opposite $-a$ that sums to $0$ (Additive Inverse). Every non-zero real number $a$ has a reciprocal $\\frac{1}{a}$ that multiplies to $1$ (Multiplicative Inverse)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "The Real Number Union",
+          "equation": "$$ \\mathbb{R} = \\mathbb{Q} \\cup \\mathbb{I} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s03",
+          "title": "The Real Number Universe",
+          "type": "svg",
+          "caption": "Rational and Irrational numbers are completely separate, but together they make up all Real Numbers.",
+          "alt_text": "A rectangle for real numbers contains two separate regions: rational numbers, with fraction and decimal examples, and irrational numbers, with pi, e and sqrt(2). The two sets do not overlap and together form the real numbers.",
+          "data": "<svg viewBox=\"0 0 500 210\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"210\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"18\" width=\"460\" height=\"174\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"3\" rx=\"10\"/><text x=\"250\" y=\"45\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">REAL NUMBERS (R)</text><rect x=\"40\" y=\"62\" width=\"200\" height=\"104\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"140\" y=\"88\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">RATIONAL (Q)</text><text x=\"140\" y=\"116\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1e3a8a\">1/2, -5, 0, 3.14</text><text x=\"140\" y=\"137\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1e3a8a\">Fractions and decimals</text><rect x=\"260\" y=\"62\" width=\"200\" height=\"104\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"360\" y=\"88\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">IRRATIONAL (I)</text><text x=\"360\" y=\"116\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#7f1d1d\">pi, e, sqrt(2)</text><text x=\"360\" y=\"133\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#7f1d1d\">Non-terminating</text><text x=\"360\" y=\"148\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#7f1d1d\">non-repeating decimals</text><text x=\"250\" y=\"184\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#475569\">Disjoint sets; together they make up all real numbers.</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify $-12$ into its smallest applicable number set.",
+          "solution_steps": [
+            "Step 1: Look at the number. It is negative, so it cannot be a Natural or Whole number.",
+            "Step 2: It is a solid, non-fraction number, which means it fits perfectly into the definition of an Integer.",
+            "Step 3: While it is also a Rational and Real number, the *smallest* and most specific set it belongs to is Integers."
+          ],
+          "final_answer": "Integer ($\\mathbb{Z}$)"
+        },
+        {
+          "problem": "Find the additive and multiplicative inverses of $-4$.",
+          "solution_steps": [
+            "Step 1: The additive inverse is what you add to get $0$. $-4 + 4 = 0$, so the additive inverse is $4$.",
+            "Step 2: The multiplicative inverse is what you multiply by to get $1$ (the reciprocal). $-4 \\times (-\\frac{1}{4}) = 1$, so the multiplicative inverse is $-\\frac{1}{4}$."
+          ],
+          "final_answer": "Additive: $4$, Multiplicative: $-\\frac{1}{4}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking division is closed over Integers.",
+          "correction": "Closure means performing an operation on two members of a set always produces a result that is still in that set. If you divide two integers (e.g., $3 \\div 2$), the result ($1.5$) is a decimal, which is NOT an integer. Integers are closed for $+$, $-$, and $\\times$, but NOT $\\div$."
+        }
+      ],
+      "quick_summary": [
+        "Real Numbers ($\\mathbb{R}$) = Every Rational + Every Irrational.",
+        "A number can belong to multiple sets, but usually, we identify it by its smallest/most specific set.",
+        "Additive Identity = $0$. Multiplicative Identity = $1$."
+      ]
+    },
+    "hs_math_t01_st04": {
+      "id": "hs_math_t01_st04",
+      "title": "Properties of real numbers",
+      "overview": "In algebra, you often have to manipulate expressions to solve for 'x'. You can't just move numbers around randomly; you must obey the structural laws of mathematics. These 'Properties of Real Numbers' are the indisputable rules that dictate exactly how addition, multiplication, and inequalities function.",
+      "key_concepts": [
+        {
+          "concept": "Commutative Property",
+          "definition": "Order doesn't matter.",
+          "details": [
+            "For Addition: $a + b = b + a$.",
+            "For Multiplication: $ab = ba$.",
+            "*(Subtraction and Division are NOT commutative! $5-3 \\neq 3-5$)*"
+          ]
+        },
+        {
+          "concept": "Associative Property",
+          "definition": "Grouping doesn't matter.",
+          "details": [
+            "For Addition: $(a + b) + c = a + (b + c)$.",
+            "For Multiplication: $(ab)c = a(bc)$.",
+            "*(Subtraction and Division are NOT associative!)*"
+          ]
+        },
+        {
+          "concept": "Distributive Property",
+          "definition": "Sharing the multiplier.",
+          "details": [
+            "Multiplication distributes perfectly over addition (or subtraction).",
+            "$a(b + c) = ab + ac$. This is heavily used to expand brackets in algebra."
+          ]
+        },
+        {
+          "concept": "Inequality Flips",
+          "definition": "The golden rule of negatives.",
+          "details": [
+            "If you multiply or divide both sides of an inequality by a **negative** number, reverse the direction of the inequality sign ($<$ becomes $>$ and vice versa).",
+            "Adding or subtracting the same number on both sides does **not** reverse the inequality sign."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Distributive Property",
+          "equation": "$$ a(b + c) = ab + ac $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s04",
+          "title": "Commutative vs Associative vs Distributive",
+          "type": "svg",
+          "caption": "A quick reference guide for the big three properties.",
+          "alt_text": "Visual showing three distinct blocks. Commutative block shows 'A+B = B+A' (swapping places). Associative block shows '(A+B)+C = A+(B+C)' (parentheses shift). Distributive block shows 'A(B+C) = AB + AC' (multiplying into the group).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"140\" height=\"150\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"90\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Commutative</text><text x=\"90\" y=\"75\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">\"Move around\"</text><text x=\"90\" y=\"110\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">A+B = B+A</text><rect x=\"180\" y=\"20\" width=\"140\" height=\"150\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Associative</text><text x=\"250\" y=\"75\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">\"Group together\"</text><text x=\"250\" y=\"110\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">(A+B)+C</text><text x=\"250\" y=\"130\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">= A+(B+C)</text><rect x=\"340\" y=\"20\" width=\"140\" height=\"150\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"5\"/><text x=\"410\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">Distributive</text><text x=\"410\" y=\"75\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">\"Share outside in\"</text><text x=\"410\" y=\"110\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">A(B+C)</text><text x=\"410\" y=\"130\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">= AB + AC</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify the expression using the distributive property: $5(3x - 4) + 2x$.",
+          "solution_steps": [
+            "Step 1: Distribute the 5 to both terms inside the parenthesis: $5(3x) - 5(4) = 15x - 20$.",
+            "Step 2: Add the remaining $2x$: $15x - 20 + 2x$.",
+            "Step 3: Combine like terms: $15x + 2x = 17x$."
+          ],
+          "final_answer": "$17x - 20$"
+        },
+        {
+          "problem": "Solve the inequality: $-4x < 20$.",
+          "solution_steps": [
+            "Step 1: To isolate x, divide both sides by $-4$.",
+            "Step 2: Because you are dividing by a negative number, you MUST flip the inequality sign from $<$ to $>$.",
+            "Step 3: $x > \\frac{20}{-4} \\implies x > -5$."
+          ],
+          "final_answer": "$x > -5$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Failing to distribute to the negative signs.",
+          "correction": "When expanding $-3(2x - 5)$, many students write $-6x - 15$. You must remember that negative times negative is positive. The correct expansion is $-6x + 15$."
+        },
+        {
+          "mistake": "Reversing an inequality sign after adding a number to both sides.",
+          "correction": "The sign reverses only when both sides are multiplied or divided by a negative number. For example, $x-3<5$ gives $x<8$; the sign stays the same."
+        }
+      ],
+      "quick_summary": [
+        "Commutative = Swap places.",
+        "Associative = Shift the parentheses.",
+        "Distributive = Multiply the outside term by EVERYTHING inside the parentheses.",
+        "Divide by a negative in an inequality? FLIP the sign."
+      ]
+    },
+    "hs_math_t01_st05": {
+      "id": "hs_math_t01_st05",
+      "title": "Number line and intervals",
+      "overview": "The number line is a visual map of the entire Real Number system. Instead of talking about single numbers, we often need to talk about whole ranges or 'intervals' of numbers—like all the numbers between 2 and 5.",
+      "key_concepts": [
+        {
+          "concept": "Interval Notation (Brackets vs Parentheses)",
+          "definition": "To include or not to include.",
+          "details": [
+            "**Square Brackets $[a, b]$:** A 'closed' interval. It INCLUDES the endpoints. Represents inequalities with $\\le$ or $\\ge$.",
+            "**Parentheses $(a, b)$:** An 'open' interval. It EXCLUDES the endpoints. Represents strictly $<$ or $>$.",
+            "**Half-Open $[a, b)$:** Includes $a$ but stops just shy of $b$."
+          ]
+        },
+        {
+          "concept": "Infinity ($\\infty$)",
+          "definition": "The endless bound.",
+          "details": [
+            "If an interval goes on forever to the right, we use $\\infty$. If it goes forever to the left, we use $-\\infty$.",
+            "Infinity is a concept, not a reachable number. Therefore, you **ALWAYS use a parenthesis** next to infinity, never a square bracket. Example: $[3, \\infty)$."
+          ]
+        },
+        {
+          "concept": "Union and Intersection",
+          "definition": "Combining intervals.",
+          "details": [
+            "**Union ($\\cup$):** Combines two intervals together. Includes numbers that are in EITHER set.",
+            "**Intersection ($\\cap$):** Finds the overlap. Includes only numbers that are in BOTH sets."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s05",
+          "title": "Mapping Inequalities to Intervals",
+          "type": "svg",
+          "caption": "Solid dots equal square brackets. Open dots equal parentheses.",
+          "alt_text": "Two number lines: a closed point at -3 and open point at 5 for [-3, 5), and a closed point at 2 with a right-pointing ray for [2, infinity).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"50\" y1=\"60\" x2=\"450\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"3\"/><text x=\"100\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">-3</text><text x=\"300\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">5</text><line x1=\"100\" y1=\"60\" x2=\"300\" y2=\"60\" stroke=\"#3b82f6\" stroke-width=\"6\"/><circle cx=\"100\" cy=\"60\" r=\"8\" fill=\"#1d4ed8\"/><circle cx=\"300\" cy=\"60\" r=\"7\" fill=\"#f8fafc\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><text x=\"200\" y=\"35\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">-3 &lt;= x &lt; 5  =&gt;  [-3, 5)</text><line x1=\"50\" y1=\"150\" x2=\"450\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"3\"/><text x=\"200\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2</text><line x1=\"200\" y1=\"150\" x2=\"440\" y2=\"150\" stroke=\"#ea580c\" stroke-width=\"6\"/><polygon points=\"440,140 450,150 440,160\" fill=\"#ea580c\"/><circle cx=\"200\" cy=\"150\" r=\"8\" fill=\"#c2410c\"/><text x=\"330\" y=\"130\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">x &gt;= 2  =&gt;  [2, infinity)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Let $A = [-2, 7]$ and $B = [3, 10)$. Find the intersection $A \\cap B$.",
+          "solution_steps": [
+            "Step 1: Set A includes all numbers from $-2$ up to $7$.",
+            "Step 2: Set B includes all numbers from $3$ up to just below $10$.",
+            "Step 3: The intersection ($\\cap$) is where they overlap. They overlap starting at $3$ and ending at $7$.",
+            "Step 4: Since $3$ is included in both (it's inside Set A and on the boundary of Set B), it gets a bracket. Since $7$ is inside Set B and on the boundary of Set A, it gets a bracket."
+          ],
+          "final_answer": "$[3, 7]$"
+        },
+        {
+          "problem": "Write the inequality $x < 5$ in interval notation.",
+          "solution_steps": [
+            "Step 1: The numbers go down forever to the left, which is $-\\infty$.",
+            "Step 2: The numbers stop at $5$, but do not include $5$ (strictly less than).",
+            "Step 3: Infinity always gets a parenthesis. The $5$ gets a parenthesis."
+          ],
+          "final_answer": "$(-\\infty, 5)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Writing $[3, \\infty]$.",
+          "correction": "Infinity is not a real number that you can stop at or 'include'. It must ALWAYS have a parenthesis: $[3, \\infty)$."
+        }
+      ],
+      "quick_summary": [
+        "Square brackets $[ ]$ mean 'Included' or 'Solid dot' ($\\le$, $\\ge$).",
+        "Parentheses $( )$ mean 'Excluded', 'Open dot', or Infinity ($<$, $>$, $\\infty$).",
+        "Union ($\\cup$) joins all numbers. Intersection ($\\cap$) finds only the overlapping numbers."
+      ]
+    },
+    "hs_math_t01_st06": {
+      "id": "hs_math_t01_st06",
+      "title": "Absolute value and distance",
+      "overview": "Absolute value measures distance on the number line. The absolute value of a real number is its non-negative distance from zero, so it is never negative. This idea also helps describe the distance between two numbers and solve equations and inequalities.",
+      "key_concepts": [
+        {
+          "concept": "The Definition",
+          "definition": "The piecewise function.",
+          "details": [
+            "If $x$ is positive or zero, $|x| = x$.",
+            "If $x$ is negative, $|x| = -x$ (which forces it to become positive)."
+          ]
+        },
+        {
+          "concept": "Absolute Value Equations",
+          "definition": "Two paths.",
+          "details": [
+            "For $a>0$, an equation of the form $|f(x)|=a$ is solved by considering two cases: $f(x)=a$ or $f(x)=-a$.",
+            "Depending on the expression $f(x)$, the resulting equation may have zero, one, or two or more real solutions; it is not correct to assume every absolute-value equation has exactly two solutions."
+          ]
+        },
+        {
+          "concept": "Distance Between Two Points",
+          "definition": "The gap.",
+          "details": [
+            "The distance between any two numbers $a$ and $b$ on the number line is $d = |a - b|$."
+          ]
+        },
+        {
+          "concept": "Absolute Value Inequalities",
+          "definition": "Inside or Outside?",
+          "details": [
+            "For $a>0$, **less than** ($|x|<a$) describes numbers within distance $a$ of zero: $-a<x<a$.",
+            "For $a>0$, **greater than** ($|x|>a$) describes numbers more than distance $a$ from zero: $x<-a$ or $x>a$.",
+            "For inequalities with a shifted expression, first interpret $|x-h|$ as distance from $h$ rather than from zero."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Distance Formula (1D)",
+          "equation": "$$ d = |a - b| $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s06",
+          "title": "Inequalities: Less Than vs Greater Than",
+          "type": "svg",
+          "caption": "Less than means 'stay close'. Greater than means 'run away'.",
+          "alt_text": "Two number lines comparing absolute-value inequalities. The top highlights the interval strictly between -3 and 3; the bottom highlights the two outside rays, excluding -3 and 3.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"50\" y1=\"60\" x2=\"450\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"3\"/><line x1=\"150\" y1=\"60\" x2=\"350\" y2=\"60\" stroke=\"#3b82f6\" stroke-width=\"6\"/><circle cx=\"150\" cy=\"60\" r=\"6\" fill=\"#f8fafc\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><circle cx=\"350\" cy=\"60\" r=\"6\" fill=\"#f8fafc\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><circle cx=\"250\" cy=\"60\" r=\"4\" fill=\"#0f172a\"/><text x=\"150\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">-3</text><text x=\"250\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">0</text><text x=\"350\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">3</text><text x=\"250\" y=\"35\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">|x| &lt; 3  =&gt;  -3 &lt; x &lt; 3</text><line x1=\"50\" y1=\"150\" x2=\"450\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"3\"/><line x1=\"50\" y1=\"150\" x2=\"150\" y2=\"150\" stroke=\"#ea580c\" stroke-width=\"6\"/><line x1=\"350\" y1=\"150\" x2=\"450\" y2=\"150\" stroke=\"#ea580c\" stroke-width=\"6\"/><polygon points=\"50,140 40,150 50,160\" fill=\"#ea580c\"/><polygon points=\"450,140 460,150 450,160\" fill=\"#ea580c\"/><circle cx=\"150\" cy=\"150\" r=\"6\" fill=\"#f8fafc\" stroke=\"#c2410c\" stroke-width=\"3\"/><circle cx=\"350\" cy=\"150\" r=\"6\" fill=\"#f8fafc\" stroke=\"#c2410c\" stroke-width=\"3\"/><circle cx=\"250\" cy=\"150\" r=\"4\" fill=\"#0f172a\"/><text x=\"150\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">-3</text><text x=\"250\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">0</text><text x=\"350\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">3</text><text x=\"250\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">|x| &gt; 3  =&gt;  x &lt; -3 or x &gt; 3</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve the absolute value equation: $|3x - 2| = 10$",
+          "solution_steps": [
+            "Step 1: Break the equation into two separate cases.",
+            "Step 2: Case 1 (Positive): $3x - 2 = 10 \\implies 3x = 12 \\implies x = 4$.",
+            "Step 3: Case 2 (Negative): $3x - 2 = -10 \\implies 3x = -8 \\implies x = -\\frac{8}{3}$."
+          ],
+          "final_answer": "$x = 4$ or $x = -\\frac{8}{3}$"
+        },
+        {
+          "problem": "Solve the inequality: $|x - 3| > 4$",
+          "solution_steps": [
+            "Step 1: A 'greater than' sign means the solutions are on the outside (OR).",
+            "Step 2: Case 1: $x - 3 > 4 \\implies x > 7$.",
+            "Step 3: Case 2: $x - 3 < -4 \\implies x < -1$.",
+            "Step 4: The solution is $x < -1$ OR $x > 7$."
+          ],
+          "final_answer": "$(-\\infty, -1) \\cup (7, \\infty)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Solving $|x + 2| = -4$.",
+          "correction": "Absolute value represents a distance, and distance CANNOT be negative. Therefore, if you are asked to solve an equation where absolute value equals a negative number, the answer is immediately 'No real solution'."
+        },
+        {
+          "mistake": "Saying $\\sqrt{x^2} = x$.",
+          "correction": "This is only true if $x$ is positive. If $x = -5$, then $\\sqrt{(-5)^2} = \\sqrt{25} = 5$. The correct mathematical statement is $\\sqrt{x^2} = |x|$."
+        },
+        {
+          "mistake": "Assuming every equation containing absolute value has exactly two solutions.",
+          "correction": "The two-case method applies when the right side is positive, but the cases may produce fewer or more solutions depending on the expression. For example, $|x|=0$ has one solution, $x=0$, while $|x|=-2$ has no real solution."
+        }
+      ],
+      "quick_summary": [
+        "Absolute value $|x|$ is the non-negative distance from zero.",
+        "Equations like $|x| = a$ branch into TWO paths: $x=a$ and $x=-a$.",
+        "$<$ means sandwiched inside. $>$ means pointing outside."
+      ]
+    },
+    "hs_math_t01_st07": {
+      "id": "hs_math_t01_st07",
+      "title": "Laws of exponents",
+      "overview": "Writing $2 \\times 2 \\times 2 \\times 2 \\times 2$ is tedious. Exponents were invented as a mathematical shorthand ($2^5$). To manipulate these effectively, mathematics provides strict 'Laws of Exponents' that act as cheat codes to simplify massive algebraic expressions without calculating huge numbers.",
+      "key_concepts": [
+        {
+          "concept": "Product and Quotient Laws",
+          "definition": "Adding and Subtracting.",
+          "details": [
+            "**Product Law:** When multiplying powers with the *same base*, ADD the exponents. $a^m \\times a^n = a^{m+n}$.",
+            "**Quotient Law:** When dividing powers with the *same base*, SUBTRACT the bottom exponent from the top. $\\frac{a^m}{a^n} = a^{m-n}$. The base must be non-zero when the expression involves division by a power of that base."
+          ]
+        },
+        {
+          "concept": "Power of a Power",
+          "definition": "Stacking exponents.",
+          "details": [
+            "When raising an existing power to a new power, MULTIPLY the exponents. $(a^m)^n = a^{mn}$."
+          ]
+        },
+        {
+          "concept": "Zero and Negative Exponents",
+          "definition": "The special cases.",
+          "details": [
+            "**Zero Exponent:** For any non-zero base, $a^0=1$.",
+            "**Negative Exponent:** A negative exponent means take the reciprocal; it does not make the value negative. For $a\\ne0$, $a^{-n}=\\frac{1}{a^n}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Exponent Laws Summary",
+          "equation": "$$ a^m a^n = a^{m+n} \\quad | \\quad \\frac{a^m}{a^n} = a^{m-n}\\ (a\\ne0) \\quad | \\quad (a^m)^n = a^{mn} \\quad | \\quad a^{-n} = \\frac{1}{a^n}\\ (a\\ne0) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s07",
+          "title": "Unpacking the Product Law",
+          "type": "svg",
+          "caption": "Why do we add exponents when multiplying? Because we are just counting the total number of factors.",
+          "alt_text": "Visual showing 2^3 * 2^2. Below 2^3 it shows (2*2*2). Below 2^2 it shows (2*2). Below that, it combines into one long string: 2*2*2*2*2. An arrow points to the final result: 2^5.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x³ × x²</text><path d=\"M 200 60 Q 200 90 150 90\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M 300 60 Q 300 90 350 90\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"150\" y=\"110\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">(x·x·x)</text><text x=\"350\" y=\"110\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">(x·x)</text><text x=\"250\" y=\"110\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">×</text><path d=\"M 150 130 Q 250 160 250 160 Q 350 160 350 130\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"250\" y=\"185\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">= x⁵</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify the expression: $\\frac{(2x^2)^3}{4x}$ (assume $x\\ne0$).",
+          "solution_steps": [
+            "Step 1: Expand the numerator using the Power of a Product Law. $(2x^2)^3 = 2^3 \\times (x^2)^3$.",
+            "Step 2: Simplify: $8x^6$.",
+            "Step 3: Put it back in the fraction: $\\frac{8x^6}{4x}$.",
+            "Step 4: Divide coefficients ($8 \\div 4 = 2$) and use Quotient Law for x ($x^6 \\div x^1 = x^{6-1} = x^5$)."
+          ],
+          "final_answer": "$2x^5$"
+        },
+        {
+          "problem": "Simplify: $\\frac{a^4 b^{-2}}{a^{-1} b^3}$. Express your answer using only positive exponents.",
+          "solution_steps": [
+            "Step 1: Apply the Quotient Law to the 'a' terms. $a^{4 - (-1)} = a^{4+1} = a^5$.",
+            "Step 2: Apply the Quotient Law to the 'b' terms. $b^{-2 - 3} = b^{-5}$.",
+            "Step 3: Combine: $a^5 b^{-5}$.",
+            "Step 4: Convert the negative exponent into a fraction: $\\frac{a^5}{b^5}$."
+          ],
+          "final_answer": "$\\frac{a^5}{b^5}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying bases instead of keeping them the same.",
+          "correction": "A common mistake is writing $2^3 \\times 2^4 = 4^7$. The base is just the marker indicating what is being multiplied. It stays a 2. The correct answer is $2^7$."
+        },
+        {
+          "mistake": "Applying exponents poorly on negative bases.",
+          "correction": "$(-3)^2$ means $(-3) \\times (-3) = 9$. But $-3^2$ means $-(3 \\times 3) = -9$. Brackets matter!"
+        },
+        {
+          "mistake": "Using a zero base in a quotient or negative-exponent rule.",
+          "correction": "Expressions such as $a^m/a^n$ and $a^{-n}$ require $a\\ne0$, because division by zero is undefined."
+        }
+      ],
+      "quick_summary": [
+        "Multiply bases $\\rightarrow$ ADD exponents.",
+        "Divide bases $\\rightarrow$ SUBTRACT exponents.",
+        "Power to a power $\\rightarrow$ MULTIPLY exponents.",
+        "Negative exponent $\\rightarrow$ FLIP to the denominator (reciprocal)."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check calculations involving powers and exponent rules.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t01_st08": {
+      "id": "hs_math_t01_st08",
+      "title": "Rational Exponents and Fractional Powers",
+      "overview": "Rational (fractional) exponents connect powers with roots. They let us express roots using exponent notation and apply exponent laws to these expressions. When working over the real numbers, the sign of the base, the root index and whether the exponent is negative determine which values are allowed.",
+      "key_concepts": [
+        {
+          "concept": "Fractional Exponents as Roots",
+          "definition": "The translation rule.",
+          "details": [
+            "A rational exponent with denominator $n$ represents an $n$-th root. For example, $a^{1/2}=\\sqrt{a}$ and $a^{1/3}=\\sqrt[3]{a}$ wherever the expressions are defined as real numbers."
+          ]
+        },
+        {
+          "concept": "The Numerator and Denominator",
+          "definition": "Power over root.",
+          "details": [
+            "Write the rational exponent $m/n$ in lowest terms with $n>0$. The denominator $n$ is the root index and the numerator $m$ is the power.",
+            "$a^{m/n}=\\sqrt[n]{a^m}=(\\sqrt[n]{a})^m$ when the real roots are defined."
+          ]
+        },
+        {
+          "concept": "Negative Rational Exponents",
+          "definition": "Take the reciprocal.",
+          "details": [
+            "A negative rational exponent means take the reciprocal of the corresponding positive power: $a^{-m/n}=\\frac{1}{a^{m/n}}$.",
+            "The base must be non-zero when the exponent is negative."
+          ]
+        },
+        {
+          "concept": "Restrictions for Real Values",
+          "definition": "Check the base and root index.",
+          "details": [
+            "When $n$ is even, the real $n$-th root requires a non-negative base ($a\\ge0$). When $n$ is odd, negative bases are allowed.",
+            "If the rational exponent is negative, the base cannot be zero ($a\\ne0$).",
+            "These restrictions are stated after the fraction $m/n$ has been reduced to lowest terms with positive denominator."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Rational Exponent Rule",
+          "equation": "$$ a^{m/n}=\\sqrt[n]{a^m}=(\\sqrt[n]{a})^m $$",
+          "variables": {
+            "m": "Numerator of the reduced rational exponent",
+            "n": "Positive denominator (root index)"
+          }
+        },
+        {
+          "name": "Negative Rational Exponent",
+          "equation": "$$ a^{-m/n}=\\frac{1}{a^{m/n}},\\quad a\\ne0 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s08",
+          "title": "Anatomy of a Rational Exponent",
+          "type": "svg",
+          "caption": "The numerator acts as the Power. The denominator acts as the Root.",
+          "alt_text": "Visual showing a large letter 'a' with a fractional exponent 'm/n'. The 'm' on top is colored blue and labeled 'Power'. The 'n' on bottom is colored green and labeled 'Root'. Arrows point from this to the radical equivalent: the n-th root of (a to the power of m).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"100\" y=\"120\" font-family=\"serif\" font-size=\"48\" font-style=\"italic\" fill=\"#0f172a\">a</text><text x=\"140\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" fill=\"#3b82f6\" font-weight=\"bold\">m</text><line x1=\"135\" y1=\"90\" x2=\"165\" y2=\"90\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"140\" y=\"115\" font-family=\"sans-serif\" font-size=\"24\" fill=\"#22c55e\" font-weight=\"bold\">n</text><path d=\"M 160 70 Q 200 40 220 50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"230\" y=\"55\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">Power</text><path d=\"M 160 110 Q 200 140 220 130\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"2\"/><text x=\"230\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\">Root</text><text x=\"280\" y=\"110\" font-family=\"sans-serif\" font-size=\"32\" fill=\"#0f172a\" font-weight=\"bold\">=</text><text x=\"320\" y=\"80\" font-family=\"sans-serif\" font-size=\"18\" fill=\"#22c55e\" font-weight=\"bold\">n</text><path d=\"M 335 85 L 345 120 L 360 60 L 450 60\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"3\"/><text x=\"370\" y=\"110\" font-family=\"serif\" font-size=\"36\" font-style=\"italic\" fill=\"#0f172a\">a</text><text x=\"400\" y=\"80\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#3b82f6\" font-weight=\"bold\">m</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate exactly: $125^{2/3}$.",
+          "solution_steps": [
+            "Step 1: Translate the fraction. The denominator (3) means taking the cube root. The numerator (2) means squaring the result.",
+            "Step 2: Take the cube root first to keep the numbers small: $\\sqrt[3]{125} = 5$.",
+            "Step 3: Square the result: $5^2 = 25$."
+          ],
+          "final_answer": "$25$"
+        },
+        {
+          "problem": "Simplify using exponent laws: $x^{1/2} \\times x^{5/2}$.",
+          "solution_steps": [
+            "Step 1: For real values, the square-root denominator means $x\\ge0$.",
+            "Step 2: Since the bases are the same, use the product law and add the exponents: $x^{1/2}\\times x^{5/2}=x^{(1/2+5/2)}$.",
+            "Step 3: Add the fractions: $\\frac{1}{2}+\\frac{5}{2}=\\frac{6}{2}=3$.",
+            "Step 4: The expression simplifies to $x^3$ for $x\\ge0$."
+          ],
+          "final_answer": "$x^3$"
+        },
+        {
+          "problem": "Evaluate $(-8)^{2/3}$ as a real number.",
+          "solution_steps": [
+            "Step 1: The denominator $3$ is odd, so a negative base is allowed.",
+            "Step 2: Take the cube root: $\\sqrt[3]{-8}=-2$.",
+            "Step 3: Square the result: $(-2)^2=4$."
+          ],
+          "final_answer": "$4$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating $a^{1/3}$ as dividing by 3.",
+          "correction": "$27^{1/3}$ means the cube root of 27, not $27\\div3$. Since $3^3=27$, $27^{1/3}=3$."
+        },
+        {
+          "mistake": "Ignoring restrictions for even roots or negative exponents.",
+          "correction": "In real-number work, an even root requires a non-negative radicand, and a negative exponent requires a non-zero base. For example, $(-8)^{1/3}$ is real, but $(-8)^{1/2}$ is not a real number."
+        }
+      ],
+      "quick_summary": [
+        "A rational exponent is a root written in power notation.",
+        "In $a^{m/n}$, the numerator $m$ is the power and the positive denominator $n$ is the root index.",
+        "Even root index: non-negative base for real values. Odd root index: negative bases are allowed.",
+        "A negative exponent means reciprocal and requires a non-zero base."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check calculations involving fractional powers and roots.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t01_st09": {
+      "id": "hs_math_t01_st09",
+      "title": "Surds and simplifying radicals",
+      "overview": "Not every square root evaluates to a clean, whole number. When a root produces an irrational number that goes on forever, we leave it written inside the root symbol to keep it perfectly exact. These exact, irrational roots are called Surds.",
+      "key_concepts": [
+        {
+          "concept": "Radicals vs. Surds",
+          "definition": "Rational vs Irrational.",
+          "details": [
+            "A **Radical** is any expression with a root symbol (e.g., $\\sqrt{25}$ is a radical).",
+            "A **Surd** is a radical that cannot be simplified into a rational number ($\\sqrt{2}$ is a surd, but $\\sqrt{25} = 5$ is not)."
+          ]
+        },
+        {
+          "concept": "Simplifying Surds",
+          "definition": "Extracting squares.",
+          "details": [
+            "For a square root of a positive integer, look for the largest perfect-square factor ($4, 9, 16, 25, 36, \\ldots$) that divides the radicand.",
+            "Use the property $\\sqrt{ab} = \\sqrt{a} \\times \\sqrt{b}$ to split the root and pull out the perfect square."
+          ]
+        },
+        {
+          "concept": "Variables in Roots",
+          "definition": "The Absolute Value rule.",
+          "details": [
+            "When simplifying variables with even powers inside a square root, remember that the principal square root must be non-negative: $\\sqrt{x^2} = |x|$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Product Property of Radicals",
+          "equation": "$$ \\sqrt{ab} = \\sqrt{a} \\times \\sqrt{b} $$",
+          "variables": {
+            "a, b": "Non-negative real numbers"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s09",
+          "title": "Simplifying a Surd",
+          "type": "svg",
+          "caption": "Find the hidden perfect square, split it, and simplify.",
+          "alt_text": "Simplifying sqrt(72): rewrite 72 as 36 times 2, identify 36 as a perfect square, and obtain 6 sqrt(2).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"65\" y=\"112\" font-family=\"sans-serif\" font-size=\"26\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">sqrt(72)</text><path d=\"M 115 100 L 145 100\" stroke=\"#94a3b8\" stroke-width=\"3\"/><polygon points=\"145,100 135,95 135,105\" fill=\"#94a3b8\"/><text x=\"230\" y=\"108\" font-family=\"sans-serif\" font-size=\"25\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">sqrt(36 x 2)</text><text x=\"230\" y=\"65\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">36 is a perfect square</text><path d=\"M 310 100 L 340 100\" stroke=\"#94a3b8\" stroke-width=\"3\"/><polygon points=\"340,100 330,95 330,105\" fill=\"#94a3b8\"/><rect x=\"350\" y=\"70\" width=\"130\" height=\"60\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"3\" rx=\"10\"/><text x=\"415\" y=\"108\" font-family=\"sans-serif\" font-size=\"25\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">6 sqrt(2)</text><text x=\"415\" y=\"150\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Simplest form</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify $\\sqrt{252}$ completely.",
+          "solution_steps": [
+            "Step 1: Find perfect square factors of 252. Try dividing by 4, 9, 16, 36... $252 = 36 \\times 7$.",
+            "Step 2: Split the root: $\\sqrt{36 \\times 7} = \\sqrt{36} \\times \\sqrt{7}$.",
+            "Step 3: Simplify the perfect square: $\\sqrt{36} = 6$.",
+            "Step 4: Combine: $6\\sqrt{7}$."
+          ],
+          "final_answer": "$6\\sqrt{7}$"
+        },
+        {
+          "problem": "Simplify $\\sqrt[3]{54}$.",
+          "solution_steps": [
+            "Step 1: Look for perfect CUBES this time ($8, 27, 64\\dots$). $54 = 27 \\times 2$.",
+            "Step 2: Split the root: $\\sqrt[3]{27 \\times 2} = \\sqrt[3]{27} \\times \\sqrt[3]{2}$.",
+            "Step 3: Simplify the perfect cube: $\\sqrt[3]{27} = 3$."
+          ],
+          "final_answer": "$3\\sqrt[3]{2}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $\\sqrt{a + b} = \\sqrt{a} + \\sqrt{b}$.",
+          "correction": "You CANNOT split a square root across addition or subtraction. $\\sqrt{9 + 16} = \\sqrt{25} = 5$. But $\\sqrt{9} + \\sqrt{16} = 3 + 4 = 7$. They are not equal!"
+        }
+      ],
+      "quick_summary": [
+        "A Surd is an irrational root (it stays a decimal forever).",
+        "To simplify, pull out the largest perfect square factor.",
+        "Always check if the number left inside the root can be simplified further."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check numerical approximations of square roots and powers.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t01_st10": {
+      "id": "hs_math_t01_st10",
+      "title": "Operations involving surds",
+      "overview": "Just like variables in algebra, you can add, subtract, multiply, and divide surds. But they have their own specific set of structural rules. The ultimate goal is always to manipulate the expression until there are no square roots left in the denominator of a fraction.",
+      "key_concepts": [
+        {
+          "concept": "Adding and Subtracting (Like Surds)",
+          "definition": "Treat them like 'x'.",
+          "details": [
+            "You can only add or subtract surds if the number inside the root is exactly the same (**Like Surds**).",
+            "$3\\sqrt{2} + 5\\sqrt{2} = 8\\sqrt{2}$. (Just like $3x + 5x = 8x$).",
+            "If they don't match, simplify them first to see if they become Like Surds (e.g., $\\sqrt{8} + \\sqrt{18} \\rightarrow 2\\sqrt{2} + 3\\sqrt{2} = 5\\sqrt{2}$)."
+          ]
+        },
+        {
+          "concept": "Multiplying and Dividing",
+          "definition": "Outside with outside, inside with inside.",
+          "details": [
+            "For non-negative radicands, multiply coefficients together and multiply the radicands together, then simplify where possible.",
+            "$(2\\sqrt{3})\\times(4\\sqrt{5})=8\\sqrt{15}$."
+          ]
+        },
+        {
+          "concept": "Rationalising the Denominator",
+          "definition": "Clearing the basement.",
+          "details": [
+            "Mathematicians hate square roots in the bottom of a fraction. To 'rationalise' $\\frac{1}{\\sqrt{2}}$, multiply top and bottom by $\\sqrt{2}$ to get $\\frac{\\sqrt{2}}{2}$.",
+            "If the denominator is a binomial like $3 + \\sqrt{5}$, multiply top and bottom by its **Conjugate**: $3 - \\sqrt{5}$. This triggers the Difference of Squares pattern, destroying the square roots on the bottom."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Difference of Squares (Conjugate)",
+          "equation": "$$ (a + \\sqrt{b})(a - \\sqrt{b}) = a^2 - b $$",
+          "variables": {
+            "a": "A real number",
+            "b": "A non-negative real number"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s10",
+          "title": "The Conjugate Trick",
+          "type": "svg",
+          "caption": "Multiplying by the conjugate eliminates the surd from the denominator using the Difference of Squares.",
+          "alt_text": "Rationalising 1 divided by (2 plus sqrt(3)): multiply by the conjugate (2 minus sqrt(3)); the denominator becomes 4 minus 3, or 1, leaving 2 minus sqrt(3).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"65\" y=\"82\" font-family=\"sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#0f172a\">1</text><line x1=\"30\" y1=\"92\" x2=\"100\" y2=\"92\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"65\" y=\"118\" font-family=\"sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#0f172a\">2 + sqrt(3)</text><text x=\"125\" y=\"105\" font-family=\"sans-serif\" font-size=\"22\" text-anchor=\"middle\" fill=\"#0f172a\">x</text><text x=\"195\" y=\"82\" font-family=\"sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#dc2626\" font-weight=\"bold\">2 - sqrt(3)</text><line x1=\"150\" y1=\"92\" x2=\"240\" y2=\"92\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"195\" y=\"118\" font-family=\"sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#dc2626\" font-weight=\"bold\">2 - sqrt(3)</text><text x=\"195\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#b91c1c\">Conjugate</text><text x=\"265\" y=\"105\" font-family=\"sans-serif\" font-size=\"22\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"345\" y=\"82\" font-family=\"sans-serif\" font-size=\"17\" text-anchor=\"middle\" fill=\"#0f172a\">2 - sqrt(3)</text><line x1=\"300\" y1=\"92\" x2=\"390\" y2=\"92\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"345\" y=\"118\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#0f172a\">4 - 3 = 1</text><rect x=\"405\" y=\"72\" width=\"85\" height=\"58\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"447\" y=\"95\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Final</text><text x=\"447\" y=\"113\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">2 - sqrt(3)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify the expression: $\\sqrt{48} + \\sqrt{75} - \\sqrt{27}$",
+          "solution_steps": [
+            "Step 1: Simplify all three surds first to find the common root.",
+            "Step 2: $\\sqrt{48} = \\sqrt{16 \\times 3} = 4\\sqrt{3}$.",
+            "Step 3: $\\sqrt{75} = \\sqrt{25 \\times 3} = 5\\sqrt{3}$.",
+            "Step 4: $\\sqrt{27} = \\sqrt{9 \\times 3} = 3\\sqrt{3}$.",
+            "Step 5: Substitute them back: $4\\sqrt{3} + 5\\sqrt{3} - 3\\sqrt{3} = (4+5-3)\\sqrt{3} = 6\\sqrt{3}$."
+          ],
+          "final_answer": "$6\\sqrt{3}$"
+        },
+        {
+          "problem": "Rationalise the denominator: $\\frac{4}{\\sqrt{7} + \\sqrt{5}}$",
+          "solution_steps": [
+            "Step 1: Multiply numerator and denominator by the conjugate: $(\\sqrt{7} - \\sqrt{5})$.",
+            "Step 2: Denominator: $(\\sqrt{7} + \\sqrt{5})(\\sqrt{7} - \\sqrt{5}) = 7 - 5 = 2$.",
+            "Step 3: Numerator: $4(\\sqrt{7} - \\sqrt{5})$.",
+            "Step 4: Combine: $\\frac{4(\\sqrt{7} - \\sqrt{5})}{2}$.",
+            "Step 5: Cancel the 4 and 2: $2(\\sqrt{7} - \\sqrt{5})$."
+          ],
+          "final_answer": "$2(\\sqrt{7} - \\sqrt{5})$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding unlike surds.",
+          "correction": "You cannot write $\\sqrt{2} + \\sqrt{3} = \\sqrt{5}$. That is fundamentally wrong. They are unlike terms and cannot be combined, just like you cannot combine $x + y$ into $xy$."
+        },
+        {
+          "mistake": "Using the same sign for the conjugate.",
+          "correction": "If the denominator is $3 + \\sqrt{2}$, the conjugate is $3 - \\sqrt{2}$. If you multiply by $3 + \\sqrt{2}$ again, you will create a perfect square trinomial and the root will NOT disappear!"
+        }
+      ],
+      "quick_summary": [
+        "Treat surds like algebraic variables when adding/subtracting (you need 'like' terms).",
+        "Multiply numbers outside the root together, and numbers inside the root together.",
+        "Rationalise denominators by multiplying top and bottom by the Conjugate (flip the middle sign)."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check numerical evaluations and arithmetic involving surds.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t01_st11": {
+      "id": "hs_math_t01_st11",
+      "title": "Scientific notation and standard form",
+      "overview": "Scientific notation (Standard Form) is a highly efficient way to write numbers that are either astronomically huge or microscopically tiny. It allows scientists to avoid writing dozens of zeros by hiding them inside a power of 10.",
+      "key_concepts": [
+        {
+          "concept": "The Format",
+          "definition": "The Coefficient and the Base.",
+          "details": [
+            "Every non-zero real number can be written in scientific notation as $a\\times10^n$, where $n$ is an integer.",
+            "The coefficient satisfies $1\\le |a|<10$. A negative number has a negative coefficient; zero is written simply as $0$.",
+            "For example, $45\\times10^3$ is not normalized; it is written as $4.5\\times10^4$."
+          ]
+        },
+        {
+          "concept": "Positive vs Negative Exponents",
+          "definition": "Big vs Small.",
+          "details": [
+            "A positive exponent gives a number with magnitude at least $10$ when the coefficient is normalized.",
+            "A negative exponent gives a non-zero number with magnitude less than $1$ when the coefficient is normalized.",
+            "When converting ordinary notation to scientific notation, move the decimal point so the coefficient has one non-zero digit to the left of the decimal point; adjust the exponent to preserve the value."
+          ]
+        },
+        {
+          "concept": "Math with Scientific Notation",
+          "definition": "Using exponent laws.",
+          "details": [
+            "**Multiply:** Multiply the coefficients, ADD the exponents of 10.",
+            "**Divide:** Divide the coefficients, SUBTRACT the bottom exponent from the top.",
+            "**Add/Subtract:** You MUST make the powers of 10 exactly the same before you can add the coefficients."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Standard Form Normalisation",
+          "equation": "$$ 1 \\leq |a| < 10 $$",
+          "variables": {
+            "a": "Coefficient"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s11",
+          "title": "Decimal Jumps in Scientific Notation",
+          "type": "svg",
+          "caption": "Positive exponent = big number. Negative exponent = tiny decimal.",
+          "alt_text": "Visual showing two examples. Top: 45000 -> 4.5. Arrows show the decimal jumping 4 spaces left. Text: 'Jump Left 4 spaces = Positive 4 (4.5 x 10^4)'. Bottom: 0.0072 -> 7.2. Arrows show the decimal jumping 3 spaces right. Text: 'Jump Right 3 spaces = Negative 3 (7.2 x 10^-3)'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"100\" y=\"50\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\" letter-spacing=\"5\">45000.</text><path d=\"M 165 55 Q 155 70 145 55 Q 135 70 125 55 Q 115 70 105 55 Q 95 70 85 55\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"85,55 80,65 90,65\" fill=\"#3b82f6\"/><rect x=\"220\" y=\"30\" width=\"250\" height=\"35\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"345\" y=\"53\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Jump Left 4 = 4.5 × 10⁴</text><text x=\"100\" y=\"150\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\" letter-spacing=\"5\">0.0072</text><path d=\"M 85 155 Q 95 170 105 155 Q 115 170 125 155 Q 135 170 145 155\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><polygon points=\"145,155 140,165 150,165\" fill=\"#ea580c\"/><rect x=\"220\" y=\"130\" width=\"250\" height=\"35\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"5\"/><text x=\"345\" y=\"153\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">Jump Right 3 = 7.2 × 10⁻³</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate: $(3 \\times 10^4)(5 \\times 10^6)$. Express the answer in normalized scientific notation.",
+          "solution_steps": [
+            "Step 1: Multiply the coefficients: $3 \\times 5 = 15$.",
+            "Step 2: Multiply the bases (add exponents): $10^4 \\times 10^6 = 10^{4+6} = 10^{10}$.",
+            "Step 3: Combine: $15 \\times 10^{10}$.",
+            "Step 4: This is NOT normalized because $15 \\ge 10$. Move the decimal left one space ($15 \\rightarrow 1.5$) and increase the exponent by one ($10 \\rightarrow 11$)."
+          ],
+          "final_answer": "$1.5 \\times 10^{11}$"
+        },
+        {
+          "problem": "Calculate: $(4 \\times 10^6) + (3 \\times 10^5)$",
+          "solution_steps": [
+            "Step 1: You cannot add these directly because the exponents ($6$ and $5$) do not match.",
+            "Step 2: Rewrite $3 \\times 10^5$ to have an exponent of 6. Shift the decimal left one space: $0.3 \\times 10^6$.",
+            "Step 3: Now add the coefficients: $(4 + 0.3) \\times 10^6$."
+          ],
+          "final_answer": "$4.3 \\times 10^6$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Failing to normalize the final answer.",
+          "correction": "If your math results in $25 \\times 10^3$, you will lose points on a test. The coefficient MUST be between 1 and 10. Always adjust it to $2.5 \\times 10^4$."
+        },
+        {
+          "mistake": "Adding exponents during subtraction.",
+          "correction": "For Multiplication, you ADD exponents. But for Addition or Subtraction of scientific numbers, the exponents DO NOT CHANGE, they just have to be equalized first."
+        }
+      ],
+      "quick_summary": [
+        "Coefficient $a$ must be: $1 \\le |a| < 10$.",
+        "Large numbers $\\rightarrow$ positive exponent.",
+        "Decimals (0.00x) $\\rightarrow$ negative exponent.",
+        "Equalize the powers of 10 before adding or subtracting!"
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check calculations with powers of ten and scientific notation.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t01_st12": {
+      "id": "hs_math_t01_st12",
+      "title": "Approximation, significant figures and error bounds",
+      "overview": "No physical measurement is perfectly exact. Every ruler, scale, or thermometer has a limit to its precision. In high school math, we must track that uncertainty using Significant Figures, and calculate the absolute 'Error Bounds' (Upper and Lower limits) of our rounded measurements.",
+      "key_concepts": [
+        {
+          "concept": "Significant Figures (Sig Figs)",
+          "definition": "Meaningful digits.",
+          "details": [
+            "Start counting at the FIRST non-zero digit.",
+            "Any zeros squished between numbers count (e.g., $1005$ has 4 sig figs).",
+            "Trailing zeros after a decimal count, because they prove precision (e.g., $3.400$ has 4 sig figs).",
+            "Leading zeros NEVER count (e.g., $0.0045$ has 2 sig figs)."
+          ]
+        },
+        {
+          "concept": "Upper and Lower Bounds",
+          "definition": "The zone of uncertainty.",
+          "details": [
+            "If a positive measurement is rounded to the nearest unit $u$, its actual value lies from half a unit below the rounded value up to, but not including, half a unit above it under the usual round-half-up convention.",
+            "For example, a length recorded as $120\\text{ cm}$ to the nearest $10\\text{ cm}$ satisfies $115\\text{ cm}\\le L<125\\text{ cm}$.",
+            "The lower bound is $120-5=115\\text{ cm}$ and the upper bound is $120+5=125\\text{ cm}$."
+          ]
+        },
+        {
+          "concept": "Calculating Error",
+          "definition": "Absolute vs Percentage.",
+          "details": [
+            "**Absolute Error** = $| \\text{Approximate Value} - \\text{True Value} |$.",
+            "**Percentage Error** = $\\frac{\\text{Absolute Error}}{|\\text{True Value}|} \\times 100\\%$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Bounds for a rounded measurement",
+          "equation": "$$ L=x-\\frac{u}{2},\\qquad U=x+\\frac{u}{2},\\qquad L\\le t<U $$",
+          "variables": {
+            "x": "Recorded rounded value",
+            "u": "Unit to which the value was rounded",
+            "t": "Actual value (usual round-half-up convention)"
+          }
+        },
+        {
+          "name": "Percentage Error",
+          "equation": "$$ \\text{Percentage Error}=\\frac{|\\text{Approximate Value}-\\text{True Value}|}{|\\text{True Value}|}\\times100\\% $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s12",
+          "title": "Significant Figures Rules",
+          "type": "svg",
+          "caption": "Only meaningful digits are counted. Leading zeros are just placeholders.",
+          "alt_text": "Visual showing 3 examples. 1) 0.0045 -> Arrows cross out the 0s. Points to 4, 5. '2 Sig Figs (Leading Zeros don't count)'. 2) 1005 -> Points to all 4. '4 Sig Figs (Trapped Zeros count)'. 3) 3.400 -> Points to all 4. '4 Sig Figs (Trailing decimal Zeros count)'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"140\" height=\"160\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"90\" y=\"60\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">0.0045</text><line x1=\"45\" y1=\"70\" x2=\"75\" y2=\"45\" stroke=\"#ef4444\" stroke-width=\"2\"/><line x1=\"55\" y1=\"70\" x2=\"85\" y2=\"45\" stroke=\"#ef4444\" stroke-width=\"2\"/><line x1=\"65\" y1=\"70\" x2=\"95\" y2=\"45\" stroke=\"#ef4444\" stroke-width=\"2\"/><path d=\"M 90 80 L 90 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"90\" y=\"120\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">2 S.F.</text><text x=\"90\" y=\"145\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">Leading zeros</text><text x=\"90\" y=\"160\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">NEVER count</text><rect x=\"180\" y=\"20\" width=\"140\" height=\"160\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"60\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">1005</text><path d=\"M 250 80 L 250 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"250\" y=\"120\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">4 S.F.</text><text x=\"250\" y=\"145\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">Trapped zeros</text><text x=\"250\" y=\"160\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">ALWAYS count</text><rect x=\"340\" y=\"20\" width=\"140\" height=\"160\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"410\" y=\"60\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">3.400</text><path d=\"M 410 80 L 410 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"410\" y=\"120\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">4 S.F.</text><text x=\"410\" y=\"145\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">Trailing decimals</text><text x=\"410\" y=\"160\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">ALWAYS count</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Round $99,850$ to $3$ significant figures.",
+          "solution_steps": [
+            "Step 1: The first three significant digits in $99,850$ are $9$, $9$ and $8$.",
+            "Step 2: The next digit is $5$, so round the third significant digit up. The rounded value is $99,900$.",
+            "Step 3: Write the result in scientific notation to show exactly three significant figures: $9.99\\times10^4$."
+          ],
+          "final_answer": "$9.99\\times10^4$ (three significant figures)"
+        },
+        {
+          "problem": "A rectangle's length is $12\\text{ cm}$ (measured to the nearest cm) and width is $5\\text{ cm}$ (nearest cm). Find the upper bound of its area.",
+          "solution_steps": [
+            "Step 1: Length $12\\text{ cm}$ to the nearest cm has upper bound $12.5\\text{ cm}$, with $12\\le L<12.5$.",
+            "Step 2: Width $5\\text{ cm}$ to the nearest cm has upper bound $5.5\\text{ cm}$, with $4.5\\le W<5.5$.",
+            "Step 3: Both dimensions are positive, so the area is less than the product of their upper bounds: $A<12.5\\times5.5$.",
+            "Step 4: Calculate the upper bound: $12.5\\times5.5=68.75\\text{ cm}^2$."
+          ],
+          "final_answer": "Upper bound of area = $68.75\\text{ cm}^2$ (so $A<68.75\\text{ cm}^2$)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing decimal places with significant figures.",
+          "correction": "Rounding $0.004567$ to $2$ decimal places is $0.00$. Rounding it to $2$ significant figures is $0.0046$. For tiny decimal numbers, sig figs preserve the actual precision of the measurement."
+        },
+        {
+          "mistake": "Calculating minimum speed by dividing minimum distance by minimum time.",
+          "correction": "For a positive quantity such as speed $v=d/t$, the lower bound is found using the lower bound of distance and the upper bound of time: $v_{\\min}=\\frac{d_{\\min}}{t_{\\max}}$. The upper bound uses $d_{\\max}/t_{\\min}$."
+        },
+        {
+          "mistake": "Treating both bounds as included endpoints after rounding.",
+          "correction": "Under the usual round-half-up convention, a value rounded to $x$ to the nearest unit $u$ lies in $[x-u/2,\\ x+u/2)$. The upper bound is a limiting value and is not reached."
+        },
+        {
+          "mistake": "Calculating percentage error when the true value is zero.",
+          "correction": "Percentage error divides by the absolute true value, so it is undefined when the true value is zero. In that case, report absolute error instead."
+        }
+      ],
+      "quick_summary": [
+        "Significant figures begin at the first non-zero digit; captive zeros count and leading zeros do not.",
+        "For rounding to the nearest unit $u$, the usual bounds are $x-u/2\\le t<x+u/2$.",
+        "Absolute error is the absolute difference between approximate and true values.",
+        "Percentage error is defined only when the true value is non-zero.",
+        "For positive products and quotients, choose the appropriate upper/lower measurement bounds to calculate the result's bounds."
+      ]
+    }
+  }
+}

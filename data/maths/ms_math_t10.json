@@ -1,0 +1,1067 @@
+{
+  "subject": "math",
+  "topicId": "ms_math_t10",
+  "topicTitle": "Triangles, Congruence and Similarity",
+  "grade": "Middle School",
+  "subtopics": {
+    "ms_math_t10_st01": {
+      "id": "ms_math_t10_st01",
+      "title": "Classification of triangles",
+      "overview": "Every triangle can be sorted into two different families at the same time: one based on how long its sides are, and one based on how wide its angles are. Understanding these classifications is the first step to unlocking all triangle geometry.",
+      "key_concepts": [
+        {
+          "concept": "Classifying by Sides",
+          "definition": "Look at the lengths of the three edges.",
+          "details": [
+            "**Equilateral:** All 3 sides are exactly the same length.",
+            "**Isosceles:** At least 2 sides are the same length.",
+            "**Scalene:** All 3 sides are completely different lengths."
+          ]
+        },
+        {
+          "concept": "Classifying by Angles",
+          "definition": "Look at the three interior corners.",
+          "details": [
+            "**Acute-angled:** All three angles are less than $90^\\circ$.",
+            "**Right-angled:** Exactly one angle is a perfect $90^\\circ$ square corner.",
+            "**Obtuse-angled:** Exactly one angle is wider than $90^\\circ$."
+          ]
+        },
+        {
+          "concept": "Double Classification",
+          "definition": "Every triangle gets a first and last name.",
+          "details": [
+            "A triangle can be an 'Isosceles Right' triangle (two equal sides, one $90^\\circ$ angle).",
+            "However, an 'Equilateral Right' triangle is impossible, because equilateral triangles MUST have three $60^\\circ$ angles."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s01",
+          "title": "Triangle Classifications",
+          "type": "svg",
+          "caption": "Tick marks (sides) and arcs (angles) tell you which parts match.",
+          "alt_text": "Visual showing a 2x3 grid. Top row (Sides): Equilateral (3 ticks), Isosceles (2 ticks), Scalene (0 ticks). Bottom row (Angles): Acute (all <90), Right (one 90 deg box), Obtuse (one >90 arc).",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"80\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">By Sides</text><polygon points=\"50,100 80,40 110,100\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"60\" y1=\"70\" x2=\"70\" y2=\"70\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"90\" y1=\"70\" x2=\"100\" y2=\"70\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"80\" y1=\"95\" x2=\"80\" y2=\"105\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"80\" y=\"120\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">Equilateral</text><polygon points=\"200,100 230,40 260,100\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><line x1=\"210\" y1=\"70\" x2=\"220\" y2=\"70\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"240\" y1=\"70\" x2=\"250\" y2=\"70\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"230\" y=\"120\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">Isosceles</text><polygon points=\"350,100 400,60 450,100\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"400\" y=\"120\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#9a3412\">Scalene</text><text x=\"80\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">By Angles</text><polygon points=\"40,220 80,160 120,220\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"80\" y=\"240\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">Acute</text><polygon points=\"190,220 190,160 270,220\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"190\" y=\"210\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"230\" y=\"240\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">Right</text><polygon points=\"350,220 380,170 470,220\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><path d=\"M 370 220 A 15 15 0 0 1 365 205\" fill=\"none\" stroke=\"#c2410c\" stroke-width=\"2\"/><text x=\"410\" y=\"240\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#9a3412\">Obtuse</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A triangle has side lengths of $5\\text{ cm}, 5\\text{ cm},$ and $8\\text{ cm}$, and its angles are $37^\\circ, 37^\\circ,$ and $106^\\circ$. Classify it completely.",
+          "solution_steps": [
+            "Step 1: Look at the sides ($5, 5, 8$). Two sides are equal, so it is Isosceles.",
+            "Step 2: Look at the angles ($37, 37, 106$). One angle ($106^\\circ$) is greater than $90^\\circ$, so it is Obtuse."
+          ],
+          "final_answer": "Obtuse Isosceles Triangle"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking an equilateral triangle is not isosceles.",
+          "correction": "An isosceles triangle is defined as having 'AT LEAST two equal sides'. Because an equilateral triangle has three equal sides, it technically fits the definition of isosceles as well (though 'equilateral' is its most specific and preferred name)."
+        }
+      ],
+      "quick_summary": [
+        "Triangles are classified by BOTH sides (Equilateral, Isosceles, Scalene) AND angles (Acute, Right, Obtuse).",
+        "An equilateral triangle always has three $60^\\circ angles.",
+        "The longest side is always perfectly opposite the largest angle."
+      ],
+      "utilities": [
+        {
+          "title": "Interactive Triangle Calculator",
+          "description": "Explore triangle measurements and compare side lengths and angle relationships.",
+          "url": "https://onlinetoolpad.com/math/Interactive_Triangle_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t10_st13": {
+      "id": "ms_math_t10_st13",
+      "title": "Properties of triangles",
+      "overview": "This lesson brings together the main properties that explain how triangles are built, which side lengths and angles can occur, and how triangles can be compared. It is a synthesis lesson: detailed classification, angle theorems, the triangle inequality, congruence and similarity are developed in their dedicated lessons in this topic.",
+      "key_concepts": [
+        {
+          "concept": "Basic Structure",
+          "definition": "The defining parts of a triangle.",
+          "details": [
+            "Triangles are classified by their side lengths and angle sizes in **Classification of triangles**.",
+            "A triangle is a closed polygon formed by **three line segments**.",
+            "It has **three vertices**, **three sides** and **three interior angles**.",
+            "The sum of the three interior angles is $180^\\circ$; this is developed in detail in **Angle sum of a triangle** lesson."
+          ]
+        },
+        {
+          "concept": "How Sides and Opposite Angles Correspond",
+          "definition": "The relative sizes of sides and angles are linked.",
+          "details": [
+            "The **longest side** lies opposite the **largest interior angle**.",
+            "The **shortest side** lies opposite the **smallest interior angle**.",
+            "Equal sides lie opposite equal angles, and equal angles lie opposite equal sides."
+          ]
+        },
+        {
+          "concept": "Conditions for a Triangle to Exist",
+          "definition": "Three lengths must satisfy the triangle inequality.",
+          "details": [
+            "The sum of the lengths of any two sides must be greater than the length of the third side.",
+            "This condition ensures that the three segments can close to form a triangle. The Triangle Inequality lesson develops the test and the possible range of a missing side. The worked test and range of a missing side are covered in **Triangle inequality**."
+          ]
+        },
+        {
+          "concept": "Comparing Triangles",
+          "definition": "Triangle properties are used to establish exact or proportional matches.",
+          "details": [
+            "**Congruent triangles** have the same shape and size; all corresponding sides and angles are equal.",
+            "**Similar triangles** have the same shape; corresponding angles are equal and corresponding sides are proportional.",
+            "The later lessons explain the tests for congruence and similarity and how to use them to find unknown lengths. The full criteria and calculations are developed in **Congruent figures**, **Tests for triangle congruence**, **Similar figures** and **Similar triangles**."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s13",
+          "title": "A Triangle's Side-Angle Relationship",
+          "type": "svg",
+          "caption": "The longest side is opposite the largest angle; every triangle must also satisfy the triangle inequality.",
+          "alt_text": "A triangle ABC is shown with a highlighted angle at A opposite the longest side BC. Text states that the longest side is opposite the largest angle, and the sum of any two side lengths must exceed the third.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 270\">\n<rect width=\"600\" height=\"270\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"165\" y=\"26\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">Side–angle relationship</text>\n<polygon points=\"165,55 55,205 275,205\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<text x=\"165\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e3a8a\">A</text>\n<text x=\"42\" y=\"222\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e3a8a\">B</text>\n<text x=\"288\" y=\"222\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e3a8a\">C</text>\n<path d=\"M 150 75 A 28 28 0 0 1 180 75\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/>\n<text x=\"165\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#c2410c\">Largest</text>\n\n\n<rect x=\"335\" y=\"52\" width=\"235\" height=\"78\" rx=\"10\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n<text x=\"452\" y=\"82\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#14532d\">Longest side</text>\n<text x=\"452\" y=\"108\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#14532d\">is opposite the largest angle</text>\n<rect x=\"335\" y=\"148\" width=\"235\" height=\"78\" rx=\"10\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/>\n<text x=\"452\" y=\"178\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#92400e\">Triangle inequality</text>\n<text x=\"452\" y=\"204\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#92400e\">a + b &gt; c (for the longest c)</text>\n<text x=\"300\" y=\"255\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#475569\">The other triangle properties are developed in the following lessons</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Triangle ABC has side lengths $AB=5\\text{ cm}$, $BC=7\\text{ cm}$ and $CA=9\\text{ cm}$. Which interior angle is the largest, and which is the smallest?",
+          "solution_steps": [
+            "Step 1: Each side is opposite the angle at the remaining vertex.",
+            "Step 2: The longest side is $CA=9\\text{ cm}$, so the largest angle is the opposite angle $\\angle B$.",
+            "Step 3: The shortest side is $AB=5\\text{ cm}$, so the smallest angle is the opposite angle $\\angle C$."
+          ],
+          "final_answer": "Largest: $\\angle B$. Smallest: $\\angle C$."
+        },
+        {
+          "problem": "A triangle has interior angles $48^\\circ$, $62^\\circ$ and $70^\\circ$. Which side is the longest?",
+          "solution_steps": [
+            "Step 1: Identify the largest interior angle: $70^\\circ$.",
+            "Step 2: The longest side of a triangle is opposite its largest angle.",
+            "Step 3: Therefore, the side opposite the $70^\\circ$ angle is the longest."
+          ],
+          "final_answer": "The side opposite the $70^\\circ$ angle."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Matching a side with an angle at one of its endpoints.",
+          "correction": "A side is opposite the vertex that it does **not** touch. For example, side $BC$ is opposite angle $A$."
+        },
+        {
+          "mistake": "Assuming any three positive lengths can form a triangle.",
+          "correction": "The lengths must satisfy the triangle inequality: the sum of the two shorter lengths must be strictly greater than the longest length."
+        }
+      ],
+      "quick_summary": [
+        "A triangle has three sides, three vertices and three interior angles.",
+        "The interior angles sum to $180^\\circ$.",
+        "The longest side is opposite the largest angle; the shortest side is opposite the smallest angle.",
+        "The sum of any two side lengths must be greater than the third side.",
+        "Congruence compares exact size and shape; similarity compares shape and proportional side lengths."
+      ],
+      "utilities": [
+        {
+          "title": "Interactive Triangle Calculator",
+          "description": "Explore triangle measurements and compare side lengths and angle relationships.",
+          "url": "https://onlinetoolpad.com/math/Interactive_Triangle_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t10_st02": {
+      "id": "ms_math_t10_st02",
+      "title": "Angle sum of a triangle",
+      "overview": "No matter how you stretch, squash, or skew a triangle, the total amount of rotation inside its three corners is mathematically locked. The three interior angles will always add up to exactly a straight line: $180^\\circ$.",
+      "key_concepts": [
+        {
+          "concept": "The $180^\\circ$ Rule",
+          "definition": "The ironclad law of triangles.",
+          "details": [
+            "$\\angle A + \\angle B + \\angle C = 180^\\circ$."
+          ]
+        },
+        {
+          "concept": "Finding a Missing Angle",
+          "definition": "Simple subtraction.",
+          "details": [
+            "If you know two angles, add them together and subtract the total from $180^\\circ$ to find the third."
+          ]
+        },
+        {
+          "concept": "Right-Angled Shortcut",
+          "definition": "A faster way for right triangles.",
+          "details": [
+            "Since a right triangle already uses up $90^\\circ$, the remaining two acute angles must perfectly add up to the remaining $90^\\circ$. (They are complementary)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Triangle Angle Sum",
+          "equation": "$$ \\angle A + \\angle B + \\angle C = 180^\\circ $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s02",
+          "title": "The 180° Proof",
+          "type": "svg",
+          "caption": "If you tear the three corners off any triangle and place them side-by-side, they will always form a perfectly straight line.",
+          "alt_text": "Visual showing a triangle with angles a (blue), b (green), and c (red). Next to it, the three colored angles are arranged side-by-side along a flat horizontal line, forming a 180 degree semi-circle.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><polygon points=\"50,150 150,50 200,150\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"4\"/><path d=\"M 70 150 A 20 20 0 0 0 65 135\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><text x=\"75\" y=\"145\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">a</text><path d=\"M 140 60 A 20 20 0 0 1 160 70\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"4\"/><text x=\"150\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\">b</text><path d=\"M 180 150 A 20 20 0 0 1 185 120\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"4\"/><text x=\"170\" y=\"145\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#b91c1c\" font-weight=\"bold\">c</text><path d=\"M 250 120 Q 300 100 350 120\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><polygon points=\"350,120 340,115 345,125\" fill=\"#64748b\"/><line x1=\"300\" y1=\"150\" x2=\"480\" y2=\"150\" stroke=\"#1e293b\" stroke-width=\"4\"/><path d=\"M 340 150 A 50 50 0 0 1 440 150\" fill=\"#fef08a\" opacity=\"0.5\"/><path d=\"M 340 150 A 50 50 0 0 1 365 107\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><text x=\"350\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">a</text><path d=\"M 365 107 A 50 50 0 0 1 425 107\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"4\"/><text x=\"390\" y=\"120\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\">b</text><path d=\"M 425 107 A 50 50 0 0 1 440 150\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"4\"/><text x=\"420\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#b91c1c\" font-weight=\"bold\">c</text><text x=\"390\" y=\"175\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">a + b + c = 180°</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Two angles of a triangle are $65^\\circ$ and $45^\\circ$. Find the third angle.",
+          "solution_steps": [
+            "Step 1: The three interior angles of a triangle add up to $180^\\circ$.",
+            "Step 2: Add the known angles: $65^\\circ + 45^\\circ = 110^\\circ$.",
+            "Step 3: Subtract their sum from $180^\\circ$: $180^\\circ - 110^\\circ = 70^\\circ$."
+          ],
+          "final_answer": "$70^\\circ$"
+        },
+        {
+          "problem": "One angle of a right-angled triangle is $35^\\circ$. Find the third angle.",
+          "solution_steps": [
+            "Step 1: A right-angled triangle automatically has one $90^\\circ$ angle.",
+            "Step 2: The sum is $180^\\circ$. Let the missing angle be $x$.",
+            "Step 3: $90^\\circ + 35^\\circ + x = 180^\\circ$.",
+            "Step 4: $125^\\circ + x = 180^\\circ \\rightarrow x = 55^\\circ$."
+          ],
+          "final_answer": "$55^\\circ$"
+        },
+        {
+          "problem": "The three angles of a triangle are $x, 2x,$ and $3x$. Find the value of $x$.",
+          "solution_steps": [
+            "Step 1: Write the angle sum equation: $x + 2x + 3x = 180^\\circ$.",
+            "Step 2: Combine all the $x$'s: $6x = 180^\\circ$.",
+            "Step 3: Divide by $6$: $x = 30^\\circ$."
+          ],
+          "final_answer": "$30^\\circ$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Setting the sum to $360^\\circ$.",
+          "correction": "Triangles only hold $180^\\circ$. Quadrilaterals (4 sides) hold $360^\\circ$."
+        }
+      ],
+      "quick_summary": [
+        "All three interior angles sum to exactly $180^\\circ$.",
+        "Subtract the two known angles from $180^\\circ$ to find the missing angle.",
+        "A triangle can never have more than one right angle or obtuse angle, or it would break the $180^\\circ$ limit."
+      ],
+      "utilities": [
+        {
+          "title": "Interactive Triangle Calculator",
+          "description": "Explore triangle measurements and compare side lengths and angle relationships.",
+          "url": "https://onlinetoolpad.com/math/Interactive_Triangle_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t10_st03": {
+      "id": "ms_math_t10_st03",
+      "title": "Exterior angles of a triangle",
+      "overview": "If you extend one side of a triangle outward, you create an 'Exterior Angle' outside the shape. This exterior angle is magically linked to the two interior angles farthest away from it.",
+      "key_concepts": [
+        {
+          "concept": "The Exterior Angle Property",
+          "definition": "The shortcut rule.",
+          "details": [
+            "An exterior angle is exactly equal to the sum of the two opposite (remote) interior angles.",
+            "Exterior Angle $= A + B$ (where $A$ and $B$ are the angles on the far side of the triangle)."
+          ]
+        },
+        {
+          "concept": "The Straight Line Link",
+          "definition": "The neighbor rule.",
+          "details": [
+            "The exterior angle and the interior angle right next to it sit on a straight line. Therefore, they must add up to exactly $180^\\circ$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Exterior Angle Theorem",
+          "equation": "$$ \\text{Exterior Angle} = \\text{Opposite Interior 1} + \\text{Opposite Interior 2} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s03",
+          "title": "The Exterior Angle Shortcut",
+          "type": "svg",
+          "caption": "You can find the outside angle instantly by adding the two furthest inside angles.",
+          "alt_text": "Visual showing a triangle with a side extended to the right. The top interior angle is A, the left interior is B. The exterior angle on the right is labeled 'A + B'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 100 150 L 200 50 L 300 150 Z\" fill=\"#e2e8f0\" stroke=\"#1e293b\" stroke-width=\"4\"/><line x1=\"300\" y1=\"150\" x2=\"450\" y2=\"150\" stroke=\"#1e293b\" stroke-width=\"4\" stroke-dasharray=\"6,6\"/><path d=\"M 200 70 A 20 20 0 0 0 185 65\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><text x=\"190\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#1d4ed8\" font-weight=\"bold\">A</text><path d=\"M 130 150 A 20 20 0 0 1 120 130\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"4\"/><text x=\"140\" y=\"145\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#15803d\" font-weight=\"bold\">B</text><path d=\"M 320 150 A 30 30 0 0 0 310 120\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/><text x=\"340\" y=\"135\" font-family=\"sans-serif\" font-size=\"18\" fill=\"#c2410c\" font-weight=\"bold\">Exterior = A + B</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "The two opposite interior angles of a triangle are $45^\\circ$ and $70^\\circ$. Find the exterior angle.",
+          "solution_steps": [
+            "Step 1: Use the Exterior Angle Property.",
+            "Step 2: Add the two opposite (remote) interior angles.",
+            "Step 3: Exterior $= 45^\\circ + 70^\\circ = 115^\\circ$."
+          ],
+          "final_answer": "$115^\\circ$"
+        },
+        {
+          "problem": "An exterior angle of a triangle is $130^\\circ$. One opposite interior angle is $55^\\circ$. Find the other opposite interior angle.",
+          "solution_steps": [
+            "Step 1: Set up the equation: $130^\\circ = 55^\\circ + x$.",
+            "Step 2: Solve for $x$ by subtracting $55$ from $130$.",
+            "Step 3: $130^\\circ - 55^\\circ = 75^\\circ$."
+          ],
+          "final_answer": "$75^\\circ$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding the adjacent interior angle.",
+          "correction": "The exterior angle equals the sum of the TWO OPPOSITE interior angles, not the one right next to it. The one right next to it is its supplementary partner (they add to $180^\\circ$)."
+        }
+      ],
+      "quick_summary": [
+        "Exterior Angle = Sum of the two opposite interior angles.",
+        "Exterior Angle + Adjacent Interior Angle = $180^\\circ$.",
+        "If you draw all three exterior angles around a triangle, they will always sum to $360^\\circ$."
+      ],
+      "utilities": [
+        {
+          "title": "Interactive Triangle Calculator",
+          "description": "Explore triangle measurements and compare side lengths and angle relationships.",
+          "url": "https://onlinetoolpad.com/math/Interactive_Triangle_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t10_st04": {
+      "id": "ms_math_t10_st04",
+      "title": "Isosceles and equilateral triangles",
+      "overview": "While scalene triangles have no equal sides, isosceles and equilateral triangles are special families built on symmetry and equal lengths. These equal sides create a mirror effect that forces their opposite angles to be equal as well.",
+      "key_concepts": [
+        {
+          "concept": "Isosceles Triangles",
+          "definition": "At least two equal sides.",
+          "details": [
+            "Because two sides are equal, the two angles directly opposite those sides (the base angles) must also be exactly equal.",
+            "The third angle (between the two equal sides) is called the vertex angle."
+          ]
+        },
+        {
+          "concept": "Equilateral Triangles",
+          "definition": "Perfectly balanced.",
+          "details": [
+            "All three sides are exactly the same length.",
+            "All three interior angles are exactly the same size. Since $180^\\circ \\div 3 = 60^\\circ$, every angle in an equilateral triangle is ALWAYS $60^\\circ$."
+          ]
+        },
+        {
+          "concept": "The Opposite Rule",
+          "definition": "Sides and angles are linked.",
+          "details": [
+            "Equal sides are always opposite equal angles.",
+            "The longest side is always opposite the largest angle, and the shortest side is always opposite the smallest angle."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s04",
+          "title": "Symmetry in Triangles",
+          "type": "svg",
+          "caption": "Tick marks indicate equal sides, and arcs indicate equal angles.",
+          "alt_text": "Visual showing an Isosceles triangle with two equal sides and two equal base angles. Next to it, an Equilateral triangle with three equal sides and three 60° angles.",
+          "data": "<svg viewBox=\"0 0 500 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/><polygon points=\"130,40 60,160 200,160\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M 80 160 A 20 20 0 0 0 70 143\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><path d=\"M 180 160 A 20 20 0 0 1 190 143\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"85\" y1=\"100\" x2=\"100\" y2=\"105\" stroke=\"#1e3a8a\" stroke-width=\"3\"/><line x1=\"160\" y1=\"105\" x2=\"175\" y2=\"100\" stroke=\"#1e3a8a\" stroke-width=\"3\"/><text x=\"130\" y=\"190\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Isosceles</text><text x=\"130\" y=\"210\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">(2 equal sides &amp; angles)</text><polygon points=\"350,40 280,160 420,160\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"3\"/><path d=\"M 300 160 A 20 20 0 0 0 290 143\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"2\"/><path d=\"M 400 160 A 20 20 0 0 1 410 143\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"2\"/><path d=\"M 340 57 A 20 20 0 0 0 360 57\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"305\" y1=\"100\" x2=\"320\" y2=\"105\" stroke=\"#14532d\" stroke-width=\"3\"/><line x1=\"380\" y1=\"105\" x2=\"395\" y2=\"100\" stroke=\"#14532d\" stroke-width=\"3\"/><line x1=\"350\" y1=\"153\" x2=\"350\" y2=\"167\" stroke=\"#14532d\" stroke-width=\"3\"/><text x=\"350\" y=\"190\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Equilateral</text><text x=\"350\" y=\"210\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">(3 equal sides &amp; angles)</text><text x=\"350\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">60°</text><text x=\"310\" y=\"150\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">60°</text><text x=\"390\" y=\"150\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">60°</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "The vertex angle of an isosceles triangle is $40^\\circ$. Find the size of each base angle.",
+          "solution_steps": [
+            "Step 1: The total angle sum is $180^\\circ$.",
+            "Step 2: Subtract the vertex angle: $180^\\circ - 40^\\circ = 140^\\circ$.",
+            "Step 3: The two base angles are equal. Divide the remaining degrees by $2$.",
+            "Step 4: $140^\\circ \\div 2 = 70^\\circ$."
+          ],
+          "final_answer": "$70^\\circ$ each"
+        },
+        {
+          "problem": "The perimeter of an equilateral triangle is $36\\text{ cm}$. Find the length of each side.",
+          "solution_steps": [
+            "Step 1: An equilateral triangle has $3$ equal sides.",
+            "Step 2: Divide the total perimeter by $3$: $36 \\div 3 = 12$."
+          ],
+          "final_answer": "$12\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming the vertex angle is always the top angle.",
+          "correction": "The vertex angle is specifically the angle located BETWEEN the two equal sides, regardless of how the triangle is rotated on the page. The base is not always at the bottom."
+        }
+      ],
+      "quick_summary": [
+        "Equilateral triangles have $3$ equal sides and three $60^\\circ$ angles.",
+        "Isosceles triangles have $2$ equal sides and $2$ equal base angles.",
+        "To find base angles: Subtract the vertex angle from $180^\\circ$, then divide by $2$."
+      ],
+      "utilities": [
+        {
+          "title": "Interactive Triangle Calculator",
+          "description": "Explore triangle measurements and compare side lengths and angle relationships.",
+          "url": "https://onlinetoolpad.com/math/Interactive_Triangle_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t10_st05": {
+      "id": "ms_math_t10_st05",
+      "title": "Triangle inequality",
+      "overview": "You cannot just pick any three random lengths and connect them to form a triangle. The Triangle Inequality Theorem acts as a strict physical rule that determines whether three sticks can actually reach each other to form a closed shape.",
+      "key_concepts": [
+        {
+          "concept": "The Triangle Inequality Theorem",
+          "definition": "The golden rule of triangle sides.",
+          "details": [
+            "The sum of the lengths of ANY two sides of a triangle must be strictly GREATER than the length of the third side.",
+            "If the sum of the two shorter sides is equal to or less than the longest side, the three lengths cannot form a non-degenerate triangle."
+          ]
+        },
+        {
+          "concept": "The Quick Check",
+          "definition": "The fastest way to test a triangle.",
+          "details": [
+            "You don't need to check all three combinations. Just add the two SHORTEST sides together. If their sum is greater than the LONGEST side, the triangle is valid."
+          ]
+        },
+        {
+          "concept": "Finding the Range of a Missing Side",
+          "definition": "Setting the upper and lower limits.",
+          "details": [
+            "If you know two sides (e.g., $5$ and $8$), the third side ($x$) must be:",
+            "1. Less than their sum: $x < 5 + 8 \\rightarrow x < 13$",
+            "2. Greater than their difference: $x > 8 - 5 \\rightarrow x > 3$",
+            "So, the third side must be between $3$ and $13$ ($3 < x < 13$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Triangle Inequality",
+          "equation": "$$ a + b > c $$",
+          "variables": {
+            "a, b": "The two shorter sides",
+            "c": "The longest side"
+          }
+        },
+        {
+          "name": "Range of a Third Side",
+          "equation": "$$ |a - b| < x < a + b $$",
+          "variables": {
+            "a, b": "The two known sides",
+            "x": "The unknown third side"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s05",
+          "title": "Why the Inequality Matters",
+          "type": "svg",
+          "caption": "If the two short sides don't add up to more than the long side, they can never touch to form a point.",
+          "alt_text": "Visual showing a 10cm base line. Above it on the left, a 4cm line swings up. On the right, a 5cm line swings up. 4+5=9, which is less than 10, so they don't meet in the middle. Text reads '4 + 5 < 10 (Fails)'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"100\" y1=\"150\" x2=\"400\" y2=\"150\" stroke=\"#1e293b\" stroke-width=\"4\"/><circle cx=\"100\" cy=\"150\" r=\"5\" fill=\"#0f172a\"/><circle cx=\"400\" cy=\"150\" r=\"5\" fill=\"#0f172a\"/><text x=\"250\" y=\"175\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Longest Side = 10</text><line x1=\"100\" y1=\"150\" x2=\"180\" y2=\"100\" stroke=\"#ea580c\" stroke-width=\"4\"/><circle cx=\"180\" cy=\"100\" r=\"5\" fill=\"#c2410c\"/><text x=\"130\" y=\"110\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">4</text><line x1=\"400\" y1=\"150\" x2=\"280\" y2=\"100\" stroke=\"#ea580c\" stroke-width=\"4\"/><circle cx=\"280\" cy=\"100\" r=\"5\" fill=\"#c2410c\"/><text x=\"350\" y=\"110\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">5</text><path d=\"M 180 100 Q 230 60 280 100\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><text x=\"230\" y=\"50\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">4 + 5 &lt; 10 (Fails!)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Can lengths of $4\\text{ cm}, 5\\text{ cm}$, and $10\\text{ cm}$ form a triangle?",
+          "solution_steps": [
+            "Step 1: Identify the two shortest sides ($4$ and $5$).",
+            "Step 2: Add them together: $4 + 5 = 9$.",
+            "Step 3: Compare to the longest side ($10$).",
+            "Step 4: Since $9$ is NOT greater than $10$, these lengths cannot form a triangle."
+          ],
+          "final_answer": "No"
+        },
+        {
+          "problem": "Two sides of a triangle are $7\\text{ cm}$ and $10\\text{ cm}$. Find the possible range of the third side $x$.",
+          "solution_steps": [
+            "Step 1: Find the difference between the sides: $10 - 7 = 3$. This is the lower limit.",
+            "Step 2: Find the sum of the sides: $10 + 7 = 17$. This is the upper limit.",
+            "Step 3: The third side $x$ must be strictly between these two numbers."
+          ],
+          "final_answer": "$3 < x < 17$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking the sum can be EQUAL to the third side.",
+          "correction": "If $a + b = c$ (like $3, 4,$ and $7$), the two shorter sides will just lay perfectly flat on top of the long side, creating a flat line, not a triangle. The sum must be STRICTLY GREATER ($>$)."
+        }
+      ],
+      "quick_summary": [
+        "To test a triangle, check if: Short Side + Short Side > Longest Side.",
+        "The third side must be greater than the difference of the other two sides.",
+        "The third side must be less than the sum of the other two sides."
+      ],
+      "utilities": [
+        {
+          "title": "Interactive Triangle Calculator",
+          "description": "Explore triangle measurements and compare side lengths and angle relationships.",
+          "url": "https://onlinetoolpad.com/math/Interactive_Triangle_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t10_st06": {
+      "id": "ms_math_t10_st06",
+      "title": "Congruent figures",
+      "overview": "In geometry, 'congruent' is the mathematical word for an exact clone. Two figures are congruent if they are identical in both shape and size, meaning you could slide, spin, or flip one to fit perfectly on top of the other.",
+      "key_concepts": [
+        {
+          "concept": "Defining Congruence ($\\cong$)",
+          "definition": "Identical shape and size.",
+          "details": [
+            "All corresponding angles are exactly equal.",
+            "All corresponding side lengths are exactly equal.",
+            "Congruent figures can be rotated or mirrored, but their dimensions never change."
+          ]
+        },
+        {
+          "concept": "Congruence vs. Similarity",
+          "definition": "Size matters.",
+          "details": [
+            "**Similar:** Same shape, but can be scaled up or down (like zooming in on a photo).",
+            "**Congruent:** Same shape AND same size (Scale factor = $1$)."
+          ]
+        },
+        {
+          "concept": "Corresponding Parts",
+          "definition": "Matching elements up.",
+          "details": [
+            "When naming congruent triangles, the order of the letters matters immensely.",
+            "If $\\triangle ABC \\cong \\triangle PQR$, it means $A$ matches $P$, $B$ matches $Q$, and $C$ matches $R$. Furthermore, side $AB$ perfectly matches side $PQ$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s06",
+          "title": "Matching Corresponding Sides",
+          "type": "svg",
+          "caption": "Congruent triangles have equal corresponding side lengths and equal corresponding angles.",
+          "alt_text": "Two congruent triangles ABC and PQR are shown. Matching one-, two- and three-tick marks identify corresponding side pairs AB/PQ, AC/PR and BC/QR; the figures have the same size and shape.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 230\">\n<rect width=\"560\" height=\"230\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"135\" y=\"25\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e3a8a\">Triangle ABC</text>\n<polygon points=\"135,48 55,175 215,175\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<text x=\"135\" y=\"43\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e3a8a\">A</text>\n<text x=\"43\" y=\"190\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e3a8a\">B</text>\n<text x=\"227\" y=\"190\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e3a8a\">C</text>\n<!-- AB: one tick -->\n<line x1=\"89\" y1=\"115\" x2=\"101\" y2=\"122\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<!-- AC: two ticks -->\n<line x1=\"169\" y1=\"119\" x2=\"181\" y2=\"112\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<line x1=\"174\" y1=\"127\" x2=\"186\" y2=\"120\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<!-- BC: three ticks -->\n<line x1=\"128\" y1=\"169\" x2=\"128\" y2=\"181\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<line x1=\"135\" y1=\"169\" x2=\"135\" y2=\"181\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<line x1=\"142\" y1=\"169\" x2=\"142\" y2=\"181\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<text x=\"280\" y=\"121\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">Same size and shape</text>\n<text x=\"425\" y=\"25\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#14532d\">Triangle PQR</text>\n<polygon points=\"425,48 345,175 505,175\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n<text x=\"425\" y=\"43\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#14532d\">P</text>\n<text x=\"333\" y=\"190\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#14532d\">Q</text>\n<text x=\"517\" y=\"190\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#14532d\">R</text>\n<line x1=\"379\" y1=\"115\" x2=\"391\" y2=\"122\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<line x1=\"459\" y1=\"119\" x2=\"471\" y2=\"112\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<line x1=\"464\" y1=\"127\" x2=\"476\" y2=\"120\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<line x1=\"418\" y1=\"169\" x2=\"418\" y2=\"181\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<line x1=\"425\" y1=\"169\" x2=\"425\" y2=\"181\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<line x1=\"432\" y1=\"169\" x2=\"432\" y2=\"181\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<text x=\"280\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#334155\">Matching tick marks show equal corresponding sides</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $\\triangle ABC \\cong \\triangle PQR$, if $AB = 9\\text{ cm}$, what is the length of $PQ$?",
+          "solution_steps": [
+            "Step 1: Use the congruence statement to find corresponding parts. The first two letters $AB$ correspond to the first two letters $PQ$.",
+            "Step 2: Since the triangles are congruent, corresponding sides are perfectly equal in length.",
+            "Step 3: Therefore, $PQ = AB = 9\\text{ cm}$."
+          ],
+          "final_answer": "$9\\text{ cm}$"
+        },
+        {
+          "problem": "Given $\\triangle XYZ \\cong \\triangle LMN$, if $\\angle Y = 72^\\circ$, find $\\angle M$.",
+          "solution_steps": [
+            "Step 1: Check the order of letters in the names.",
+            "Step 2: $Y$ is the middle letter of $XYZ$, and $M$ is the middle letter of $LMN$.",
+            "Step 3: Because they are corresponding angles, they are equal. $\\angle M = 72^\\circ$."
+          ],
+          "final_answer": "$72^\\circ$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming figures are not congruent just because one is upside down.",
+          "correction": "Congruent figures can be rotated (spun), translated (slid), or reflected (flipped). As long as the physical dimensions (side lengths and angles) haven't changed, they are still mathematically congruent."
+        }
+      ],
+      "quick_summary": [
+        "Congruent ($\\cong$) means exactly the same shape and size.",
+        "Corresponding sides match perfectly in length.",
+        "Corresponding angles match perfectly in degrees.",
+        "The order of the letters in the triangle's name acts as a map for matching up the sides and corners."
+      ]
+    },
+    "ms_math_t10_st07": {
+      "id": "ms_math_t10_st07",
+      "title": "Tests for triangle congruence",
+      "overview": "To prove two triangles are identical, you don't need to measure all three sides and all three angles. Mathematicians have discovered five shortcut 'tests' that provide enough evidence to guarantee that two triangles are perfectly congruent.",
+      "key_concepts": [
+        {
+          "concept": "The Five Valid Tests",
+          "definition": "The shortcuts to congruence.",
+          "details": [
+            "**SSS (Side-Side-Side):** All three corresponding sides are equal.",
+            "**SAS (Side-Angle-Side):** Two sides and the angle *included directly between them* are equal.",
+            "**ASA (Angle-Side-Angle):** Two angles and the side *included directly between them* are equal.",
+            "**AAS (Angle-Angle-Side):** Two angles and a side *not* between them are equal.",
+            "**RHS / HL:** (Right angle, Hypotenuse, Side). Specific to right-angled triangles."
+          ]
+        },
+        {
+          "concept": "Included vs. Non-Included",
+          "definition": "Position matters.",
+          "details": [
+            "An **included angle** is the corner where two known sides meet (used in SAS).",
+            "An **included side** is the line connecting two known angles (used in ASA)."
+          ]
+        },
+        {
+          "concept": "The Invalid Tests",
+          "definition": "What doesn't work.",
+          "details": [
+            "**AAA (Angle-Angle-Angle):** Proves the triangles are the same shape, but one could be a zoomed-in version of the other. Proves *similarity*, not congruence.",
+            "**SSA (Side-Side-Angle):** If the angle is not between the two sides, it creates an ambiguous case where two completely different triangles could be drawn."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s07",
+          "title": "The Included Angle in SAS",
+          "type": "svg",
+          "caption": "For SAS, the equal angle lies between the two equal corresponding sides.",
+          "alt_text": "Two triangles have matching side marks and the equal included angle marked, illustrating the Side-Angle-Side congruence test.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 250\">\n<rect width=\"560\" height=\"250\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"140\" y=\"25\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e3a8a\">Triangle 1</text>\n<polygon points=\"140,45 60,165 220,165\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<line x1=\"93\" y1=\"112\" x2=\"105\" y2=\"120\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<line x1=\"133\" y1=\"159\" x2=\"133\" y2=\"171\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<line x1=\"143\" y1=\"159\" x2=\"143\" y2=\"171\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<path d=\"M 140 135 A 30 30 0 0 0 160 165\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/>\n<text x=\"420\" y=\"25\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#14532d\">Triangle 2</text>\n<polygon points=\"420,45 340,165 500,165\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n<line x1=\"373\" y1=\"112\" x2=\"385\" y2=\"120\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<line x1=\"413\" y1=\"159\" x2=\"413\" y2=\"171\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<line x1=\"423\" y1=\"159\" x2=\"423\" y2=\"171\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<path d=\"M 420 135 A 30 30 0 0 0 440 165\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/>\n<text x=\"280\" y=\"205\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" font-weight=\"bold\" fill=\"#0f172a\">Side — Included angle — Side</text>\n<text x=\"280\" y=\"230\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#475569\">The marked angle is between the two marked sides (SAS)</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Two triangles have two corresponding sides of $5\\text{ cm}$ and $8\\text{ cm}$. The included angle in each triangle is $60^\\circ$. Are the triangles congruent?",
+          "solution_steps": [
+            "Step 1: Check the given parts. We have Side ($5\\text{ cm}$), Angle ($60^\\circ$), and Side ($8\\text{ cm}$).",
+            "Step 2: The problem explicitly states the angle is 'included' (trapped between the two sides).",
+            "Step 3: This perfectly matches the SAS (Side-Angle-Side) rule."
+          ],
+          "final_answer": "Yes, they are congruent by SAS."
+        },
+        {
+          "problem": "Two right-angled triangles both have a hypotenuse of $13\\text{ cm}$ and one leg of $5\\text{ cm}$. Are they congruent?",
+          "solution_steps": [
+            "Step 1: Both triangles have a Right angle.",
+            "Step 2: Both have the same Hypotenuse ($13\\text{ cm}$).",
+            "Step 3: Both have the same matching Side ($5\\text{ cm}$).",
+            "Step 4: This matches the RHS (Right angle-Hypotenuse-Side) rule."
+          ],
+          "final_answer": "Yes, they are congruent by RHS."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking AAA is a congruence test.",
+          "correction": "If two triangles have the exact same angles ($60^\\circ, 60^\\circ, 60^\\circ$), one could have side lengths of $2$ and the other could have side lengths of $200$. AAA proves they are Similar (same shape), but not Congruent (same size)."
+        }
+      ],
+      "quick_summary": [
+        "Use SSS, SAS, ASA, AAS, or RHS to prove two triangles are exactly the same size and shape.",
+        "The order of the letters tells you where the angle/side is located (e.g., in SAS, the Angle is in the middle of the Sides).",
+        "AAA and SSA are NOT valid tests for congruence."
+      ]
+    },
+    "ms_math_t10_st08": {
+      "id": "ms_math_t10_st08",
+      "title": "Similar figures",
+      "overview": "If you take a photo and pinch your screen to zoom in or out, you are creating similar figures. Similar figures are exact proportional copies of one another—their angles remain perfectly identical, but their side lengths stretch or shrink by a specific multiplier called a scale factor. This lesson introduces similarity generally; systematic scale-factor calculations and reverse scale problems are developed in the Scale Factors lesson.",
+      "key_concepts": [
+        {
+          "concept": "Properties of Similarity",
+          "definition": "Shape is locked, size is unlocked.",
+          "details": [
+            "**1. Corresponding angles are strictly EQUAL.** (A $90^\\circ$ corner stays a $90^\\circ$ corner even if you zoom in).",
+            "**2. Corresponding sides are PROPORTIONAL.** (They all multiply by the exact same number)."
+          ]
+        },
+        {
+          "concept": "The Scale Factor ($k$)",
+          "definition": "The multiplier.",
+          "details": [
+            "Scale factor = $\\frac{\\text{New Length}}{\\text{Original Length}}$.",
+            "If $k > 1$, it is an **enlargement**. If $0 < k < 1$, it is a **reduction**. A scale factor must be positive for a non-degenerate similar figure.",
+            "If $k < 1$, it is a **reduction**."
+          ]
+        },
+        {
+          "concept": "Area and Perimeter scaling",
+          "definition": "How dimensions change.",
+          "details": [
+            "Perimeter scales exactly like the sides: $\\text{New Perimeter} = \\text{Old Perimeter} \\times k$.",
+            "Area scales by the square of the scale factor: $\\text{New Area} = \\text{Old Area} \\times k^2$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Scale Factor",
+          "equation": "$$ k = \\frac{\\text{New Length}}{\\text{Original Length}} $$",
+          "variables": {}
+        },
+        {
+          "name": "Area Scale Factor",
+          "equation": "$$ \\text{New Area} = \\text{Original Area} \\times k^2 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s08",
+          "title": "Scaling a Rectangle",
+          "type": "svg",
+          "caption": "The sides double (k=2), but the area quadruples (k²=4).",
+          "alt_text": "Visual showing a small rectangle 4 by 2, and a large rectangle 8 by 4. An arrow points from small to large labeled 'Scale factor k=2'. Inside small it says Area=8, inside large it says Area=32.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"80\" width=\"80\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"90\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\">4</text><text x=\"35\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\">2</text><text x=\"90\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Area = 8</text><path d=\"M 150 100 Q 200 70 250 100\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><polygon points=\"250,100 240,95 245,105\" fill=\"#ea580c\" transform=\"rotate(30 250 100)\"/><text x=\"200\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">Scale Factor (k) = 2</text><rect x=\"280\" y=\"60\" width=\"160\" height=\"80\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"360\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\">8</text><text x=\"265\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\">4</text><text x=\"360\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Area = 32</text><text x=\"250\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Notice: 8 × (2)² = 32</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A photograph is reduced from $24\\text{ cm}$ wide to $8\\text{ cm}$ wide. What is the scale factor?",
+          "solution_steps": [
+            "Step 1: Identify New Length ($8$) and Original Length ($24$).",
+            "Step 2: Apply the formula: $k = \\frac{\\text{New}}{\\text{Original}}$.",
+            "Step 3: $k = \\frac{8}{24} = \\frac{1}{3}$."
+          ],
+          "final_answer": "$\\frac{1}{3}$ (A reduction)"
+        },
+        {
+          "problem": "Two similar rectangles have side lengths in the ratio of $1:3$. If the smaller rectangle has an area of $10\\text{ cm}^2$, what is the area of the larger rectangle?",
+          "solution_steps": [
+            "Step 1: The linear scale factor $k$ is $3$ (from $1$ to $3$).",
+            "Step 2: The area scale factor is $k^2$. So, $3^2 = 9$.",
+            "Step 3: Multiply the original area by the area scale factor: $10 \\times 9 = 90$."
+          ],
+          "final_answer": "$90\\text{ cm}^2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying the Area by the linear scale factor.",
+          "correction": "If a shape's sides are doubled ($k=2$), its perimeter doubles, but its area QUADRUPLES ($2^2 = 4$). You must square the scale factor before multiplying the area."
+        }
+      ],
+      "quick_summary": [
+        "Similar figures have identical angles but proportional sides.",
+        "Scale Factor ($k$) = New Dimension $\\div$ Old Dimension.",
+        "For perimeter, multiply by $k$. For area, multiply by $k^2$."
+      ]
+    },
+    "ms_math_t10_st09": {
+      "id": "ms_math_t10_st09",
+      "title": "Similar triangles",
+      "overview": "Because triangles are so rigid, they have special shortcuts for proving similarity. Once you prove two triangles are similar, you can use ratios and cross-multiplication to calculate missing distances—a technique widely used in surveying, architecture, and physics.",
+      "key_concepts": [
+        {
+          "concept": "Triangle Similarity Shortcuts",
+          "definition": "AA, SAS, and SSS.",
+          "details": [
+            "**AA (Angle-Angle):** If just two angles of one triangle match two angles of another, the third MUST match (due to the $180^\\circ$ rule), making them automatically similar.",
+            "**SAS Similarity:** Two sides are proportional, and the included angle is equal.",
+            "**SSS Similarity:** All three pairs of sides are perfectly proportional."
+          ]
+        },
+        {
+          "concept": "Using Proportions",
+          "definition": "Setting up the math.",
+          "details": [
+            "If triangles are similar, you can set their matching sides up as equal fractions: $\\frac{\\text{Small Side 1}}{\\text{Big Side 1}} = \\frac{\\text{Small Side 2}}{\\text{Big Side 2}}$.",
+            "Use cross multiplication to solve for the missing piece."
+          ]
+        },
+        {
+          "concept": "Shadows and Mirrors",
+          "definition": "Real-world similarity.",
+          "details": [
+            "A person casting a shadow and a building casting a shadow at the same time form two perfect Similar Triangles."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Similarity Proportion",
+          "equation": "$$ \\frac{a_1}{a_2} = \\frac{b_1}{b_2} $$",
+          "variables": {
+            "a_1, b_1": "Sides of the first triangle",
+            "a_2, b_2": "Corresponding sides of the second triangle"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s09",
+          "title": "Corresponding Sides of Similar Triangles",
+          "type": "svg",
+          "caption": "Corresponding side lengths have the same ratio in similar triangles.",
+          "alt_text": "Two right triangles are shown at scale factor 2. Their corresponding vertical sides are 3 and 6, and their bases are 5 and x. The proportion 3/6 = 5/x gives x=10.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\">\n<rect width=\"600\" height=\"245\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"95\" y=\"25\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e3a8a\">Smaller triangle</text>\n<polygon points=\"35,170 35,110 135,170\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<path d=\"M 35 155 L 50 155 L 50 170\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<text x=\"22\" y=\"143\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#1e3a8a\" font-weight=\"bold\">3</text>\n<text x=\"85\" y=\"190\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#1e3a8a\" font-weight=\"bold\">5</text>\n<text x=\"280\" y=\"25\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#14532d\">Larger triangle</text>\n<polygon points=\"180,170 180,50 380,170\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n<path d=\"M 180 145 L 205 145 L 205 170\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n<text x=\"165\" y=\"115\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#14532d\" font-weight=\"bold\">6</text>\n<text x=\"280\" y=\"190\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#14532d\" font-weight=\"bold\">x</text>\n<text x=\"485\" y=\"80\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"21\" font-weight=\"bold\" fill=\"#0f172a\">3/6 = 5/x</text>\n<path d=\"M 450 93 L 520 115 M 520 93 L 450 115\" stroke=\"#ea580c\" stroke-width=\"2.5\" opacity=\"0.65\"/>\n<text x=\"485\" y=\"150\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" font-weight=\"bold\" fill=\"#c2410c\">3x = 30</text>\n<text x=\"485\" y=\"183\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"21\" font-weight=\"bold\" fill=\"#15803d\">x = 10</text>\n<text x=\"300\" y=\"228\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#475569\">Both triangles have the same shape; corresponding lengths are in the same ratio</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Two similar triangles have corresponding sides of $5\\text{ cm}$ and $10\\text{ cm}$. Another side of the smaller triangle is $7\\text{ cm}$. Find the corresponding side on the larger triangle.",
+          "solution_steps": [
+            "Step 1: Set up the proportion: $\\frac{\\text{Small}}{\\text{Large}} = \\frac{5}{10} = \\frac{7}{x}$.",
+            "Step 2: Cross multiply: $5 \\times x = 10 \\times 7$.",
+            "Step 3: $5x = 70$.",
+            "Step 4: Divide by $5$: $x = 14$."
+          ],
+          "final_answer": "$14\\text{ cm}$"
+        },
+        {
+          "problem": "A person who is $1.5\\text{ m}$ tall casts a shadow of $2\\text{ m}$. At the same time, a tree casts a shadow of $10\\text{ m}$. Find the tree's height.",
+          "solution_steps": [
+            "Step 1: The sun creates similar right-angled triangles. Set up the proportion: $\\frac{\\text{Height}}{\\text{Shadow}} \\rightarrow \\frac{1.5}{2} = \\frac{h}{10}$.",
+            "Step 2: Cross multiply: $2 \\times h = 1.5 \\times 10$.",
+            "Step 3: $2h = 15$.",
+            "Step 4: Divide by $2$: $h = 7.5$."
+          ],
+          "final_answer": "$7.5\\text{ m}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Mixing up the order of the fraction.",
+          "correction": "If you put the small triangle on top for the left fraction ($\\frac{\\text{Small}}{\\text{Big}}$), you MUST put the small triangle on top for the right fraction too. $\\frac{3}{6} = \\frac{x}{5}$ is wrong if $x$ is the big side."
+        }
+      ],
+      "quick_summary": [
+        "If two angles of a triangle match two angles of another, they are Similar (AA).",
+        "Set up a fraction comparing the matching sides: $\\frac{\\text{Side } A_1}{\\text{Side } A_2} = \\frac{\\text{Side } B_1}{\\text{Side } B_2}$.",
+        "Cross multiply to solve for any missing side."
+      ]
+    },
+    "ms_math_t10_st10": {
+      "id": "ms_math_t10_st10",
+      "title": "Scale factors",
+      "overview": "A scale factor is the multiplier that transforms an original figure into a new, similar figure. It tells you exactly how many times larger or smaller the new shape is compared to the original.",
+      "key_concepts": [
+        {
+          "concept": "Calculating the Scale Factor ($k$)",
+          "definition": "The ratio of the new length to the original length.",
+          "details": [
+            "Always divide the **New** dimension by the **Original** corresponding dimension.",
+            "$k = \\frac{\\text{New Length}}{\\text{Original Length}}$"
+          ]
+        },
+        {
+          "concept": "Enlargement vs. Reduction",
+          "definition": "Determining the direction of scaling.",
+          "details": [
+            "If $k > 1$, the shape is getting bigger (an **enlargement**).",
+            "If $0 < k < 1$, the shape is getting smaller (a **reduction**).",
+            "If $k = 1$, the shape stays exactly the same size (congruent)."
+          ]
+        },
+        {
+          "concept": "Scaling Area and Perimeter",
+          "definition": "How dimensions react to scaling.",
+          "details": [
+            "**Perimeter** scales exactly by $k$. (If sides double, perimeter doubles).",
+            "**Area** scales by $k^2$. (If sides double, area quadruples, because $2^2 = 4$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Linear Scale Factor",
+          "equation": "$$ k = \\frac{\\text{New Length}}{\\text{Original Length}} $$",
+          "variables": {}
+        },
+        {
+          "name": "Area Scale Factor",
+          "equation": "$$ \\text{New Area} = \\text{Original Area} \\times k^2 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s10",
+          "title": "Area Changes by the Square of the Scale Factor",
+          "type": "svg",
+          "caption": "Tripling each side multiplies the area by 3 squared, or 9.",
+          "alt_text": "A square with side 2 and area 4 is enlarged by scale factor 3 to a square with side 6 and area 36. The area factor is 3 squared, or 9.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 250\">\n<rect width=\"560\" height=\"250\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"115\" y=\"28\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e3a8a\">Original square</text>\n<rect x=\"85\" y=\"65\" width=\"60\" height=\"60\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<text x=\"115\" y=\"58\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Side = 2</text>\n<text x=\"115\" y=\"151\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4ed8\">Area = 4</text>\n<path d=\"M 180 100 C 220 55 285 55 325 100\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\" stroke-dasharray=\"6,5\"/>\n<polygon points=\"325,100 313,94 316,107\" fill=\"#ea580c\"/>\n<text x=\"252\" y=\"45\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#c2410c\">Scale factor k = 3</text>\n<text x=\"430\" y=\"28\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#14532d\">Enlarged square</text>\n<rect x=\"370\" y=\"65\" width=\"120\" height=\"120\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"3\"/>\n<text x=\"430\" y=\"58\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Side = 6</text>\n<text x=\"430\" y=\"207\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">Area = 36</text>\n<text x=\"280\" y=\"238\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">Area factor = k² = 9; 4 × 9 = 36</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A rectangle's original length is $6\\text{ cm}$. Its enlarged length is $18\\text{ cm}$. Find the scale factor.",
+          "solution_steps": [
+            "Step 1: Identify the new length ($18$) and original length ($6$).",
+            "Step 2: Use the formula: $k = \\frac{\\text{New}}{\\text{Original}}$.",
+            "Step 3: $k = \\frac{18}{6} = 3$."
+          ],
+          "final_answer": "$k = 3$"
+        },
+        {
+          "problem": "A model is $30\\text{ cm}$ long after an enlargement by a scale factor of $5$. Find the original length.",
+          "solution_steps": [
+            "Step 1: Set up the equation: $\\text{Original} \\times k = \\text{New}$.",
+            "Step 2: $\\text{Original} \\times 5 = 30$.",
+            "Step 3: Divide by $5$: $\\text{Original} = \\frac{30}{5} = 6$."
+          ],
+          "final_answer": "$6\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dividing the original by the new.",
+          "correction": "Always divide the NEW length by the OLD length. If a photo shrinks from $20\\text{ cm}$ to $10\\text{ cm}$, the scale factor is $\\frac{10}{20} = 0.5$. If you do $\\frac{20}{10}$, you get $2$, which implies it got bigger, not smaller."
+        }
+      ],
+      "quick_summary": [
+        "Scale Factor = New $\\div$ Original.",
+        "$k > 1$ means enlargement, $k < 1$ means reduction.",
+        "Area of the new shape = Original Area $\\times k^2$."
+      ]
+    },
+    "ms_math_t10_st11": {
+      "id": "ms_math_t10_st11",
+      "title": "Missing lengths in similar figures",
+      "overview": "When you know two figures are similar, their sides are locked in perfect proportion. You can use known sides to uncover missing side lengths using cross-multiplication or scale factors.",
+      "key_concepts": [
+        {
+          "concept": "Using Proportions",
+          "definition": "Setting up a fraction.",
+          "details": [
+            "Since corresponding sides share the exact same scale factor, you can set them equal to each other in a fraction: $\\frac{\\text{Small Side 1}}{\\text{Large Side 1}} = \\frac{\\text{Small Side 2}}{\\text{Large Side 2}}$.",
+            "Use **cross multiplication** to solve for the missing piece."
+          ]
+        },
+        {
+          "concept": "Orientation Traps",
+          "definition": "Don't be fooled by rotated shapes.",
+          "details": [
+            "Triangles might be flipped or spun around. Always match corresponding sides based on which angles they sit between, or by comparing the longest side of one shape to the longest side of the other."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Solving Proportions (Cross Multiplication)",
+          "equation": "$$ \\frac{a}{b} = \\frac{c}{x} \\implies a \\times x = b \\times c $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s11",
+          "title": "Solving a Proportion by Cross-Multiplication",
+          "type": "svg",
+          "caption": "Corresponding lengths must be compared in the same order.",
+          "alt_text": "A proportion 3/6 = 5/x is cross-multiplied to give 3x = 30 and x = 10.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 230\">\n<rect width=\"560\" height=\"230\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"150\" y=\"28\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#334155\">Set up the proportion</text>\n<text x=\"105\" y=\"82\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"25\" font-weight=\"bold\" fill=\"#1d4ed8\">3</text>\n<line x1=\"80\" y1=\"94\" x2=\"130\" y2=\"94\" stroke=\"#0f172a\" stroke-width=\"2.5\"/>\n<text x=\"105\" y=\"125\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"25\" font-weight=\"bold\" fill=\"#1d4ed8\">6</text>\n<text x=\"165\" y=\"103\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"25\" font-weight=\"bold\" fill=\"#0f172a\">=</text>\n<text x=\"225\" y=\"82\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"25\" font-weight=\"bold\" fill=\"#15803d\">5</text>\n<line x1=\"200\" y1=\"94\" x2=\"250\" y2=\"94\" stroke=\"#0f172a\" stroke-width=\"2.5\"/>\n<text x=\"225\" y=\"125\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"25\" font-weight=\"bold\" fill=\"#15803d\">x</text>\n<path d=\"M 105 67 L 225 137 M 225 67 L 105 137\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2.5\" opacity=\"0.7\"/>\n<text x=\"400\" y=\"82\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"23\" font-weight=\"bold\" fill=\"#0f172a\">3x = 6 × 5</text>\n<text x=\"400\" y=\"125\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"23\" font-weight=\"bold\" fill=\"#15803d\">x = 10</text>\n<text x=\"280\" y=\"185\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#475569\">Cross-multiply the numerator of each fraction by the</text>\n<text x=\"280\" y=\"205\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#475569\">denominator of the other fraction.</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Two similar rectangles have lengths of $6\\text{ cm}$ and $15\\text{ cm}$. The width of the smaller rectangle is $4\\text{ cm}$. Find the width of the larger one.",
+          "solution_steps": [
+            "Step 1: Set up a proportion comparing Widths and Lengths. $\\frac{\\text{Small Width}}{\\text{Large Width}} = \\frac{\\text{Small Length}}{\\text{Large Length}}$.",
+            "Step 2: $\\frac{4}{x} = \\frac{6}{15}$.",
+            "Step 3: Cross multiply: $6 \\times x = 4 \\times 15$.",
+            "Step 4: $6x = 60$. Divide by $6$: $x = 10$."
+          ],
+          "final_answer": "$10\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Mixing up the order of the fraction.",
+          "correction": "If you put the small shape on top for the left fraction ($\\frac{\\text{Small}}{\\text{Big}}$), you MUST put the small shape on top for the right fraction too. $\\frac{3}{6} = \\frac{x}{5}$ is wrong if $x$ is a side on the big shape."
+        }
+      ],
+      "quick_summary": [
+        "Verify the shapes are actually similar first.",
+        "Match up the corresponding sides carefully.",
+        "Create a proportion (fraction = fraction) and cross-multiply to solve for $x$."
+      ]
+    },
+    "ms_math_t10_st12": {
+      "id": "ms_math_t10_st12",
+      "title": "Applications of congruence and similarity",
+      "overview": "Geometry isn't just on paper. Congruence guarantees parts fit perfectly together in manufacturing and construction, while similarity allows us to calculate impossible-to-measure distances, like the height of a building, using maps, models, and shadows.",
+      "key_concepts": [
+        {
+          "concept": "When to Use Congruence",
+          "definition": "Exact copies.",
+          "details": [
+            "**Manufacturing:** Creating identical machine parts or mass-producing tiles.",
+            "**Geometric Proofs (CPCTC):** If you prove two triangles are congruent, you automatically know that all their Corresponding Parts of Congruent Triangles are Congruent (CPCTC)."
+          ]
+        },
+        {
+          "concept": "When to Use Similarity",
+          "definition": "Scaled versions.",
+          "details": [
+            "**Maps and Blueprints:** A scale such as $1:25{,}000$ means one unit on the map represents $25{,}000$ of the same units in the real world.",
+            "**Indirect Measurement:** Using sunlight and shadows to form similar triangles to measure things that are too tall to reach."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v10_s12",
+          "title": "Measuring Height with Shadows",
+          "type": "svg",
+          "caption": "With sunlight at the same angle, the height-to-shadow ratios are equal for the person and the tree.",
+          "alt_text": "A person 1.8 metres tall casts a 3 metre shadow; a tree of height h casts a 12 metre shadow. The sun rays are parallel, so the right triangles are similar.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 230\">\n<rect width=\"560\" height=\"230\" rx=\"12\" fill=\"#f8fafc\"/>\n<line x1=\"25\" y1=\"175\" x2=\"535\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"4\"/>\n<!-- Person: height 1.8 m, shadow 3 m; vertical/horizontal ratio 90/150 = 0.6 -->\n<circle cx=\"75\" cy=\"95\" r=\"10\" fill=\"#1e293b\"/>\n<path d=\"M 75 106 L 75 150 M 75 118 L 58 137 M 75 118 L 92 137 M 75 150 L 62 175 M 75 150 L 88 175\" stroke=\"#1e293b\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/>\n<line x1=\"75\" y1=\"175\" x2=\"225\" y2=\"175\" stroke=\"#1e293b\" stroke-width=\"3\"/>\n<path d=\"M 75 85 L 225 175\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/>\n<text x=\"52\" y=\"135\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">1.8 m</text>\n<text x=\"150\" y=\"196\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">3 m</text>\n<!-- Tree: height h, shadow 12 m; vertical/horizontal ratio 120/200 = 0.6 -->\n<path d=\"M 300 55 L 270 105 L 330 105 Z\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/>\n<rect x=\"294\" y=\"105\" width=\"12\" height=\"70\" fill=\"#15803d\"/>\n<line x1=\"300\" y1=\"175\" x2=\"500\" y2=\"175\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<path d=\"M 300 55 L 500 175\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/>\n<text x=\"282\" y=\"125\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"17\" fill=\"#14532d\" font-weight=\"bold\">h</text>\n<text x=\"400\" y=\"196\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#14532d\" font-weight=\"bold\">12 m</text>\n<!-- Sun icon -->\n<circle cx=\"280\" cy=\"28\" r=\"10\" fill=\"#fbbf24\" stroke=\"#d97706\" stroke-width=\"2\"/>\n<g stroke=\"#d97706\" stroke-width=\"2.5\">\n<line x1=\"280\" y1=\"9\" x2=\"280\" y2=\"3\"/><line x1=\"280\" y1=\"47\" x2=\"280\" y2=\"53\"/>\n<line x1=\"261\" y1=\"28\" x2=\"255\" y2=\"28\"/><line x1=\"299\" y1=\"28\" x2=\"305\" y2=\"28\"/>\n<line x1=\"267\" y1=\"15\" x2=\"262\" y2=\"10\"/><line x1=\"293\" y1=\"41\" x2=\"298\" y2=\"46\"/>\n<line x1=\"293\" y1=\"15\" x2=\"298\" y2=\"10\"/><line x1=\"267\" y1=\"41\" x2=\"262\" y2=\"46\"/>\n</g>\n<text x=\"280\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#475569\">Parallel sunlight produces the same height-to-shadow ratio</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A person who is $1.8\\text{ m}$ tall casts a shadow of $3\\text{ m}$. At the same time, a tree casts a shadow of $12\\text{ m}$. Find the tree's height.",
+          "solution_steps": [
+            "Step 1: Set up the proportion comparing Heights and Shadows. $\\frac{\\text{Person Height}}{\\text{Person Shadow}} = \\frac{\\text{Tree Height}}{\\text{Tree Shadow}}$.",
+            "Step 2: $\\frac{1.8}{3} = \\frac{h}{12}$.",
+            "Step 3: Cross multiply: $3 \\times h = 1.8 \\times 12$.",
+            "Step 4: $3h = 21.6$. Divide by $3$: $h = 7.2$."
+          ],
+          "final_answer": "$7.2\\text{ m}$"
+        },
+        {
+          "problem": "A map uses a scale of $1:25,000$. Two locations are $8\\text{ cm}$ apart on the map. Find the actual distance in kilometers.",
+          "solution_steps": [
+            "Step 1: Multiply the map distance by the scale factor: $8 \\times 25,000 = 200,000\\text{ cm}$.",
+            "Step 2: Convert centimeters to meters by dividing by $100$: $200,000 \\div 100 = 2,000\\text{ m}$.",
+            "Step 3: Convert meters to kilometers by dividing by $1000$: $2,000 \\div 1000 = 2\\text{ km}$."
+          ],
+          "final_answer": "$2\\text{ km}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting to convert units in map problems.",
+          "correction": "When you multiply $8\\text{ cm}$ by $25,000$, your answer ($200,000$) is STILL IN CENTIMETERS. Always check the required final unit (km, m, etc.) and convert accordingly."
+        }
+      ],
+      "quick_summary": [
+        "**Congruence** = Exact copies (tiles, identical manufacturing parts, geometric proofs).",
+        "**Similarity** = Scaled versions (maps, blueprints, measuring heights with shadows).",
+        "Set up proportions for similar triangles to measure things you can't reach."
+      ]
+    }
+  }
+}

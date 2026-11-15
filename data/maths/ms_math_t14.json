@@ -1,0 +1,916 @@
+{
+  "subject": "math",
+  "topicId": "ms_math_t14",
+  "topicTitle": "Probability",
+  "grade": "Middle School",
+  "subtopics": {
+    "ms_math_t14_st01": {
+      "id": "ms_math_t14_st01",
+      "title": "Understanding probability",
+      "overview": "Probability is the mathematics of chance. It measures how likely an event is to happen using a number from 0 to 1, inclusive.",
+      "key_concepts": [
+        {
+          "concept": "The Probability Scale",
+          "definition": "0 to 1.",
+          "details": [
+            "**0:** Impossible. It can never happen (e.g., rolling a 7 on a standard 6-sided die).",
+            "**1:** Certain. It is absolutely guaranteed to happen.",
+            "Any event that *might* happen falls somewhere between 0 and 1."
+          ]
+        },
+        {
+          "concept": "Equally Likely",
+          "definition": "A perfectly fair chance.",
+          "details": [
+            "Outcomes are equally likely when each has the same chance of occurring.",
+            "For a fair coin, Heads and Tails are equally likely. Each has probability $0.5$ or $\\frac{1}{2}$."
+          ]
+        },
+        {
+          "concept": "Descriptive Words",
+          "definition": "Everyday language.",
+          "details": [
+            "**Unlikely:** An event is less likely to happen than not.",
+            "**Even Chance:** The event and its complement are equally likely ($0.5$).",
+            "**Likely:** An event is more likely to happen than not."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Probability Bounds",
+          "equation": "$$ 0 \\leq P(E) \\leq 1 $$",
+          "variables": {
+            "P(E)": "The probability of an event happening"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v14_s01",
+          "title": "The Probability Number Line",
+          "type": "svg",
+          "caption": "All probabilities must live somewhere on this line between 0 and 1.",
+          "alt_text": "Visual showing a number line from 0 to 1. 0 is labeled 'Impossible'. 0.25 is labeled 'Unlikely'. 0.5 is labeled 'Even Chance'. 0.75 is labeled 'Likely'. 1 is labeled 'Certain'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"50\" y1=\"100\" x2=\"450\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"100\" r=\"6\" fill=\"#ef4444\"/><circle cx=\"150\" cy=\"100\" r=\"4\" fill=\"#1d4ed8\"/><circle cx=\"250\" cy=\"100\" r=\"6\" fill=\"#eab308\"/><circle cx=\"350\" cy=\"100\" r=\"4\" fill=\"#1d4ed8\"/><circle cx=\"450\" cy=\"100\" r=\"6\" fill=\"#22c55e\"/><text x=\"50\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">0</text><text x=\"150\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\">0.25</text><text x=\"250\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">0.5</text><text x=\"350\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\">0.75</text><text x=\"450\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">1</text><text x=\"50\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Impossible</text><text x=\"150\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">Unlikely</text><text x=\"250\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">Even Chance</text><text x=\"350\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">Likely</text><text x=\"450\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Certain</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Describe the likelihood of rolling a number greater than $6$ on a standard six-sided die.",
+          "solution_steps": [
+            "Step 1: A standard die only has the numbers $1, 2, 3, 4, 5, 6$.",
+            "Step 2: There are no numbers greater than $6$.",
+            "Step 3: Because this can never happen, the probability is $0$."
+          ],
+          "final_answer": "Impossible"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Writing a probability greater than 1.",
+          "correction": "You cannot have a probability of '1.5' or '150%'. 1 ($100\\%$) means absolute certainty. Nothing can be more certain than certain."
+        }
+      ],
+      "quick_summary": [
+        "Probability is a number between 0 and 1.",
+        "0 = Impossible.",
+        "1 = Certain.",
+        "0.5 = Even Chance (50/50)."
+      ]
+    },
+    "ms_math_t14_st02": {
+      "id": "ms_math_t14_st02",
+      "title": "Outcomes and events",
+      "overview": "To calculate probability accurately, we need precise language to separate a single physical result from the specific collection of results we actually care about.",
+      "key_concepts": [
+        {
+          "concept": "Outcomes",
+          "definition": "The raw results.",
+          "details": [
+            "An **Outcome** is a single possible result of an experiment. If you roll a die, 'rolling a 4' is one single outcome."
+          ]
+        },
+        {
+          "concept": "Events",
+          "definition": "The grouped goal.",
+          "details": [
+            "An **Event** is a specific collection of outcomes you are looking for.",
+            "If your goal is 'rolling an even number', that is an *Event*. It contains three *Outcomes* ($2, 4, 6$)."
+          ]
+        },
+        {
+          "concept": "Favorable Outcomes",
+          "definition": "The winners.",
+          "details": [
+            "Favorable outcomes are the specific outcomes that make your Event happen. If your event is 'rolling a number greater than 4', your favorable outcomes are $5$ and $6$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v14_s02",
+          "title": "Outcomes vs. Events",
+          "type": "svg",
+          "caption": "An event is like a bucket that holds the specific outcomes you want.",
+          "alt_text": "Visual showing 6 die faces (1 to 6). A blue circle loops around the 2, 4, and 6. The text says 'All 6 dice are Possible Outcomes. The circled dice are the Favorable Outcomes for the Event: Getting an Even Number.'",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"40\" y=\"80\" width=\"40\" height=\"40\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"2\" rx=\"5\"/><text x=\"60\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\">1</text><rect x=\"110\" y=\"80\" width=\"40\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\" rx=\"5\"/><text x=\"130\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">2</text><rect x=\"180\" y=\"80\" width=\"40\" height=\"40\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"2\" rx=\"5\"/><text x=\"200\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\">3</text><rect x=\"250\" y=\"80\" width=\"40\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\" rx=\"5\"/><text x=\"270\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">4</text><rect x=\"320\" y=\"80\" width=\"40\" height=\"40\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"2\" rx=\"5\"/><text x=\"340\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\">5</text><rect x=\"390\" y=\"80\" width=\"40\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\" rx=\"5\"/><text x=\"410\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">6</text><path d=\"M 100 70 Q 250 20 440 70 Q 450 140 370 140 Q 250 150 100 140 Z\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Event: \"Getting an Even Number\"</text><text x=\"250\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#64748b\">All 6 blocks are Possible Outcomes</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A standard die is rolled. List the favorable outcomes for the event 'Getting a number less than 3'.",
+          "solution_steps": [
+            "Step 1: List all possible outcomes of a die roll: $1, 2, 3, 4, 5, 6$.",
+            "Step 2: Look for the numbers strictly less than 3.",
+            "Step 3: The numbers are $1$ and $2$."
+          ],
+          "final_answer": "$\\{1, 2\\}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing an 'Outcome' with an 'Event'.",
+          "correction": "An outcome is one single result (like pulling the 3 of Hearts). An event is the rule you are looking for (like pulling *any* Red card, which contains 26 different outcomes)."
+        }
+      ],
+      "quick_summary": [
+        "Outcome = One single possible result.",
+        "Event = A collection of outcomes you care about.",
+        "Favorable Outcomes = The specific results that make your event come true."
+      ]
+    },
+    "ms_math_t14_st03": {
+      "id": "ms_math_t14_st03",
+      "title": "Sample spaces",
+      "overview": "Before you can calculate the probability of winning a game, you must know every possible way the game could end. The complete list of absolutely every possible outcome is called the Sample Space.",
+      "key_concepts": [
+        {
+          "concept": "The Sample Space ($S$)",
+          "definition": "The master list.",
+          "details": [
+            "The sample space ($S$) contains every single possible outcome of an experiment. You must list them all, without missing any or repeating any."
+          ]
+        },
+        {
+          "concept": "Set Notation",
+          "definition": "Writing it formally.",
+          "details": [
+            "We write sample spaces inside curly brackets $\\{ \\}$.",
+            "For a coin flip: $S = \\{H, T\\}$."
+          ]
+        },
+        {
+          "concept": "The Detail Matters",
+          "definition": "What are you recording?",
+          "details": [
+            "If you draw a card from a deck of 52 and only care about the suit, the sample space is $S = \\{\\text{Hearts, Diamonds, Clubs, Spades}\\}$. If you care about the exact card, the sample space has 52 items in it."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v14_s03",
+          "title": "Defining the Sample Space",
+          "type": "svg",
+          "caption": "The Sample Space contains everything. Your Event is a smaller circle inside it.",
+          "alt_text": "Visual showing a large grey box labeled 'Sample Space S = {1, 2, 3, 4, 5, 6}'. Inside the box is a smaller blue circle labeled 'Event A (Even) = {2, 4, 6}'. The numbers 1, 3, 5 are floating in the grey box outside the blue circle.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"30\" width=\"400\" height=\"140\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" stroke-width=\"3\" rx=\"10\"/><text x=\"70\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\" font-weight=\"bold\">Sample Space S = {1, 2, 3, 4, 5, 6}</text><circle cx=\"250\" cy=\"110\" r=\"50\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"250\" y=\"100\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Event A (Even)</text><text x=\"250\" y=\"120\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">2, 4, 6</text><text x=\"130\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#475569\" font-weight=\"bold\">1</text><text x=\"360\" y=\"100\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#475569\" font-weight=\"bold\">3</text><text x=\"320\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#475569\" font-weight=\"bold\">5</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Two coins are tossed and the result of each coin is recorded in order. Write the sample space.",
+          "solution_steps": [
+            "Step 1: List what can happen on the first coin (H or T).",
+            "Step 2: List what can happen on the second coin (H or T).",
+            "Step 3: Combine them into ordered pairs. (Heads then Heads, Heads then Tails, etc.)"
+          ],
+          "final_answer": "$S = \\{HH, HT, TH, TT\\}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating HT and TH as the same outcome.",
+          "correction": "If you are recording results in order, flipping Heads then Tails ($HT$) is a completely different historical event than flipping Tails then Heads ($TH$). You must list both in the sample space."
+        }
+      ],
+      "quick_summary": [
+        "Sample Space ($S$) = Every possible outcome listed out.",
+        "Use curly brackets $\\{ \\}$ to list them.",
+        "Your event outcomes are always a smaller set found inside the full Sample Space."
+      ]
+    },
+    "ms_math_t14_st04": {
+      "id": "ms_math_t14_st04",
+      "title": "Equally likely outcomes",
+      "overview": "The standard math formulas for probability only work if the game is fair. If one outcome has an unfair advantage over the others, the outcomes are not 'Equally Likely', and you cannot just divide by the total number of options.",
+      "key_concepts": [
+        {
+          "concept": "Equally Likely",
+          "definition": "A fair game.",
+          "details": [
+            "Outcomes are equally likely if every single option has the exact same mathematical chance of happening.",
+            "A perfectly balanced coin or a perfectly symmetrical 6-sided die produces equally likely outcomes."
+          ]
+        },
+        {
+          "concept": "Unequally Likely",
+          "definition": "An unfair advantage.",
+          "details": [
+            "If a spinner has 3 sections, but the Red section takes up half the circle while Blue and Green are tiny slices, landing on Red is much more likely. The outcomes are NOT equally likely."
+          ]
+        },
+        {
+          "concept": "The Theoretical Formula",
+          "definition": "Only works when fair.",
+          "details": [
+            "The classic formula $P = \\frac{\\text{Favorable Outcomes}}{\\text{Total Outcomes}}$ ONLY works if every total outcome is equally likely."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v14_s04",
+          "title": "Equally vs. Unequally Likely Spinners",
+          "type": "svg",
+          "caption": "You cannot say P(Red) = 1/3 on the second spinner just because there are 3 colors.",
+          "alt_text": "Visual showing two spinners. Left spinner is divided into 4 equal quarters (Red, Blue, Green, Yellow) - labeled 'Equally Likely'. Right spinner is divided into 3 pieces: Red is a massive half-circle, Blue and Green are small quarters - labeled 'Unequally Likely'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 150 100 L 210 100 A 60 60 0 0 0 150 40 Z\" fill=\"#ef4444\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 150 100 L 150 40 A 60 60 0 0 0 90 100 Z\" fill=\"#3b82f6\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 150 100 L 90 100 A 60 60 0 0 0 150 160 Z\" fill=\"#22c55e\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 150 100 L 150 160 A 60 60 0 0 0 210 100 Z\" fill=\"#eab308\" stroke=\"#1e293b\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"100\" r=\"4\" fill=\"#0f172a\"/><text x=\"150\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Equally Likely</text><path d=\"M 350 100 L 410 100 A 60 60 0 0 0 290 100 Z\" fill=\"#ef4444\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 350 100 L 290 100 A 60 60 0 0 0 350 160 Z\" fill=\"#3b82f6\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 350 100 L 350 160 A 60 60 0 0 0 410 100 Z\" fill=\"#22c55e\" stroke=\"#1e293b\" stroke-width=\"2\"/><circle cx=\"350\" cy=\"100\" r=\"4\" fill=\"#0f172a\"/><text x=\"350\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Unequally Likely</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "One day is selected at random from a seven-day week. Are the events 'Choosing a weekday' and 'Choosing a weekend day' equally likely?",
+          "solution_steps": [
+            "Step 1: There are $5$ weekdays and $2$ weekend days in a seven-day week.",
+            "Step 2: Because one day is selected at random, each of the seven days is equally likely to be selected.",
+            "Step 3: The probability of a weekday is $\\frac{5}{7}$, while the probability of a weekend day is $\\frac{2}{7}$.",
+            "Step 4: Since these probabilities are different, the two events are not equally likely."
+          ],
+          "final_answer": "No. $P(\\text{weekday})=\\frac{5}{7}$ and $P(\\text{weekend})=\\frac{2}{7}$, so they are not equally likely."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming all outcomes listed in a sample space are equally likely.",
+          "correction": "If a bag has 99 Red balls and 1 Blue ball, the sample space of colors is $S = \\{\\text{Red, Blue}\\}$. There are 2 colors, but the chance of picking blue is NOT $\\frac{1}{2}$. It is $\\frac{1}{100}$."
+        }
+      ],
+      "quick_summary": [
+        "Equally likely means a perfectly fair chance for every single option.",
+        "Physical size (on a spinner) or quantity (balls in a bag) dictates if things are equally likely.",
+        "You can only use the basic probability fraction if all outcomes are equally likely."
+      ]
+    },
+    "ms_math_t14_st05": {
+      "id": "ms_math_t14_st05",
+      "title": "Probability scales",
+      "overview": "A probability scale connects numerical probabilities with everyday descriptions of chance. The numerical value is exact; words such as 'unlikely' and 'likely' are descriptive and do not have universal fixed cut-offs.",
+      "key_concepts": [
+        {
+          "concept": "The 5 Key Words",
+          "definition": "Describing chance.",
+          "details": [
+            "**Impossible (0):** There is no chance of the event happening.",
+            "**Unlikely (greater than 0 and below 0.5):** The event is less likely to happen than not.",
+            "**Even Chance (0.5):** The event and its complement have equal probabilities.",
+            "**Likely (greater than 0.5 and below 1):** The event is more likely to happen than not.",
+            "**Certain (1):** The event is guaranteed to happen.",
+            "The words 'unlikely' and 'likely' are descriptions rather than rigid mathematical categories; context can affect how people use them."
+          ]
+        },
+        {
+          "concept": "The Golden Rule of Probability",
+          "definition": "The boundaries.",
+          "details": [
+            "A probability must ALWAYS be between $0$ and $1$ inclusive ($0 \\leq P(A) \\leq 1$). You can never have a negative probability, and you can never have a probability greater than $1$ (or $> 100\\%$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v14_s05",
+          "title": "The Detailed Probability Scale",
+          "type": "svg",
+          "caption": "Connecting words, fractions, decimals, and percentages on one scale.",
+          "alt_text": "Visual showing a number line from 0 to 1. Marked at 0 (Impossible, 0%), 0.25 (Unlikely, 1/4, 25%), 0.5 (Even Chance, 1/2, 50%), 0.75 (Likely, 3/4, 75%), 1 (Certain, 100%).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"50\" y1=\"100\" x2=\"450\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"100\" r=\"6\" fill=\"#ef4444\"/><circle cx=\"150\" cy=\"100\" r=\"6\" fill=\"#3b82f6\"/><circle cx=\"250\" cy=\"100\" r=\"6\" fill=\"#eab308\"/><circle cx=\"350\" cy=\"100\" r=\"6\" fill=\"#3b82f6\"/><circle cx=\"450\" cy=\"100\" r=\"6\" fill=\"#22c55e\"/><text x=\"50\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">0%</text><text x=\"150\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">25%</text><text x=\"250\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">50%</text><text x=\"350\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">75%</text><text x=\"450\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">100%</text><text x=\"50\" y=\"150\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">0</text><text x=\"150\" y=\"150\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">1/4 (0.25)</text><text x=\"250\" y=\"150\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">1/2 (0.5)</text><text x=\"350\" y=\"150\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">3/4 (0.75)</text><text x=\"450\" y=\"150\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">1</text><text x=\"50\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\" transform=\"rotate(-45 50 80)\">Impossible</text><text x=\"150\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\" transform=\"rotate(-45 150 80)\">Unlikely</text><text x=\"250\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\" transform=\"rotate(-45 250 80)\">Even Chance</text><text x=\"350\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\" transform=\"rotate(-45 350 80)\">Likely</text><text x=\"450\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\" transform=\"rotate(-45 450 80)\">Certain</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A card is selected randomly from five cards labelled A, E, I, O, and B. What is the probability of selecting a vowel, and where does it lie on the probability scale?",
+          "solution_steps": [
+            "Step 1: The possible outcomes are $5$.",
+            "Step 2: The vowels are A, E, I, and O. There are $4$ favorable outcomes.",
+            "Step 3: $P(\\text{vowel}) = \\frac{4}{5}$.",
+            "Step 4: $\\frac{4}{5}=0.8=80\\%$. Since $0.8$ is greater than $0.5$, selecting a vowel is more likely than not, so it is described as Likely."
+          ],
+          "final_answer": "$80\\%$, Likely"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking an unlikely event is impossible.",
+          "correction": "If an event has a $1\\%$ chance of happening, it is highly 'Unlikely', but it CAN still happen. Only $0\\%$ is 'Impossible'."
+        }
+      ],
+      "quick_summary": [
+        "Impossible = $0$.",
+        "Even Chance = $0.5$ ($50\\%$).",
+        "Certain = $1$ ($100\\%$).",
+        "All valid probabilities fall exactly within this $0$ to $1$ range."
+      ]
+    },
+    "ms_math_t14_st06": {
+      "id": "ms_math_t14_st06",
+      "title": "Probability as fractions, decimals and percentages",
+      "overview": "Because probability is just a way of expressing 'a piece of the whole chance', it can be written using any format that represents parts of a whole: Fractions, Decimals, or Percentages. You must be able to fluidly convert between them to compare different probabilities.",
+      "key_concepts": [
+        {
+          "concept": "The Three Faces of Probability",
+          "definition": "Identical values, different looks.",
+          "details": [
+            "$\\frac{1}{2}$ (Fraction) = $0.5$ (Decimal) = $50\\%$ (Percentage).",
+            "They all mean the exact same thing."
+          ]
+        },
+        {
+          "concept": "Converting Formats",
+          "definition": "Moving between them.",
+          "details": [
+            "**Fraction to Decimal:** Divide the top number by the bottom number (e.g., $3 \\div 4 = 0.75$).",
+            "**Decimal to Percentage:** Multiply by 100 (e.g., $0.75 \\times 100 = 75\\%$).",
+            "**Percentage to Decimal:** Divide by 100 (e.g., $20\\% \\div 100 = 0.20$)."
+          ]
+        },
+        {
+          "concept": "Comparing Probabilities",
+          "definition": "Apples to Apples.",
+          "details": [
+            "If asked which is larger between $\\frac{3}{5}$ and $55\\%$, convert them both to the same format first. $\\frac{3}{5} = 0.60 = 60\\%$. Since $60\\% > 55\\%$, the fraction is larger."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Decimal to Percentage",
+          "equation": "$$ \\text{Percentage value} = \\text{Decimal} \\times 100 $$",
+          "variables": {
+            "Decimal": "The probability written as a decimal",
+            "Percentage value": "The numerical percentage; write the % symbol after the result"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v14_s06",
+          "title": "Probability Conversion Triangle",
+          "type": "svg",
+          "caption": "How to translate between the three formats of probability.",
+          "alt_text": "Visual showing a triangle loop. Top: Fraction. Bottom Right: Decimal. Bottom Left: Percentage. Arrows show: Fraction to Decimal (Numerator ÷ Denominator). Decimal to Percentage (x 100). Percentage to Decimal (÷ 100).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"200\" y=\"20\" width=\"100\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"45\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Fraction</text><rect x=\"350\" y=\"130\" width=\"100\" height=\"40\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"400\" y=\"155\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Decimal</text><rect x=\"50\" y=\"130\" width=\"100\" height=\"40\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\" rx=\"5\"/><text x=\"100\" y=\"155\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Percentage</text><path d=\"M 280 60 Q 350 90 380 120\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"380,120 370,115 375,110\" fill=\"#94a3b8\" transform=\"rotate(30 380 120)\"/><text x=\"360\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"bold\">Num ÷ Den</text><path d=\"M 350 140 Q 250 120 160 140\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"160,140 170,135 165,130\" fill=\"#94a3b8\" transform=\"rotate(-20 160 140)\"/><text x=\"250\" y=\"125\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"bold\">× 100</text><path d=\"M 150 160 Q 250 180 340 160\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"340,160 330,165 335,170\" fill=\"#94a3b8\" transform=\"rotate(-20 340 160)\"/><text x=\"250\" y=\"185\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"bold\">÷ 100</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Event A has a probability of $0.45$. Event B has a probability of $40\\%$. Which event is more likely?",
+          "solution_steps": [
+            "Step 1: Convert Event B into a decimal to match Event A. $40\\% \\div 100 = 0.40$.",
+            "Step 2: Compare the two values: $0.45$ versus $0.40$.",
+            "Step 3: Because $0.45$ is greater than $0.40$, Event A is more likely."
+          ],
+          "final_answer": "Event A"
+        },
+        {
+          "problem": "A box contains $12$ counters: $3$ green, $5$ yellow, and $4$ blue. Find the probability of selecting a green counter as a percentage.",
+          "solution_steps": [
+            "Step 1: Find the fraction. Favorable = $3$, Total = $12$. Probability = $\\frac{3}{12}$.",
+            "Step 2: Simplify the fraction: $\\frac{3}{12} = \\frac{1}{4}$.",
+            "Step 3: Convert to decimal: $1 \\div 4 = 0.25$.",
+            "Step 4: Convert to percentage: $0.25 \\times 100 = 25\\%$."
+          ],
+          "final_answer": "$25\\%$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing 0.5 with 5%.",
+          "correction": "$0.5$ is $50\\%$. To get $5\\%$, the decimal must be $0.05$."
+        },
+        {
+          "mistake": "Multiplying by 100 to go from Percentage to Decimal.",
+          "correction": "Percentage means 'out of 100'. To remove the % sign and get a decimal, you must DIVIDE by 100."
+        }
+      ],
+      "quick_summary": [
+        "Fractions, decimals, and percentages are interchangeable ways to write probability.",
+        "Always convert all probabilities to the same format before comparing them.",
+        "Remember benchmark values: $\\frac{1}{4} = 25\\%$, $\\frac{1}{2} = 50\\%$, $\\frac{3}{4} = 75\\%$."
+      ]
+    },
+    "ms_math_t14_st07": {
+      "id": "ms_math_t14_st07",
+      "title": "Experimental probability",
+      "overview": "Math tells us a coin *should* land on Heads 50% of the time, but the real world doesn't always play by the rules of perfect math. Experimental Probability is calculated by actually doing the experiment and recording what truly happens in reality.",
+      "key_concepts": [
+        {
+          "concept": "The Real World Formula",
+          "definition": "Based on trials.",
+          "details": [
+            "Instead of looking at 'Possible Outcomes' in a perfect world, we look at 'Total Trials' (how many times we did the experiment).",
+            "$P_E = \\frac{\\text{Number of times event happened}}{\\text{Total number of trials performed}}$."
+          ]
+        },
+        {
+          "concept": "Random Variation",
+          "definition": "Short-term luck.",
+          "details": [
+            "If you flip a coin 10 times, you might get 8 Heads. This doesn't mean the coin is rigged; it is just short-term 'Random Variation' (luck)."
+          ]
+        },
+        {
+          "concept": "The Law of Large Numbers",
+          "definition": "More trials = more stability.",
+          "details": [
+            "As the number of trials increases, the relative frequency of an event tends to settle closer to its theoretical probability, provided the experiment is repeated under the same conditions.",
+            "This is described by the Law of Large Numbers. It does not mean the experimental probability must move closer after every new trial; short-term fluctuations can still occur."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Experimental Probability",
+          "equation": "$$ P_E(A) = \\frac{\\text{Number of times event A occurred}}{\\text{Total number of trials}} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v14_s07",
+          "title": "Relative Frequency Over Many Trials",
+          "type": "svg",
+          "caption": "Illustrative results fluctuate, but relative frequency tends to settle near the theoretical probability over many trials.",
+          "alt_text": "A line graph showing experimental probability changing over 10, 50, 100 and 500 coin flips, fluctuating around a horizontal theoretical probability line at 0.5.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"50\" y1=\"160\" x2=\"480\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"40\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"end\" fill=\"#64748b\">0.0</text><text x=\"40\" y=\"105\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"end\" fill=\"#15803d\" font-weight=\"bold\">0.5</text><text x=\"40\" y=\"45\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"end\" fill=\"#64748b\">1.0</text><line x1=\"50\" y1=\"100\" x2=\"480\" y2=\"100\" stroke=\"#22c55e\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"470\" y=\"91\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"end\" fill=\"#15803d\" font-weight=\"bold\">Theoretical probability = 0.5</text><path d=\"M 100 50 L 200 130 L 300 90 L 400 102\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"100\" cy=\"50\" r=\"4\" fill=\"#1d4ed8\"/><circle cx=\"200\" cy=\"130\" r=\"4\" fill=\"#1d4ed8\"/><circle cx=\"300\" cy=\"90\" r=\"4\" fill=\"#1d4ed8\"/><circle cx=\"400\" cy=\"102\" r=\"4\" fill=\"#1d4ed8\"/><text x=\"100\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">10 flips</text><text x=\"200\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">50 flips</text><text x=\"300\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">100 flips</text><text x=\"400\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">500 flips</text><text x=\"250\" y=\"20\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Relative frequency can fluctuate as trials increase</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A die is rolled $50$ times. The number $4$ appears $9$ times. Find the experimental probability of rolling a $4$, as a percentage.",
+          "solution_steps": [
+            "Step 1: Write the formula: $P_E(4) = \\frac{\\text{Frequency of 4}}{\\text{Total trials}}$.",
+            "Step 2: Substitute the values: $P_E = \\frac{9}{50}$.",
+            "Step 3: Convert to a decimal: $9 \\div 50 = 0.18$.",
+            "Step 4: Convert to a percentage: $0.18 \\times 100 = 18\\%$."
+          ],
+          "final_answer": "$18\\%$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dividing by the theoretical total outcomes instead of total trials.",
+          "correction": "If you roll a die 50 times and get a '4' 9 times, the experimental probability is $\\frac{9}{50}$, not $\\frac{9}{6}$. Always divide by how many times you actually *did* the experiment."
+        }
+      ],
+      "quick_summary": [
+        "Theoretical = What *should* happen. Experimental = What *actually* happened.",
+        "To find Experimental Probability, divide the times the event happened by the total number of trials.",
+        "More trials = more reliable results that match the theoretical math."
+      ],
+      "utilities": [
+        {
+          "title": "Dice Roller",
+          "description": "Simulate dice rolls to observe experimental results and compare them with theoretical expectations.",
+          "url": "https://onlinetoolpad.com/others/DICE_ROLLER",
+          "icon": "dice-5"
+        }
+      ]
+    },
+    "ms_math_t14_st08": {
+      "id": "ms_math_t14_st08",
+      "title": "Theoretical probability",
+      "overview": "Theoretical probability is calculated from a mathematical model without performing the experiment. For the basic favourable-outcomes-over-total formula, the individual outcomes in the sample space must be equally likely.",
+      "key_concepts": [
+        {
+          "concept": "The Golden Formula",
+          "definition": "Favorable divided by Total.",
+          "details": [
+            "If all outcomes are perfectly fair (equally likely), the probability of an event is simply the number of winning (favorable) outcomes divided by the total number of possible outcomes."
+          ]
+        },
+        {
+          "concept": "Sample Spaces & Favorable Outcomes",
+          "definition": "The pool of choices.",
+          "details": [
+            "To find theoretical probability, always start by defining your Sample Space ($S$). Count the total items. Then, count the items that make your specific event true."
+          ]
+        },
+        {
+          "concept": "Standard Probability Models",
+          "definition": "Classic examples.",
+          "details": [
+            "**Coin:** 2 outcomes (Heads, Tails).",
+            "**Die:** 6 outcomes ($1, 2, 3, 4, 5, 6$).",
+            "**Deck of Cards:** 52 outcomes (4 suits: Hearts, Diamonds, Clubs, Spades. 13 cards each)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Theoretical Probability",
+          "equation": "$$ P(A) = \\frac{\\text{Number of favorable outcomes}}{\\text{Total number of possible outcomes}} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v14_s08",
+          "title": "Theoretical Probability of a Spinner",
+          "type": "svg",
+          "caption": "P(Blue) = Favorable / Total = 3/8",
+          "alt_text": "Visual showing a spinner divided into 8 equal slices. 3 slices are Blue, 4 are Red, 1 is Yellow. Text points out P(Blue) = 3/8, P(Red) = 4/8 = 1/2.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(150, 100)\"><path d=\"M 0 0 L 60 0 A 60 60 0 0 0 42 -42 Z\" fill=\"#3b82f6\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 0 0 L 42 -42 A 60 60 0 0 0 0 -60 Z\" fill=\"#3b82f6\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 0 0 L 0 -60 A 60 60 0 0 0 -42 -42 Z\" fill=\"#ef4444\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 0 0 L -42 -42 A 60 60 0 0 0 -60 0 Z\" fill=\"#ef4444\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 0 0 L -60 0 A 60 60 0 0 0 -42 42 Z\" fill=\"#ef4444\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 0 0 L -42 42 A 60 60 0 0 0 0 60 Z\" fill=\"#ef4444\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 0 0 L 0 60 A 60 60 0 0 0 42 42 Z\" fill=\"#eab308\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 0 0 L 42 42 A 60 60 0 0 0 60 0 Z\" fill=\"#3b82f6\" stroke=\"#1e293b\" stroke-width=\"2\"/><circle cx=\"0\" cy=\"0\" r=\"3\" fill=\"#0f172a\"/></g><rect x=\"260\" y=\"40\" width=\"200\" height=\"120\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"360\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Total Slices = 8</text><text x=\"360\" y=\"100\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">P(Blue) = 3 / 8</text><text x=\"360\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">P(Red) = 4 / 8 = 1/2</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A standard six-sided die is rolled. Find the probability of rolling a prime number.",
+          "solution_steps": [
+            "Step 1: Write the sample space: $S = \\{1, 2, 3, 4, 5, 6\\}$. Total outcomes = $6$.",
+            "Step 2: Identify the prime numbers in that list. The prime numbers are $2, 3$, and $5$. (Remember, $1$ is NOT a prime number).",
+            "Step 3: Favorable outcomes = $3$.",
+            "Step 4: $P(\\text{Prime}) = \\frac{3}{6} = \\frac{1}{2}$."
+          ],
+          "final_answer": "$\\frac{1}{2}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using favorable / unfavorable instead of favorable / total.",
+          "correction": "If there are 4 Red balls and 3 Blue balls, $P(\\text{Red})$ is $\\frac{4}{7}$, NOT $\\frac{4}{3}$."
+        },
+        {
+          "mistake": "Counting 1 as a prime number.",
+          "correction": "When rolling a die, the only prime numbers are $2, 3, 5$. The number $1$ is neither prime nor composite."
+        }
+      ],
+      "quick_summary": [
+        "Theoretical probability is math's prediction of what will happen.",
+        "$P(A) = \\frac{\\text{Favorable Outcomes}}{\\text{Total Outcomes}}$.",
+        "Always simplify your fractions!"
+      ]
+    },
+    "ms_math_t14_st09": {
+      "id": "ms_math_t14_st09",
+      "title": "Complementary events",
+      "overview": "Sometimes it is incredibly difficult to calculate the probability of something happening, but very easy to calculate the probability of it NOT happening. Because an event either happens or it doesn't, those two probabilities must add up perfectly to 1 (or 100%). These are called Complementary Events.",
+      "key_concepts": [
+        {
+          "concept": "The Complement ($A'$)",
+          "definition": "Everything else.",
+          "details": [
+            "The complement of Event $A$ is written as $A'$ (read as 'A prime' or 'Not A').",
+            "If Event $A$ is 'Rolling a 6', the complement $A'$ is 'Rolling $1, 2, 3, 4,$ or $5$'."
+          ]
+        },
+        {
+          "concept": "The Rule of 1",
+          "definition": "The ultimate balance.",
+          "details": [
+            "The probability of an event plus the probability of its complement will ALWAYS equal $1$.",
+            "$P(A) + P(A') = 1$."
+          ]
+        },
+        {
+          "concept": "The 'At Least One' Trick",
+          "definition": "A powerful shortcut.",
+          "details": [
+            "Calculating the probability of getting 'at least one' of something in multiple trials can be very tedious. However, the complement of 'at least one' is 'none'.",
+            "$P(\\text{At least one}) = 1 - P(\\text{None})$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Complementary Probability",
+          "equation": "$$ P(A') = 1 - P(A) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v14_s09",
+          "title": "The Rule of 1",
+          "type": "svg",
+          "caption": "An event and its complement perfectly fill the 100% (or 1.0) probability space.",
+          "alt_text": "Visual showing a horizontal bar representing total probability of 1. It is split into two sections. The left section is blue, labeled P(A) = 0.3. The right section is green, labeled P(A') = 1 - 0.3 = 0.7.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"80\" width=\"120\" height=\"40\" fill=\"#3b82f6\"/><rect x=\"170\" y=\"80\" width=\"280\" height=\"40\" fill=\"#22c55e\"/><text x=\"110\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">P(A) = 0.3</text><text x=\"310\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">P(A') = 1 - 0.3 = 0.7</text><path d=\"M 50 135 L 50 145 L 450 145 L 450 135\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"250\" y=\"165\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Total Probability = 1.0 (100%)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A factory predicts that the probability of a randomly selected component being defective is $0.04$. Find the probability that it is NOT defective.",
+          "solution_steps": [
+            "Step 1: Write the complement formula: $P(\\text{Not defective}) = 1 - P(\\text{Defective})$.",
+            "Step 2: Substitute the value: $1 - 0.04$.",
+            "Step 3: $1 - 0.04 = 0.96$."
+          ],
+          "final_answer": "$0.96$"
+        },
+        {
+          "problem": "A bag contains $12$ balls, $5$ of which are blue. Find the probability that a selected ball is NOT blue.",
+          "solution_steps": [
+            "Step 1: Find the probability it IS blue: $P(\\text{Blue}) = \\frac{5}{12}$.",
+            "Step 2: Find the complement: $P(\\text{Not Blue}) = 1 - \\frac{5}{12}$.",
+            "Step 3: Convert $1$ to a fraction: $\\frac{12}{12} - \\frac{5}{12} = \\frac{7}{12}$."
+          ],
+          "final_answer": "$\\frac{7}{12}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Subtracting from 100 instead of 1.",
+          "correction": "If working with percentages (e.g., $35\\%$), you subtract from $100\\%$. But if working with decimals or fractions (e.g., $0.35$), you MUST subtract from $1$. Doing $100 - 0.35 = 99.65$ is completely incorrect."
+        }
+      ],
+      "quick_summary": [
+        "Complement ($A'$) means the event does NOT happen.",
+        "$P(A') = 1 - P(A)$.",
+        "If dealing with complex questions like 'at least one', finding the complement ('none') is often much faster."
+      ]
+    },
+    "ms_math_t14_st10": {
+      "id": "ms_math_t14_st10",
+      "title": "Comparing experimental and theoretical results",
+      "overview": "If the math says a coin lands on Heads 50% of the time, why did you get 7 Heads in 10 flips? This subtopic explores the friction between perfect mathematical theory and the messy, random reality of experiments.",
+      "key_concepts": [
+        {
+          "concept": "Expected Frequency",
+          "definition": "The mathematical prediction.",
+          "details": [
+            "Expected frequency is the average number of times an event is predicted to occur over a stated number of trials, according to its theoretical probability.",
+            "$\\text{Expected frequency} = \\text{Total trials} \\times \\text{Theoretical probability}$.",
+            "The expected frequency is a prediction, not a guarantee that the observed count will equal that number in one experiment."
+          ]
+        },
+        {
+          "concept": "Random Variation",
+          "definition": "Why reality is different.",
+          "details": [
+            "Small experiments almost never match the theoretical math perfectly. This is due to 'Random Variation'. It does not mean the coin or die is rigged!"
+          ]
+        },
+        {
+          "concept": "The Law of Large Numbers",
+          "definition": "Trust the process.",
+          "details": [
+            "As the number of trials increases, the experimental probability tends to settle closer to the theoretical probability when the same conditions are maintained.",
+            "This is the Law of Large Numbers. The experimental probability can still move nearer to or farther from the theoretical value after an individual trial."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Expected Frequency",
+          "equation": "$$ \\text{Expected Frequency} = n \\times P_T(A) $$",
+          "variables": {
+            "n": "Total number of trials",
+            "P_T(A)": "Theoretical probability of the event"
+          }
+        },
+        {
+          "name": "Absolute Difference",
+          "equation": "$$ \\text{Difference} = | P_E - P_T | $$",
+          "variables": {
+            "P_E": "Experimental Probability",
+            "P_T": "Theoretical Probability"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v14_s10",
+          "title": "Observed Frequencies Compared with Expected Frequencies",
+          "type": "svg",
+          "caption": "For 120 rolls of a fair die, the expected frequency for each face is 20; observed counts may differ.",
+          "alt_text": "A bar chart showing observed die-face frequencies of 18, 23, 19, 17, 25 and 18, compared with a dashed horizontal expected-frequency line at 20.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"50\" y1=\"160\" x2=\"430\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"40\" y=\"165\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"end\" fill=\"#64748b\">0</text><text x=\"40\" y=\"95\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"end\" fill=\"#64748b\">20</text><text x=\"40\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"end\" fill=\"#64748b\">40</text><line x1=\"50\" y1=\"90\" x2=\"430\" y2=\"90\" stroke=\"#22c55e\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><text x=\"495\" y=\"94\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"end\" fill=\"#15803d\" font-weight=\"bold\">Expected = 20</text><rect x=\"70\" y=\"97\" width=\"35\" height=\"63\" fill=\"#3b82f6\"/><rect x=\"130\" y=\"79.5\" width=\"35\" height=\"80.5\" fill=\"#3b82f6\"/><rect x=\"190\" y=\"93.5\" width=\"35\" height=\"66.5\" fill=\"#3b82f6\"/><rect x=\"250\" y=\"100.5\" width=\"35\" height=\"59.5\" fill=\"#3b82f6\"/><rect x=\"310\" y=\"72.5\" width=\"35\" height=\"87.5\" fill=\"#3b82f6\"/><rect x=\"370\" y=\"97\" width=\"35\" height=\"63\" fill=\"#3b82f6\"/><text x=\"87.5\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">1</text><text x=\"147.5\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">2</text><text x=\"207.5\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">3</text><text x=\"267.5\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">4</text><text x=\"327.5\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">5</text><text x=\"387.5\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">6</text><text x=\"240\" y=\"18\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Observed frequencies in 120 rolls</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A fair six-sided die is rolled $180$ times. Find the expected frequency of rolling a $3$.",
+          "solution_steps": [
+            "Step 1: Find the theoretical probability of rolling a 3: $P_T(3) = \\frac{1}{6}$.",
+            "Step 2: Multiply the theoretical probability by the total number of trials.",
+            "Step 3: $\\text{Expected Frequency} = 180 \\times \\frac{1}{6} = 30$."
+          ],
+          "final_answer": "$30$ times"
+        },
+        {
+          "problem": "A coin is tossed $80$ times. Heads appears $46$ times. Find the absolute difference between the theoretical and experimental probability of getting Heads, in decimals.",
+          "solution_steps": [
+            "Step 1: Theoretical Probability $P_T(H) = 0.5$.",
+            "Step 2: Experimental Probability $P_E(H) = \\frac{46}{80} = 0.575$.",
+            "Step 3: Find the positive difference: $|0.575 - 0.5| = 0.075$."
+          ],
+          "final_answer": "$0.075$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming a small variation means the game is rigged.",
+          "correction": "A difference between observed and expected results in a small experiment can occur through random variation. One result or a small sample is not enough on its own to establish that a coin or die is biased. Look at results from many trials and consider how the experiment was carried out."
+        }
+      ],
+      "quick_summary": [
+        "Expected Frequency predicts what *should* happen using math.",
+        "Reality rarely matches expectations perfectly due to random variation.",
+        "The Law of Large Numbers dictates that the more trials you run, the closer experimental matches theoretical."
+      ],
+      "utilities": [
+        {
+          "title": "Dice Roller",
+          "description": "Simulate dice rolls to observe experimental results and compare them with theoretical expectations.",
+          "url": "https://onlinetoolpad.com/others/DICE_ROLLER",
+          "icon": "dice-5"
+        }
+      ]
+    },
+    "ms_math_t14_st11": {
+      "id": "ms_math_t14_st11",
+      "title": "Simple two-stage experiments",
+      "overview": "Many real-world probability scenarios involve more than one step, such as flipping a coin and then rolling a die. A two-stage experiment combines the results of two separate actions into one final, complete outcome.",
+      "key_concepts": [
+        {
+          "concept": "Independent Events",
+          "definition": "The memoryless game.",
+          "details": [
+            "Two events are independent if the result of the first has absolutely no effect on the second.",
+            "If you roll a die twice, the die does not 'remember' what it rolled the first time. The probabilities stay exactly the same."
+          ]
+        },
+        {
+          "concept": "The Multiplication Rule",
+          "definition": "Finding the combined chance.",
+          "details": [
+            "For two independent events, the probability that both occur is the product of their probabilities.",
+            "For example, two tosses of a fair coin are independent: $P(\\text{Heads then Heads})=\\frac{1}{2}\\times\\frac{1}{2}=\\frac{1}{4}$.",
+            "For dependent events, the second probability must be calculated using the conditions after the first event has occurred."
+          ]
+        },
+        {
+          "concept": "Dependent Events (With/Without Replacement)",
+          "definition": "Changing the odds.",
+          "details": [
+            "With replacement, the selected object is returned before the next draw. For random draws from the same unchanged collection, this keeps the probabilities the same and makes successive draws independent.",
+            "Without replacement, the selected object is not returned. The contents of the collection change, so the probability on the next draw may change and the draws are dependent."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Probability of Independent Events",
+          "equation": "$$ P(A \\text{ and } B) = P(A) \\times P(B) $$",
+          "variables": {
+            "P(A)": "Probability that event A occurs",
+            "P(B)": "Probability that event B occurs; for independent events, it is unchanged by A"
+          }
+        },
+        {
+          "name": "Probability of Dependent Events",
+          "equation": "$$ P(A \\text{ and } B) = P(A) \\times P(B\\mid A) $$",
+          "variables": {
+            "P(A)": "Probability that event A occurs first",
+            "P(B|A)": "Probability that event B occurs after A has occurred"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v14_s11",
+          "title": "Tree Diagram for Two Coin Flips",
+          "type": "svg",
+          "caption": "Multiply along the branches to find the final probability of each sequence.",
+          "alt_text": "Visual showing a tree diagram starting from a dot. Branches to H (1/2) and T (1/2). From each, it branches again to H (1/2) and T (1/2). The 4 final outcomes are HH (1/4), HT (1/4), TH (1/4), TT (1/4).",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"50\" cy=\"125\" r=\"5\" fill=\"#0f172a\"/><path d=\"M 50 125 L 150 65\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M 50 125 L 150 185\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"100\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">1/2</text><text x=\"100\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">1/2</text><circle cx=\"160\" cy=\"60\" r=\"15\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"160\" y=\"65\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">H</text><circle cx=\"160\" cy=\"190\" r=\"15\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"160\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">T</text><path d=\"M 175 60 L 275 30\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M 175 60 L 275 90\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"225\" y=\"35\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">1/2</text><text x=\"225\" y=\"95\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">1/2</text><path d=\"M 175 190 L 275 160\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M 175 190 L 275 220\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"225\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">1/2</text><text x=\"225\" y=\"225\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">1/2</text><circle cx=\"290\" cy=\"30\" r=\"15\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"290\" y=\"35\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">H</text><circle cx=\"290\" cy=\"90\" r=\"15\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"290\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">T</text><circle cx=\"290\" cy=\"160\" r=\"15\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"290\" y=\"165\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">H</text><circle cx=\"290\" cy=\"220\" r=\"15\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"290\" y=\"225\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">T</text><rect x=\"350\" y=\"20\" width=\"120\" height=\"20\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"410\" y=\"34\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">HH = 1/4</text><rect x=\"350\" y=\"80\" width=\"120\" height=\"20\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"410\" y=\"94\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">HT = 1/4</text><rect x=\"350\" y=\"150\" width=\"120\" height=\"20\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"410\" y=\"164\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">TH = 1/4</text><rect x=\"350\" y=\"210\" width=\"120\" height=\"20\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"410\" y=\"224\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">TT = 1/4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A bag contains $3$ red counters and $2$ blue counters. Two counters are drawn one after another WITHOUT replacement. Find the probability of drawing two red counters.",
+          "solution_steps": [
+            "Step 1: Probability of red on the first draw is $\\frac{3}{5}$.",
+            "Step 2: You keep the red counter. Now there are only $2$ red counters left, and $4$ counters total.",
+            "Step 3: Probability of red on the second draw is $\\frac{2}{4}$.",
+            "Step 4: Multiply them together: $\\frac{3}{5} \\times \\frac{2}{4} = \\frac{6}{20} = \\frac{3}{10}$."
+          ],
+          "final_answer": "$\\frac{3}{10}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding probabilities along a branch instead of multiplying.",
+          "correction": "For a sequence in which both events must occur, multiply the probability of the first event by the probability of the second event given that the first has occurred. For independent events, the second probability is unchanged; for dependent events, it must be updated."
+        },
+        {
+          "mistake": "Forgetting to change the denominator when drawing 'without replacement'.",
+          "correction": "If you take an object out and don't put it back, the total number of objects left for the second draw decreases by $1$."
+        }
+      ],
+      "quick_summary": [
+        "**With Replacement:** The collection is restored before the next draw; successive random draws from the same collection are independent.",
+        "**Without Replacement:** The collection changes; successive draws are dependent and the later probability may change.",
+        "Multiply along a sequence, using the probability that applies at each stage."
+      ]
+    },
+    "ms_math_t14_st12": {
+      "id": "ms_math_t14_st12",
+      "title": "Listing possible outcomes systematically",
+      "overview": "When an experiment has multiple stages, guessing the possible outcomes randomly almost guarantees you will miss combinations or count the same one twice. Systematic listing uses organized structures to prove you have found every single possibility.",
+      "key_concepts": [
+        {
+          "concept": "The Two-Way Table",
+          "definition": "The grid method.",
+          "details": [
+            "Perfect for experiments with exactly two stages (like rolling two dice). One die goes on the top row, the other on the side column, and the grid boxes show every possible intersection."
+          ]
+        },
+        {
+          "concept": "The Tree Diagram",
+          "definition": "The branching method.",
+          "details": [
+            "Perfect for experiments with multiple consecutive choices (e.g., choosing a Shirt, then Pants, then Shoes). You follow every branch to the end to get the full list of outcomes."
+          ]
+        },
+        {
+          "concept": "The Multiplication Principle",
+          "definition": "The ultimate shortcut.",
+          "details": [
+            "If you only need to know *how many* total outcomes exist, you don't have to list them all. Just multiply the number of options at each stage.",
+            "Example: 3 shirts $\\times$ 2 pants = 6 total outfits."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "The Multiplication Principle",
+          "equation": "$$ N_{\\text{Total}} = a \\times b \\times c \\dots $$",
+          "variables": {
+            "a, b, c": "The number of choices available at each stage"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v14_s12",
+          "title": "Two-Way Table for Two Dice",
+          "type": "svg",
+          "caption": "Each cell represents one ordered pair (Die 1, Die 2), giving 6 × 6 = 36 equally likely outcomes.",
+          "alt_text": "A two-way table with Die 1 values 1 to 6 across the top and Die 2 values 1 to 6 down the side. The cell at Die 1 equals 3 and Die 2 equals 2 is highlighted and labelled (3,2). The grid represents 36 ordered outcomes.",
+          "data": "<svg viewBox=\"0 0 500 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"300\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"235\" y=\"18\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Die 1</text><text x=\"235\" y=\"292\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#475569\">Each cell is (Die 1, Die 2)</text><text x=\"24\" y=\"158\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\" transform=\"rotate(-90 24 158)\">Die 2</text><rect x=\"92\" y=\"48\" width=\"270\" height=\"186\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"137\" y1=\"48\" x2=\"137\" y2=\"234\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"92\" y1=\"79\" x2=\"362\" y2=\"79\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"182\" y1=\"48\" x2=\"182\" y2=\"234\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"92\" y1=\"110\" x2=\"362\" y2=\"110\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"227\" y1=\"48\" x2=\"227\" y2=\"234\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"92\" y1=\"141\" x2=\"362\" y2=\"141\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"272\" y1=\"48\" x2=\"272\" y2=\"234\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"92\" y1=\"172\" x2=\"362\" y2=\"172\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"317\" y1=\"48\" x2=\"317\" y2=\"234\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"92\" y1=\"203\" x2=\"362\" y2=\"203\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"114.5\" y=\"40\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">1</text><text x=\"80\" y=\"67.5\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">1</text><text x=\"159.5\" y=\"40\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2</text><text x=\"80\" y=\"98.5\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2</text><text x=\"204.5\" y=\"40\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">3</text><text x=\"80\" y=\"129.5\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">3</text><text x=\"249.5\" y=\"40\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">4</text><text x=\"80\" y=\"160.5\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">4</text><text x=\"294.5\" y=\"40\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">5</text><text x=\"80\" y=\"191.5\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">5</text><text x=\"339.5\" y=\"40\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">6</text><text x=\"80\" y=\"222.5\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">6</text><rect x=\"182\" y=\"79\" width=\"45\" height=\"31\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"204.5\" y=\"98.5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">(3,2)</text><text x=\"430\" y=\"125\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">6 × 6 = 36</text><text x=\"430\" y=\"146\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">ordered</text><text x=\"430\" y=\"164\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">outcomes</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A simple security code contains one letter chosen from A, B, and C, followed by one digit chosen from 1, 2, 3, and 4. How many different codes are possible?",
+          "solution_steps": [
+            "Step 1: Use the Multiplication Principle.",
+            "Step 2: Number of letter choices = $3$.",
+            "Step 3: Number of digit choices = $4$.",
+            "Step 4: Multiply them together: $N = 3 \\times 4 = 12$."
+          ],
+          "final_answer": "$12$ possible codes"
+        },
+        {
+          "problem": "Two fair six-sided dice are rolled. What is the probability that the sum of the numbers is greater than 10?",
+          "solution_steps": [
+            "Step 1: The total possible outcomes in the sample space is $6 \\times 6 = 36$.",
+            "Step 2: Use systematic listing to find sums greater than 10 (sums of 11 or 12).",
+            "Step 3: The only combinations are $(5,6), (6,5)$, and $(6,6)$.",
+            "Step 4: Favorable outcomes = $3$. Probability = $\\frac{3}{36} = \\frac{1}{12}$."
+          ],
+          "final_answer": "$\\frac{1}{12}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking (2, 5) and (5, 2) are the exact same outcome on two dice.",
+          "correction": "When rolling two dice, Die A showing 2 and Die B showing 5 is a different physical reality than Die A showing 5 and Die B showing 2. They are two distinct outcomes in the $36$-item sample space."
+        }
+      ],
+      "quick_summary": [
+        "Use an Organised List for simple things.",
+        "Use a Two-Way Table when combining exactly two items (like two dice).",
+        "Use a Tree Diagram to show 2+ sequential steps.",
+        "Use the Multiplication Principle ($a \\times b \\times c$) when you only need to know the total number of combinations."
+      ]
+    }
+  }
+}

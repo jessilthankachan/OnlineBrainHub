@@ -1,0 +1,1423 @@
+{
+  "subject": "math",
+  "topicId": "ms_math_t11",
+  "topicTitle": "Measurement, Perimeter, Area and Volume",
+  "grade": "Middle School",
+  "subtopics": {
+    "ms_math_t11_st01": {
+      "id": "ms_math_t11_st01",
+      "title": "Metric units and conversions",
+      "overview": "The metric system uses powers of ten for common units of length, mass and capacity. This makes conversions between units such as kilometres and metres, grams and kilograms, or litres and millilitres systematic and predictable.",
+      "key_concepts": [
+        {
+          "concept": "Common measurement units",
+          "definition": "Frequently used metric units for length, mass and capacity.",
+          "details": [
+            "**Length:** metre (m)",
+            "**Mass:** gram (g) and kilogram (kg)",
+            "**Capacity:** litre (L)"
+          ]
+        },
+        {
+          "concept": "The Prefixes",
+          "definition": "The multiplier words.",
+          "details": [
+            "**Kilo- (k):** 1,000 times bigger (1 km = 1,000 m)",
+            "**Centi- (c):** 100 times smaller (100 cm = 1 m)",
+            "**Milli- (m):** 1,000 times smaller (1,000 mm = 1 m)"
+          ]
+        },
+        {
+          "concept": "The Conversion Rule",
+          "definition": "Multiply or divide.",
+          "details": [
+            "**Large to Small Unit:** MULTIPLY (e.g., $5\\text{ m} \\times 100 = 500\\text{ cm}$). You need *more* of the smaller unit to make up the same amount.",
+            "**Small to Large Unit:** DIVIDE (e.g., $500\\text{ cm} \\div 100 = 5\\text{ m}$). You need *fewer* of the bigger unit."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s01",
+          "title": "The Metric Conversion Ladder",
+          "type": "svg",
+          "caption": "Multiply to go down (get smaller units). Divide to go up (get larger units).",
+          "alt_text": "Visual showing a 3-step ladder. Top is km, middle is m, bottom is mm. Arrows point down labeled 'x 1000' from km to m, and 'x 1000' from m to mm. Arrows point up labeled '÷ 1000' from mm to m, and '÷ 1000' from m to km. A side note shows m to cm is x100.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"80\" y=\"30\" width=\"100\" height=\"30\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"130\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">km / kg / kL</text><rect x=\"200\" y=\"85\" width=\"100\" height=\"30\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"250\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">m / g / L</text><rect x=\"320\" y=\"140\" width=\"100\" height=\"30\" fill=\"#fef08a\" rx=\"5\"/><text x=\"370\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">mm / mg / mL</text><path d=\"M 180 50 L 220 85\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><polygon points=\"220,85 210,80 215,75\" fill=\"#ea580c\" transform=\"rotate(35 220 85)\"/><text x=\"230\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#c2410c\" font-weight=\"bold\">× 1000</text><path d=\"M 200 95 L 160 60\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"160,60 170,65 165,70\" fill=\"#3b82f6\" transform=\"rotate(35 160 60)\"/><text x=\"110\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">÷ 1000</text><path d=\"M 300 105 L 340 140\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><polygon points=\"340,140 330,135 335,130\" fill=\"#ea580c\" transform=\"rotate(35 340 140)\"/><text x=\"350\" y=\"125\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#c2410c\" font-weight=\"bold\">× 1000</text><path d=\"M 320 150 L 280 115\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"280,115 290,120 285,125\" fill=\"#3b82f6\" transform=\"rotate(35 280 115)\"/><text x=\"230\" y=\"145\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">÷ 1000</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Convert $4.5\\text{ m}$ into centimeters.",
+          "solution_steps": [
+            "Step 1: Identify the conversion factor. $1\\text{ m} = 100\\text{ cm}$.",
+            "Step 2: We are going from a large unit (m) to a smaller unit (cm), so we multiply.",
+            "Step 3: $4.5 \\times 100 = 450$."
+          ],
+          "final_answer": "$450\\text{ cm}$"
+        },
+        {
+          "problem": "Convert $850\\text{ g}$ into kilograms.",
+          "solution_steps": [
+            "Step 1: Identify the conversion factor. $1,000\\text{ g} = 1\\text{ kg}$.",
+            "Step 2: We are going from a small unit (g) to a larger unit (kg), so we divide.",
+            "Step 3: $850 \\div 1000 = 0.85$."
+          ],
+          "final_answer": "$0.85\\text{ kg}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dividing when you should multiply (and vice versa).",
+          "correction": "Think about it logically: if you measure a table in meters, it might be '2'. If you measure that same table in tiny millimeters, it will be a huge number ('2000'). To get a bigger number, you must MULTIPLY when moving to a smaller unit."
+        }
+      ],
+      "quick_summary": [
+        "Kilo = 1,000. Centi = 1/100. Milli = 1/1,000.",
+        "Large $\\rightarrow$ Small Unit: Multiply (Move decimal right).",
+        "Small $\\rightarrow$ Large Unit: Divide (Move decimal left)."
+      ],
+      "utilities": [
+        {
+          "title": "Unit Converter",
+          "description": "Convert between common metric length, mass, capacity, area and volume units.",
+          "url": "https://onlinetoolpad.com/others/UNIT_CONVERTER",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t11_st02": {
+      "id": "ms_math_t11_st02",
+      "title": "Perimeter of polygons",
+      "overview": "If an ant wanted to walk exactly once around the outside edge of a shape, the total distance it travels is the perimeter. Perimeter is entirely about boundaries and outside edges, measured in standard linear units like cm or meters.",
+      "key_concepts": [
+        {
+          "concept": "The Basic Rule",
+          "definition": "Add all the outside edges.",
+          "details": [
+            "For irregular or unique shapes, simply add up the lengths of every single straight line on the outside boundary."
+          ]
+        },
+        {
+          "concept": "Regular Polygon Shortcuts",
+          "definition": "Multiplication over addition.",
+          "details": [
+            "If a shape is 'Regular', all its sides are identical.",
+            "Instead of adding $5+5+5+5+5+5$ for a regular hexagon, you can just multiply: $6 \\text{ sides} \\times 5\\text{ cm} = 30\\text{ cm}$."
+          ]
+        },
+        {
+          "concept": "Composite Shapes",
+          "definition": "Ignoring the inside.",
+          "details": [
+            "When two shapes are mashed together, DO NOT add the internal line where they touch. Perimeter is strictly the *outside* fence."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Perimeter of a Rectangle",
+          "equation": "$$ P = 2(l + w) $$",
+          "variables": {
+            "l": "length",
+            "w": "width"
+          }
+        },
+        {
+          "name": "Perimeter of a Square / Regular Polygon",
+          "equation": "$$ P = n \\times s $$",
+          "variables": {
+            "n": "number of sides",
+            "s": "side length"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s02",
+          "title": "Perimeter of a Composite Shape",
+          "type": "svg",
+          "caption": "Only count the outer boundary. The dotted inside line is NOT part of the perimeter.",
+          "alt_text": "Visual showing an L-shaped polygon. Outer sides are 10, 8, 6, 3, 4, 5. An internal dashed line separates the L into two rectangles. Text points to the dashed line saying 'Do not count this line!'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 150 160 L 350 160 L 350 100 L 250 100 L 250 40 L 150 40 Z\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"4\"/><line x1=\"250\" y1=\"100\" x2=\"250\" y2=\"160\" stroke=\"#1e293b\" stroke-width=\"2\" stroke-dasharray=\"6,6\"/><text x=\"250\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">10</text><text x=\"130\" y=\"100\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">8</text><text x=\"200\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">6</text><text x=\"235\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">3</text><text x=\"300\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">4</text><text x=\"370\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">5</text><path d=\"M 320 120 Q 400 60 450 120\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><polygon points=\"320,120 330,115 325,125\" fill=\"#ef4444\"/><text x=\"400\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Do NOT count</text><text x=\"400\" y=\"65\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">internal lines!</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A rectangular garden is $25\\text{ m}$ long and $14\\text{ m}$ wide. How much fencing is required to surround it completely?",
+          "solution_steps": [
+            "Step 1: The boundary of a rectangle is its perimeter. Use $P = 2(l + w)$.",
+            "Step 2: Add the length and width: $25 + 14 = 39$.",
+            "Step 3: Multiply by $2$: $2 \\times 39 = 78$."
+          ],
+          "final_answer": "$78\\text{ m}$"
+        },
+        {
+          "problem": "A pentagon has a total perimeter of $42\\text{ cm}$. Four of its sides measure $8\\text{ cm}, 9\\text{ cm}, 7\\text{ cm}$, and $10\\text{ cm}$. Find the length of the fifth side.",
+          "solution_steps": [
+            "Step 1: Add the lengths of all the known sides: $8 + 9 + 7 + 10 = 34\\text{ cm}$.",
+            "Step 2: Subtract this sum from the total perimeter to find what is missing.",
+            "Step 3: $42 - 34 = 8$."
+          ],
+          "final_answer": "$8\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding only two sides for a rectangle.",
+          "correction": "If a rectangle is $5$ by $4$, the perimeter is NOT $5 + 4 = 9$. It has four sides: $5 + 4 + 5 + 4 = 18$."
+        },
+        {
+          "mistake": "Writing the answer in square units.",
+          "correction": "Perimeter is a one-dimensional distance (like a piece of string). It is always measured in standard units like cm or m, never cm²."
+        }
+      ],
+      "quick_summary": [
+        "Perimeter = Total distance around the outer boundary.",
+        "Add up every single outside edge.",
+        "Rectangle trick: Add Length + Width, then double it."
+      ]
+    },
+    "ms_math_t11_st03": {
+      "id": "ms_math_t11_st03",
+      "title": "Area of rectangles and squares",
+      "overview": "While perimeter measures the fence, Area measures the grass inside. Area tells us exactly how much 2D flat space a shape covers, which is why it is always measured in 'square' units (like how many 1x1 cm squares can fit inside).",
+      "key_concepts": [
+        {
+          "concept": "The Grid Concept",
+          "definition": "Rows and Columns.",
+          "details": [
+            "If a rectangle is $5\\text{ cm}$ long and $3\\text{ cm}$ wide, you can fit $5$ squares in a row, and stack $3$ rows. $5 \\times 3 = 15$ total squares."
+          ]
+        },
+        {
+          "concept": "Working Backwards",
+          "definition": "Finding a missing side.",
+          "details": [
+            "If you know the total area and one side, use division to find the other side.",
+            "If Area = $40$ and Length = $8$, Width must be $40 \\div 8 = 5$."
+          ]
+        },
+        {
+          "concept": "Unit Matching",
+          "definition": "Apples to Apples.",
+          "details": [
+            "You cannot multiply a length in meters by a width in centimeters. You MUST convert them to the same unit before multiplying."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Area of a Rectangle",
+          "equation": "$$ A = l \\times w $$",
+          "variables": {}
+        },
+        {
+          "name": "Area of a Square",
+          "equation": "$$ A = s^2 $$",
+          "variables": {
+            "s": "side length"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s03",
+          "title": "Area as a Grid",
+          "type": "svg",
+          "caption": "A 4x3 rectangle contains exactly 12 square units.",
+          "alt_text": "Visual showing a rectangle divided into a grid. 4 columns and 3 rows. The total number of small squares inside is 12. Labels show Width=4, Height=3.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"150\" y=\"40\" width=\"200\" height=\"150\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><line x1=\"200\" y1=\"40\" x2=\"200\" y2=\"190\" stroke=\"#3b82f6\" stroke-width=\"2\"/><line x1=\"250\" y1=\"40\" x2=\"250\" y2=\"190\" stroke=\"#3b82f6\" stroke-width=\"2\"/><line x1=\"300\" y1=\"40\" x2=\"300\" y2=\"190\" stroke=\"#3b82f6\" stroke-width=\"2\"/><line x1=\"150\" y1=\"90\" x2=\"350\" y2=\"90\" stroke=\"#3b82f6\" stroke-width=\"2\"/><line x1=\"150\" y1=\"140\" x2=\"350\" y2=\"140\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"250\" y=\"30\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Length = 4</text><text x=\"130\" y=\"120\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\" transform=\"rotate(-90 130 120)\">Width = 3</text><text x=\"420\" y=\"115\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Area = 12</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A square has an area of $81\\text{ cm}^2$. Find its side length.",
+          "solution_steps": [
+            "Step 1: The formula is Area $= s^2$. So, $81 = s^2$.",
+            "Step 2: To find $s$, take the square root of $81$.",
+            "Step 3: $\\sqrt{81} = 9$."
+          ],
+          "final_answer": "$9\\text{ cm}$"
+        },
+        {
+          "problem": "A rectangular room is $5\\text{ m}$ long and $300\\text{ cm}$ wide. Find its area in square meters.",
+          "solution_steps": [
+            "Step 1: The units don't match. Convert $300\\text{ cm}$ to meters so the final answer will be in square meters.",
+            "Step 2: $300\\text{ cm} \\div 100 = 3\\text{ m}$.",
+            "Step 3: Multiply Length $\\times$ Width: $5\\text{ m} \\times 3\\text{ m} = 15$."
+          ],
+          "final_answer": "$15\\text{ m}^2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Squaring the side of a square incorrectly.",
+          "correction": "If a square has a side of $5$, the area is $5 \\times 5 = 25$. A common mistake is doing $5 \\times 2 = 10$."
+        },
+        {
+          "mistake": "Forgetting the 'square' in the final unit.",
+          "correction": "Area is always 2D space. An answer of '15 m' is a line. An answer of '15 m²' is a floor."
+        }
+      ],
+      "quick_summary": [
+        "Area $= \\text{Length} \\times \\text{Width}$.",
+        "If you have the Area and want a missing side, divide.",
+        "Always make sure both sides are measured in the exact same unit before multiplying."
+      ],
+      "utilities": [
+        {
+          "title": "Area Calculator",
+          "description": "Check area calculations for common two-dimensional shapes.",
+          "url": "https://onlinetoolpad.com/math/area_calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t11_st04": {
+      "id": "ms_math_t11_st04",
+      "title": "Area of triangles",
+      "overview": "A triangle has half the area of a parallelogram or rectangle with the same base and perpendicular height. The height is the perpendicular distance from the opposite vertex to the line containing the chosen base; for an obtuse triangle, this perpendicular may meet an extension of the base.",
+      "key_concepts": [
+        {
+          "concept": "Base and Perpendicular Height",
+          "definition": "The two measurements must meet at 90°.",
+          "details": [
+            "Any of the three sides can be chosen as the **Base**.",
+            "The **Height** is the perpendicular distance from the opposite vertex to the line containing the base. It meets the base or its extension at $90^\\circ$."
+          ]
+        },
+        {
+          "concept": "The Half-Rectangle Connection",
+          "definition": "Why the formula works.",
+          "details": [
+            "If you draw a rectangle around a triangle, the triangle fills exactly half of it. Since a rectangle's area is $b \\times h$, a triangle's area is $\\frac{1}{2} \\times b \\times h$."
+          ]
+        },
+        {
+          "concept": "Working Backwards",
+          "definition": "Finding a missing base or height.",
+          "details": [
+            "If you know the Area and the Base, you can find the Height. First, multiply the Area by 2. Then, divide by the Base. $h = \\frac{2A}{b}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Area of a Triangle",
+          "equation": "$$ A = \\frac{1}{2}bh $$",
+          "variables": {
+            "b": "Base",
+            "h": "Perpendicular Height"
+          }
+        },
+        {
+          "name": "Finding Missing Base / Height",
+          "equation": "$$ b = \\frac{2A}{h} \\quad \\text{and} \\quad h = \\frac{2A}{b} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s04",
+          "title": "Perpendicular Height is Crucial",
+          "type": "svg",
+          "caption": "The height must form a right angle with the base. Do not use the slanted sides!",
+          "alt_text": "Visual showing a triangle. The bottom side is labeled 'Base (b) = 10'. A dashed line drops straight down from the top point to the base, forming a right angle, labeled 'Height (h) = 6'. The slanted side is labeled 'Not the height!'. Area = 1/2 * 10 * 6 = 30.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><polygon points=\"100,160 300,160 200,40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"200\" y1=\"40\" x2=\"200\" y2=\"160\" stroke=\"#ef4444\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><rect x=\"200\" y=\"150\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"200\" y=\"185\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Base (b) = 10</text><text x=\"210\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"start\" fill=\"#b91c1c\" font-weight=\"bold\">Height (h) = 6</text><text x=\"130\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" transform=\"rotate(50 130 90)\">Not the height!</text><rect x=\"350\" y=\"60\" width=\"120\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"410\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A = ½ × 10 × 6</text><text x=\"410\" y=\"120\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">A = 30</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A triangle has a base of $12\\text{ cm}$ and a perpendicular height of $8\\text{ cm}$. Find its area.",
+          "solution_steps": [
+            "Step 1: Write the formula: $A = \\frac{1}{2}bh$.",
+            "Step 2: Substitute the values: $A = \\frac{1}{2} \\times 12 \\times 8$.",
+            "Step 3: Calculate: $\\frac{1}{2} \\times 96 = 48$."
+          ],
+          "final_answer": "$48\\text{ cm}^2$"
+        },
+        {
+          "problem": "A triangle has an area of $36\\text{ cm}^2$ and a perpendicular height of $9\\text{ cm}$. Find its base.",
+          "solution_steps": [
+            "Step 1: Use the rearranged formula: $b = \\frac{2A}{h}$.",
+            "Step 2: Multiply the area by 2: $2 \\times 36 = 72$.",
+            "Step 3: Divide by the height: $72 \\div 9 = 8$."
+          ],
+          "final_answer": "$8\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using a slanted side as the height.",
+          "correction": "The height must drop straight down at a $90^\\circ$ angle to the base. The slanted sides are longer than the true perpendicular height."
+        },
+        {
+          "mistake": "Forgetting to divide by 2.",
+          "correction": "Multiplying base $\\times$ height gives you the area of a rectangle. You must cut it in half to get the triangle."
+        }
+      ],
+      "quick_summary": [
+        "Area $= \\frac{1}{2} \\times \\text{base} \\times \\text{height}$.",
+        "Base and height must always meet at exactly $90^\\circ$.",
+        "To find a missing dimension, double the Area, then divide by the known dimension."
+      ],
+      "utilities": [
+        {
+          "title": "Area Calculator",
+          "description": "Check area calculations for common two-dimensional shapes.",
+          "url": "https://onlinetoolpad.com/math/area_calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t11_st05": {
+      "id": "ms_math_t11_st05",
+      "title": "Area of parallelograms",
+      "overview": "A parallelogram can be rearranged into a rectangle without changing its area. Its area is therefore the base multiplied by the perpendicular height, not by a sloping side.",
+      "key_concepts": [
+        {
+          "concept": "Base and Perpendicular Height",
+          "definition": "The 90° rule applies here too.",
+          "details": [
+            "Choose any side as the **Base**.",
+            "The **Height** is the perpendicular distance between the chosen base and its opposite parallel side. It meets the base at $90^\\circ$; it is not necessarily the sloping side."
+          ]
+        },
+        {
+          "concept": "The Rectangle Connection",
+          "definition": "Why $A = b \\times h$ works.",
+          "details": [
+            "Because a parallelogram can be rearranged into a rectangle without adding or removing any area, we calculate its area exactly like a rectangle: simply multiply the base by the straight height."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Area of a Parallelogram",
+          "equation": "$$ A = b \\times h $$",
+          "variables": {
+            "b": "Base",
+            "h": "Perpendicular Height"
+          }
+        },
+        {
+          "name": "Finding Missing Base / Height",
+          "equation": "$$ b = \\frac{A}{h} \\quad \\text{and} \\quad h = \\frac{A}{b} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s05",
+          "title": "The Slanted Rectangle",
+          "type": "svg",
+          "caption": "Do not use the slanted side (5) to find the area. Use the straight height (4).",
+          "alt_text": "Visual showing a parallelogram. Base is 10. The slanted side is labeled 5 with a red 'X'. A dashed straight vertical line drops down labeled Height=4. Area = 10 * 4 = 40.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><polygon points=\"100,160 300,160 350,60 150,60\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"200\" y=\"185\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Base = 10</text><text x=\"100\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">Slant = 5</text><line x1=\"80\" y1=\"115\" x2=\"120\" y2=\"95\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"80\" y1=\"95\" x2=\"120\" y2=\"115\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"150\" y1=\"60\" x2=\"150\" y2=\"160\" stroke=\"#1d4ed8\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><rect x=\"150\" y=\"150\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"185\" y=\"115\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Height = 4</text><rect x=\"380\" y=\"60\" width=\"100\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"430\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A = 10 × 4</text><text x=\"430\" y=\"120\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">A = 40</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A parallelogram has a base of $10\\text{ cm}$ and a perpendicular height of $6\\text{ cm}$. Find its area.",
+          "solution_steps": [
+            "Step 1: Write the formula: $A = b \\times h$.",
+            "Step 2: Substitute the values: $A = 10 \\times 6$."
+          ],
+          "final_answer": "$60\\text{ cm}^2$"
+        },
+        {
+          "problem": "The area of a parallelogram is $120\\text{ cm}^2$, and its perpendicular height is $10\\text{ cm}$. Find its base.",
+          "solution_steps": [
+            "Step 1: Use the rearranged formula: $b = \\frac{A}{h}$.",
+            "Step 2: Divide the area by the height: $120 \\div 10 = 12$."
+          ],
+          "final_answer": "$12\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying the base by the slanted side.",
+          "correction": "This is the most common trap! The slanted side gives you the perimeter, but Area requires the true, straight-up perpendicular height."
+        }
+      ],
+      "quick_summary": [
+        "Area $= \\text{Base} \\times \\text{Perpendicular Height}$.",
+        "A parallelogram has double the area of a triangle with the exact same base and height.",
+        "Always hunt for the $90^\\circ$ line to find your true height."
+      ],
+      "utilities": [
+        {
+          "title": "Area Calculator",
+          "description": "Check area calculations for common two-dimensional shapes.",
+          "url": "https://onlinetoolpad.com/math/area_calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t11_st06": {
+      "id": "ms_math_t11_st06",
+      "title": "Area of trapeziums/trapezoids",
+      "overview": "A trapezium/trapezoid, as the term is used in this lesson, is a quadrilateral with one pair of parallel sides. The area is found by multiplying the perpendicular height by the average of the two parallel sides. Terminology differs between countries, so always check the definition used in a particular course or textbook.",
+      "key_concepts": [
+        {
+          "concept": "The Parallel Bases ($a$ and $b$)",
+          "definition": "The unequal pair.",
+          "details": [
+            "The two parallel sides are called the **bases**, usually labelled $a$ and $b$.",
+            "In this lesson, “trapezium/trapezoid” refers to a quadrilateral with exactly one pair of parallel sides. Some textbooks use “trapezoid” more broadly, so follow the stated course definition.",
+            "Add the two parallel bases before finding their average."
+          ]
+        },
+        {
+          "concept": "The Perpendicular Height ($h$)",
+          "definition": "The gap between bases.",
+          "details": [
+            "The height is the straight, shortest distance dropping from the top base to the bottom base at a $90^\\circ$ angle."
+          ]
+        },
+        {
+          "concept": "The Averaging Method",
+          "definition": "How the formula works.",
+          "details": [
+            "The formula $\\frac{1}{2}(a+b) \\times h$ essentially takes the *average* length of the two parallel sides, and turns the shape into a standard rectangle."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Area of a Trapezium",
+          "equation": "$$ A = \\frac{1}{2}(a + b)h $$",
+          "variables": {
+            "a, b": "The two parallel bases",
+            "h": "Perpendicular height"
+          }
+        },
+        {
+          "name": "Finding the Height",
+          "equation": "$$ h = \\frac{2A}{a + b} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s06",
+          "title": "Trapezium Anatomy",
+          "type": "svg",
+          "caption": "Identify the two parallel bases (a and b) and the straight height (h) connecting them.",
+          "alt_text": "Visual showing a trapezium. The top parallel side is labeled 'Base a = 6'. The bottom parallel side is labeled 'Base b = 10'. A vertical dashed line connects them labeled 'Height h = 5'. The formula A = 1/2(6+10)*5 = 40 is shown.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><polygon points=\"150,50 300,50 350,150 100,150\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"3\"/><text x=\"225\" y=\"35\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">Base a = 6</text><text x=\"225\" y=\"175\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">Base b = 10</text><line x1=\"150\" y1=\"50\" x2=\"150\" y2=\"150\" stroke=\"#2563eb\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><rect x=\"150\" y=\"140\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"180\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">h = 5</text><rect x=\"370\" y=\"60\" width=\"120\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"430\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A = ½(6 + 10) × 5</text><text x=\"430\" y=\"120\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">A = 40</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A trapezium has parallel sides of $10\\text{ cm}$ and $6\\text{ cm}$. Its perpendicular height is $5\\text{ cm}$. Find its area.",
+          "solution_steps": [
+            "Step 1: Write the formula: $A = \\frac{1}{2}(a+b)h$.",
+            "Step 2: Add the parallel bases together: $10 + 6 = 16$.",
+            "Step 3: Multiply by the height: $16 \\times 5 = 80$.",
+            "Step 4: Multiply by $\\frac{1}{2}$ (or divide by 2): $\\frac{80}{2} = 40$."
+          ],
+          "final_answer": "$40\\text{ cm}^2$"
+        },
+        {
+          "problem": "The area of a trapezium is $90\\text{ cm}^2$. Its parallel sides are $12\\text{ cm}$ and $6\\text{ cm}$. Find its height.",
+          "solution_steps": [
+            "Step 1: Write the rearranged formula: $h = \\frac{2A}{a+b}$.",
+            "Step 2: Multiply the area by 2: $2 \\times 90 = 180$.",
+            "Step 3: Add the bases: $12 + 6 = 18$.",
+            "Step 4: Divide: $\\frac{180}{18} = 10$."
+          ],
+          "final_answer": "$10\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding only one base.",
+          "correction": "You must put the sum of $(a + b)$ in parentheses and evaluate it first before multiplying by the height or halving the total."
+        }
+      ],
+      "quick_summary": [
+        "A trapezium has exactly one pair of parallel sides (the bases).",
+        "Add the two bases, divide by two, then multiply by the straight height.",
+        "Ensure all measurements are in the exact same unit before calculating."
+      ],
+      "utilities": [
+        {
+          "title": "Area Calculator",
+          "description": "Check area calculations for common two-dimensional shapes.",
+          "url": "https://onlinetoolpad.com/math/area_calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t11_st07": {
+      "id": "ms_math_t11_st07",
+      "title": "Circumference of circles",
+      "overview": "The distance around the outside edge of a circle is called its circumference. It is the circular equivalent of a perimeter. Because circles have no straight edges to measure with a ruler, we use a special mathematical ratio called Pi ($\\pi$) to calculate this distance.",
+      "key_concepts": [
+        {
+          "concept": "Radius and Diameter",
+          "definition": "The lines inside the circle.",
+          "details": [
+            "**Radius ($r$):** The distance from the exact center to the edge.",
+            "**Diameter ($d$):** The distance straight across the circle through the center. The diameter is exactly twice the radius ($d = 2r$)."
+          ]
+        },
+        {
+          "concept": "The Magic of Pi ($\\pi$)",
+          "definition": "The universal circle constant.",
+          "details": [
+            "No matter how large or small a circle is, if you divide its circumference by its diameter, the answer is always exactly $\\pi$.",
+            "We usually approximate $\\pi$ as $3.14$ or the fraction $\\frac{22}{7}$."
+          ]
+        },
+        {
+          "concept": "Rolling Wheels",
+          "definition": "Circumference in motion.",
+          "details": [
+            "If a wheel rolls exactly one full rotation along the ground, it travels a distance exactly equal to its circumference.",
+            "$\\text{Total Distance} = \\text{Circumference} \\times \\text{Number of Rotations}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Circumference (Using Diameter)",
+          "equation": "$$ C = \\pi d $$",
+          "variables": {
+            "C": "Circumference",
+            "d": "Diameter",
+            "\\pi": "Pi (approx. 3.14)"
+          }
+        },
+        {
+          "name": "Circumference (Using Radius)",
+          "equation": "$$ C = 2\\pi r $$",
+          "variables": {
+            "r": "Radius"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s07",
+          "title": "Parts of a Circle",
+          "type": "svg",
+          "caption": "The diameter is two radii put together end-to-end.",
+          "alt_text": "Visual showing a circle. A dot in the center. A line from center to the right edge labeled Radius (r). A line all the way across through the center labeled Diameter (d). The outer boundary is traced in blue and labeled Circumference (C).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"250\" cy=\"100\" r=\"80\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"4\"/><circle cx=\"250\" cy=\"100\" r=\"5\" fill=\"#0f172a\"/><line x1=\"250\" y1=\"100\" x2=\"330\" y2=\"100\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"290\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Radius (r)</text><line x1=\"193\" y1=\"43\" x2=\"307\" y2=\"157\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"230\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"end\" fill=\"#c2410c\" font-weight=\"bold\">Diameter (d)</text><path d=\"M 335 100 A 85 85 0 0 1 250 185\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"340\" y=\"170\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"start\" fill=\"#1d4ed8\" font-weight=\"bold\">Circumference (C)</text><rect x=\"40\" y=\"40\" width=\"100\" height=\"60\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"90\" y=\"65\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">d = 2r</text><text x=\"90\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">C = πd</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A circular table has a diameter of $1.2\\text{ m}$. Find the length of its outer edge (use $\\pi = 3.14$).",
+          "solution_steps": [
+            "Step 1: The outer edge is the circumference. We know the diameter, so use $C = \\pi d$.",
+            "Step 2: Substitute values: $C = 3.14 \\times 1.2$.",
+            "Step 3: Calculate: $3.14 \\times 1.2 = 3.768$."
+          ],
+          "final_answer": "$3.768\\text{ m}$"
+        },
+        {
+          "problem": "A wheel has a radius of $7\\text{ cm}$. How far will it travel after completing $50$ full rotations without slipping? (Use $\\pi = \\frac{22}{7}$).",
+          "solution_steps": [
+            "Step 1: Find the circumference. $C = 2\\pi r$.",
+            "Step 2: $C = 2 \\times \\frac{22}{7} \\times 7 = 2 \\times 22 = 44\\text{ cm}$.",
+            "Step 3: Distance = Circumference $\\times$ number of rotations.",
+            "Step 4: Distance $= 44 \\times 50 = 2200\\text{ cm}$."
+          ],
+          "final_answer": "$2200\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using radius instead of diameter for $C = \\pi d$.",
+          "correction": "If the problem gives you a radius (like $r=5$), you must double it to find the diameter ($d=10$) before multiplying by $\\pi$. Alternatively, just use the $C = 2\\pi r$ formula."
+        }
+      ],
+      "quick_summary": [
+        "Circumference is the perimeter of a circle.",
+        "Diameter is twice the Radius ($d = 2r$).",
+        "Formulas: $C = \\pi d$ OR $C = 2\\pi r$.",
+        "Distance a wheel rolls = $C \\times$ Rotations."
+      ]
+    },
+    "ms_math_t11_st08": {
+      "id": "ms_math_t11_st08",
+      "title": "Area of circles",
+      "overview": "While circumference measures the outer boundary, the area measures the flat 2D space trapped inside the circle. The formula requires you to square the radius, which tells us that making a circle just a little bit wider dramatically increases the amount of space inside it.",
+      "key_concepts": [
+        {
+          "concept": "The Area Formula",
+          "definition": "Squaring the radius.",
+          "details": [
+            "The area of a full circle is calculated by multiplying $\\pi$ by the radius squared ($r \\times r$).",
+            "NEVER use the diameter in this formula without dividing it by $2$ first to find the radius."
+          ]
+        },
+        {
+          "concept": "Partial Circles",
+          "definition": "Semicircles and Quarter Circles.",
+          "details": [
+            "**Semicircle:** Exactly half of a circle. Area = $\\frac{1}{2} \\pi r^2$.",
+            "**Quarter Circle:** Exactly one fourth of a circle. Area = $\\frac{1}{4} \\pi r^2$."
+          ]
+        },
+        {
+          "concept": "The Annulus (Circular Ring)",
+          "definition": "A circle with a hole in it.",
+          "details": [
+            "To find the area of a donut-shaped ring, find the area of the large outer circle and subtract the area of the smaller inner circle hollowed out from it.",
+            "Formula: $A = \\pi R^2 - \\pi r^2$ (where $R$ is the outer radius and $r$ is the inner radius)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Area of a Circle",
+          "equation": "$$ A = \\pi r^2 $$",
+          "variables": {
+            "r": "Radius of the circle"
+          }
+        },
+        {
+          "name": "Area of an Annulus (Ring)",
+          "equation": "$$ A = \\pi (R^2 - r^2) $$",
+          "variables": {
+            "R": "Outer radius",
+            "r": "Inner radius"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s08",
+          "title": "Area of a Circular Ring",
+          "type": "svg",
+          "caption": "Subtract the empty inner circle (r) from the solid outer circle (R).",
+          "alt_text": "Visual showing a donut shape (Annulus). The outer circle has radius R (blue). The inner white circle has radius r (red). Text says Area = pi*R² - pi*r².",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"150\" cy=\"100\" r=\"80\" fill=\"#93c5fd\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"100\" r=\"40\" fill=\"#f8fafc\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"100\" r=\"4\" fill=\"#0f172a\"/><line x1=\"150\" y1=\"100\" x2=\"215\" y2=\"55\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><text x=\"190\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">R (Outer)</text><line x1=\"150\" y1=\"100\" x2=\"190\" y2=\"100\" stroke=\"#b91c1c\" stroke-width=\"3\"/><text x=\"170\" y=\"115\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#991b1b\" font-weight=\"bold\">r</text><rect x=\"280\" y=\"60\" width=\"200\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"380\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Area of Ring =</text><text x=\"380\" y=\"120\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">πR² - πr²</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A circular swimming pool has a diameter of $10\\text{ m}$. Find its surface area (Use $\\pi = 3.14$).",
+          "solution_steps": [
+            "Step 1: The formula uses radius, not diameter. Find the radius: $r = 10 \\div 2 = 5\\text{ m}$.",
+            "Step 2: Write the formula: $A = \\pi r^2$.",
+            "Step 3: Substitute values: $A = 3.14 \\times 5^2$.",
+            "Step 4: Calculate the square first: $5^2 = 25$.",
+            "Step 5: Multiply: $3.14 \\times 25 = 78.5$."
+          ],
+          "final_answer": "$78.5\\text{ m}^2$"
+        },
+        {
+          "problem": "Find the area of a quarter circle with a radius of $14\\text{ cm}$ (Use $\\pi = \\frac{22}{7}$).",
+          "solution_steps": [
+            "Step 1: Write the formula for a quarter circle: $A = \\frac{1}{4} \\pi r^2$.",
+            "Step 2: Substitute: $A = \\frac{1}{4} \\times \\frac{22}{7} \\times 14^2$.",
+            "Step 3: $14^2 = 196$.",
+            "Step 4: Calculate: $\\frac{1}{4} \\times \\frac{22}{7} \\times 196 = \\frac{1}{4} \\times 616 = 154$."
+          ],
+          "final_answer": "$154\\text{ cm}^2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Doing $r \\times 2$ instead of $r^2$.",
+          "correction": "If $r = 5$, $r^2 = 5 \\times 5 = 25$. A common mistake is treating $r^2$ as $5 \\times 2 = 10$. Squaring means multiplying the number by itself."
+        },
+        {
+          "mistake": "Plugging the diameter straight into the formula.",
+          "correction": "If a question gives you a diameter of $20$, you MUST cut it in half to $10$ before using $A = \\pi r^2$. If you use $20$, your answer will be four times too large!"
+        }
+      ],
+      "quick_summary": [
+        "Area of a circle $= \\pi r^2$.",
+        "If you are given the diameter, always halve it to find the radius first.",
+        "Semicircle area is half the circle ($\\div 2$). Quarter circle is one-fourth ($\\div 4$)."
+      ],
+      "utilities": [
+        {
+          "title": "Area Calculator",
+          "description": "Check area calculations for common two-dimensional shapes.",
+          "url": "https://onlinetoolpad.com/math/area_calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t11_st09": {
+      "id": "ms_math_t11_st09",
+      "title": "Composite shapes",
+      "overview": "Most real-world objects like houses, machine parts, or swimming pools are not simple perfect shapes. They are 'Composite Shapes'—a combination of rectangles, triangles, and half-circles fused together. To find their area, we must mentally chop them up into basic shapes we know.",
+      "key_concepts": [
+        {
+          "concept": "The Addition Method",
+          "definition": "Chop and add.",
+          "details": [
+            "Slice the complex shape into non-overlapping smaller shapes (like slicing an L-shape into two rectangles).",
+            "Calculate the area of each piece separately.",
+            "Add all the areas together."
+          ]
+        },
+        {
+          "concept": "The Subtraction Method",
+          "definition": "Frame and subtract.",
+          "details": [
+            "Imagine a complete large rectangle that frames the entire shape.",
+            "Calculate the area of that large 'bounding box'.",
+            "Subtract the 'empty' chunks (like a circular hole cut out of a metal plate)."
+          ]
+        },
+        {
+          "concept": "Finding Missing Dimensions",
+          "definition": "The puzzle piece.",
+          "details": [
+            "Often, not all side lengths are given. You must deduce missing lengths by looking at parallel opposite sides. (e.g., If the total width is $15$, and the top section is $6$, the missing bottom section must be $15 - 6 = 9$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Addition Method",
+          "equation": "$$ A_{\\text{total}} = A_1 + A_2 + A_3 \\dots $$",
+          "variables": {}
+        },
+        {
+          "name": "Subtraction Method",
+          "equation": "$$ A_{\\text{shaded}} = A_{\\text{large (outer)}} - A_{\\text{small (hole)}} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s09",
+          "title": "Two Methods for Composite Shapes",
+          "type": "svg",
+          "caption": "You can either build the shape up by adding pieces, or carve it out by subtracting empty space.",
+          "alt_text": "Visual showing an L-shape handled two ways. Left: Cut into two stacked rectangles with a '+' sign (Addition method). Right: A large dashed rectangle drawn around the L-shape, with a red shaded empty corner and a '-' sign (Subtraction method).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 60 160 L 160 160 L 160 110 L 100 110 L 100 40 L 60 40 Z\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"60\" y1=\"110\" x2=\"100\" y2=\"110\" stroke=\"#1d4ed8\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><text x=\"110\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Addition: A1 + A2</text><text x=\"80\" y=\"80\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">A1</text><text x=\"110\" y=\"140\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">A2</text><path d=\"M 320 160 L 420 160 L 420 110 L 360 110 L 360 40 L 320 40 Z\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"3\"/><path d=\"M 360 110 L 360 40 L 420 40 L 420 110 Z\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><text x=\"370\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Subtraction: Outer - Hole</text><text x=\"390\" y=\"80\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Hole</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A metal rectangular sheet is $20\\text{ cm}$ long and $14\\text{ cm}$ wide. A circular hole of radius $3\\text{ cm}$ is drilled out of it. Find the remaining surface area (Use $\\pi = 3.14$).",
+          "solution_steps": [
+            "Step 1: Calculate the area of the large rectangle. $A_{\\text{rect}} = 20 \\times 14 = 280\\text{ cm}^2$.",
+            "Step 2: Calculate the area of the circular hole. $A_{\\text{circle}} = 3.14 \\times 3^2 = 3.14 \\times 9 = 28.26\\text{ cm}^2$.",
+            "Step 3: Subtract the hole from the rectangle. $280 - 28.26 = 251.74$."
+          ],
+          "final_answer": "$251.74\\text{ cm}^2$"
+        },
+        {
+          "problem": "A house-shaped figure consists of a rectangle measuring $8\\text{ m}$ by $5\\text{ m}$, topped with a triangle with a base of $8\\text{ m}$ and a height of $3\\text{ m}$. Find its total area.",
+          "solution_steps": [
+            "Step 1: Find the area of the rectangular base. $A_{\\text{rect}} = 8 \\times 5 = 40\\text{ m}^2$.",
+            "Step 2: Find the area of the triangular roof. $A_{\\text{tri}} = \\frac{1}{2} \\times 8 \\times 3 = 12\\text{ m}^2$.",
+            "Step 3: Add both areas together: $40 + 12 = 52$."
+          ],
+          "final_answer": "$52\\text{ m}^2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding overlapping edges to the perimeter.",
+          "correction": "When calculating the PERIMETER of a composite shape, do not count the inner dashed lines where the two simple shapes were 'glued' together. Perimeter is only the outer boundary."
+        },
+        {
+          "mistake": "Assuming missing lengths without calculating them.",
+          "correction": "Don't guess a missing side length just by eyeballing the diagram. Set up a mini-equation using the total width/height from the opposite side."
+        }
+      ],
+      "quick_summary": [
+        "Divide complex shapes into manageable pieces (rectangles, triangles, circles).",
+        "**Addition Method:** Chop into pieces, solve each, add together.",
+        "**Subtraction Method:** Find the area of a large 'box' around the shape, subtract the missing 'holes'."
+      ],
+      "utilities": [
+        {
+          "title": "Area Calculator",
+          "description": "Check area calculations for common two-dimensional shapes.",
+          "url": "https://onlinetoolpad.com/math/area_calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t11_st10": {
+      "id": "ms_math_t11_st10",
+      "title": "Surface area of cubes and cuboids",
+      "overview": "Moving from flat 2D shapes to solid 3D objects changes how we measure space. The Surface Area is the total amount of flat 2D area covering the outside of the solid—exactly like calculating how much wrapping paper is needed to perfectly cover a gift box.",
+      "key_concepts": [
+        {
+          "concept": "Total Surface Area (TSA)",
+          "definition": "Covering every single face.",
+          "details": [
+            "A cube has 6 identical square faces. Its Total Surface Area is $6 \\times (\\text{Area of one square})$.",
+            "A cuboid (rectangular box) has 3 pairs of matching rectangular faces (Top/Bottom, Front/Back, Left/Right)."
+          ]
+        },
+        {
+          "concept": "Lateral Surface Area (LSA)",
+          "definition": "The sides only.",
+          "details": [
+            "Lateral Surface Area only counts the vertical side faces. It excludes the top (ceiling) and bottom (floor).",
+            "For a cube, LSA is $4 \\times (\\text{Area of one square})$."
+          ]
+        },
+        {
+          "concept": "Open Boxes",
+          "definition": "Missing a lid.",
+          "details": [
+            "If a box is open at the top, it only has 5 faces. You must calculate the Total Surface Area but leave out one of the $l \\times w$ (top) rectangles."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "TSA of a Cube",
+          "equation": "$$ \\text{TSA} = 6a^2 $$",
+          "variables": {
+            "a": "Edge length"
+          }
+        },
+        {
+          "name": "TSA of a Cuboid",
+          "equation": "$$ \\text{TSA} = 2(lw + lh + wh) $$",
+          "variables": {
+            "l": "Length",
+            "w": "Width",
+            "h": "Height"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s10",
+          "title": "Unfolding a Cuboid into a Net",
+          "type": "svg",
+          "caption": "A net shows all 6 faces laid flat. Notice the 3 matching pairs of rectangles.",
+          "alt_text": "Visual showing a 3D cuboid and its unfolded 2D net. The net has 6 rectangles. 2 are Top/Bottom (lw), 2 are Front/Back (lh), 2 are Left/Right (wh).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"220\" y=\"80\" width=\"80\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><rect x=\"220\" y=\"30\" width=\"80\" height=\"50\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/><rect x=\"220\" y=\"130\" width=\"80\" height=\"50\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\" fill=\"#fef08a\" stroke=\"#a16207\" stroke-width=\"2\"/><rect x=\"300\" y=\"80\" width=\"50\" height=\"50\" fill=\"#fef08a\" stroke=\"#a16207\" stroke-width=\"2\"/><rect x=\"350\" y=\"80\" width=\"80\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"260\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">Front (lh)</text><text x=\"390\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">Back (lh)</text><text x=\"260\" y=\"60\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">Top (lw)</text><text x=\"260\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">Bot (lw)</text><text x=\"195\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#854d0e\" transform=\"rotate(-90 195 110)\">L (wh)</text><text x=\"325\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#854d0e\" transform=\"rotate(-90 325 110)\">R (wh)</text><g transform=\"translate(50, 70)\"><path d=\"M 10 30 L 60 30 L 60 80 L 10 80 Z\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><path d=\"M 10 30 L 30 10 L 80 10 L 60 30 Z\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/><path d=\"M 60 30 L 80 10 L 80 60 L 60 80 Z\" fill=\"#fef08a\" stroke=\"#a16207\" stroke-width=\"2\"/><text x=\"35\" y=\"60\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">Front</text><text x=\"45\" y=\"25\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#14532d\">Top</text><text x=\"70\" y=\"50\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#854d0e\">Right</text></g><path d=\"M 140 100 Q 160 100 160 100\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"3\"/><polygon points=\"160,100 150,95 150,105\" fill=\"#64748b\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A cuboid has a length of $8\\text{ cm}$, a width of $5\\text{ cm}$, and a height of $3\\text{ cm}$. Find its Total Surface Area.",
+          "solution_steps": [
+            "Step 1: Write the formula: $\\text{TSA} = 2(lw + lh + wh)$.",
+            "Step 2: Calculate the three face pairs: $lw = 8 \\times 5 = 40$. $lh = 8 \\times 3 = 24$. $wh = 5 \\times 3 = 15$.",
+            "Step 3: Add them together: $40 + 24 + 15 = 79$.",
+            "Step 4: Multiply by $2$: $2 \\times 79 = 158$."
+          ],
+          "final_answer": "$158\\text{ cm}^2$"
+        },
+        {
+          "problem": "Find the Lateral Surface Area of a cube with an edge length of $6\\text{ cm}$.",
+          "solution_steps": [
+            "Step 1: LSA means only the 4 side faces (excluding top and bottom). Formula: $\\text{LSA} = 4a^2$.",
+            "Step 2: Find the area of one face: $6^2 = 36$.",
+            "Step 3: Multiply by the 4 side faces: $4 \\times 36 = 144$."
+          ],
+          "final_answer": "$144\\text{ cm}^2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the volume formula ($l \\times w \\times h$) instead of the surface area formula.",
+          "correction": "Volume is the space INSIDE. Surface Area is the flat wrapping covering the OUTSIDE. Surface area requires multiplying pairs of sides and adding them all up."
+        },
+        {
+          "mistake": "Calculating 6 faces for an open box.",
+          "correction": "If a problem asks for the surface area of a box 'without a lid' or 'open at the top', you only have ONE top/bottom face. The formula becomes $1lw + 2lh + 2wh$."
+        }
+      ],
+      "quick_summary": [
+        "TSA = The sum of the areas of all 6 faces.",
+        "LSA = The sum of the areas of the 4 vertical side faces only.",
+        "Surface area is always measured in square units (cm², m²)."
+      ],
+      "utilities": [
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Check volume and surface-area calculations for common three-dimensional solids.",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t11_st11": {
+      "id": "ms_math_t11_st11",
+      "title": "Volume of cubes and cuboids",
+      "overview": "While surface area covers the outside wrapping, Volume measures the empty space trapped inside a 3D object. We measure volume by determining how many perfect $1 \\times 1 \\times 1$ cubes would be needed to completely pack the inside of the shape.",
+      "key_concepts": [
+        {
+          "concept": "The Volume Formula",
+          "definition": "Length × Width × Height.",
+          "details": [
+            "To find how much space is inside a cuboid, you simply multiply its three dimensions together: $V = l \\times w \\times h$.",
+            "For a cube, all dimensions are the same ($a$), so the formula is simply $V = a^3$."
+          ]
+        },
+        {
+          "concept": "Working Backwards",
+          "definition": "Finding missing dimensions.",
+          "details": [
+            "If you know the Volume, Length, and Width, you can find the Height by dividing the Volume by the other two numbers: $h = \\frac{V}{l \\times w}$.",
+            "To find the edge of a cube from its Volume, take the cube root ($\\sqrt[3]{V}$)."
+          ]
+        },
+        {
+          "concept": "Volume vs. Capacity",
+          "definition": "Cubic units to Litres.",
+          "details": [
+            "**Volume** measures the three-dimensional space occupied by an object and is expressed in cubic units such as $cm^3$ or $m^3$.",
+            "**Capacity** describes how much a hollow container can hold and is commonly expressed in millilitres or litres.",
+            "The conversion relationships between cubic units and liquid capacity are developed in **ST13 – Capacity and volume conversions**."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Volume of a Cuboid",
+          "equation": "$$ V = l \\times w \\times h $$",
+          "variables": {}
+        },
+        {
+          "name": "Volume of a Cube",
+          "equation": "$$ V = a^3 $$",
+          "variables": {
+            "a": "Edge length"
+          }
+        },
+        {
+          "name": "Missing Dimension (Cuboid)",
+          "equation": "$$ h = \\frac{V}{l \\times w} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s11",
+          "title": "Packing Cubes",
+          "type": "svg",
+          "caption": "Volume calculates how many 1x1x1 unit cubes fit inside the box.",
+          "alt_text": "Visual showing a transparent 3D cuboid packed with small 3D cubes. Labels show Length=4, Width=2, Height=3. V = 4 x 2 x 3 = 24 cubic units.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(100, 100)\"><path d=\"M 0 0 L 80 0 L 80 -60 L 0 -60 Z\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 0 -60 L 40 -100 L 120 -100 L 80 -60 Z\" fill=\"#93c5fd\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 80 0 L 120 -40 L 120 -100 L 80 -60 Z\" fill=\"#60a5fa\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"20\" y1=\"0\" x2=\"20\" y2=\"-60\" stroke=\"#2563eb\" stroke-width=\"1\"/><line x1=\"40\" y1=\"0\" x2=\"40\" y2=\"-60\" stroke=\"#2563eb\" stroke-width=\"1\"/><line x1=\"60\" y1=\"0\" x2=\"60\" y2=\"-60\" stroke=\"#2563eb\" stroke-width=\"1\"/><line x1=\"0\" y1=\"-20\" x2=\"80\" y2=\"-20\" stroke=\"#2563eb\" stroke-width=\"1\"/><line x1=\"0\" y1=\"-40\" x2=\"80\" y2=\"-40\" stroke=\"#2563eb\" stroke-width=\"1\"/><line x1=\"80\" y1=\"-20\" x2=\"120\" y2=\"-60\" stroke=\"#2563eb\" stroke-width=\"1\"/><line x1=\"80\" y1=\"-40\" x2=\"120\" y2=\"-80\" stroke=\"#2563eb\" stroke-width=\"1\"/><line x1=\"100\" y1=\"-20\" x2=\"100\" y2=\"-80\" stroke=\"#2563eb\" stroke-width=\"1\"/><line x1=\"20\" y1=\"-60\" x2=\"60\" y2=\"-100\" stroke=\"#2563eb\" stroke-width=\"1\"/><line x1=\"40\" y1=\"-60\" x2=\"80\" y2=\"-100\" stroke=\"#2563eb\" stroke-width=\"1\"/><line x1=\"60\" y1=\"-60\" x2=\"100\" y2=\"-100\" stroke=\"#2563eb\" stroke-width=\"1\"/><line x1=\"20\" y1=\"-80\" x2=\"100\" y2=\"-80\" stroke=\"#2563eb\" stroke-width=\"1\"/></g><text x=\"140\" y=\"120\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Length = 4</text><text x=\"80\" y=\"65\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\" transform=\"rotate(-90 80 65)\">Height = 3</text><text x=\"215\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\" transform=\"rotate(-45 215 90)\">Width = 2</text><rect x=\"300\" y=\"60\" width=\"150\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"375\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">V = 4 × 2 × 3</text><text x=\"375\" y=\"120\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">V = 24 cubes</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A cuboid has a volume of $240\\text{ cm}^3$. Its length is $10\\text{ cm}$ and width is $6\\text{ cm}$. Find its height.",
+          "solution_steps": [
+            "Step 1: Write the formula for missing height: $h = \\frac{V}{l \\times w}$.",
+            "Step 2: Multiply length and width together: $10 \\times 6 = 60$.",
+            "Step 3: Divide the total volume by this base area: $240 \\div 60 = 4$."
+          ],
+          "final_answer": "$4\\text{ cm}$"
+        },
+        {
+          "problem": "The volume of a cube is $125\\text{ cm}^3$. Find its edge length.",
+          "solution_steps": [
+            "Step 1: The volume of a cube is $V = a^3$. So, $125 = a^3$.",
+            "Step 2: Find the cube root of $125$. What number multiplied by itself three times gives $125$?",
+            "Step 3: $5 \\times 5 \\times 5 = 125$, so $a = 5$."
+          ],
+          "final_answer": "$5\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Squaring the edge length of a cube instead of cubing it.",
+          "correction": "For a cube with side length $4$, the volume is $4^3 = 4 \\times 4 \\times 4 = 64$. Many students accidentally do $4^2 = 16$ (which is area) or $4 \\times 3 = 12$."
+        },
+        {
+          "mistake": "Writing the final answer in square units.",
+          "correction": "Volume is always measured in cubic units ($^3$). $24\\text{ cm}^2$ is a flat surface. $24\\text{ cm}^3$ is a solid block."
+        }
+      ],
+      "quick_summary": [
+        "Volume of Cuboid $= \\text{Length} \\times \\text{Width} \\times \\text{Height}$.",
+        "Volume of Cube $= \\text{Side}^3$.",
+        "To find a missing dimension, divide the Volume by the other two known dimensions."
+      ],
+      "utilities": [
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Check volume and surface-area calculations for common three-dimensional solids.",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t11_st12": {
+      "id": "ms_math_t11_st12",
+      "title": "Volume of prisms — introduction",
+      "overview": "A prism is any 3D shape that looks exactly the same from front to back, like a block of cheese or a Toblerone bar. Because it doesn't taper or change shape, finding its volume relies on one universal rule: find the area of the front 'slice', and multiply it by how far back the shape goes.",
+      "key_concepts": [
+        {
+          "concept": "The Uniform Cross-Section",
+          "definition": "The face that never changes.",
+          "details": [
+            "If you slice a prism anywhere along its length, the flat shape exposed is exactly the same. This is called the cross-section.",
+            "In a triangular prism, the cross-section is the triangle."
+          ]
+        },
+        {
+          "concept": "The Universal Prism Formula",
+          "definition": "Base Area × Length.",
+          "details": [
+            "To find the volume of ANY prism, calculate the Area of the cross-section ($A$), and multiply it by the Length ($L$) of the prism.",
+            "Volume $= \\text{Cross-Sectional Area} \\times \\text{Length}$."
+          ]
+        },
+        {
+          "concept": "Triangular Prisms",
+          "definition": "A 3D triangle.",
+          "details": [
+            "First, find the area of the front triangle: $A = \\frac{1}{2} b h$.",
+            "Then, multiply that area by the length (or depth) of the prism: $V = \\left(\\frac{1}{2} b h\\right) \\times L$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Volume of a Prism",
+          "equation": "$$ V = A \\times L $$",
+          "variables": {
+            "A": "Area of the uniform cross-section",
+            "L": "Length (or depth) of the prism"
+          }
+        },
+        {
+          "name": "Volume of a Triangular Prism",
+          "equation": "$$ V = \\left( \\frac{1}{2}bh \\right) \\times L $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s12",
+          "title": "Volume of a Triangular Prism",
+          "type": "svg",
+          "caption": "Find the area of the front face first, then drag that area along the length of the prism.",
+          "alt_text": "Visual showing a triangular prism. The front triangular face is shaded blue and labeled 'Cross-Section Area = A'. An arrow points along the side labeled 'Length = L'. Text reads 'Volume = A × L'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(80, 140)\"><path d=\"M 0 0 L 100 0 L 150 -50 L 50 -50 Z\" fill=\"#e2e8f0\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M 50 -100 L 150 -50 L 100 0 Z\" fill=\"#cbd5e1\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M 0 0 L 100 0 L 50 -100 Z\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/></g><text x=\"130\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Area (A)</text><line x1=\"180\" y1=\"160\" x2=\"230\" y2=\"110\" stroke=\"#0f172a\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><polygon points=\"230,110 220,115 225,120\" fill=\"#0f172a\" transform=\"rotate(45 230 110)\"/><text x=\"225\" y=\"155\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Length (L)</text><rect x=\"290\" y=\"60\" width=\"170\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"375\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">General Formula:</text><text x=\"375\" y=\"120\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Volume = A × L</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A triangular prism has a front triangle with a base of $6\\text{ cm}$ and a perpendicular height of $4\\text{ cm}$. The length of the prism is $10\\text{ cm}$. Find its volume.",
+          "solution_steps": [
+            "Step 1: Calculate the area of the triangular cross-section: $A = \\frac{1}{2} \\times 6 \\times 4 = 12\\text{ cm}^2$.",
+            "Step 2: Multiply the cross-sectional area by the length of the prism: $V = 12 \\times 10 = 120$."
+          ],
+          "final_answer": "$120\\text{ cm}^3$"
+        },
+        {
+          "problem": "A prism has a volume of $360\\text{ cm}^3$ and a length of $12\\text{ cm}$. Find its cross-sectional area.",
+          "solution_steps": [
+            "Step 1: Rearrange the universal formula: $A = \\frac{V}{L}$.",
+            "Step 2: Divide the volume by the length: $360 \\div 12 = 30$."
+          ],
+          "final_answer": "$30\\text{ cm}^2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying all three numbers without dividing by 2.",
+          "correction": "If a problem gives you a triangle base, a triangle height, and a prism length, you can't just multiply $b \\times h \\times L$ like a cuboid. The front face is a triangle, so you MUST halve the base $\\times$ height first."
+        }
+      ],
+      "quick_summary": [
+        "A prism is a 3D shape with the exact same 2D face from front to back.",
+        "Volume of ANY prism = Area of the flat end face $\\times$ Length.",
+        "For triangular prisms, don't forget the $\\frac{1}{2}$ when finding the area of the front triangle."
+      ],
+      "utilities": [
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Check volume and surface-area calculations for common three-dimensional solids.",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t11_st13": {
+      "id": "ms_math_t11_st13",
+      "title": "Capacity and volume conversions",
+      "overview": "While volume measures the actual 3D space an object takes up, capacity measures how much liquid a hollow container can hold. We can seamlessly translate between solid volume (like cubic centimeters) and liquid capacity (like milliliters) using a few key mathematical bridges.",
+      "key_concepts": [
+        {
+          "concept": "Volume vs. Capacity",
+          "definition": "Space vs. Liquid.",
+          "details": [
+            "**Volume** is the 3D space occupied by a solid ($cm^3, m^3$).",
+            "**Capacity** is how much liquid a container can hold (mL, L, kL)."
+          ]
+        },
+        {
+          "concept": "The Magic Bridges",
+          "definition": "Linking solid space to liquid.",
+          "details": [
+            "**$1\\text{ cm}^3 = 1\\text{ mL}$** (A tiny sugar cube holds a single drop of liquid).",
+            "**$1000\\text{ cm}^3 = 1\\text{ Litre}$** (A $10 \\times 10 \\times 10\\text{ cm}$ box holds exactly 1 Litre).",
+            "**$1\\text{ m}^3 = 1000\\text{ Litres}$** (A massive $1 \\times 1 \\times 1\\text{ m}$ box holds 1,000 Litres!)."
+          ]
+        },
+        {
+          "concept": "Internal Dimensions",
+          "definition": "Measuring from the inside.",
+          "details": [
+            "To find how much water a tank holds, you must calculate its volume using its *internal* dimensions (ignoring the thickness of the walls), then convert that cubic volume into Litres."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Volume to Capacity Conversions",
+          "equation": "$$ 1\\text{ cm}^3 = 1\\text{ mL} \\quad | \\quad 1000\\text{ cm}^3 = 1\\text{ L} \\quad | \\quad 1\\text{ m}^3 = 1000\\text{ L} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s13",
+          "title": "The Litre Cube",
+          "type": "svg",
+          "caption": "A 10cm x 10cm x 10cm box contains 1000 cm³, which holds exactly 1 Litre of liquid.",
+          "alt_text": "Visual showing a 3D cube labeled 10cm by 10cm by 10cm. Inside it is shaded blue like water. Text says 10 x 10 x 10 = 1000 cm³. 1000 cm³ = 1 Litre.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(150, 120)\"><path d=\"M 0 0 L 80 0 L 80 -80 L 0 -80 Z\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 0 -80 L 40 -120 L 120 -120 L 80 -80 Z\" fill=\"#93c5fd\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 80 0 L 120 -40 L 120 -120 L 80 -80 Z\" fill=\"#60a5fa\" stroke=\"#2563eb\" stroke-width=\"2\"/></g><text x=\"190\" y=\"145\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">10 cm</text><text x=\"130\" y=\"80\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\" transform=\"rotate(-90 130 80)\">10 cm</text><text x=\"255\" y=\"110\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\" transform=\"rotate(-45 255 110)\">10 cm</text><rect x=\"310\" y=\"60\" width=\"160\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"390\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">V = 1000 cm³</text><text x=\"390\" y=\"120\" font-family=\"sans-serif\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Capacity = 1 L</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A rectangular water tank has internal dimensions of $2\\text{ m}$ long, $1.5\\text{ m}$ wide, and $1\\text{ m}$ high. Find its capacity in Litres.",
+          "solution_steps": [
+            "Step 1: Calculate the volume in cubic meters. $V = 2 \\times 1.5 \\times 1 = 3\\text{ m}^3$.",
+            "Step 2: Convert to Litres using the bridge $1\\text{ m}^3 = 1000\\text{ L}$.",
+            "Step 3: $3 \\times 1000 = 3000\\text{ Litres}$."
+          ],
+          "final_answer": "$3000\\text{ L}$"
+        },
+        {
+          "problem": "An aquarium holds $60\\text{ Litres}$ of water. If its length is $50\\text{ cm}$ and width is $30\\text{ cm}$, what is its height?",
+          "solution_steps": [
+            "Step 1: Convert Litres to $cm^3$ so units match the length and width. $60\\text{ L} = 60,000\\text{ cm}^3$.",
+            "Step 2: Use the volume formula: $60,000 = 50 \\times 30 \\times h$.",
+            "Step 3: $60,000 = 1500 \\times h$.",
+            "Step 4: $h = 60,000 \\div 1500 = 40$."
+          ],
+          "final_answer": "$40\\text{ cm}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $1\\text{ m}^3 = 1\\text{ Litre}$.",
+          "correction": "$1\\text{ m}^3$ is an absolutely massive box (imagine a box 1 meter tall, 1 meter wide, 1 meter deep). It holds exactly $1,000\\text{ Litres}$ of water (which weighs 1,000 kg or 1 metric tonne!)."
+        }
+      ],
+      "quick_summary": [
+        "$1\\text{ cm}^3 = 1\\text{ mL}$.",
+        "$1000\\text{ cm}^3 = 1\\text{ L}$.",
+        "$1\\text{ m}^3 = 1000\\text{ L}$.",
+        "Calculate the 3D volume first, then use a conversion bridge to find the liquid capacity."
+      ],
+      "utilities": [
+        {
+          "title": "Unit Converter",
+          "description": "Convert between common metric length, mass, capacity, area and volume units.",
+          "url": "https://onlinetoolpad.com/others/UNIT_CONVERTER",
+          "icon": "calculator"
+        },
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Check volume and surface-area calculations for common three-dimensional solids.",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t11_st14": {
+      "id": "ms_math_t11_st14",
+      "title": "Units of area and volume",
+      "overview": "Converting units of Area ($m^2$) and Volume ($m^3$) is totally different from converting regular lengths. Because Area has two dimensions and Volume has three, their conversion multipliers must be squared or cubed!",
+      "key_concepts": [
+        {
+          "concept": "Area Conversions (Squared)",
+          "definition": "Multiplying the factor by itself.",
+          "details": [
+            "Normally, $1\\text{ m} = 100\\text{ cm}$.",
+            "But a square meter ($1\\text{ m}^2$) is $100\\text{ cm} \\times 100\\text{ cm}$. Therefore, $1\\text{ m}^2 = 10,000\\text{ cm}^2$."
+          ]
+        },
+        {
+          "concept": "Volume Conversions (Cubed)",
+          "definition": "Multiplying the factor three times.",
+          "details": [
+            "A cubic meter ($1\\text{ m}^3$) is $100\\text{ cm} \\times 100\\text{ cm} \\times 100\\text{ cm}$.",
+            "Therefore, $1\\text{ m}^3 = 1,000,000\\text{ cm}^3$."
+          ]
+        },
+        {
+          "concept": "The Hectare (ha)",
+          "definition": "Measuring land.",
+          "details": [
+            "A hectare is a special metric unit for large areas of land like farms or forests.",
+            "$1\\text{ hectare} = 10,000\\text{ m}^2$ (A square field $100\\text{m}$ by $100\\text{m}$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Key Area Conversions",
+          "equation": "$$ 1\\text{ m}^2 = 10,000\\text{ cm}^2 \\quad | \\quad 1\\text{ hectare} = 10,000\\text{ m}^2 $$",
+          "variables": {}
+        },
+        {
+          "name": "Key Volume Conversions",
+          "equation": "$$ 1\\text{ m}^3 = 1,000,000\\text{ cm}^3 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s14",
+          "title": "Why we Square the Factor",
+          "type": "svg",
+          "caption": "1 square meter is actually made of 10,000 little square centimeters.",
+          "alt_text": "Visual showing a large square labeled 1m x 1m. Inside it, dimensions are shown as 100cm x 100cm. Text points to the center: Area = 1m² = 10,000 cm².",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"80\" y=\"40\" width=\"120\" height=\"120\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"4\"/><line x1=\"80\" y1=\"20\" x2=\"200\" y2=\"20\" stroke=\"#1d4ed8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"140\" y=\"15\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">1 m (100 cm)</text><line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"160\" stroke=\"#1d4ed8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"50\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\" transform=\"rotate(-90 50 105)\">1 m (100 cm)</text><rect x=\"280\" y=\"60\" width=\"180\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"370\" y=\"90\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">1m × 1m = 1 m²</text><text x=\"370\" y=\"120\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">100cm × 100cm = 10,000 cm²</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Convert $5\\text{ m}^2$ into $\\text{cm}^2$.",
+          "solution_steps": [
+            "Step 1: The normal length factor is $1\\text{ m} = 100\\text{ cm}$.",
+            "Step 2: Square the factor for area: $100^2 = 10,000$.",
+            "Step 3: Multiply: $5 \\times 10,000 = 50,000$."
+          ],
+          "final_answer": "$50,000\\text{ cm}^2$"
+        },
+        {
+          "problem": "Convert $2.4\\text{ m}^3$ into $\\text{cm}^3$.",
+          "solution_steps": [
+            "Step 1: The normal length factor is $1\\text{ m} = 100\\text{ cm}$.",
+            "Step 2: Cube the factor for volume: $100^3 = 1,000,000$.",
+            "Step 3: Multiply: $2.4 \\times 1,000,000 = 2,400,000$."
+          ],
+          "final_answer": "$2,400,000\\text{ cm}^3$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Just multiplying by 100 or 1000.",
+          "correction": "When moving from $m^2$ to $cm^2$, many students just multiply by $100$. But it's AREA, so you must multiply by $100 \\times 100 = 10,000$."
+        }
+      ],
+      "quick_summary": [
+        "Length conversions use the normal factor (e.g., $100$).",
+        "Area conversions SQUARE the factor (e.g., $100^2 = 10,000$).",
+        "Volume conversions CUBE the factor (e.g., $100^3 = 1,000,000$).",
+        "$1\\text{ hectare} = 10,000\\text{ m}^2$."
+      ],
+      "utilities": [
+        {
+          "title": "Unit Converter",
+          "description": "Convert between common metric length, mass, capacity, area and volume units.",
+          "url": "https://onlinetoolpad.com/others/UNIT_CONVERTER",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t11_st15": {
+      "id": "ms_math_t11_st15",
+      "title": "Practical measurement problems",
+      "overview": "Real-world problems rarely come neatly packaged as a simple formula. They often combine multiple shapes, require unit conversions mid-step, and involve costs or material estimations. The key is breaking the problem down into a systematic, step-by-step plan.",
+      "key_concepts": [
+        {
+          "concept": "Choosing the Right Unit",
+          "definition": "Context matters.",
+          "details": [
+            "Use **mm** for the thickness of a coin.",
+            "Use **m²** for the floor of a room.",
+            "Use **hectares** for a farm.",
+            "Use **Litres** for a drink, and **m³** for a swimming pool."
+          ]
+        },
+        {
+          "concept": "Multi-Step Strategies",
+          "definition": "Read, convert, calculate.",
+          "details": [
+            "If a wall has a window in it, and you need to buy paint: Find the wall Area, find the window Area, SUBTRACT the window, then figure out the paint cost."
+          ]
+        },
+        {
+          "concept": "Unit Matching",
+          "definition": "Never mix units.",
+          "details": [
+            "If you are multiplying a length in meters by a width in centimeters, you MUST convert one to match the other before doing the math."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s15",
+          "title": "Subtraction in the Real World",
+          "type": "svg",
+          "caption": "Always subtract empty spaces like doors and windows before calculating material costs like paint or wallpaper.",
+          "alt_text": "Visual showing a 8m x 3m rectangular wall. Inside it is a 2m x 1m window. Text says Total Area = 24. Window Area = 2. Paint Area = 24 - 2 = 22 m².",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"40\" width=\"240\" height=\"120\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/><rect x=\"100\" y=\"70\" width=\"60\" height=\"40\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><text x=\"170\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Wall (8m)</text><text x=\"30\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\" transform=\"rotate(-90 30 105)\">3m</text><text x=\"130\" y=\"65\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#475569\">Window (2m)</text><text x=\"90\" y=\"90\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#475569\" transform=\"rotate(-90 90 90)\">1m</text><rect x=\"310\" y=\"60\" width=\"160\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"390\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Total Area = 24</text><text x=\"390\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">- Window = 2</text><text x=\"390\" y=\"125\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">Paint Area = 22 m²</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A square playground has a side length of $25\\text{ m}$. Fencing costs $\\$8$ per metre. Find the total fencing cost.",
+          "solution_steps": [
+            "Step 1: Fencing surrounds the playground, so we need Perimeter. $P = 4 \\times 25 = 100\\text{ m}$.",
+            "Step 2: Multiply the perimeter by the cost per metre: $100 \\times 8 = 800$."
+          ],
+          "final_answer": "$\\$800$"
+        },
+        {
+          "problem": "A rectangular room measures $6\\text{ m}$ by $5\\text{ m}$. Each square floor tile covers $0.25\\text{ m}^2$. How many tiles are required?",
+          "solution_steps": [
+            "Step 1: Tiles cover the floor, so we need Area. $A = 6 \\times 5 = 30\\text{ m}^2$.",
+            "Step 2: Divide the total area by the area of one tile: $30 \\div 0.25$.",
+            "Step 3: $30 \\div 0.25 = 120$."
+          ],
+          "final_answer": "$120$ tiles"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating Area when you need Perimeter (and vice versa).",
+          "correction": "Fencing, borders, frames, and edging = Perimeter. Carpet, painting, tiles, and grass = Area. Always read the context carefully."
+        }
+      ],
+      "quick_summary": [
+        "Read carefully. Sketch the shape.",
+        "Ensure all units match perfectly before multiplying.",
+        "Calculate Perimeter, Area, or Volume.",
+        "Multiply by cost or conversion rates at the very end of your calculation."
+      ],
+      "utilities": [
+        {
+          "title": "Unit Converter",
+          "description": "Convert between common metric length, mass, capacity, area and volume units.",
+          "url": "https://onlinetoolpad.com/others/UNIT_CONVERTER",
+          "icon": "calculator"
+        },
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Check volume and surface-area calculations for common three-dimensional solids.",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    }
+  }
+}

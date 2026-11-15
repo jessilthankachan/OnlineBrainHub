@@ -1,0 +1,985 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t03",
+  "topicTitle": "Algebraic Expressions and Factorisation",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t03_st01": {
+      "id": "hs_math_t03_st01",
+      "title": "Algebraic terms and coefficients",
+      "overview": "Algebra is the grammar of mathematics. Instead of working exclusively with known numbers, we use letters to represent unknowns, allowing us to build generalized rules that apply to countless situations.",
+      "key_concepts": [
+        {
+          "concept": "The Anatomy of an Expression",
+          "definition": "Breaking it down.",
+          "details": [
+            "**Variables:** Letters (e.g., $x, y, a$) representing unknown or changing values.",
+            "**Constants:** Fixed numbers without variables attached (e.g., $+7$).",
+            "**Terms:** The individual chunks separated by $+$ or $-$ signs (e.g., in $3x - 4y + 2$, there are three terms).",
+            "**Coefficients:** The numerical multiplier attached to the front of a variable (e.g., in $-5x$, the coefficient is $-5$)."
+          ]
+        },
+        {
+          "concept": "Like vs. Unlike Terms",
+          "definition": "What can be combined.",
+          "details": [
+            "**Like Terms:** Terms that have the exact same variables raised to the exact same powers (e.g., $3x^2y$ and $-5x^2y$). Only these can be added or subtracted.",
+            "**Unlike Terms:** Terms with different variables or different powers (e.g., $4x$ and $4x^2$). They cannot be combined."
+          ]
+        },
+        {
+          "concept": "Degree of a Polynomial",
+          "definition": "The highest power.",
+          "details": [
+            "The degree of a single term is the sum of its exponents (e.g., $4x^2y^3$ has degree $5$).",
+            "The degree of a full polynomial is simply the highest degree of any of its individual terms."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s01",
+          "title": "Anatomy of an Algebraic Expression",
+          "type": "svg",
+          "caption": "Every piece has a specific mathematical name.",
+          "alt_text": "Visual showing the expression 5x^2 - 3y + 7. The 5 and -3 are labeled 'Coefficients'. The x and y are labeled 'Variables'. The ^2 is labeled 'Exponent'. The +7 is labeled 'Constant'. The three groupings (5x^2), (-3y), and (+7) are bracketed together and labeled '3 Terms'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"90\" font-family=\"monospace\" font-size=\"36\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">5x² - 3y + 7</text><path d=\"M 195 95 L 195 120\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M 260 95 L 260 120\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"227\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Variables</text><path d=\"M 170 55 L 170 30\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M 235 55 L 235 30\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"202\" y=\"20\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Coefficients (5 and -3)</text><path d=\"M 330 95 L 330 120\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"330\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">Constant</text><path d=\"M 160 110 Q 250 170 340 110\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"250\" y=\"160\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"bold\">3 Terms</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Identify the like terms in the expression: $3a + 5b - 2a + 7b + 4a^2$.",
+          "solution_steps": [
+            "Step 1: Look for terms with identical variables and powers.",
+            "Step 2: $3a$ and $-2a$ both have exactly 'a' to the first power. They are like terms.",
+            "Step 3: $5b$ and $7b$ both have exactly 'b' to the first power. They are like terms.",
+            "Step 4: $4a^2$ has 'a' to the second power. It has no matching terms."
+          ],
+          "final_answer": "($3a$ and $-2a$), ($5b$ and $7b$)"
+        },
+        {
+          "problem": "Find the degree of the polynomial: $4x^3 + 2x^2 - 7x + 5$.",
+          "solution_steps": [
+            "Step 1: Check the degree of each term individually.",
+            "Step 2: $4x^3$ (degree 3). $2x^2$ (degree 2). $-7x$ (degree 1). $5$ (degree 0).",
+            "Step 3: The highest degree is 3."
+          ],
+          "final_answer": "Degree = $3$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Losing the negative sign on a coefficient.",
+          "correction": "In the expression $5x - 3y$, the coefficient of $y$ is $-3$, NOT $3$. The sign always stays attached to the number that follows it."
+        },
+        {
+          "mistake": "Adding the powers when checking like terms.",
+          "correction": "$x^2$ and $x$ cannot be added to make $x^3$. You can only combine like terms by adding their coefficients, not their exponents. $3x^2 + 5x^2 = 8x^2$."
+        }
+      ],
+      "quick_summary": [
+        "Terms are separated by $+$ and $-$.",
+        "Coefficients are the multipliers in front.",
+        "Constants are plain numbers.",
+        "Only Like Terms (exact same letters and powers) can be combined."
+      ]
+    },
+    "hs_math_t03_st02": {
+      "id": "hs_math_t03_st02",
+      "title": "Simplifying algebraic expressions",
+      "overview": "Algebraic expressions often start out messy. Simplifying them means cleaning up the mathematical sentence by distributing multipliers to get rid of brackets, and then gathering all the matching 'like terms' together.",
+      "key_concepts": [
+        {
+          "concept": "Combining Like Terms",
+          "definition": "Sorting the laundry.",
+          "details": [
+            "You can only add or subtract terms that have the exact same variables and powers.",
+            "To combine them, add or subtract their coefficients while leaving the variable part untouched. ($4x^2 + 3x^2 = 7x^2$)."
+          ]
+        },
+        {
+          "concept": "Removing Brackets",
+          "definition": "The Distributive Property.",
+          "details": [
+            "If a number or sign is directly outside a bracket, it must be multiplied by EVERY term inside the bracket.",
+            "Example: $3(2x - 5) = 6x - 15$."
+          ]
+        },
+        {
+          "concept": "The Danger of the Negative Sign",
+          "definition": "Flipping everything.",
+          "details": [
+            "If a negative sign is outside a bracket, it acts like a $-1$ multiplier. It flips the sign of EVERY term inside.",
+            "Example: $-(3x - 4) = -3x + 4$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Distributive Property",
+          "equation": "$$ a(b + c) = ab + ac $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s02",
+          "title": "The Negative Distribution Trap",
+          "type": "svg",
+          "caption": "A negative outside a bracket flips EVERY sign inside.",
+          "alt_text": "Visual showing the expression -(3x - 4). Arrows point from the outside negative sign to the 3x and the -4. Text shows: -1 * 3x = -3x. -1 * -4 = +4. Final expression: -3x + 4.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"60\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">-(3x - 4)</text><path d=\"M 200 65 Q 215 90 230 70\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><polygon points=\"230,70 220,65 225,75\" fill=\"#ef4444\"/><path d=\"M 200 65 Q 240 100 280 70\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><polygon points=\"280,70 270,65 275,75\" fill=\"#ef4444\"/><rect x=\"100\" y=\"110\" width=\"300\" height=\"60\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">The negative applies to BOTH terms!</text><text x=\"250\" y=\"155\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">-3x + 4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify: $2(3x - 4) - 3(2x - 5) + x$",
+          "solution_steps": [
+            "Step 1: Distribute the 2 into the first bracket: $6x - 8$.",
+            "Step 2: Distribute the -3 into the second bracket carefully: $-6x + 15$.",
+            "Step 3: Combine all pieces: $6x - 8 - 6x + 15 + x$.",
+            "Step 4: Group the $x$ terms: $(6x - 6x + x) = x$.",
+            "Step 5: Group the constants: $(-8 + 15) = 7$."
+          ],
+          "final_answer": "$x + 7$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Only multiplying the first term in a bracket.",
+          "correction": "Writing $3(x + 4) = 3x + 4$ is a very common error. The multiplier outside the bracket must hit every single term inside. It should be $3x + 12$."
+        },
+        {
+          "mistake": "Messing up fractional coefficients.",
+          "correction": "When simplifying $\\frac{1}{2}x + \\frac{1}{4}x$, you cannot just add the tops and bottoms. You must find a common denominator just like standard fractions: $\\frac{2}{4}x + \\frac{1}{4}x = \\frac{3}{4}x$."
+        }
+      ],
+      "quick_summary": [
+        "Distribute multipliers across every term inside the bracket.",
+        "A negative outside a bracket flips all signs inside.",
+        "Group Like Terms together and add/subtract their coefficients."
+      ]
+    },
+    "hs_math_t03_st03": {
+      "id": "hs_math_t03_st03",
+      "title": "Expanding brackets",
+      "overview": "Expanding brackets removes grouping symbols, allowing us to see all the individual terms so we can combine them. When multiplying two binomials together, things get slightly more complex, but the underlying rule remains the same: every term in the first bracket must multiply every term in the second bracket.",
+      "key_concepts": [
+        {
+          "concept": "The Double Distributive Property",
+          "definition": "Everyone meets everyone.",
+          "details": [
+            "When multiplying $(a+b)(c+d)$, you must distribute the '$a$' to both terms, and then distribute the '$b$' to both terms.",
+            "$(a+b)(c+d) = ac + ad + bc + bd$."
+          ]
+        },
+        {
+          "concept": "The FOIL Method",
+          "definition": "A handy acronym.",
+          "details": [
+            "FOIL helps you remember the double distributive steps specifically for two binomials:",
+            "**F**irst (multiply the first terms of each bracket)",
+            "**O**uter (multiply the outer edge terms)",
+            "**I**nner (multiply the inside edge terms)",
+            "**L**ast (multiply the last terms of each bracket)"
+          ]
+        },
+        {
+          "concept": "Squaring a Binomial",
+          "definition": "It's NOT just squaring both pieces.",
+          "details": [
+            "$(x+a)^2$ means $(x+a)(x+a)$.",
+            "If you expand it properly, you will always get a middle term: $x^2 + 2ax + a^2$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "FOIL Expansion",
+          "equation": "$$ (a+b)(c+d) = ac + ad + bc + bd $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s03",
+          "title": "The FOIL Method",
+          "type": "svg",
+          "caption": "First, Outer, Inner, Last ensures no combinations are missed.",
+          "alt_text": "Visual showing (x + 2)(x + 5). 4 arrows map the multiplication. First: x*x. Outer: x*5. Inner: 2*x. Last: 2*5. Resulting expression: x^2 + 5x + 2x + 10. Final combined expression: x^2 + 7x + 10.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"60\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">(x + 2)(x + 5)</text><path d=\"M 205 40 Q 235 10 275 40\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"240\" y=\"20\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#1d4ed8\">First</text><path d=\"M 205 70 Q 260 100 315 70\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"2\"/><text x=\"250\" y=\"105\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#15803d\">Outer</text><path d=\"M 235 40 Q 255 25 275 40\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"245\" y=\"45\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#c2410c\">Inner</text><path d=\"M 235 70 Q 275 90 315 70\" fill=\"none\" stroke=\"#9333ea\" stroke-width=\"2\"/><text x=\"265\" y=\"90\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#7e22ce\">Last</text><rect x=\"150\" y=\"130\" width=\"200\" height=\"40\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"155\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x² + 5x + 2x + 10</text><text x=\"250\" y=\"185\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#dc2626\" font-weight=\"bold\">x² + 7x + 10</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Expand: $(x - 3)(x - 5)$",
+          "solution_steps": [
+            "Step 1: First: $x \\times x = x^2$.",
+            "Step 2: Outer: $x \\times -5 = -5x$.",
+            "Step 3: Inner: $-3 \\times x = -3x$.",
+            "Step 4: Last: $-3 \\times -5 = +15$.",
+            "Step 5: Combine: $x^2 - 5x - 3x + 15 = x^2 - 8x + 15$."
+          ],
+          "final_answer": "$x^2 - 8x + 15$"
+        },
+        {
+          "problem": "Expand and simplify: $3(x + 2)(x - 4)$",
+          "solution_steps": [
+            "Step 1: Always expand the binomials first. Leave the 3 outside for now.",
+            "Step 2: $(x+2)(x-4) = x^2 - 4x + 2x - 8 = x^2 - 2x - 8$.",
+            "Step 3: Now multiply the entire result by 3: $3(x^2 - 2x - 8)$.",
+            "Step 4: $3x^2 - 6x - 24$."
+          ],
+          "final_answer": "$3x^2 - 6x - 24$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Saying $(x + 4)^2 = x^2 + 16$.",
+          "correction": "This is a fatal algebra error. You CANNOT just distribute a square into addition. $(x+4)^2$ means $(x+4)(x+4)$. If you FOIL it, you get $x^2 + 4x + 4x + 16$, which combines to $x^2 + 8x + 16$. You must not forget the middle term!"
+        }
+      ],
+      "quick_summary": [
+        "FOIL guarantees every term in the first bracket multiplies every term in the second.",
+        "Squaring a binomial ALWAYS produces three terms (a trinomial).",
+        "If there is a number outside two brackets, foil the brackets first, then distribute the number at the very end."
+      ]
+    },
+    "hs_math_t03_st04": {
+      "id": "hs_math_t03_st04",
+      "title": "Algebraic identities",
+      "overview": "While FOIL works for everything, mathematicians love shortcuts. Algebraic Identities are patterns that happen so consistently that we can skip the middle steps. Memorizing these patterns makes expanding and factorizing drastically faster.",
+      "key_concepts": [
+        {
+          "concept": "Perfect Square of a Sum",
+          "definition": "The positive trinomial.",
+          "details": [
+            "Pattern: $(a + b)^2 = a^2 + 2ab + b^2$.",
+            "Square the first, square the last, and the middle is twice the product."
+          ]
+        },
+        {
+          "concept": "Perfect Square of a Difference",
+          "definition": "The negative middle.",
+          "details": [
+            "Pattern: $(a - b)^2 = a^2 - 2ab + b^2$.",
+            "Notice that the last term is still positive (because negative $\\times$ negative = positive), but the middle term is negative."
+          ]
+        },
+        {
+          "concept": "Difference of Two Squares",
+          "definition": "The collapsing middle.",
+          "details": [
+            "Pattern: $(a + b)(a - b) = a^2 - b^2$.",
+            "When you multiply a sum by the exact same difference, the middle $+ab$ and $-ab$ perfectly cancel each other out, leaving only two terms."
+          ]
+        },
+        {
+          "concept": "Sum and Difference of Cubes",
+          "definition": "The cubic patterns.",
+          "details": [
+            "Sum: $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$",
+            "Difference: $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$"
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Square Identities",
+          "equation": "$$ (a \\pm b)^2 = a^2 \\pm 2ab + b^2 $$",
+          "variables": {}
+        },
+        {
+          "name": "Difference of Squares",
+          "equation": "$$ (a+b)(a-b) = a^2 - b^2 $$",
+          "variables": {}
+        },
+        {
+          "name": "Sum and Difference of Cubes",
+          "equation": "$$ a^3 + b^3 = (a+b)(a^2-ab+b^2) \\quad | \\quad a^3 - b^3 = (a-b)(a^2+ab+b^2) $$",
+          "variables": {
+            "a, b": "Real algebraic expressions"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s04",
+          "title": "Difference of Two Squares Canceling",
+          "type": "svg",
+          "caption": "The inner and outer terms perfectly annihilate each other.",
+          "alt_text": "Visual showing (a+b)(a-b). Arrows point to the 4 terms: a^2, -ab, +ba, -b^2. A red cross is drawn through the -ab and +ba terms in the middle, leaving only a^2 - b^2.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">(a + b)(a - b)</text><path d=\"M 250 60 L 250 80\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"250,80 245,75 255,75\" fill=\"#94a3b8\"/><rect x=\"100\" y=\"80\" width=\"300\" height=\"40\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"105\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">a² - ab + ba - b²</text><line x1=\"190\" y1=\"115\" x2=\"230\" y2=\"90\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"190\" y1=\"90\" x2=\"230\" y2=\"115\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"260\" y1=\"115\" x2=\"300\" y2=\"90\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"260\" y1=\"90\" x2=\"300\" y2=\"115\" stroke=\"#ef4444\" stroke-width=\"3\"/><rect x=\"180\" y=\"140\" width=\"140\" height=\"40\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"165\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">a² - b²</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Expand $(3x + 2y)^2$ using the correct identity.",
+          "solution_steps": [
+            "Step 1: Use $(a+b)^2 = a^2 + 2ab + b^2$.",
+            "Step 2: Here, $a = 3x$ and $b = 2y$.",
+            "Step 3: Square the first: $(3x)^2 = 9x^2$.",
+            "Step 4: Twice the product: $2(3x)(2y) = 12xy$.",
+            "Step 5: Square the last: $(2y)^2 = 4y^2$."
+          ],
+          "final_answer": "$9x^2 + 12xy + 4y^2$"
+        },
+        {
+          "problem": "Calculate $103^2$ quickly without a calculator.",
+          "solution_steps": [
+            "Step 1: Rewrite $103$ as $(100 + 3)$.",
+            "Step 2: Use the identity $(a+b)^2 = a^2 + 2ab + b^2$.",
+            "Step 3: $100^2 + 2(100)(3) + 3^2$.",
+            "Step 4: $10,000 + 600 + 9 = 10,609$."
+          ],
+          "final_answer": "$10,609$"
+        },
+        {
+          "problem": "Factorise: $8x^3 - 27$.",
+          "solution_steps": [
+            "Step 1: Recognise both terms as perfect cubes: $8x^3=(2x)^3$ and $27=3^3$.",
+            "Step 2: Use the difference-of-cubes identity: $a^3-b^3=(a-b)(a^2+ab+b^2)$.",
+            "Step 3: Substitute $a=2x$ and $b=3$.",
+            "Step 4: Form the factors: $(2x-3)((2x)^2+(2x)(3)+3^2)$.",
+            "Step 5: Simplify the second factor: $(2x-3)(4x^2+6x+9)$."
+          ],
+          "final_answer": "$(2x-3)(4x^2+6x+9)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing $(a-b)^2$ with $a^2 - b^2$.",
+          "correction": "These are completely different things! $(a-b)^2 = a^2 - 2ab + b^2$ (a Trinomial). But $a^2 - b^2$ factors into $(a+b)(a-b)$ (a Binomial)."
+        }
+      ],
+      "quick_summary": [
+        "Perfect Squares ALWAYS have a middle term ($2ab$ or $-2ab$).",
+        "Difference of Squares $(a+b)(a-b)$ perfectly cancels out the middle term.",
+        "Knowing these backwards and forwards is the key to Factorisation."
+      ]
+    },
+    "hs_math_t03_st05": {
+      "id": "hs_math_t03_st05",
+      "title": "Factorisation by common factors",
+      "overview": "If expanding is like assembling a piece of furniture, factorisation is taking it back apart into its original boxes. We start with a messy expression and look for the 'Highest Common Factor' (HCF) that every single term shares, so we can pull it out to the front.",
+      "key_concepts": [
+        {
+          "concept": "The Distributive Property in Reverse",
+          "definition": "Pulling it out.",
+          "details": [
+            "Expansion: $a(b + c) = ab + ac$.",
+            "Factorisation: $ab + ac = a(b + c)$. We are undoing the multiplication."
+          ]
+        },
+        {
+          "concept": "Finding the Highest Common Factor (HCF)",
+          "definition": "The biggest piece they share.",
+          "details": [
+            "**Numbers:** Find the largest number that divides evenly into all coefficients (e.g., for $12$ and $18$, the HCF is $6$).",
+            "**Variables:** Find the letters they share, and take the SMALLEST exponent present (e.g., for $x^3$ and $x^2$, the HCF is $x^2$)."
+          ]
+        },
+        {
+          "concept": "Handling Negatives",
+          "definition": "Flipping signs.",
+          "details": [
+            "If the leading term is negative, it is usually best to factor out a negative number. When you do, every sign inside the bracket must flip! Example: $-6x - 12 = -6(x + 2)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Factoring Out HCF",
+          "equation": "$$ ab + ac = a(b + c) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s05",
+          "title": "Extracting the HCF",
+          "type": "svg",
+          "caption": "Find the largest number and the largest variable power that fits into both terms.",
+          "alt_text": "Visual showing 12x^3 + 18x^2. Text points out that HCF of 12 and 18 is 6. Lowest power of x is x^2. Combined HCF is 6x^2. Arrows show pulling 6x^2 out to the front, leaving (2x + 3) inside brackets. Final result: 6x^2(2x + 3).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">12x³ + 18x²</text><rect x=\"110\" y=\"70\" width=\"120\" height=\"50\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"170\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">Number HCF:</text><text x=\"170\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">6</text><rect x=\"270\" y=\"70\" width=\"120\" height=\"50\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"330\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">Variable HCF:</text><text x=\"330\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">x²</text><path d=\"M 170 130 Q 250 150 250 150 Q 330 150 330 130\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"250\" y=\"175\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">6x² ( 2x + 3 )</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Factorise completely: $12x^3 + 18x^2$",
+          "solution_steps": [
+            "Step 1: Find the HCF of the numbers $12$ and $18$. The highest number that divides both is $6$.",
+            "Step 2: Find the HCF of the variables $x^3$ and $x^2$. The smallest exponent is $2$, so take out $x^2$.",
+            "Step 3: The total HCF is $6x^2$. Pull it outside a bracket.",
+            "Step 4: Divide each original term by $6x^2$ to find what goes inside. $(12x^3 \\div 6x^2 = 2x)$ and $(18x^2 \\div 6x^2 = 3)$."
+          ],
+          "final_answer": "$6x^2(2x + 3)$"
+        },
+        {
+          "problem": "Factorise: $-15a^2 + 20a$",
+          "solution_steps": [
+            "Step 1: The leading term is negative, so let's factor out a negative number.",
+            "Step 2: The HCF of $-15$ and $20$ (taking out the negative) is $-5$.",
+            "Step 3: The HCF of $a^2$ and $a$ is $a$. Total HCF is $-5a$.",
+            "Step 4: Divide: $(-15a^2 \\div -5a = 3a)$ and $(20a \\div -5a = -4)$."
+          ],
+          "final_answer": "$-5a(3a - 4)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Not taking out the HIGHEST common factor.",
+          "correction": "If you factorise $12x + 18$ into $2(6x + 9)$, it is not fully complete because $6$ and $9$ still share a factor of $3$. You must pull out the biggest possible number at the start: $6(2x + 3)$."
+        }
+      ],
+      "quick_summary": [
+        "Factorisation is the exact opposite of expansion.",
+        "Always check numbers first, then variables.",
+        "When you pull out a negative factor, the signs inside the bracket must flip.",
+        "You can always check your work by expanding it back out!"
+      ]
+    },
+    "hs_math_t03_st06": {
+      "id": "hs_math_t03_st06",
+      "title": "Factorisation by grouping",
+      "overview": "Sometimes an expression has four terms, and there is no single factor that all four share. In this case, we split the expression in half, factorise the two halves separately, and look for a magical 'common bracket' to emerge.",
+      "key_concepts": [
+        {
+          "concept": "The Split Strategy",
+          "definition": "Divide and conquer.",
+          "details": [
+            "Cut the four-term expression into two groups of two.",
+            "Take the Highest Common Factor (HCF) out of the first group.",
+            "Take the HCF out of the second group.",
+            "If done correctly, the leftover bracket for both groups will be IDENTICAL."
+          ]
+        },
+        {
+          "concept": "Extracting the Common Bracket",
+          "definition": "The final pull.",
+          "details": [
+            "If you have $a(x+y) + b(x+y)$, the entire bracket $(x+y)$ is now the common factor! You pull it to the front, leaving the outside pieces in their own bracket: $(x+y)(a+b)$."
+          ]
+        },
+        {
+          "concept": "Rearranging Terms",
+          "definition": "Shuffling the deck.",
+          "details": [
+            "If grouping the first two and last two doesn't create matching brackets, you may need to rearrange the original terms first (e.g., grouping the $x$ terms together and the $y$ terms together)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s06",
+          "title": "Factorisation by Grouping",
+          "type": "svg",
+          "caption": "Factor out the halves, then factor out the matching bracket.",
+          "alt_text": "Visual showing the expression ax + ay + bx + by. A line splits it down the middle into (ax + ay) and (bx + by). An arrow shows a pulled out of the first to make a(x+y). An arrow shows b pulled out of the second to make b(x+y). Finally, (x+y) is pulled out to form (x+y)(a+b).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">ax + ay  +  bx + by</text><line x1=\"250\" y1=\"20\" x2=\"250\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 180 50 L 180 80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M 320 50 L 320 80\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"180\" y=\"105\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">a(x + y)</text><text x=\"320\" y=\"105\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">b(x + y)</text><text x=\"250\" y=\"105\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">+</text><rect x=\"135\" y=\"85\" width=\"80\" height=\"30\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"5\"/><rect x=\"275\" y=\"85\" width=\"80\" height=\"30\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"5\"/><path d=\"M 250 125 L 250 150\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><polygon points=\"250,150 245,140 255,140\" fill=\"#ea580c\"/><text x=\"250\" y=\"175\" font-family=\"monospace\" font-size=\"22\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">(x + y)(a + b)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Factorise: $3x + 6 + 2xy + 4y$",
+          "solution_steps": [
+            "Step 1: Group into pairs: $(3x + 6)$ and $(2xy + 4y)$.",
+            "Step 2: Factorise the first group: pull out a $3$ to get $3(x + 2)$.",
+            "Step 3: Factorise the second group: pull out $2y$ to get $2y(x + 2)$.",
+            "Step 4: Rewrite the expression: $3(x + 2) + 2y(x + 2)$.",
+            "Step 5: Since $(x + 2)$ is common to both, pull it out to the front. The leftover pieces $(3 + 2y)$ form the second bracket."
+          ],
+          "final_answer": "$(x + 2)(3 + 2y)$"
+        },
+        {
+          "problem": "Factorise: $x^2 - 3x - 2x + 6$",
+          "solution_steps": [
+            "Step 1: Group: $(x^2 - 3x)$ and $(-2x + 6)$.",
+            "Step 2: Factorise first group: $x(x - 3)$.",
+            "Step 3: Factorise second group. To make the bracket match $(x-3)$, we MUST pull out a NEGATIVE $2$. $-2(x - 3)$.",
+            "Step 4: We now have $x(x - 3) - 2(x - 3)$. Pull out the common bracket."
+          ],
+          "final_answer": "$(x - 3)(x - 2)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ending up with mismatched brackets.",
+          "correction": "If your grouping gives you $x(a+b) + y(a-b)$, you cannot proceed. The brackets MUST be perfectly identical. If they aren't, try pulling out a negative number, or go back to the start and rearrange the terms."
+        }
+      ],
+      "quick_summary": [
+        "Used for expressions with 4 terms.",
+        "Group into two pairs, and factorise each pair.",
+        "The resulting brackets MUST match exactly.",
+        "Pull the matching bracket to the front, and group the 'leftovers' into a second bracket."
+      ]
+    },
+    "hs_math_t03_st07": {
+      "id": "hs_math_t03_st07",
+      "title": "Factorising quadratic expressions",
+      "overview": "A quadratic expression forms a classic parabola curve when graphed. Factoring a quadratic means reversing the FOIL process to turn $ax^2 + bx + c$ back into two neat binomial brackets like $(x+2)(x+3)$. This is the most crucial algebra skill for solving complex equations.",
+      "key_concepts": [
+        {
+          "concept": "Simple Quadratics ($a=1$)",
+          "definition": "The Product-Sum game.",
+          "details": [
+            "For an expression like $x^2 + bx + c$ (where there is no number in front of $x^2$), you are playing a number puzzle.",
+            "You need to find two numbers that **MULTIPLY** to equal '$c$' (the constant) AND **ADD** to equal '$b$' (the middle coefficient).",
+            "This integer product-sum method applies when suitable integer factors exist. If no such pair exists, the quadratic does not factorise into linear factors with integer coefficients."
+          ]
+        },
+        {
+          "concept": "Splitting the Middle Term ($a > 1$)",
+          "definition": "The 'ac' method.",
+          "details": [
+            "If there is a number in front of $x^2$ (like $2x^2 + 7x + 3$), the simple puzzle doesn't work.",
+            "1) Multiply the first and last numbers ($ac$). Here, $2 \\times 3 = 6$.",
+            "2) Find two numbers that multiply to $6$ and add to the middle number ($7$). The numbers are $6$ and $1$.",
+            "3) Split the middle term: $2x^2 + 6x + 1x + 3$.",
+            "4) Finish using Factorisation by Grouping.",
+            "The $ac$ method is a systematic search for integer pairs when the quadratic is factorisable over the integers; not every quadratic has such a factorisation."
+          ]
+        },
+        {
+          "concept": "Sign Patterns",
+          "definition": "Predicting the brackets.",
+          "details": [
+            "If $c$ is positive: The signs in the brackets will be the SAME (both match the sign of $b$).",
+            "If $c$ is negative: The signs in the brackets will be DIFFERENT (one positive, one negative)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Quadratic Form",
+          "equation": "$$ ax^2 + bx + c $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s07",
+          "title": "The Product-Sum Puzzle",
+          "type": "svg",
+          "caption": "Find two numbers that multiply to the last term and add to the middle term.",
+          "alt_text": "Visual showing x^2 + 7x + 12. Arrow from 12 points to a box saying 'Multiply to 12'. Arrow from 7 points to a box saying 'Add to 7'. A brain icon shows the numbers 3 and 4. Arrows point down to the final answer: (x+3)(x+4).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"monospace\" font-size=\"28\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x² + 7x + 12</text><path d=\"M 320 60 L 320 90\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><rect x=\"260\" y=\"90\" width=\"120\" height=\"30\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"320\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Multiply to 12</text><path d=\"M 220 60 L 220 90\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"160\" y=\"90\" width=\"90\" height=\"30\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"205\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Add to 7</text><path d=\"M 250 120 L 250 145\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"250\" y=\"175\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">(x + 3)(x + 4)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Factorise: $x^2 - 7x + 10$.",
+          "solution_steps": [
+            "Step 1: The coefficient of $x^2$ is $1$. We just need the product/sum.",
+            "Step 2: Find two numbers that multiply to $+10$ and add to $-7$.",
+            "Step 3: Since the product is positive but the sum is negative, both numbers must be negative.",
+            "Step 4: The numbers $-2$ and $-5$ work. $(-2 \\times -5 = 10)$ and $(-2 + -5 = -7)$."
+          ],
+          "final_answer": "$(x - 2)(x - 5)$"
+        },
+        {
+          "problem": "Factorise using splitting the middle term: $2x^2 + 11x + 12$.",
+          "solution_steps": [
+            "Step 1: Calculate $ac$. $a=2, c=12$. $2 \\times 12 = 24$.",
+            "Step 2: Find two numbers that multiply to $24$ and add to $11$. The numbers are $8$ and $3$.",
+            "Step 3: Split the middle term: $2x^2 + 8x + 3x + 12$.",
+            "Step 4: Group them: $(2x^2 + 8x) + (3x + 12)$.",
+            "Step 5: Factorise groups: $2x(x + 4) + 3(x + 4)$.",
+            "Step 6: Pull out the common bracket: $(x + 4)(2x + 3)$."
+          ],
+          "final_answer": "$(x + 4)(2x + 3)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the basic product/sum rule when $a > 1$.",
+          "correction": "If you have $3x^2 + 10x + 8$, you CANNOT just look for numbers that multiply to $8$ and add to $10$. You MUST multiply the $3$ and $8$ first to get $24$, and find numbers that multiply to $24$ and add to $10$."
+        }
+      ],
+      "quick_summary": [
+        "If $x^2$ is alone, just find numbers that Multiply to $c$ and Add to $b$.",
+        "If there's a number in front of $x^2$, use the 'ac' method (split the middle term).",
+        "Always check your factorisation by FOILing it back out!"
+      ]
+    },
+    "hs_math_t03_st08": {
+      "id": "hs_math_t03_st08",
+      "title": "Difference of two squares",
+      "overview": "When you multiply $(a+b)(a-b)$, the middle terms perfectly cancel each other out, leaving only $a^2 - b^2$. Learning to spot this specific pattern in reverse allows you to factorise certain binomials instantly, bypassing the long quadratic methods.",
+      "key_concepts": [
+        {
+          "concept": "Spotting the Pattern",
+          "definition": "Two squares, one minus.",
+          "details": [
+            "The rule ONLY applies if there are exactly TWO terms.",
+            "The terms MUST be separated by a MINUS sign (Difference).",
+            "Both terms MUST be perfect squares (e.g., $x^2$, $16$, $25y^2$, $100$)."
+          ]
+        },
+        {
+          "concept": "The Formula",
+          "definition": "Instant factoring.",
+          "details": [
+            "$a^2 - b^2$ always factors cleanly into $(a - b)(a + b)$.",
+            "You just take the square root of the first term, the square root of the second term, and drop them into a plus-bracket and a minus-bracket."
+          ]
+        },
+        {
+          "concept": "Higher Powers",
+          "definition": "Even exponents are squares.",
+          "details": [
+            "Any variable with an EVEN exponent is a perfect square. For example, $x^4$ is the perfect square of $x^2$, because $(x^2)^2 = x^4$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Difference of Two Squares",
+          "equation": "$$ a^2 - b^2 = (a - b)(a + b) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s08",
+          "title": "Recognising a Difference of Two Squares",
+          "type": "svg",
+          "caption": "Write each term as a square, then use the matching plus and minus factors.",
+          "alt_text": "Visual showing 9x squared minus 25 rewritten as (3x) squared minus 5 squared, then factorised as (3x minus 5)(3x plus 5).",
+          "data": "<svg viewBox=\"0 0 500 220\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"500\" height=\"220\" fill=\"#f8fafc\" rx=\"10\"/>\n<text x=\"250\" y=\"38\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#334155\" font-weight=\"bold\">Difference of two squares</text>\n<rect x=\"25\" y=\"65\" width=\"140\" height=\"58\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<text x=\"95\" y=\"101\" font-family=\"sans-serif\" font-size=\"23\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">9x² - 25</text>\n<path d=\"M 170 94 L 205 94\" stroke=\"#64748b\" stroke-width=\"3\" fill=\"none\"/>\n<polygon points=\"205,94 195,88 195,100\" fill=\"#64748b\"/>\n<rect x=\"210\" y=\"65\" width=\"130\" height=\"58\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/>\n<text x=\"275\" y=\"101\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#92400e\" font-weight=\"bold\">(3x)² - 5²</text>\n<path d=\"M 345 94 L 375 94\" stroke=\"#64748b\" stroke-width=\"3\" fill=\"none\"/>\n<polygon points=\"375,94 365,88 365,100\" fill=\"#64748b\"/>\n<rect x=\"380\" y=\"65\" width=\"105\" height=\"58\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n<text x=\"432\" y=\"89\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">(3x - 5)</text>\n<text x=\"432\" y=\"108\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">(3x + 5)</text>\n<text x=\"250\" y=\"160\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">a² - b² = (a - b)(a + b)</text>\n<text x=\"250\" y=\"190\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#475569\">Here, a = 3x and b = 5</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Factorise: $4x^2 - 49$.",
+          "solution_steps": [
+            "Step 1: Check conditions. Two terms? Yes. Minus sign? Yes. Perfect squares? Yes ($4x^2 = (2x)^2$ and $49 = 7^2$).",
+            "Step 2: The square root of the first term is $2x$. The square root of the second is $7$.",
+            "Step 3: Drop them into the formula: $(2x - 7)(2x + 7)$."
+          ],
+          "final_answer": "$(2x - 7)(2x + 7)$"
+        },
+        {
+          "problem": "Factorise completely: $3x^2 - 75$.",
+          "solution_steps": [
+            "Step 1: 3 and 75 are NOT perfect squares. But wait! They share a common factor.",
+            "Step 2: Factor out the HCF of $3$: $3(x^2 - 25)$.",
+            "Step 3: Look inside the bracket. $x^2 - 25$ is a perfect Difference of Two Squares.",
+            "Step 4: Factorise the bracket: $(x-5)(x+5)$. Keep the $3$ in front."
+          ],
+          "final_answer": "$3(x - 5)(x + 5)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to factorise $x^2 + 16$.",
+          "correction": "The expression $x^2+16$ is a sum of squares, not a difference of squares. The difference-of-squares identity does not apply, and this expression cannot be factorised into real linear factors."
+        },
+        {
+          "mistake": "Stopping too early on higher powers.",
+          "correction": "If you factorise $x^4 - 81$, you get $(x^2 - 9)(x^2 + 9)$. Many students stop here. But $(x^2 - 9)$ is ANOTHER difference of squares! It must be factored further into $(x-3)(x+3)$. The final complete answer is $(x-3)(x+3)(x^2+9)$."
+        }
+      ],
+      "quick_summary": [
+        "Only works for two terms separated by a MINUS sign.",
+        "Both terms must be perfect squares.",
+        "The formula is instant: $(a-b)(a+b)$.",
+        "Always check for a common factor (HCF) before applying the rule."
+      ]
+    },
+    "hs_math_t03_st09": {
+      "id": "hs_math_t03_st09",
+      "title": "Perfect-square expressions",
+      "overview": "A perfect square in algebra is just like a perfect square in geometry: it is an expression multiplied exactly by itself. Recognising when a trinomial is actually a 'perfect square' in disguise saves an immense amount of time when factorising.",
+      "key_concepts": [
+        {
+          "concept": "The Perfect Square Trinomial",
+          "definition": "The three-term pattern.",
+          "details": [
+            "A trinomial is a perfect square if the first and last terms are perfect squares, and the middle term is exactly twice the product of their square roots.",
+            "Pattern 1 (Sum): $a^2 + 2ab + b^2 = (a + b)^2$.",
+            "Pattern 2 (Difference): $a^2 - 2ab + b^2 = (a - b)^2$."
+          ]
+        },
+        {
+          "concept": "Checking the Middle Term",
+          "definition": "The $2ab$ test.",
+          "details": [
+            "If you have $x^2 + 10x + 25$, check the ends: $\\sqrt{x^2} = x$ and $\\sqrt{25} = 5$.",
+            "Check the middle: Is $2(x)(5)$ equal to $10x$? Yes! So it factors perfectly into $(x + 5)^2$."
+          ]
+        },
+        {
+          "concept": "Not All Squares Are Perfect",
+          "definition": "Beware the trap.",
+          "details": [
+            "Just because the ends are squares doesn't mean it works. In $x^2 + 5x + 9$, the ends are $x$ and $3$. But the middle term is $5x$, not $2(x)(3) = 6x$. This is NOT a perfect square."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Perfect Square Trinomials",
+          "equation": "$$ a^2 \\pm 2ab + b^2 = (a \\pm b)^2 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s09",
+          "title": "The Geometry of a Perfect Square",
+          "type": "svg",
+          "caption": "Why is the middle term 2ab? Because a square (a+b) by (a+b) contains two identical 'ab' rectangles.",
+          "alt_text": "Visual showing a large square split into 4 smaller quadrants. Top-left is a large square labeled a^2. Bottom-right is a small square labeled b^2. Top-right and bottom-left are identical rectangles labeled 'ab'. Total area is a^2 + ab + ab + b^2 = a^2 + 2ab + b^2.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"150\" y=\"20\" width=\"120\" height=\"120\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"210\" y=\"85\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">a²</text><rect x=\"270\" y=\"20\" width=\"50\" height=\"120\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"295\" y=\"85\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">ab</text><rect x=\"150\" y=\"140\" width=\"120\" height=\"50\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"210\" y=\"170\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">ab</text><rect x=\"270\" y=\"140\" width=\"50\" height=\"50\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"295\" y=\"170\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">b²</text><text x=\"135\" y=\"80\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">a</text><text x=\"135\" y=\"170\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">b</text><text x=\"210\" y=\"15\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">a</text><text x=\"295\" y=\"15\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">b</text><text x=\"380\" y=\"110\" font-family=\"monospace\" font-size=\"16\" fill=\"#0f172a\" font-weight=\"bold\">Total Area:</text><text x=\"380\" y=\"135\" font-family=\"monospace\" font-size=\"14\" fill=\"#1e3a8a\">a²</text><text x=\"400\" y=\"135\" font-family=\"monospace\" font-size=\"14\" fill=\"#0f172a\">+</text><text x=\"415\" y=\"135\" font-family=\"monospace\" font-size=\"14\" fill=\"#15803d\">2ab</text><text x=\"445\" y=\"135\" font-family=\"monospace\" font-size=\"14\" fill=\"#0f172a\">+</text><text x=\"460\" y=\"135\" font-family=\"monospace\" font-size=\"14\" fill=\"#854d0e\">b²</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Factorise: $4x^2 + 12x + 9$",
+          "solution_steps": [
+            "Step 1: Check the ends. $\\sqrt{4x^2} = 2x$. $\\sqrt{9} = 3$. Both are perfect squares.",
+            "Step 2: Check the middle. Does $2(2x)(3) = 12x$? Yes.",
+            "Step 3: Since the middle term is positive, it factors into $(a+b)^2$."
+          ],
+          "final_answer": "$(2x + 3)^2$"
+        },
+        {
+          "problem": "Factorise completely: $2x^2 + 12x + 18$",
+          "solution_steps": [
+            "Step 1: The ends $2x^2$ and $18$ are NOT perfect squares. Check for an HCF first.",
+            "Step 2: Factor out $2$: $2(x^2 + 6x + 9)$.",
+            "Step 3: Look at the bracket. The ends are $x^2$ and $9$ (squares of $x$ and $3$).",
+            "Step 4: Check the middle: $2(x)(3) = 6x$. It is a perfect square trinomial."
+          ],
+          "final_answer": "$2(x + 3)^2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Writing $(a+b)^2 = a^2 + b^2$.",
+          "correction": "This is one of the most common mistakes in algebra. You cannot just distribute a square over addition. $(a+b)^2$ is $(a+b)(a+b)$, which requires FOIL and ALWAYS generates a middle term of $2ab$."
+        }
+      ],
+      "quick_summary": [
+        "A perfect square trinomial is the result of squaring a binomial.",
+        "Check the ends (must be squares) and the middle (must be $2ab$).",
+        "Always extract the HCF first before checking for perfect squares."
+      ]
+    },
+    "hs_math_t03_st10": {
+      "id": "hs_math_t03_st10",
+      "title": "Simplifying rational algebraic expressions",
+      "overview": "A rational algebraic expression is simply a fraction where the top (numerator) and bottom (denominator) are both polynomials. Just like numerical fractions, you can simplify them by crossing out common factors. But beware: you can only cancel complete factors, never individual terms.",
+      "key_concepts": [
+        {
+          "concept": "Factor Before You Cancel",
+          "definition": "The golden rule of rational expressions.",
+          "details": [
+            "You CANNOT cancel $x$'s in $\\frac{x^2+5}{x}$. You can only cancel things that are multiplied, not things that are added.",
+            "Always factorize the numerator and denominator completely into brackets FIRST. Then, cancel the identical brackets."
+          ]
+        },
+        {
+          "concept": "Domain Restrictions",
+          "definition": "The illegal numbers.",
+          "details": [
+            "In math, you can never divide by zero. Therefore, any value of the variable that makes the denominator equal to zero must be restricted ($x \\neq \\text{value}$).",
+            "Important: You must declare restrictions based on the ORIGINAL denominator, even if the problem factor gets cancelled out during simplification."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s10",
+          "title": "Cancelling Factors vs Cancelling Terms",
+          "type": "svg",
+          "caption": "Never cancel individual terms across a plus or minus sign!",
+          "alt_text": "Visual split into 'WRONG' and 'RIGHT'. Wrong: (x^2 + 4) / x. A red slash goes through the x^2 and the x on the bottom, leaving 'x+4'. Text: 'Cannot cancel added terms!' Right: x(x+4) / x. A green slash goes through the standalone x on top and bottom, leaving 'x+4'. Text: 'Can only cancel multiplied factors!'",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"220\" height=\"160\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"10\"/><text x=\"130\" y=\"50\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">WRONG</text><text x=\"130\" y=\"90\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">x² + 4</text><line x1=\"80\" y1=\"100\" x2=\"180\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"130\" y=\"125\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">x</text><line x1=\"100\" y1=\"130\" x2=\"130\" y2=\"75\" stroke=\"#ef4444\" stroke-width=\"4\"/><text x=\"130\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">Cannot cancel added terms!</text><rect x=\"260\" y=\"20\" width=\"220\" height=\"160\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"370\" y=\"50\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">RIGHT</text><text x=\"370\" y=\"90\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">x(x + 4)</text><line x1=\"320\" y1=\"100\" x2=\"420\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"370\" y=\"125\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">x</text><line x1=\"325\" y1=\"95\" x2=\"345\" y2=\"75\" stroke=\"#16a34a\" stroke-width=\"4\"/><line x1=\"360\" y1=\"130\" x2=\"380\" y2=\"110\" stroke=\"#16a34a\" stroke-width=\"4\"/><text x=\"370\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Only cancel multiplied factors!</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify completely and state restrictions: $\\frac{x^2 - 9}{x^2 + 5x + 6}$",
+          "solution_steps": [
+            "Step 1: Factorise the numerator (Difference of Squares): $x^2 - 9 = (x - 3)(x + 3)$.",
+            "Step 2: Factorise the denominator (Quadratic Trinomial): $x^2 + 5x + 6 = (x + 2)(x + 3)$.",
+            "Step 3: Rewrite: $\\frac{(x - 3)(x + 3)}{(x + 2)(x + 3)}$.",
+            "Step 4: The factor $(x+3)$ is on top and bottom. Cancel it.",
+            "Step 5: Identify restrictions. The original denominator was $(x+2)(x+3)$. This equals zero if $x = -2$ or $x = -3$. Both must be restricted."
+          ],
+          "final_answer": "$\\frac{x - 3}{x + 2}, \\quad x \\neq -2, -3$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Cancelling parts of a binomial.",
+          "correction": "You CANNOT simplify $\\frac{x+6}{x+3}$ down to $2$ by cancelling the $x$'s and dividing $6$ by $3$. The $x$ is attached by a plus sign. You can only cancel matching, fully grouped brackets."
+        },
+        {
+          "mistake": "Forgetting the restrictions of cancelled factors.",
+          "correction": "If you cancel out $(x-5)$ from the top and bottom, the simplified equation looks like it allows $x=5$. But the original equation would have divided by zero. You must always state $x \\neq 5$ in the final answer."
+        }
+      ],
+      "quick_summary": [
+        "A rational algebraic expression is a polynomial fraction.",
+        "Step 1: Factorise top and bottom completely.",
+        "Step 2: Cancel matching brackets.",
+        "Step 3: State restrictions where the ORIGINAL denominator equals zero."
+      ]
+    },
+    "hs_math_t03_st11": {
+      "id": "hs_math_t03_st11",
+      "title": "Operations with algebraic fractions",
+      "overview": "Algebraic fractions are fractions whose numerators and denominators contain algebraic expressions. The four operations follow the familiar rules for numerical fractions, with extra care needed to factor expressions and state all restrictions that keep denominators non-zero.",
+      "key_concepts": [
+        {
+          "concept": "Multiplying and Dividing",
+          "definition": "Straight across.",
+          "details": [
+            "**Multiply:** Factorise each numerator and denominator, cancel common factors, then multiply the remaining numerators and denominators.",
+            "**Divide:** Keep the first fraction, change division to multiplication, and multiply by the reciprocal of the second fraction.",
+            "When dividing, the second fraction must not be zero. Its denominator must be non-zero and its numerator must also be non-zero."
+          ]
+        },
+        {
+          "concept": "Adding and Subtracting",
+          "definition": "The Lowest Common Denominator (LCD).",
+          "details": [
+            "Fractions with different denominators cannot be added or subtracted by combining the denominators. First find a **Lowest Common Denominator (LCD)**.",
+            "Build the LCD by taking each distinct factor to the highest power appearing in the denominators. If the denominators have no common factors, their product is the LCD.",
+            "Rewrite each fraction with the LCD, then add or subtract the complete numerators and simplify where possible."
+          ]
+        },
+        {
+          "concept": "Subtraction Trap",
+          "definition": "Distribute the negative.",
+          "details": [
+            "When subtracting a fraction, the minus sign applies to the entire numerator. For example, $-\\frac{x-4}{2}=\\frac{-x+4}{2}$.",
+            "Use brackets around a numerator when subtracting it, especially when it contains more than one term."
+          ]
+        },
+        {
+          "concept": "Restrictions on Variable Values",
+          "definition": "Keeping every denominator valid.",
+          "details": [
+            "Values that make any original denominator equal to zero are excluded from the domain.",
+            "For division by an algebraic fraction, the divisor itself must also be non-zero. Therefore, its numerator cannot equal zero.",
+            "State restrictions from the original expression even if a factor is later cancelled."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Addition and Subtraction of Algebraic Fractions",
+          "equation": "$$ \\frac{A}{B} \\pm \\frac{C}{D} = \\frac{AD \\pm BC}{BD} $$",
+          "variables": {
+            "A, B, C, D": "Algebraic expressions, with $B \\ne 0$ and $D \\ne 0$"
+          }
+        },
+        {
+          "name": "Multiplication of Algebraic Fractions",
+          "equation": "$$ \\frac{A}{B} \\times \\frac{C}{D} = \\frac{AC}{BD} $$",
+          "variables": {
+            "A, B, C, D": "Algebraic expressions, with $B \\ne 0$ and $D \\ne 0$"
+          }
+        },
+        {
+          "name": "Division of Algebraic Fractions",
+          "equation": "$$ \\frac{A}{B} \\div \\frac{C}{D} = \\frac{AD}{BC} $$",
+          "variables": {
+            "A, B, C, D": "Algebraic expressions, with $B \\ne 0$, $D \\ne 0$ and $C \\ne 0$"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v03_s11",
+          "title": "Finding a Common Algebraic Denominator",
+          "type": "svg",
+          "caption": "Multiply the top and bottom of each fraction by the missing piece.",
+          "alt_text": "Visual showing 2/x + 3/(x+1). Arrows show multiplying the first fraction by (x+1)/(x+1) and the second by x/x. Resulting in [2(x+1)] / [x(x+1)] + 3x / [x(x+1)]. Final combination: (5x + 2) / x(x+1).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"70\" y=\"90\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">2</text><line x1=\"50\" y1=\"100\" x2=\"90\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"70\" y=\"125\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">x</text><text x=\"120\" y=\"110\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">+</text><text x=\"170\" y=\"90\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">3</text><line x1=\"140\" y1=\"100\" x2=\"200\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"170\" y=\"125\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">x+1</text><path d=\"M 90 110 Q 110 160 160 135\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 140 110 Q 120 60 75 75\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"240\" y=\"110\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\">=</text><text x=\"350\" y=\"80\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#3b82f6\" font-weight=\"bold\">2(x+1)</text><text x=\"410\" y=\"80\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">+</text><text x=\"450\" y=\"80\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">3x</text><line x1=\"290\" y1=\"100\" x2=\"480\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"385\" y=\"125\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x(x+1)</text><rect x=\"310\" y=\"140\" width=\"150\" height=\"40\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"385\" y=\"165\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">(5x + 2)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify: $\\frac{2}{x}+\\frac{3}{x+1}$, stating the restrictions.",
+          "solution_steps": [
+            "Step 1: The original denominators are $x$ and $x+1$, so $x \\ne 0$ and $x \\ne -1$.",
+            "Step 2: The Lowest Common Denominator is $x(x+1)$.",
+            "Step 3: Rewrite both fractions: $\\frac{2(x+1)}{x(x+1)}+\\frac{3x}{x(x+1)}$.",
+            "Step 4: Add the numerators: $\\frac{2x+2+3x}{x(x+1)}=\\frac{5x+2}{x(x+1)}$."
+          ],
+          "final_answer": "$\\frac{5x+2}{x(x+1)},\\quad x\\ne 0,-1$"
+        },
+        {
+          "problem": "Simplify: $\\frac{x+2}{x-1}-\\frac{3}{x+1}$, stating the restrictions.",
+          "solution_steps": [
+            "Step 1: The original denominators require $x \\ne 1$ and $x \\ne -1$.",
+            "Step 2: Use the common denominator $(x-1)(x+1)$.",
+            "Step 3: Rewrite the expression: $\\frac{(x+2)(x+1)-3(x-1)}{(x-1)(x+1)}$.",
+            "Step 4: Expand the numerator: $x^2+3x+2-3x+3=x^2+5$.",
+            "Step 5: Write the simplified result and retain the original restrictions."
+          ],
+          "final_answer": "$\\frac{x^2+5}{x^2-1},\\quad x\\ne -1,1$"
+        },
+        {
+          "problem": "Simplify: $\\frac{x^2-4}{x^2+3x+2}\\times\\frac{x+1}{x-2}$, stating the restrictions.",
+          "solution_steps": [
+            "Step 1: The original denominators are $x^2+3x+2=(x+1)(x+2)$ and $x-2$. Therefore, $x\\ne -1,-2,2$.",
+            "Step 2: Factorise the numerator: $x^2-4=(x-2)(x+2)$.",
+            "Step 3: Rewrite using factors: $\\frac{(x-2)(x+2)}{(x+1)(x+2)}\\times\\frac{x+1}{x-2}$.",
+            "Step 4: Cancel the matching factors $(x-2)$, $(x+2)$ and $(x+1)$.",
+            "Step 5: Keep all restrictions from the original expression."
+          ],
+          "final_answer": "$1,\\quad x\\ne -2,-1,2$"
+        },
+        {
+          "problem": "Simplify: $\\frac{x^2 - 4}{x + 2} \\div \\frac{x - 2}{x + 3}$",
+          "solution_steps": [
+            "Step 1: Keep-Change-Flip. $\\frac{x^2 - 4}{x + 2} \\times \\frac{x + 3}{x - 2}$.",
+            "Step 2: Factorise everything. $x^2 - 4$ becomes $(x-2)(x+2)$.",
+            "Step 3: Equation is now: $\\frac{(x-2)(x+2)}{x+2} \\times \\frac{x+3}{x-2}$.",
+            "Step 4: Cancel common factors. The $(x+2)$ cancels out top and bottom. The $(x-2)$ cancels out top and bottom. Only $(x+3)$ remains.",
+            "Step 5: Check restrictions from all original denominators and the flipped divisor ($x \\neq -2, 2, -3$)."
+          ],
+          "final_answer": "$x + 3, \\quad x \\neq -2, 2, -3$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding denominators together.",
+          "correction": "$\\frac{1}{x} + \\frac{1}{y}$ does NOT equal $\\frac{2}{x+y}$. You must cross multiply to get the LCD: $\\frac{y}{xy} + \\frac{x}{xy} = \\frac{x+y}{xy}$."
+        },
+        {
+          "mistake": "Forgetting to flip the second fraction in division.",
+          "correction": "Division by a fraction is ALWAYS multiplication by its reciprocal. Flip the second fraction before you try to cross-cancel anything."
+        },
+        {
+          "mistake": "Forgetting that the divisor fraction cannot be zero or losing restrictions after cancellation.",
+          "correction": "For division, the second fraction must be defined and non-zero. Also, retain restrictions from every denominator in the original expression, even after factors cancel."
+        }
+      ],
+      "quick_summary": [
+        "Add or subtract: find an LCD, rewrite each fraction, then combine the numerators.",
+        "Multiply: factorise, cancel common factors and multiply across.",
+        "Divide: multiply by the reciprocal of the second fraction.",
+        "Keep all restrictions from the original denominators; for division, the divisor fraction must also be non-zero."
+      ],
+      "utilities": [
+        {
+          "title": "Fraction Calculator",
+          "description": "Practise the numerical fraction operations that underpin algebraic fractions. This calculator does not simplify expressions containing variables.",
+          "url": "https://onlinetoolpad.com/math/FRACTION_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    }
+  }
+}

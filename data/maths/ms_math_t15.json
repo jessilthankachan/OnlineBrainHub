@@ -1,0 +1,1126 @@
+{
+  "subject": "math",
+  "topicId": "ms_math_t15",
+  "topicTitle": "Financial Mathematics and Applied Problem-Solving",
+  "grade": "Middle School",
+  "subtopics": {
+    "ms_math_t15_st01": {
+      "id": "ms_math_t15_st01",
+      "title": "Profit and loss",
+      "overview": "Every business operates on a simple premise: buy things for a certain price, and sell them for a different price. If you sell them for more, you make a Profit. If you are forced to sell them for less, you take a Loss.",
+      "key_concepts": [
+        {
+          "concept": "The Core Vocabulary",
+          "definition": "CP and SP.",
+          "details": [
+            "**Cost Price (CP):** The amount the business pays to buy or make the product.",
+            "**Selling Price (SP):** The amount the customer pays the business."
+          ]
+        },
+        {
+          "concept": "Calculating the Difference",
+          "definition": "Profit vs Loss.",
+          "details": [
+            "If $\\text{SP} > \\text{CP}$, you made money. $\\text{Profit} = \\text{SP} - \\text{CP}$.",
+            "If $\\text{SP} < \\text{CP}$, you lost money. $\\text{Loss} = \\text{CP} - \\text{SP}$."
+          ]
+        },
+        {
+          "concept": "Percentage Margins",
+          "definition": "Profit as a percent.",
+          "details": [
+            "For the standard school calculation in this lesson, compare profit or loss with the original **Cost Price (CP)**.",
+            "The profit/loss percentage is calculated as the profit or loss divided by CP, then multiplied by $100\\%$.",
+            "A business may also use **profit margin**, which compares profit with Selling Price. That is a different measure and uses a different denominator."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Profit / Loss Percentages",
+          "equation": "$$ \\text{Profit }\\% = \\frac{\\text{Profit}}{\\text{CP}} \\times 100\\% \\quad | \\quad \\text{Loss }\\% = \\frac{\\text{Loss}}{\\text{CP}} \\times 100\\% $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s01",
+          "title": "Profit and Loss Equations",
+          "type": "svg",
+          "caption": "Selling Price is just the original Cost Price plus or minus the Profit/Loss.",
+          "alt_text": "Visual showing a block equation. A blue block labeled 'Cost Price' + a green block labeled 'Profit' = a large blue block labeled 'Selling Price'. Below it, a large blue block labeled 'Cost Price' - a red block labeled 'Loss' = a smaller blue block labeled 'Selling Price'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"30\" width=\"120\" height=\"50\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"110\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Cost Price</text><text x=\"190\" y=\"60\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">+</text><rect x=\"210\" y=\"30\" width=\"80\" height=\"50\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Profit</text><text x=\"315\" y=\"60\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">=</text><rect x=\"340\" y=\"30\" width=\"140\" height=\"50\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\" rx=\"5\"/><text x=\"410\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Selling Price (High)</text><rect x=\"50\" y=\"120\" width=\"120\" height=\"50\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"110\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Cost Price</text><text x=\"190\" y=\"150\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">-</text><rect x=\"210\" y=\"120\" width=\"80\" height=\"50\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">Loss</text><text x=\"315\" y=\"150\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">=</text><rect x=\"340\" y=\"120\" width=\"140\" height=\"50\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\" rx=\"5\"/><text x=\"410\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Selling Price (Low)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A shop buys a bicycle for $\\$200$ and sells it for $\\$240$. Find the profit percentage.",
+          "solution_steps": [
+            "Step 1: Calculate the profit amount. Profit $= 240 - 200 = \\$40$.",
+            "Step 2: Use the formula: $\\text{Profit }\\% = \\frac{\\text{Profit}}{\\text{CP}} \\times 100$.",
+            "Step 3: $\\frac{40}{200} \\times 100 = 0.2 \\times 100 = 20\\%$."
+          ],
+          "final_answer": "$20\\%$"
+        },
+        {
+          "problem": "A shop buys a watch for $\\$80$ and wants to make a profit of $20\\%$. Find the selling price.",
+          "solution_steps": [
+            "Step 1: Find the profit amount. $20\\%$ of $\\$80 = \\frac{20}{100} \\times 80 = \\$16$.",
+            "Step 2: Add the profit to the cost price to get the selling price.",
+            "Step 3: $\\text{SP} = 80 + 16 = 96$."
+          ],
+          "final_answer": "$\\$96$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating profit/loss percentage using the Selling Price.",
+          "correction": "For the profit/loss percentage taught here, divide by the Cost Price: if CP is $100$ and SP is $150$, profit is $50$, so the cost-based profit percentage is $\\frac{50}{100}\\times100\\%=50\\%$. Do not confuse this with profit margin, which compares profit with the Selling Price."
+        }
+      ],
+      "quick_summary": [
+        "Profit = Selling Price − Cost Price when SP is greater than CP.",
+        "Loss = Cost Price − Selling Price when SP is less than CP.",
+        "For the cost-based profit/loss percentage taught here, divide by CP; profit margin is a different measure based on SP."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Calculate percentages and check percentage-based amounts in profit, discounts, interest and tax examples.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t15_st02": {
+      "id": "ms_math_t15_st02",
+      "title": "Discount and sale prices",
+      "overview": "Discounts are the opposite of markups. A shop takes the price displayed on the tag (the Marked Price) and subtracts a certain percentage to give you a cheaper 'Sale Price'. Understanding this math is essential for finding the best deals in real life.",
+      "key_concepts": [
+        {
+          "concept": "The Discount Amount",
+          "definition": "The money saved.",
+          "details": [
+            "$\\text{Discount Amount} = \\text{Marked Price} - \\text{Sale Price}$."
+          ]
+        },
+        {
+          "concept": "The Direct Sale Formula",
+          "definition": "Skipping a step.",
+          "details": [
+            "Instead of calculating the discount amount and subtracting it, you can multiply directly by what you are *actually paying*.",
+            "If an item is $20\\%$ off, you are paying $80\\%$ of the price ($100\\% - 20\\%$). So, $\\text{Sale Price} = \\text{Marked Price} \\times 0.80$."
+          ]
+        },
+        {
+          "concept": "Successive Discounts",
+          "definition": "Discounts on discounts.",
+          "details": [
+            "If a store offers '20% off, plus an extra 10% off at the register', it is NOT a $30\\%$ discount! The second $10\\%$ is calculated on the already-reduced price, resulting in a slightly lower total discount ($28\\%$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sale Price",
+          "equation": "$$ \\text{Sale Price} = \\text{Marked Price} \\times \\left( 1 - \\frac{d}{100} \\right) $$",
+          "variables": {
+            "d": "Discount percentage"
+          }
+        },
+        {
+          "name": "Discount Percentage",
+          "equation": "$$ \\text{Discount }\\% = \\frac{\\text{Discount Amount}}{\\text{Marked Price}} \\times 100\\% $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s02",
+          "title": "The Successive Discount Trap",
+          "type": "svg",
+          "caption": "20% off plus 10% off does NOT equal 30% off.",
+          "alt_text": "Visual showing a flowchart. Start $100. Box 1: -20% ($20). Arrow to $80. Box 2: -10% of $80 ($8). Arrow to $72. A large red text below says 'Total saved = $28 (28%), NOT 30%!'",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"30\" y=\"50\" width=\"80\" height=\"40\" fill=\"#334155\" rx=\"5\"/><text x=\"70\" y=\"75\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">$100</text><path d=\"M 110 70 L 190 70\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\"/><polygon points=\"190,70 180,65 180,75\" fill=\"#94a3b8\"/><text x=\"150\" y=\"60\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#dc2626\" font-weight=\"bold\">-20% (-$20)</text><rect x=\"190\" y=\"50\" width=\"80\" height=\"40\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"230\" y=\"75\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">$80</text><path d=\"M 270 70 L 390 70\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\"/><polygon points=\"390,70 380,65 380,75\" fill=\"#94a3b8\"/><text x=\"330\" y=\"60\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#dc2626\" font-weight=\"bold\">-10% of $80 (-$8)</text><rect x=\"390\" y=\"50\" width=\"80\" height=\"40\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"430\" y=\"75\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">$72</text><rect x=\"50\" y=\"130\" width=\"400\" height=\"40\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"155\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Total Saved = $28 (28%). It does NOT equal 30%!</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A jacket has a marked price of $\\$100$ and is sold for $\\$75$. Calculate the discount percentage.",
+          "solution_steps": [
+            "Step 1: Calculate the discount amount. $100 - 75 = \\$25$.",
+            "Step 2: Use the formula: $\\frac{\\text{Discount}}{\\text{Marked Price}} \\times 100$.",
+            "Step 3: $\\frac{25}{100} \\times 100 = 25\\%$."
+          ],
+          "final_answer": "$25\\%$"
+        },
+        {
+          "problem": "A bicycle has a marked price of $\\text{€}400$ and a discount of $10\\%$. Find its sale price.",
+          "solution_steps": [
+            "Step 1: You can find $10\\%$ of $400$ ($\\text{€}40$) and subtract it.",
+            "Step 2: OR use the direct formula: $400 \\times (1 - 0.10) = 400 \\times 0.90$.",
+            "Step 3: $400 \\times 0.90 = 360$."
+          ],
+          "final_answer": "$\\text{€}360$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding successive discount percentages together.",
+          "correction": "If a store has a '50% off everything' sale, and you have a '50% off coupon', the item is NOT free! The first discount cuts the price in half. The second discount cuts that new half-price in half again, resulting in a total discount of 75%, not 100%."
+        }
+      ],
+      "quick_summary": [
+        "Marked Price (MP) = The original tag price.",
+        "Discount % is always calculated out of the Marked Price.",
+        "Successive discounts apply to the new, already-reduced price, step by step."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Calculate percentages and check percentage-based amounts in profit, discounts, interest and tax examples.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t15_st03": {
+      "id": "ms_math_t15_st03",
+      "title": "Simple interest",
+      "overview": "When you put money in a bank, they pay you 'interest' as a thank you for letting them use it. When you borrow money, you pay the bank 'interest' as a fee. Simple Interest is the easiest way this is calculated—the interest is only ever charged on the original starting amount.",
+      "key_concepts": [
+        {
+          "concept": "The Core Variables",
+          "definition": "P, R, and T.",
+          "details": [
+            "**Principal ($P$):** The original amount of money deposited or borrowed.",
+            "**Rate ($R$):** The annual percentage rate.",
+            "**Time ($T$):** The length of time in **Years**."
+          ]
+        },
+        {
+          "concept": "The Formula",
+          "definition": "PRT over 100.",
+          "details": [
+            "$\\text{Simple Interest} = \\frac{P \\times R \\times T}{100}$",
+            "This calculates the *extra* money only. To find the Total Amount ($A$) sitting in the account, you must add the Interest back onto the original Principal."
+          ]
+        },
+        {
+          "concept": "Converting Months",
+          "definition": "Time must be in years.",
+          "details": [
+            "If the problem says '6 months', you cannot use $T=6$. You must convert it to a fraction of a year: $T = \\frac{6}{12} = 0.5$ years."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Simple Interest",
+          "equation": "$$ SI = \\frac{P \\times R \\times T}{100} $$",
+          "variables": {
+            "P": "Original principal",
+            "R": "Annual simple-interest rate, expressed as a percentage",
+            "T": "Time in years",
+            "SI": "Simple interest earned or paid"
+          }
+        },
+        {
+          "name": "Total Amount",
+          "equation": "$$ A = P + SI $$",
+          "variables": {
+            "A": "Total amount after interest",
+            "P": "Original principal",
+            "SI": "Simple interest"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s03",
+          "title": "Simple Interest Growth",
+          "type": "svg",
+          "caption": "In Simple Interest, you earn the exact same flat amount of money every single year.",
+          "alt_text": "Visual showing three uniform blue bars side by side, labeled Year 1, Year 2, Year 3. Each bar has a text block above it saying '+$50'. The text below reads 'The interest never increases because it only applies to the original Principal'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"50\" y1=\"150\" x2=\"450\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"100\" y=\"60\" width=\"60\" height=\"90\" fill=\"#60a5fa\" rx=\"5\"/><rect x=\"220\" y=\"60\" width=\"60\" height=\"90\" fill=\"#60a5fa\" rx=\"5\"/><rect x=\"340\" y=\"60\" width=\"60\" height=\"90\" fill=\"#60a5fa\" rx=\"5\"/><text x=\"130\" y=\"170\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Year 1</text><text x=\"250\" y=\"170\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Year 2</text><text x=\"370\" y=\"170\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Year 3</text><text x=\"130\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">+$50</text><text x=\"250\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">+$50</text><text x=\"370\" y=\"50\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">+$50</text><text x=\"250\" y=\"190\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" font-style=\"italic\">The interest earned stays flat because it only looks at the original Principal.</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A person deposits $\\$4,000$ at $5\\%$ simple interest per year for two years. Calculate the total amount after two years.",
+          "solution_steps": [
+            "Step 1: Identify values: $P = 4000, R = 5, T = 2$.",
+            "Step 2: Calculate Interest: $SI = \\frac{4000 \\times 5 \\times 2}{100} = \\frac{40000}{100} = \\$400$.",
+            "Step 3: The question asks for 'Total Amount', not just interest.",
+            "Step 4: Add interest to principal: $A = 4000 + 400 = \\$4,400$."
+          ],
+          "final_answer": "$\\$4,400$"
+        },
+        {
+          "problem": "A person earns $\\$300$ as simple interest at $5\\%$ per year over three years. Find the original principal.",
+          "solution_steps": [
+            "Step 1: Rearrange the formula to solve for P: $P = \\frac{SI \\times 100}{R \\times T}$.",
+            "Step 2: Substitute values: $P = \\frac{300 \\times 100}{5 \\times 3}$.",
+            "Step 3: Simplify: $P = \\frac{30000}{15} = 2000$."
+          ],
+          "final_answer": "$\\$2,000$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using months as years.",
+          "correction": "If a loan is for 9 months, doing $\\frac{P \\times R \\times 9}{100}$ will calculate the interest for 9 YEARS. You must use $T = 0.75$ (which is $\\frac{9}{12}$ of a year)."
+        }
+      ],
+      "quick_summary": [
+        "Principal = Starting money. Rate = Percentage %. Time = Years.",
+        "$SI = \\frac{PRT}{100}$.",
+        "Total Amount ($A$) = Principal + Interest."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Calculate percentages and check percentage-based amounts in profit, discounts, interest and tax examples.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t15_st04": {
+      "id": "ms_math_t15_st04",
+      "title": "Compound interest — introduction",
+      "overview": "Albert Einstein supposedly called compound interest the eighth wonder of the world. Unlike simple interest, which stays flat, compound interest is 'interest on top of interest'. Your money grows faster and faster every year because the bank pays you interest on the new total, not just the starting amount.",
+      "key_concepts": [
+        {
+          "concept": "The Snowball Effect",
+          "definition": "Interest on interest.",
+          "details": [
+            "In Year 1, you earn interest on your Principal.",
+            "In Year 2, that interest is added to your account. You now earn interest on a larger balance.",
+            "This causes the total amount to curve upwards (exponential growth) rather than growing in a straight, flat line."
+          ]
+        },
+        {
+          "concept": "The Formula",
+          "definition": "Calculating the final amount directly.",
+          "details": [
+            "For interest compounded **once each year**, the formula $A=P\\left(1+\\frac{R}{100}\\right)^T$ gives the final total amount.",
+            "Here, $R$ is the annual interest rate as a percentage and $T$ is the number of years.",
+            "To find only the compound interest earned, subtract the original principal from the final amount: $CI=A-P$."
+          ]
+        },
+        {
+          "concept": "Compounding Periods",
+          "definition": "How often they pay you.",
+          "details": [
+            "This introductory formula assumes that interest is added **once per year**.",
+            "Some accounts compound more frequently, such as monthly. Those situations use a formula that accounts for the number of compounding periods; they are beyond the scope of this introductory annual formula."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Compound Amount",
+          "equation": "$$ A = P \\left( 1 + \\frac{R}{100} \\right)^T $$",
+          "variables": {
+            "A": "Final amount after interest",
+            "P": "Original principal",
+            "R": "Annual interest rate, expressed as a percentage",
+            "T": "Number of years; interest is compounded annually"
+          }
+        },
+        {
+          "name": "Compound Interest",
+          "equation": "$$ CI = A - P $$",
+          "variables": {
+            "CI": "Compound interest earned",
+            "A": "Final amount",
+            "P": "Original principal"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s04",
+          "title": "Simple vs Compound Growth",
+          "type": "svg",
+          "caption": "Compound interest curves upward because you are earning interest on your previously earned interest.",
+          "alt_text": "Visual showing a line graph. X-axis is Years (0 to 5). The blue line (Simple Interest) is straight, rising steadily. The green line (Compound Interest) starts at the same spot but curves upwards, pulling away from the blue line over time.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"50\" y1=\"160\" x2=\"450\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 50 140 L 130 116 L 210 92 L 290 68 L 370 44\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><path d=\"M 50 140 Q 150 120 210 88 Q 290 40 370 10\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><text x=\"50\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">Yr 0</text><text x=\"130\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">Yr 1</text><text x=\"210\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">Yr 2</text><text x=\"290\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">Yr 3</text><text x=\"370\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">Yr 4</text><rect x=\"230\" y=\"100\" width=\"120\" height=\"20\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><rect x=\"240\" y=\"105\" width=\"10\" height=\"10\" fill=\"#3b82f6\"/><text x=\"260\" y=\"115\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#0f172a\">Simple (Straight)</text><rect x=\"160\" y=\"20\" width=\"140\" height=\"20\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><rect x=\"170\" y=\"25\" width=\"10\" height=\"10\" fill=\"#22c55e\"/><text x=\"190\" y=\"35\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#0f172a\">Compound (Curved)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A person deposits $\\text{€}5,000$ at $4\\%$ compound interest per year for three years. Calculate the final amount.",
+          "solution_steps": [
+            "Step 1: Identify values: $P = 5000, R = 4, T = 3$.",
+            "Step 2: Write the formula: $A = P \\left(1 + \\frac{R}{100}\\right)^T$.",
+            "Step 3: Substitute: $A = 5000 \\times (1 + 0.04)^3 = 5000 \\times (1.04)^3$.",
+            "Step 4: Calculate: $1.04^3 = 1.124864$. $5000 \\times 1.124864 = 5624.32$."
+          ],
+          "final_answer": "$\\text{€}5,624.32$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking the formula gives you the interest.",
+          "correction": "The Simple Interest formula gives you the INTEREST. The Compound formula gives you the TOTAL AMOUNT. If a question asks 'How much compound interest was earned?', you must remember to subtract the original Principal from your final answer."
+        }
+      ],
+      "quick_summary": [
+        "Compound interest is interest on top of interest.",
+        "It results in exponential growth (a curved line).",
+        "$A = P(1 + \\frac{R}{100})^T$ gives the Total Amount."
+      ]
+    },
+    "ms_math_t15_st05": {
+      "id": "ms_math_t15_st05",
+      "title": "Budgets and spending plans",
+      "overview": "A budget is a mathematical plan for your money. By tracking exactly what comes in (Income) and what goes out (Expenses), you can ensure you always have enough for what you need, what you want, and your future savings.",
+      "key_concepts": [
+        {
+          "concept": "Income vs. Expenses",
+          "definition": "Money in vs. Money out.",
+          "details": [
+            "**Income:** Any money received (salary, allowance, business profits).",
+            "**Expenses:** Any money spent. This is split into **Fixed** (stays the same, like rent), **Variable** (changes based on usage, like electricity), and **Occasional** (unexpected, like repairs)."
+          ]
+        },
+        {
+          "concept": "The Budget Balance",
+          "definition": "Surplus or Deficit.",
+          "details": [
+            "**Surplus:** Income is greater than expenses, leaving money available for savings or other goals.",
+            "**Deficit:** Expenses are greater than income. The shortfall must be covered by using savings, borrowing, or another source of funds.",
+            "**Balanced plan:** Income equals expenses plus the amount allocated to savings."
+          ]
+        },
+        {
+          "concept": "The 50-30-20 Rule",
+          "definition": "A popular guideline.",
+          "details": [
+            "The **50-30-20 rule** is one commonly used budgeting guideline: about $50\\%$ of income for **Needs**, $30\\%$ for **Wants**, and $20\\%$ for **Savings and/or debt repayment**.",
+            "It is a guideline, not a rule that suits every household. Actual allocations depend on income, living costs, responsibilities, and financial goals."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Savings / Surplus",
+          "equation": "$$ \\text{Savings} = \\text{Total Income} - \\text{Total Expenses} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s05",
+          "title": "The 50-30-20 Budgeting Rule",
+          "type": "svg",
+          "caption": "A simple way to divide up your income so you cover necessities while still saving.",
+          "alt_text": "Visual showing a 50-30-20 budget breakdown. A large blue block is labeled '50% NEEDS (Rent, Food)'. A medium green block is labeled '30% WANTS (Fun, Hobbies)'. A smaller orange block is labeled '20% SAVINGS'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"50\" width=\"460\" height=\"30\" fill=\"#334155\" rx=\"5\"/><text x=\"250\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">100% Total Income</text><rect x=\"20\" y=\"100\" width=\"230\" height=\"60\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"135\" y=\"125\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">50% NEEDS</text><text x=\"135\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">(Rent, Groceries)</text><rect x=\"260\" y=\"100\" width=\"138\" height=\"60\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"329\" y=\"125\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">30% WANTS</text><text x=\"329\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">(Hobbies, Dining)</text><rect x=\"408\" y=\"100\" width=\"72\" height=\"60\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"5\"/><text x=\"444\" y=\"125\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">20%</text><text x=\"444\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#9a3412\">SAVE</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A family earns $\\$3,000$ per month. Their expenses are $\\$900$ for housing, $\\$500$ for food, $\\$250$ for transport, and $\\$850$ for other expenses. Calculate their monthly savings and state if the budget is in a surplus or deficit.",
+          "solution_steps": [
+            "Step 1: Calculate total expenses. $900 + 500 + 250 + 850 = \\$2,500$.",
+            "Step 2: Subtract expenses from income: $3000 - 2500 = \\$500$.",
+            "Step 3: Because income is greater than expenses, it is a surplus."
+          ],
+          "final_answer": "Savings = $\\$500$ (Surplus)"
+        },
+        {
+          "problem": "A student wants to buy a laptop for $\\text{€}900$ in $10$ months. They already have $\\text{€}200$ saved. How much must they save each month in their budget to reach their goal?",
+          "solution_steps": [
+            "Step 1: Find the remaining amount needed. $900 - 200 = \\text{€}700$.",
+            "Step 2: Divide the remaining amount by the number of months: $700 \\div 10 = \\text{€}70$."
+          ],
+          "final_answer": "$\\text{€}70$ per month"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing fixed and variable expenses.",
+          "correction": "Fixed expenses (rent, internet subscription) don't change based on how much you use them. Variable expenses (water bill, groceries) fluctuate every month."
+        }
+      ],
+      "quick_summary": [
+        "A budget compares Income (money in) with Expenses (money out) and Savings.",
+        "A surplus occurs when income exceeds expenses; a deficit occurs when expenses exceed income.",
+        "The 50-30-20 rule is one possible guide for dividing income into Needs, Wants, and Savings/Debt Repayment."
+      ]
+    },
+    "ms_math_t15_st06": {
+      "id": "ms_math_t15_st06",
+      "title": "Currency and exchange rates",
+      "overview": "Because different countries use different currencies (Dollars, Euros, Yen), we must use 'Exchange Rates' to translate the value of money across borders. Converting currency is just multiplying or dividing by a scale factor.",
+      "key_concepts": [
+        {
+          "concept": "The Exchange Rate",
+          "definition": "The translation bridge.",
+          "details": [
+            "An exchange rate states how much of one currency is exchanged for one unit of another currency.",
+            "For example, $1\\text{ USD}=0.90\\text{ EUR}$ means that, at this quoted rate, one US dollar exchanges for $0.90$ euros before any fees.",
+            "In a calculation, treat the given rate as fixed unless the question says otherwise. Real exchange rates change over time, and providers may use different rates or charge fees."
+          ]
+        },
+        {
+          "concept": "Converting Currencies",
+          "definition": "To multiply or divide?",
+          "details": [
+            "If you have the 'Base' currency (the one equal to $1$), you **MULTIPLY** by the rate to find the foreign amount.",
+            "If you are converting *back* to the Base currency, you **DIVIDE** by the rate."
+          ]
+        },
+        {
+          "concept": "Exchange Fees",
+          "definition": "The cost of swapping.",
+          "details": [
+            "Banks often charge a service fee to swap your money. Always subtract a flat fee *before* doing the multiplication, or account for the bank giving you a worse 'Buying/Selling' rate."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Currency Conversion",
+          "equation": "$$ \\text{Foreign Amount} = \\text{Base Amount} \\times \\text{Exchange Rate} $$",
+          "variables": {
+            "Base Amount": "Amount in the currency stated as 1 unit in the exchange rate",
+            "Exchange Rate": "Number of foreign-currency units received for one base-currency unit",
+            "Foreign Amount": "Converted amount before fees"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s06",
+          "title": "Converting Currency",
+          "type": "svg",
+          "caption": "Multiply to go from the Base currency (1) to the Foreign currency. Divide to go back.",
+          "alt_text": "Visual showing a conversion flow. Left side: $200 USD (Base). Right side: €180 EUR (Foreign). Top arrow goes left to right, labeled 'Multiply by 0.90'. Bottom arrow goes right to left, labeled 'Divide by 0.90'. Text in center says 'Rate: 1 USD = 0.90 EUR'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"40\" y=\"60\" width=\"100\" height=\"80\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"10\"/><text x=\"90\" y=\"100\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">$200</text><text x=\"90\" y=\"120\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\">USD</text><rect x=\"360\" y=\"60\" width=\"100\" height=\"80\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"410\" y=\"100\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">€180</text><text x=\"410\" y=\"120\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\">EUR</text><path d=\"M 160 80 Q 250 40 340 80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"340,80 330,75 335,85\" fill=\"#3b82f6\" transform=\"rotate(30 340 80)\"/><text x=\"250\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Multiply by 0.90</text><path d=\"M 340 120 Q 250 160 160 120\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><polygon points=\"160,120 170,125 165,115\" fill=\"#16a34a\" transform=\"rotate(30 160 120)\"/><text x=\"250\" y=\"155\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Divide by 0.90</text><rect x=\"170\" y=\"85\" width=\"160\" height=\"30\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1\" rx=\"5\"/><text x=\"250\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Rate: 1 USD = 0.90 EUR</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A traveller has $\\text{¥}30,000$. The exchange rate is $1\\text{ EUR} = 160\\text{ JPY}$. Calculate the equivalent amount in Euros.",
+          "solution_steps": [
+            "Step 1: The rate is given starting with EUR (the base). We are converting FROM JPY back to EUR.",
+            "Step 2: Since we are going backward from the rate provided, we DIVIDE.",
+            "Step 3: $\\text{EUR} = \\frac{30000}{160} = 187.50$."
+          ],
+          "final_answer": "$\\text{€}187.50$"
+        },
+        {
+          "problem": "You exchange $\\$500$ into Euros. The exchange rate is $1\\text{ USD} = 0.90\\text{ EUR}$. The provider charges a $2\\%$ service fee on your USD before converting. How many Euros do you receive?",
+          "solution_steps": [
+            "Step 1: Calculate the fee: $2\\%$ of $\\$500 = \\frac{2}{100} \\times 500 = \\$10$.",
+            "Step 2: Subtract the fee from your money: $\\$500 - \\$10 = \\$490$.",
+            "Step 3: Multiply the remaining money by the exchange rate: $490 \\times 0.90 = \\text{€}441$."
+          ],
+          "final_answer": "$\\text{€}441$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying when you should divide.",
+          "correction": "Always look at which currency is tied to the '1' in the exchange rate. If $1\\text{ GBP} = 1.25\\text{ USD}$, and you have USD, you cannot multiply by $1.25$. You must divide to go 'backwards' to GBP."
+        }
+      ],
+      "quick_summary": [
+        "An exchange rate compares the value of two currencies.",
+        "Convert from the currency equal to 1 in the quoted rate by multiplying by the rate.",
+        "Convert back to that currency by dividing by the rate.",
+        "Check for fees or a different rate offered by the exchange provider."
+      ]
+    },
+    "ms_math_t15_st07": {
+      "id": "ms_math_t15_st07",
+      "title": "Tax and service charges — introduction",
+      "overview": "When you buy an item or eat at a restaurant, the price displayed on the tag or menu is rarely what you actually pay. Governments add Taxes (like VAT or Sales Tax), and businesses often add Service Charges. These are percentage increases added to your subtotal.",
+      "key_concepts": [
+        {
+          "concept": "Taxes (Sales Tax, VAT, GST)",
+          "definition": "Government charges.",
+          "details": [
+            "These are indirect taxes collected by the store to give to the government.",
+            "If a price is **Tax-Exclusive**, it means tax is not yet added. If it is **Tax-Inclusive**, the tax is already baked into the displayed price."
+          ]
+        },
+        {
+          "concept": "Service Charges",
+          "definition": "Business fees.",
+          "details": [
+            "A service charge is an additional fee that a business may add to a bill, for example in a restaurant.",
+            "Whether tax is calculated before or after a service charge depends on the applicable rules and the way the bill is structured. Follow the order stated in the question or shown on the bill."
+          ]
+        },
+        {
+          "concept": "The Multiplier Method",
+          "definition": "A faster way to add tax.",
+          "details": [
+            "Instead of finding $8\\%$ of a price and adding it on, you can simply multiply the price by $1.08$ ($100\\% + 8\\%$).",
+            "$\\text{Final Price} = \\text{Original Price} \\times \\left(1 + \\frac{\\text{Rate}}{100}\\right)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Adding Tax/Charge",
+          "equation": "$$ \\text{Final Price} = P \\times \\left(1 + \\frac{R}{100}\\right) $$",
+          "variables": {
+            "P": "Original Price",
+            "R": "Tax Rate %"
+          }
+        },
+        {
+          "name": "Finding Original Price (Reverse Tax)",
+          "equation": "$$ P = \\frac{\\text{Tax-Inclusive Price}}{\\left(1 + \\frac{R}{100}\\right)} $$",
+          "variables": {
+            "P": "Original price before tax",
+            "R": "Tax rate, expressed as a percentage",
+            "Tax-Inclusive Price": "Price after the stated tax has been added"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s07",
+          "title": "The Sequence of a Restaurant Bill",
+          "type": "svg",
+          "caption": "Illustrative bill sequence: a 10% service charge is added first, then 8% tax is calculated on the new subtotal.",
+          "alt_text": "Visual showing a flowchart of a bill. $100 Food -> Add 10% Service Charge ($10) -> New Subtotal $110 -> Add 8% Tax on $110 ($8.80) -> Final Total $118.80.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"30\" y=\"80\" width=\"80\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"70\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">$100</text><text x=\"70\" y=\"135\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">Food Cost</text><path d=\"M 110 100 L 190 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\"/><polygon points=\"190,100 180,95 180,105\" fill=\"#94a3b8\"/><text x=\"150\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">+10% ($10)</text><text x=\"150\" y=\"115\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">Service</text><rect x=\"190\" y=\"80\" width=\"80\" height=\"40\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"5\"/><text x=\"230\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">$110</text><text x=\"230\" y=\"135\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">New Subtotal</text><path d=\"M 270 100 L 370 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\"/><polygon points=\"370,100 360,95 360,105\" fill=\"#94a3b8\"/><text x=\"320\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">+8% ($8.80)</text><text x=\"320\" y=\"115\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">Tax</text><rect x=\"370\" y=\"80\" width=\"100\" height=\"40\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"420\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">$118.80</text><text x=\"420\" y=\"135\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\">Final Bill</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A laptop costs $\\text{£}500$ before VAT. The VAT rate is $20\\%$. Find the final price.",
+          "solution_steps": [
+            "Step 1: Calculate the VAT amount: $\\frac{20}{100} \\times 500 = \\text{£}100$.",
+            "Step 2: Add the VAT to the original price: $500 + 100 = 600$.",
+            "Step 3: Alternatively, use the multiplier: $500 \\times 1.20 = 600$."
+          ],
+          "final_answer": "$\\text{£}600$"
+        },
+        {
+          "problem": "A product costs $\\$120$ INCLUDING a $20\\%$ tax. Find its original price before tax.",
+          "solution_steps": [
+            "Step 1: This is a reverse-percentage problem. Do NOT just subtract $20\\%$.",
+            "Step 2: Use the formula: $P = \\frac{\\text{Tax-Inclusive Price}}{1 + (R/100)}$.",
+            "Step 3: $P = \\frac{120}{1.20} = 100$."
+          ],
+          "final_answer": "$\\$100$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Subtracting the tax percentage from the final price to find the original price.",
+          "correction": "If a shirt is $100$ and tax is $20\\%$, the final price is $120$. If you want to go backwards and you calculate $120 - 20\\% (\\$24)$, you get $\\$96$, which is wrong! You MUST divide by the multiplier ($120 \\div 1.20 = 100$)."
+        }
+      ],
+      "quick_summary": [
+        "Taxes (VAT, GST) and Service Charges are added to the cost of an item.",
+        "Multiplier for adding tax: Multiply by $(1 + \\frac{\\text{Tax}\\%}{100})$.",
+        "Multiplier to reverse tax: Divide by $(1 + \\frac{\\text{Tax}\\%}{100})$.",
+        "Discounts are usually subtracted *before* tax is calculated."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Calculate percentages and check percentage-based amounts in profit, discounts, interest and tax examples.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t15_st08": {
+      "id": "ms_math_t15_st08",
+      "title": "Unit pricing and value for money",
+      "overview": "Supermarkets often sell the same item in different sizes: a small bottle of juice vs. a massive family-sized jug. To find out which is actually the best deal, you cannot just look at the price tag. You must calculate the 'Unit Price'—how much it costs for a single kilogram, liter, or piece.",
+      "key_concepts": [
+        {
+          "concept": "The Unit Price Formula",
+          "definition": "Cost per single unit.",
+          "details": [
+            "$\\text{Unit Price} = \\frac{\\text{Total Price}}{\\text{Total Quantity}}$.",
+            "Always divide the money by the amount of stuff to find out how much $1$ item (or $1\\text{ kg}$, or $1\\text{ L}$) costs."
+          ]
+        },
+        {
+          "concept": "Unit Conversions",
+          "definition": "Apples to Apples.",
+          "details": [
+            "If one bag of flour is measured in grams ($500\\text{ g}$) and the other in kilograms ($1\\text{ kg}$), you MUST convert them to the same unit before calculating the unit price."
+          ]
+        },
+        {
+          "concept": "Value for Money",
+          "definition": "Beyond the math.",
+          "details": [
+            "Bulk buying may give a lower unit price, but it is not automatically better value if the extra product is wasted, expires, or cannot be stored.",
+            "Compare products of similar quality and check the usable quantity, packaging, and any other costs before deciding which is better value."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Unit Price",
+          "equation": "$$ \\text{Unit Price} = \\frac{\\text{Total Price}}{\\text{Quantity}} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s08",
+          "title": "Comparing Unit Prices",
+          "type": "svg",
+          "caption": "The larger bottle costs more overall, but it is much cheaper per liter.",
+          "alt_text": "Visual showing two juice bottles. Bottle A is small, labeled '0.75 L, $3.00'. Text says $3.00 / 0.75 = $4.00 per L. Bottle B is large, labeled '1.5 L, $5.40'. Text says $5.40 / 1.5 = $3.60 per L. Bottle B is highlighted as 'Better Value'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"80\" y=\"80\" width=\"40\" height=\"80\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\" rx=\"5\"/><rect x=\"90\" y=\"60\" width=\"20\" height=\"20\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"100\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Bottle A</text><text x=\"100\" y=\"110\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#854d0e\">0.75 L</text><text x=\"100\" y=\"125\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#854d0e\">$3.00</text><path d=\"M 130 110 L 190 110\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"190\" y=\"100\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">$3.00 ÷ 0.75 =</text><text x=\"190\" y=\"120\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">$4.00 per L</text><rect x=\"290\" y=\"60\" width=\"60\" height=\"100\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><rect x=\"310\" y=\"35\" width=\"20\" height=\"25\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"320\" y=\"180\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Bottle B</text><text x=\"320\" y=\"100\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">1.5 L</text><text x=\"320\" y=\"120\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">$5.40</text><path d=\"M 360 110 L 410 110\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"410\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">$5.40 ÷ 1.5 =</text><text x=\"410\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\">$3.60 per L</text><rect x=\"410\" y=\"125\" width=\"80\" height=\"20\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"450\" y=\"139\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Better Value</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Packet A of coffee has $500\\text{ g}$ for $\\text{€}8$. Packet B has $1\\text{ kg}$ for $\\text{€}15$. Which packet offers the better unit price?",
+          "solution_steps": [
+            "Step 1: Convert units to be the same. Convert $500\\text{ g}$ to $0.5\\text{ kg}$.",
+            "Step 2: Calculate unit price of A: $8 \\div 0.5 = \\text{€}16\\text{ per kg}$.",
+            "Step 3: Calculate unit price of B: $15 \\div 1 = \\text{€}15\\text{ per kg}$.",
+            "Step 4: Packet B is cheaper per kilogram."
+          ],
+          "final_answer": "Packet B"
+        },
+        {
+          "problem": "Apples cost $\\text{€}2.80$ per kilogram. How much will $3.5\\text{ kg}$ cost?",
+          "solution_steps": [
+            "Step 1: Use the formula backwards: $\\text{Total Cost} = \\text{Unit Price} \\times \\text{Quantity}$.",
+            "Step 2: Multiply: $2.80 \\times 3.5 = 9.80$."
+          ],
+          "final_answer": "$\\text{€}9.80$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dividing Quantity by Price.",
+          "correction": "If you do Quantity / Price, you are calculating 'Grams per Dollar'. While technically a valid math ratio, standard 'Unit Price' is always Price / Quantity to find 'Dollars per Gram/Kilogram/Liter'."
+        },
+        {
+          "mistake": "Comparing different units directly.",
+          "correction": "You cannot compare a price for $750\\text{ mL}$ against a price for $1.5\\text{ L}$ without converting one of them so they both use mL or both use L."
+        }
+      ],
+      "quick_summary": [
+        "Unit Price = Total Price $\\div$ Quantity.",
+        "Always convert to the same measurement units before comparing (e.g., all grams to kg).",
+        "A lower unit price is a better mathematical deal, but real-world value includes avoiding waste."
+      ]
+    },
+    "ms_math_t15_st09": {
+      "id": "ms_math_t15_st09",
+      "title": "Bills, invoices and financial records",
+      "overview": "In the adult world, every financial transaction leaves a paper trail. Knowing how to read, calculate, and check bills, invoices, and receipts ensures you only pay exactly what you owe, and can confidently spot mistakes.",
+      "key_concepts": [
+        {
+          "concept": "The Big Three Documents",
+          "definition": "Bill vs. Invoice vs. Receipt.",
+          "details": [
+            "**Bill:** A statement showing how much you need to pay (e.g., a restaurant or electricity bill).",
+            "**Invoice:** A formal request for payment issued by a seller, usually detailing exactly what was sold.",
+            "**Receipt:** The final proof that payment has actually been received."
+          ]
+        },
+        {
+          "concept": "The Anatomy of an Invoice",
+          "definition": "How the final total is built.",
+          "details": [
+            "First, calculate the cost of each line item ($\\text{Quantity} \\times \\text{Unit Price}$).",
+            "Add them all together to get the **Subtotal**.",
+            "Subtract any **Discounts**, then add any **Taxes** or **Service Charges** to find the **Total Due**."
+          ]
+        },
+        {
+          "concept": "Outstanding Balance",
+          "definition": "What is left to pay.",
+          "details": [
+            "If you make a partial payment on an invoice, the amount you still owe is the Outstanding Balance ($\\text{Total Amount Due} - \\text{Amount Paid}$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Line Item Cost",
+          "equation": "$$ \\text{Cost} = \\text{Quantity} \\times \\text{Unit Price} $$",
+          "variables": {}
+        },
+        {
+          "name": "Outstanding Balance",
+          "equation": "$$ \\text{Balance} = \\text{Total Amount} - \\text{Amount Paid} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s09",
+          "title": "Reading an Invoice",
+          "type": "svg",
+          "caption": "Always check that the Subtotal and Final Total are calculated correctly.",
+          "alt_text": "Visual showing a mock invoice: 2 pens at $1.50 each cost $3.00; 1 book at $5.00 costs $5.00; subtotal $8.00; tax at 10% is $0.80; total due $8.80.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"100\" y=\"20\" width=\"300\" height=\"210\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"45\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">INVOICE #1024</text><line x1=\"120\" y1=\"55\" x2=\"380\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"120\" y=\"80\" font-family=\"monospace\" font-size=\"12\" fill=\"#334155\">2 x Pens @ $1.50</text><text x=\"380\" y=\"80\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"end\" fill=\"#334155\">$3.00</text><text x=\"120\" y=\"105\" font-family=\"monospace\" font-size=\"12\" fill=\"#334155\">1 x Book @ $5.00</text><text x=\"380\" y=\"105\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"end\" fill=\"#334155\">$5.00</text><line x1=\"120\" y1=\"120\" x2=\"380\" y2=\"120\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"120\" y=\"145\" font-family=\"monospace\" font-size=\"14\" fill=\"#0f172a\" font-weight=\"bold\">SUBTOTAL</text><text x=\"380\" y=\"145\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"end\" fill=\"#0f172a\" font-weight=\"bold\">$8.00</text><text x=\"120\" y=\"170\" font-family=\"monospace\" font-size=\"12\" fill=\"#dc2626\">+ Tax (10%)</text><text x=\"380\" y=\"170\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"end\" fill=\"#dc2626\">$0.80</text><line x1=\"120\" y1=\"185\" x2=\"380\" y2=\"185\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"120\" y=\"210\" font-family=\"monospace\" font-size=\"16\" fill=\"#1d4ed8\" font-weight=\"bold\">TOTAL DUE</text><text x=\"380\" y=\"210\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"end\" fill=\"#1d4ed8\" font-weight=\"bold\">$8.80</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "An invoice shows a subtotal of $\\$150$. A discount of $10\\%$ is applied to the subtotal, followed by a $20\\%$ tax on the discounted amount. Find the final amount payable.",
+          "solution_steps": [
+            "Step 1: Calculate the discount amount. $10\\%$ of $150 = \\$15$.",
+            "Step 2: Find the discounted subtotal. $150 - 15 = \\$135$.",
+            "Step 3: Calculate the tax on this new amount. $20\\%$ of $135 = 0.20 \\times 135 = \\$27$.",
+            "Step 4: Add the tax to the discounted subtotal. $135 + 27 = \\$162$."
+          ],
+          "final_answer": "$\\$162$"
+        },
+        {
+          "problem": "A company receives a bill for $\\$800$ and makes a partial payment of $\\$500$. What is the outstanding balance?",
+          "solution_steps": [
+            "Step 1: Subtract the amount paid from the total bill.",
+            "Step 2: $800 - 500 = 300$."
+          ],
+          "final_answer": "$\\$300$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying tax to the original subtotal instead of the discounted subtotal.",
+          "correction": "In this worked example, the question specifies that the discount is applied before the tax, so tax is calculated on the discounted subtotal. In real invoices, the taxable amount and order of charges depend on applicable rules and the details shown on the bill. Always check the stated taxable amount rather than assuming one order applies everywhere."
+        }
+      ],
+      "quick_summary": [
+        "**Invoice:** Request for payment.",
+        "**Receipt:** Proof of payment.",
+        "Calculate line items $\\rightarrow$ Add for Subtotal $\\rightarrow$ Subtract Discounts $\\rightarrow$ Add Taxes/Fees $\\rightarrow$ Final Total."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Calculate percentages and check percentage-based amounts in profit, discounts, interest and tax examples.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t15_st11": {
+      "id": "ms_math_t15_st11",
+      "title": "Multi-step real-life problems",
+      "overview": "Real life rarely hands you a problem that can be solved with just one formula. You usually have to chain together several different math skills—like finding an area, then converting it to a cost, then applying a discount, and finally adding tax.",
+      "key_concepts": [
+        {
+          "concept": "The 6-Step Strategy",
+          "definition": "Breaking it down.",
+          "details": [
+            "1. **Read:** Understand the end goal.",
+            "2. **Identify:** Write down exactly what numbers are given.",
+            "3. **Decide:** Figure out what hidden middle step needs to be calculated first.",
+            "4. **Choose:** Pick the right formulas.",
+            "5. **Calculate:** Do the math step-by-step.",
+            "6. **Check:** Does the final answer actually make sense in the real world?"
+          ]
+        },
+        {
+          "concept": "Chaining Percentages",
+          "definition": "One after the other.",
+          "details": [
+            "When a question specifies that a discount is applied before tax, subtract the discount from the original price first, then calculate tax on the reduced price.",
+            "Bills and tax rules can specify a different taxable base or order. Follow the information given rather than assuming that every charge is applied in the same sequence."
+          ]
+        },
+        {
+          "concept": "Geometry to Finance",
+          "definition": "Bridging topics.",
+          "details": [
+            "Many multi-step problems require finding an Area or Perimeter first (e.g., sizing a floor for carpet), and then multiplying that geometric result by a financial unit price (e.g., $\\$15$ per square meter)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s11",
+          "title": "Chaining Calculations",
+          "type": "svg",
+          "caption": "A classic multi-step shopping problem.",
+          "alt_text": "Visual showing a flowchart. Box 1: Original Price ($100). Arrow down labeled 'Minus 10% Discount ($10)' to Box 2: Sale Price ($90). Arrow down labeled 'Plus 8% Tax ($7.20)' to Box 3: Final Cost ($97.20).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"40\" y=\"80\" width=\"90\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"85\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">$100</text><text x=\"85\" y=\"135\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">Original</text><path d=\"M 130 100 L 200 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\"/><polygon points=\"200,100 190,95 190,105\" fill=\"#94a3b8\"/><text x=\"165\" y=\"85\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#dc2626\" font-weight=\"bold\">-10% Discount</text><text x=\"165\" y=\"115\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#ef4444\">(-$10)</text><rect x=\"200\" y=\"80\" width=\"90\" height=\"40\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"5\"/><text x=\"245\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">$90</text><text x=\"245\" y=\"135\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">Sale Price</text><path d=\"M 290 100 L 370 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\"/><polygon points=\"370,100 360,95 360,105\" fill=\"#94a3b8\"/><text x=\"330\" y=\"85\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">+8% Tax</text><text x=\"330\" y=\"115\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#22c55e\">(+$7.20)</text><rect x=\"370\" y=\"70\" width=\"110\" height=\"60\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"3\" rx=\"5\"/><text x=\"425\" y=\"100\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">$97.20</text><text x=\"425\" y=\"120\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#64748b\" font-weight=\"bold\">Final Cost</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A car travels $300\\text{ km}$. Its average fuel consumption is $6$ liters per $100\\text{ km}$. Fuel costs $\\$1.80$ per liter. Find the total fuel cost for the journey.",
+          "solution_steps": [
+            "Step 1: First, calculate the total fuel required. The car uses $6\\text{ L}$ for every $100\\text{ km}$. So for $300\\text{ km}$, it needs $6 \\times 3 = 18\\text{ liters}$.",
+            "Step 2: Calculate the cost. $18\\text{ liters} \\times \\$1.80\\text{ per liter}$.",
+            "Step 3: $18 \\times 1.80 = 32.40$."
+          ],
+          "final_answer": "$\\$32.40$"
+        },
+        {
+          "problem": "A rectangular room is $6\\text{ m}$ long and $4\\text{ m}$ wide. Floor tiles cost $\\$12$ per square meter. Find the total cost to cover the floor.",
+          "solution_steps": [
+            "Step 1: This bridges geometry and finance. Find the Area first. $\\text{Area} = \\text{Length} \\times \\text{Width} = 6 \\times 4 = 24\\text{ m}^2$.",
+            "Step 2: Multiply the total area by the unit price. $24\\text{ m}^2 \\times \\$12 / \\text{m}^2$.",
+            "Step 3: $24 \\times 12 = 288$."
+          ],
+          "final_answer": "$\\$288$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to do everything in one giant calculator equation.",
+          "correction": "Doing $6 \\times 4 \\times 12$ works here, but in complex problems with additions and percentages, typing it all at once often messes up the order of operations. Write down the result of each step individually."
+        }
+      ],
+      "quick_summary": [
+        "Break complex problems down into small, single-operation steps.",
+        "Use the answer from Step 1 as the starting point for Step 2.",
+        "Always do a 'reasonableness check' at the end to make sure the final number makes logical sense."
+      ],
+      "utilities": [
+        {
+          "title": "Percentage Calculator",
+          "description": "Calculate percentages and check percentage-based amounts in profit, discounts, interest and tax examples.",
+          "url": "https://onlinetoolpad.com/math/PERCENTAGE_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "ms_math_t15_st12": {
+      "id": "ms_math_t15_st12",
+      "title": "Estimation and reasonableness checks",
+      "overview": "In the real world, you don't always need a perfectly exact answer. Estimation is the art of rounding numbers to make calculations fast and simple. More importantly, it gives you a 'Reasonableness Check' to ensure you didn't accidentally type the wrong number into a calculator.",
+      "key_concepts": [
+        {
+          "concept": "The Power of Rounding",
+          "definition": "Simplifying the numbers.",
+          "details": [
+            "Round numbers to a convenient place value, such as the nearest $10$, $100$, or whole number, before calculating an estimate.",
+            "Example: instead of $397+204$, use $400+200=600$ for a quick estimate.",
+            "For a sum of positive numbers, rounding each addend down gives a lower estimate and rounding each addend up gives an upper estimate. The exact total should lie between these estimates."
+          ]
+        },
+        {
+          "concept": "Percentage Shortcuts",
+          "definition": "Fast mental math.",
+          "details": [
+            "**$10\\%$:** Move the decimal point one place left (divide by $10$).",
+            "**$5\\%$:** Find $10\\%$ and cut it in half.",
+            "**$25\\%$:** Divide by $4$ (or halve it, then halve it again).",
+            "**$50\\%$:** Divide by $2$."
+          ]
+        },
+        {
+          "concept": "Reasonableness Checks",
+          "definition": "Does this make sense?",
+          "details": [
+            "If you buy $4$ books at $\\$12$ each, and your calculator says $\\$480$, a quick reasonableness check ($4 \\times 10 = 40$) tells you your answer is impossible and you made a typo."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s12",
+          "title": "Upper and Lower Bounds",
+          "type": "svg",
+          "caption": "By finding an upper and lower estimate, you know exactly where your real answer must live.",
+          "alt_text": "Visual showing a number line. Lower Estimate 70 is on the left. Upper Estimate 90 is on the right. In the middle, a green star marks the Exact Answer 81, which falls perfectly between the two boundaries.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"50\" y1=\"100\" x2=\"450\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"4\"/><circle cx=\"100\" cy=\"100\" r=\"6\" fill=\"#3b82f6\"/><circle cx=\"400\" cy=\"100\" r=\"6\" fill=\"#3b82f6\"/><polygon points=\"265,90 275,110 255,110\" fill=\"#16a34a\"/><text x=\"100\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">70</text><text x=\"400\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">90</text><text x=\"265\" y=\"135\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Exact: 81</text><text x=\"100\" y=\"70\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">Lower Estimate</text><text x=\"400\" y=\"70\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">Upper Estimate</text><rect x=\"170\" y=\"20\" width=\"190\" height=\"30\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"265\" y=\"40\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Problem: 34 + 47</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Estimate the calculation $49 \\times 21$.",
+          "solution_steps": [
+            "Step 1: Round the numbers to the nearest ten to make them easy to work with.",
+            "Step 2: $49$ rounds up to $50$.",
+            "Step 3: $21$ rounds down to $20$.",
+            "Step 4: Multiply the rounded numbers: $50 \\times 20 = 1,000$."
+          ],
+          "final_answer": "$\\approx 1,000$"
+        },
+        {
+          "problem": "A product costs $\\$198$ and has a $10\\%$ discount. Estimate the discounted price.",
+          "solution_steps": [
+            "Step 1: Round $\\$198$ to $\\$200$.",
+            "Step 2: Find $10\\%$ of $\\$200$ (divide by $10$): $\\$200 \\div 10 = \\$20$.",
+            "Step 3: Subtract the estimated discount: $\\$200 - \\$20 = \\$180$."
+          ],
+          "final_answer": "$\\approx \\$180$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rounding intermediate steps too aggressively.",
+          "correction": "When doing multi-step math, it is dangerous to round too much in the middle of a problem, because those small errors multiply and snowball. Try to keep exact numbers until the final step, unless you are purely doing a quick mental estimate."
+        }
+      ],
+      "quick_summary": [
+        "Estimation is the art of finding a 'close enough' answer quickly.",
+        "Round to the nearest $10$ or $100$ to make math easier.",
+        "Always use your estimate to double-check that your calculator output isn't wildly wrong."
+      ]
+    },
+    "ms_math_t15_st13": {
+      "id": "ms_math_t15_st13",
+      "title": "Logical reasoning and mathematical puzzles",
+      "overview": "Math isn't just about plugging numbers into formulas; it is about recognizing patterns, solving puzzles, and using pure logic to deduce missing information. These skills train your brain to think critically and step outside the box.",
+      "key_concepts": [
+        {
+          "concept": "Number Patterns",
+          "definition": "Finding the hidden rule.",
+          "details": [
+            "Always test the difference between consecutive numbers. Are they adding the same amount ($+4$)? Are they multiplying ($\\times 2$)?",
+            "Sometimes the difference itself is changing! (e.g., $+3, +5, +7$). Check for square numbers ($1, 4, 9, 16$).",
+            "**Fibonacci:** A special pattern where you add the previous two numbers to get the next one ($1, 1, 2, 3, 5, 8\\dots$).",
+            "A short sequence can fit more than one possible rule. State the rule you are using and check that it explains every term; more terms or context may be needed to confirm the intended pattern."
+          ]
+        },
+        {
+          "concept": "Logical Deduction",
+          "definition": "If A, then B.",
+          "details": [
+            "Using given facts to reach a conclusion that MUST be true.",
+            "Example: 'All birds have wings. A penguin is a bird.' Therefore, a penguin MUST have wings."
+          ]
+        },
+        {
+          "concept": "Arrangement Puzzles",
+          "definition": "Process of elimination.",
+          "details": [
+            "When given clues about who sits where, use a grid or process of elimination. Start with the most restrictive clues first (e.g., 'Cara sits at the far right')."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s13",
+          "title": "Finding Changing Differences",
+          "type": "svg",
+          "caption": "The first differences increase by 2, revealing the intended square-number pattern.",
+          "alt_text": "Visual showing the square-number sequence 1, 4, 9, 16, 25, followed by a question mark. The successive differences are +3, +5, +7, +9, and the next difference in this pattern is +11.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"60\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" fill=\"#1e3a8a\" font-weight=\"bold\">1</text><text x=\"140\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" fill=\"#1e3a8a\" font-weight=\"bold\">4</text><text x=\"220\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" fill=\"#1e3a8a\" font-weight=\"bold\">9</text><text x=\"300\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" fill=\"#1e3a8a\" font-weight=\"bold\">16</text><text x=\"380\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" fill=\"#1e3a8a\" font-weight=\"bold\">25</text><text x=\"450\" y=\"80\" font-family=\"sans-serif\" font-size=\"24\" fill=\"#dc2626\" font-weight=\"bold\">?</text><path d=\"M 75 90 Q 105 120 135 90\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><polygon points=\"135,90 125,95 130,105\" fill=\"#16a34a\" transform=\"rotate(-45 135 90)\"/><text x=\"105\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">+3</text><path d=\"M 155 90 Q 185 120 215 90\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><polygon points=\"215,90 205,95 210,105\" fill=\"#16a34a\" transform=\"rotate(-45 215 90)\"/><text x=\"185\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">+5</text><path d=\"M 240 90 Q 270 120 300 90\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><polygon points=\"300,90 290,95 295,105\" fill=\"#16a34a\" transform=\"rotate(-45 300 90)\"/><text x=\"270\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">+7</text><path d=\"M 330 90 Q 360 120 390 90\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><polygon points=\"390,90 380,95 385,105\" fill=\"#16a34a\" transform=\"rotate(-45 390 90)\"/><text x=\"360\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">+9</text><path d=\"M 410 90 Q 435 120 460 90\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><polygon points=\"460,90 450,95 455,105\" fill=\"#dc2626\" transform=\"rotate(-45 460 90)\"/><text x=\"435\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">+11</text><text x=\"250\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#64748b\" font-style=\"italic\">The differences are increasing by 2. This is the sequence of Square Numbers.</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Alex is older than Ben. Chris is younger than Ben. Who is the oldest?",
+          "solution_steps": [
+            "Step 1: Translate clues into math symbols.",
+            "Step 2: Alex > Ben.",
+            "Step 3: Ben > Chris.",
+            "Step 4: Chain them together: Alex > Ben > Chris."
+          ],
+          "final_answer": "Alex"
+        },
+        {
+          "problem": "Which number is the odd one out? $2, 3, 5, 7, 9, 11$",
+          "solution_steps": [
+            "Step 1: Look for common properties. Most of these are prime numbers.",
+            "Step 2: $2, 3, 5, 7$, and $11$ can only be divided by 1 and themselves.",
+            "Step 3: $9$ can be divided by $3$ ($3 \\times 3 = 9$), so it is composite, not prime."
+          ],
+          "final_answer": "$9$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming every sequence uses simple addition.",
+          "correction": "If $2, 4...$ appears, don't just assume the next number is $6$ ($+2$). Check if it could be $8$ ($\\times 2$). Always look at three or more terms to confirm the rule."
+        }
+      ],
+      "quick_summary": [
+        "Find the difference between numbers to uncover the hidden rule.",
+        "Draw tables or diagrams to map out complex word puzzles.",
+        "Use process of elimination to narrow down possibilities."
+      ]
+    },
+    "ms_math_t15_st14": {
+      "id": "ms_math_t15_st14",
+      "title": "Choosing suitable problem-solving strategies",
+      "overview": "A strategy that works well for one type of problem may be inefficient for another. Choosing a suitable approach—such as mental maths, a formula, a table, a diagram, working backwards, or trial and improvement—can make a problem easier to solve and check.",
+      "key_concepts": [
+        {
+          "concept": "The Strategy Toolkit",
+          "definition": "The tools at your disposal.",
+          "details": [
+            "**Mental Math:** Best for simple percentages or rounding.",
+            "**Formulas:** Best for geometric area/volume, speed, and interest rates.",
+            "**Tables:** Best for comparing lots of data or listing outcomes.",
+            "**Diagrams:** Best for spatial problems, geometry, or seating arrangements."
+          ]
+        },
+        {
+          "concept": "Working Backwards",
+          "definition": "Starting at the end.",
+          "details": [
+            "If a problem gives the final result and asks for the original number, work backwards by undoing each operation.",
+            "Reverse the operations in the **opposite order** to the order in which they were carried out: undo the last operation first. For example, undo addition with subtraction and undo multiplication with division."
+          ]
+        },
+        {
+          "concept": "Trial and Improvement",
+          "definition": "Educated guessing.",
+          "details": [
+            "Sometimes it is completely valid to guess an answer, plug it in to see if it works, and then tweak it up or down until it is perfect. (e.g., 'Two consecutive numbers sum to 41')."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s14",
+          "title": "Working Backwards",
+          "type": "svg",
+          "caption": "To reverse the steps in ? × 4 + 7 = 31, subtract 7 first, then divide by 4.",
+          "alt_text": "Visual showing the forward calculation 6 multiplied by 4 gives 24, then 7 is added to give 31. Reverse arrows show subtract 7 to return from 31 to 24, then divide by 4 to return to 6.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/>\n<text x=\"250\" y=\"26\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#334155\" font-weight=\"bold\">Forward calculation</text>\n<rect x=\"35\" y=\"52\" width=\"80\" height=\"42\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"6\"/>\n<text x=\"75\" y=\"79\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">6</text>\n<path d=\"M 120 73 L 185 73\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n<polygon points=\"185,73 175,67 175,79\" fill=\"#2563eb\"/>\n<text x=\"152\" y=\"57\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e40af\" font-weight=\"bold\">× 4</text>\n<rect x=\"190\" y=\"52\" width=\"80\" height=\"42\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"6\"/>\n<text x=\"230\" y=\"79\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">24</text>\n<path d=\"M 275 73 L 340 73\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n<polygon points=\"340,73 330,67 330,79\" fill=\"#2563eb\"/>\n<text x=\"307\" y=\"57\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e40af\" font-weight=\"bold\">+ 7</text>\n<rect x=\"345\" y=\"52\" width=\"80\" height=\"42\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"6\"/>\n<text x=\"385\" y=\"79\" font-family=\"sans-serif\" font-size=\"20\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">31</text>\n<text x=\"250\" y=\"120\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"bold\">Work backwards: undo the last operation first</text>\n<rect x=\"35\" y=\"140\" width=\"205\" height=\"38\" fill=\"#fff7ed\" stroke=\"#ea580c\" stroke-width=\"1.5\" rx=\"6\"/>\n<text x=\"137\" y=\"164\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">31 - 7 = 24</text>\n<rect x=\"260\" y=\"140\" width=\"205\" height=\"38\" fill=\"#fff7ed\" stroke=\"#ea580c\" stroke-width=\"1.5\" rx=\"6\"/>\n<text x=\"362\" y=\"164\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">24 ÷ 4 = 6</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A person spends $\\$35$ and has $\\$65$ remaining. How much money did the person have originally?",
+          "solution_steps": [
+            "Step 1: Choose the strategy: Working Backwards.",
+            "Step 2: Start with the final amount: $65$.",
+            "Step 3: Reverse the operation. Instead of subtracting $35$, ADD $35$.",
+            "Step 4: $65 + 35 = 100$."
+          ],
+          "final_answer": "$\\$100$"
+        },
+        {
+          "problem": "Two consecutive whole numbers have a sum of $41$. Find the numbers.",
+          "solution_steps": [
+            "Step 1: Choose the strategy: Trial and Improvement.",
+            "Step 2: Try numbers around $20$ (since $20+20=40$).",
+            "Step 3: Try $19$ and $20$: $19 + 20 = 39$ (Too low).",
+            "Step 4: Try $20$ and $21$: $20 + 21 = 41$ (Perfect)."
+          ],
+          "final_answer": "$20$ and $21$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Relying on trial and error for everything.",
+          "correction": "While 'Trial and Improvement' is a valid strategy, guessing randomly is not. If you are guessing numbers for an algebra equation like $5x + 12 = 87$, it is much faster and more accurate to use standard inverse operations to solve it."
+        }
+      ],
+      "quick_summary": [
+        "Pick the best tool: Mental math for easy percents, formulas for geometry, tables for data.",
+        "If you know the end result, Work Backwards and reverse the operations.",
+        "Break massive, multi-step problems down into small, digestible pieces."
+      ]
+    }
+  }
+}

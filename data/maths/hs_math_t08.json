@@ -1,0 +1,1306 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t08",
+  "topicTitle": "Coordinate Geometry",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t08_st01": {
+      "id": "hs_math_t08_st01",
+      "title": "Cartesian coordinate system",
+      "overview": "The Cartesian coordinate system provides a precise way to describe locations in a plane. Two perpendicular number lines, the x-axis and y-axis, meet at the origin and divide the plane into four quadrants.",
+      "key_concepts": [
+        {
+          "concept": "Axes and origin",
+          "definition": "The reference lines for locating points.",
+          "details": [
+            "The horizontal axis is the **x-axis**; values increase to the right and decrease to the left.",
+            "The vertical axis is the **y-axis**; values increase upwards and decrease downwards.",
+            "The axes meet at the **origin**, whose coordinates are $(0,0)$."
+          ]
+        },
+        {
+          "concept": "Ordered pairs and scale",
+          "definition": "Coordinates give the horizontal and vertical position.",
+          "details": [
+            "A point is written as $(x,y)$: move along the x-direction first, then parallel to the y-axis.",
+            "The **abscissa** is the x-coordinate and the **ordinate** is the y-coordinate.",
+            "A coordinate grid must use a consistent scale on each axis; the two axes need not use the same physical spacing, but plotted coordinates must follow the stated scale."
+          ]
+        },
+        {
+          "concept": "Quadrants and axis points",
+          "definition": "The signs of the coordinates identify the quadrant.",
+          "details": [
+            "Quadrant I: $(+,+)$; Quadrant II: $(-,+)$; Quadrant III: $(-,-)$; Quadrant IV: $(+,-)$.",
+            "Quadrants are numbered counter-clockwise, beginning in the upper-right region.",
+            "A point on either axis, including the origin, is not in a quadrant."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s01",
+          "title": "The Four Quadrants",
+          "type": "svg",
+          "caption": "The signs of the coordinates dictate the quadrant.",
+          "alt_text": "Visual showing a Cartesian plane divided into 4 quadrants. Top right: Quadrant I (+, +). Top left: Quadrant II (-, +). Bottom left: Quadrant III (-, -). Bottom right: Quadrant IV (+, -). The origin (0,0) is marked in the center.",
+          "data": "<svg viewBox=\"0 0 500 400\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"400\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"250\" y1=\"20\" x2=\"250\" y2=\"380\" stroke=\"#94a3b8\" stroke-width=\"4\"/><line x1=\"20\" y1=\"200\" x2=\"480\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"4\"/><text x=\"480\" y=\"190\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"end\" fill=\"#0f172a\">x</text><text x=\"260\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\">y</text><circle cx=\"250\" cy=\"200\" r=\"5\" fill=\"#0f172a\"/><text x=\"260\" y=\"220\" font-family=\"monospace\" font-size=\"12\" fill=\"#0f172a\">(0,0)</text><rect x=\"300\" y=\"80\" width=\"120\" height=\"60\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"10\"/><text x=\"360\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Quadrant I</text><text x=\"360\" y=\"125\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">(+, +)</text><rect x=\"80\" y=\"80\" width=\"120\" height=\"60\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"140\" y=\"105\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Quadrant II</text><text x=\"140\" y=\"125\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">(-, +)</text><rect x=\"80\" y=\"260\" width=\"120\" height=\"60\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\" rx=\"10\"/><text x=\"140\" y=\"285\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#854d0e\" font-weight=\"bold\">Quadrant III</text><text x=\"140\" y=\"305\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">(-, -)</text><rect x=\"300\" y=\"260\" width=\"120\" height=\"60\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"10\"/><text x=\"360\" y=\"285\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">Quadrant IV</text><text x=\"360\" y=\"305\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">(+, -)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "State the quadrant or axis on which each point lies: $A(-4,2)$, $B(0,-7)$ and $C(-3,-5)$.",
+          "solution_steps": [
+            "For $A(-4,2)$, x is negative and y is positive, so A lies in Quadrant II.",
+            "For $B(0,-7)$, x is zero, so B lies on the negative y-axis.",
+            "For $C(-3,-5)$, both coordinates are negative, so C lies in Quadrant III."
+          ],
+          "final_answer": "A: Quadrant II; B: negative y-axis; C: Quadrant III."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reversing the coordinates.",
+          "correction": "Writing $(y, x)$ instead of $(x, y)$. Remember: You have to walk along the ground (x-axis) before you can climb the ladder (y-axis)."
+        },
+        {
+          "mistake": "Assigning boundary points to a quadrant.",
+          "correction": "A point like $(3, 0)$ is on the boundary line between Quadrant I and Quadrant IV. It belongs to neither. It is simply 'on the positive x-axis'."
+        }
+      ],
+      "quick_summary": [
+        "The x-coordinate is written first, followed by the y-coordinate.",
+        "The axes meet at the origin $(0,0)$ and divide the plane into four quadrants.",
+        "Points on an axis are not assigned to a quadrant."
+      ]
+    },
+    "hs_math_t08_st02": {
+      "id": "hs_math_t08_st02",
+      "title": "Distance between two points",
+      "overview": "The distance between two points is the length of the straight line segment joining them. The formula follows directly from the Pythagorean theorem by treating the horizontal and vertical coordinate differences as the perpendicular sides of a right triangle.",
+      "key_concepts": [
+        {
+          "concept": "The Distance Formula",
+          "definition": "The diagonal length.",
+          "details": [
+            "To find the direct straight-line distance ($d$) between point $A(x_1, y_1)$ and point $B(x_2, y_2)$: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+            "You are subtracting the $x$-values to find the horizontal width (the run), subtracting the $y$-values to find the vertical height (the rise), squaring them, adding them, and taking the square root."
+          ]
+        },
+        {
+          "concept": "Horizontal and Vertical Shortcuts",
+          "definition": "Straight lines.",
+          "details": [
+            "If two points have the exact same y-coordinate (e.g., $(2,5)$ and $(9,5)$), the line is perfectly horizontal. You don't need the full formula, just subtract the x-values: $9 - 2 = 7$ units.",
+            "If they have the same x-coordinate, just subtract the y-values."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Distance between two points",
+          "equation": "$$d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$",
+          "variables": {
+            "(x_1,y_1)": "Coordinates of the first point",
+            "(x_2,y_2)": "Coordinates of the second point",
+            "d": "Straight-line distance"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s02",
+          "title": "The Distance Formula is Pythagoras",
+          "type": "svg",
+          "caption": "The horizontal run is 'a', the vertical rise is 'b', and the distance is the hypotenuse 'c'.",
+          "alt_text": "Visual showing a right triangle drawn on a grid. The hypotenuse connects A(x1, y1) and B(x2, y2) and is labeled 'd'. The horizontal leg is labeled '(x2 - x1)'. The vertical leg is labeled '(y2 - y1)'. Text below says 'd^2 = (x2-x1)^2 + (y2-y1)^2'.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"100\" y1=\"180\" x2=\"100\" y2=\"40\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><line x1=\"350\" y1=\"180\" x2=\"350\" y2=\"40\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><line x1=\"100\" y1=\"180\" x2=\"350\" y2=\"180\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><line x1=\"100\" y1=\"40\" x2=\"350\" y2=\"40\" stroke=\"#e2e8f0\" stroke-width=\"2\"/><path d=\"M 100 180 L 350 40\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><circle cx=\"100\" cy=\"180\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"70\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\" font-weight=\"bold\">A(x₁, y₁)</text><circle cx=\"350\" cy=\"40\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"365\" y=\"35\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\" font-weight=\"bold\">B(x₂, y₂)</text><path d=\"M 100 180 L 350 180\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><text x=\"225\" y=\"200\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">(x₂ - x₁)</text><path d=\"M 350 180 L 350 40\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><text x=\"370\" y=\"110\" font-family=\"monospace\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\">(y₂ - y₁)</text><text x=\"200\" y=\"100\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#1d4ed8\" font-weight=\"bold\">d</text><rect x=\"20\" y=\"210\" width=\"460\" height=\"30\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"250\" y=\"230\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">d = √ [ (x₂ - x₁)² + (y₂ - y₁)² ]</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the exact distance between $A(-2, 3)$ and $B(4, -5)$.",
+          "solution_steps": [
+            "Step 1: Assign coordinates. $(x_1, y_1) = (-2, 3)$, and $(x_2, y_2) = (4, -5)$.",
+            "Step 2: Plug into formula: $d = \\sqrt{(4 - (-2))^2 + (-5 - 3)^2}$.",
+            "Step 3: Simplify inside the brackets: $4 - (-2) = 6$, and $-5 - 3 = -8$.",
+            "Step 4: Square them: $d = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64}$.",
+            "Step 5: Add and root: $d = \\sqrt{100} = 10$."
+          ],
+          "final_answer": "10 units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Messing up the double negatives.",
+          "correction": "When calculating $(x_2 - x_1)$, if $x_1$ is a negative number like $-3$, it becomes $(x_2 - (-3))$, which turns into addition: $(x_2 + 3)$. This is the most common error in distance calculations."
+        },
+        {
+          "mistake": "Dropping the negative sign when squaring.",
+          "correction": "$(-8)^2 = +64$. Any number squared becomes positive. If you type $-8^2$ into a basic calculator without brackets, it might give you $-64$. The number under the square root in the distance formula must ALWAYS be a positive sum."
+        }
+      ],
+      "quick_summary": [
+        "The Distance Formula calculates the shortest straight line between two points.",
+        "It is exactly the Pythagorean Theorem ($a^2+b^2=c^2$) overlaid on a grid.",
+        "The order you subtract the points doesn't matter, as long as you are consistent and square the results."
+      ]
+    },
+    "hs_math_t08_st03": {
+      "id": "hs_math_t08_st03",
+      "title": "Midpoint formula",
+      "overview": "The midpoint of a line segment is the point exactly halfway between its endpoints. Its x-coordinate is the average of the endpoint x-coordinates, and its y-coordinate is the average of the endpoint y-coordinates.",
+      "key_concepts": [
+        {
+          "concept": "The Averages",
+          "definition": "Splitting the difference.",
+          "details": [
+            "The Midpoint formula simply finds the mathematical average (mean) of the horizontal x-values, and the average of the vertical y-values.",
+            "Formula: $M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)$."
+          ]
+        },
+        {
+          "concept": "Finding an Unknown Endpoint",
+          "definition": "Working backwards.",
+          "details": [
+            "If you are given the starting point ($A$) and the center point ($M$), you can find the far endpoint ($B$) by setting up two mini-equations: $\\frac{x_1 + x}{2} = M_x$ and $\\frac{y_1 + y}{2} = M_y$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Midpoint formula",
+          "equation": "$$M=\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)$$",
+          "variables": {
+            "(x_1,y_1)": "First endpoint",
+            "(x_2,y_2)": "Second endpoint",
+            "M": "Midpoint"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s03",
+          "title": "The Midpoint Averages",
+          "type": "svg",
+          "caption": "The midpoint is simply the average of the X's and the average of the Y's.",
+          "alt_text": "Visual showing a diagonal line segment from A(2,2) to B(8,6). The midpoint M is plotted in the exact middle. Text highlights that the x-coordinate of M is (2+8)/2 = 5. The y-coordinate of M is (2+6)/2 = 4. The midpoint is M(5,4).",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"100\" y1=\"200\" x2=\"400\" y2=\"50\" stroke=\"#3b82f6\" stroke-width=\"4\"/><circle cx=\"100\" cy=\"200\" r=\"6\" fill=\"#ea580c\"/><text x=\"90\" y=\"225\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">A(2, 2)</text><circle cx=\"400\" cy=\"50\" r=\"6\" fill=\"#16a34a\"/><text x=\"410\" y=\"40\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">B(8, 6)</text><circle cx=\"250\" cy=\"125\" r=\"8\" fill=\"#0f172a\"/><text x=\"260\" y=\"115\" font-family=\"monospace\" font-size=\"16\" fill=\"#0f172a\" font-weight=\"bold\">M(5, 4)</text><path d=\"M 100 235 L 400 235\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"250\" y=\"248\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">x-avg: (2 + 8) / 2 = 5</text><path d=\"M 50 200 L 50 50\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"40\" y=\"125\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#475569\">y-avg: (2 + 6) / 2 = 4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the midpoint of the line segment connecting $A(-4, 6)$ and $B(2, -2)$.",
+          "solution_steps": [
+            "Step 1: Write formula: $M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)$.",
+            "Step 2: Add x-coordinates: $\\frac{-4 + 2}{2} = \\frac{-2}{2} = -1$.",
+            "Step 3: Add y-coordinates: $\\frac{6 + (-2)}{2} = \\frac{4}{2} = 2$.",
+            "Step 4: Combine into a coordinate pair."
+          ],
+          "final_answer": "$(-1, 2)$"
+        },
+        {
+          "problem": "The midpoint of a segment is $(5, 4)$. One endpoint is $A(2, 3)$. Find the other endpoint $B(x, y)$.",
+          "solution_steps": [
+            "Step 1: Set up the x-equation: $\\frac{2 + x}{2} = 5$.",
+            "Step 2: Multiply by 2: $2 + x = 10 \\implies x = 8$.",
+            "Step 3: Set up the y-equation: $\\frac{3 + y}{2} = 4$.",
+            "Step 4: Multiply by 2: $3 + y = 8 \\implies y = 5$."
+          ],
+          "final_answer": "$(8, 5)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Subtracting instead of adding.",
+          "correction": "Students often mix up the Distance formula (which requires subtraction) with the Midpoint formula (which requires ADDITION). Finding an average means adding the two numbers together."
+        }
+      ],
+      "quick_summary": [
+        "The midpoint is a coordinate $(x,y)$, not a distance.",
+        "It is exactly the average of the x-coordinates and the average of the y-coordinates.",
+        "The formula uses addition ($+$), not subtraction."
+      ]
+    },
+    "hs_math_t08_st04": {
+      "id": "hs_math_t08_st04",
+      "title": "Gradient or slope of a line",
+      "overview": "The gradient (or slope) measures the rate of vertical change compared with horizontal change as a line is followed from left to right. It describes both the direction and steepness of a non-vertical line.",
+      "key_concepts": [
+        {
+          "concept": "Rise over run",
+          "definition": "The ratio of vertical change to horizontal change.",
+          "details": [
+            "For points $(x_1,y_1)$ and $(x_2,y_2)$ with different x-coordinates, the gradient is $m=\\frac{y_2-y_1}{x_2-x_1}$.",
+            "Use the same point order in the numerator and denominator.",
+            "A gradient can be positive, negative or zero."
+          ]
+        },
+        {
+          "concept": "Types of gradient",
+          "definition": "The sign or value identifies the line orientation.",
+          "details": [
+            "**Positive:** the line rises as x increases.",
+            "**Negative:** the line falls as x increases.",
+            "**Zero:** a horizontal line has no vertical change, so its gradient is $0$.",
+            "**Undefined:** a vertical line has no horizontal change, so the denominator is $0$; its gradient is undefined, not zero."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Gradient (slope) formula",
+          "equation": "$$m=\\frac{y_2-y_1}{x_2-x_1},\\quad x_2\\ne x_1$$",
+          "variables": {
+            "m": "Gradient or slope",
+            "(x_1,y_1)": "First point",
+            "(x_2,y_2)": "Second point"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s04",
+          "title": "Four types of gradient",
+          "type": "svg",
+          "caption": "The direction of a line determines whether its gradient is positive, negative, zero or undefined.",
+          "alt_text": "Four small coordinate sketches: rising line for positive gradient, falling line for negative gradient, horizontal line for zero gradient and vertical line for undefined gradient.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 300\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"12\"/>\n<g font-family=\"sans-serif\" fill=\"#0f172a\">\n <rect x=\"18\" y=\"18\" width=\"274\" height=\"118\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#bfdbfe\"/>\n <line x1=\"45\" y1=\"112\" x2=\"265\" y2=\"112\" stroke=\"#64748b\"/><line x1=\"72\" y1=\"125\" x2=\"72\" y2=\"34\" stroke=\"#64748b\"/>\n <path d=\"M 95 100 L 245 45\" stroke=\"#2563eb\" stroke-width=\"4\" fill=\"none\"/><text x=\"160\" y=\"32\" font-size=\"17\" font-weight=\"bold\" text-anchor=\"middle\">Positive slope</text><text x=\"160\" y=\"129\" font-size=\"12\" text-anchor=\"middle\">Rises to the right</text>\n <rect x=\"308\" y=\"18\" width=\"274\" height=\"118\" rx=\"10\" fill=\"#fff7ed\" stroke=\"#fed7aa\"/>\n <line x1=\"335\" y1=\"112\" x2=\"555\" y2=\"112\" stroke=\"#64748b\"/><line x1=\"362\" y1=\"125\" x2=\"362\" y2=\"34\" stroke=\"#64748b\"/>\n <path d=\"M 385 45 L 535 100\" stroke=\"#ea580c\" stroke-width=\"4\" fill=\"none\"/><text x=\"450\" y=\"32\" font-size=\"17\" font-weight=\"bold\" text-anchor=\"middle\">Negative slope</text><text x=\"450\" y=\"129\" font-size=\"12\" text-anchor=\"middle\">Falls to the right</text>\n <rect x=\"18\" y=\"154\" width=\"274\" height=\"128\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#bbf7d0\"/>\n <line x1=\"45\" y1=\"250\" x2=\"265\" y2=\"250\" stroke=\"#64748b\"/><line x1=\"72\" y1=\"270\" x2=\"72\" y2=\"174\" stroke=\"#64748b\"/>\n <path d=\"M 95 215 L 245 215\" stroke=\"#16a34a\" stroke-width=\"4\" fill=\"none\"/><text x=\"160\" y=\"178\" font-size=\"17\" font-weight=\"bold\" text-anchor=\"middle\">Zero slope</text><text x=\"160\" y=\"269\" font-size=\"12\" text-anchor=\"middle\">Horizontal line</text>\n <rect x=\"308\" y=\"154\" width=\"274\" height=\"128\" rx=\"10\" fill=\"#fef2f2\" stroke=\"#fecaca\"/>\n <line x1=\"335\" y1=\"250\" x2=\"555\" y2=\"250\" stroke=\"#64748b\"/><line x1=\"445\" y1=\"270\" x2=\"445\" y2=\"174\" stroke=\"#64748b\"/>\n <path d=\"M 445 190 L 445 250\" stroke=\"#dc2626\" stroke-width=\"4\" fill=\"none\"/><text x=\"450\" y=\"178\" font-size=\"17\" font-weight=\"bold\" text-anchor=\"middle\">Undefined slope</text><text x=\"450\" y=\"269\" font-size=\"12\" text-anchor=\"middle\">Vertical line (run = 0)</text>\n</g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the gradient of a line passing through $A(1, 8)$ and $B(5, 2)$.",
+          "solution_steps": [
+            "Step 1: Assign points: $(x_1, y_1) = (1, 8)$ and $(x_2, y_2) = (5, 2)$.",
+            "Step 2: Use formula $m = \\frac{y_2 - y_1}{x_2 - x_1}$.",
+            "Step 3: Substitute: $m = \\frac{2 - 8}{5 - 1}$.",
+            "Step 4: Calculate: $m = \\frac{-6}{4}$.",
+            "Step 5: Simplify fraction: $m = -\\frac{3}{2}$."
+          ],
+          "final_answer": "m = -3/2"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reversing rise and run.",
+          "correction": "Gradient is vertical change divided by horizontal change: $\\Delta y/\\Delta x$, not $\\Delta x/\\Delta y$."
+        },
+        {
+          "mistake": "Calling a vertical line gradient zero.",
+          "correction": "A horizontal line has gradient zero. A vertical line has zero run, so its gradient is undefined."
+        },
+        {
+          "mistake": "Changing point order in only one part of the fraction.",
+          "correction": "If you subtract $y_1$ from $y_2$ on top, subtract $x_1$ from $x_2$ on the bottom."
+        }
+      ],
+      "quick_summary": [
+        "Gradient ($m$) measures steepness and direction.",
+        "Rise (y change) is always divided by Run (x change).",
+        "Horizontal lines have $0$ slope. Vertical lines have an undefined slope."
+      ],
+      "utilities": [
+        {
+          "title": "Line Slope Calculator",
+          "description": "Check a gradient from two coordinate points after calculating the exact rise-over-run fraction.",
+          "url": "https://onlinetoolpad.com/math/Line_slope_calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t08_st05": {
+      "id": "hs_math_t08_st05",
+      "title": "Equation of a straight line",
+      "overview": "A straight line can be represented by a linear equation in which the variables have power one. The general (standard) form is useful for identifying the coefficients of a line and expressing horizontal, vertical and sloping lines in one consistent format.",
+      "key_concepts": [
+        {
+          "concept": "General form of a straight line",
+          "definition": "A single form for many line orientations.",
+          "details": [
+            "The general form is $Ax+By+C=0$, where A, B and C are constants and A and B are not both zero.",
+            "Multiplying all three coefficients by the same non-zero number gives an equivalent equation for the same line.",
+            "The variables x and y occur only to the first power; an equation containing $x^2$ or $xy$ is not a straight-line equation."
+          ]
+        },
+        {
+          "concept": "Writing a line in general form",
+          "definition": "Collect the variable terms on one side.",
+          "details": [
+            "Rearrange the equation so it equals zero, then collect the x-term, y-term and constant.",
+            "For example, $y=2x+1$ becomes $2x-y+1=0$.",
+            "A point lies on the line when its coordinates satisfy the equation."
+          ]
+        },
+        {
+          "concept": "Horizontal and vertical lines",
+          "definition": "Special straight lines.",
+          "details": [
+            "A horizontal line has equation $y=k$; its gradient is zero.",
+            "A vertical line has equation $x=k$; its gradient is undefined.",
+            "The x-axis and y-axis are special cases through the origin."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General (standard) form",
+          "equation": "$$Ax+By+C=0,\\quad (A,B)\\ne(0,0)$$",
+          "variables": {
+            "A": "Coefficient of x",
+            "B": "Coefficient of y",
+            "C": "Constant term"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s05",
+          "title": "General form of a line",
+          "type": "svg",
+          "caption": "A straight-line equation can be rearranged into Ax + By + C = 0.",
+          "alt_text": "Infographic showing the general form Ax+By+C=0 and the example 2x-y+1=0, with a note that A and B cannot both be zero.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 250\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"12\"/>\n<g font-family=\"sans-serif\" text-anchor=\"middle\">\n <rect x=\"28\" y=\"45\" width=\"225\" height=\"92\" rx=\"10\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n <text x=\"140\" y=\"78\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e3a8a\">General form</text>\n <text x=\"140\" y=\"111\" font-family=\"monospace\" font-size=\"21\" fill=\"#0f172a\">Ax + By + C = 0</text>\n <path d=\"M 266 91 L 330 91\" stroke=\"#64748b\" stroke-width=\"3\"/><polygon points=\"330,91 318,84 318,98\" fill=\"#64748b\"/>\n <rect x=\"345\" y=\"45\" width=\"225\" height=\"92\" rx=\"10\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n <text x=\"458\" y=\"78\" font-size=\"18\" font-weight=\"bold\" fill=\"#14532d\">Example</text>\n <text x=\"458\" y=\"110\" font-family=\"monospace\" font-size=\"19\" fill=\"#0f172a\">2x - y + 1 = 0</text>\n <text x=\"300\" y=\"184\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">The coefficients are constants, and x and y have power 1.</text>\n <text x=\"300\" y=\"215\" font-size=\"14\" fill=\"#475569\">A and B cannot both be zero.</text>\n</g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Rewrite $y=2x+1$ in general form.",
+          "solution_steps": [
+            "Move all terms to one side: $2x-y+1=0$.",
+            "The equation is now in the form $Ax+By+C=0$, with $A=2$, $B=-1$ and $C=1$."
+          ],
+          "final_answer": "$2x-y+1=0$"
+        },
+        {
+          "problem": "Determine whether the point $(2,5)$ lies on the line $2x-y+1=0$.",
+          "solution_steps": [
+            "Substitute $x=2$ and $y=5$: $2(2)-5+1$.",
+            "Simplify: $4-5+1=0$.",
+            "The equation is satisfied, so the point lies on the line."
+          ],
+          "final_answer": "Yes, $(2,5)$ lies on the line."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking every line equation must be written as y=mx+c.",
+          "correction": "A vertical line cannot be written in slope-intercept form. General form $Ax+By+C=0$ can represent vertical, horizontal and sloping lines."
+        },
+        {
+          "mistake": "Allowing both A and B to be zero.",
+          "correction": "A and B cannot both be zero; otherwise the equation would not describe a straight line."
+        }
+      ],
+      "quick_summary": [
+        "General form: $Ax+By+C=0$, with A and B not both zero.",
+        "Equivalent equations may be obtained by multiplying every term by the same non-zero constant.",
+        "Horizontal lines have form $y=k$; vertical lines have form $x=k$."
+      ],
+      "utilities": [
+        {
+          "title": "Line Calculator",
+          "description": "Explore and graph a straight-line equation after writing it in general form.",
+          "url": "https://onlinetoolpad.com/math/LINE_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t08_st06": {
+      "id": "hs_math_t08_st06",
+      "title": "Slope-intercept form",
+      "overview": "Slope-intercept form displays the gradient and y-intercept directly. It is especially useful for graphing a line and interpreting how the y-value changes as x increases.",
+      "key_concepts": [
+        {
+          "concept": "The form y = mx + c",
+          "definition": "Gradient and y-intercept are visible in the equation.",
+          "details": [
+            "In $y=mx+c$, m is the gradient and c is the y-intercept.",
+            "The line crosses the y-axis at $(0,c)$.",
+            "A positive m gives a line rising to the right; a negative m gives a line falling to the right. If $m=0$, the line is horizontal."
+          ]
+        },
+        {
+          "concept": "Graphing from slope-intercept form",
+          "definition": "Start at the intercept, then use rise over run.",
+          "details": [
+            "Plot the y-intercept $(0,c)$.",
+            "Write the gradient as a fraction when helpful; for example, $m=\\frac{3}{2}$ means rise 3 units for a run of 2 units.",
+            "Use a second point and draw the straight line through the points."
+          ]
+        },
+        {
+          "concept": "Finding c from a known point",
+          "definition": "Substitute a point into y = mx + c.",
+          "details": [
+            "When the gradient m and a point $(x,y)$ are known, substitute them into $y=mx+c$.",
+            "Rearrange to calculate c, then write the equation in slope-intercept form."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Slope-intercept form",
+          "equation": "$$y=mx+c$$",
+          "variables": {
+            "m": "Gradient or slope",
+            "c": "y-intercept value; the intercept point is (0,c)"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s06",
+          "title": "Graph of y = 3x - 5",
+          "type": "svg",
+          "caption": "The y-intercept is (0, -5) and the gradient is 3.",
+          "alt_text": "Coordinate graph of y=3x-5 showing its y-intercept (0,-5), a second point (2,1), and a rising straight line.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"12\"/><line x1=\"40\" y1=\"25\" x2=\"40\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"80\" y1=\"25\" x2=\"80\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"120\" y1=\"25\" x2=\"120\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"160\" y1=\"25\" x2=\"160\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"200\" y1=\"25\" x2=\"200\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"240\" y1=\"25\" x2=\"240\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"280\" y1=\"25\" x2=\"280\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"320\" y1=\"25\" x2=\"320\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"360\" y1=\"25\" x2=\"360\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"400\" y1=\"25\" x2=\"400\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"440\" y1=\"25\" x2=\"440\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"480\" y1=\"25\" x2=\"480\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"520\" y1=\"25\" x2=\"520\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"560\" y1=\"25\" x2=\"560\" y2=\"285\" stroke=\"#e2e8f0\"/><line x1=\"35\" y1=\"25\" x2=\"565\" y2=\"25\" stroke=\"#e2e8f0\"/><line x1=\"35\" y1=\"50\" x2=\"565\" y2=\"50\" stroke=\"#e2e8f0\"/><line x1=\"35\" y1=\"75\" x2=\"565\" y2=\"75\" stroke=\"#e2e8f0\"/><line x1=\"35\" y1=\"100\" x2=\"565\" y2=\"100\" stroke=\"#e2e8f0\"/><line x1=\"35\" y1=\"125\" x2=\"565\" y2=\"125\" stroke=\"#e2e8f0\"/><line x1=\"35\" y1=\"150\" x2=\"565\" y2=\"150\" stroke=\"#e2e8f0\"/><line x1=\"35\" y1=\"175\" x2=\"565\" y2=\"175\" stroke=\"#e2e8f0\"/><line x1=\"35\" y1=\"200\" x2=\"565\" y2=\"200\" stroke=\"#e2e8f0\"/><line x1=\"35\" y1=\"225\" x2=\"565\" y2=\"225\" stroke=\"#e2e8f0\"/><line x1=\"35\" y1=\"250\" x2=\"565\" y2=\"250\" stroke=\"#e2e8f0\"/><line x1=\"35\" y1=\"275\" x2=\"565\" y2=\"275\" stroke=\"#e2e8f0\"/><g font-family=\"sans-serif\">\n <line x1=\"200\" y1=\"18\" x2=\"200\" y2=\"288\" stroke=\"#334155\" stroke-width=\"2.5\"/><line x1=\"35\" y1=\"150\" x2=\"565\" y2=\"150\" stroke=\"#334155\" stroke-width=\"2.5\"/>\n <text x=\"575\" y=\"145\" font-size=\"14\" fill=\"#334155\">x</text><text x=\"208\" y=\"18\" font-size=\"14\" fill=\"#334155\">y</text>\n <path d=\"M 200 275 L 320 50\" stroke=\"#2563eb\" stroke-width=\"4\" fill=\"none\"/>\n <circle cx=\"200\" cy=\"275\" r=\"6\" fill=\"#ea580c\"/><text x=\"214\" y=\"269\" font-size=\"14\" fill=\"#c2410c\" font-weight=\"bold\">(0, -5)</text>\n <circle cx=\"280\" cy=\"125\" r=\"5\" fill=\"#16a34a\"/><text x=\"292\" y=\"118\" font-size=\"13\" fill=\"#15803d\">(2, 1)</text>\n <text x=\"390\" y=\"58\" font-family=\"monospace\" font-size=\"21\" font-weight=\"bold\" fill=\"#1d4ed8\">y = 3x - 5</text>\n <text x=\"40\" y=\"295\" font-size=\"12\" fill=\"#64748b\">Graph shows the y-intercept and positive gradient.</text>\n</g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A line has gradient $m=2$ and passes through $(1,4)$. Find its equation in slope-intercept form.",
+          "solution_steps": [
+            "Start with $y=mx+c$: $y=2x+c$.",
+            "Substitute the point $(1,4)$: $4=2(1)+c$.",
+            "Solve: $c=2$.",
+            "Write the equation using the values of m and c."
+          ],
+          "final_answer": "$y=2x+2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reading the y-intercept as the x-intercept.",
+          "correction": "In $y=mx+c$, c gives the point $(0,c)$ on the y-axis."
+        },
+        {
+          "mistake": "Dropping the sign of c.",
+          "correction": "For $y=4x-7$, the y-intercept is $(0,-7)$, not $(0,7)$."
+        },
+        {
+          "mistake": "Treating a vertical line as having a finite slope-intercept form.",
+          "correction": "Vertical lines have undefined gradient and are written $x=k$, not $y=mx+c$."
+        }
+      ],
+      "quick_summary": [
+        "In $y=mx+c$, m is the gradient and c is the y-intercept value.",
+        "Plot $(0,c)$ first and use the gradient as rise over run.",
+        "A vertical line cannot be written in slope-intercept form."
+      ],
+      "utilities": [
+        {
+          "title": "Line Calculator",
+          "description": "Plot a line and inspect its gradient and y-intercept after deriving them from y = mx + c.",
+          "url": "https://onlinetoolpad.com/math/LINE_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t08_st07": {
+      "id": "hs_math_t08_st07",
+      "title": "Point-slope form",
+      "overview": "Point-slope form constructs the equation of a line when one point on the line and its gradient are known. It avoids finding the y-intercept first and works naturally with positive or negative coordinates.",
+      "key_concepts": [
+        {
+          "concept": "Point-slope formula",
+          "definition": "Use a known point and the gradient.",
+          "details": [
+            "The formula is $y-y_1=m(x-x_1)$.",
+            "The coordinates $(x_1,y_1)$ are one fixed point on the line; x and y represent any point on the line.",
+            "If two points are given, first calculate the gradient, then substitute one point."
+          ]
+        },
+        {
+          "concept": "Substituting negative coordinates",
+          "definition": "Keep the signs inside the brackets.",
+          "details": [
+            "The formula contains subtraction. If $x_1=-3$, then $x-x_1=x-(-3)=x+3$.",
+            "Substitute the signed coordinates carefully before simplifying."
+          ]
+        },
+        {
+          "concept": "Equivalent line forms",
+          "definition": "Expand only when another form is required.",
+          "details": [
+            "Expanding the brackets and collecting terms gives an equivalent equation.",
+            "The point-slope form is often the clearest form when the known information is a point and a gradient."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Point-Slope Form",
+          "equation": "$$ y - y_1 = m(x - x_1) $$",
+          "variables": {
+            "m": "Slope",
+            "(x_1, y_1)": "Any known point on the line"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s07",
+          "title": "From point-slope to slope-intercept form",
+          "type": "svg",
+          "caption": "Expand and rearrange when an equivalent slope-intercept equation is needed.",
+          "alt_text": "Step sequence showing y-4=2(x-3), then y-4=2x-6, then y=2x-2.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"80\" width=\"140\" height=\"40\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"90\" y=\"105\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">y - 4 = 2(x - 3)</text><path d=\"M 170 100 L 200 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"200,100 190,95 190,105\" fill=\"#3b82f6\"/><text x=\"185\" y=\"90\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1d4ed8\">Distribute</text><rect x=\"210\" y=\"80\" width=\"130\" height=\"40\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"275\" y=\"105\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">y - 4 = 2x - 6</text><path d=\"M 350 100 L 380 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"380,100 370,95 370,105\" fill=\"#3b82f6\"/><text x=\"365\" y=\"90\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1d4ed8\">Add 4</text><rect x=\"390\" y=\"80\" width=\"90\" height=\"40\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"435\" y=\"105\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">y = 2x - 2</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the equation of the line with gradient $-2$ passing through $(3,4)$.",
+          "solution_steps": [
+            "Use $m=-2$, $x_1=3$ and $y_1=4$.",
+            "Substitute into $y-y_1=m(x-x_1)$.",
+            "The equation is $y-4=-2(x-3)$.",
+            "Expanding gives $y-4=-2x+6$, or $y=-2x+10$."
+          ],
+          "final_answer": "Point-slope form: $y-4=-2(x-3)$; equivalent slope-intercept form: $y=-2x+10$"
+        },
+        {
+          "problem": "Find the equation of the line through $(-3,5)$ with gradient $2$.",
+          "solution_steps": [
+            "Use $m=2$ and $(x_1,y_1)=(-3,5)$.",
+            "Substitute: $y-5=2(x-(-3))$.",
+            "Simplify the double negative: $y-5=2(x+3)$."
+          ],
+          "final_answer": "$y-5=2(x+3)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reversing the coordinates in the formula.",
+          "correction": "Students often write $y - x_1 = m(x - y_1)$. Remember, $y$ goes with $y_1$ and $x$ goes with $x_1$."
+        },
+        {
+          "mistake": "Forgetting to flip the signs.",
+          "correction": "If the point is $(-2, -5)$, the formula becomes $y - (-5) = m(x - (-2))$, which is $y + 5 = m(x + 2)$. The signs always look opposite to the coordinate."
+        }
+      ],
+      "quick_summary": [
+        "Point-Slope form: $y - y_1 = m(x - x_1)$.",
+        "It is the fastest way to build an equation when the y-intercept is unknown.",
+        "Expand the brackets and move the constant to easily convert it into $y = mx + c$."
+      ]
+    },
+    "hs_math_t08_st08": {
+      "id": "hs_math_t08_st08",
+      "title": "Parallel and perpendicular lines",
+      "overview": "If you know the slope of one line, you instantly know the slope of every line parallel or perpendicular to it. Parallel lines run alongside each other forever, while perpendicular lines crash into each other at a perfect 90-degree angle.",
+      "key_concepts": [
+        {
+          "concept": "Parallel lines",
+          "definition": "Parallel non-vertical lines have equal gradients.",
+          "details": [
+            "If two non-vertical lines are parallel, their gradients are equal: $m_1=m_2$.",
+            "Distinct parallel lines do not meet; coincident lines have the same set of points."
+          ]
+        },
+        {
+          "concept": "Perpendicular lines",
+          "definition": "Perpendicular lines meet at a right angle.",
+          "details": [
+            "For two non-vertical lines with defined gradients, perpendicularity is equivalent to $m_1m_2=-1$.",
+            "Thus the perpendicular gradient is the negative reciprocal, provided the original gradient is non-zero.",
+            "A horizontal line and a vertical line are perpendicular; this special case is not handled by multiplying two finite gradients."
+          ]
+        },
+        {
+          "concept": "Horizontal and vertical lines",
+          "definition": "Special cases of parallel and perpendicular lines.",
+          "details": [
+            "Two distinct horizontal lines are parallel; two distinct vertical lines are also parallel.",
+            "A horizontal line has gradient 0 and a vertical line has undefined gradient.",
+            "A horizontal line and a vertical line intersect at 90 degrees."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Parallel lines (finite gradients)",
+          "equation": "$$m_1=m_2$$",
+          "variables": {}
+        },
+        {
+          "name": "Perpendicular lines (finite non-zero gradients)",
+          "equation": "$$m_1m_2=-1,\\quad m_2=-\\frac{1}{m_1}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s08",
+          "title": "Negative Reciprocals",
+          "type": "svg",
+          "caption": "Flip the fraction and flip the sign to find a perpendicular slope.",
+          "alt_text": "Visual showing a transformation. Box 1: 'Original Slope m = 2/3'. Arrow points to Box 2: 'Flip Fraction: 3/2'. Arrow points to Box 3: 'Flip Sign: -3/2'. Text below says 'Perpendicular Slope = -3/2'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"40\" y=\"60\" width=\"120\" height=\"50\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"100\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">Original Slope</text><text x=\"100\" y=\"100\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">m = 2/3</text><path d=\"M 170 85 L 200 85\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"200,85 190,80 190,90\" fill=\"#3b82f6\"/><rect x=\"210\" y=\"60\" width=\"110\" height=\"50\" fill=\"#ffedd5\" rx=\"5\"/><text x=\"265\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#9a3412\">Flip Fraction</text><text x=\"265\" y=\"100\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">3/2</text><path d=\"M 330 85 L 360 85\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><polygon points=\"360,85 350,80 350,90\" fill=\"#ea580c\"/><rect x=\"370\" y=\"60\" width=\"100\" height=\"50\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"420\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">Flip Sign</text><text x=\"420\" y=\"100\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">-3/2</text><text x=\"250\" y=\"160\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Perpendicular Slope (m₂) = -3/2</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the equation of a line parallel to $y = 4x - 7$ that passes through the point $(2, 5)$.",
+          "solution_steps": [
+            "Step 1: Extract the slope of the original line. $m_1 = 4$.",
+            "Step 2: Since the new line is parallel, $m_2 = 4$.",
+            "Step 3: Use point-slope form with $m = 4$ and point $(2, 5)$.",
+            "Step 4: $y - 5 = 4(x - 2)$.",
+            "Step 5: Expand and simplify: $y - 5 = 4x - 8 \\implies y = 4x - 3$."
+          ],
+          "final_answer": "$y = 4x - 3$"
+        },
+        {
+          "problem": "Find the equation of a line perpendicular to $y = 2x + 4$ that passes through $(2, 3)$.",
+          "solution_steps": [
+            "Step 1: Extract original slope: $m_1 = 2$.",
+            "Step 2: Find negative reciprocal for perpendicular line: $m_2 = -\\frac{1}{2}$.",
+            "Step 3: Use point-slope form: $y - 3 = -\\frac{1}{2}(x - 2)$.",
+            "Step 4: Expand: $y - 3 = -\\frac{1}{2}x + 1$.",
+            "Step 5: Simplify: $y = -\\frac{1}{2}x + 4$."
+          ],
+          "final_answer": "$y = -\\frac{1}{2}x + 4$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Taking only the reciprocal for a perpendicular gradient.",
+          "correction": "For finite non-zero gradients, take the reciprocal and change the sign. For example, the negative reciprocal of $2/3$ is $-3/2$."
+        },
+        {
+          "mistake": "Applying the product rule to horizontal or vertical lines.",
+          "correction": "A horizontal line and a vertical line are perpendicular, even though the vertical line has no defined gradient."
+        }
+      ],
+      "quick_summary": [
+        "Parallel lines share the exact same slope ($m_1 = m_2$).",
+        "Perpendicular lines have negative reciprocal slopes ($m_1 \\times m_2 = -1$).",
+        "To build the new equation, grab the required slope and use the Point-Slope formula with the new coordinate."
+      ],
+      "utilities": [
+        {
+          "title": "Line Calculator",
+          "description": "Graph two line equations to compare their direction and intersection behaviour.",
+          "url": "https://onlinetoolpad.com/math/LINE_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t08_st09": {
+      "id": "hs_math_t08_st09",
+      "title": "Intercepts of a line",
+      "overview": "Intercepts are the exact locations where a straight line crashes through the coordinate axes. These two points act as the mathematical anchors of a line, allowing you to quickly sketch its path without needing to calculate the slope.",
+      "key_concepts": [
+        {
+          "concept": "The X-Intercept",
+          "definition": "The ground floor.",
+          "details": [
+            "The point where the line crosses the horizontal x-axis. Because the line is sitting perfectly flat on the axis, it has no height. Therefore, the y-coordinate is ALWAYS exactly zero.",
+            "To find it algebraically, plug in $y = 0$ and solve for $x$."
+          ]
+        },
+        {
+          "concept": "The Y-Intercept",
+          "definition": "The center line.",
+          "details": [
+            "The point where the line crosses the vertical y-axis. Because the line has not moved left or right, its x-coordinate is ALWAYS exactly zero.",
+            "To find it algebraically, plug in $x = 0$ and solve for $y$. (In $y=mx+c$, it is simply $c$)."
+          ]
+        },
+        {
+          "concept": "Intercept Form",
+          "definition": "The dual-anchor equation.",
+          "details": [
+            "If the x-intercept is $(a,0)$ and the y-intercept is $(0,b)$, with both a and b non-zero, the line can be written as $\\frac{x}{a}+\\frac{y}{b}=1$.",
+            "This form displays both intercepts directly. If a line passes through the origin, or is vertical or horizontal with a zero intercept, use another line form instead."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Intercept form",
+          "equation": "$$\\frac{x}{a}+\\frac{y}{b}=1,\\quad a\\ne0,\\ b\\ne0$$",
+          "variables": {
+            "a": "Non-zero x-intercept value",
+            "b": "Non-zero y-intercept value"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s09",
+          "title": "Finding Intercepts by Hiding Variables",
+          "type": "svg",
+          "caption": "Setting a variable to zero effectively 'hides' it, making the other easy to solve.",
+          "alt_text": "Visual showing the equation 2x + 3y = 12. Arrow 1: 'To find x-intercept, hide y (y=0)'. Result: 2x = 12 -> x=6. Point is (6,0). Arrow 2: 'To find y-intercept, hide x (x=0)'. Result: 3y = 12 -> y=4. Point is (0,4).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2x + 3y = 12</text><path d=\"M 200 50 Q 130 80 130 110\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"130,110 125,100 135,100\" fill=\"#3b82f6\"/><rect x=\"40\" y=\"110\" width=\"180\" height=\"60\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"130\" y=\"130\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">Find x-intercept (Hide y)</text><text x=\"130\" y=\"155\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">2x = 12 → (6, 0)</text><path d=\"M 300 50 Q 370 80 370 110\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><polygon points=\"370,110 365,100 375,100\" fill=\"#ea580c\"/><rect x=\"280\" y=\"110\" width=\"180\" height=\"60\" fill=\"#ffedd5\" rx=\"5\"/><text x=\"370\" y=\"130\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#9a3412\">Find y-intercept (Hide x)</text><text x=\"370\" y=\"155\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">3y = 12 → (0, 4)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the equation of a line that crosses the x-axis at $4$ and the y-axis at $6$.",
+          "solution_steps": [
+            "Step 1: Identify intercept values. $a = 4$ and $b = 6$.",
+            "Step 2: Plug into intercept form: $\\frac{x}{4} + \\frac{y}{6} = 1$.",
+            "Step 3: To remove fractions, find the Lowest Common Multiple of 4 and 6, which is 12.",
+            "Step 4: Multiply the entire equation by 12: $12(\\frac{x}{4}) + 12(\\frac{y}{6}) = 12(1)$.",
+            "Step 5: Simplify: $3x + 2y = 12$."
+          ],
+          "final_answer": "$3x + 2y = 12$"
+        },
+        {
+          "problem": "Find the intercepts of the line $4x - 2y - 8 = 0$.",
+          "solution_steps": [
+            "Step 1: To find the x-intercept, substitute $y = 0$: $4x - 2(0) - 8 = 0$.",
+            "Step 2: Solve for $x$: $4x = 8 \\implies x = 2$. X-intercept is $(2, 0)$.",
+            "Step 3: To find the y-intercept, substitute $x = 0$: $4(0) - 2y - 8 = 0$.",
+            "Step 4: Solve for $y$: $-2y = 8 \\implies y = -4$. Y-intercept is $(0, -4)$."
+          ],
+          "final_answer": "X-intercept: (2, 0), Y-intercept: (0, -4)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Setting x=0 to find the x-intercept.",
+          "correction": "For the x-intercept, set y=0. For the y-intercept, set x=0."
+        },
+        {
+          "mistake": "Using intercept form when an intercept is zero.",
+          "correction": "The intercept form divides by a and b, so both intercept values must be non-zero. Use general form for lines through the origin or special axis-parallel lines."
+        },
+        {
+          "mistake": "Giving an intercept as a single coordinate value.",
+          "correction": "An intercept is a point: write $(a,0)$ for the x-intercept and $(0,b)$ for the y-intercept."
+        }
+      ],
+      "quick_summary": [
+        "X-intercept: Where the line hits the floor. Set $y=0$.",
+        "Y-intercept: Where the line hits the wall. Set $x=0$.",
+        "Intercept form ($\\frac{x}{a} + \\frac{y}{b} = 1$) is the fastest way to build an equation if you already know both crossing points."
+      ],
+      "utilities": [
+        {
+          "title": "Line Calculator",
+          "description": "Visualise a straight line and check the locations of its axis crossings.",
+          "url": "https://onlinetoolpad.com/math/LINE_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t08_st10": {
+      "id": "hs_math_t08_st10",
+      "title": "Distance from a point to a line",
+      "overview": "The distance from a point to a straight line is the length of the shortest segment joining them. That segment is perpendicular to the line, and the formula can be used once the line is written in general form.",
+      "key_concepts": [
+        {
+          "concept": "The Standard Form Requirement",
+          "definition": "Setting the stage.",
+          "details": [
+            "Before you can calculate the distance, the line's equation MUST be organized into General Standard Form: $Ax + By + C = 0$.",
+            "If you are given $y = 2x + 1$, you must rearrange it to $2x - y + 1 = 0$ so you can extract $A=2, B=-1, C=1$."
+          ]
+        },
+        {
+          "concept": "The Distance Formula",
+          "definition": "The calculation.",
+          "details": [
+            "For a point $P(x_1,y_1)$ and a line $Ax+By+C=0$, the perpendicular distance is $d=\\frac{|Ax_1+By_1+C|}{\\sqrt{A^2+B^2}}$.",
+            "The absolute value ensures the distance is non-negative. A point lying on the line has distance zero.",
+            "The coefficients A and B cannot both be zero."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Perpendicular Distance",
+          "equation": "$$ d = \\frac{|Ax_1 + By_1 + C|}{\\sqrt{A^2 + B^2}} $$",
+          "variables": {
+            "A, B, C": "Coefficients of the line",
+            "(x_1, y_1)": "Coordinates of the point"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s10",
+          "title": "Perpendicular distance from a point to a line",
+          "type": "svg",
+          "caption": "The shortest segment from a point to a line meets the line at a right angle.",
+          "alt_text": "Point P connected by a dashed perpendicular segment to a sloping line Ax+By+C=0, with a right-angle marker at the foot.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 280\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"12\"/>\n<g font-family=\"sans-serif\">\n <line x1=\"35\" y1=\"100\" x2=\"560\" y2=\"200\" stroke=\"#0f172a\" stroke-width=\"4\"/>\n <text x=\"420\" y=\"190\" font-size=\"15\" fill=\"#0f172a\" font-weight=\"bold\">Ax + By + C = 0</text>\n <circle cx=\"274\" cy=\"14\" r=\"7\" fill=\"#dc2626\"/><text x=\"292\" y=\"22\" font-size=\"16\" fill=\"#b91c1c\" font-weight=\"bold\">P(x1, y1)</text>\n <line x1=\"274\" y1=\"14\" x2=\"250\" y2=\"140\" stroke=\"#2563eb\" stroke-width=\"4\" stroke-dasharray=\"8,6\"/>\n <circle cx=\"250\" cy=\"140\" r=\"6\" fill=\"#2563eb\"/><text x=\"220\" y=\"162\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">Foot of perpendicular</text>\n <path d=\"M 265 143 L 268 128 L 253 125\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2.5\"/>\n <text x=\"282\" y=\"83\" font-size=\"18\" fill=\"#1d4ed8\" font-weight=\"bold\">d</text>\n <text x=\"300\" y=\"250\" font-size=\"15\" text-anchor=\"middle\" fill=\"#475569\">The shortest distance meets the line at 90 degrees.</text>\n</g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the perpendicular distance from the point $(1, 2)$ to the line $3x + 4y - 5 = 0$.",
+          "solution_steps": [
+            "Step 1: Identify components. $A=3$, $B=4$, $C=-5$. Point $(x_1, y_1) = (1, 2)$.",
+            "Step 2: Plug into formula: $d = \\frac{|3(1) + 4(2) - 5|}{\\sqrt{3^2 + 4^2}}$.",
+            "Step 3: Simplify numerator: $|3 + 8 - 5| = |6| = 6$.",
+            "Step 4: Simplify denominator: $\\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+            "Step 5: Calculate final fraction: $d = 6 / 5 = 1.2$ units."
+          ],
+          "final_answer": "1.2 units"
+        },
+        {
+          "problem": "Find the distance from $(3, 4)$ to the line $y = 2x + 1$.",
+          "solution_steps": [
+            "Step 1: Rearrange the line to General Form. Subtract $y$ from both sides: $2x - y + 1 = 0$.",
+            "Step 2: Identify components: $A=2, B=-1, C=1$. Point $(3, 4)$.",
+            "Step 3: Substitute: $d = \\frac{|2(3) - 1(4) + 1|}{\\sqrt{2^2 + (-1)^2}}$.",
+            "Step 4: Simplify: $d = \\frac{|6 - 4 + 1|}{\\sqrt{4 + 1}} = \\frac{3}{\\sqrt{5}}$.",
+            "Step 5: Rationalise the denominator: $d = \\frac{3\\sqrt{5}}{5}$."
+          ],
+          "final_answer": "$\\frac{3\\sqrt{5}}{5}$ units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using $y = mx + c$ directly in the formula.",
+          "correction": "You cannot plug the slope $m$ in for $A$ and the intercept $c$ in for $C$. The formula strictly requires $Ax + By + C = 0$. You MUST rearrange the algebra first."
+        },
+        {
+          "mistake": "Forgetting the absolute value brackets.",
+          "correction": "If your numerator evaluates to $|10 - 12 + 13|$, it becomes $|-2 + 13| = 11$. If it evaluates to $|-11|$, you MUST convert it to a positive $11$. Distance is never negative."
+        }
+      ],
+      "quick_summary": [
+        "Force the line equation into $Ax + By + C = 0$ format.",
+        "Plug the $x,y$ coordinates of the point into the line's formula for the numerator.",
+        "Divide by the Pythagorean magnitude of the line's coefficients ($\\sqrt{A^2+B^2}$).",
+        "If a point lies exactly on the line, the distance will naturally calculate to $0$."
+      ]
+    },
+    "hs_math_t08_st11": {
+      "id": "hs_math_t08_st11",
+      "title": "Area of a triangle using coordinates",
+      "overview": "The coordinates of three vertices are enough to calculate the area of a triangle, even when its base and perpendicular height are not given directly. The coordinate area formula uses the three ordered pairs and returns a non-negative area.",
+      "key_concepts": [
+        {
+          "concept": "The Coordinate Formula",
+          "definition": "The cyclic calculation.",
+          "details": [
+            "For vertices $(x_1,y_1)$, $(x_2,y_2)$ and $(x_3,y_3)$, use the cyclic coordinate formula shown below.",
+            "Keep each x-coordinate paired with the difference of the other two y-coordinates.",
+            "The absolute value makes the area independent of whether the vertices are listed clockwise or counter-clockwise."
+          ]
+        },
+        {
+          "concept": "The Absolute Value",
+          "definition": "Protecting against negatives.",
+          "details": [
+            "Depending on whether you trace the points clockwise or counter-clockwise, the math inside the brackets might yield a negative number. Because area is a physical space, the absolute value bars $| |$ force the final answer to be positive."
+          ]
+        },
+        {
+          "concept": "Collinear Points",
+          "definition": "The flat triangle.",
+          "details": [
+            "If you plug three points into the area formula and the result is exactly $0$, it means the triangle has no physical area. The three points are 'collinear', meaning they form a perfectly flat, straight line."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Area of a Coordinate Triangle",
+          "equation": "$$ \\text{Area} = \\frac{1}{2}|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)| $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s11",
+          "title": "Cyclic Subtraction",
+          "type": "svg",
+          "caption": "The formula rotates through the points in a continuous 1-2-3 cycle.",
+          "alt_text": "Visual showing three boxes in a cycle. Box 1: x1(y2-y3). Box 2: x2(y3-y1). Box 3: x3(y1-y2). Arrows point in a circle indicating the pattern loops around smoothly.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"180\" y=\"20\" width=\"140\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"45\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">x₁(y₂ - y₃)</text><rect x=\"70\" y=\"120\" width=\"140\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"140\" y=\"145\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">x₃(y₁ - y₂)</text><rect x=\"290\" y=\"120\" width=\"140\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"5\"/><text x=\"360\" y=\"145\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">x₂(y₃ - y₁)</text><path d=\"M 270 70 L 320 110\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><polygon points=\"320,110 310,105 315,100\" fill=\"#ea580c\"/><path d=\"M 280 140 L 220 140\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><polygon points=\"220,140 230,135 230,145\" fill=\"#ea580c\"/><path d=\"M 180 110 L 230 70\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><polygon points=\"230,70 220,75 225,80\" fill=\"#ea580c\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the area of a triangle with vertices $A(-2, 1)$, $B(3, 1)$, and $C(1, 5)$.",
+          "solution_steps": [
+            "Step 1: Identify coordinates. $x_1=-2, y_1=1$. $x_2=3, y_2=1$. $x_3=1, y_3=5$.",
+            "Step 2: Plug into formula: $\\frac{1}{2} |(-2)(1 - 5) + 3(5 - 1) + 1(1 - 1)|$.",
+            "Step 3: Simplify brackets: $\\frac{1}{2} |(-2)(-4) + 3(4) + 1(0)|$.",
+            "Step 4: Multiply terms: $\\frac{1}{2} |8 + 12 + 0|$.",
+            "Step 5: Calculate final result: $\\frac{1}{2} |20| = 10$."
+          ],
+          "final_answer": "10 square units"
+        },
+        {
+          "problem": "Determine if the points $(1,2)$, $(3,4)$, and $(5,6)$ are collinear.",
+          "solution_steps": [
+            "Step 1: Calculate the area they form. $\\text{Area} = \\frac{1}{2}|1(4-6) + 3(6-2) + 5(2-4)|$.",
+            "Step 2: Simplify: $\\frac{1}{2}|1(-2) + 3(4) + 5(-2)|$.",
+            "Step 3: Multiply: $\\frac{1}{2}|-2 + 12 - 10|$.",
+            "Step 4: Add: $\\frac{1}{2}|0| = 0$.",
+            "Step 5: Since the area is exactly 0, the points do not form a triangle. They lie on a single straight line."
+          ],
+          "final_answer": "Yes, they are collinear."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting the absolute value.",
+          "correction": "The expression inside the bars can be negative when the vertices are listed in the opposite order. Area is the absolute value of half that expression."
+        },
+        {
+          "mistake": "Pairing the wrong coordinates.",
+          "correction": "Follow the cyclic order: $x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)$. Keep the same order throughout."
+        },
+        {
+          "mistake": "Assuming a zero-area result is an ordinary triangle.",
+          "correction": "If the calculated area is zero, the three points are collinear and do not enclose a triangle."
+        }
+      ],
+      "quick_summary": [
+        "Area = $\\frac{1}{2}|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)|$.",
+        "The absolute value ensures the area is always a positive magnitude.",
+        "If a question asks you to 'prove three points are collinear', just prove their Triangle Area is 0."
+      ]
+    },
+    "hs_math_t08_st12": {
+      "id": "hs_math_t08_st12",
+      "title": "Locus and geometric conditions",
+      "overview": "A locus is the set of all points that satisfy a stated geometric condition. Coordinate geometry describes these sets precisely and helps identify the shape traced by a moving point.",
+      "key_concepts": [
+        {
+          "concept": "Points at a fixed distance from a fixed point",
+          "definition": "A circle.",
+          "details": [
+            "If every point remains a fixed distance r from a fixed point A, the locus is a circle with centre A and radius r.",
+            "The condition is about distance from one fixed point; the complete locus includes every direction around that point."
+          ]
+        },
+        {
+          "concept": "Points equidistant from two fixed points",
+          "definition": "The perpendicular bisector.",
+          "details": [
+            "If a point is the same distance from two fixed points A and B, it lies on the perpendicular bisector of segment AB.",
+            "The locus is a straight line that passes through the midpoint of AB and is perpendicular to AB."
+          ]
+        },
+        {
+          "concept": "Points equidistant from two intersecting lines",
+          "definition": "The angle bisectors.",
+          "details": [
+            "The perpendicular distance from a point to each line must be equal.",
+            "The locus consists of the two angle bisectors of the angles formed by the intersecting lines."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s12",
+          "title": "Three common geometric loci",
+          "type": "svg",
+          "caption": "Different distance conditions produce a circle, a perpendicular bisector or angle bisectors.",
+          "alt_text": "Three panels showing a circle around a fixed point, perpendicular bisector of a segment joining two fixed points, and the angle bisectors of two intersecting lines.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 280\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"12\"/>\n<g font-family=\"sans-serif\" text-anchor=\"middle\">\n <rect x=\"15\" y=\"20\" width=\"185\" height=\"240\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#bfdbfe\"/>\n <circle cx=\"107\" cy=\"118\" r=\"58\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"107\" cy=\"118\" r=\"5\" fill=\"#1e3a8a\"/>\n <text x=\"107\" y=\"42\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e3a8a\">Fixed distance</text><text x=\"107\" y=\"205\" font-size=\"13\" fill=\"#1e3a8a\">Circle around a point</text><text x=\"107\" y=\"226\" font-size=\"12\" fill=\"#475569\">Every point is equally far from A.</text>\n <rect x=\"207\" y=\"20\" width=\"185\" height=\"240\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#bbf7d0\"/>\n <circle cx=\"250\" cy=\"118\" r=\"5\" fill=\"#15803d\"/><circle cx=\"350\" cy=\"118\" r=\"5\" fill=\"#15803d\"/><line x1=\"300\" y1=\"58\" x2=\"300\" y2=\"178\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"6,5\"/>\n <line x1=\"250\" y1=\"118\" x2=\"350\" y2=\"118\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"300\" y=\"42\" font-size=\"16\" font-weight=\"bold\" fill=\"#14532d\">Two fixed points</text><text x=\"300\" y=\"205\" font-size=\"13\" fill=\"#14532d\">Perpendicular bisector</text><text x=\"300\" y=\"226\" font-size=\"12\" fill=\"#475569\">Equal distance from A and B.</text>\n <rect x=\"399\" y=\"20\" width=\"186\" height=\"240\" rx=\"10\" fill=\"#fff7ed\" stroke=\"#fed7aa\"/>\n <line x1=\"430\" y1=\"175\" x2=\"555\" y2=\"55\" stroke=\"#ea580c\" stroke-width=\"3\"/><line x1=\"430\" y1=\"55\" x2=\"555\" y2=\"175\" stroke=\"#ea580c\" stroke-width=\"3\"/><line x1=\"430\" y1=\"118\" x2=\"555\" y2=\"118\" stroke=\"#c2410c\" stroke-width=\"3\" stroke-dasharray=\"5,4\"/><line x1=\"493\" y1=\"45\" x2=\"493\" y2=\"185\" stroke=\"#c2410c\" stroke-width=\"3\" stroke-dasharray=\"5,4\"/>\n <text x=\"492\" y=\"42\" font-size=\"16\" font-weight=\"bold\" fill=\"#9a3412\">Two intersecting lines</text><text x=\"492\" y=\"205\" font-size=\"13\" fill=\"#9a3412\">Angle bisectors</text><text x=\"492\" y=\"226\" font-size=\"12\" fill=\"#475569\">Equal perpendicular distances.</text>\n</g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Describe the locus of a point that is always equidistant from two fixed points A and B.",
+          "solution_steps": [
+            "The condition says the distance from the moving point to A equals its distance to B.",
+            "The set of points with this property lies on the perpendicular bisector of segment AB.",
+            "This line passes through the midpoint of AB and is perpendicular to AB."
+          ],
+          "final_answer": "The perpendicular bisector of segment AB."
+        },
+        {
+          "problem": "Two straight lines intersect. Describe the locus of points that are equally distant from both lines.",
+          "solution_steps": [
+            "Distance from a point to a line is measured along a perpendicular.",
+            "Points with equal perpendicular distances from both intersecting lines lie on the angle bisectors.",
+            "There are two angle bisectors, one for each pair of vertically opposite angles."
+          ],
+          "final_answer": "The two angle bisectors of the intersecting lines."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing equal distance from two points with a circle.",
+          "correction": "Equal distance from one fixed point gives a circle. Equal distance from two fixed points gives the perpendicular bisector of the segment joining them."
+        },
+        {
+          "mistake": "Using ordinary slant distance instead of perpendicular distance from a line.",
+          "correction": "Distance from a point to a line is measured along a perpendicular to that line."
+        }
+      ],
+      "quick_summary": [
+        "Fixed distance from one fixed point gives a circle.",
+        "Equal distance from two fixed points gives the perpendicular bisector.",
+        "Equal perpendicular distances from two intersecting lines give their angle bisectors."
+      ]
+    },
+    "hs_math_t08_st13": {
+      "id": "hs_math_t08_st13",
+      "title": "Circles in coordinate geometry",
+      "overview": "A circle can be viewed as a set of points in the coordinate plane arranged around one fixed centre. The centre gives the location of the circle, while the radius gives its size.",
+      "key_concepts": [
+        {
+          "concept": "Centre, radius and diameter",
+          "definition": "The basic parts of a coordinate circle.",
+          "details": [
+            "The **centre** is the fixed point at the middle of the circle.",
+            "The **radius** is the distance from the centre to any point on the circumference. Every radius of the same circle has the same length.",
+            "The **diameter** is a chord through the centre; its length is twice the radius."
+          ]
+        },
+        {
+          "concept": "A circle as a locus",
+          "definition": "Every point on the circumference is equally far from the centre.",
+          "details": [
+            "Choose a fixed centre C and a fixed positive distance r. All points at distance r from C form the circumference of a circle.",
+            "The centre lies inside the circle, while points on the circumference are exactly one radius from the centre."
+          ]
+        },
+        {
+          "concept": "Coordinate-plane properties",
+          "definition": "The centre and radius locate the circle.",
+          "details": [
+            "The centre is described by an ordered pair $(h,k)$.",
+            "The four points directly to the right, left, above and below the centre are each one radius away: $(h+r,k)$, $(h-r,k)$, $(h,k+r)$ and $(h,k-r)$.",
+            "The circle is symmetric about the horizontal and vertical lines passing through its centre."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Diameter and radius",
+          "equation": "$$d=2r$$",
+          "variables": {
+            "d": "Diameter length",
+            "r": "Radius"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s13",
+          "title": "A circle on the coordinate plane",
+          "type": "svg",
+          "caption": "The centre fixes the position and the radius fixes the size.",
+          "alt_text": "Coordinate-plane circle showing centre C, a radius to point P on the circumference, and a diameter through the centre.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 280\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"12\"/>\n<g font-family=\"sans-serif\">\n <line x1=\"55\" y1=\"225\" x2=\"545\" y2=\"225\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"255\" stroke=\"#64748b\" stroke-width=\"2\"/>\n <text x=\"548\" y=\"219\" font-size=\"14\" fill=\"#334155\">x</text><text x=\"268\" y=\"28\" font-size=\"14\" fill=\"#334155\">y</text>\n <circle cx=\"320\" cy=\"145\" r=\"82\" fill=\"#dbeafe\" fill-opacity=\"0.35\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n <circle cx=\"320\" cy=\"145\" r=\"6\" fill=\"#1e3a8a\"/><text x=\"284\" y=\"165\" font-size=\"15\" fill=\"#1e3a8a\" font-weight=\"bold\">Centre C</text>\n <circle cx=\"402\" cy=\"145\" r=\"6\" fill=\"#ea580c\"/><text x=\"408\" y=\"137\" font-size=\"14\" fill=\"#c2410c\" font-weight=\"bold\">P on circle</text>\n <line x1=\"320\" y1=\"145\" x2=\"402\" y2=\"145\" stroke=\"#ea580c\" stroke-width=\"4\"/><text x=\"361\" y=\"132\" font-size=\"15\" fill=\"#c2410c\" font-weight=\"bold\">Radius</text>\n <line x1=\"238\" y1=\"145\" x2=\"402\" y2=\"145\" stroke=\"#94a3b8\" stroke-dasharray=\"5,5\"/>\n <text x=\"70\" y=\"50\" font-size=\"18\" fill=\"#0f172a\" font-weight=\"bold\">A circle on the coordinate plane</text>\n <text x=\"70\" y=\"78\" font-size=\"14\" fill=\"#475569\">Every point on the circumference is the same distance</text><text x=\"70\" y=\"98\" font-size=\"14\" fill=\"#475569\">from the fixed centre.</text>\n <text x=\"320\" y=\"258\" font-size=\"13\" text-anchor=\"middle\" fill=\"#475569\">The diameter passes through the centre and is twice the radius.</text>\n</g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A circle has centre $C(2,1)$ and radius 3 units. State the four points on the circle directly to the right, left, above and below the centre.",
+          "solution_steps": [
+            "Move 3 units right from the centre: $(2+3,1)=(5,1)$.",
+            "Move 3 units left: $(2-3,1)=(-1,1)$.",
+            "Move 3 units up: $(2,1+3)=(2,4)$.",
+            "Move 3 units down: $(2,1-3)=(2,-2)$."
+          ],
+          "final_answer": "$(5,1)$, $(-1,1)$, $(2,4)$ and $(2,-2)$."
+        },
+        {
+          "problem": "A coordinate circle has radius 4 units. Find its diameter.",
+          "solution_steps": [
+            "The diameter is twice the radius: $d=2r$.",
+            "Substitute $r=4$: $d=2(4)=8$."
+          ],
+          "final_answer": "8 units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing the centre with a point on the circumference.",
+          "correction": "The centre is the fixed middle point. Every point on the circumference is one radius away from it."
+        },
+        {
+          "mistake": "Treating the radius as the diameter.",
+          "correction": "The diameter passes through the centre and is twice the radius."
+        }
+      ],
+      "quick_summary": [
+        "A circle is centred at a fixed coordinate point.",
+        "Every point on its circumference is the same distance (the radius) from the centre.",
+        "The diameter is twice the radius; the circle is symmetric about the horizontal and vertical lines through its centre."
+      ]
+    },
+    "hs_math_t08_st14": {
+      "id": "hs_math_t08_st14",
+      "title": "Equations of circles",
+      "overview": "The centre-radius equation represents a circle on the coordinate plane. It is obtained by stating that every point (x,y) on the circumference is exactly r units from a fixed centre (h,k), using the distance formula.",
+      "key_concepts": [
+        {
+          "concept": "Centre-radius form",
+          "definition": "The equation of a circle with centre (h,k) and radius r.",
+          "details": [
+            "The equation is $(x-h)^2+(y-k)^2=r^2$.",
+            "The centre is $(h,k)$ and the radius is r, where $r>0$.",
+            "The signs inside the brackets are opposite to the coordinates of the centre. For centre $(-3,5)$, the brackets are $(x+3)$ and $(y-5)$."
+          ]
+        },
+        {
+          "concept": "Constructing an equation from centre and radius",
+          "definition": "Substitute the centre and radius into the formula.",
+          "details": [
+            "Write the centre as $(h,k)$ and identify the radius r.",
+            "Substitute these values into $(x-h)^2+(y-k)^2=r^2$.",
+            "Keep the square on the radius; the right-hand side is $r^2$, not r."
+          ]
+        },
+        {
+          "concept": "Finding the radius from a point on the circle",
+          "definition": "Use the distance from the centre to the given point.",
+          "details": [
+            "A point P on the circumference is exactly one radius from the centre C.",
+            "Use the distance formula between the centre and P to find r, then substitute into the centre-radius equation.",
+            "If the endpoints of a diameter are known, the midpoint gives the centre and half the endpoint distance gives the radius."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Centre-radius equation of a circle",
+          "equation": "$$(x-h)^2+(y-k)^2=r^2,\\quad r>0$$",
+          "variables": {
+            "(h,k)": "Centre of the circle",
+            "r": "Radius",
+            "(x,y)": "Any point on the circumference"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s14",
+          "title": "The Circle Equation is Pythagoras",
+          "type": "svg",
+          "caption": "The standard circle equation is literally just the Pythagorean Theorem applied to a moving point (x, y) and a fixed center (a, b).",
+          "alt_text": "Visual showing a circle on a grid. The center is labeled C(a, b). A point on the edge is labeled P(x, y). A right triangle connects them: the horizontal leg is (x-a), the vertical leg is (y-b), and the hypotenuse is r. Text says (x-a)^2 + (y-b)^2 = r^2.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 300\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"12\"/><g font-family=\"sans-serif\"><line x1=\"55\" y1=\"250\" x2=\"555\" y2=\"250\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"200\" y1=\"25\" x2=\"200\" y2=\"270\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"560\" y=\"245\" font-size=\"14\" fill=\"#334155\">x</text><text x=\"208\" y=\"25\" font-size=\"14\" fill=\"#334155\">y</text><circle cx=\"300\" cy=\"155\" r=\"88\" fill=\"#dbeafe\" fill-opacity=\"0.4\" stroke=\"#0ea5e9\" stroke-width=\"3\"/><circle cx=\"300\" cy=\"155\" r=\"6\" fill=\"#1e3a8a\"/><text x=\"255\" y=\"178\" font-size=\"15\" fill=\"#1e3a8a\" font-weight=\"bold\">C(h,k)</text><circle cx=\"364\" cy=\"95\" r=\"6\" fill=\"#ea580c\"/><text x=\"374\" y=\"91\" font-size=\"15\" fill=\"#c2410c\" font-weight=\"bold\">P(x,y)</text><line x1=\"300\" y1=\"155\" x2=\"364\" y2=\"95\" stroke=\"#ea580c\" stroke-width=\"4\"/><text x=\"320\" y=\"110\" font-size=\"16\" fill=\"#c2410c\" font-weight=\"bold\">r</text><path d=\"M 364 95 L 364 155 L 300 155\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\" stroke-dasharray=\"5,5\"/><text x=\"328\" y=\"174\" font-size=\"13\" fill=\"#1d4ed8\">x - h</text><text x=\"370\" y=\"130\" font-size=\"13\" fill=\"#1d4ed8\">y - k</text><rect x=\"365\" y=\"205\" width=\"215\" height=\"48\" rx=\"7\" fill=\"#ffffff\" stroke=\"#0ea5e9\" stroke-width=\"2\"/><text x=\"472\" y=\"235\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">(x-h)^2+(y-k)^2=r^2</text><text x=\"65\" y=\"45\" font-size=\"17\" fill=\"#0f172a\" font-weight=\"bold\">The centre-to-point distance is r.</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Write the equation of a circle with centre $(-2,3)$ and radius 4.",
+          "solution_steps": [
+            "Use $(h,k)=(-2,3)$ and $r=4$.",
+            "Substitute into $(x-h)^2+(y-k)^2=r^2$.",
+            "Apply the signs carefully: $(x-(-2))^2+(y-3)^2=4^2$."
+          ],
+          "final_answer": "$(x+2)^2+(y-3)^2=16$"
+        },
+        {
+          "problem": "Find the equation of a circle with centre $(1,-2)$ that passes through $(4,2)$.",
+          "solution_steps": [
+            "The radius is the distance from $(1,-2)$ to $(4,2)$.",
+            "Calculate $r=\\sqrt{(4-1)^2+(2-(-2))^2}=\\sqrt{9+16}=5$.",
+            "Substitute $h=1$, $k=-2$ and $r=5$ into the centre-radius form."
+          ],
+          "final_answer": "$(x-1)^2+(y+2)^2=25$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the centre coordinates with the wrong signs.",
+          "correction": "The equation uses $(x-h)$ and $(y-k)$. A centre of $(-2,3)$ gives $(x+2)^2+(y-3)^2$."
+        },
+        {
+          "mistake": "Using r instead of r squared on the right-hand side.",
+          "correction": "The formula is $(x-h)^2+(y-k)^2=r^2$. For radius 4, the right-hand side is 16."
+        },
+        {
+          "mistake": "Using a point that is not on the circumference to find the radius.",
+          "correction": "The centre-to-point distance equals the radius only when the given point lies on the circle."
+        }
+      ],
+      "quick_summary": [
+        "Centre-radius form: $(x-h)^2+(y-k)^2=r^2$.",
+        "The centre is $(h,k)$ and the radius is r.",
+        "Substitute signed centre coordinates carefully and square the radius."
+      ]
+    },
+    "hs_math_t08_st15": {
+      "id": "hs_math_t08_st15",
+      "title": "Conic sections — introduction",
+      "overview": "Conic sections are curves formed when a flat plane cuts a double cone. The angle and position of the cutting plane determine whether the cross-section is a circle, ellipse, parabola or hyperbola.",
+      "key_concepts": [
+        {
+          "concept": "Circle and ellipse",
+          "definition": "Closed conic curves.",
+          "details": [
+            "A **circle** is produced when the cutting plane is parallel to the circular base of one cone (perpendicular to the cone axis).",
+            "An **ellipse** is a closed oval produced by an inclined plane that cuts one nappe of the cone without being parallel to a slant side."
+          ]
+        },
+        {
+          "concept": "Parabola",
+          "definition": "A single open curve.",
+          "details": [
+            "A **parabola** is formed when the cutting plane is parallel to a slant side (generator) of the cone.",
+            "It is a smooth, open curve with one branch. A familiar approximate example is the cross-sectional shape of a satellite dish."
+          ]
+        },
+        {
+          "concept": "Hyperbola",
+          "definition": "A curve with two separate branches.",
+          "details": [
+            "A **hyperbola** is formed when the cutting plane passes through both halves (nappes) of the double cone.",
+            "Its graph has two separate open branches."
+          ]
+        },
+        {
+          "concept": "Recognising the four shapes",
+          "definition": "Compare whether the cross-section is closed or open.",
+          "details": [
+            "Circle and ellipse are closed curves.",
+            "Parabola has one open branch.",
+            "Hyperbola has two separate open branches.",
+            "This lesson focuses on recognising the shapes and their plane-cutting origins; their equations and advanced properties are studied later."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s15",
+          "title": "Recognising the four conic sections",
+          "type": "svg",
+          "caption": "The four cross-sections have distinct visual shapes.",
+          "alt_text": "Four panels show a circle, ellipse, parabola and hyperbola as curves only, without equations or advanced properties.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 290\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"12\"/>\n<g font-family=\"sans-serif\" text-anchor=\"middle\">\n <rect x=\"12\" y=\"18\" width=\"139\" height=\"255\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#bfdbfe\"/>\n <line x1=\"32\" y1=\"145\" x2=\"131\" y2=\"145\" stroke=\"#94a3b8\"/><line x1=\"82\" y1=\"55\" x2=\"82\" y2=\"224\" stroke=\"#94a3b8\"/><circle cx=\"82\" cy=\"145\" r=\"43\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><text x=\"82\" y=\"42\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e3a8a\">Circle</text><text x=\"82\" y=\"246\" font-size=\"12\" fill=\"#475569\">Round closed curve</text>\n <rect x=\"160\" y=\"18\" width=\"139\" height=\"255\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#bbf7d0\"/>\n <line x1=\"180\" y1=\"145\" x2=\"279\" y2=\"145\" stroke=\"#94a3b8\"/><line x1=\"229\" y1=\"55\" x2=\"229\" y2=\"224\" stroke=\"#94a3b8\"/><ellipse cx=\"229\" cy=\"145\" rx=\"58\" ry=\"34\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"4\"/><text x=\"229\" y=\"42\" font-size=\"18\" font-weight=\"bold\" fill=\"#14532d\">Ellipse</text><text x=\"229\" y=\"246\" font-size=\"12\" fill=\"#475569\">Oval closed curve</text>\n <rect x=\"308\" y=\"18\" width=\"139\" height=\"255\" rx=\"10\" fill=\"#fff7ed\" stroke=\"#fed7aa\"/>\n <line x1=\"328\" y1=\"145\" x2=\"427\" y2=\"145\" stroke=\"#94a3b8\"/><line x1=\"377\" y1=\"55\" x2=\"377\" y2=\"224\" stroke=\"#94a3b8\"/><path d=\"M 343 205 Q 377 65 411 205\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/><text x=\"377\" y=\"42\" font-size=\"18\" font-weight=\"bold\" fill=\"#9a3412\">Parabola</text><text x=\"377\" y=\"246\" font-size=\"12\" fill=\"#475569\">Single open curve</text>\n <rect x=\"456\" y=\"18\" width=\"132\" height=\"255\" rx=\"10\" fill=\"#fef2f2\" stroke=\"#fecaca\"/>\n <line x1=\"470\" y1=\"145\" x2=\"575\" y2=\"145\" stroke=\"#94a3b8\"/><line x1=\"522\" y1=\"55\" x2=\"522\" y2=\"224\" stroke=\"#94a3b8\"/><path d=\"M 480 65 Q 500 95 495 145 Q 490 195 480 225 M 564 65 Q 544 95 549 145 Q 554 195 564 225\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"4\"/><text x=\"522\" y=\"42\" font-size=\"17\" font-weight=\"bold\" fill=\"#991b1b\">Hyperbola</text><text x=\"522\" y=\"246\" font-size=\"12\" fill=\"#475569\">Two open branches</text>\n</g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify each described cross-section: (a) a closed round curve, (b) a closed oval, (c) one open branch, and (d) two separate open branches.",
+          "solution_steps": [
+            "A closed round curve is a circle.",
+            "A closed oval is an ellipse.",
+            "One open branch is a parabola.",
+            "Two separate open branches form a hyperbola."
+          ],
+          "final_answer": "(a) Circle; (b) ellipse; (c) parabola; (d) hyperbola."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing an ellipse with a hyperbola.",
+          "correction": "An ellipse is one closed curve. A hyperbola consists of two separate open branches."
+        },
+        {
+          "mistake": "Calling every open conic a parabola.",
+          "correction": "A parabola has one open branch; a hyperbola has two."
+        }
+      ],
+      "quick_summary": [
+        "A plane cutting a double cone can produce a circle, ellipse, parabola or hyperbola.",
+        "Circle and ellipse are closed; parabola is one open branch; hyperbola has two open branches.",
+        "This is a visual and geometric introduction; standard equations and advanced conic properties are not included."
+      ]
+    }
+  }
+}

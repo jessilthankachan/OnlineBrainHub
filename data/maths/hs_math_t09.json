@@ -1,0 +1,1569 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t09",
+  "topicTitle": "Geometry and Euclidean Proof",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t09_st01": {
+      "id": "hs_math_t09_st01",
+      "title": "Geometric definitions and notation",
+      "overview": "Euclidean geometry uses precise terms and symbols to describe points, lines, planes, angles and their relationships. Correct notation tells a reader exactly which object or part of a diagram is meant.",
+      "key_concepts": [
+        {
+          "concept": "Basic geometric objects",
+          "definition": "The objects from which diagrams are built.",
+          "details": [
+            "A **point** marks an exact position and has no length, width or thickness. It is named with a capital letter, such as $A$.",
+            "A **line** is straight and extends without end in both directions. The line through $A$ and $B$ is written $\\overleftrightarrow{AB}$.",
+            "A **line segment** has two endpoints and a measurable length: $\\overline{AB}$.",
+            "A **ray** has one endpoint and extends forever in one direction: $\\overrightarrow{AB}$ begins at $A$ and passes through $B$.",
+            "A **plane** is a flat two-dimensional surface extending without boundary. Three non-collinear points can determine a plane.",
+            "An **angle** is formed by two rays with a common endpoint (the vertex). In $\\angle ABC$, the vertex is $B$."
+          ]
+        },
+        {
+          "concept": "Relationships in space",
+          "definition": "How geometric objects may be positioned.",
+          "details": [
+            "Points are **collinear** if they lie on one straight line.",
+            "Objects are **coplanar** if they lie in one plane.",
+            "In three-dimensional geometry, **skew lines** are non-parallel lines that do not intersect because they are not coplanar."
+          ]
+        },
+        {
+          "concept": "Reading diagram markings",
+          "definition": "Markings communicate stated relationships.",
+          "details": [
+            "Matching tick marks on segments indicate equal lengths. Different tick-mark patterns denote different equality groups.",
+            "Matching arrow marks on lines indicate parallel lines.",
+            "Matching angle arcs indicate equal angle measures. A small square at a vertex indicates a right angle ($90^\\circ$).",
+            "A diagram is not assumed to be drawn to scale unless the problem says so; use the given labels and markings."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s01",
+          "title": "Reading Geometric Notation",
+          "type": "svg",
+          "caption": "Do not trust your eyes. Trust the markings.",
+          "alt_text": "Visual showing 3 examples. Left: A triangle with two sides marked with double tick marks. Label: 'Congruent Sides'. Middle: Two horizontal lines, both marked with a > arrow. Label: 'Parallel Lines'. Right: Two angles, both marked with a single curved arc. Label: 'Equal Angles'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(20, 30)\"><polygon points=\"70,20 20,120 120,120\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"3\"/><line x1=\"40\" y1=\"75\" x2=\"55\" y2=\"65\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"45\" y1=\"85\" x2=\"60\" y2=\"75\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"95\" y1=\"65\" x2=\"110\" y2=\"75\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"90\" y1=\"75\" x2=\"105\" y2=\"85\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"70\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Equal Length</text></g><g transform=\"translate(180, 30)\"><line x1=\"20\" y1=\"40\" x2=\"120\" y2=\"40\" stroke=\"#16a34a\" stroke-width=\"3\"/><polygon points=\"75,40 65,35 65,45\" fill=\"#16a34a\"/><line x1=\"20\" y1=\"100\" x2=\"120\" y2=\"100\" stroke=\"#16a34a\" stroke-width=\"3\"/><polygon points=\"75,100 65,95 65,105\" fill=\"#16a34a\"/><text x=\"70\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Parallel Lines</text></g><g transform=\"translate(340, 30)\"><path d=\"M 20 40 L 70 100 L 120 40\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><path d=\"M 60 88 A 20 20 0 0 0 80 88\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><path d=\"M 40 120 L 70 100 L 100 120\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><path d=\"M 65 103 A 10 10 0 0 0 75 103\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"70\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Equal Angles</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "In triangle $ABC$, points $A$, $B$ and $C$ are vertices. A ray starts at $B$ and passes through $C$. Write the ray notation and identify its endpoint.",
+          "solution_steps": [
+            "The first letter in ray notation is its endpoint.",
+            "The ray starts at $B$ and passes through $C$, so it is written $\\overrightarrow{BC}$."
+          ],
+          "final_answer": "$\\overrightarrow{BC}$; endpoint $B$."
+        },
+        {
+          "problem": "If $M$ is the midpoint of segment $\\overline{AB}$ and $AM=7$ cm, find $AB$.",
+          "solution_steps": [
+            "A midpoint divides a segment into two equal lengths, so $AM=MB=7$ cm.",
+            "Add the two parts: $AB=AM+MB=7+7=14$ cm."
+          ],
+          "final_answer": "14 cm"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating a line, ray and segment as interchangeable.",
+          "correction": "A line has no endpoints, a ray has one endpoint, and a segment has two endpoints and a finite length."
+        },
+        {
+          "mistake": "Naming an angle with the vertex in the wrong position.",
+          "correction": "In $\\angle ABC$, the middle letter $B$ is the vertex. Check the order before using an angle in a proof."
+        }
+      ],
+      "quick_summary": [
+        "A line extends in both directions; a ray has one endpoint; a segment has two.",
+        "The middle letter in a three-letter angle name is its vertex.",
+        "Collinear means on one line; coplanar means in one plane; skew lines are non-coplanar and non-intersecting."
+      ]
+    },
+    "hs_math_t09_st02": {
+      "id": "hs_math_t09_st02",
+      "title": "Angle properties",
+      "overview": "Angles formed by intersecting lines and rays obey fixed relationships. These properties can be used to calculate unknown angles and justify each step in a short Euclidean argument.",
+      "key_concepts": [
+        {
+          "concept": "Adjacent angles and linear pairs",
+          "definition": "Angles that share a vertex and a side.",
+          "details": [
+            "**Adjacent angles** share a common vertex and one common arm, and their interiors do not overlap.",
+            "A **linear pair** is a pair of adjacent angles whose non-common arms form a straight line. Their measures add to $180^\\circ$."
+          ]
+        },
+        {
+          "concept": "Complementary and supplementary angles",
+          "definition": "Pairs classified by their angle sum.",
+          "details": [
+            "**Complementary angles** have measures that add to $90^\\circ$. They need not be adjacent.",
+            "**Supplementary angles** have measures that add to $180^\\circ$. They need not be adjacent; a linear pair is a special adjacent case."
+          ]
+        },
+        {
+          "concept": "Vertically opposite angles and angles around a point",
+          "definition": "Relationships at an intersection.",
+          "details": [
+            "When two straight lines intersect, each pair of **vertically opposite angles** has equal measures.",
+            "Angles around a point make one complete turn and have a total measure of $360^\\circ$.",
+            "A linear pair and vertically opposite-angle facts can be used together to determine all four angles formed by two intersecting lines."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Linear pair",
+          "equation": "$$m\\angle 1+m\\angle 2=180^\\circ$$",
+          "variables": {}
+        },
+        {
+          "name": "Complementary angles",
+          "equation": "$$m\\angle 1+m\\angle 2=90^\\circ$$",
+          "variables": {}
+        },
+        {
+          "name": "Angles around a point",
+          "equation": "$$\\sum m\\angle_i=360^\\circ$$",
+          "variables": {}
+        },
+        {
+          "name": "Vertically opposite angles",
+          "equation": "$$m\\angle 1=m\\angle 3,\\quad m\\angle 2=m\\angle 4$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s02",
+          "title": "Angle Interactions",
+          "type": "svg",
+          "caption": "The core rules for intersecting lines.",
+          "alt_text": "Visual showing 3 examples. Left: A straight horizontal line split by a diagonal ray. Label: 'Linear Pair = 180'. Middle: Two intersecting lines forming an X. The top and bottom angles are shaded identically. Label: 'Vertically Opposite = Equal'. Right: Four angles radiating from a center dot. Label: 'Angles on a Point = 360'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(10, 30)\"><line x1=\"10\" y1=\"100\" x2=\"130\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"3\"/><line x1=\"70\" y1=\"100\" x2=\"110\" y2=\"30\" stroke=\"#0f172a\" stroke-width=\"3\"/><path d=\"M 40 100 A 30 30 0 0 1 88 68\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><path d=\"M 100 100 A 30 30 0 0 0 88 68\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"70\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Linear Pair = 180°</text></g><g transform=\"translate(170, 30)\"><line x1=\"20\" y1=\"30\" x2=\"120\" y2=\"110\" stroke=\"#0f172a\" stroke-width=\"3\"/><line x1=\"20\" y1=\"110\" x2=\"120\" y2=\"30\" stroke=\"#0f172a\" stroke-width=\"3\"/><path d=\"M 55 58 A 20 20 0 0 1 85 58\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M 55 82 A 20 20 0 0 0 85 82\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"70\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Vertical = Equal</text></g><g transform=\"translate(330, 30)\"><circle cx=\"70\" cy=\"70\" r=\"3\" fill=\"#0f172a\"/><line x1=\"70\" y1=\"70\" x2=\"70\" y2=\"10\" stroke=\"#0f172a\" stroke-width=\"3\"/><line x1=\"70\" y1=\"70\" x2=\"130\" y2=\"70\" stroke=\"#0f172a\" stroke-width=\"3\"/><line x1=\"70\" y1=\"70\" x2=\"40\" y2=\"120\" stroke=\"#0f172a\" stroke-width=\"3\"/><line x1=\"70\" y1=\"70\" x2=\"10\" y2=\"50\" stroke=\"#0f172a\" stroke-width=\"3\"/><circle cx=\"70\" cy=\"70\" r=\"20\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><text x=\"70\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">On a Point = 360°</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Two straight lines intersect. A pair of vertically opposite angles measures $(3x+10)^\\circ$ and $(5x-30)^\\circ$. Find all four angles.",
+          "solution_steps": [
+            "Vertically opposite angles are equal: $3x+10=5x-30$.",
+            "Add 30 and subtract $3x$: $40=2x$, so $x=20$.",
+            "The first angle is $3(20)+10=70^\\circ$. Its vertically opposite angle is also $70^\\circ$.",
+            "Each adjacent angle forms a linear pair with $70^\\circ$, so it is $180^\\circ-70^\\circ=110^\\circ$."
+          ],
+          "final_answer": "$70^\\circ,110^\\circ,70^\\circ,110^\\circ$."
+        },
+        {
+          "problem": "Two complementary angles are in the ratio $2:3$. Find their measures.",
+          "solution_steps": [
+            "Let the angles be $2x$ and $3x$. Complementary angles sum to $90^\\circ$.",
+            "So $2x+3x=90$, giving $x=18$.",
+            "The angles are $2(18)=36^\\circ$ and $3(18)=54^\\circ$."
+          ],
+          "final_answer": "$36^\\circ$ and $54^\\circ$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming all supplementary angles must touch.",
+          "correction": "Supplementary angles only need to sum to $180^\\circ$. A linear pair is supplementary and also adjacent."
+        },
+        {
+          "mistake": "Confusing vertical opposite angles with adjacent angles.",
+          "correction": "Vertically opposite angles are across the intersection and equal. Adjacent angles share a side; a linear pair sums to $180^\\circ$."
+        }
+      ],
+      "quick_summary": [
+        "Complementary angles sum to $90^\\circ$; supplementary angles sum to $180^\\circ$.",
+        "A linear pair is adjacent and sums to $180^\\circ$.",
+        "Vertically opposite angles are equal; angles around a point sum to $360^\\circ$."
+      ]
+    },
+    "hs_math_t09_st03": {
+      "id": "hs_math_t09_st03",
+      "title": "Parallel lines and transversals",
+      "overview": "A transversal crossing two parallel lines creates pairs of equal and supplementary angles. The converse properties allow the same angle relationships to be used as evidence that two lines are parallel.",
+      "key_concepts": [
+        {
+          "concept": "Equal angle pairs",
+          "definition": "Angles occupying corresponding or opposite positions.",
+          "details": [
+            "**Corresponding angles** occupy the same relative position at the two intersections and are equal when the lines are parallel.",
+            "**Alternate interior angles** lie between the parallel lines on opposite sides of the transversal and are equal.",
+            "**Alternate exterior angles** lie outside the parallel lines on opposite sides of the transversal and are equal."
+          ]
+        },
+        {
+          "concept": "Co-interior angles",
+          "definition": "Interior angles on the same side of the transversal.",
+          "details": [
+            "Co-interior (same-side interior) angles lie between the two lines and on the same side of the transversal. When the lines are parallel, they are supplementary and sum to $180^\\circ$."
+          ]
+        },
+        {
+          "concept": "Converse tests for parallel lines",
+          "definition": "Proving parallelism from angle information.",
+          "details": [
+            "If a pair of corresponding angles is equal, the two lines are parallel.",
+            "If a pair of alternate interior angles is equal, the two lines are parallel.",
+            "If a pair of co-interior angles sums to $180^\\circ$, the two lines are parallel.",
+            "Use the converse only when the angle positions are correctly identified; an angle pair with a different relationship does not establish parallelism."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Corresponding and alternate angle relationships",
+          "equation": "$$\\text{Corresponding angles equal; alternate interior angles equal}$$",
+          "variables": {}
+        },
+        {
+          "name": "Co-interior angles",
+          "equation": "$$m\\angle 1+m\\angle 2=180^\\circ$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s03",
+          "title": "Angles of Parallel Lines",
+          "type": "svg",
+          "caption": "The four main relationships generated by a transversal.",
+          "alt_text": "Visual showing 4 diagrams of a transversal cutting parallel lines. 1) Corresponding: Top right angles shaded (F-shape). 2) Alternate Interior: Inside corners on opposite sides shaded (Z-shape). 3) Alternate Exterior: Outside corners on opposite sides shaded. 4) Co-interior: Inside corners on the SAME side shaded (C-shape), with text 'Adds to 180'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(10, 20)\"><line x1=\"10\" y1=\"40\" x2=\"100\" y2=\"40\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"10\" y1=\"80\" x2=\"100\" y2=\"80\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"70\" y1=\"10\" x2=\"40\" y2=\"110\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M 61 40 A 15 15 0 0 0 78 40\" fill=\"#3b82f6\"/><path d=\"M 49 80 A 15 15 0 0 0 66 80\" fill=\"#3b82f6\"/><text x=\"55\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Corresponding</text><text x=\"55\" y=\"155\" font-family=\"monospace\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1d4ed8\">(Equal)</text></g><g transform=\"translate(130, 20)\"><line x1=\"10\" y1=\"40\" x2=\"100\" y2=\"40\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"10\" y1=\"80\" x2=\"100\" y2=\"80\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"70\" y1=\"10\" x2=\"40\" y2=\"110\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M 46 50 A 15 15 0 0 0 61 40\" fill=\"#22c55e\"/><path d=\"M 64 70 A 15 15 0 0 0 49 80\" fill=\"#22c55e\"/><text x=\"55\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Alt Interior</text><text x=\"55\" y=\"155\" font-family=\"monospace\" font-size=\"10\" text-anchor=\"middle\" fill=\"#15803d\">(Equal)</text></g><g transform=\"translate(250, 20)\"><line x1=\"10\" y1=\"40\" x2=\"100\" y2=\"40\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"10\" y1=\"80\" x2=\"100\" y2=\"80\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"70\" y1=\"10\" x2=\"40\" y2=\"110\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M 78 40 A 15 15 0 0 1 64 30\" fill=\"#a855f7\"/><path d=\"M 32 90 A 15 15 0 0 1 49 80\" fill=\"#a855f7\"/><text x=\"55\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Alt Exterior</text><text x=\"55\" y=\"155\" font-family=\"monospace\" font-size=\"10\" text-anchor=\"middle\" fill=\"#7e22ce\">(Equal)</text></g><g transform=\"translate(370, 20)\"><line x1=\"10\" y1=\"40\" x2=\"100\" y2=\"40\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"10\" y1=\"80\" x2=\"100\" y2=\"80\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"70\" y1=\"10\" x2=\"40\" y2=\"110\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M 46 50 A 15 15 0 0 0 61 40\" fill=\"#ea580c\"/><path d=\"M 49 80 A 15 15 0 0 0 34 70\" fill=\"#ea580c\"/><text x=\"55\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Co-Interior</text><text x=\"55\" y=\"155\" font-family=\"monospace\" font-size=\"10\" text-anchor=\"middle\" fill=\"#c2410c\">(Sums to 180)</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Two parallel lines are crossed by a transversal. A pair of co-interior angles measures $(3x+20)^\\circ$ and $(2x+10)^\\circ$. Find $x$ and the angles.",
+          "solution_steps": [
+            "Co-interior angles between parallel lines sum to $180^\\circ$.",
+            "$(3x+20)+(2x+10)=180$.",
+            "Combine like terms: $5x+30=180$, so $5x=150$ and $x=30$.",
+            "The angles are $3(30)+20=110^\\circ$ and $2(30)+10=70^\\circ$."
+          ],
+          "final_answer": "$x=30$; the angles are $110^\\circ$ and $70^\\circ$."
+        },
+        {
+          "problem": "A transversal creates alternate interior angles of $68^\\circ$ and $68^\\circ$ on two lines. What can be concluded?",
+          "solution_steps": [
+            "The two alternate interior angles are equal.",
+            "By the converse of the alternate-interior-angle theorem, the two lines are parallel."
+          ],
+          "final_answer": "The two lines are parallel."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Setting co-interior angles equal.",
+          "correction": "For parallel lines, corresponding, alternate interior and alternate exterior angles are equal. Co-interior angles sum to $180^\\circ$."
+        },
+        {
+          "mistake": "Using parallel-line angle rules without establishing parallelism.",
+          "correction": "First check that the lines are stated to be parallel or that a valid converse condition has been proved."
+        }
+      ],
+      "quick_summary": [
+        "Corresponding, alternate interior and alternate exterior angles are equal for parallel lines.",
+        "Co-interior angles sum to $180^\\circ$.",
+        "The converse of these relationships can be used to prove two lines parallel."
+      ]
+    },
+    "hs_math_t09_st04": {
+      "id": "hs_math_t09_st04",
+      "title": "Triangle properties",
+      "overview": "Triangle properties are developed through the angle-sum and exterior-angle theorems, relationships between side lengths and opposite angles, and the triangle inequality. These results support deductions and formal proofs rather than simple angle identification.",
+      "key_concepts": [
+        {
+          "concept": "Angle-sum and exterior-angle theorems",
+          "definition": "The angle relationships in every plane triangle.",
+          "details": [
+            "The three interior angles of a triangle sum to $180^\\circ$.",
+            "An exterior angle of a triangle equals the sum of the two non-adjacent (remote) interior angles.",
+            "An exterior angle and its adjacent interior angle form a linear pair and therefore sum to $180^\\circ$.",
+            "A proof of the angle-sum theorem can be made by drawing a line through one vertex parallel to the opposite side. Alternate interior angles reproduce the other two interior angles along a straight line, whose angle sum is $180^\\circ$. The exterior-angle theorem then follows from the triangle angle sum and a linear pair."
+          ]
+        },
+        {
+          "concept": "Side-angle relationships",
+          "definition": "Comparing sides and their opposite angles.",
+          "details": [
+            "In any triangle, the longer side lies opposite the larger angle, and the shorter side lies opposite the smaller angle.",
+            "Equal sides are opposite equal angles (the isosceles-triangle theorem). Conversely, equal angles are opposite equal sides."
+          ]
+        },
+        {
+          "concept": "Triangle inequality",
+          "definition": "The condition for three lengths to form a triangle.",
+          "details": [
+            "The sum of the lengths of any two sides must be greater than the length of the remaining side.",
+            "When side lengths are ordered $a\\le b\\le c$, it is sufficient to check $a+b>c$.",
+            "For example, lengths 3, 4 and 10 cannot form a triangle because $3+4$ is not greater than 10."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Interior angle sum",
+          "equation": "$$m\\angle A+m\\angle B+m\\angle C=180^\\circ$$",
+          "variables": {}
+        },
+        {
+          "name": "Exterior angle theorem",
+          "equation": "$$m\\angle ext=m\\angle A+m\\angle B$$",
+          "variables": {
+            "A, B": "The two remote interior angles"
+          }
+        },
+        {
+          "name": "Triangle inequality",
+          "equation": "$$a+b>c,\\quad a+c>b,\\quad b+c>a$$",
+          "variables": {
+            "a, b, c": "The three side lengths"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s04",
+          "title": "The Exterior Angle Theorem",
+          "type": "svg",
+          "caption": "The exterior angle equals the sum of the two opposite remote interior angles.",
+          "alt_text": "Visual showing a triangle. Interior angle A is marked blue. Interior angle B is marked green. The bottom side extends outward past the third vertex to form an exterior angle. The exterior angle is split into a blue section and a green section. Text: 'Exterior Angle = Angle A + Angle B'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 100 150 L 300 150 L 200 50 Z\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"3\"/><line x1=\"300\" y1=\"150\" x2=\"450\" y2=\"150\" stroke=\"#0f172a\" stroke-width=\"3\"/><path d=\"M 130 150 A 30 30 0 0 0 120 130\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><text x=\"135\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">A</text><path d=\"M 190 70 A 30 30 0 0 0 215 70\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><text x=\"202\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\">B</text><path d=\"M 320 150 A 20 20 0 0 0 310 130\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><path d=\"M 310 130 A 40 40 0 0 0 280 130\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><text x=\"340\" y=\"135\" font-family=\"monospace\" font-size=\"14\" fill=\"#0f172a\" font-weight=\"bold\">Ext = A + B</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "An exterior angle is $(5x+10)^\\circ$. Its two remote interior angles are $(2x+20)^\\circ$ and $(x+30)^\\circ$. Find $x$ and all three interior angles.",
+          "solution_steps": [
+            "By the exterior-angle theorem, $5x+10=(2x+20)+(x+30)$.",
+            "Simplify: $5x+10=3x+50$, so $2x=40$ and $x=20$.",
+            "The remote interior angles are $2(20)+20=60^\\circ$ and $20+30=50^\\circ$.",
+            "The interior angle adjacent to the exterior angle is $180^\\circ-110^\\circ=70^\\circ$. Check: $60+50+70=180$."
+          ],
+          "final_answer": "$x=20$; the interior angles are $60^\\circ,50^\\circ,70^\\circ$."
+        },
+        {
+          "problem": "Can lengths 6 cm, 8 cm and 15 cm form a triangle?",
+          "solution_steps": [
+            "The two shorter lengths must add to more than the longest length.",
+            "$6+8=14$, and $14$ is not greater than $15$.",
+            "The triangle inequality fails, so a triangle with these side lengths cannot be formed."
+          ],
+          "final_answer": "No. The lengths do not satisfy the triangle inequality."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming any three positive lengths form a triangle.",
+          "correction": "Check all three triangle inequalities; with the lengths ordered, check that the two shorter sides sum to more than the longest."
+        },
+        {
+          "mistake": "Using the adjacent interior angle in the exterior-angle theorem.",
+          "correction": "The exterior angle equals the sum of the two remote interior angles, not the interior angle next to it."
+        }
+      ],
+      "quick_summary": [
+        "Interior angles of a triangle sum to $180^\\circ$.",
+        "An exterior angle equals the sum of the two remote interior angles.",
+        "Longer sides lie opposite larger angles; equal sides lie opposite equal angles.",
+        "The sum of any two side lengths must exceed the third."
+      ]
+    },
+    "hs_math_t09_st05": {
+      "id": "hs_math_t09_st05",
+      "title": "Congruence of triangles",
+      "overview": "Congruent triangles have the same shape and size. A valid congruence criterion proves that their corresponding sides and angles match, allowing further results to be established using corresponding parts of congruent triangles.",
+      "key_concepts": [
+        {
+          "concept": "Triangle congruence criteria",
+          "definition": "Sufficient information to prove two triangles congruent.",
+          "details": [
+            "**SSS:** all three pairs of corresponding sides are equal.",
+            "**SAS:** two pairs of corresponding sides and the included angle are equal.",
+            "**ASA:** two pairs of corresponding angles and the included side are equal.",
+            "**AAS:** two pairs of corresponding angles and a corresponding non-included side are equal.",
+            "**RHS (or HL):** in right triangles, the hypotenuse and one corresponding leg are equal."
+          ]
+        },
+        {
+          "concept": "Correspondence and CPCTC",
+          "definition": "Using the order of vertices correctly.",
+          "details": [
+            "Write triangle names in corresponding order. In $\\triangle ABC\\cong\\triangle DEF$, the correspondence is $A\\leftrightarrow D$, $B\\leftrightarrow E$, and $C\\leftrightarrow F$.",
+            "**CPCTC** means corresponding parts of congruent triangles are congruent. Use it only after congruence has been established."
+          ]
+        },
+        {
+          "concept": "Conditions that do not prove congruence",
+          "definition": "Recognising insufficient information.",
+          "details": [
+            "**AAA** establishes similarity (same shape) but not equal size, so it does not prove congruence.",
+            "**SSA** is not a general congruence criterion. In some cases it can produce two different triangles; do not treat it as a valid general test."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s05",
+          "title": "SAS vs SSA",
+          "type": "svg",
+          "caption": "The angle must be trapped (included) between the two known sides.",
+          "alt_text": "Visual showing two triangles. Left: Triangle with two sides marked with ticks and the angle BETWEEN them marked. Label: 'SAS (Locked & Congruent)'. Right: Triangle with two sides marked, but an angle OUTSIDE them marked. Label: 'SSA (Hinge swings - Invalid)'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(50, 40)\"><polygon points=\"0,100 120,100 40,0\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><path d=\"M 25 18 A 20 20 0 0 0 40 30\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><line x1=\"10\" y1=\"50\" x2=\"30\" y2=\"50\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><line x1=\"75\" y1=\"45\" x2=\"85\" y2=\"55\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><line x1=\"80\" y1=\"40\" x2=\"90\" y2=\"50\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><text x=\"60\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">SAS (Locked)</text></g><g transform=\"translate(300, 40)\"><polygon points=\"0,100 120,100 40,0\" fill=\"#fee2e2\" stroke=\"#b91c1c\" stroke-width=\"3\"/><path d=\"M 100 100 A 20 20 0 0 0 107 83\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><line x1=\"10\" y1=\"50\" x2=\"30\" y2=\"50\" stroke=\"#b91c1c\" stroke-width=\"3\"/><line x1=\"75\" y1=\"45\" x2=\"85\" y2=\"55\" stroke=\"#b91c1c\" stroke-width=\"3\"/><line x1=\"80\" y1=\"40\" x2=\"90\" y2=\"50\" stroke=\"#b91c1c\" stroke-width=\"3\"/><path d=\"M 40 0 L 80 100\" fill=\"none\" stroke=\"#b91c1c\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><text x=\"60\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#7f1d1d\" font-weight=\"bold\">SSA (Hinge Swings)</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "In quadrilateral $ABCD$, diagonal $AC$ divides it into two triangles. Given $AB=CD$ and $BC=DA$, prove $\\triangle ABC\\cong\\triangle CDA$.",
+          "solution_steps": [
+            "The given equalities are $AB=CD$ and $BC=DA$.",
+            "The triangles share side $AC$, so $AC=CA$ by the reflexive property.",
+            "The three matching side pairs are $AB=CD$, $BC=DA$ and $AC=CA$.",
+            "Therefore $\\triangle ABC\\cong\\triangle CDA$ by SSS. The order shows $A\\leftrightarrow C$, $B\\leftrightarrow D$ and $C\\leftrightarrow A$."
+          ],
+          "final_answer": "$\\triangle ABC\\cong\\triangle CDA$ by SSS."
+        },
+        {
+          "problem": "Two right triangles have equal hypotenuses of 13 cm and one pair of corresponding legs of 5 cm. What criterion proves them congruent?",
+          "solution_steps": [
+            "Both triangles are right triangles.",
+            "Their hypotenuses are equal and one pair of corresponding legs is equal.",
+            "These are exactly the conditions of RHS (also called HL) congruence."
+          ],
+          "final_answer": "RHS (HL) congruence."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the angle in the wrong position for SAS.",
+          "correction": "For SAS, the known angle must be included between the two known corresponding sides."
+        },
+        {
+          "mistake": "Treating AAA or SSA as a general congruence test.",
+          "correction": "AAA proves similarity, not congruence. SSA is ambiguous in general and is not a valid universal congruence criterion."
+        },
+        {
+          "mistake": "Using CPCTC before proving congruence.",
+          "correction": "First establish congruence with a valid criterion, then state corresponding equal parts."
+        }
+      ],
+      "quick_summary": [
+        "The main criteria are SSS, SAS, ASA, AAS and RHS/HL.",
+        "Keep the corresponding vertex order consistent.",
+        "AAA proves similarity, while SSA is not a general congruence criterion.",
+        "Use CPCTC only after proving the triangles congruent."
+      ],
+      "utilities": [
+        {
+          "title": "Interactive Triangle Calculator",
+          "description": "Explore triangle side and angle measurements while checking the given information in a triangle problem.",
+          "url": "https://onlinetoolpad.com/math/Interactive_Triangle_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t09_st06": {
+      "id": "hs_math_t09_st06",
+      "title": "Similarity of triangles",
+      "overview": "Similar triangles have equal corresponding angles and proportional corresponding side lengths. Similarity criteria allow a proof of equal shape, while scale factors connect corresponding lengths, perimeters and areas.",
+      "key_concepts": [
+        {
+          "concept": "Similarity criteria",
+          "definition": "Ways to prove two triangles have the same shape.",
+          "details": [
+            "**AA:** two pairs of corresponding angles are equal; the third pair is then equal by the triangle angle sum.",
+            "**SSS similarity:** all three pairs of corresponding sides are in the same ratio.",
+            "**SAS similarity:** two pairs of corresponding sides are proportional and the included angles are equal."
+          ]
+        },
+        {
+          "concept": "Corresponding sides and scale factor",
+          "definition": "A common multiplier between matching lengths.",
+          "details": [
+            "Match corresponding vertices and sides before forming ratios. If a side in the image triangle is compared with its matching side in the original triangle, the scale factor is $k=\\text{image length}/\\text{original length}$.",
+            "Corresponding side lengths, heights and perimeters scale by $k$. If $k>1$, the image is an enlargement; if $0<k<1$, it is a reduction."
+          ]
+        },
+        {
+          "concept": "Area scale factor",
+          "definition": "How the area changes when lengths are scaled.",
+          "details": [
+            "Areas scale by the square of the linear scale factor: $k^2$.",
+            "If corresponding sides are in the ratio $2:5$, the larger-to-smaller area ratio is $2^2:5^2=4:25$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Linear scale factor",
+          "equation": "$$k=\\frac{\\text{image length}}{\\text{original length}}$$",
+          "variables": {
+            "k": "Linear scale factor"
+          }
+        },
+        {
+          "name": "Area scale factor",
+          "equation": "$$A_2=A_1k^2$$",
+          "variables": {
+            "k": "Linear scale factor from triangle 1 to triangle 2"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s06",
+          "title": "Scaling Area (k²)",
+          "type": "svg",
+          "caption": "Doubling the sides perfectly fits four of the original triangles inside.",
+          "alt_text": "Visual showing a small red triangle on the left with sides 's'. On the right, a large blue triangle with sides '2s'. Inside the large blue triangle, thin white lines show it is made of exactly 4 of the small red triangles. Text says 'k = 2, Area = 4x'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><polygon points=\"100,120 150,120 125,70\" fill=\"#fca5a5\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"125\" y=\"140\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">Area = A</text><path d=\"M 180 95 L 220 95\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"220,95 210,90 210,100\" fill=\"#3b82f6\"/><text x=\"200\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">k = 2</text><polygon points=\"250,140 350,140 300,40\" fill=\"#bfdbfe\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"300,140 325,90 275,90\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"300\" y1=\"40\" x2=\"300\" y2=\"140\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"300\" y=\"165\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">Area = 4A (k² = 4)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Triangle A has sides 4 cm, 5 cm and 7 cm. Triangle B is similar and its longest side is 21 cm. Find the shortest side of triangle B.",
+          "solution_steps": [
+            "The longest sides correspond: 7 cm in A and 21 cm in B.",
+            "The scale factor from A to B is $k=21/7=3$.",
+            "The shortest side in A is 4 cm, so the matching side in B is $4\\times3=12$ cm."
+          ],
+          "final_answer": "12 cm."
+        },
+        {
+          "problem": "Two similar triangles have corresponding side ratio (small to large) $2:5$. If the smaller triangle has area 16 cm², find the larger area.",
+          "solution_steps": [
+            "The linear scale factor from small to large is $k=5/2$.",
+            "The area scale factor is $k^2=(5/2)^2=25/4$.",
+            "Larger area $=16\\times25/4=4\\times25=100$ cm²."
+          ],
+          "final_answer": "100 cm²."
+        },
+        {
+          "problem": "In $\\triangle ABC$, points $D$ and $E$ lie on $AB$ and $AC$, and $DE\\parallel BC$. If $AD=4$ cm, $AB=10$ cm and $AE=6$ cm, find $AC$.",
+          "solution_steps": [
+            "Because $DE\\parallel BC$, corresponding angles are equal, so $\\triangle ADE\\sim\\triangle ABC$ by AA.",
+            "Corresponding sides are proportional: $AD/AB=AE/AC$.",
+            "Substitute: $4/10=6/AC$. Cross-multiply: $4AC=60$.",
+            "Therefore $AC=15$ cm."
+          ],
+          "final_answer": "15 cm."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Comparing non-corresponding sides.",
+          "correction": "Write the vertex correspondence first, then compare matching sides in the same order."
+        },
+        {
+          "mistake": "Using the linear scale factor for area.",
+          "correction": "Lengths and perimeter scale by $k$; area scales by $k^2$."
+        },
+        {
+          "mistake": "Assuming two triangles are similar because they look alike.",
+          "correction": "Prove similarity using AA, SSS similarity or SAS similarity."
+        }
+      ],
+      "quick_summary": [
+        "Prove similarity using AA, SSS or SAS.",
+        "Corresponding side lengths and perimeters scale by $k$.",
+        "Corresponding areas scale by $k^2$.",
+        "Parallel lines often create similar triangles by AA."
+      ]
+    },
+    "hs_math_t09_st07": {
+      "id": "hs_math_t09_st07",
+      "title": "Quadrilaterals and polygons",
+      "overview": "Quadrilaterals and polygons are classified by their side and angle properties. Theorems about parallel sides, equal sides, angles and diagonals allow properties of each shape to be justified and applied.",
+      "key_concepts": [
+        {
+          "concept": "Parallelogram family",
+          "definition": "Quadrilaterals with related side, angle and diagonal properties.",
+          "details": [
+            "A **parallelogram** has both pairs of opposite sides parallel. Opposite sides and opposite angles are equal, adjacent angles are supplementary, and the diagonals bisect each other.",
+            "A **rectangle** is a parallelogram with four right angles. Its diagonals are equal and bisect each other.",
+            "A **rhombus** is a parallelogram with four equal sides. Its diagonals bisect each other at right angles and bisect opposite angles.",
+            "A **square** is both a rectangle and a rhombus: it has four equal sides, four right angles, and equal perpendicular diagonals."
+          ]
+        },
+        {
+          "concept": "Other quadrilaterals",
+          "definition": "Trapeziums/trapezoids and kites.",
+          "details": [
+            "A **trapezium/trapezoid** has exactly one pair of parallel opposite sides under the convention used in these notes. Terminology varies between countries; some textbooks use “trapezoid” for a quadrilateral with at least one pair of parallel sides.",
+            "A **kite** has two distinct pairs of equal adjacent sides. Its diagonals are perpendicular, and one diagonal (the symmetry diagonal) bisects the other."
+          ]
+        },
+        {
+          "concept": "Regular polygons and diagonals",
+          "definition": "Equal sides and angles, and connections between non-adjacent vertices.",
+          "details": [
+            "A **regular polygon** has all sides equal and all interior angles equal. A rectangle is not regular unless it is a square.",
+            "A **diagonal** joins two non-adjacent vertices of a polygon. From each vertex of an $n$-gon, $n-3$ diagonals can be drawn; each diagonal is counted from both endpoints, so the total is $n(n-3)/2$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Number of diagonals in an n-sided polygon",
+          "equation": "$$D=\\frac{n(n-3)}{2}$$",
+          "variables": {
+            "n": "Number of vertices (or sides)"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s07",
+          "title": "The Quadrilateral Family Tree",
+          "type": "svg",
+          "caption": "Squares inherit the traits of both Rectangles and Rhombuses.",
+          "alt_text": "Visual flowchart. Top: 'Parallelogram'. Arrows split down to left 'Rectangle (90° corners)' and right 'Rhombus (Equal Sides)'. Arrows from both Rectangle and Rhombus point down to converge on 'Square' at the bottom.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"180\" y=\"10\" width=\"140\" height=\"30\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"250\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Parallelogram</text><path d=\"M 210 40 L 140 80\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"140,80 145,70 150,75\" fill=\"#64748b\"/><path d=\"M 290 40 L 360 80\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"360,80 355,70 350,75\" fill=\"#64748b\"/><rect x=\"60\" y=\"80\" width=\"140\" height=\"30\" fill=\"#bfdbfe\" rx=\"5\"/><text x=\"130\" y=\"100\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Rectangle (90°)</text><rect x=\"300\" y=\"80\" width=\"150\" height=\"30\" fill=\"#bbf7d0\" rx=\"5\"/><text x=\"375\" y=\"100\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Rhombus (Eq Sides)</text><path d=\"M 160 110 L 220 150\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"220,150 210,145 215,140\" fill=\"#64748b\"/><path d=\"M 340 110 L 280 150\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"280,150 290,145 285,140\" fill=\"#64748b\"/><rect x=\"210\" y=\"150\" width=\"80\" height=\"30\" fill=\"#fef08a\" rx=\"5\"/><text x=\"250\" y=\"170\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">Square</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "How many diagonals can be drawn inside a nonagon (9-sided polygon)?",
+          "solution_steps": [
+            "A nonagon has $n=9$ vertices.",
+            "Use $D=n(n-3)/2$.",
+            "$D=9(9-3)/2=9\\times6/2=27$."
+          ],
+          "final_answer": "27 diagonals."
+        },
+        {
+          "problem": "A parallelogram has one interior angle of $68^\\circ$. Find the other three interior angles.",
+          "solution_steps": [
+            "Opposite angles in a parallelogram are equal, so the opposite angle is $68^\\circ$.",
+            "Adjacent angles are supplementary: $180^\\circ-68^\\circ=112^\\circ$.",
+            "The remaining angle opposite $112^\\circ$ is also $112^\\circ$."
+          ],
+          "final_answer": "$68^\\circ,112^\\circ,68^\\circ,112^\\circ$."
+        },
+        {
+          "problem": "In parallelogram $ABCD$, diagonals $AC$ and $BD$ intersect at $O$. Prove that $AO=CO$ and $BO=DO$.",
+          "solution_steps": [
+            "Opposite sides of a parallelogram are parallel and equal, so $AB\\parallel CD$ and $AB=CD$.",
+            "Because $AB\\parallel CD$, alternate interior angles give $\\angle BAO=\\angle DCO$ and $\\angle ABO=\\angle CDO$.",
+            "Thus $\\triangle ABO\\cong\\triangle CDO$ by ASA.",
+            "By CPCTC, $AO=CO$ and $BO=DO$."
+          ],
+          "final_answer": "The diagonals of a parallelogram bisect each other."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming a rhombus has equal diagonals.",
+          "correction": "A rhombus has perpendicular diagonals that bisect each other, but they are not generally equal. Equal diagonals are guaranteed in a rectangle and a square."
+        },
+        {
+          "mistake": "Thinking a rectangle is a regular polygon.",
+          "correction": "A regular polygon must have all sides and all angles equal. A rectangle with unequal adjacent sides is not regular."
+        },
+        {
+          "mistake": "Treating the trapezium/trapezoid names as universal.",
+          "correction": "Terminology differs by region. State the parallel-side definition being used in a problem."
+        }
+      ],
+      "quick_summary": [
+        "A parallelogram has opposite sides parallel and equal; its diagonals bisect each other.",
+        "A rectangle has equal diagonals; a rhombus has perpendicular diagonals; a square has both properties.",
+        "A kite has two pairs of equal adjacent sides.",
+        "The number of diagonals in an $n$-gon is $n(n-3)/2$."
+      ]
+    },
+    "hs_math_t09_st08": {
+      "id": "hs_math_t09_st08",
+      "title": "Interior and exterior angles of polygons",
+      "overview": "The interior and exterior angle sums of polygons can be derived by dividing a polygon into triangles and by considering the total turn made around its boundary. Regular polygons have equal interior and exterior angles, making individual angles calculable.",
+      "key_concepts": [
+        {
+          "concept": "Interior angle sum",
+          "definition": "Triangulating a polygon.",
+          "details": [
+            "Drawing diagonals from one vertex of a convex $n$-gon divides it into $n-2$ non-overlapping triangles.",
+            "Each triangle has angle sum $180^\\circ$, so the polygon interior-angle sum is $(n-2)180^\\circ$.",
+            "For a quadrilateral this gives $(4-2)180^\\circ=360^\\circ$."
+          ]
+        },
+        {
+          "concept": "Exterior angle sum",
+          "definition": "One complete turn around a convex polygon.",
+          "details": [
+            "Taking one exterior angle at each vertex in the same direction gives a total turn of $360^\\circ$.",
+            "Thus the sum of one exterior angle at each vertex of any convex polygon is $360^\\circ$."
+          ]
+        },
+        {
+          "concept": "Regular polygons",
+          "definition": "Finding one interior or exterior angle.",
+          "details": [
+            "In a regular $n$-gon, each exterior angle is $360^\\circ/n$.",
+            "Each interior angle is $180^\\circ-360^\\circ/n$, equivalently $(n-2)180^\\circ/n$.",
+            "The number of sides can be found from a regular polygon exterior angle: $n=360^\\circ/E$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sum of interior angles",
+          "equation": "$$S=(n-2)180^\\circ$$",
+          "variables": {
+            "n": "Number of sides"
+          }
+        },
+        {
+          "name": "Sum of one exterior angle at each vertex",
+          "equation": "$$S_{ext}=360^\\circ$$",
+          "variables": {}
+        },
+        {
+          "name": "One exterior angle of a regular polygon",
+          "equation": "$$E=\\frac{360^\\circ}{n}$$",
+          "variables": {
+            "n": "Number of sides"
+          }
+        },
+        {
+          "name": "One interior angle of a regular polygon",
+          "equation": "$$I=180^\\circ-\\frac{360^\\circ}{n}$$",
+          "variables": {
+            "n": "Number of sides"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s08",
+          "title": "Triangulating a Polygon",
+          "type": "svg",
+          "caption": "A 5-sided pentagon naturally breaks down into exactly 3 triangles.",
+          "alt_text": "Visual showing a regular pentagon. From the bottom-left vertex, two dashed lines are drawn to the two opposite vertices. This splits the pentagon into 3 distinct triangles. Text below says: 'n = 5 sides. Triangles = 5 - 2 = 3. Sum = 3 * 180 = 540 degrees'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><polygon points=\"250,20 330,80 300,160 200,160 170,80\" fill=\"#e0f2fe\" stroke=\"#0ea5e9\" stroke-width=\"3\"/><line x1=\"200\" y1=\"160\" x2=\"250\" y2=\"20\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"200\" y1=\"160\" x2=\"330\" y2=\"80\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"210\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">1</text><text x=\"255\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">2</text><text x=\"295\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">3</text><rect x=\"350\" y=\"60\" width=\"130\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"415\" y=\"80\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">n = 5 sides</text><text x=\"415\" y=\"100\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\">n - 2 = 3 ∆s</text><text x=\"415\" y=\"120\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">3 × 180° = 540°</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Each interior angle of a regular polygon is $150^\\circ$. How many sides does it have?",
+          "solution_steps": [
+            "The corresponding exterior angle is $180^\\circ-150^\\circ=30^\\circ$.",
+            "The exterior angles sum to $360^\\circ$.",
+            "The number of sides is $n=360/30=12$."
+          ],
+          "final_answer": "12 sides (a dodecagon)."
+        },
+        {
+          "problem": "Find the sum of the interior angles of a 9-sided polygon.",
+          "solution_steps": [
+            "For $n=9$, use $S=(n-2)180^\\circ$.",
+            "$S=(9-2)180^\\circ=7\\times180^\\circ=1260^\\circ$."
+          ],
+          "final_answer": "$1260^\\circ$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using $n\\times180^\\circ$ for the interior sum.",
+          "correction": "A convex $n$-gon divides into $n-2$ triangles from one vertex, so use $(n-2)180^\\circ$."
+        },
+        {
+          "mistake": "Assuming the exterior-angle sum increases with the number of sides.",
+          "correction": "One exterior angle at each vertex always sums to $360^\\circ$ for a convex polygon."
+        },
+        {
+          "mistake": "Using $360^\\circ/n$ for an irregular polygon.",
+          "correction": "Each exterior angle is $360^\\circ/n$ only when the polygon is regular."
+        }
+      ],
+      "quick_summary": [
+        "Interior-angle sum: $(n-2)180^\\circ$.",
+        "The exterior angles, one at each vertex in the same direction, sum to $360^\\circ$.",
+        "For a regular polygon, each exterior angle is $360^\\circ/n$ and each interior angle is $180^\\circ-360^\\circ/n$."
+      ]
+    },
+    "hs_math_t09_st09": {
+      "id": "hs_math_t09_st09",
+      "title": "Circle geometry",
+      "overview": "A circle is the set of all points in a plane at a fixed distance from a fixed point called the centre. This lesson establishes the vocabulary and basic relationships needed for the chord, angle and tangent theorems that follow.",
+      "key_concepts": [
+        {
+          "concept": "Centre, radius and diameter",
+          "definition": "The principal parts of a circle.",
+          "details": [
+            "The **centre** is the fixed point from which all points on the circumference are the same distance.",
+            "A **radius** is a segment from the centre to the circumference. All radii of the same circle are equal.",
+            "A **diameter** is a chord passing through the centre. Its length is twice the radius: $d=2r$. A diameter is the longest chord of a circle."
+          ]
+        },
+        {
+          "concept": "Chords and arcs",
+          "definition": "Straight and curved parts of a circle.",
+          "details": [
+            "A **chord** is a line segment joining two points on the circumference. A diameter is a special chord that passes through the centre.",
+            "An **arc** is a connected portion of the circumference between two points. Two endpoints determine a minor arc and a major arc (unless they are endpoints of a diameter, which determine semicircles)."
+          ]
+        },
+        {
+          "concept": "Sectors and segments",
+          "definition": "Regions enclosed by radii, arcs and chords.",
+          "details": [
+            "A **sector** is a region bounded by two radii and the included arc.",
+            "A **segment** is a region bounded by a chord and its corresponding arc.",
+            "Do not confuse the circumference (the curved boundary) with the area (the region inside the circle). Detailed circumference and area calculations belong with measurement."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Diameter and radius",
+          "equation": "$$d=2r,\\qquad r=\\frac{d}{2}$$",
+          "variables": {
+            "d": "Diameter",
+            "r": "Radius"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s09",
+          "title": "Parts of a circle",
+          "type": "svg",
+          "caption": "Identify the centre, radius, diameter, chord and arc; sector and segment are regions.",
+          "alt_text": "A circle labelled with centre O, a radius, a diameter through O, a chord and its arc. Text defines sector as two radii and an arc, and segment as a chord and an arc.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 260\"><rect width=\"520\" height=\"260\" rx=\"12\" fill=\"#f8fafc\"/><circle cx=\"145\" cy=\"128\" r=\"82\" fill=\"#dbeafe\" fill-opacity=\"0.45\" stroke=\"#0ea5e9\" stroke-width=\"3\"/><circle cx=\"145\" cy=\"128\" r=\"4\" fill=\"#0f172a\"/><text x=\"130\" y=\"148\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\" font-weight=\"bold\">O</text><line x1=\"63\" y1=\"128\" x2=\"227\" y2=\"128\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"145\" y=\"120\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#1d4ed8\" font-weight=\"bold\">diameter</text><line x1=\"145\" y1=\"128\" x2=\"203\" y2=\"70\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"178\" y=\"92\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#15803d\" font-weight=\"bold\">radius</text><line x1=\"78\" y1=\"68\" x2=\"211\" y2=\"83\" stroke=\"#ea580c\" stroke-width=\"3\"/><circle cx=\"78\" cy=\"68\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"211\" cy=\"83\" r=\"4\" fill=\"#ea580c\"/><text x=\"85\" y=\"54\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#c2410c\" font-weight=\"bold\">chord</text><path d=\"M 78 68 A 82 82 0 0 1 211 83\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"5\"/><text x=\"150\" y=\"42\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#6d28d9\" font-weight=\"bold\">arc</text><text x=\"300\" y=\"68\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">Circle regions</text><text x=\"300\" y=\"98\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Sector: two radii + an arc</text><path d=\"M 295 108 h190\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"138\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Segment: a chord + its arc</text><text x=\"300\" y=\"184\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#334155\">All radii in this circle</text><text x=\"300\" y=\"204\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#334155\">have equal length.</text><text x=\"260\" y=\"242\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#475569\">A diameter is a chord through the centre and equals 2r.</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A circular plate has radius 8 cm. Find its diameter.",
+          "solution_steps": [
+            "The diameter is twice the radius.",
+            "$d=2r=2\\times8=16$ cm."
+          ],
+          "final_answer": "16 cm."
+        },
+        {
+          "problem": "A chord is a segment joining two points on a circle. Is every chord a diameter? Explain.",
+          "solution_steps": [
+            "A diameter is a special chord that passes through the centre.",
+            "A chord that does not pass through the centre is not a diameter."
+          ],
+          "final_answer": "No. Every diameter is a chord, but not every chord is a diameter."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calling every chord a diameter.",
+          "correction": "A diameter is only a chord that passes through the centre."
+        },
+        {
+          "mistake": "Confusing a sector with a segment.",
+          "correction": "A sector is bounded by two radii and an arc; a segment is bounded by a chord and an arc."
+        }
+      ],
+      "quick_summary": [
+        "All radii in a circle are equal.",
+        "A diameter passes through the centre and is twice the radius.",
+        "A chord joins two points on the circumference; an arc is part of the circumference.",
+        "A sector is bounded by two radii and an arc; a segment by a chord and an arc."
+      ]
+    },
+    "hs_math_t09_st10": {
+      "id": "hs_math_t09_st10",
+      "title": "Chords, arcs and sectors",
+      "overview": "Chords, arcs and sectors are linked by the centre and the angles they subtend. Equal chords and equal arcs have matching relationships, and perpendicular distances from the centre provide a useful way to compare or calculate chord lengths.",
+      "key_concepts": [
+        {
+          "concept": "Equal chords and equal arcs",
+          "definition": "Matching chord and arc sizes in the same circle (or congruent circles).",
+          "details": [
+            "Equal chords in the same circle (or congruent circles) subtend equal minor arcs.",
+            "Equal minor arcs in the same circle (or congruent circles) have equal corresponding chords.",
+            "Equal chords are equidistant from the centre, and chords equidistant from the centre are equal."
+          ]
+        },
+        {
+          "concept": "Perpendicular from the centre to a chord",
+          "definition": "A right-angle line from the centre bisects the chord.",
+          "details": [
+            "A perpendicular drawn from the centre of a circle to a chord bisects the chord.",
+            "Conversely, the line from the centre to the midpoint of a chord is perpendicular to the chord.",
+            "The radius to an endpoint, the perpendicular distance from the centre and half the chord form a right triangle. Pythagoras can be used to find a missing length."
+          ]
+        },
+        {
+          "concept": "Sector relationships",
+          "definition": "How a central angle describes a sector.",
+          "details": [
+            "A sector is larger when its central angle is larger in the same circle. Equal central angles in the same circle determine equal sectors and equal corresponding arcs.",
+            "Detailed arc-length and sector-area calculations are treated in the measurement curriculum; they are not developed here."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Chord and centre-distance relationship",
+          "equation": "$$x^2+d^2=r^2,\\qquad c=2x$$",
+          "variables": {
+            "r": "Radius",
+            "d": "Perpendicular distance from centre to chord",
+            "x": "Half-chord length",
+            "c": "Full chord length"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s10",
+          "title": "Chord Bisection via Pythagoras",
+          "type": "svg",
+          "caption": "A perpendicular from the center cuts a chord in half, creating a solvable right triangle.",
+          "alt_text": "Visual showing a circle. A horizontal chord is drawn. A line drops from the center O to the chord forming a 90-degree angle and bisecting it. A radius connects O to the edge of the chord, forming a right triangle. Labels: radius 'r' (hypotenuse), distance 'd' (vertical leg), half-chord 'x' (horizontal leg).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"150\" cy=\"100\" r=\"80\" fill=\"#e0f2fe\" stroke=\"#0ea5e9\" stroke-width=\"3\"/><line x1=\"85\" y1=\"145\" x2=\"215\" y2=\"145\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"150\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">Full Chord (2x)</text><circle cx=\"150\" cy=\"100\" r=\"4\" fill=\"#0f172a\"/><path d=\"M 150 100 L 150 145\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><path d=\"M 150 100 L 215 145\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M 150 135 L 160 135 L 160 145\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"135\" y=\"125\" font-family=\"monospace\" font-size=\"14\" fill=\"#1e3a8a\">d</text><text x=\"190\" y=\"115\" font-family=\"monospace\" font-size=\"14\" fill=\"#15803d\">r</text><text x=\"180\" y=\"140\" font-family=\"monospace\" font-size=\"14\" fill=\"#c2410c\">x</text><rect x=\"260\" y=\"70\" width=\"210\" height=\"60\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"365\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Right Triangle Formed:</text><text x=\"365\" y=\"115\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">x² + d² = r²</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A perpendicular is drawn from the centre of a circle to a chord. The radius is 13 cm and the distance from the centre to the chord is 5 cm. Find the full chord length.",
+          "solution_steps": [
+            "The perpendicular from the centre bisects the chord, so the right triangle has hypotenuse 13 cm, one leg 5 cm and the other leg half the chord, $x$.",
+            "By Pythagoras, $x^2+5^2=13^2$.",
+            "$x^2=169-25=144$, so $x=12$ cm.",
+            "The full chord is $2x=24$ cm."
+          ],
+          "final_answer": "24 cm."
+        },
+        {
+          "problem": "Two chords of the same circle are equal. What can be said about their minor arcs and their distances from the centre?",
+          "solution_steps": [
+            "Equal chords in the same circle subtend equal minor arcs.",
+            "Equal chords are also equidistant from the centre."
+          ],
+          "final_answer": "Their minor arcs are equal, and their perpendicular distances from the centre are equal."
+        },
+        {
+          "problem": "In a circle with centre $O$, equal chords $AB$ and $CD$ have perpendiculars $OM$ and $ON$ to them. Explain why the chords are equidistant from the centre.",
+          "solution_steps": [
+            "A perpendicular from the centre bisects a chord, so $AM=AB/2$ and $CN=CD/2$.",
+            "Since $AB=CD$, their halves are equal: $AM=CN$.",
+            "Also, $OA=OC$ because they are radii, and $\\angle OMA=\\angle ONC=90^\\circ$.",
+            "The right triangles $OMA$ and $ONC$ are congruent by RHS, so $OM=ON$ by CPCTC."
+          ],
+          "final_answer": "Equal chords in the same circle are equidistant from the centre."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the radius as the half-chord.",
+          "correction": "The radius is the hypotenuse of the right triangle. The chord is twice the other leg, which is the half-chord."
+        },
+        {
+          "mistake": "Assuming equal chords have different distances from the centre.",
+          "correction": "Equal chords in the same circle are equidistant from the centre; the converse is also true."
+        }
+      ],
+      "quick_summary": [
+        "Equal chords subtend equal minor arcs, and conversely.",
+        "Equal chords are equidistant from the centre.",
+        "A perpendicular from the centre bisects a chord.",
+        "For a chord problem, use $x^2+d^2=r^2$ and double the half-chord."
+      ]
+    },
+    "hs_math_t09_st11": {
+      "id": "hs_math_t09_st11",
+      "title": "Angles subtended by chords",
+      "overview": "Angles at the centre and circumference of a circle are connected when they subtend the same arc. These theorems lead to results about angles in the same segment, angles in a semicircle and cyclic quadrilaterals.",
+      "key_concepts": [
+        {
+          "concept": "Central and inscribed angles",
+          "definition": "Angles subtended by the same arc.",
+          "details": [
+            "The angle at the centre of a circle is twice the angle at the circumference standing on the same arc.",
+            "The theorem applies when both angles subtend the same arc. Check the intercepted arc and whether the vertices are on the same side before using it."
+          ]
+        },
+        {
+          "concept": "Angles in the same segment and in a semicircle",
+          "definition": "Special results for angles at the circumference.",
+          "details": [
+            "Angles subtended by the same chord in the same segment are equal.",
+            "An angle subtended by a diameter at the circumference is a right angle ($90^\\circ$). This is called the angle-in-a-semicircle theorem."
+          ]
+        },
+        {
+          "concept": "Cyclic quadrilaterals",
+          "definition": "Quadrilaterals with all four vertices on one circle.",
+          "details": [
+            "Opposite angles of a cyclic quadrilateral are supplementary; each opposite pair sums to $180^\\circ$.",
+            "An exterior angle of a cyclic quadrilateral equals the interior opposite angle.",
+            "Use the fact that all four vertices lie on the same circle; the result does not apply to an arbitrary quadrilateral."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Central angle theorem",
+          "equation": "$$m\\angle AOB=2m\\angle ACB$$",
+          "variables": {
+            "O": "Centre; angles subtend the same arc AB"
+          }
+        },
+        {
+          "name": "Angle in a semicircle",
+          "equation": "$$m\\angle ACB=90^\\circ\\quad (AB\\text{ is a diameter})$$",
+          "variables": {}
+        },
+        {
+          "name": "Opposite angles of a cyclic quadrilateral",
+          "equation": "$$m\\angle A+m\\angle C=180^\\circ$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s11",
+          "title": "The Semicircle Guarantee",
+          "type": "svg",
+          "caption": "A diameter always creates a 90-degree angle on the edge.",
+          "alt_text": "Visual showing a circle with a diameter cutting straight through the center. From the two ends of the diameter, lines reach up to a point on the top edge, forming a triangle. The top angle has a square 90-degree marker. Text: 'Angle in a Semicircle = 90°'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"150\" cy=\"100\" r=\"80\" fill=\"#e0f2fe\" stroke=\"#0ea5e9\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"100\" r=\"4\" fill=\"#0f172a\"/><line x1=\"70\" y1=\"100\" x2=\"230\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"3\"/><text x=\"150\" y=\"115\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">Diameter</text><path d=\"M 70 100 L 110 31 L 230 100\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><polygon points=\"110,31 110,41 120,41 120,31\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><rect x=\"280\" y=\"70\" width=\"180\" height=\"60\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"370\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Angle in a Semicircle</text><text x=\"370\" y=\"115\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">= 90°</text></svg>"
+        },
+        {
+          "visual_id": "v09_s09",
+          "title": "Central vs Inscribed Angles",
+          "type": "svg",
+          "caption": "The angle at the center is always double the angle at the circumference.",
+          "alt_text": "Visual showing a circle. Two points on the bottom edge form a chord/arc. Lines go from these points to the center O, forming an angle marked '2x'. Lines also go from these points to the top edge forming an angle marked 'x'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"150\" cy=\"100\" r=\"80\" fill=\"#e0f2fe\" stroke=\"#0ea5e9\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"100\" r=\"4\" fill=\"#0f172a\"/><text x=\"135\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">O</text><circle cx=\"90\" cy=\"155\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"210\" cy=\"155\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"150\" cy=\"20\" r=\"4\" fill=\"#ea580c\"/><path d=\"M 90 155 L 150 100 L 210 155\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><path d=\"M 90 155 L 150 20 L 210 155\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"2\"/><path d=\"M 130 118 A 25 25 0 0 0 170 118\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"150\" y=\"135\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">2x</text><path d=\"M 143 35 A 15 15 0 0 0 157 35\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"150\" y=\"50\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">x</text><rect x=\"270\" y=\"60\" width=\"200\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"370\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Central = 2 × Inscribed</text><text x=\"370\" y=\"115\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">(Sharing the same arc)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A central angle and an inscribed angle subtend the same arc. If the central angle is $116^\\circ$, find the inscribed angle.",
+          "solution_steps": [
+            "The angle at the centre is twice the angle at the circumference on the same arc.",
+            "The inscribed angle is $116^\\circ/2=58^\\circ$."
+          ],
+          "final_answer": "$58^\\circ$."
+        },
+        {
+          "problem": "In cyclic quadrilateral $ABCD$, angle $A$ measures $105^\\circ$. Find the opposite angle $C$.",
+          "solution_steps": [
+            "Opposite angles in a cyclic quadrilateral sum to $180^\\circ$.",
+            "$105^\\circ+m\\angle C=180^\\circ$.",
+            "Therefore $m\\angle C=180^\\circ-105^\\circ=75^\\circ$."
+          ],
+          "final_answer": "$75^\\circ$."
+        },
+        {
+          "problem": "$AB$ is a diameter of a circle and $C$ is a point on the circumference. If $\\angle BAC=35^\\circ$, find $\\angle ABC$.",
+          "solution_steps": [
+            "The angle subtended by diameter $AB$ at $C$ is $90^\\circ$.",
+            "The angles of triangle $ABC$ sum to $180^\\circ$.",
+            "So $35^\\circ+90^\\circ+m\\angle ABC=180^\\circ$, giving $m\\angle ABC=55^\\circ$."
+          ],
+          "final_answer": "$55^\\circ$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the central-angle theorem for angles that do not subtend the same arc.",
+          "correction": "Identify the common intercepted arc before applying the factor of 2."
+        },
+        {
+          "mistake": "Applying the same-segment theorem to vertices in opposite segments.",
+          "correction": "Angles in the same segment are equal. Angles in opposite segments subtended by the same chord are supplementary."
+        },
+        {
+          "mistake": "Assuming opposite angles of every quadrilateral sum to 180 degrees.",
+          "correction": "That property applies to cyclic quadrilaterals, where all four vertices lie on one circle."
+        }
+      ],
+      "quick_summary": [
+        "The central angle is twice the inscribed angle subtending the same arc.",
+        "Angles in the same segment are equal.",
+        "An angle in a semicircle is $90^\\circ$.",
+        "Opposite angles of a cyclic quadrilateral sum to $180^\\circ$."
+      ]
+    },
+    "hs_math_t09_st12": {
+      "id": "hs_math_t09_st12",
+      "title": "Tangents and secants",
+      "overview": "Tangents touch a circle at one point, while secants intersect it at two points. Euclidean theorems connect tangent lengths, radius directions, chord angles and products of secant segments.",
+      "key_concepts": [
+        {
+          "concept": "Tangent and radius",
+          "definition": "The right angle at the point of contact.",
+          "details": [
+            "A tangent touches a circle at exactly one point.",
+            "The radius drawn to the point of contact is perpendicular to the tangent.",
+            "A line perpendicular to a radius at its endpoint on the circle is a tangent at that point."
+          ]
+        },
+        {
+          "concept": "Equal tangents from an external point",
+          "definition": "Two tangent segments drawn from one point have equal lengths.",
+          "details": [
+            "If $PA$ and $PB$ are tangents from an external point $P$ to a circle, then $PA=PB$.",
+            "The two right triangles formed with the radii are congruent by RHS, which justifies the equality."
+          ]
+        },
+        {
+          "concept": "Tangent-chord angle (alternate segment theorem)",
+          "definition": "An angle between a tangent and a chord.",
+          "details": [
+            "The angle between a tangent and a chord through the point of contact equals the angle subtended by that chord in the alternate segment of the circle.",
+            "Identify the chord and the opposite segment before equating the angles."
+          ]
+        },
+        {
+          "concept": "Tangent-secant and secant-secant relationships",
+          "definition": "Products of lengths measured from the same external point.",
+          "details": [
+            "For a tangent $PT$ and secant $PAB$ from external point $P$, $PT^2=PA\\times PB$, where $PA$ is the external part and $PB$ is the entire secant.",
+            "For two secants $PAB$ and $PCD$ from the same external point, $PA\\times PB=PC\\times PD$. In each product, multiply the external part by the full secant length."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Tangent-secant theorem",
+          "equation": "$$PT^2=PA\\times PB$$",
+          "variables": {
+            "PT": "Tangent length",
+            "PA": "External secant segment",
+            "PB": "Entire secant length"
+          }
+        },
+        {
+          "name": "Secant-secant theorem",
+          "equation": "$$PA\\times PB=PC\\times PD$$",
+          "variables": {
+            "PA, PC": "External portions of secants",
+            "PB, PD": "Entire secant lengths"
+          }
+        },
+        {
+          "name": "Equal tangents",
+          "equation": "$$PA=PB$$",
+          "variables": {
+            "P": "External point; PA and PB are tangent segments"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s12",
+          "title": "Tangent and Secant Power",
+          "type": "svg",
+          "caption": "The tangent squared equals the outer piece times the whole piece.",
+          "alt_text": "Visual showing a circle. Point P is outside to the left. A line touches the top edge at T (Tangent PT). A line cuts through the circle at A and exits at B (Secant PAB). Formula PT^2 = PA * PB is highlighted.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"300\" cy=\"100\" r=\"80\" fill=\"#e0f2fe\" stroke=\"#0ea5e9\" stroke-width=\"3\"/><circle cx=\"80\" cy=\"150\" r=\"5\" fill=\"#0f172a\"/><text x=\"70\" y=\"170\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">P</text><path d=\"M 80 150 L 260 22\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><circle cx=\"260\" cy=\"30\" r=\"4\" fill=\"#0f172a\"/><text x=\"260\" y=\"20\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">T</text><text x=\"150\" y=\"80\" font-family=\"monospace\" font-size=\"14\" fill=\"#b91c1c\" font-weight=\"bold\">Tangent</text><path d=\"M 80 150 L 375 130\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><circle cx=\"220\" cy=\"140\" r=\"4\" fill=\"#0f172a\"/><text x=\"215\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">A</text><circle cx=\"375\" cy=\"130\" r=\"4\" fill=\"#0f172a\"/><text x=\"385\" y=\"135\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">B</text><text x=\"140\" y=\"160\" font-family=\"monospace\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\">Secant</text><rect x=\"25\" y=\"25\" width=\"180\" height=\"35\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"115\" y=\"48\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">PT² = PA × PB</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A tangent $PT$ and a secant $PAB$ are drawn from external point $P$. The external part $PA=4$ cm and the entire secant $PB=16$ cm. Find $PT$.",
+          "solution_steps": [
+            "Use the tangent-secant theorem: $PT^2=PA\\times PB$.",
+            "$PT^2=4\\times16=64$.",
+            "Take the positive square root because length is positive: $PT=8$ cm."
+          ],
+          "final_answer": "8 cm."
+        },
+        {
+          "problem": "Two tangents from an external point have lengths $3x+2$ cm and $5x-10$ cm. Find $x$ and the tangent length.",
+          "solution_steps": [
+            "Tangents from the same external point are equal: $3x+2=5x-10$.",
+            "Rearrange: $12=2x$, so $x=6$.",
+            "Each tangent has length $3(6)+2=20$ cm."
+          ],
+          "final_answer": "$x=6$; each tangent is 20 cm."
+        },
+        {
+          "problem": "Two secants are drawn from $P$. Their external and total lengths are 3 cm and 12 cm for the first secant, and 4 cm and $x$ cm for the second. Find $x$.",
+          "solution_steps": [
+            "By the secant-secant theorem, external part times whole secant is equal for the two secants.",
+            "$3\\times12=4x$.",
+            "$36=4x$, so $x=9$ cm."
+          ],
+          "final_answer": "9 cm."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the inner part instead of the whole secant length.",
+          "correction": "Multiply the external segment by the full secant length (external plus internal part). Do not multiply by the internal part alone."
+        },
+        {
+          "mistake": "Assuming a tangent is perpendicular to every radius.",
+          "correction": "The tangent is perpendicular only to the radius drawn to its point of contact."
+        },
+        {
+          "mistake": "Using the alternate segment theorem with the wrong angle.",
+          "correction": "The chord must be the same, and the angle at the circumference must lie in the opposite (alternate) segment."
+        }
+      ],
+      "quick_summary": [
+        "A tangent is perpendicular to the radius at the point of contact.",
+        "Tangents from the same external point are equal.",
+        "The angle between a tangent and chord equals the angle in the alternate segment.",
+        "For tangent-secant and secant-secant theorems, multiply external part by whole secant length."
+      ]
+    },
+    "hs_math_t09_st13": {
+      "id": "hs_math_t09_st13",
+      "title": "Geometric constructions",
+      "overview": "Ruler-and-compass constructions produce exact geometric figures without measuring their final angles or lengths directly. Every construction should include clear steps and a reason explaining why the resulting points, lines or angles have the required properties.",
+      "key_concepts": [
+        {
+          "concept": "Perpendicular and angle bisectors",
+          "definition": "Constructing equal distances and equal angles.",
+          "details": [
+            "To construct a **perpendicular bisector** of segment $AB$, set the compass radius to more than half of $AB$. Draw arcs of the same radius from $A$ and $B$ so they intersect above and below the segment. Join the two arc intersections. Each intersection is equidistant from $A$ and $B$, so the joining line is the perpendicular bisector.",
+            "To construct an **angle bisector**, draw an arc centred at the vertex to mark equal-distance points on the two arms. From those two points draw equal-radius arcs that intersect inside the angle. Join the vertex to the arc intersection. The two resulting triangles are congruent, so the angles are equal."
+          ]
+        },
+        {
+          "concept": "Standard angles",
+          "definition": "Constructing 60°, 30°, 90° and 45°.",
+          "details": [
+            "A **60°** angle is constructed by using equal compass radii to form an equilateral triangle.",
+            "A **30°** angle is obtained by bisecting a constructed 60° angle.",
+            "A **90°** angle is constructed by erecting a perpendicular to a line. A **45°** angle is obtained by bisecting a 90° angle."
+          ]
+        },
+        {
+          "concept": "Triangles and parallel lines",
+          "definition": "Constructing from given measurements or angle conditions.",
+          "details": [
+            "For an **SSS triangle**, draw the given base. Draw arcs from its endpoints with radii equal to the other two given sides. Their intersection gives the third vertex; join it to both endpoints.",
+            "For an **SAS triangle**, draw one given side, construct the included angle at one endpoint, mark the second given side on that ray, and join the final endpoints.",
+            "For an **ASA triangle**, draw the given included side, construct the two given base angles at its endpoints, and use the intersection of the rays as the third vertex.",
+            "To draw a line parallel to a given line through an external point, copy a corresponding angle made by a transversal at the given point. The converse of the corresponding-angle theorem justifies the parallel result."
+          ]
+        },
+        {
+          "concept": "Basic tangent construction",
+          "definition": "Constructing a tangent to a circle.",
+          "details": [
+            "For a tangent at a known point $T$ on a circle with centre $O$, construct the line through $T$ perpendicular to radius $OT$. The radius-tangent theorem proves it is a tangent.",
+            "From an external point $P$, join $OP$ and construct its perpendicular bisector to locate midpoint $M$. Draw the circle with centre $M$ and radius $MO$; it meets the original circle at tangent points $T_1$ and $T_2$. Join $P$ to each point. Since $OP$ is a diameter of the auxiliary circle, $\\angle OTP=90^\\circ$, so each line is tangent."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s13",
+          "title": "The Perpendicular Bisector",
+          "type": "svg",
+          "caption": "Intersecting arcs of the exact same radius guarantee the line connecting them cuts the segment perfectly in half.",
+          "alt_text": "Visual showing a horizontal line segment A-B. A large red arc is drawn from A, and a large blue arc is drawn from B, intersecting at points P (top) and Q (bottom). A dashed vertical line connects P and Q, slicing A-B in half with a 90-degree square marker.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"150\" y1=\"125\" x2=\"350\" y2=\"125\" stroke=\"#0f172a\" stroke-width=\"4\"/><circle cx=\"150\" cy=\"125\" r=\"5\" fill=\"#0f172a\"/><text x=\"130\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\">A</text><circle cx=\"350\" cy=\"125\" r=\"5\" fill=\"#0f172a\"/><text x=\"365\" y=\"130\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\">B</text><path d=\"M 220 20 A 130 130 0 0 1 220 230\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 280 20 A 130 130 0 0 0 280 230\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><circle cx=\"250\" cy=\"43\" r=\"4\" fill=\"#1e3a8a\"/><text x=\"250\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">P</text><circle cx=\"250\" cy=\"207\" r=\"4\" fill=\"#1e3a8a\"/><text x=\"250\" y=\"225\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Q</text><line x1=\"250\" y1=\"30\" x2=\"250\" y2=\"220\" stroke=\"#10b981\" stroke-width=\"3\"/><polygon points=\"250,125 250,115 260,115 260,125\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/></svg>"
+        },
+        {
+          "visual_id": "v09_s13b",
+          "title": "Constructing an SSS triangle",
+          "type": "svg",
+          "caption": "The two compass arcs meet at the required third vertex.",
+          "alt_text": "Triangle ABC is constructed with AB 6, AC 4 and BC 5. Arcs centred at A and B with radii 4 and 5 intersect at C.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 280\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"18\" font-weight=\"bold\" fill=\"#0f172a\">SSS construction: sides 6, 4 and 5</text><line x1=\"80\" y1=\"210\" x2=\"260\" y2=\"210\" stroke=\"#0f172a\" stroke-width=\"3\"/><circle cx=\"80\" cy=\"210\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"260\" cy=\"210\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"147.5\" cy=\"111\" r=\"4\" fill=\"#0f172a\"/><path d=\"M80 210 L147.5 111 L260 210 Z\" fill=\"#dbeafe\" fill-opacity=\"0.65\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M80 210 m -120 0 a 120 120 0 1 0 240 0\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"1.5\" stroke-dasharray=\"5,5\" opacity=\"0.8\"/><circle cx=\"80\" cy=\"210\" r=\"120\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"1.5\" stroke-dasharray=\"5,5\" opacity=\"0.6\"/><circle cx=\"260\" cy=\"210\" r=\"150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"1.5\" stroke-dasharray=\"5,5\" opacity=\"0.6\"/><text x=\"70\" y=\"232\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\">A</text><text x=\"268\" y=\"232\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\">B</text><text x=\"140\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\">C</text><text x=\"167\" y=\"228\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\">AB = 6</text><text x=\"95\" y=\"148\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#c2410c\">AC = 4</text><text x=\"214\" y=\"148\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#15803d\">BC = 5</text><text x=\"260\" y=\"263\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#334155\">Arcs with radii 4 and 5 meet at C.</text></svg>"
+        },
+        {
+          "visual_id": "v09_s13c",
+          "title": "Constructing a parallel through a point",
+          "type": "svg",
+          "caption": "Construct two perpendiculars to obtain parallel lines.",
+          "alt_text": "A point P above line l, a constructed perpendicular through P, and line m through P perpendicular to that same line. Lines l and m are parallel.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 240\"><rect width=\"520\" height=\"240\" rx=\"12\" fill=\"#f8fafc\"/><line x1=\"65\" y1=\"175\" x2=\"455\" y2=\"175\" stroke=\"#2563eb\" stroke-width=\"4\"/><text x=\"460\" y=\"180\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#1d4ed8\">l</text><circle cx=\"160\" cy=\"65\" r=\"5\" fill=\"#0f172a\"/><text x=\"145\" y=\"50\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0f172a\">P</text><line x1=\"160\" y1=\"65\" x2=\"160\" y2=\"175\" stroke=\"#ea580c\" stroke-width=\"3\" stroke-dasharray=\"6,5\"/><line x1=\"65\" y1=\"65\" x2=\"455\" y2=\"65\" stroke=\"#16a34a\" stroke-width=\"4\"/><path d=\"M160 65 h18 v18\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M160 175 h18 v-18\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"460\" y=\"70\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#15803d\">m</text><text x=\"260\" y=\"215\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Both lines are perpendicular to the same constructed line.</text></svg>"
+        },
+        {
+          "visual_id": "v09_s13d",
+          "title": "Tangent at a point on a circle",
+          "type": "svg",
+          "caption": "A tangent is perpendicular to the radius at the point of contact.",
+          "alt_text": "A circle with centre O, point T on its circumference, radius OT and tangent line through T perpendicular to OT.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 240\"><rect width=\"520\" height=\"240\" rx=\"12\" fill=\"#f8fafc\"/><circle cx=\"190\" cy=\"120\" r=\"76\" fill=\"#dbeafe\" fill-opacity=\"0.5\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"190\" cy=\"120\" r=\"4\" fill=\"#0f172a\"/><text x=\"174\" y=\"140\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0f172a\">O</text><circle cx=\"266\" cy=\"120\" r=\"4\" fill=\"#ea580c\"/><line x1=\"190\" y1=\"120\" x2=\"266\" y2=\"120\" stroke=\"#16a34a\" stroke-width=\"3\"/><line x1=\"266\" y1=\"35\" x2=\"266\" y2=\"205\" stroke=\"#ea580c\" stroke-width=\"3\"/><path d=\"M266 120 h-16 v-16\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"275\" y=\"115\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#c2410c\">T</text><text x=\"205\" y=\"108\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#15803d\">OT</text><text x=\"286\" y=\"48\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#c2410c\">Tangent</text><text x=\"315\" y=\"130\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">OT is perpendicular to tangent</text><text x=\"260\" y=\"225\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#334155\">Construct a perpendicular to the radius at the point of contact.</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Describe how to construct a $45^\\circ$ angle using only a compass and straightedge.",
+          "solution_steps": [
+            "Construct a perpendicular to the given line at the chosen vertex to form a $90^\\circ$ angle.",
+            "Use the angle-bisector construction on the $90^\\circ$ angle: draw an arc from the vertex to meet both arms, then draw equal-radius arcs from those two intersection points.",
+            "Join the vertex to the intersection of the arcs. The two angles are equal, so each measures $90^\\circ/2=45^\\circ$."
+          ],
+          "final_answer": "Construct a right angle and bisect it."
+        },
+        {
+          "problem": "Construct a triangle with side lengths 6 cm, 4 cm and 5 cm. State why the construction is valid.",
+          "solution_steps": [
+            "Draw a base segment $AB=6$ cm.",
+            "With centre $A$, draw an arc of radius 4 cm. With centre $B$, draw an arc of radius 5 cm.",
+            "Mark an intersection $C$ of the arcs and join $AC$ and $BC$.",
+            "By construction, $AC=4$ cm and $BC=5$ cm while $AB=6$ cm, so the triangle has the required three side lengths."
+          ],
+          "final_answer": "$\\triangle ABC$ with sides 6 cm, 4 cm and 5 cm, constructed by SSS."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Changing the compass width while constructing equal arcs.",
+          "correction": "Keep the same compass radius whenever the construction requires equal distances."
+        },
+        {
+          "mistake": "Joining the wrong arc intersection when constructing a triangle.",
+          "correction": "Choose one of the intersections of the two side-length arcs; either gives a valid reflected triangle on the opposite side of the base."
+        },
+        {
+          "mistake": "Calling a line parallel because it looks parallel.",
+          "correction": "Justify parallelism by the copied corresponding angle and the converse angle theorem."
+        }
+      ],
+      "quick_summary": [
+        "Use equal-radius arcs to construct perpendicular and angle bisectors.",
+        "Construct 60° using an equilateral triangle; bisect to obtain 30° or 45°.",
+        "Construct triangles from SSS, SAS or ASA measurements.",
+        "Copy a corresponding angle to construct a parallel line.",
+        "A tangent at a circle point is perpendicular to the radius there."
+      ]
+    },
+    "hs_math_t09_st14": {
+      "id": "hs_math_t09_st14",
+      "title": "Pythagorean theorem and applications",
+      "overview": "The Pythagorean theorem relates the side lengths of a right-angled triangle. It can be used to find unknown sides, test whether a triangle is right-angled, recognise integer triples and solve practical problems involving right-angle geometry.",
+      "key_concepts": [
+        {
+          "concept": "The theorem and its converse",
+          "definition": "The relationship between the legs and hypotenuse.",
+          "details": [
+            "In a right-angled triangle, the square of the hypotenuse $c$ equals the sum of the squares of the two perpendicular legs $a$ and $b$.",
+            "The **converse** states that if the square of the longest side equals the sum of the squares of the other two sides, the angle opposite the longest side is a right angle."
+          ]
+        },
+        {
+          "concept": "An accessible proof using similar triangles",
+          "definition": "Why the theorem is true.",
+          "details": [
+            "In right triangle $ABC$, let $\\angle C=90^\\circ$ and draw altitude $CD$ to hypotenuse $AB$. The two smaller triangles are similar to the original triangle.",
+            "From $\\triangle ACD\\sim\\triangle ABC$, corresponding sides give $AC^2=AB\\times AD$.",
+            "From $\\triangle BCD\\sim\\triangle ABC$, corresponding sides give $BC^2=AB\\times BD$.",
+            "Add the equations: $AC^2+BC^2=AB(AD+BD)=AB\\times AB=AB^2$. Therefore $a^2+b^2=c^2$."
+          ]
+        },
+        {
+          "concept": "Unknown sides and Pythagorean triples",
+          "definition": "Using the theorem in calculations.",
+          "details": [
+            "To find the hypotenuse, use $c=\\sqrt{a^2+b^2}$. To find a leg, rearrange: $a=\\sqrt{c^2-b^2}$.",
+            "A **Pythagorean triple** is a set of positive integers satisfying the theorem, such as 3–4–5, 5–12–13 and 8–15–17. Any positive integer multiple of a triple is also a triple."
+          ]
+        },
+        {
+          "concept": "Practical applications",
+          "definition": "Diagonals and shortest right-angle distances.",
+          "details": [
+            "A ladder leaning against a vertical wall, a diagonal across a rectangular surface and the diagonal through a cuboid can all be modelled using right triangles.",
+            "For a cuboid with perpendicular dimensions $l$, $w$ and $h$, applying Pythagoras twice gives the space diagonal $d=\\sqrt{l^2+w^2+h^2}$.",
+            "Check that the situation really forms a right angle before applying the theorem."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Pythagorean theorem",
+          "equation": "$$a^2+b^2=c^2$$",
+          "variables": {
+            "a, b": "Perpendicular legs",
+            "c": "Hypotenuse, opposite the right angle"
+          }
+        },
+        {
+          "name": "Hypotenuse",
+          "equation": "$$c=\\sqrt{a^2+b^2}$$",
+          "variables": {}
+        },
+        {
+          "name": "Unknown leg",
+          "equation": "$$a=\\sqrt{c^2-b^2}$$",
+          "variables": {}
+        },
+        {
+          "name": "Cuboid space diagonal",
+          "equation": "$$d=\\sqrt{l^2+w^2+h^2}$$",
+          "variables": {
+            "l": "Length",
+            "w": "Width",
+            "h": "Height"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s14",
+          "title": "Squares on the sides of a 3–4–5 triangle",
+          "type": "svg",
+          "caption": "The square areas on the legs add to the square area on the hypotenuse.",
+          "alt_text": "A right triangle with legs 3 and 4 and hypotenuse 5, with external squares of areas 9, 16 and 25 and equation 9 + 16 = 25.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 320\"><rect width=\"520\" height=\"320\" rx=\"12\" fill=\"#f8fafc\"/><text x=\"260\" y=\"24\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Squares on a 3–4–5 right triangle</text><polygon points=\"100,210 100,130 160,210\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"3\"/><path d=\"M100 194 h16 v16\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"100,130 20,130 20,210 100,210\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"2\"/><polygon points=\"100,210 160,210 160,270 100,270\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/><polygon points=\"100,130 160,210 240,150 180,70\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"55\" y=\"175\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#7f1d1d\">4² = 16</text><text x=\"130\" y=\"245\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#78350f\">3² = 9</text><text x=\"183\" y=\"125\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#14532d\" transform=\"rotate(-37 183 125)\">5² = 25</text><text x=\"310\" y=\"105\" font-family=\"sans-serif\" font-size=\"18\" font-weight=\"bold\" fill=\"#0f172a\">16 + 9 = 25</text><text x=\"310\" y=\"140\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#334155\">a² + b² = c²</text><text x=\"310\" y=\"175\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Area of square on each leg</text><text x=\"310\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">adds to the area on the</text><text x=\"310\" y=\"215\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">hypotenuse.</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A 13 m ladder leans against a wall. Its base is 5 m from the wall. How high up the wall does it reach?",
+          "solution_steps": [
+            "The ladder is the hypotenuse (13 m); the ground distance is one leg (5 m).",
+            "Let the wall height be $h$. Then $h^2+5^2=13^2$.",
+            "$h^2=169-25=144$, so $h=12$ m. Use the positive value because it is a length."
+          ],
+          "final_answer": "12 m."
+        },
+        {
+          "problem": "A rectangular box is 3 cm wide, 4 cm long and 12 cm high. Find its space diagonal.",
+          "solution_steps": [
+            "Use $d=\\sqrt{l^2+w^2+h^2}$.",
+            "$d=\\sqrt{4^2+3^2+12^2}=\\sqrt{16+9+144}$.",
+            "$d=\\sqrt{169}=13$ cm."
+          ],
+          "final_answer": "13 cm."
+        },
+        {
+          "problem": "A triangle has side lengths 7 cm, 24 cm and 25 cm. Show that it is right-angled.",
+          "solution_steps": [
+            "The longest side is 25 cm.",
+            "$7^2+24^2=49+576=625=25^2$.",
+            "By the converse of the Pythagorean theorem, the angle opposite the 25 cm side is $90^\\circ$."
+          ],
+          "final_answer": "The triangle is right-angled."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding the squares when finding a leg.",
+          "correction": "If the hypotenuse and one leg are known, subtract the leg square from the hypotenuse square before taking the square root."
+        },
+        {
+          "mistake": "Applying the theorem to any triangle.",
+          "correction": "The Pythagorean theorem applies only to right-angled triangles."
+        },
+        {
+          "mistake": "Choosing a shorter side as the hypotenuse.",
+          "correction": "The hypotenuse is always opposite the right angle and is the longest side."
+        }
+      ],
+      "quick_summary": [
+        "In a right triangle, $a^2+b^2=c^2$.",
+        "Use the positive square root for a side length.",
+        "The converse tests whether a triangle is right-angled.",
+        "Common triples include 3–4–5 and 5–12–13."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Evaluate squares, sums and square roots after setting up a Pythagorean calculation.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t09_st15": {
+      "id": "hs_math_t09_st15",
+      "title": "Geometric proof and reasoning",
+      "overview": "A Euclidean proof is a logically connected argument in which every statement follows from the given information, definitions, axioms or previously established theorems. Proof-writing should be used throughout geometry; this lesson consolidates the structure and reasoning methods.",
+      "key_concepts": [
+        {
+          "concept": "Structure of a proof",
+          "definition": "Statements linked to reasons.",
+          "details": [
+            "State the **Given** information and the **To Prove** statement clearly.",
+            "In a two-column proof, each row contains a mathematical **statement** and a valid **reason**. Common reasons include definitions, given facts, angle theorems, congruence criteria and CPCTC.",
+            "Keep vertex correspondence clear and do not use a fact that has not yet been established."
+          ]
+        },
+        {
+          "concept": "Axioms, definitions and theorems",
+          "definition": "Different foundations for mathematical reasoning.",
+          "details": [
+            "An **axiom** or **postulate** is accepted without proof within the chosen system.",
+            "A **definition** assigns a precise meaning to a mathematical term.",
+            "A **theorem** is a statement established by proof from axioms, definitions and previously proved results. A converse reverses the implication and must be justified separately."
+          ]
+        },
+        {
+          "concept": "Direct proof and contradiction",
+          "definition": "Two ways to organise a valid argument.",
+          "details": [
+            "A **direct proof** starts from the givens and uses valid deductions to reach the statement to be proved.",
+            "A **proof by contradiction** assumes the negation of the required statement and derives a contradiction with an accepted fact or theorem. The original statement must then be true.",
+            "A diagram can help identify relationships, but visual appearance alone is never a valid reason. Use only given facts, markings and proved results."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s15",
+          "title": "Two-column isosceles-triangle proof",
+          "type": "svg",
+          "caption": "Each statement is paired with a reason: SAS establishes congruence, then CPCTC gives equal base angles.",
+          "alt_text": "A two-column proof: AB equals AC by the given; angle BAD equals DAC because AD bisects angle BAC; AD equals itself as a common side; triangles ABD and ACD are congruent by SAS; base angles ABC and ACB are equal by CPCTC.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 300\"><rect width=\"540\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><rect x=\"25\" y=\"20\" width=\"490\" height=\"42\" rx=\"6\" fill=\"#1e3a8a\"/><text x=\"270\" y=\"47\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"18\" font-weight=\"bold\" fill=\"#ffffff\">Two-column proof: isosceles triangle</text><rect x=\"25\" y=\"62\" width=\"245\" height=\"34\" fill=\"#dbeafe\"/><rect x=\"270\" y=\"62\" width=\"245\" height=\"34\" fill=\"#dcfce7\"/><text x=\"147\" y=\"84\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\">Statement</text><text x=\"392\" y=\"84\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#14532d\">Reason</text><g font-family=\"sans-serif\" font-size=\"13\" fill=\"#0f172a\"><rect x=\"25\" y=\"96\" width=\"490\" height=\"34\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"40\" y=\"118\">1. AB = AC</text><text x=\"285\" y=\"118\">1. Given</text><rect x=\"25\" y=\"130\" width=\"490\" height=\"34\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"40\" y=\"152\">2. ∠BAD = ∠DAC</text><text x=\"285\" y=\"152\">2. AD bisects ∠BAC</text><rect x=\"25\" y=\"164\" width=\"490\" height=\"34\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"40\" y=\"186\">3. AD = AD</text><text x=\"285\" y=\"186\">3. Common side</text><rect x=\"25\" y=\"198\" width=\"490\" height=\"34\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"40\" y=\"220\">4. △ABD ≅ △ACD</text><text x=\"285\" y=\"220\">4. SAS</text><rect x=\"25\" y=\"232\" width=\"490\" height=\"34\" fill=\"#dcfce7\" stroke=\"#cbd5e1\"/><text x=\"40\" y=\"254\" font-weight=\"bold\">5. ∠ABC = ∠ACB</text><text x=\"285\" y=\"254\" font-weight=\"bold\">5. CPCTC</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $AB=AC$ in triangle $ABC$, prove that $\\angle ABC=\\angle ACB$.",
+          "solution_steps": [
+            "Draw the angle bisector $AD$ of $\\angle BAC$, meeting $BC$ at $D$.",
+            "In triangles $ABD$ and $ACD$: $AB=AC$ (given); $\\angle BAD=\\angle DAC$ (construction); and $AD=AD$ (common side).",
+            "Therefore $\\triangle ABD\\cong\\triangle ACD$ by SAS.",
+            "By CPCTC, $\\angle ABD=\\angle ACD$. Since $D$ lies on $BC$, these are $\\angle ABC$ and $\\angle ACB$."
+          ],
+          "final_answer": "$\\angle ABC=\\angle ACB$."
+        },
+        {
+          "problem": "Prove by contradiction that a triangle cannot have two right angles.",
+          "solution_steps": [
+            "Assume, for contradiction, that two interior angles of a triangle are each $90^\\circ$.",
+            "Their sum is already $180^\\circ$.",
+            "But the three interior angles of a triangle sum to $180^\\circ$, so the third angle would have to be $0^\\circ$.",
+            "Every interior angle of a non-degenerate triangle is positive. This is a contradiction."
+          ],
+          "final_answer": "A triangle cannot have two right angles."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the appearance of a diagram as a reason.",
+          "correction": "Use only information stated in the givens, marked in the diagram or established by a theorem."
+        },
+        {
+          "mistake": "Writing a statement without a reason.",
+          "correction": "Every line in a two-column proof must be justified by a given fact, definition, axiom, postulate or theorem."
+        },
+        {
+          "mistake": "Assuming a converse is automatically true.",
+          "correction": "A converse reverses the hypothesis and conclusion. Use it only when that converse has been established as a valid theorem."
+        }
+      ],
+      "quick_summary": [
+        "A proof is a chain of statements, each with a valid reason.",
+        "Use definitions, axioms, givens and established theorems.",
+        "Prove triangle congruence before using CPCTC.",
+        "In contradiction, assume the opposite and derive an impossibility."
+      ]
+    }
+  }
+}

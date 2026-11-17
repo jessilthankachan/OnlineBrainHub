@@ -1,0 +1,1750 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t10",
+  "topicTitle": "Trigonometry",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t10_st01": {
+      "id": "hs_math_t10_st01",
+      "title": "Angles in degrees and radians",
+      "overview": "Just like distance can be measured in miles or kilometers, angles can be measured in degrees or radians. While degrees are familiar from everyday life, radians are the true mathematical language of circles.",
+      "key_concepts": [
+        {
+          "concept": "The Degree System",
+          "definition": "The 360 slice.",
+          "details": [
+            "A full circle is divided into $360^\\circ$. A straight line is $180^\\circ$. A right angle is $90^\\circ$.",
+            "For extreme precision, 1 degree is split into 60 'minutes', and 1 minute is split into 60 'seconds' (the Sexagesimal system)."
+          ]
+        },
+        {
+          "concept": "The Radian System",
+          "definition": "The radius wrap.",
+          "details": [
+            "Imagine taking the radius of a circle, bending it like a piece of string, and laying it along the curved edge of the circle. The angle created by that slice is exactly **1 Radian**.",
+            "Because the full circumference is $2\\pi r$, it takes exactly $2\\pi$ radians (about $6.28$) to wrap around a full circle."
+          ]
+        },
+        {
+          "concept": "The Conversion Bridge",
+          "definition": "Translating the units.",
+          "details": [
+            "Since $360^\\circ = 2\\pi$ radians, we can simplify this to the golden rule: **$180^\\circ = \\pi$ radians**.",
+            "To convert Degrees to Radians: Multiply by $\\frac{\\pi}{180^\\circ}$.",
+            "To convert Radians to Degrees: Multiply by $\\frac{180^\\circ}{\\pi}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Radians to Degrees",
+          "equation": "$$ \\text{Degrees} = \\text{Radians} \\times \\frac{180^\\circ}{\\pi} $$",
+          "variables": {}
+        },
+        {
+          "name": "Degrees to Radians",
+          "equation": "$$ \\text{Radians} = \\text{Degrees} \\times \\frac{\\pi}{180^\\circ} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st01_01",
+          "title": "Defining one radian",
+          "type": "svg",
+          "caption": "One radian is the central angle that subtends an arc whose length equals the radius.",
+          "alt_text": "A circle centred at O has two radii of equal length r enclosing an angle of 1 radian. The curved arc between their endpoints is also labelled r.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 240\"><rect width=\"600\" height=\"240\" rx=\"12\" fill=\"#f8fafc\"/><circle cx=\"155\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M155 145 L237 145 A82 82 0 0 0 199.4 75.8 Z\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"155\" y1=\"145\" x2=\"237\" y2=\"145\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><line x1=\"155\" y1=\"145\" x2=\"199.4\" y2=\"76.1\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><path d=\"M200 145 A45 45 0 0 0 179.4 107.2\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"210\" y=\"126\" font-size=\"18\" fill=\"#c2410c\" font-weight=\"bold\">1 rad</text><text x=\"190\" y=\"165\" font-size=\"15\" fill=\"#1d4ed8\" font-weight=\"bold\">r</text><text x=\"164\" y=\"95\" font-size=\"15\" fill=\"#1d4ed8\" font-weight=\"bold\">r</text><text x=\"140\" y=\"165\" font-size=\"15\" fill=\"#0f172a\" font-weight=\"bold\">O</text><path d=\"M245 145 Q285 145 315 145\" stroke=\"#64748b\" stroke-width=\"2\" fill=\"none\"/><rect x=\"330\" y=\"70\" width=\"235\" height=\"100\" rx=\"10\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><text x=\"447\" y=\"105\" font-size=\"17\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Arc length = radius</text><text x=\"447\" y=\"137\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1d4ed8\">s = r, so θ = 1 rad</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Convert $135^\\circ$ into radians.",
+          "solution_steps": [
+            "Step 1: Set up the multiplication: $135 \\times \\frac{\\pi}{180}$.",
+            "Step 2: Combine into a single fraction: $\\frac{135\\pi}{180}$.",
+            "Step 3: Simplify the fraction. Both divide by 45.",
+            "Step 4: $\\frac{135 \\div 45}{180 \\div 45} = \\frac{3}{4}$."
+          ],
+          "final_answer": "$\\frac{3\\pi}{4}$ radians"
+        },
+        {
+          "problem": "Convert $\\frac{5\\pi}{6}$ radians into degrees.",
+          "solution_steps": [
+            "Step 1: Set up the multiplication: $\\frac{5\\pi}{6} \\times \\frac{180}{\\pi}$.",
+            "Step 2: Cancel out the $\\pi$ from the top and bottom: $\\frac{5 \\times 180}{6}$.",
+            "Step 3: Divide $180$ by $6$ first to keep numbers small: $180 / 6 = 30$.",
+            "Step 4: Multiply what is left: $5 \\times 30 = 150$."
+          ],
+          "final_answer": "$150^\\circ$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Flipping the conversion fraction.",
+          "correction": "A simple way to remember: If you are converting TO degrees, the $180^\\circ$ must be on TOP. If you are converting TO radians, the $\\pi$ must be on TOP (so it can cancel out the degree symbol)."
+        }
+      ],
+      "quick_summary": [
+        "$360^\\circ = 2\\pi$ radians. Therefore, $180^\\circ = \\pi$ radians.",
+        "To convert to Radians, multiply by $\\pi/180$.",
+        "To convert to Degrees, multiply by $180/\\pi$."
+      ]
+    },
+    "hs_math_t10_st02": {
+      "id": "hs_math_t10_st02",
+      "title": "Right-triangle trigonometric ratios",
+      "overview": "If you take any right-angled triangle and double its size, the angles don't change. Because the angles don't change, the *ratio* (the division) between any two sides remains perfectly identical, no matter how massive the triangle gets. This is the foundation of Trigonometry.",
+      "key_concepts": [
+        {
+          "concept": "Naming the Sides",
+          "definition": "It depends on where you stand.",
+          "details": [
+            "**Hypotenuse:** Always the longest side, directly opposite the $90^\\circ$ corner. It never changes.",
+            "**Opposite:** The side all the way across the triangle from the angle you are currently looking at (the Reference Angle).",
+            "**Adjacent:** The side physically touching your Reference Angle (that isn't the Hypotenuse)."
+          ]
+        },
+        {
+          "concept": "The Golden Ratios",
+          "definition": "The three combinations.",
+          "details": [
+            "Because a triangle has 3 sides, there are 3 primary ways to divide them:",
+            "Ratio 1: Opposite / Hypotenuse",
+            "Ratio 2: Adjacent / Hypotenuse",
+            "Ratio 3: Opposite / Adjacent"
+          ]
+        },
+        {
+          "concept": "The Power of Similarity",
+          "definition": "Scaling up.",
+          "details": [
+            "If you have a right triangle with an angle of $30^\\circ$, its Opposite divided by its Hypotenuse will ALWAYS equal $0.5$. It doesn't matter if the Opposite side is 5cm or 5,000 miles long, the Hypotenuse will always be exactly double its length."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st02_01",
+          "title": "Labeling the Triangle",
+          "type": "svg",
+          "caption": "The 'Opposite' and 'Adjacent' sides swap depending on which angle you choose as your reference.",
+          "alt_text": "Visual showing a right triangle. The bottom right angle is marked 90 degrees. The bottom left angle is marked Theta. The longest slanted side is labeled Hypotenuse. The vertical side across from Theta is labeled Opposite. The horizontal side touching Theta is labeled Adjacent.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><polygon points=\"100,160 350,160 350,40\" fill=\"#e0f2fe\" stroke=\"#0ea5e9\" stroke-width=\"3\"/><polygon points=\"350,160 340,160 340,150 350,150\" fill=\"none\" stroke=\"#0ea5e9\" stroke-width=\"2\"/><path d=\"M 140 160 A 40 40 0 0 0 135 142\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"150\" y=\"150\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#1e3a8a\" font-weight=\"bold\">θ</text><text x=\"190\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\" transform=\"rotate(-25 190 90)\">Hypotenuse</text><text x=\"360\" y=\"100\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#ea580c\" font-weight=\"bold\">Opposite</text><text x=\"200\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#16a34a\" font-weight=\"bold\">Adjacent</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A right triangle has sides of $6$cm, $8$cm, and a hypotenuse of $10$cm. Relative to the angle opposite the $6$cm side, what is the ratio of the Adjacent side to the Hypotenuse?",
+          "solution_steps": [
+            "Step 1: Identify the sides based on the reference angle. The angle is opposite the $6$cm side, so Opposite = $6$.",
+            "Step 2: The Hypotenuse is always the longest side, so Hypotenuse = $10$.",
+            "Step 3: That leaves the $8$cm side as the Adjacent side.",
+            "Step 4: The requested ratio is Adjacent / Hypotenuse.",
+            "Step 5: Substitute the values: $8 / 10 = 4 / 5$."
+          ],
+          "final_answer": "4/5"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Locking the sides in place.",
+          "correction": "Students often assume the 'bottom' horizontal line is always the Adjacent side. If the reference angle is at the top of the triangle, the bottom line suddenly becomes the Opposite side. Always draw an arrow directly across from your chosen angle to find the true Opposite."
+        }
+      ],
+      "quick_summary": [
+        "The Hypotenuse never moves.",
+        "The Opposite side is across the field from your angle.",
+        "The Adjacent side is right next to you.",
+        "The specific ratios between these sides are locked for any given angle, no matter how big the triangle gets."
+      ]
+    },
+    "hs_math_t10_st03": {
+      "id": "hs_math_t10_st03",
+      "title": "Sine, cosine and tangent",
+      "overview": "Instead of saying 'The ratio of the opposite side divided by the hypotenuse', mathematicians gave these three fractions names: Sine, Cosine, and Tangent. These are the three core functions that run the entirety of trigonometry.",
+      "key_concepts": [
+        {
+          "concept": "The three right-triangle ratios",
+          "definition": "SOH–CAH–TOA",
+          "details": [
+            "For an acute reference angle θ in a right triangle, **sine** is opposite ÷ hypotenuse: $\\sin\\theta=\\frac{O}{H}$.",
+            "**Cosine** is adjacent ÷ hypotenuse: $\\cos\\theta=\\frac{A}{H}$.",
+            "**Tangent** is opposite ÷ adjacent: $\\tan\\theta=\\frac{O}{A}$.",
+            "The hypotenuse is always opposite the right angle. Opposite and adjacent are identified relative to the chosen acute angle."
+          ]
+        },
+        {
+          "concept": "Choosing a ratio",
+          "definition": "Match the known and unknown sides",
+          "details": [
+            "Use sine when the opposite side and hypotenuse are involved, cosine when the adjacent side and hypotenuse are involved, and tangent when the opposite and adjacent sides are involved.",
+            "Write the ratio first, then substitute the side lengths. Keep units consistent."
+          ]
+        },
+        {
+          "concept": "A relationship between the ratios",
+          "definition": "Tangent as sine divided by cosine",
+          "details": [
+            "Dividing $\\sin\\theta=O/H$ by $\\cos\\theta=A/H$ cancels the common hypotenuse. Therefore, $\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}$ whenever $\\cos\\theta\\ne0$.",
+            "For complementary acute angles in a right triangle, the opposite and adjacent sides exchange roles, so $\\sin\\theta=\\cos(90^\\circ-\\theta)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sine",
+          "equation": "$$\\sin\\theta=\\frac{O}{H}$$",
+          "variables": {
+            "O": "Opposite side",
+            "H": "Hypotenuse"
+          }
+        },
+        {
+          "name": "Cosine",
+          "equation": "$$\\cos\\theta=\\frac{A}{H}$$",
+          "variables": {
+            "A": "Adjacent side",
+            "H": "Hypotenuse"
+          }
+        },
+        {
+          "name": "Tangent",
+          "equation": "$$\\tan\\theta=\\frac{O}{A}$$",
+          "variables": {
+            "O": "Opposite side",
+            "A": "Adjacent side"
+          }
+        },
+        {
+          "name": "Tangent relationship",
+          "equation": "$$\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st03_01",
+          "title": "SOH CAH TOA",
+          "type": "svg",
+          "caption": "Memorize this acronym to instantly recall the three formulas.",
+          "alt_text": "Visual showing 3 blocks. Block 1: Large 'S' with fraction O/H. Text 'Sin = Opp / Hyp'. Block 2: Large 'C' with fraction A/H. Text 'Cos = Adj / Hyp'. Block 3: Large 'T' with fraction O/A. Text 'Tan = Opp / Adj'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(30, 40)\"><rect width=\"120\" height=\"120\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"10\"/><text x=\"30\" y=\"75\" font-family=\"sans-serif\" font-size=\"48\" font-weight=\"bold\" fill=\"#1e3a8a\">S</text><text x=\"80\" y=\"50\" font-family=\"monospace\" font-size=\"24\" fill=\"#1d4ed8\" font-weight=\"bold\">O</text><line x1=\"70\" y1=\"65\" x2=\"105\" y2=\"65\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><text x=\"80\" y=\"95\" font-family=\"monospace\" font-size=\"24\" fill=\"#1d4ed8\" font-weight=\"bold\">H</text></g><g transform=\"translate(190, 40)\"><rect width=\"120\" height=\"120\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"30\" y=\"75\" font-family=\"sans-serif\" font-size=\"48\" font-weight=\"bold\" fill=\"#14532d\">C</text><text x=\"80\" y=\"50\" font-family=\"monospace\" font-size=\"24\" fill=\"#15803d\" font-weight=\"bold\">A</text><line x1=\"70\" y1=\"65\" x2=\"105\" y2=\"65\" stroke=\"#15803d\" stroke-width=\"3\"/><text x=\"80\" y=\"95\" font-family=\"monospace\" font-size=\"24\" fill=\"#15803d\" font-weight=\"bold\">H</text></g><g transform=\"translate(350, 40)\"><rect width=\"120\" height=\"120\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"10\"/><text x=\"30\" y=\"75\" font-family=\"sans-serif\" font-size=\"48\" font-weight=\"bold\" fill=\"#9a3412\">T</text><text x=\"80\" y=\"50\" font-family=\"monospace\" font-size=\"24\" fill=\"#c2410c\" font-weight=\"bold\">O</text><line x1=\"70\" y1=\"65\" x2=\"105\" y2=\"65\" stroke=\"#c2410c\" stroke-width=\"3\"/><text x=\"80\" y=\"95\" font-family=\"monospace\" font-size=\"24\" fill=\"#c2410c\" font-weight=\"bold\">A</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A right triangle has an angle $\\theta$. The side adjacent to $\\theta$ is $5$, and the hypotenuse is $13$. Find $\\tan \\theta$.",
+          "solution_steps": [
+            "Step 1: Tangent is Opposite / Adjacent. We have Adjacent ($5$), but we are missing the Opposite side.",
+            "Step 2: Use Pythagoras to find the missing leg: $a^2 + b^2 = c^2 \\implies \\text{Opp}^2 + 5^2 = 13^2$.",
+            "Step 3: $\\text{Opp}^2 + 25 = 169 \\implies \\text{Opp}^2 = 144 \\implies \\text{Opp} = 12$.",
+            "Step 4: Now assemble the tangent fraction: $\\tan \\theta = \\text{Opposite} / \\text{Adjacent} = 12 / 5$."
+          ],
+          "final_answer": "12/5"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating in Radians instead of Degrees.",
+          "correction": "If a problem asks for $\\sin(45^\\circ)$ and your calculator says $0.8509$, your calculator is stuck in Radian mode. It must be in Degree (DEG) mode to output the correct answer ($0.7071$)."
+        }
+      ],
+      "quick_summary": [
+        "SOH CAH TOA is the most important acronym in trigonometry.",
+        "Sine and Cosine will always be a number less than $1$ (because the hypotenuse on the bottom is always the longest side).",
+        "Tangent can be any number, because the opposite leg can be longer than the adjacent leg."
+      ],
+      "utilities": [
+        {
+          "title": "Trigonometric and Hyperbolic Functions Calculator",
+          "description": "Evaluate a trigonometric ratio or check a calculator value after setting the correct angle mode.",
+          "url": "https://onlinetoolpad.com/others/Trigonometric_and_Hyperbolic_Functions_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t10_st04": {
+      "id": "hs_math_t10_st04",
+      "title": "Reciprocal trigonometric ratios",
+      "overview": "If you take the three primary trig fractions (Sine, Cosine, Tangent) and flip them completely upside down, you get the three Reciprocal Ratios. While less commonly used in basic triangle math, they are vital for advanced algebraic identities.",
+      "key_concepts": [
+        {
+          "concept": "The three reciprocal ratios",
+          "definition": "Flip each primary ratio",
+          "details": [
+            "**Cosecant:** $\\csc\\theta=\\frac{H}{O}=\\frac{1}{\\sin\\theta}$.",
+            "**Secant:** $\\sec\\theta=\\frac{H}{A}=\\frac{1}{\\cos\\theta}$.",
+            "**Cotangent:** $\\cot\\theta=\\frac{A}{O}=\\frac{1}{\\tan\\theta}$.",
+            "Cosecant is paired with sine; secant with cosine; cotangent with tangent."
+          ]
+        },
+        {
+          "concept": "When a reciprocal ratio is undefined",
+          "definition": "A zero denominator cannot be used",
+          "details": [
+            "A reciprocal ratio is undefined whenever its denominator is zero. For example, $\\csc\\theta$ is undefined when $\\sin\\theta=0$, and $\\sec\\theta$ is undefined when $\\cos\\theta=0$.",
+            "For an acute angle in a right triangle, all three primary ratios and their reciprocals are defined."
+          ]
+        },
+        {
+          "concept": "Using Pythagoras to find a missing side",
+          "definition": "Complete the triangle before taking a reciprocal",
+          "details": [
+            "When one side ratio is known, use $a^2+b^2=c^2$ to find a missing side before evaluating another ratio. State whether the angle is acute when choosing the positive square root."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Cosecant",
+          "equation": "$$\\csc\\theta=\\frac{H}{O}=\\frac{1}{\\sin\\theta}$$",
+          "variables": {}
+        },
+        {
+          "name": "Secant",
+          "equation": "$$\\sec\\theta=\\frac{H}{A}=\\frac{1}{\\cos\\theta}$$",
+          "variables": {}
+        },
+        {
+          "name": "Cotangent",
+          "equation": "$$\\cot\\theta=\\frac{A}{O}=\\frac{1}{\\tan\\theta}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st04_01",
+          "title": "Flipping the Ratios",
+          "type": "svg",
+          "caption": "Notice how the 'S' pairs with 'C', and 'C' pairs with 'S'.",
+          "alt_text": "Visual showing 3 pairs of fractions flipping. Sin (O/H) flips to Csc (H/O). Cos (A/H) flips to Sec (H/A). Tan (O/A) flips to Cot (A/O).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(20, 20)\"><rect width=\"140\" height=\"160\" fill=\"#dbeafe\" rx=\"10\"/><text x=\"70\" y=\"40\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Sin = O/H</text><path d=\"M 70 50 L 70 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><path d=\"M 70 100 L 60 90 M 70 100 L 80 90\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><path d=\"M 70 50 L 60 60 M 70 50 L 80 60\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><text x=\"70\" y=\"130\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Csc = H/O</text></g><g transform=\"translate(180, 20)\"><rect width=\"140\" height=\"160\" fill=\"#dcfce7\" rx=\"10\"/><text x=\"70\" y=\"40\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Cos = A/H</text><path d=\"M 70 50 L 70 100\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"4\"/><path d=\"M 70 100 L 60 90 M 70 100 L 80 90\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"4\"/><path d=\"M 70 50 L 60 60 M 70 50 L 80 60\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"4\"/><text x=\"70\" y=\"130\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Sec = H/A</text></g><g transform=\"translate(340, 20)\"><rect width=\"140\" height=\"160\" fill=\"#ffedd5\" rx=\"10\"/><text x=\"70\" y=\"40\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">Tan = O/A</text><path d=\"M 70 50 L 70 100\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/><path d=\"M 70 100 L 60 90 M 70 100 L 80 90\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/><path d=\"M 70 50 L 60 60 M 70 50 L 80 60\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/><text x=\"70\" y=\"130\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Cot = A/O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "If $\\cos \\theta = \\frac{3}{7}$, find $\\sec \\theta$ and $\\csc \\theta$.",
+          "solution_steps": [
+            "Step 1: Secant is the direct flip of Cosine. $\\sec \\theta = \\frac{7}{3}$.",
+            "Step 2: To find Cosecant (the flip of Sine), we need the Opposite side. Cosine is A/H, so Adj=3, Hyp=7.",
+            "Step 3: Use Pythagoras to find Opp: $a^2 + b^2 = c^2 \\implies 3^2 + \\text{Opp}^2 = 7^2 \\implies 9 + \\text{Opp}^2 = 49 \\implies \\text{Opp}^2 = 40$.",
+            "Step 4: $\\text{Opp} = \\sqrt{40}$.",
+            "Step 5: Cosecant = Hyp / Opp. Therefore, $\\csc \\theta = \\frac{7}{\\sqrt{40}}$."
+          ],
+          "final_answer": "$\\sec = 7/3$, $\\csc = 7/\\sqrt{40}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Writing $\\cot \\theta = 1/\\sin \\theta$.",
+          "correction": "It is easy to get lost in the C's and S's. Cotangent pairs with Tangent. Cosecant pairs with Sine."
+        },
+        {
+          "mistake": "Assuming reciprocal ratios are always greater than 1.",
+          "correction": "While Secant and Cosecant will always be greater than 1 (because the Hypotenuse is on top), Cotangent (A/O) can absolutely be less than 1 if the Opposite side is longer."
+        }
+      ],
+      "quick_summary": [
+        "Cosecant is the reciprocal of sine; secant is the reciprocal of cosine; cotangent is the reciprocal of tangent.",
+        "A reciprocal ratio is undefined when its denominator is zero.",
+        "The product of a ratio and its reciprocal is 1 wherever both are defined."
+      ],
+      "utilities": [
+        {
+          "title": "Trigonometric and Hyperbolic Functions Calculator",
+          "description": "Evaluate a trigonometric ratio or check a calculator value after setting the correct angle mode.",
+          "url": "https://onlinetoolpad.com/others/Trigonometric_and_Hyperbolic_Functions_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t10_st08": {
+      "id": "hs_math_t10_st08",
+      "title": "Trigonometric ratios of special angles",
+      "overview": "Certain angles ($0^\\circ, 30^\\circ, 45^\\circ, 60^\\circ, 90^\\circ$) appear so frequently in geometry, physics, and engineering that we memorize their exact trigonometric values using fractions and square roots, rather than relying on messy calculator decimals.",
+      "key_concepts": [
+        {
+          "concept": "Deriving the 45-45-90 ratios",
+          "definition": "Split a square along its diagonal",
+          "details": [
+            "A square of side 1 forms two right triangles with legs 1 and 1 and hypotenuse $\\sqrt2$. Hence $\\sin45^\\circ=\\cos45^\\circ=\\frac{\\sqrt2}{2}$ and $\\tan45^\\circ=1$."
+          ]
+        },
+        {
+          "concept": "Deriving the 30-60-90 ratios",
+          "definition": "Bisect an equilateral triangle",
+          "details": [
+            "An equilateral triangle of side 2 splits into two right triangles with hypotenuse 2, shorter leg 1 and longer leg $\\sqrt3$. This gives the exact values at $30^\\circ$ and $60^\\circ$."
+          ]
+        },
+        {
+          "concept": "Exact values of the primary ratios",
+          "definition": "Special-angle table",
+          "details": [
+            "For $0^\\circ,30^\\circ,45^\\circ,60^\\circ,90^\\circ$, respectively:",
+            "**Sine:** $0,\\frac12,\\frac{\\sqrt2}{2},\\frac{\\sqrt3}{2},1$.",
+            "**Cosine:** $1,\\frac{\\sqrt3}{2},\\frac{\\sqrt2}{2},\\frac12,0$.",
+            "**Tangent:** $0,\\frac{\\sqrt3}{3},1,\\sqrt3,$ undefined.",
+            "The tangent at $90^\\circ$ is undefined because its cosine denominator is zero."
+          ]
+        },
+        {
+          "concept": "Reciprocal values at special angles",
+          "definition": "Use the reciprocal definitions",
+          "details": [
+            "**Cosecant:** undefined, $2,\\sqrt2,\\frac{2\\sqrt3}{3},1$.",
+            "**Secant:** $1,\\frac{2\\sqrt3}{3},\\sqrt2,2$, undefined.",
+            "**Cotangent:** undefined, $\\sqrt3,1,\\frac{\\sqrt3}{3},0$.",
+            "The order in each list is again $0^\\circ,30^\\circ,45^\\circ,60^\\circ,90^\\circ$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Complementary-angle relationships",
+          "equation": "$$\\sin\\theta=\\cos(90^\\circ-\\theta),\\qquad \\cos\\theta=\\sin(90^\\circ-\\theta)$$",
+          "variables": {}
+        },
+        {
+          "name": "Tangent and reciprocal values",
+          "equation": "$$\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta},\\quad \\csc\\theta=\\frac1{\\sin\\theta},\\quad \\sec\\theta=\\frac1{\\cos\\theta},\\quad \\cot\\theta=\\frac1{\\tan\\theta}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st08_01",
+          "title": "The two special right triangles",
+          "type": "svg",
+          "caption": "The exact ratios are derived from an isosceles right triangle and half an equilateral triangle.",
+          "alt_text": "A 45-45-90 right triangle has legs 1 and 1 and hypotenuse square root 2. A 30-60-90 right triangle has shorter leg 1, longer leg square root 3 and hypotenuse 2.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 240\"><rect width=\"600\" height=\"240\" rx=\"12\" fill=\"#f8fafc\"/><text x=\"150\" y=\"28\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">45°–45°–90°</text><polygon points=\"60,180 230,180 230,10\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M212 180 L212 162 L230 162\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"145\" y=\"205\" font-size=\"17\" text-anchor=\"middle\" fill=\"#1e3a8a\">1</text><text x=\"245\" y=\"100\" font-size=\"17\" fill=\"#1e3a8a\">1</text><text x=\"125\" y=\"78\" font-size=\"17\" fill=\"#c2410c\" font-weight=\"bold\">sqrt 2</text><text x=\"75\" y=\"164\" font-size=\"15\" fill=\"#0f172a\">45°</text><text x=\"195\" y=\"35\" font-size=\"15\" fill=\"#0f172a\">45°</text><line x1=\"300\" y1=\"18\" x2=\"300\" y2=\"222\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><text x=\"450\" y=\"28\" font-size=\"18\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">30°–60°–90°</text><polygon points=\"355,180 545,180 545,10\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"3\"/><path d=\"M527 180 L527 162 L545 162\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"445\" y=\"205\" font-size=\"17\" text-anchor=\"middle\" fill=\"#14532d\">sqrt 3</text><text x=\"555\" y=\"100\" font-size=\"17\" fill=\"#14532d\">1</text><text x=\"438\" y=\"78\" font-size=\"17\" fill=\"#c2410c\" font-weight=\"bold\">2</text><text x=\"365\" y=\"164\" font-size=\"15\" fill=\"#0f172a\">30°</text><text x=\"515\" y=\"35\" font-size=\"15\" fill=\"#0f172a\">60°</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate the exact value of $2\\sin 30^\\circ + 3\\cos 60^\\circ$ without using a calculator.",
+          "solution_steps": [
+            "Step 1: Recall the exact values from the $30-60-90$ triangle. $\\sin 30^\\circ = \\frac{1}{2}$ and $\\cos 60^\\circ = \\frac{1}{2}$.",
+            "Step 2: Substitute these fractions into the equation: $2(\\frac{1}{2}) + 3(\\frac{1}{2})$.",
+            "Step 3: Simplify the multiplication: $1 + \\frac{3}{2}$.",
+            "Step 4: Convert 1 to a fraction and add: $\\frac{2}{2} + \\frac{3}{2} = \\frac{5}{2}$."
+          ],
+          "final_answer": "5/2"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing the Sine and Cosine of 30 and 60.",
+          "correction": "Students frequently swap $\\sin 30$ and $\\sin 60$. Remember: the $30^\\circ$ angle is small, so it opens up to the shortest side ($1$). Therefore $\\sin 30^\\circ = 1/2$. The $60^\\circ$ angle is bigger, opening to the bigger leg ($\\sqrt{3}$). So $\\sin 60^\\circ = \\sqrt{3}/2$."
+        }
+      ],
+      "quick_summary": [
+        "Use a 45-45-90 triangle and a 30-60-90 triangle to derive exact values.",
+        "Know sine, cosine and tangent at 0°, 30°, 45°, 60° and 90°.",
+        "Use reciprocal definitions to obtain cosecant, secant and cotangent; identify undefined values caused by zero denominators."
+      ],
+      "utilities": [
+        {
+          "title": "Trigonometric and Hyperbolic Functions Calculator",
+          "description": "Evaluate a trigonometric ratio or check a calculator value after setting the correct angle mode.",
+          "url": "https://onlinetoolpad.com/others/Trigonometric_and_Hyperbolic_Functions_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t10_st05": {
+      "id": "hs_math_t10_st05",
+      "title": "Finding unknown sides and angles",
+      "overview": "By combining SOH-CAH-TOA with algebra and inverse functions, we can completely map out a right-angled triangle. If you have any two pieces of information (two sides, or one side and one angle), you can calculate everything else.",
+      "key_concepts": [
+        {
+          "concept": "Finding an unknown side",
+          "definition": "Choose the ratio containing the known and unknown sides",
+          "details": [
+            "Label the sides $O$, $A$ and $H$ relative to the given acute angle.",
+            "Choose sine, cosine or tangent to link the side you know to the side you need. For example, if $\\sin30^\\circ=\\frac{x}{10}$, then $x=10\\sin30^\\circ$.",
+            "Check that the calculated side is positive and is shorter than the hypotenuse when appropriate."
+          ]
+        },
+        {
+          "concept": "Finding an unknown acute angle",
+          "definition": "Use an inverse ratio on the calculator",
+          "details": [
+            "First form the ratio from the known sides. If $\\tan\\theta=\\frac{5}{8}$, use the inverse tangent key to obtain $\\theta$.",
+            "Set the calculator to degree mode when the question gives degrees. Round only at the final step and retain the unrounded value during working.",
+            "The calculator returns a principal angle; the systematic study of principal values is in subtopic 19."
+          ]
+        },
+        {
+          "concept": "Checking a right-triangle solution",
+          "definition": "Use geometry and the original ratio",
+          "details": [
+            "The two acute angles must add to $90^\\circ$.",
+            "Substitute the calculated side or angle back into the original ratio to check the result."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Inverse Functions",
+          "equation": "$$ \\theta = \\sin^{-1}\\left(\\frac{O}{H}\\right), \\quad \\theta = \\cos^{-1}\\left(\\frac{A}{H}\\right), \\quad \\theta = \\tan^{-1}\\left(\\frac{O}{A}\\right) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st05_01",
+          "title": "The Trig Flowchart",
+          "type": "svg",
+          "caption": "Normal trig finds sides. Inverse trig finds angles.",
+          "alt_text": "Visual flowchart. Left box: 'Input: Angle -> Output: Ratio' with text 'Use sin, cos, tan'. Right box: 'Input: Ratio -> Output: Angle' with text 'Use sin⁻¹, cos⁻¹, tan⁻¹'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"40\" y=\"50\" width=\"180\" height=\"100\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"10\"/><text x=\"130\" y=\"80\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Find a Side</text><text x=\"130\" y=\"105\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\">Input: Angle</text><text x=\"130\" y=\"130\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\">Use: sin, cos, tan</text><rect x=\"280\" y=\"50\" width=\"180\" height=\"100\" fill=\"#fce7f3\" stroke=\"#db2777\" stroke-width=\"2\" rx=\"10\"/><text x=\"370\" y=\"80\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#9d174d\" font-weight=\"bold\">Find an Angle</text><text x=\"370\" y=\"105\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#be185d\">Input: Ratio (Sides)</text><text x=\"370\" y=\"130\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#be185d\">Use: sin⁻¹, cos⁻¹, tan⁻¹</text><path d=\"M 230 100 L 270 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"4\" stroke-dasharray=\"4,4\"/><polygon points=\"270,100 260,95 260,105\" fill=\"#94a3b8\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A right triangle has a hypotenuse of $12$ cm and an angle of $60^\\circ$. Find the adjacent side.",
+          "solution_steps": [
+            "Step 1: Identify what you have ($H=12$, Angle=$60^\\circ$) and what you want (Adjacent $A$).",
+            "Step 2: CAH connects Adjacent and Hypotenuse. Set up: $\\cos 60^\\circ = \\frac{A}{12}$.",
+            "Step 3: Multiply by 12 to isolate A: $A = 12 \\times \\cos 60^\\circ$.",
+            "Step 4: Using special angles, $\\cos 60^\\circ = 0.5$. So $A = 12 \\times 0.5 = 6$."
+          ],
+          "final_answer": "6 cm"
+        },
+        {
+          "problem": "A right triangle has an opposite side of $5$ cm and an adjacent side of $8$ cm. Find the angle $\\theta$.",
+          "solution_steps": [
+            "Step 1: Identify sides. $O = 5$, $A = 8$. We need the angle $\\theta$.",
+            "Step 2: TOA connects Opposite and Adjacent. Set up: $\\tan \\theta = \\frac{5}{8}$.",
+            "Step 3: Convert the fraction to a decimal: $\\tan \\theta = 0.625$.",
+            "Step 4: Use inverse tangent to free the angle: $\\theta = \\tan^{-1}(0.625)$.",
+            "Step 5: Calculate (in degrees): $\\theta \\approx 32.0^\\circ$."
+          ],
+          "final_answer": "32.0°"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Solving the equation upside down.",
+          "correction": "If your unknown variable ends up on the BOTTOM of the fraction (e.g., $\\sin 40^\\circ = \\frac{5}{x}$), you cannot just multiply by 5. You must multiply by $x$ to bring it up, then divide by $\\sin 40^\\circ$. The algebra becomes $x = \\frac{5}{\\sin 40^\\circ}$."
+        },
+        {
+          "mistake": "Typing $1 / \\sin$ instead of $\\sin^{-1}$.",
+          "correction": "$\\sin^{-1}$ (inverse sine) asks 'what angle gave this ratio?'. $1 / \\sin$ (Cosecant) asks you to simply flip the fraction upside down. Always use the 'SHIFT' or '2ND' button on your calculator to get the true inverse."
+        }
+      ],
+      "quick_summary": [
+        "Pick the ratio that uses the side you HAVE and the side you WANT.",
+        "If the unknown side is on top of the fraction, Multiply.",
+        "If the unknown side is on the bottom of the fraction, Swap and Divide.",
+        "If the angle is unknown, use Inverse Trig ($\\sin^{-1}, \\cos^{-1}, \\tan^{-1}$)."
+      ],
+      "utilities": [
+        {
+          "title": "Trigonometric and Hyperbolic Functions Calculator",
+          "description": "Evaluate a trigonometric ratio or check a calculator value after setting the correct angle mode.",
+          "url": "https://onlinetoolpad.com/others/Trigonometric_and_Hyperbolic_Functions_Calculator",
+          "icon": "calculator"
+        },
+        {
+          "title": "Interactive Triangle Calculator",
+          "description": "Explore the side and angle relationships in a triangle after identifying the known measurements.",
+          "url": "https://onlinetoolpad.com/math/Interactive_Triangle_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t10_st06": {
+      "id": "hs_math_t10_st06",
+      "title": "Angles of elevation and depression",
+      "overview": "Trigonometry allows us to measure towering buildings or deep canyons without a tape measure. By looking up (elevation) or down (depression) from a flat horizontal eye-line, we form invisible right-angled triangles in the real world.",
+      "key_concepts": [
+        {
+          "concept": "The horizontal reference line",
+          "definition": "Measure from eye level",
+          "details": [
+            "An angle of elevation or depression is measured from a horizontal line through the observer’s eye, not from the vertical wall or ground unless the observer’s eye is at ground level.",
+            "In a diagram, draw the horizontal reference line before marking the angle."
+          ]
+        },
+        {
+          "concept": "Angle of elevation",
+          "definition": "Looking upward",
+          "details": [
+            "The angle of elevation is the angle between the observer’s horizontal line and the line of sight to an object above eye level."
+          ]
+        },
+        {
+          "concept": "Angle of depression",
+          "definition": "Looking downward",
+          "details": [
+            "The angle of depression is the angle between the observer’s horizontal line and the line of sight to an object below eye level.",
+            "The horizontal lines through two observers are parallel. Therefore, the angle of depression equals the corresponding angle of elevation at the object."
+          ]
+        },
+        {
+          "concept": "Model the situation with a right triangle",
+          "definition": "Separate eye height from ground height",
+          "details": [
+            "Use tangent or another appropriate right-triangle ratio for the horizontal and vertical distances. If eye height is given, calculate the vertical rise from eye level first, then add or subtract the eye height to obtain the object’s height above ground."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st06_01",
+          "title": "Elevation vs Depression",
+          "type": "svg",
+          "caption": "Because the horizontal lines are parallel, the angles are always identical (Alternate Interior Angles).",
+          "alt_text": "Visual showing a cliff and a boat. A horizontal dashed line extends from the cliff top. A line of sight drops down to the boat. The angle between the horizontal and line of sight is labeled 'Depression'. A horizontal dashed line extends from the boat. The angle looking back up is labeled 'Elevation'. The two angles form a 'Z' and are equal.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"50\" width=\"80\" height=\"150\" fill=\"#94a3b8\"/><line x1=\"130\" y1=\"50\" x2=\"450\" y2=\"50\" stroke=\"#0f172a\" stroke-width=\"2\" stroke-dasharray=\"6,6\"/><circle cx=\"130\" cy=\"50\" r=\"5\" fill=\"#0f172a\"/><text x=\"130\" y=\"35\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\">Observer</text><line x1=\"50\" y1=\"200\" x2=\"450\" y2=\"200\" stroke=\"#0ea5e9\" stroke-width=\"4\"/><circle cx=\"400\" cy=\"200\" r=\"5\" fill=\"#ea580c\"/><text x=\"400\" y=\"220\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#c2410c\">Boat</text><path d=\"M 130 50 L 400 200\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><path d=\"M 180 50 A 50 50 0 0 1 173 75\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"235\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\">Angle of Depression</text><line x1=\"400\" y1=\"200\" x2=\"130\" y2=\"200\" stroke=\"#0f172a\" stroke-width=\"2\" stroke-dasharray=\"6,6\"/><path d=\"M 350 200 A 50 50 0 0 1 356 175\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"270\" y=\"190\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\">Angle of Elevation</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "An observer stands $20$m from the base of a building. The angle of elevation to the top of the building is $45^\\circ$. The observer's eye level is $1.5$m above the ground. Find the total height of the building.",
+          "solution_steps": [
+            "Step 1: Set up the triangle. The horizontal distance is $20$ (Adjacent). We want the height above eye level (Opposite).",
+            "Step 2: TOA links Opposite and Adjacent: $\\tan 45^\\circ = \\frac{\\text{Opp}}{20}$.",
+            "Step 3: Solve for Opp: $\\text{Opp} = 20 \\times \\tan 45^\\circ$. Since $\\tan 45^\\circ = 1$, the height above the eyes is $20$m.",
+            "Step 4: The triangle sits on top of the observer's $1.5$m height. Total height = $20 + 1.5 = 21.5$m."
+          ],
+          "final_answer": "21.5 m"
+        },
+        {
+          "problem": "An observer on top of a $40$m cliff looks down at a boat. The angle of depression is $25^\\circ$. How far is the boat from the base of the cliff?",
+          "solution_steps": [
+            "Step 1: Draw the diagram. The cliff is $40$m tall (Opposite). The angle of DEPRESSION from the top is $25^\\circ$, which means the angle of ELEVATION from the boat looking up is also $25^\\circ$.",
+            "Step 2: We want the horizontal distance along the water (Adjacent).",
+            "Step 3: Use TOA: $\\tan 25^\\circ = \\frac{40}{\\text{Adj}}$.",
+            "Step 4: Swap and Divide: $\\text{Adj} = \\frac{40}{\\tan 25^\\circ}$.",
+            "Step 5: Calculate: $40 / 0.4663 \\approx 85.78$."
+          ],
+          "final_answer": "85.78 m"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Measuring depression from the vertical wall.",
+          "correction": "Students constantly draw the angle of depression tucked tight against the cliff face (inside the top of the triangle). This is wrong. It MUST be drawn from an invisible horizontal line sticking out of the cliff. The easiest fix is to just move the angle down to the boat (as an angle of elevation)."
+        },
+        {
+          "mistake": "Forgetting eye height.",
+          "correction": "If a problem specifically gives you the height of the observer, your trigonometry is calculating a triangle floating in the air at eye level. You must ADD the eye height at the very end to reach the ground."
+        }
+      ],
+      "quick_summary": [
+        "Elevation looks UP from a flat horizon. Depression looks DOWN from a flat horizon.",
+        "Angle of Depression = Angle of Elevation.",
+        "Tangent (TOA) is almost always the ratio you use, because you usually know the ground distance and want the vertical height (or vice versa)."
+      ],
+      "utilities": [
+        {
+          "title": "Trigonometric and Hyperbolic Functions Calculator",
+          "description": "Evaluate a trigonometric ratio or check a calculator value after setting the correct angle mode.",
+          "url": "https://onlinetoolpad.com/others/Trigonometric_and_Hyperbolic_Functions_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t10_st07": {
+      "id": "hs_math_t10_st07",
+      "title": "Bearings and navigation problems",
+      "overview": "Bearings are a universal navigational language used by ships, planes, and hikers. They combine trigonometry with compass directions to calculate exact distances, coordinate changes, and flight paths across a map.",
+      "key_concepts": [
+        {
+          "concept": "Three-figure bearings",
+          "definition": "Measure clockwise from north",
+          "details": [
+            "A bearing is measured clockwise from the north direction at the starting point and written using three digits, from $000^\\circ$ to $359^\\circ$.",
+            "For example, east is $090^\\circ$, south is $180^\\circ$, and a direction $45^\\circ$ east of north is $045^\\circ$."
+          ]
+        },
+        {
+          "concept": "Resolve a journey into north/east components",
+          "definition": "Use the bearing angle at the starting point",
+          "details": [
+            "For a journey of length $d$ on a bearing θ measured clockwise from north, the northward component is $d\\cos\\theta$ and the eastward component is $d\\sin\\theta$.",
+            "A component can be negative: bearings in the south-west or south-east directions have a negative northward component."
+          ]
+        },
+        {
+          "concept": "Back bearings",
+          "definition": "Reverse the direction by 180 degrees",
+          "details": [
+            "If the forward bearing is less than $180^\\circ$, add $180^\\circ$ to obtain the back bearing. If it is at least $180^\\circ$, subtract $180^\\circ$. Write the result using three digits."
+          ]
+        },
+        {
+          "concept": "Navigation diagrams",
+          "definition": "Show north at every relevant point",
+          "details": [
+            "Draw a north arrow at the departure point and mark the clockwise bearing there. Use parallel north lines only when the map is treated as a local plane. Label distance and direction clearly."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Reciprocal (Reverse) Bearing",
+          "equation": "$$ \\text{Reverse} = \\theta \\pm 180^\\circ $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st07_01",
+          "title": "Mapping a Bearing",
+          "type": "svg",
+          "caption": "Always draw your North line first, then build your triangle.",
+          "alt_text": "Visual showing a starting point A with an arrow pointing straight up labeled 'N'. A dashed curved line sweeps clockwise from North to a diagonal line heading top-right to point B. The angle is labeled 060 degrees. A right triangle is formed with the diagonal as the hypotenuse (10km). The vertical leg is labeled N (Cosine), horizontal is E (Sine).",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"150\" y1=\"200\" x2=\"150\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"3\"/><polygon points=\"150,50 145,60 155,60\" fill=\"#94a3b8\"/><text x=\"150\" y=\"40\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">N</text><circle cx=\"150\" cy=\"200\" r=\"5\" fill=\"#0f172a\"/><text x=\"130\" y=\"210\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">A</text><path d=\"M 150 200 L 350 70\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><circle cx=\"350\" cy=\"70\" r=\"5\" fill=\"#0f172a\"/><text x=\"365\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">B</text><path d=\"M 150 120 A 80 80 0 0 1 195 170\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><polygon points=\"195,170 190,160 200,162\" fill=\"#ea580c\"/><text x=\"180\" y=\"140\" font-family=\"monospace\" font-size=\"14\" fill=\"#c2410c\" font-weight=\"bold\">060°</text><line x1=\"350\" y1=\"70\" x2=\"150\" y2=\"70\" stroke=\"#22c55e\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><text x=\"250\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">East (Opposite) = Sin</text><text x=\"120\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"end\" fill=\"#475569\" font-weight=\"bold\">North (Adj)</text><text x=\"120\" y=\"145\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"end\" fill=\"#475569\" font-weight=\"bold\">= Cos</text><text x=\"260\" y=\"150\" font-family=\"monospace\" font-size=\"16\" fill=\"#1e3a8a\" font-weight=\"bold\" transform=\"rotate(-33 260 150)\">10 km</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A boat travels $10$ km on a bearing of $060^\\circ$. Find its exact northward and eastward components.",
+          "solution_steps": [
+            "Step 1: Draw a north line. Draw the path $10$km away at a $60^\\circ$ angle clockwise from north.",
+            "Step 2: The triangle formed against the North line has the Hypotenuse $= 10$, Angle $= 60^\\circ$.",
+            "Step 3: Northward is the Adjacent side. $\\cos 60^\\circ = \\frac{N}{10} \\implies N = 10 \\cos 60^\\circ$. Since $\\cos 60^\\circ = 0.5$, $N = 5$ km.",
+            "Step 4: Eastward is the Opposite side. $\\sin 60^\\circ = \\frac{E}{10} \\implies E = 10 \\sin 60^\\circ$. Since $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$, $E = 5\\sqrt{3} \\approx 8.66$ km."
+          ],
+          "final_answer": "North: 5km, East: 8.66km"
+        },
+        {
+          "problem": "An aircraft travels from A to B on a bearing of $125^\\circ$. What bearing must it fly to return from B to A?",
+          "solution_steps": [
+            "Step 1: The return trip is the reciprocal bearing.",
+            "Step 2: Check if the original bearing is less than or greater than $180^\\circ$.",
+            "Step 3: $125^\\circ < 180^\\circ$, so we ADD $180^\\circ$.",
+            "Step 4: $125 + 180 = 305^\\circ$."
+          ],
+          "final_answer": "305°"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Measuring from the East horizontal line.",
+          "correction": "In standard geometry, we measure angles from the right-facing x-axis. In navigation, you MUST measure from the upward-facing North y-axis. This flips your standard Sine and Cosine rules (North becomes Adjacent, East becomes Opposite)."
+        },
+        {
+          "mistake": "Forgetting the third digit.",
+          "correction": "Writing a bearing as $45^\\circ$ is a technical error in navigation exams. It must be padded with a zero: $045^\\circ$."
+        }
+      ],
+      "quick_summary": [
+        "Measure a bearing clockwise from north and write it with three digits.",
+        "For distance d and bearing θ, northing is d cos θ and easting is d sin θ.",
+        "Use signed components to represent southward or westward movement; the back bearing differs by 180°."
+      ]
+    },
+    "hs_math_t10_st16": {
+      "id": "hs_math_t10_st16",
+      "title": "Sine rule",
+      "overview": "Not all triangles have a perfect 90-degree corner. To solve non-right-angled triangles, we use the Sine Rule, which establishes a perfect proportional relationship between every side of a triangle and the sine of its opposite angle.",
+      "key_concepts": [
+        {
+          "concept": "The opposite-side and angle pairs",
+          "definition": "The Sine Rule",
+          "details": [
+            "In any triangle, each side is proportional to the sine of its opposite angle: $\\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}$.",
+            "The angles of a triangle add to $180^\\circ$. Use this fact to find a missing angle before applying the rule when needed."
+          ]
+        },
+        {
+          "concept": "When to use the Sine Rule",
+          "definition": "A known opposite pair plus another piece of information",
+          "details": [
+            "Use the rule when an opposite side-angle pair is known, together with another angle or side. It is suitable for ASA, AAS and some SSA data.",
+            "For an unknown angle, rearrange to find its sine, then use inverse sine and check the supplementary possibility."
+          ]
+        },
+        {
+          "concept": "The ambiguous SSA case",
+          "definition": "One, two or no triangles may be possible",
+          "details": [
+            "With two sides and a non-included angle (SSA), calculate the sine of the unknown angle. If the value is greater than 1, no triangle is possible.",
+            "If the value is between 0 and 1, the two candidate angles are B and $180^\\circ-B$. Keep only candidates for which the sum with the known angle is less than $180^\\circ$. This may leave two valid triangles, one valid triangle, or none.",
+            "If the calculated sine is exactly 1, the unknown angle is $90^\\circ$ and there is one right-triangle solution."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sine Rule (Finding a Side)",
+          "equation": "$$ \\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} $$",
+          "variables": {
+            "a, b, c": "Side lengths",
+            "A, B, C": "Opposite angles"
+          }
+        },
+        {
+          "name": "Sine Rule (Finding an Angle)",
+          "equation": "$$ \\frac{\\sin A}{a} = \\frac{\\sin B}{b} = \\frac{\\sin C}{c} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st16_01",
+          "title": "The Opposite Pairs",
+          "type": "svg",
+          "caption": "The Sine Rule links each angle with the side directly across from it.",
+          "alt_text": "Visual showing a scalene triangle. Angle A is marked in blue, with an arrow pointing to side a in blue. Angle B is marked in green, pointing to side b in green. Angle C is marked in red, pointing to side c in red.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><polygon points=\"100,160 400,160 200,40\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"3\"/><path d=\"M 130 160 A 30 30 0 0 0 115 142\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><text x=\"110\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">A</text><path d=\"M 370 160 A 30 30 0 0 1 355 142\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/><text x=\"380\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\">B</text><path d=\"M 185 58 A 30 30 0 0 0 215 50\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"200\" y=\"80\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#b91c1c\" font-weight=\"bold\">C</text><text x=\"310\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#1d4ed8\" font-weight=\"bold\">a</text><text x=\"130\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#15803d\" font-weight=\"bold\">b</text><text x=\"250\" y=\"185\" font-family=\"monospace\" font-size=\"18\" fill=\"#b91c1c\" font-weight=\"bold\">c</text><path d=\"M 140 145 L 290 95\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 360 145 L 150 95\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 200 80 L 250 160\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "In triangle ABC, $A=40^\\circ$, $B=60^\\circ$ and side $a=8$ cm. Find side $b$.",
+          "solution_steps": [
+            "Step 1: The known opposite pair is $A=40^\\circ$ and $a=8$ cm. Use the Sine Rule.",
+            "$\\frac{8}{\\sin40^\\circ}=\\frac{b}{\\sin60^\\circ}$, so $b=\\frac{8\\sin60^\\circ}{\\sin40^\\circ}$.",
+            "Step 3: In degree mode, $b\\approx10.78$ cm."
+          ],
+          "final_answer": "$10.78$ cm"
+        },
+        {
+          "problem": "An SSA problem has $A=30^\\circ$, side $a=7$ cm opposite A, and side $b=10$ cm. Determine the possible triangle solutions.",
+          "solution_steps": [
+            "Step 1: Use $\\frac{a}{\\sin A}=\\frac{b}{\\sin B}$, giving $\\sin B=\\frac{b\\sin A}{a}=\\frac{10(0.5)}{7}=\\frac57$.",
+            "Step 2: The principal value is $B_1\\approx45.58^\\circ$. The supplementary candidate is $B_2=180^\\circ-45.58^\\circ\\approx134.42^\\circ$.",
+            "Step 3: Check the angle sum. $A+B_1\\approx75.58^\\circ<180^\\circ$ and $A+B_2\\approx164.42^\\circ<180^\\circ$. Both candidates leave a positive third angle."
+          ],
+          "final_answer": "Two triangles are possible; the corresponding values of B are approximately $45.58^\\circ$ and $134.42^\\circ$."
+        },
+        {
+          "problem": "An SSA problem has $A=30^\\circ$, $a=10$ cm and $b=7$ cm. How many triangles are possible?",
+          "solution_steps": [
+            "Step 1: Calculate $\\sin B=\\frac{b\\sin A}{a}=\\frac{7(0.5)}{10}=0.35$.",
+            "Step 2: The principal angle is $B_1\\approx20.49^\\circ$. The supplementary candidate is $B_2\\approx159.51^\\circ$.",
+            "Step 3: Check the angle sum. $30^\\circ+159.51^\\circ>180^\\circ$, so the supplementary candidate is impossible. The principal angle leaves a positive third angle."
+          ],
+          "final_answer": "One triangle is possible, with $B\\approx20.49^\\circ$."
+        },
+        {
+          "problem": "An SSA problem has $A=30^\\circ$, $a=4$ cm and $b=10$ cm. Is a triangle possible?",
+          "solution_steps": [
+            "Step 1: Calculate $\\sin B=\\frac{b\\sin A}{a}=\\frac{10(0.5)}4=1.25$.",
+            "Step 2: A real angle cannot have a sine greater than 1."
+          ],
+          "final_answer": "No triangle is possible."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Pairing sides with adjacent angles.",
+          "correction": "The sine rule ONLY works for opposite pairs. If you are given side $c$ but only have angles $A$ and $B$, you must first use $180^\\circ - (A+B)$ to find angle $C$ before you can use the formula."
+        }
+      ],
+      "quick_summary": [
+        "Sine Rule connects Opposite Pairs.",
+        "Put the unknown (side or angle) on the top of the fraction to make the algebra easier.",
+        "Always check if an obtuse angle is possible if you are finding an angle using SSA (Side-Side-Angle)."
+      ],
+      "utilities": [
+        {
+          "title": "Interactive Triangle Calculator",
+          "description": "Explore the side and angle relationships in a triangle after identifying the known measurements.",
+          "url": "https://onlinetoolpad.com/math/Interactive_Triangle_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t10_st17": {
+      "id": "hs_math_t10_st17",
+      "title": "Cosine rule",
+      "overview": "When you don't have a matching 'Opposite Pair' of a side and an angle, the Sine Rule fails. The Cosine Rule is an upgraded version of the Pythagorean Theorem designed to handle any triangle, bridging the gap using the included angle.",
+      "key_concepts": [
+        {
+          "concept": "Cosine Rule for a side",
+          "definition": "SAS information",
+          "details": [
+            "When two sides and their included angle are known, use $a^2=b^2+c^2-2bc\\cos A$. The side a is opposite angle A."
+          ]
+        },
+        {
+          "concept": "Cosine Rule for an angle",
+          "definition": "SSS information",
+          "details": [
+            "When all three sides are known, use $\\cos A=\\frac{b^2+c^2-a^2}{2bc}$ to find angle A. The side opposite the angle being found is the side whose square is subtracted."
+          ]
+        },
+        {
+          "concept": "Choose between Sine Rule and Cosine Rule",
+          "definition": "Match the information pattern",
+          "details": [
+            "Use the Sine Rule when a known opposite side-angle pair is available. Use the Cosine Rule for SAS (two sides and included angle) or SSS (three sides).",
+            "When A is $90^\\circ$, the Cosine Rule reduces to Pythagoras because $\\cos90^\\circ=0$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Cosine Rule (Finding a Side)",
+          "equation": "$$ a^2 = b^2 + c^2 - 2bc \\cos A $$",
+          "variables": {
+            "a": "Side to find",
+            "A": "Opposite included angle",
+            "b, c": "Adjacent known sides"
+          }
+        },
+        {
+          "name": "Cosine Rule (Finding an Angle)",
+          "equation": "$$ \\cos A = \\frac{b^2 + c^2 - a^2}{2bc} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st17_01",
+          "title": "The SAS Setup",
+          "type": "svg",
+          "caption": "The formula requires two sides and the angle sandwiched between them.",
+          "alt_text": "Visual showing a triangle. The left side 'b' and bottom side 'c' are solid bold blue. The angle 'A' between them is marked in blue. The opposite side 'a' is a dashed red line with a question mark. Formula a^2 = b^2 + c^2 - 2bc cos(A) points to the red line.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 100 150 L 300 150\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><path d=\"M 100 150 L 180 50\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><path d=\"M 180 50 L 300 150\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><path d=\"M 130 150 A 30 30 0 0 0 120 125\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><text x=\"135\" y=\"135\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#1e3a8a\" font-weight=\"bold\">A</text><text x=\"120\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#1d4ed8\" font-weight=\"bold\">b</text><text x=\"200\" y=\"170\" font-family=\"monospace\" font-size=\"18\" fill=\"#1d4ed8\" font-weight=\"bold\">c</text><text x=\"250\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#b91c1c\" font-weight=\"bold\">a = ?</text><rect x=\"310\" y=\"80\" width=\"180\" height=\"40\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"400\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">a² = b² + c² - 2bc(cosA)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "In triangle ABC, side $b = 7$ cm, side $c = 9$ cm, and the included angle $A = 60^\\circ$. Find side $a$.",
+          "solution_steps": [
+            "Step 1: Diagnose. We have two sides and the included angle (SAS). Use the Cosine Rule.",
+            "Step 2: $a^2 = 7^2 + 9^2 - 2(7)(9)\\cos(60^\\circ)$.",
+            "Step 3: Square the sides: $a^2 = 49 + 81 - 126\\cos(60^\\circ)$.",
+            "Step 4: Substitute $\\cos 60^\\circ = 0.5$. Then $a^2 = 130 - 126(0.5)$.",
+            "Step 5: Multiply before subtracting: $a^2 = 130 - 63 = 67$.",
+            "Step 6: Square root: $a = \\sqrt{67} \\approx 8.19$ cm."
+          ],
+          "final_answer": "8.19 cm"
+        },
+        {
+          "problem": "In triangle ABC, $a = 5$ cm, $b = 6$ cm, and $c = 7$ cm. Find angle $C$.",
+          "solution_steps": [
+            "Step 1: Diagnose. We have three sides (SSS). Use the rearranged Cosine Rule.",
+            "Step 2: We want angle $C$, so $c$ ($7$) must be the side we subtract on top: $\\cos C = \\frac{a^2 + b^2 - c^2}{2ab}$.",
+            "Step 3: Substitute: $\\cos C = \\frac{5^2 + 6^2 - 7^2}{2(5)(6)}$.",
+            "Step 4: Simplify: $\\cos C = \\frac{25 + 36 - 49}{60} = \\frac{12}{60} = 0.2$.",
+            "Step 5: Inverse cosine: $C = \\cos^{-1}(0.2) \\approx 78.46^\\circ$."
+          ],
+          "final_answer": "78.46°"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Violating the order of operations.",
+          "correction": "When evaluating $a^2 = 49 + 81 - 126(0.5)$, students often add the first terms to get $130$, then wrongly subtract the $126$ to get $4(0.5) = 2$. Multiplication MUST happen before addition/subtraction. It is $130 - (126 \\times 0.5) = 130 - 63 = 67$."
+        }
+      ],
+      "quick_summary": [
+        "Cosine Rule fixes non-right triangles when Sine Rule fails.",
+        "Use $a^2 = b^2 + c^2 - 2bc \\cos A$ for SAS (finding a side).",
+        "Use $\\cos A = \\frac{b^2 + c^2 - a^2}{2bc}$ for SSS (finding an angle).",
+        "BODMAS/PEMDAS is critical: always multiply the $-2bc \\cos A$ chunk before subtracting."
+      ],
+      "utilities": [
+        {
+          "title": "Interactive Triangle Calculator",
+          "description": "Explore the side and angle relationships in a triangle after identifying the known measurements.",
+          "url": "https://onlinetoolpad.com/math/Interactive_Triangle_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t10_st18": {
+      "id": "hs_math_t10_st18",
+      "title": "Area of a triangle using trigonometry",
+      "overview": "The standard Area = $\\frac{1}{2}bh$ formula is frustrating because you often do not know the perpendicular height of the triangle. Trigonometry provides a powerful workaround: you can calculate the exact area of ANY triangle using just two sides and the angle wedged between them.",
+      "key_concepts": [
+        {
+          "concept": "The included-angle area formula",
+          "definition": "Two sides and the angle between them",
+          "details": [
+            "If two sides have lengths a and b and the included angle is C, then $\\text{Area}=\\frac12 ab\\sin C$.",
+            "Equivalent forms are $\\frac12 bc\\sin A$ and $\\frac12 ca\\sin B$. The angle must be included between the two side lengths used."
+          ]
+        },
+        {
+          "concept": "Why the formula works",
+          "definition": "Use the perpendicular height",
+          "details": [
+            "Take side a as the base and draw a perpendicular height h from the opposite vertex. In the resulting right triangle, $h=b\\sin C$.",
+            "Substituting into $\\text{Area}=\\frac12 ah$ gives $\\text{Area}=\\frac12 ab\\sin C$."
+          ]
+        },
+        {
+          "concept": "Obtuse included angles",
+          "definition": "The area remains positive",
+          "details": [
+            "An interior triangle angle is between $0^\\circ$ and $180^\\circ$. Sine is positive throughout this interval, so the formula gives a positive area even when the included angle is obtuse."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Trigonometric area of a triangle",
+          "equation": "$$\\text{Area}=\\frac12 ab\\sin C=\\frac12 bc\\sin A=\\frac12 ca\\sin B$$",
+          "variables": {
+            "a,b,c": "Side lengths",
+            "A,B,C": "Opposite angles; each is included between the other two named sides"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st18_01",
+          "title": "Replacing the Height",
+          "type": "svg",
+          "caption": "Trig allows us to calculate the invisible perpendicular height dynamically.",
+          "alt_text": "Visual showing a triangle. The base is labeled 'a'. The left slanted side is 'b'. The angle between them is 'C'. A dashed vertical line drops from the top vertex to the base, labeled 'h = b * sin(C)'. The equation Area = 1/2 * a * (b sin C) is highlighted.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 100 150 L 300 150 L 220 30 Z\" fill=\"#e0f2fe\" stroke=\"#0f172a\" stroke-width=\"3\"/><path d=\"M 130 150 A 30 30 0 0 0 120 125\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><text x=\"135\" y=\"145\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">C</text><text x=\"150\" y=\"80\" font-family=\"monospace\" font-size=\"16\" fill=\"#1d4ed8\" font-weight=\"bold\">b</text><text x=\"200\" y=\"170\" font-family=\"monospace\" font-size=\"16\" fill=\"#0f172a\" font-weight=\"bold\">a (base)</text><line x1=\"220\" y1=\"30\" x2=\"220\" y2=\"150\" stroke=\"#ef4444\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><polygon points=\"220,150 210,150 210,140 220,140\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"230\" y=\"100\" font-family=\"monospace\" font-size=\"14\" fill=\"#b91c1c\" font-weight=\"bold\">h = b·sin(C)</text><rect x=\"330\" y=\"70\" width=\"150\" height=\"60\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"405\" y=\"95\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">Area = ½ × a × h</text><text x=\"405\" y=\"115\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A = ½ a b sin(C)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Two sides of a triangle are $8$ cm and $10$ cm. The included angle is $30^\\circ$. Find its area.",
+          "solution_steps": [
+            "Step 1: Check if the angle is sandwiched (Included). Yes, it is SAS.",
+            "Step 2: Use the formula: $A = \\frac{1}{2}ab \\sin C$.",
+            "Step 3: Substitute knowns: $A = \\frac{1}{2}(8)(10) \\sin 30^\\circ$.",
+            "Step 4: Using special angles, $\\sin 30^\\circ = 0.5$.",
+            "Step 5: Calculate: $A = \\frac{1}{2}(80)(0.5) = 40(0.5) = 20$."
+          ],
+          "final_answer": "20 cm²"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the wrong angle.",
+          "correction": "The formula ONLY works if the angle is physically trapped between the two sides you are multiplying. If you have sides $a$ and $b$, you MUST use angle $C$. If you use angle $A$ or $B$, your area will be completely wrong."
+        }
+      ],
+      "quick_summary": [
+        "Area $= \\frac{1}{2}ab \\sin C$.",
+        "You need Side-Angle-Side (SAS) to use this formula.",
+        "It eliminates the need to manually calculate the perpendicular height."
+      ],
+      "utilities": [
+        {
+          "title": "Interactive Triangle Calculator",
+          "description": "Explore the side and angle relationships in a triangle after identifying the known measurements.",
+          "url": "https://onlinetoolpad.com/math/Interactive_Triangle_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t10_st11": {
+      "id": "hs_math_t10_st11",
+      "title": "Unit circle",
+      "overview": "The Unit Circle is the true map of trigonometry. Right-angled triangles only allow for angles between $0^\\circ$ and $90^\\circ$. The Unit Circle maps the sine and cosine of EVERY angle (from negative infinity to positive infinity) onto a single, perfectly round grid.",
+      "key_concepts": [
+        {
+          "concept": "The unit circle",
+          "definition": "A circle of radius one centred at the origin",
+          "details": [
+            "The unit circle has equation $x^2+y^2=1$. An angle θ is measured anticlockwise from the positive x-axis for positive angles.",
+            "Where the terminal arm meets the circle, the point has coordinates $(x,y)=(\\cos\\theta,\\sin\\theta)$."
+          ]
+        },
+        {
+          "concept": "Cosine and sine as coordinates",
+          "definition": "Horizontal and vertical positions",
+          "details": [
+            "The x-coordinate gives $\\cos\\theta$ and the y-coordinate gives $\\sin\\theta$. Each coordinate lies between -1 and 1.",
+            "A full turn returns to the starting point. Additional turns repeat the same coordinate pair."
+          ]
+        },
+        {
+          "concept": "Worked coordinate reading",
+          "definition": "Use the reference angle and quadrant",
+          "details": [
+            "At $150^\\circ$, the reference angle is $30^\\circ$ and the point lies in Quadrant II. Cosine is negative and sine is positive.",
+            "Therefore, the point is $(-\\frac{\\sqrt3}{2},\\frac12)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Unit-circle equation",
+          "equation": "$$x^2+y^2=1$$",
+          "variables": {
+            "x": "Horizontal coordinate",
+            "y": "Vertical coordinate"
+          }
+        },
+        {
+          "name": "Trigonometric coordinates",
+          "equation": "$$(x,y)=(\\cos\\theta,\\sin\\theta)$$",
+          "variables": {
+            "θ": "Angle measured from the positive x-axis"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st11_01",
+          "title": "Coordinates on the unit circle",
+          "type": "svg",
+          "caption": "The terminal point at angle θ has horizontal coordinate cos θ and vertical coordinate sin θ.",
+          "alt_text": "A unit circle centred at the origin shows a radius making angle theta with the positive x-axis. The terminal point is labelled (cos theta, sin theta), with dashed projections to each axis.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 240\"><rect width=\"600\" height=\"260\" rx=\"12\" fill=\"#f8fafc\"/><line x1=\"55\" y1=\"130\" x2=\"545\" y2=\"130\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"300\" y1=\"20\" x2=\"300\" y2=\"240\" stroke=\"#475569\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"130\" r=\"92\" fill=\"none\" stroke=\"#0ea5e9\" stroke-width=\"3\"/><line x1=\"300\" y1=\"130\" x2=\"346\" y2=\"50\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><circle cx=\"346\" cy=\"50\" r=\"5\" fill=\"#ea580c\"/><line x1=\"346\" y1=\"50\" x2=\"346\" y2=\"130\" stroke=\"#ea580c\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><line x1=\"300\" y1=\"50\" x2=\"346\" y2=\"50\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><path d=\"M330 130 A30 30 0 0 0 315 104\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"345\" y=\"116\" font-size=\"15\" fill=\"#c2410c\">θ</text><text x=\"350\" y=\"43\" font-size=\"15\" fill=\"#c2410c\" font-weight=\"bold\">(cos θ, sin θ)</text><text x=\"320\" y=\"151\" font-size=\"15\" fill=\"#c2410c\">cos θ</text><text x=\"244\" y=\"52\" font-size=\"15\" fill=\"#15803d\">sin θ</text><text x=\"286\" y=\"148\" font-size=\"15\" fill=\"#0f172a\">O</text><text x=\"550\" y=\"122\" font-size=\"14\" fill=\"#0f172a\">x</text><text x=\"310\" y=\"18\" font-size=\"14\" fill=\"#0f172a\">y</text><text x=\"300\" y=\"250\" font-size=\"14\" text-anchor=\"middle\" fill=\"#475569\">Radius = 1; x² + y² = 1</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the exact $(x, y)$ coordinates of a point on the unit circle at $150^\\circ$.",
+          "solution_steps": [
+            "Step 1: Convert to coordinate math: $(x, y) = (\\cos 150^\\circ, \\sin 150^\\circ)$.",
+            "Step 2: $150^\\circ$ is in Quadrant II. The reference angle back to the horizontal axis ($180^\\circ$) is $30^\\circ$.",
+            "Step 3: Based on ASTC, Sine is positive in QII, and Cosine is negative.",
+            "Step 4: Calculate the values: $\\sin 150^\\circ = +\\sin 30^\\circ = 1/2$.",
+            "Step 5: $\\cos 150^\\circ = -\\cos 30^\\circ = -\\sqrt{3}/2$.",
+            "Step 6: The coordinates are $(-\\frac{\\sqrt{3}}{2}, \\frac{1}{2})$."
+          ],
+          "final_answer": "(-√3/2, 1/2)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Flipping Sine and Cosine.",
+          "correction": "Because alphabetical order is $(x, y)$ and $(Cos, Sin)$, you must always associate Cosine with the horizontal X-axis and Sine with the vertical Y-axis."
+        },
+        {
+          "mistake": "Thinking negative angles are impossible.",
+          "correction": "On the unit circle, a positive angle just means you spin counter-clockwise. A negative angle like $-90^\\circ$ just means you spin clockwise. $-90^\\circ$ lands in the exact same spot as $+270^\\circ$ (at the bottom of the y-axis)."
+        }
+      ],
+      "quick_summary": [
+        "The unit circle has radius 1 and centre (0, 0).",
+        "The terminal point at angle θ has coordinates (cos θ, sin θ).",
+        "The coordinate pair lies on x² + y² = 1."
+      ]
+    },
+    "hs_math_t10_st10": {
+      "id": "hs_math_t10_st10",
+      "title": "Trigonometric ratios in all quadrants",
+      "overview": "To evaluate trigonometric functions for angles larger than 90 degrees or for negative angles, we project them onto the Unit Circle. The Reference Angle gives us the raw number, and the quadrant gives us the positive or negative sign.",
+      "key_concepts": [
+        {
+          "concept": "Reference angles",
+          "definition": "Measure to the horizontal axis",
+          "details": [
+            "A reference angle is the acute angle between the terminal arm and the x-axis. It is measured to the nearest horizontal axis, not the y-axis.",
+            "For an angle θ between $0^\\circ$ and $360^\\circ$: QII uses $180^\\circ-\\theta$, QIII uses $\\theta-180^\\circ$, and QIV uses $360^\\circ-\\theta$."
+          ]
+        },
+        {
+          "concept": "Signs in the four quadrants",
+          "definition": "ASTC",
+          "details": [
+            "In Quadrant I, all three ratios are positive. In Quadrant II, sine is positive. In Quadrant III, tangent is positive. In Quadrant IV, cosine is positive.",
+            "On the unit circle, cosine is the x-coordinate and sine is the y-coordinate; tangent is $y/x$ where $x\\ne0$."
+          ]
+        },
+        {
+          "concept": "Negative angles",
+          "definition": "Clockwise rotation",
+          "details": [
+            "A negative angle is measured clockwise from the positive x-axis.",
+            "Cosine is even: $\\cos(-\\theta)=\\cos\\theta$. Sine and tangent are odd: $\\sin(-\\theta)=-\\sin\\theta$ and $\\tan(-\\theta)=-\\tan\\theta$ where tangent is defined."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Reference angles in degrees",
+          "equation": "$$\\alpha=180^\\circ-\\theta\\ (QII),\\quad \\alpha=\\theta-180^\\circ\\ (QIII),\\quad \\alpha=360^\\circ-\\theta\\ (QIV)$$",
+          "variables": {
+            "α": "Acute reference angle"
+          }
+        },
+        {
+          "name": "Negative-angle relationships",
+          "equation": "$$\\cos(-\\theta)=\\cos\\theta,\\quad \\sin(-\\theta)=-\\sin\\theta,\\quad \\tan(-\\theta)=-\\tan\\theta$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st10_01",
+          "title": "Reference angle and quadrant signs",
+          "type": "svg",
+          "caption": "The reference angle is measured to the x-axis; the quadrant determines the signs of sine, cosine and tangent.",
+          "alt_text": "A coordinate plane shows a terminal arm in Quadrant III at 210 degrees and its acute reference angle of 30 degrees measured from the negative x-axis. Quadrant signs are indicated.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 240\"><rect width=\"600\" height=\"260\" rx=\"12\" fill=\"#f8fafc\"/><line x1=\"300\" y1=\"18\" x2=\"300\" y2=\"240\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"35\" y1=\"130\" x2=\"565\" y2=\"130\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"570\" y=\"122\" font-size=\"14\" fill=\"#0f172a\">x</text><text x=\"310\" y=\"18\" font-size=\"14\" fill=\"#0f172a\">y</text><line x1=\"300\" y1=\"130\" x2=\"150\" y2=\"216\" stroke=\"#2563eb\" stroke-width=\"4\"/><path d=\"M240 130 A60 60 0 0 1 248 160\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"225\" y=\"164\" font-size=\"16\" fill=\"#c2410c\" font-weight=\"bold\">30°</text><text x=\"115\" y=\"232\" font-size=\"16\" fill=\"#1d4ed8\" font-weight=\"bold\">210°</text><text x=\"425\" y=\"65\" font-size=\"17\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Q I: + + +</text><text x=\"175\" y=\"65\" font-size=\"17\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">Q II: + sin</text><text x=\"175\" y=\"205\" font-size=\"17\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">Q III: + tan</text><text x=\"430\" y=\"205\" font-size=\"17\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">Q IV: + cos</text><text x=\"300\" y=\"252\" font-size=\"13\" text-anchor=\"middle\" fill=\"#475569\">Reference angle is measured to the horizontal x-axis</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\sin(210^\\circ)$ without using a calculator.",
+          "solution_steps": [
+            "Step 1: Identify the quadrant. $210^\\circ$ is past $180^\\circ$, so it is in Q3.",
+            "Step 2: Find the reference angle. Distance back to the $180^\\circ$ x-axis is $210^\\circ - 180^\\circ = 30^\\circ$.",
+            "Step 3: Evaluate the base ratio. $\\sin(30^\\circ) = \\frac{1}{2}$.",
+            "Step 4: Apply ASTC. In Q3, Tangent is positive, meaning Sine is NEGATIVE.",
+            "Step 5: Combine sign and value: $-1/2$."
+          ],
+          "final_answer": "-1/2"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Measuring the reference angle to the Y-axis.",
+          "correction": "If you have an angle of $120^\\circ$, it is $30^\\circ$ past the vertical $90^\\circ$ line. Do NOT use $30^\\circ$. Always measure to the horizontal x-axis ($180 - 120 = 60^\\circ$). If you use the y-axis, you will accidentally swap Sine and Cosine."
+        }
+      ],
+      "quick_summary": [
+        "Find the reference angle to the flat x-axis.",
+        "Evaluate the trig ratio as if it were a normal Q1 angle.",
+        "Use ASTC to slap a negative sign on it if needed."
+      ],
+      "utilities": [
+        {
+          "title": "Trigonometric and Hyperbolic Functions Calculator",
+          "description": "Evaluate a trigonometric ratio or check a calculator value after setting the correct angle mode.",
+          "url": "https://onlinetoolpad.com/others/Trigonometric_and_Hyperbolic_Functions_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t10_st09": {
+      "id": "hs_math_t10_st09",
+      "title": "Trigonometric identities",
+      "overview": "Trigonometric identities are mathematical laws that are universally true for absolutely any angle. They allow you to swap, substitute, and factor complex trigonometric expressions to simplify them or prove relationships.",
+      "key_concepts": [
+        {
+          "concept": "The Pythagorean identity",
+          "definition": "The central relationship",
+          "details": [
+            "For every angle where sine and cosine are defined, $\\sin^2\\theta+\\cos^2\\theta=1$. On a unit circle, this follows from $x^2+y^2=1$ with $x=\\cos\\theta$ and $y=\\sin\\theta$."
+          ]
+        },
+        {
+          "concept": "Two related identities",
+          "definition": "Divide the core identity",
+          "details": [
+            "Dividing by $\\cos^2\\theta$ gives $1+\\tan^2\\theta=\\sec^2\\theta$, where $\\cos\\theta\\ne0$.",
+            "Dividing by $\\sin^2\\theta$ gives $1+\\cot^2\\theta=\\csc^2\\theta$, where $\\sin\\theta\\ne0$."
+          ]
+        },
+        {
+          "concept": "Simple verification and substitution",
+          "definition": "Replace a squared expression using an identity",
+          "details": [
+            "To simplify or verify a basic expression, start from one side, substitute an equivalent expression from the identity, and simplify. State any restrictions caused by division by zero.",
+            "An identity is true for every allowed angle; an equation may be true only for selected angles."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Pythagorean identities",
+          "equation": "$$\\sin^2\\theta+\\cos^2\\theta=1,\\quad 1+\\tan^2\\theta=\\sec^2\\theta,\\quad 1+\\cot^2\\theta=\\csc^2\\theta$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st09_01",
+          "title": "Rearranging the Core Identity",
+          "type": "svg",
+          "caption": "You can algebraically rearrange the core identity to instantly swap out squared terms.",
+          "alt_text": "Visual showing 'sin²θ + cos²θ = 1' in the center. Arrows point left to 'sin²θ = 1 - cos²θ' and right to 'cos²θ = 1 - sin²θ'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"150\" y=\"20\" width=\"200\" height=\"50\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"10\"/><text x=\"250\" y=\"50\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">sin²θ + cos²θ = 1</text><path d=\"M 200 70 Q 120 90 120 130\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"120,130 115,120 125,120\" fill=\"#3b82f6\"/><rect x=\"40\" y=\"130\" width=\"160\" height=\"50\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"10\"/><text x=\"120\" y=\"160\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">sin²θ = 1 - cos²θ</text><path d=\"M 300 70 Q 380 90 380 130\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"380,130 375,120 385,120\" fill=\"#3b82f6\"/><rect x=\"300\" y=\"130\" width=\"160\" height=\"50\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"380\" y=\"160\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">cos²θ = 1 - sin²θ</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify the expression: $\\frac{1 - \\cos^2\\theta}{\\sin^2\\theta}$.",
+          "solution_steps": [
+            "Step 1: Look for squared terms. We know $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+            "Step 2: Rearrange it to get $1 - \\cos^2\\theta = \\sin^2\\theta$.",
+            "Step 3: Substitute the top of the fraction: $\\frac{\\sin^2\\theta}{\\sin^2\\theta}$.",
+            "Step 4: Any term divided by itself is $1$."
+          ],
+          "final_answer": "1"
+        },
+        {
+          "problem": "Simplify $\\sec^2\\theta - \\tan^2\\theta$.",
+          "solution_steps": [
+            "Step 1: Recall the mutant identity: $\\tan^2\\theta + 1 = \\sec^2\\theta$.",
+            "Step 2: Rearrange by subtracting $\\tan^2\\theta$ from both sides.",
+            "Step 3: This leaves $1 = \\sec^2\\theta - \\tan^2\\theta$."
+          ],
+          "final_answer": "1"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Squaring the angle instead of the function.",
+          "correction": "$\\sin^2\\theta$ means $(\\sin\\theta) \\times (\\sin\\theta)$. Writing $\\sin(\\theta^2)$ is completely wrong. The $2$ must go between the 'sin' and the angle."
+        }
+      ],
+      "quick_summary": [
+        "The Pythagorean identity is sin²θ + cos²θ = 1.",
+        "The related tangent and cotangent identities follow by dividing by cos²θ or sin²θ when those values are non-zero.",
+        "Use these identities for simple substitution and verification, and state any restrictions caused by division."
+      ]
+    },
+    "hs_math_t10_st12": {
+      "id": "hs_math_t10_st12",
+      "title": "Graphs of sine, cosine and tangent",
+      "overview": "Plotting sine, cosine and tangent against an angle produces repeating curves. Their basic intercepts, amplitudes, periods and asymptotes can be read from the graphs.",
+      "key_concepts": [
+        {
+          "concept": "The sine graph",
+          "definition": "Starts at zero",
+          "details": [
+            "The graph $y=\\sin\\theta$ passes through $(0^\\circ,0)$, reaches 1 at $90^\\circ$, returns to 0 at $180^\\circ$, reaches -1 at $270^\\circ$, and returns to 0 at $360^\\circ$.",
+            "Its amplitude is 1 and its period is $360^\\circ$."
+          ]
+        },
+        {
+          "concept": "The cosine graph",
+          "definition": "Starts at one",
+          "details": [
+            "The graph $y=\\cos\\theta$ starts at 1, crosses zero at $90^\\circ$, reaches -1 at $180^\\circ$, crosses zero at $270^\\circ$ and returns to 1 at $360^\\circ$.",
+            "Its amplitude is 1 and its period is $360^\\circ$."
+          ]
+        },
+        {
+          "concept": "The tangent graph",
+          "definition": "Repeats every 180 degrees",
+          "details": [
+            "The graph $y=\\tan\\theta$ crosses zero at $0^\\circ,180^\\circ,360^\\circ$ and repeats after $180^\\circ$.",
+            "Vertical asymptotes occur where cosine is zero, such as $90^\\circ$ and $270^\\circ$. The tangent value is undefined at these angles."
+          ]
+        },
+        {
+          "concept": "Read a graph carefully",
+          "definition": "Recognise the scale and cycle",
+          "details": [
+            "Check the angle axis, the vertical values and the location of intercepts before identifying a graph. The amplitude describes the maximum distance from the midline for sine and cosine; for the basic graphs it is 1."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Basic sine and cosine periods",
+          "equation": "$$T_{\\sin}=T_{\\cos}=360^\\circ$$",
+          "variables": {
+            "T": "Period"
+          }
+        },
+        {
+          "name": "Basic tangent period",
+          "equation": "$$T_{\\tan}=180^\\circ$$",
+          "variables": {
+            "T": "Period"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st12_01",
+          "title": "Basic sine, cosine and tangent graphs",
+          "type": "svg",
+          "caption": "The sine and cosine graphs repeat every 360 degrees; tangent repeats every 180 degrees and has vertical asymptotes.",
+          "alt_text": "Three small coordinate plots show sine and cosine waves on 0 to 360 degrees and a tangent curve with vertical asymptotes at 90 and 270 degrees.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 700 310\"><rect width=\"700\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><text x=\"175\" y=\"28\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Sine and cosine</text><line x1=\"45\" y1=\"165\" x2=\"320\" y2=\"165\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"45\" y1=\"55\" x2=\"45\" y2=\"265\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"45\" y=\"285\" font-size=\"12\" fill=\"#475569\">0°</text><text x=\"175\" y=\"285\" font-size=\"12\" fill=\"#475569\">180°</text><text x=\"300\" y=\"285\" font-size=\"12\" fill=\"#475569\">360°</text><path d=\"M45 165 C78 165 80 90 110 90 C140 90 145 165 175 165 C205 165 210 240 240 240 C270 240 280 165 310 165\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M45 90 C78 90 80 165 110 165 C140 165 145 240 175 240 C205 240 210 165 240 165 C270 165 280 90 310 90\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"62\" y=\"62\" font-size=\"13\" fill=\"#2563eb\">sin θ</text><text x=\"105\" y=\"78\" font-size=\"13\" fill=\"#ea580c\">cos θ</text><text x=\"500\" y=\"28\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Tangent</text><line x1=\"380\" y1=\"165\" x2=\"670\" y2=\"165\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"520\" y1=\"55\" x2=\"520\" y2=\"265\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"450\" y1=\"55\" x2=\"450\" y2=\"265\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><line x1=\"590\" y1=\"55\" x2=\"590\" y2=\"265\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><path d=\"M380 165 C405 165 430 95 445 55 M455 275 C475 205 495 165 520 165 C545 165 565 125 585 55 M595 275 C615 205 640 165 665 165\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"450\" y=\"285\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">90°</text><text x=\"590\" y=\"285\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">270°</text><text x=\"520\" y=\"285\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">180°</text><text x=\"500\" y=\"245\" font-size=\"12\" fill=\"#16a34a\">tan θ</text><text x=\"350\" y=\"298\" font-size=\"11\" fill=\"#475569\">Asymptotes at 90° and 270°</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "How many complete cycles does the graph of $y = \\sin \\theta$ complete between $0^\\circ$ and $720^\\circ$?",
+          "solution_steps": [
+            "Step 1: The standard period (length of one full wave cycle) for $y = \\sin \\theta$ is $360^\\circ$.",
+            "Step 2: Divide the given interval ($720$) by the period ($360$).",
+            "Step 3: $720 / 360 = 2$."
+          ],
+          "final_answer": "2 complete cycles."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Drawing Tangent as a continuous wave.",
+          "correction": "The Tangent graph is completely broken. It must have sharp vertical gaps (asymptotes) at $90^\\circ$ and $270^\\circ$ where the function simply ceases to exist."
+        }
+      ],
+      "quick_summary": [
+        "Sine starts at 0, Cosine starts at 1.",
+        "Both are waves that repeat every $360^\\circ$ (Period) and bounce between $+1$ and $-1$ (Amplitude).",
+        "Tangent is a series of infinite vertical curves that repeat every $180^\\circ$ with asymptotes at $90^\\circ$ and $270^\\circ$."
+      ]
+    },
+    "hs_math_t10_st13": {
+      "id": "hs_math_t10_st13",
+      "title": "Compound-angle identities",
+      "overview": "You cannot simply distribute a trig function across addition. $\\sin(45^\\circ + 30^\\circ)$ is NOT $\\sin(45^\\circ) + \\sin(30^\\circ)$. To break apart a trig function containing two different angles being added or subtracted, we use Compound-Angle Identities.",
+      "key_concepts": [
+        {
+          "concept": "Sine addition and subtraction",
+          "definition": "Sine keeps the sign",
+          "details": [
+            "$\\sin(A+B)=\\sin A\\cos B+\\cos A\\sin B$.",
+            "$\\sin(A-B)=\\sin A\\cos B-\\cos A\\sin B$."
+          ]
+        },
+        {
+          "concept": "Cosine addition and subtraction",
+          "definition": "Cosine reverses the sign",
+          "details": [
+            "$\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B$.",
+            "$\\cos(A-B)=\\cos A\\cos B+\\sin A\\sin B$."
+          ]
+        },
+        {
+          "concept": "Tangent addition and subtraction",
+          "definition": "Form a quotient of sine and cosine",
+          "details": [
+            "$\\tan(A+B)=\\frac{\\tan A+\\tan B}{1-\\tan A\\tan B}$.",
+            "$\\tan(A-B)=\\frac{\\tan A-\\tan B}{1+\\tan A\\tan B}$. Use these forms only when the expressions are defined and the denominator is non-zero."
+          ]
+        },
+        {
+          "concept": "Why the sine and cosine formulas combine",
+          "definition": "An accessible unit-circle interpretation",
+          "details": [
+            "A unit vector at angle A has horizontal and vertical components $\\cos A$ and $\\sin A$. Rotating it through a further angle B mixes those components: the new horizontal component is $\\cos A\\cos B-\\sin A\\sin B$, and the new vertical component is $\\sin A\\cos B+\\cos A\\sin B$.",
+            "This gives the cosine and sine addition formulas. The subtraction forms follow by replacing B with -B and using the negative-angle relationships."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sine addition and subtraction",
+          "equation": "$$\\sin(A\\pm B)=\\sin A\\cos B\\pm\\cos A\\sin B$$",
+          "variables": {}
+        },
+        {
+          "name": "Cosine addition and subtraction",
+          "equation": "$$\\cos(A\\pm B)=\\cos A\\cos B\\mp\\sin A\\sin B$$",
+          "variables": {}
+        },
+        {
+          "name": "Tangent addition and subtraction",
+          "equation": "$$\\tan(A\\pm B)=\\frac{\\tan A\\pm\\tan B}{1\\mp\\tan A\\tan B}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st13_01",
+          "title": "Compound-angle formula structure",
+          "type": "svg",
+          "caption": "A further rotation combines the horizontal and vertical components of a unit-circle point.",
+          "alt_text": "A formula panel shows the sine addition formula and cosine addition formula as horizontal and vertical components, plus the tangent quotient formula.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 700 260\"><rect width=\"700\" height=\"260\" rx=\"12\" fill=\"#f8fafc\"/><rect x=\"30\" y=\"25\" width=\"640\" height=\"80\" rx=\"12\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"350\" y=\"57\" font-size=\"20\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">sin(A + B) = sin A cos B + cos A sin B</text><text x=\"350\" y=\"84\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e40af\">Vertical component after the combined rotation</text><rect x=\"30\" y=\"125\" width=\"640\" height=\"80\" rx=\"12\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"350\" y=\"157\" font-size=\"20\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">cos(A + B) = cos A cos B - sin A sin B</text><text x=\"350\" y=\"184\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\">Horizontal component after the combined rotation</text><text x=\"350\" y=\"238\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">tan(A + B) = [tan A + tan B] / [1 − tan A tan B]</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the exact value of $\\cos(75^\\circ)$.",
+          "solution_steps": [
+            "Step 1: Break $75^\\circ$ down into two special angles we know: $45^\\circ + 30^\\circ$.",
+            "Step 2: Use the Cosine Addition identity: $\\cos(45^\\circ + 30^\\circ) = \\cos 45^\\circ \\cos 30^\\circ - \\sin 45^\\circ \\sin 30^\\circ$. (Notice the flipped sign).",
+            "Step 3: Substitute exact values: $(\\frac{\\sqrt{2}}{2})(\\frac{\\sqrt{3}}{2}) - (\\frac{\\sqrt{2}}{2})(\\frac{1}{2})$.",
+            "Step 4: Multiply fractions: $\\frac{\\sqrt{6}}{4} - \\frac{\\sqrt{2}}{4}$.",
+            "Step 5: Combine into one fraction: $\\frac{\\sqrt{6} - \\sqrt{2}}{4}$."
+          ],
+          "final_answer": "(√6 - √2) / 4"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Distributing the Trig Function.",
+          "correction": "Writing $\\sin(A + B) = \\sin A + \\sin B$ is a fatal error. Trig functions are not variables; they are operations. You cannot distribute them algebraically."
+        }
+      ],
+      "quick_summary": [
+        "These identities allow you to evaluate weird angles (like $15^\\circ$ or $75^\\circ$) by breaking them into $30$, $45$, or $60$.",
+        "Sine Mixes and Keeps the sign.",
+        "Cosine Groups and Flips the sign."
+      ],
+      "utilities": [
+        {
+          "title": "Trigonometric and Hyperbolic Functions Calculator",
+          "description": "Evaluate a trigonometric ratio or check a calculator value after setting the correct angle mode.",
+          "url": "https://onlinetoolpad.com/others/Trigonometric_and_Hyperbolic_Functions_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t10_st14": {
+      "id": "hs_math_t10_st14",
+      "title": "Double-angle identities",
+      "overview": "What happens if you use the Compound-Angle identities, but both angles are exactly the same? e.g., $\\sin(A + A)$. You get the Double-Angle Identities. These are powerful tools for halving complex angles to make equations solvable.",
+      "key_concepts": [
+        {
+          "concept": "Sine double-angle identity",
+          "definition": "Twice the angle",
+          "details": [
+            "Putting A=B=θ in the sine addition formula gives $\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$."
+          ]
+        },
+        {
+          "concept": "Cosine double-angle identities",
+          "definition": "Three equivalent forms",
+          "details": [
+            "The standard form is $\\cos(2\\theta)=\\cos^2\\theta-\\sin^2\\theta$.",
+            "Using $\\sin^2\\theta+\\cos^2\\theta=1$, this can also be written as $2\\cos^2\\theta-1$ or $1-2\\sin^2\\theta$."
+          ]
+        },
+        {
+          "concept": "Tangent double-angle identity",
+          "definition": "A quotient form",
+          "details": [
+            "$\\tan(2\\theta)=\\frac{2\\tan\\theta}{1-\\tan^2\\theta}$ when the expression is defined and $1-\\tan^2\\theta\\ne0$."
+          ]
+        },
+        {
+          "concept": "Choosing a useful form",
+          "definition": "Use the information supplied",
+          "details": [
+            "Use the cosine form containing only cosine if $\\cos\\theta$ is known, and the form containing only sine if $\\sin\\theta$ is known.",
+            "Check the quadrant or any stated angle condition before choosing a sign for a missing ratio."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sine double-angle",
+          "equation": "$$\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$$",
+          "variables": {}
+        },
+        {
+          "name": "Cosine double-angle",
+          "equation": "$$\\cos(2\\theta)=\\cos^2\\theta-\\sin^2\\theta=2\\cos^2\\theta-1=1-2\\sin^2\\theta$$",
+          "variables": {}
+        },
+        {
+          "name": "Tangent double-angle",
+          "equation": "$$\\tan(2\\theta)=\\frac{2\\tan\\theta}{1-\\tan^2\\theta}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st14_01",
+          "title": "The Three Cosine Paths",
+          "type": "svg",
+          "caption": "You can pick whichever Cosine formula best fits the variables you are given.",
+          "alt_text": "Visual showing cos(2θ) leading to three paths. Top path: 'cos²θ - sin²θ (If you know both)'. Middle path: '2cos²θ - 1 (If you only know Cosine)'. Bottom path: '1 - 2sin²θ (If you only know Sine)'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"80\" width=\"90\" height=\"40\" fill=\"#1e3a8a\" rx=\"5\"/><text x=\"65\" y=\"105\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#ffffff\" font-weight=\"bold\">cos(2θ)</text><path d=\"M 110 100 L 160 50 L 180 50\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"3\"/><path d=\"M 110 100 L 180 100\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"3\"/><path d=\"M 110 100 L 160 150 L 180 150\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"3\"/><rect x=\"180\" y=\"30\" width=\"300\" height=\"40\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"330\" y=\"55\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">cos²θ - sin²θ</text><rect x=\"180\" y=\"80\" width=\"300\" height=\"40\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"330\" y=\"105\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">2cos²θ - 1</text><rect x=\"180\" y=\"130\" width=\"300\" height=\"40\" fill=\"#ffedd5\" rx=\"5\"/><text x=\"330\" y=\"155\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">1 - 2sin²θ</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "If $\\sin \\theta = \\frac{3}{5}$ and $\\theta$ is acute, find $\\cos(2\\theta)$.",
+          "solution_steps": [
+            "Step 1: We only know Sine. Therefore, use the third Cosine form: $\\cos(2\\theta) = 1 - 2\\sin^2\\theta$.",
+            "Step 2: Substitute: $1 - 2(\\frac{3}{5})^2$.",
+            "Step 3: Square the fraction: $1 - 2(\\frac{9}{25})$.",
+            "Step 4: Multiply by 2: $1 - \\frac{18}{25}$.",
+            "Step 5: Convert 1 to a fraction and subtract: $\\frac{25}{25} - \\frac{18}{25} = \\frac{7}{25}$."
+          ],
+          "final_answer": "7/25"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Pulling the $2$ outside the function.",
+          "correction": "$\\sin(2\\theta)$ is absolutely NOT equal to $2\\sin\\theta$. You cannot pull the $2$ out of the brackets. You MUST use the formula ($2\\sin\\theta\\cos\\theta$)."
+        }
+      ],
+      "quick_summary": [
+        "Double-angle identities express functions of 2θ in terms of functions of θ.",
+        "Sine has one standard double-angle form; cosine has three equivalent forms.",
+        "The tangent double-angle form is a quotient and is used only where it is defined."
+      ],
+      "utilities": [
+        {
+          "title": "Trigonometric and Hyperbolic Functions Calculator",
+          "description": "Evaluate a trigonometric ratio or check a calculator value after setting the correct angle mode.",
+          "url": "https://onlinetoolpad.com/others/Trigonometric_and_Hyperbolic_Functions_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t10_st15": {
+      "id": "hs_math_t10_st15",
+      "title": "Trigonometric equations",
+      "overview": "Elementary trigonometric equations ask which angles in a stated interval satisfy a given ratio or a simple identity. Use standard values, quadrant signs and basic algebra to list the required solutions in that interval.",
+      "key_concepts": [
+        {
+          "concept": "An equation is not an identity",
+          "definition": "Solve for angles that satisfy the statement",
+          "details": [
+            "A trigonometric identity holds for every angle where it is defined. A trigonometric equation is true only for particular angles.",
+            "The interval in the question is essential: list every solution in that interval and do not include values outside it."
+          ]
+        },
+        {
+          "concept": "Solve using a standard value",
+          "definition": "Reference angle and quadrant signs",
+          "details": [
+            "For example, $\\sin\\theta=\\frac12$ has reference angle $30^\\circ$. Sine is positive in Quadrants I and II, so within $0^\\circ\\leq\\theta\\leq360^\\circ$ the solutions are $30^\\circ$ and $150^\\circ$."
+          ]
+        },
+        {
+          "concept": "Use a basic identity or factorisation",
+          "definition": "Convert to a simple algebraic equation",
+          "details": [
+            "For $2\\sin^2\\theta-1=0$, isolate $\\sin^2\\theta$, take both square-root signs, then identify the quadrants that give positive and negative sine.",
+            "For a factorised expression such as $\\cos\\theta(1-\\cos\\theta)=0$, solve each factor equation separately and check each candidate against the interval."
+          ]
+        },
+        {
+          "concept": "Check endpoints and duplicate solutions",
+          "definition": "Respect the stated interval",
+          "details": [
+            "Check whether interval endpoints are included. Do not count the same angle twice if two equivalent expressions produce it."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st15_01",
+          "title": "The Multiple Answer Problem",
+          "type": "svg",
+          "caption": "A single y-value cuts through the circle twice, giving two valid angles.",
+          "alt_text": "Visual showing a unit circle. A horizontal dashed line slices through the top half at y = 0.5. It hits the circle in Q1 and Q2. Solid lines go from the center to these two hits. The Q1 angle is labeled 30°. The Q2 angle is labeled 150°. Text says 'sin(θ) = 0.5 has TWO answers in 360°'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"250\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#0ea5e9\" stroke-width=\"3\"/><line x1=\"250\" y1=\"30\" x2=\"250\" y2=\"170\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"130\" y1=\"150\" x2=\"370\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"130\" y1=\"100\" x2=\"370\" y2=\"100\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"6,6\"/><text x=\"380\" y=\"105\" font-family=\"monospace\" font-size=\"14\" fill=\"#b91c1c\" font-weight=\"bold\">y = 0.5</text><circle cx=\"336\" cy=\"100\" r=\"5\" fill=\"#1e3a8a\"/><circle cx=\"164\" cy=\"100\" r=\"5\" fill=\"#1e3a8a\"/><path d=\"M 250 150 L 336 100\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><path d=\"M 250 150 L 164 100\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><text x=\"295\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">30°</text><text x=\"195\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">150°</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve $2\\sin^2\\theta - 1 = 0$ for $0^\\circ \\leq \\theta \\leq 360^\\circ$.",
+          "solution_steps": [
+            "Step 1: Treat $\\sin\\theta$ like a variable ($2x^2 - 1 = 0$).",
+            "Step 2: Isolate $\\sin^2\\theta$: $2\\sin^2\\theta = 1 \\implies \\sin^2\\theta = 0.5$.",
+            "Step 3: Square root both sides. CRITICAL: Remember the $\\pm$. $\\sin\\theta = \\pm\\frac{1}{\\sqrt{2}}$.",
+            "Step 4: The reference angle for $1/\\sqrt{2}$ is $45^\\circ$.",
+            "Step 5: Because we have $\\pm$, the answer is valid in ALL FOUR quadrants.",
+            "Step 6: Q1 ($45^\\circ$), Q2 ($180-45 = 135^\\circ$), Q3 ($180+45 = 225^\\circ$), Q4 ($360-45 = 315^\\circ$)."
+          ],
+          "final_answer": "45°, 135°, 225°, 315°"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dividing by a trigonometric function.",
+          "correction": "If you have $\\sin\\theta\\cos\\theta = \\sin\\theta$, DO NOT divide both sides by $\\sin\\theta$ to get $\\cos\\theta = 1$. By dividing, you deleted the scenario where $\\sin\\theta = 0$, thereby deleting half of your valid answers. Always bring everything to one side and factor out instead: $\\sin\\theta(\\cos\\theta - 1) = 0$."
+        }
+      ],
+      "quick_summary": [
+        "An equation is solved only over the interval stated in the question.",
+        "Use reference angles and quadrant signs to list all solutions.",
+        "When taking square roots, keep both the positive and negative possibilities."
+      ],
+      "utilities": [
+        {
+          "title": "Trigonometric and Hyperbolic Functions Calculator",
+          "description": "Evaluate a trigonometric ratio or check a calculator value after setting the correct angle mode.",
+          "url": "https://onlinetoolpad.com/others/Trigonometric_and_Hyperbolic_Functions_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t10_st19": {
+      "id": "hs_math_t10_st19",
+      "title": "Inverse trigonometric functions",
+      "overview": "Inverse trigonometric keys recover an angle when a trigonometric ratio is known. They are useful for evaluating an angle from a side ratio in a right triangle and for interpreting calculator answers in a stated interval.",
+      "key_concepts": [
+        {
+          "concept": "Inverse trigonometric notation",
+          "definition": "Recover an angle from a ratio",
+          "details": [
+            "$\\sin^{-1}(x)$, $\\cos^{-1}(x)$ and $\\tan^{-1}(x)$ are read as inverse sine, inverse cosine and inverse tangent. They return an angle whose trigonometric ratio is x.",
+            "The superscript -1 here means inverse operation; it does not mean reciprocal. For example, $\\sin^{-1}(0.5)=30^\\circ$, while $1/\\sin30^\\circ=2$."
+          ]
+        },
+        {
+          "concept": "Principal values",
+          "definition": "The calculator returns one selected angle",
+          "details": [
+            "A ratio can correspond to more than one angle over a full turn. The inverse key returns one principal value according to the calculator convention.",
+            "For example, both $120^\\circ$ and $240^\\circ$ have cosine $-0.5$, but $\\cos^{-1}(-0.5)$ returns $120^\\circ$. Use the quadrant rules and the interval in a question to identify any other required angles."
+          ]
+        },
+        {
+          "concept": "Calculator procedure",
+          "definition": "Check mode and interpret the result",
+          "details": [
+            "Select degree or radian mode according to the question. Enter the ratio inside the inverse function, then state the angle with its unit.",
+            "For right-triangle applications, choose the acute angle consistent with the diagram. Principal values used in general intervals are connected to the trigonometric-equation lesson."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Inverse sine",
+          "equation": "$$\\theta=\\sin^{-1}(r)$$",
+          "variables": {
+            "r": "Given sine ratio"
+          }
+        },
+        {
+          "name": "Inverse cosine",
+          "equation": "$$\\theta=\\cos^{-1}(r)$$",
+          "variables": {
+            "r": "Given cosine ratio"
+          }
+        },
+        {
+          "name": "Inverse tangent",
+          "equation": "$$\\theta=\\tan^{-1}(r)$$",
+          "variables": {
+            "r": "Given tangent ratio"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v10_st19_01",
+          "title": "A principal value and another valid angle",
+          "type": "svg",
+          "caption": "An inverse-trig calculator returns one principal value; interval and quadrant information can identify additional angles.",
+          "alt_text": "A unit-circle sketch marks two angles 30 degrees and 150 degrees with the same sine value 0.5. A calculator box shows inverse sine of 0.5 returning the principal value 30 degrees.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 240\"><rect width=\"600\" height=\"250\" rx=\"12\" fill=\"#f8fafc\"/><line x1=\"65\" y1=\"135\" x2=\"535\" y2=\"135\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"300\" y1=\"25\" x2=\"300\" y2=\"230\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"135\" r=\"88\" fill=\"none\" stroke=\"#0ea5e9\" stroke-width=\"3\"/><line x1=\"300\" y1=\"135\" x2=\"376\" y2=\"91\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"300\" y1=\"135\" x2=\"224\" y2=\"91\" stroke=\"#16a34a\" stroke-width=\"3\"/><circle cx=\"376\" cy=\"91\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"224\" cy=\"91\" r=\"5\" fill=\"#16a34a\"/><text x=\"384\" y=\"86\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">30°</text><text x=\"174\" y=\"86\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\">150°</text><line x1=\"224\" y1=\"91\" x2=\"376\" y2=\"91\" stroke=\"#ea580c\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><text x=\"300\" y=\"78\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\">same sine = 0.5</text><rect x=\"385\" y=\"165\" width=\"190\" height=\"58\" rx=\"8\" fill=\"#fff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><text x=\"480\" y=\"188\" text-anchor=\"middle\" font-size=\"15\" fill=\"#0f172a\">sin⁻¹(0.5)</text><text x=\"480\" y=\"210\" text-anchor=\"middle\" font-size=\"16\" fill=\"#1d4ed8\" font-weight=\"bold\">returns 30°</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\cos^{-1}(-0.5)$ using a calculator in degree mode.",
+          "solution_steps": [
+            "Step 1: The reference angle for a cosine value of $0.5$ is $60^\\circ$.",
+            "Step 2: Cosine is negative in Quadrants II and III, so more than one angle on a full turn can have cosine $-0.5$.",
+            "Step 3: The inverse-cosine key returns the principal value according to the calculator convention. For this input, it returns $120^\\circ$."
+          ],
+          "final_answer": "$120^\\circ$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming the inverse key lists every angle with the given ratio.",
+          "correction": "An inverse-trigonometric key returns one principal value. Use the quadrant rules and the interval in the question to identify any other solutions that are required."
+        }
+      ],
+      "quick_summary": [
+        "Inverse sine, cosine and tangent recover an angle from a ratio.",
+        "The calculator returns one principal value; another angle may be needed for a specified interval.",
+        "The superscript −1 means inverse function, not reciprocal."
+      ],
+      "utilities": [
+        {
+          "title": "Trigonometric and Hyperbolic Functions Calculator",
+          "description": "Evaluate a trigonometric ratio or check a calculator value after setting the correct angle mode.",
+          "url": "https://onlinetoolpad.com/others/Trigonometric_and_Hyperbolic_Functions_Calculator",
+          "icon": "calculator"
+        }
+      ]
+    }
+  }
+}

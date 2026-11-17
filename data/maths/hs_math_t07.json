@@ -1,0 +1,1372 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t07",
+  "topicTitle": "Exponents, Logarithms and Exponential Functions",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t07_st01": {
+      "id": "hs_math_t07_st01",
+      "title": "Advanced Applications of Exponent Laws",
+      "overview": "This lesson applies the exponent rules already learned in High School Topic 1 to longer algebraic expressions. The emphasis is on choosing an efficient order, keeping coefficients with their variables, combining powers only when the bases match, and presenting final answers with positive exponents.",
+      "key_concepts": [
+        {
+          "concept": "Simplifying a multi-step expression",
+          "definition": "Work from the structure outward.",
+          "details": [
+            "Identify grouped factors, powers of products and quotients before combining terms.",
+            "Apply an outside power to every factor inside its brackets, including numerical coefficients.",
+            "After expanding powers, combine only factors with the same base. Keep numerical coefficients separate from variable bases."
+          ]
+        },
+        {
+          "concept": "Powers in algebraic fractions",
+          "definition": "Compare numerator and denominator exponents.",
+          "details": [
+            "For a non-zero variable, division of like bases produces the difference between the exponents.",
+            "A negative exponent indicates a reciprocal; rewrite it in the denominator or numerator so the final expression uses positive exponents.",
+            "State restrictions such as x ≠ 0 and y ≠ 0 whenever a variable occurs in a denominator."
+          ]
+        },
+        {
+          "concept": "Changing to a common base",
+          "definition": "Make equivalent exponential forms easier to compare.",
+          "details": [
+            "Rewrite numerical bases as powers of a common prime base where useful.",
+            "Then combine or compare the resulting powers using the exponent laws; do not combine different bases before rewriting them."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Power of a product followed by division",
+          "equation": "$$\\frac{(ab)^p}{a^q b^r}=a^{p-q}b^{p-r}$$",
+          "variables": {
+            "a, b": "Non-zero bases",
+            "p, q, r": "Exponents"
+          }
+        },
+        {
+          "name": "Combining a common base",
+          "equation": "$$\\frac{a^m}{a^n}=a^{m-n}\\quad(a\\ne0)$$",
+          "variables": {
+            "a": "Non-zero base"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st01",
+          "title": "Advanced Simplification Strategy",
+          "type": "svg",
+          "caption": "Group factors first, combine only matching bases, and move negative powers across the fraction bar.",
+          "alt_text": "A three-stage flow from grouping factors to combining like bases to rewriting negative powers, ending with y^7/x^5 for x and y non-zero.",
+          "data": "<svg viewBox=\"0 0 520 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"220\" rx=\"12\" fill=\"#f8fafc\"/><rect x=\"25\" y=\"35\" width=\"145\" height=\"55\" rx=\"7\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"97\" y=\"58\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Group factors</text><text x=\"97\" y=\"77\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"normal\">and coefficients</text><rect x=\"188\" y=\"35\" width=\"145\" height=\"55\" rx=\"7\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"260\" y=\"58\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Combine powers</text><text x=\"260\" y=\"77\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"normal\">of matching bases</text><rect x=\"351\" y=\"35\" width=\"145\" height=\"55\" rx=\"7\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"423\" y=\"58\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">Rewrite negative</text><text x=\"423\" y=\"77\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"normal\">powers as fractions</text><line x1=\"170\" y1=\"62\" x2=\"187\" y2=\"62\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"333\" y1=\"62\" x2=\"350\" y2=\"62\" stroke=\"#64748b\" stroke-width=\"2\"/><rect x=\"75\" y=\"125\" width=\"370\" height=\"65\" rx=\"7\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"260\" y=\"151\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">(3x⁻²y³)² ÷ (9xy⁻¹)</text><text x=\"260\" y=\"176\" font-family=\"monospace\" font-size=\"17\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">= y⁷ / x⁵   (x, y ≠ 0)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify and write with positive exponents: $\\frac{(3x^{-2}y^3)^2}{9xy^{-1}}$.",
+          "solution_steps": [
+            "Step 1: Apply the power to every factor in the numerator: $(3x^{-2}y^3)^2=9x^{-4}y^6$.",
+            "Step 2: Substitute into the fraction: $\\frac{9x^{-4}y^6}{9x^1y^{-1}}$.",
+            "Step 3: Cancel the numerical coefficients and subtract exponents of matching bases: $x^{-4-1}y^{6-(-1)}=x^{-5}y^7$.",
+            "Step 4: Move $x^{-5}$ to the denominator to make the exponent positive.",
+            "The variables must be non-zero because they occur in the original denominator."
+          ],
+          "final_answer": "$\\frac{y^7}{x^5}$, where $x\\ne0$ and $y\\ne0$."
+        },
+        {
+          "problem": "Evaluate $\\frac{8^2\\times4^3}{16^2}$ by rewriting all bases as powers of 2.",
+          "solution_steps": [
+            "Step 1: Write $8=2^3$, $4=2^2$ and $16=2^4$.",
+            "Step 2: Substitute: $\\frac{(2^3)^2(2^2)^3}{(2^4)^2}$.",
+            "Step 3: Multiply the exponents in each power: $\\frac{2^6\\times2^6}{2^8}$.",
+            "Step 4: Combine the numerator and then divide: $2^{6+6-8}=2^4$."
+          ],
+          "final_answer": "$16$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying an exponent to the variables but not the coefficient.",
+          "correction": "In $(3x^2y)^2$, the coefficient 3 is squared too: the result begins with 9."
+        },
+        {
+          "mistake": "Combining powers with different bases.",
+          "correction": "Only combine exponents after the bases match. Rewrite bases such as 8, 4 and 16 as powers of 2 first."
+        },
+        {
+          "mistake": "Leaving negative exponents when a positive-exponent answer is requested.",
+          "correction": "Use $a^{-n}=1/a^n$ for a non-zero base and state any denominator restrictions."
+        }
+      ],
+      "quick_summary": [
+        "Simplify in stages: expand grouped powers, combine matching bases, then tidy the coefficients.",
+        "Use a common base when numerical bases are related powers.",
+        "Rewrite negative exponents as reciprocals and state non-zero restrictions."
+      ]
+    },
+    "hs_math_t07_st02": {
+      "id": "hs_math_t07_st02",
+      "title": "Irrational Exponents and Their Applications",
+      "overview": "An irrational exponent is an exponent that cannot be written as a ratio of two integers, such as √2 or π. In High School, these powers are interpreted through the exponential function and approximated numerically. The focus is on meaning, sensible estimation and the effect of the base, not advanced proofs about real-number exponentiation.",
+      "key_concepts": [
+        {
+          "concept": "What an irrational exponent means",
+          "definition": "A real exponent that is not a rational number.",
+          "details": [
+            "Examples include $2^{\\sqrt2}$, $5^{\\pi}$ and $3^{-\\sqrt2}$.",
+            "For a positive base, a real exponential function can be evaluated at irrational inputs; the resulting value is usually given as a decimal approximation.",
+            "The exponent is not the same thing as the base: in $2^{\\sqrt2}$ the base is 2 and the irrational exponent is $\\sqrt2$."
+          ]
+        },
+        {
+          "concept": "Estimating with nearby rational numbers",
+          "definition": "Use bounds before using a calculator.",
+          "details": [
+            "Since $1.4<\\sqrt2<1.5$ and the base 2 is greater than 1, $2^{1.4}<2^{\\sqrt2}<2^{1.5}$.",
+            "For a base between 0 and 1, the exponential function decreases as the exponent increases, so the direction of such inequalities reverses.",
+            "A calculator provides a useful decimal approximation; a bound gives a reasonableness check."
+          ]
+        },
+        {
+          "concept": "How the base affects the value",
+          "definition": "Growth or decay as the exponent changes.",
+          "details": [
+            "If $a>1$, increasing the real exponent increases $a^x$.",
+            "If $0<a<1$, increasing the real exponent decreases $a^x$.",
+            "A positive base is required for the real-valued exponential function at every real exponent; negative bases do not generally give real values for irrational exponents."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Approximation using a calculator",
+          "equation": "$$a^{\\sqrt q}\\approx\\text{decimal value}\\quad(a>0)$$",
+          "variables": {
+            "a": "Positive base",
+            "q": "Positive number whose square root is irrational in the example"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st02",
+          "title": "Estimating an Irrational Exponent",
+          "type": "svg",
+          "caption": "Bound the irrational exponent, use the behaviour of the base, then check the decimal approximation.",
+          "alt_text": "The bound 1.4 < square root 2 < 1.5 is used to bound 2 to the power square root 2, followed by the calculator approximation 2.6651.",
+          "data": "<svg viewBox=\"0 0 520 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"220\" rx=\"12\" fill=\"#f8fafc\"/><rect x=\"25\" y=\"30\" width=\"205\" height=\"68\" rx=\"7\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"127\" y=\"56\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">1.4 &lt; √2 &lt; 1.5</text><text x=\"127\" y=\"79\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"normal\">bound the exponent</text><rect x=\"290\" y=\"30\" width=\"205\" height=\"68\" rx=\"7\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"392\" y=\"56\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">2¹·⁴ &lt; 2^(√2) &lt; 2¹·⁵</text><text x=\"392\" y=\"79\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"normal\">because base 2 &gt; 1</text><line x1=\"230\" y1=\"64\" x2=\"288\" y2=\"64\" stroke=\"#64748b\" stroke-width=\"2\"/><rect x=\"80\" y=\"130\" width=\"360\" height=\"55\" rx=\"7\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"260\" y=\"153\" font-family=\"monospace\" font-size=\"22\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">2^(√2) ≈ 2.6651</text><text x=\"260\" y=\"174\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"normal\">calculator approximation</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Estimate and then approximate $2^{\\sqrt2}$.",
+          "solution_steps": [
+            "Step 1: Use $1.4<\\sqrt2<1.5$.",
+            "Step 2: Since the base 2 is greater than 1, raising 2 to a larger exponent gives a larger value: $2^{1.4}<2^{\\sqrt2}<2^{1.5}$.",
+            "Step 3: The bounds are approximately $2.639<2^{\\sqrt2}<2.828$.",
+            "Step 4: A calculator gives $2^{\\sqrt2}\\approx2.6651$, which lies inside the estimated interval."
+          ],
+          "final_answer": "$2^{\\sqrt2}\\approx2.6651$."
+        },
+        {
+          "problem": "Find a decimal approximation for $2^{-\\sqrt2}$.",
+          "solution_steps": [
+            "Step 1: Use the negative-exponent rule: $2^{-\\sqrt2}=\\frac{1}{2^{\\sqrt2}}$.",
+            "Step 2: From the previous calculation, $2^{\\sqrt2}\\approx2.665144$.",
+            "Step 3: Take the reciprocal: $1\\div2.665144\\approx0.375214$."
+          ],
+          "final_answer": "$2^{-\\sqrt2}\\approx0.3752$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating an irrational exponent as if it were an ordinary integer.",
+          "correction": "The exponent can be approximated by a decimal for calculation, but it is not exactly equal to a terminating decimal."
+        },
+        {
+          "mistake": "Assuming a larger exponent always produces a larger value.",
+          "correction": "That is true when the base is greater than 1. For a base between 0 and 1, the function decreases as the exponent increases."
+        },
+        {
+          "mistake": "Using a negative base with an arbitrary irrational exponent and assuming the result is real.",
+          "correction": "Use positive bases when working with real exponential functions for all real exponents."
+        }
+      ],
+      "quick_summary": [
+        "Irrational exponents include powers such as $2^{\\sqrt2}$.",
+        "Use nearby rational bounds to estimate and check the decimal value.",
+        "For bases above 1 the power increases with the exponent; for bases between 0 and 1 it decreases."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check decimal approximations of powers with irrational exponents; use bounds and reasoning before relying on the calculator.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t07_st03": {
+      "id": "hs_math_t07_st03",
+      "title": "Exponential expressions",
+      "overview": "An exponential expression has a variable in its exponent, for example $3^x$ or $5^{2x-1}$. This differs from a polynomial power such as $x^3$, where the variable is the base. This lesson develops recognition, substitution, comparison and equivalent exponential forms as preparation for exponential equations and graphs.",
+      "key_concepts": [
+        {
+          "concept": "Power expressions and exponential expressions",
+          "definition": "Identify which part contains the variable.",
+          "details": [
+            "In $x^3$, the variable is the base and the exponent is fixed.",
+            "In $3^x$, the base is fixed and the exponent is variable.",
+            "Expressions such as $4^{2x+1}$ are exponential because the variable appears in the exponent."
+          ]
+        },
+        {
+          "concept": "Evaluating exponential expressions",
+          "definition": "Substitute the given value into the exponent.",
+          "details": [
+            "Use brackets when substituting a negative or multi-term value for the variable.",
+            "For example, if $x=2$, then $2^{x+1}=2^3=8$.",
+            "Keep the order of operations clear: simplify the exponent before evaluating the power."
+          ]
+        },
+        {
+          "concept": "Comparing and rewriting bases",
+          "definition": "Equivalent bases reveal structure.",
+          "details": [
+            "If two numerical bases are powers of a common number, rewrite them before comparing the expressions.",
+            "For example, $9^x=(3^2)^x=3^{2x}$ and $27^{x-1}=3^{3x-3}$.",
+            "For an exponential expression $b^x$, the base controls whether values increase ($b>1$) or decrease ($0<b<1$) as $x$ increases."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Equivalent exponential forms",
+          "equation": "$$(a^m)^x=a^{mx}$$",
+          "variables": {
+            "a": "Positive base",
+            "m, x": "Exponents"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st03",
+          "title": "Power Expression versus Exponential Expression",
+          "type": "svg",
+          "caption": "The variable appears in a different position, so x cubed and three to the power x behave differently.",
+          "alt_text": "Side-by-side comparison of x cubed and 3 to the power x with x equal to 2: 8 versus 9.",
+          "data": "<svg viewBox=\"0 0 520 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"220\" rx=\"12\" fill=\"#f8fafc\"/><rect x=\"30\" y=\"35\" width=\"215\" height=\"65\" rx=\"7\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"137\" y=\"60\" font-family=\"monospace\" font-size=\"25\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">x³</text><text x=\"137\" y=\"83\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"normal\">variable is the base</text><rect x=\"275\" y=\"35\" width=\"215\" height=\"65\" rx=\"7\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"382\" y=\"60\" font-family=\"monospace\" font-size=\"25\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">3ˣ</text><text x=\"382\" y=\"83\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"normal\">variable is the exponent</text><text x=\"260\" y=\"142\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"bold\">For  x = 2:</text><rect x=\"95\" y=\"160\" width=\"140\" height=\"42\" rx=\"7\" fill=\"#eff6ff\" stroke=\"#60a5fa\" stroke-width=\"2\"/><text x=\"165\" y=\"187\" font-family=\"monospace\" font-size=\"17\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">x³ = 8</text><rect x=\"285\" y=\"160\" width=\"140\" height=\"42\" rx=\"7\" fill=\"#f0fdf4\" stroke=\"#4ade80\" stroke-width=\"2\"/><text x=\"355\" y=\"187\" font-family=\"monospace\" font-size=\"17\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">3ˣ = 9</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $2^{x+1}+3^x$ when $x=2$.",
+          "solution_steps": [
+            "Step 1: Substitute 2 for every x: $2^{2+1}+3^2$.",
+            "Step 2: Simplify the exponents: $2^3+3^2$.",
+            "Step 3: Evaluate the powers: $8+9=17$."
+          ],
+          "final_answer": "$17$"
+        },
+        {
+          "problem": "Rewrite $9^{x+1}$ and $27^{2x-1}$ using base 3.",
+          "solution_steps": [
+            "Step 1: Write $9=3^2$, so $9^{x+1}=(3^2)^{x+1}$.",
+            "Step 2: Multiply the exponents: $9^{x+1}=3^{2x+2}$.",
+            "Step 3: Write $27=3^3$, so $27^{2x-1}=(3^3)^{2x-1}$.",
+            "Step 4: Multiply the exponents: $27^{2x-1}=3^{6x-3}$."
+          ],
+          "final_answer": "$9^{x+1}=3^{2x+2}$ and $27^{2x-1}=3^{6x-3}."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing $x^3$ with $3^x$.",
+          "correction": "In the first expression x is the base; in the second expression x is the exponent. They generally have different values."
+        },
+        {
+          "mistake": "Substituting without brackets.",
+          "correction": "When x is negative or the exponent contains several terms, place the substituted value in brackets before simplifying."
+        }
+      ],
+      "quick_summary": [
+        "An exponential expression has a variable in the exponent.",
+        "Substitute carefully and simplify the exponent before evaluating.",
+        "Rewrite related bases as powers of a common base when comparing exponential expressions."
+      ]
+    },
+    "hs_math_t07_st05": {
+      "id": "hs_math_t07_st05",
+      "title": "Understanding logarithms",
+      "overview": "A logarithm answers the question: to what exponent must a positive base be raised to produce a given positive number? Logarithms are the inverse operation to exponentiation and provide the language needed to solve equations with unknown exponents.",
+      "key_concepts": [
+        {
+          "concept": "Logarithms as inverse exponents",
+          "definition": "Translate between exponential and logarithmic forms.",
+          "details": [
+            "The equation $a^x=N$ is equivalent to $\\log_a N=x$.",
+            "The base must satisfy $a>0$ and $a\\ne1$, and the argument must satisfy $N>0$.",
+            "For example, since $2^3=8$, $\\log_2 8=3$."
+          ]
+        },
+        {
+          "concept": "Common and natural logarithms",
+          "definition": "Two frequently used bases.",
+          "details": [
+            "The common logarithm $\\log x$ has base 10 unless another base is written.",
+            "The natural logarithm $\\ln x$ has base $e$, where $e\\approx2.71828$.",
+            "Both are logarithms and both follow the same inverse relationship with their matching exponential bases."
+          ]
+        },
+        {
+          "concept": "Special values and domain",
+          "definition": "Check the base and argument.",
+          "details": [
+            "For a valid base, $\\log_a1=0$ because $a^0=1$.",
+            "$\\log_a a=1$ because $a^1=a$.",
+            "A real logarithm is undefined when its argument is zero or negative; the base must be positive and not equal to 1."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Fundamental logarithm relationship",
+          "equation": "$$a^x=N\\iff\\log_a N=x$$",
+          "variables": {
+            "a": "Base: a > 0 and a ≠ 1",
+            "N": "Argument: N > 0",
+            "x": "Exponent / logarithm value"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_s05",
+          "title": "The Logarithm Loop",
+          "type": "svg",
+          "caption": "Translate between logs and exponents by drawing a circle from the base, to the answer, to the argument.",
+          "alt_text": "Visual showing log_2(8) = 3. A curved arrow starts at the base 2, sweeps across the equals sign to the 3, and loops back to point at the 8. Text explains '2 raised to the power of 3 equals 8'. Below it shows the equivalent 2^3 = 8.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"200\" y=\"100\" font-family=\"monospace\" font-size=\"32\" font-weight=\"bold\" fill=\"#0f172a\">log</text><text x=\"255\" y=\"115\" font-family=\"monospace\" font-size=\"20\" font-weight=\"bold\" fill=\"#2563eb\">2</text><text x=\"285\" y=\"100\" font-family=\"monospace\" font-size=\"32\" font-weight=\"bold\" fill=\"#16a34a\">(8)</text><text x=\"340\" y=\"100\" font-family=\"monospace\" font-size=\"32\" font-weight=\"bold\" fill=\"#0f172a\">=</text><text x=\"380\" y=\"100\" font-family=\"monospace\" font-size=\"32\" font-weight=\"bold\" fill=\"#ea580c\">3</text><path d=\"M 265 125 Q 320 170 380 120\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><polygon points=\"380,120 375,130 370,125\" fill=\"#2563eb\"/><path d=\"M 380 70 Q 340 30 300 70\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><polygon points=\"300,70 310,65 305,60\" fill=\"#ea580c\"/><text x=\"250\" y=\"180\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2³ = 8</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\log_3 81$.",
+          "solution_steps": [
+            "Step 1: Ask yourself the inverse question: '3 raised to what power gives 81?'",
+            "Step 2: Write it exponentially: $3^x = 81$.",
+            "Step 3: Since $3 \\times 3 = 9$, $9 \\times 3 = 27$, and $27 \\times 3 = 81$, we know $3^4 = 81$.",
+            "Step 4: Therefore, the logarithm evaluates to 4."
+          ],
+          "final_answer": "4"
+        },
+        {
+          "problem": "Evaluate $\\log_{10} 0.001$.",
+          "solution_steps": [
+            "Step 1: Set up the equation: $10^x = 0.001$.",
+            "Step 2: Rewrite $0.001$ as a fraction: $\\frac{1}{1000}$.",
+            "Step 3: Rewrite $1000$ as a power of 10: $\\frac{1}{10^3}$.",
+            "Step 4: Use the negative exponent rule to bring it up: $10^{-3}$.",
+            "Step 5: Therefore, $10^x = 10^{-3}$, so $x = -3$."
+          ],
+          "final_answer": "-3"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating the logarithm as division.",
+          "correction": "$\\log_2 8$ asks which power of 2 gives 8; it is 3, not $8\\div2$."
+        },
+        {
+          "mistake": "Thinking a negative logarithm means a negative argument.",
+          "correction": "The logarithm value may be negative: $\\log_2(1/8)=-3$. The argument must still be positive."
+        },
+        {
+          "mistake": "Forgetting the restrictions on the base.",
+          "correction": "For real logarithms, the base must be positive and different from 1, and the argument must be positive."
+        }
+      ],
+      "quick_summary": [
+        "A logarithm finds the missing exponent.",
+        "$\\log_aN=x$ is equivalent to $a^x=N$.",
+        "Common log uses base 10; natural log uses base e.",
+        "For real logarithms: base > 0, base ≠ 1, and argument > 0."
+      ]
+    },
+    "hs_math_t07_st07": {
+      "id": "hs_math_t07_st07",
+      "title": "Converting between exponential and logarithmic forms",
+      "overview": "An exponential equation and a logarithmic equation can express exactly the same relationship. Converting carefully between the two forms helps identify the base, the result (argument), and the exponent without changing their roles.",
+      "key_concepts": [
+        {
+          "concept": "Translate an exponential statement into a logarithm",
+          "definition": "The base stays the base; the exponent becomes the logarithm value.",
+          "details": [
+            "In $a^x=N$, the base is a, the exponent is x and the result is N.",
+            "The equivalent logarithmic statement is $\\log_a N=x$.",
+            "The base must be positive and not 1, and N must be positive."
+          ]
+        },
+        {
+          "concept": "Translate a logarithmic statement into an exponential equation",
+          "definition": "Use the base raised to the logarithm value.",
+          "details": [
+            "In $\\log_a N=x$, write the equivalent statement $a^x=N$.",
+            "This is useful when evaluating logarithms or solving equations where the logarithm contains the unknown.",
+            "Check the translation by substituting the values into the original form."
+          ]
+        },
+        {
+          "concept": "Common and natural logarithm notation",
+          "definition": "Read the implied base correctly.",
+          "details": [
+            "$\\log N$ usually means $\\log_{10}N$.",
+            "$\\ln N$ means $\\log_eN$.",
+            "The change-of-base formula using common logarithms can be used on a calculator when a logarithm uses a base that is not directly available."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Equivalent exponential and logarithmic forms",
+          "equation": "$$a^x=N\\iff\\log_aN=x$$",
+          "variables": {
+            "a": "Base: a > 0 and a ≠ 1",
+            "N": "Positive result / argument",
+            "x": "Exponent / logarithm value"
+          }
+        },
+        {
+          "name": "Change of base",
+          "equation": "$$\\log_aN=\\frac{\\log N}{\\log a}$$",
+          "variables": {
+            "a": "Positive base, not 1",
+            "N": "Positive argument"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st07",
+          "title": "Converting Between the Two Forms",
+          "type": "svg",
+          "caption": "The base, exponent and result retain their roles during conversion.",
+          "alt_text": "Side-by-side equivalent forms: 2 cubed equals 8 and log base 2 of 8 equals 3, with the base, exponent and result labels matched.",
+          "data": "<svg viewBox=\"0 0 520 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"220\" rx=\"12\" fill=\"#f8fafc\"/><rect x=\"30\" y=\"35\" width=\"205\" height=\"60\" rx=\"7\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"132\" y=\"60\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Exponential form</text><text x=\"132\" y=\"82\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">2³ = 8</text><rect x=\"285\" y=\"35\" width=\"205\" height=\"60\" rx=\"7\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"387\" y=\"60\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Logarithmic form</text><text x=\"387\" y=\"82\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">log₂ 8 = 3</text><line x1=\"235\" y1=\"65\" x2=\"283\" y2=\"65\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"260\" y=\"137\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"bold\">Base 2   •   Result 8   •   Exponent 3</text><text x=\"260\" y=\"178\" font-family=\"monospace\" font-size=\"22\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">aˣ = N   ⇔   logₐ N = x</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Write $4^{-3}=1/64$ in logarithmic form.",
+          "solution_steps": [
+            "Step 1: Identify the base 4, exponent -3 and result 1/64.",
+            "Step 2: Place the result as the logarithm argument and the exponent as the value: $\\log_4(1/64)=-3$.",
+            "Step 3: Check: $4^{-3}=1/64$, so the forms agree."
+          ],
+          "final_answer": "$\\log_4(1/64)=-3$"
+        },
+        {
+          "problem": "Convert $\\log_3 81=4$ into exponential form, then evaluate $\\log_3 81$.",
+          "solution_steps": [
+            "Step 1: Use base raised to value equals argument: $3^4=81$.",
+            "Step 2: Since $3^4=81$, the logarithm value is 4."
+          ],
+          "final_answer": "$3^4=81$ and $\\log_3 81=4$"
+        },
+        {
+          "problem": "Approximate $\\log_2 10$ using common logarithms.",
+          "solution_steps": [
+            "Step 1: Use change of base: $\\log_2 10=\\frac{\\log 10}{\\log 2}$.",
+            "Step 2: Since $\\log 10=1$ and $\\log 2\\approx0.30103$, the ratio is approximately $3.32193$."
+          ],
+          "final_answer": "$\\log_2 10\\approx3.322$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Putting the exponent in the argument position.",
+          "correction": "In $a^x=N$, the logarithm form is $\\log_aN=x$: N is inside the logarithm and x is its value."
+        },
+        {
+          "mistake": "Changing the base during conversion.",
+          "correction": "The base remains the subscript of the logarithm; only the roles of exponent and result switch."
+        },
+        {
+          "mistake": "Using change of base with an invalid base or argument.",
+          "correction": "Check that a > 0, a ≠ 1 and N > 0 before evaluating $\\log_aN$."
+        }
+      ],
+      "quick_summary": [
+        "$a^x=N$ converts to $\\log_aN=x$.",
+        "The base remains the same; the exponent becomes the logarithm value.",
+        "Use change of base to approximate a logarithm with a non-standard base."
+      ]
+    },
+    "hs_math_t07_st06": {
+      "id": "hs_math_t07_st06",
+      "title": "Laws of logarithms",
+      "overview": "Logarithm laws are algebraic rules derived from exponent laws. They allow products, quotients and powers of positive quantities to be expanded or condensed while preserving the value of the expression.",
+      "key_concepts": [
+        {
+          "concept": "Product law",
+          "definition": "Multiplication inside becomes addition outside.",
+          "details": [
+            "$\\log_a(MN)=\\log_aM+\\log_aN$.",
+            "Use this law when the factors M and N are positive and the base satisfies a > 0, a ≠ 1."
+          ]
+        },
+        {
+          "concept": "Quotient law",
+          "definition": "Division inside becomes subtraction outside.",
+          "details": [
+            "$\\log_a(M/N)=\\log_aM-\\log_aN$.",
+            "Both M and N must be positive; the order is numerator log minus denominator log."
+          ]
+        },
+        {
+          "concept": "Power law",
+          "definition": "An exponent on a positive argument becomes a coefficient.",
+          "details": [
+            "$\\log_a(M^p)=p\\log_aM$ for M > 0 and real p in the usual real-valued setting.",
+            "Use the power law to expand a logarithm or reverse it when condensing.",
+            "There is no law that splits the logarithm of a sum or difference."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Product law",
+          "equation": "$$\\log_a(MN)=\\log_aM+\\log_aN$$",
+          "variables": {
+            "M, N": "Positive arguments"
+          }
+        },
+        {
+          "name": "Quotient law",
+          "equation": "$$\\log_a\\left(\\frac{M}{N}\\right)=\\log_aM-\\log_aN$$",
+          "variables": {
+            "M, N": "Positive arguments"
+          }
+        },
+        {
+          "name": "Power law",
+          "equation": "$$\\log_a(M^p)=p\\log_aM$$",
+          "variables": {
+            "M": "Positive argument",
+            "p": "Exponent"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_s06",
+          "title": "The Power Law Parachute",
+          "type": "svg",
+          "caption": "The exponent inside the logarithm drops down to the front as a multiplier.",
+          "alt_text": "Visual showing log_2(x^3). A red arrow points from the exponent '3' pulling it down to the front of the log. The result is 3 * log_2(x).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"200\" y=\"100\" font-family=\"monospace\" font-size=\"40\" font-weight=\"bold\" fill=\"#0f172a\">log₂(x</text><text x=\"340\" y=\"80\" font-family=\"monospace\" font-size=\"24\" font-weight=\"bold\" fill=\"#ef4444\">³</text><text x=\"355\" y=\"100\" font-family=\"monospace\" font-size=\"40\" font-weight=\"bold\" fill=\"#0f172a\">)</text><path d=\"M 345 60 Q 280 10 160 80\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"4\" stroke-dasharray=\"6,6\"/><polygon points=\"160,80 170,75 165,70\" fill=\"#ef4444\"/><rect x=\"110\" y=\"140\" width=\"280\" height=\"40\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"10\"/><text x=\"250\" y=\"168\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">3 · log₂(x)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Expand fully: $\\log_5\\left(\\frac{25x^3}{y^2}\\right)$, assuming x > 0 and y > 0.",
+          "solution_steps": [
+            "Step 1: Use Quotient Law to split the fraction: $\\log_5(25x^3) - \\log_5(y^2)$.",
+            "Step 2: Use Product Law to split the multiplication in the first log: $\\log_5(25) + \\log_5(x^3) - \\log_5(y^2)$.",
+            "Step 3: Evaluate numbers where possible: $\\log_5(25) = 2$.",
+            "Step 4: Use Power Law to bring exponents to the front: $2 + 3\\log_5(x) - 2\\log_5(y)$."
+          ],
+          "final_answer": "$2 + 3\\log_5 x - 2\\log_5 y$"
+        },
+        {
+          "problem": "Condense into a single logarithm: $2\\ln(a)+\\ln(b)-3\\ln(c)$, where a, b and c are positive.",
+          "solution_steps": [
+            "Step 1: Use Power Law in reverse to push coefficients up as exponents: $\\ln(a^2) + \\ln(b) - \\ln(c^3)$.",
+            "Step 2: Use Product Law to combine the added logs: $\\ln(a^2b) - \\ln(c^3)$.",
+            "Step 3: Use Quotient Law to combine the subtracted log into a fraction: $\\ln\\left(\\frac{a^2b}{c^3}\\right)$."
+          ],
+          "final_answer": "$\\ln\\left(\\frac{a^2b}{c^3}\\right)$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Inventing a law for addition inside a logarithm.",
+          "correction": "$\\log(M+N)$ cannot be split into $\\log M+\\log N$. The product law applies to multiplication, not addition."
+        },
+        {
+          "mistake": "Reversing the quotient law.",
+          "correction": "For $\\log(M/N)$, subtract the denominator logarithm from the numerator logarithm."
+        },
+        {
+          "mistake": "Ignoring positivity restrictions.",
+          "correction": "Every logarithm argument created in an expansion or condensation must remain positive, and the base must be positive and not 1."
+        }
+      ],
+      "quick_summary": [
+        "Product inside = sum of logarithms.",
+        "Quotient inside = difference of logarithms.",
+        "A power on a positive argument becomes a coefficient.",
+        "There is no product-style rule for a sum inside a logarithm."
+      ]
+    },
+    "hs_math_t07_st04": {
+      "id": "hs_math_t07_st04",
+      "title": "Exponential equations",
+      "overview": "An exponential equation contains the unknown in an exponent. First try rewriting both sides with the same positive base. After logarithms have been introduced, a logarithm can be used when the bases cannot be matched. Some equations are quadratic in a repeated exponential expression and can be solved by substitution.",
+      "key_concepts": [
+        {
+          "concept": "The common-base method",
+          "definition": "Use the one-to-one property.",
+          "details": [
+            "If $a^u=a^v$ for $a>0$ and $a\\ne1$, then $u=v$.",
+            "Rewrite each side as a power of the same base, then solve the resulting equation in the exponents.",
+            "This method is exact when the bases can be matched."
+          ]
+        },
+        {
+          "concept": "Using logarithms to solve an equation",
+          "definition": "Find an exponent when bases cannot be matched.",
+          "details": [
+            "For $a^x=N$, where $a>0$, $a\\ne1$ and $N>0$, write $x=\\log_a N$.",
+            "A calculator can approximate a logarithm using the change-of-base relationship.",
+            "Keep an exact logarithmic answer when an exact decimal is not available."
+          ]
+        },
+        {
+          "concept": "Quadratic substitution",
+          "definition": "Treat a repeated exponential expression as one variable.",
+          "details": [
+            "If an equation contains $a^{2x}$ and $a^x$, set $y=a^x$ so that $a^{2x}=y^2$.",
+            "Solve the resulting quadratic, then substitute back.",
+            "Since $a^x>0$ for a positive base, reject any non-positive value of y before solving for x."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "One-to-one property",
+          "equation": "$$a^u=a^v\\implies u=v\\quad(a>0,\\ a\\ne1)$$",
+          "variables": {}
+        },
+        {
+          "name": "Logarithmic solution",
+          "equation": "$$a^x=N\\implies x=\\log_a N=\\frac{\\log N}{\\log a}$$",
+          "variables": {
+            "a": "Positive base, not 1",
+            "N": "Positive number"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st04",
+          "title": "Three Methods for Exponential Equations",
+          "type": "svg",
+          "caption": "Choose common bases, logarithms, or a substitution when the equation is quadratic in a repeated power.",
+          "alt_text": "A visual summary of common-base solving, logarithmic solving, and quadratic substitution with a worked substitution structure.",
+          "data": "<svg viewBox=\"0 0 520 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"220\" rx=\"12\" fill=\"#f8fafc\"/><rect x=\"25\" y=\"25\" width=\"145\" height=\"52\" rx=\"7\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"97\" y=\"48\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">1. Common base</text><text x=\"97\" y=\"67\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"normal\">equate exponents</text><rect x=\"188\" y=\"25\" width=\"145\" height=\"52\" rx=\"7\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"260\" y=\"48\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">2. Logarithms</text><text x=\"260\" y=\"67\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"normal\">free the exponent</text><rect x=\"351\" y=\"25\" width=\"145\" height=\"52\" rx=\"7\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"423\" y=\"48\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">3. Substitution</text><text x=\"423\" y=\"67\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"normal\">quadratic in a^x</text><text x=\"260\" y=\"120\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">3²ˣ − 10(3ˣ) + 9 = 0</text><text x=\"260\" y=\"153\" font-family=\"monospace\" font-size=\"17\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Let y = 3ˣ:  (y − 9)(y − 1) = 0</text><text x=\"260\" y=\"187\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">Therefore x = 2 or x = 0</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve $8^{x+1}=4^{x+2}$.",
+          "solution_steps": [
+            "Step 1: Rewrite both bases as powers of 2: $8=2^3$ and $4=2^2$.",
+            "Step 2: $(2^3)^{x+1}=(2^2)^{x+2}$.",
+            "Step 3: Multiply the exponents: $2^{3x+3}=2^{2x+4}$.",
+            "Step 4: Equate exponents: $3x+3=2x+4$.",
+            "Step 5: Solve to obtain $x=1$."
+          ],
+          "final_answer": "$x=1$"
+        },
+        {
+          "problem": "Solve $2^x=30$ and give the answer to 3 decimal places.",
+          "solution_steps": [
+            "Step 1: The bases cannot be matched using integer powers, so take logarithms: $x=\\log_2 30$.",
+            "Step 2: Use change of base with common logarithms: $x=\\frac{\\log30}{\\log2}$.",
+            "Step 3: Evaluate with a calculator: $x\\approx4.9068906$."
+          ],
+          "final_answer": "$x\\approx4.907$"
+        },
+        {
+          "problem": "Solve $3^{2x}-10(3^x)+9=0$.",
+          "solution_steps": [
+            "Step 1: Let $y=3^x$. Then $3^{2x}=(3^x)^2=y^2$.",
+            "Step 2: The equation becomes $y^2-10y+9=0$.",
+            "Step 3: Factor: $(y-9)(y-1)=0$, so $y=9$ or $y=1$.",
+            "Step 4: Substitute back: $3^x=9$ gives $x=2$; $3^x=1$ gives $x=0$. Both values of y are positive and valid."
+          ],
+          "final_answer": "$x=0$ or $x=2$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Equating exponents before making the bases equal.",
+          "correction": "The one-to-one property applies only when the positive bases are the same and are not 1."
+        },
+        {
+          "mistake": "Keeping a negative value after setting y=a^x.",
+          "correction": "For a positive base, $a^x$ is always positive. A zero or negative y cannot produce a real solution."
+        },
+        {
+          "mistake": "Treating a decimal approximation as an exact value.",
+          "correction": "Keep $x=\\log_2 30$ as the exact answer and label 4.907 as an approximation."
+        }
+      ],
+      "quick_summary": [
+        "Try common bases first.",
+        "Use logarithms when the bases cannot be matched.",
+        "For repeated powers such as a^x and a^(2x), consider substitution and check positivity."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check numerical values of logarithms and exponential powers after setting up the exact algebraic solution.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t07_st08": {
+      "id": "hs_math_t07_st08",
+      "title": "Solving logarithmic equations",
+      "overview": "A logarithmic equation is solved by checking the domains first, using logarithm laws to combine terms when appropriate, converting to exponential form or equating arguments, and then checking every candidate in the original equation. The final check is essential because algebraic transformations can produce extraneous solutions.",
+      "key_concepts": [
+        {
+          "concept": "Establish the domain before solving",
+          "definition": "Every logarithm argument must be positive.",
+          "details": [
+            "For each logarithm, write an inequality requiring its argument to be greater than zero.",
+            "The allowed values of the unknown are the intersection of all these restrictions.",
+            "Do not reject a solution merely because x is negative; test the arguments of the original logarithms."
+          ]
+        },
+        {
+          "concept": "Condense and convert",
+          "definition": "Use the logarithm laws and the inverse relationship.",
+          "details": [
+            "Combine logarithms on one side using product, quotient or power laws only when their arguments satisfy the required conditions.",
+            "Convert $\\log_aM=c$ into $a^c=M$.",
+            "Solve the resulting algebraic equation, keeping all candidate roots until the domain check."
+          ]
+        },
+        {
+          "concept": "Equate arguments and check candidates",
+          "definition": "Equal logarithms with the same valid base have equal arguments.",
+          "details": [
+            "If $\\log_aM=\\log_aN$ for the same valid base, then M=N, provided both arguments are positive.",
+            "Substitute every candidate into the original equation.",
+            "Reject a candidate if any original logarithm argument is zero or negative; keep candidates whose original equation is defined and true."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Equal logarithms with the same base",
+          "equation": "$$\\log_aM=\\log_aN\\iff M=N$$",
+          "variables": {
+            "a": "Positive base, not 1",
+            "M, N": "Positive arguments"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_s08",
+          "title": "The Log Equation Workflow",
+          "type": "svg",
+          "caption": "Condense -> Convert -> Solve -> Check.",
+          "alt_text": "Visual flowchart. Step 1: log(x) + log(x-3) = 1. Arrow points to Step 2 (Condense): log(x(x-3)) = 1. Arrow points to Step 3 (Convert to exponent): 10^1 = x^2 - 3x. Arrow points to Step 4 (Solve quadratic): x = 5, x = -2. Arrow points to Step 5 (Domain Check): Reject -2 because log(-2) is illegal.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"200\" height=\"30\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"120\" y=\"40\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">log(x) + log(x-3) = 1</text><path d=\"M 120 50 L 120 70\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"120,70 115,60 125,60\" fill=\"#3b82f6\"/><rect x=\"20\" y=\"70\" width=\"200\" height=\"30\" fill=\"#dbeafe\" rx=\"5\"/><text x=\"120\" y=\"90\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Condense: log(x²-3x) = 1</text><path d=\"M 220 85 L 260 85\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><polygon points=\"260,85 250,80 250,90\" fill=\"#3b82f6\"/><rect x=\"260\" y=\"70\" width=\"200\" height=\"30\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"360\" y=\"90\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Convert: 10¹ = x²-3x</text><path d=\"M 360 100 L 360 120\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><polygon points=\"360,120 355,110 365,110\" fill=\"#16a34a\"/><rect x=\"260\" y=\"120\" width=\"200\" height=\"30\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"360\" y=\"140\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">Solve: x=5, x=-2</text><path d=\"M 260 135 L 220 135\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><polygon points=\"220,135 230,130 230,140\" fill=\"#ef4444\"/><rect x=\"20\" y=\"120\" width=\"200\" height=\"30\" fill=\"#fee2e2\" rx=\"5\"/><text x=\"120\" y=\"140\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Check: Reject x=-2</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve: $\\log_2(x) + \\log_2(x-2) = 3$",
+          "solution_steps": [
+            "Step 1: Check domains. Need $x > 0$ and $x-2 > 0 \\implies x > 2$. Overall restriction: $x > 2$.",
+            "Step 2: Use Product Law to condense: $\\log_2[x(x-2)] = 3$.",
+            "Step 3: Convert to exponential form: $2^3 = x(x-2)$.",
+            "Step 4: Expand and rearrange: $8 = x^2 - 2x \\implies x^2 - 2x - 8 = 0$.",
+            "Step 5: Factorise quadratic: $(x - 4)(x + 2) = 0 \\implies x = 4, x = -2$.",
+            "Step 6: Check restriction ($x > 2$). $x=-2$ is invalid (creates $\\log(-2)$). $x=4$ is valid."
+          ],
+          "final_answer": "$x = 4$"
+        },
+        {
+          "problem": "Solve: $\\log_3(2x+1) = \\log_3(5x-8)$",
+          "solution_steps": [
+            "Step 1: Since we have a single log with matching bases on both sides, drop the logs.",
+            "Step 2: Equate arguments: $2x + 1 = 5x - 8$.",
+            "Step 3: Solve for $x$: $9 = 3x \\implies x = 3$.",
+            "Step 4: Domain check: Left side $2(3)+1 = 7 > 0$. Right side $5(3)-8 = 7 > 0$. Valid."
+          ],
+          "final_answer": "$x = 3$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dropping logarithms from a sum without first using a logarithm law.",
+          "correction": "For $\\log x+\\log5=\\log20$, first combine the left side as $\\log(5x)=\\log20$, then equate arguments."
+        },
+        {
+          "mistake": "Rejecting every negative value of x.",
+          "correction": "A negative x may be valid if every original argument is positive, for example in $\\log(x^2)$. Check the arguments, not the sign of x alone."
+        },
+        {
+          "mistake": "Checking only the transformed equation.",
+          "correction": "Substitute each candidate into the original logarithmic equation to detect undefined arguments and extraneous solutions."
+        }
+      ],
+      "quick_summary": [
+        "Write the domain restrictions first.",
+        "Use logarithm laws to condense, then convert to exponential form or equate arguments.",
+        "Solve the resulting algebra.",
+        "Check every candidate in the original equation."
+      ]
+    },
+    "hs_math_t07_st09": {
+      "id": "hs_math_t07_st09",
+      "title": "Graphs of exponential functions",
+      "overview": "An exponential function has the variable in its exponent. Its graph is defined for every real x and approaches a horizontal asymptote. The base determines whether the basic curve grows or decays; a multiplier and shifts change its position, orientation and range.",
+      "key_concepts": [
+        {
+          "concept": "Growth and decay",
+          "definition": "The base determines the basic direction.",
+          "details": [
+            "For $y=b^x$ with $b>1$, the function is increasing and shows exponential growth.",
+            "For $y=b^x$ with $0<b<1$, the function is decreasing and shows exponential decay.",
+            "Both standard graphs pass through $(0,1)$ and remain above the x-axis."
+          ]
+        },
+        {
+          "concept": "Domain, range and horizontal asymptote",
+          "definition": "Read the graph boundaries.",
+          "details": [
+            "The domain of $b^x$ is all real numbers.",
+            "The range of $b^x$ is $y>0$ and its horizontal asymptote is $y=0$.",
+            "For $f(x)=A b^{x-h}+k$ with A ≠ 0, b > 0 and b ≠ 1, the horizontal asymptote becomes $y=k$. The range is $y>k$ if A>0 and $y<k$ if A<0."
+          ]
+        },
+        {
+          "concept": "Basic transformations",
+          "definition": "Shift, stretch or reflect the curve.",
+          "details": [
+            "The value h in $A b^{x-h}+k$ shifts the graph horizontally; k shifts it vertically.",
+            "The magnitude of A gives a vertical stretch or compression; a negative A reflects the graph across its horizontal asymptote.",
+            "These transformations do not change the domain: it remains all real numbers."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Transformed exponential function",
+          "equation": "$$f(x)=A b^{x-h}+k\\quad(A\\ne0,\\ b>0,\\ b\\ne1)$$",
+          "variables": {
+            "A": "Vertical scale and reflection",
+            "b": "Exponential base",
+            "h": "Horizontal shift",
+            "k": "Vertical shift and horizontal asymptote"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st09",
+          "title": "Exponential Growth and Decay Graphs",
+          "type": "svg",
+          "caption": "The two standard exponential curves pass through (0,1), but move in opposite directions and approach y=0.",
+          "alt_text": "Coordinate graph of y=2^x increasing and y=(1/2)^x decreasing, both passing through (0,1), with y=0 as horizontal asymptote.",
+          "data": "<svg viewBox=\"0 0 520 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"220\" rx=\"12\" fill=\"#f8fafc\"/><line x1=\"70\" y1=\"185\" x2=\"470\" y2=\"185\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"195\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"70\" y1=\"185\" x2=\"470\" y2=\"185\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"5,5\"/><polyline points=\"95.0,182.6 100.5,182.5 106.0,182.3 111.5,182.1 117.0,181.9 122.5,181.6 128.0,181.4 133.5,181.1 139.0,180.9 144.5,180.6 150.0,180.2 155.5,179.9 161.0,179.5 166.5,179.2 172.0,178.7 177.5,178.3 183.0,177.8 188.5,177.3 194.0,176.7 199.5,176.1 205.0,175.5 210.5,174.8 216.0,174.1 221.5,173.3 227.0,172.5 232.5,171.6 238.0,170.6 243.5,169.6 249.0,168.5 254.5,167.3 260.0,166.0 265.5,164.6 271.0,163.2 276.5,161.6 282.0,159.9 287.5,158.1 293.0,156.2 298.5,154.1 304.0,151.9 309.5,149.5 315.0,147.0 320.5,144.3 326.0,141.3 331.5,138.2 337.0,134.9 342.5,131.3 348.0,127.4 353.5,123.3 359.0,118.8 364.5,114.1 370.0,109.0 375.5,103.5 381.0,97.7 386.5,91.4 392.0,84.7 397.5,77.5 403.0,69.8 408.5,61.5 414.0,52.7 419.5,43.2 425.0,33.0\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><polyline points=\"95.0,33.0 100.5,43.2 106.0,52.7 111.5,61.5 117.0,69.8 122.5,77.5 128.0,84.7 133.5,91.4 139.0,97.7 144.5,103.5 150.0,109.0 155.5,114.1 161.0,118.8 166.5,123.3 172.0,127.4 177.5,131.3 183.0,134.9 188.5,138.2 194.0,141.3 199.5,144.3 205.0,147.0 210.5,149.5 216.0,151.9 221.5,154.1 227.0,156.2 232.5,158.1 238.0,159.9 243.5,161.6 249.0,163.2 254.5,164.6 260.0,166.0 265.5,167.3 271.0,168.5 276.5,169.6 282.0,170.6 287.5,171.6 293.0,172.5 298.5,173.3 304.0,174.1 309.5,174.8 315.0,175.5 320.5,176.1 326.0,176.7 331.5,177.3 337.0,177.8 342.5,178.3 348.0,178.7 353.5,179.2 359.0,179.5 364.5,179.9 370.0,180.2 375.5,180.6 381.0,180.9 386.5,181.1 392.0,181.4 397.5,181.6 403.0,181.9 408.5,182.1 414.0,182.3 419.5,182.5 425.0,182.6\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"270\" y=\"18\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"normal\">y</text><text x=\"480\" y=\"190\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"normal\">x</text><text x=\"320\" y=\"55\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"start\" fill=\"#1d4ed8\" font-weight=\"bold\">Growth: 2ˣ</text><text x=\"80\" y=\"55\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"start\" fill=\"#b91c1c\" font-weight=\"bold\">Decay: (1/2)ˣ</text><text x=\"270\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"start\" fill=\"#0f172a\" font-weight=\"bold\">(0, 1)</text><text x=\"405\" y=\"207\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"normal\">horizontal asymptote y = 0</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the domain, range, horizontal asymptote and y-intercept of $f(x)=2^{x-3}+4$.",
+          "solution_steps": [
+            "Step 1: The vertical shift is +4, so the horizontal asymptote is $y=4$.",
+            "Step 2: The domain of an exponential function is all real numbers.",
+            "Step 3: Since $2^{x-3}$ is positive, the range is $y>4$.",
+            "Step 4: For the y-intercept, set x=0: $f(0)=2^{-3}+4=1/8+4=4.125$."
+          ],
+          "final_answer": "Domain: all real x; range: y > 4; asymptote: y = 4; y-intercept: (0, 4.125)."
+        },
+        {
+          "problem": "Describe the graph of $g(x)=-3(1/2)^x+2$.",
+          "solution_steps": [
+            "Step 1: The base 1/2 is between 0 and 1, so $(1/2)^x$ is decreasing.",
+            "Step 2: The negative multiplier reflects the graph, making g increasing.",
+            "Step 3: The +2 shifts the horizontal asymptote to $y=2$.",
+            "Step 4: Because the coefficient is negative, the graph lies below its asymptote: the range is $y<2$."
+          ],
+          "final_answer": "Increasing graph; domain all real x; range y < 2; horizontal asymptote y = 2."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming every exponential graph has asymptote y=0.",
+          "correction": "A vertical shift by k changes the horizontal asymptote to y=k."
+        },
+        {
+          "mistake": "Assuming the range is always positive.",
+          "correction": "A negative multiplier reflects the graph below its horizontal asymptote; check the sign of A."
+        }
+      ],
+      "quick_summary": [
+        "For b > 1, the basic exponential graph increases; for 0 < b < 1, it decreases.",
+        "The standard graph passes through (0,1) and has asymptote y=0.",
+        "A vertical shift changes the horizontal asymptote; a negative multiplier reflects the graph."
+      ]
+    },
+    "hs_math_t07_st10": {
+      "id": "hs_math_t07_st10",
+      "title": "Graphs of logarithmic functions",
+      "overview": "A logarithmic function is the inverse of an exponential function with the same base. Their graphs are reflections across the line y=x. This swaps the coordinates of corresponding points and exchanges the domain and range, as well as the horizontal and vertical asymptotes.",
+      "key_concepts": [
+        {
+          "concept": "Reflection across y=x",
+          "definition": "Inverse functions swap input and output.",
+          "details": [
+            "The graphs of $y=b^x$ and $y=\\log_bx$ are reflections across $y=x$.",
+            "The exponential point $(0,1)$ corresponds to the logarithmic point $(1,0)$.",
+            "The inverse relationship helps transfer known points from one graph to the other."
+          ]
+        },
+        {
+          "concept": "Domain, range and vertical asymptote",
+          "definition": "The logarithm needs a positive argument.",
+          "details": [
+            "For $y=\\log_bx$, the domain is $x>0$ and the range is all real numbers.",
+            "The vertical asymptote is $x=0$, and the graph crosses the x-axis at $(1,0)$.",
+            "For $y=\\log_b(x-h)+k$, the vertical asymptote is $x=h$ and the domain is $x>h$; the range remains all real numbers."
+          ]
+        },
+        {
+          "concept": "Increasing and decreasing logarithmic graphs",
+          "definition": "The base controls the direction.",
+          "details": [
+            "If $b>1$, $y=\\log_bx$ is increasing.",
+            "If $0<b<1$, $y=\\log_bx$ is decreasing.",
+            "Vertical stretches, reflections and shifts alter the graph while preserving the domain restriction on its argument."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Transformed logarithmic function",
+          "equation": "$$f(x)=A\\log_b(x-h)+k\\quad(A\\ne0,\\ b>0,\\ b\\ne1)$$",
+          "variables": {
+            "A": "Vertical scale and reflection",
+            "b": "Logarithm base",
+            "h": "Horizontal shift; vertical asymptote x=h",
+            "k": "Vertical shift"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st10",
+          "title": "Exponential and Logarithmic Graphs as Inverses",
+          "type": "svg",
+          "caption": "Corresponding points have their coordinates exchanged across the dashed line y = x.",
+          "alt_text": "A coordinate graph shows y = 2^x and y = log base 2 of x as reflections across y = x. The exponential point (0,1) corresponds to the logarithmic point (1,0).",
+          "data": "<svg viewBox=\"0 0 520 340\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"340\" rx=\"12\" fill=\"#f8fafc\"/><line x1=\"90\" y1=\"180\" x2=\"430\" y2=\"180\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"325\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"140\" y1=\"300\" x2=\"380\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"6,5\"/><polyline points=\"140.00,175.00 142.00,174.82 144.00,174.64 146.00,174.45 148.00,174.26 150.00,174.05 152.00,173.84 154.00,173.63 156.00,173.40 158.00,173.17 160.00,172.93 162.00,172.68 164.00,172.42 166.00,172.15 168.00,171.88 170.00,171.59 172.00,171.29 174.00,170.99 176.00,170.67 178.00,170.34 180.00,170.00 182.00,169.65 184.00,169.28 186.00,168.90 188.00,168.51 190.00,168.11 192.00,167.69 194.00,167.25 196.00,166.80 198.00,166.34 200.00,165.86 202.00,165.36 204.00,164.84 206.00,164.31 208.00,163.75 210.00,163.18 212.00,162.59 214.00,161.97 216.00,161.34 218.00,160.68 220.00,160.00 222.00,159.29 224.00,158.56 226.00,157.81 228.00,157.03 230.00,156.22 232.00,155.38 234.00,154.51 236.00,153.61 238.00,152.68 240.00,151.72 242.00,150.72 244.00,149.69 246.00,148.62 248.00,147.51 250.00,146.36 252.00,145.18 254.00,143.95 256.00,142.68 258.00,141.36 260.00,140.00 262.00,138.59 264.00,137.13 266.00,135.62 268.00,134.05 270.00,132.43 272.00,130.75 274.00,129.02 276.00,127.22 278.00,125.36 280.00,123.43 282.00,121.44 284.00,119.37 286.00,117.23 288.00,115.02 290.00,112.73 292.00,110.36 294.00,107.90 296.00,105.36 298.00,102.73 300.00,100.00\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><polyline points=\"265.00,300.00 265.18,298.00 265.36,296.00 265.55,294.00 265.74,292.00 265.95,290.00 266.16,288.00 266.37,286.00 266.60,284.00 266.83,282.00 267.07,280.00 267.32,278.00 267.58,276.00 267.85,274.00 268.12,272.00 268.41,270.00 268.71,268.00 269.01,266.00 269.33,264.00 269.66,262.00 270.00,260.00 270.35,258.00 270.72,256.00 271.10,254.00 271.49,252.00 271.89,250.00 272.31,248.00 272.75,246.00 273.20,244.00 273.66,242.00 274.14,240.00 274.64,238.00 275.16,236.00 275.69,234.00 276.25,232.00 276.82,230.00 277.41,228.00 278.03,226.00 278.66,224.00 279.32,222.00 280.00,220.00 280.71,218.00 281.44,216.00 282.19,214.00 282.97,212.00 283.78,210.00 284.62,208.00 285.49,206.00 286.39,204.00 287.32,202.00 288.28,200.00 289.28,198.00 290.31,196.00 291.38,194.00 292.49,192.00 293.64,190.00 294.82,188.00 296.05,186.00 297.32,184.00 298.64,182.00 300.00,180.00 301.41,178.00 302.87,176.00 304.38,174.00 305.95,172.00 307.57,170.00 309.25,168.00 310.98,166.00 312.78,164.00 314.64,162.00 316.57,160.00 318.56,158.00 320.63,156.00 322.77,154.00 324.98,152.00 327.27,150.00 329.64,148.00 332.10,146.00 334.64,144.00 337.27,142.00 340.00,140.00\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"390\" y=\"55\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#64748b\" font-weight=\"normal\">y = x</text><text x=\"315\" y=\"75\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"start\" fill=\"#1d4ed8\" font-weight=\"bold\">y = 2^x</text><text x=\"345\" y=\"255\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"start\" fill=\"#15803d\" font-weight=\"bold\">y = log_2 x</text><text x=\"303\" y=\"198\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"start\" fill=\"#15803d\" font-weight=\"bold\">(1, 0)</text><text x=\"254\" y=\"130\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"end\" fill=\"#1d4ed8\" font-weight=\"bold\">(0, 1)</text><text x=\"440\" y=\"184\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"normal\">x</text><text x=\"270\" y=\"28\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"normal\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the domain, vertical asymptote and x-intercept of $f(x)=\\log_3(x-4)$.",
+          "solution_steps": [
+            "Step 1: The logarithm argument must be positive: $x-4>0$, so $x>4$.",
+            "Step 2: The argument approaches zero at x=4, so the vertical asymptote is $x=4$.",
+            "Step 3: For the x-intercept set y=0: $\\log_3(x-4)=0$.",
+            "Step 4: Convert: $3^0=x-4$, so $1=x-4$ and x=5."
+          ],
+          "final_answer": "Domain: x > 4; vertical asymptote: x = 4; x-intercept: (5, 0)."
+        },
+        {
+          "problem": "Describe the graph of $y=\\log_{1/2}x$.",
+          "solution_steps": [
+            "Step 1: The base 1/2 is positive and less than 1, so the graph is decreasing.",
+            "Step 2: The argument requires x>0, so the domain is positive real numbers.",
+            "Step 3: The range is all real numbers and the vertical asymptote is x=0.",
+            "Step 4: Since $\\log_{1/2}1=0$, the graph crosses the x-axis at (1,0)."
+          ],
+          "final_answer": "Decreasing; domain x > 0; range all real numbers; vertical asymptote x = 0; x-intercept (1,0)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Giving a logarithmic graph a horizontal asymptote.",
+          "correction": "The standard logarithmic graph has a vertical asymptote at x=0; a horizontal shift changes it to x=h."
+        },
+        {
+          "mistake": "Forgetting to restrict the argument.",
+          "correction": "For $\\log_b(x-h)$, require x-h>0, so the domain is x>h."
+        }
+      ],
+      "quick_summary": [
+        "Logarithmic graphs are reflections of the corresponding exponential graphs across y=x.",
+        "The standard logarithmic domain is x>0, its range is all real numbers, and its vertical asymptote is x=0.",
+        "For base b>1 the graph increases; for 0<b<1 it decreases."
+      ]
+    },
+    "hs_math_t07_st11": {
+      "id": "hs_math_t07_st11",
+      "title": "Exponential growth and decay",
+      "overview": "Exponential growth and decay model quantities that change by a consistent multiplicative factor over equal time intervals. Applications here focus on scientific and population contexts. Detailed compound interest and depreciation calculations are treated in High School Topic 18.",
+      "key_concepts": [
+        {
+          "concept": "Discrete growth and decay",
+          "definition": "A fixed percentage change at each time interval.",
+          "details": [
+            "For growth by r per interval, multiply by $1+r$ when r is written as a decimal.",
+            "For decay by r per interval, multiply by $1-r$; for a positive decaying quantity, use a decimal rate with $0<r<1$.",
+            "After t intervals the factor is raised to the power t."
+          ]
+        },
+        {
+          "concept": "Half-life and doubling time",
+          "definition": "Useful time intervals in scientific models.",
+          "details": [
+            "A half-life T is the time required for a decaying quantity to fall to half its value.",
+            "After 2 half-lives, one quarter remains; after 3 half-lives, one eighth remains.",
+            "Doubling time is the corresponding time for a growing quantity to double; use the model to determine the time when the quantity is twice its initial value."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Discrete exponential growth",
+          "equation": "$$A=P(1+r)^t$$",
+          "variables": {
+            "P": "Initial amount",
+            "r": "Growth rate as a decimal",
+            "t": "Number of equal time intervals"
+          }
+        },
+        {
+          "name": "Discrete exponential decay",
+          "equation": "$$A=P(1-r)^t$$",
+          "variables": {
+            "P": "Initial amount",
+            "r": "Decay rate as a decimal",
+            "t": "Number of equal time intervals"
+          }
+        },
+        {
+          "name": "Half-life model",
+          "equation": "$$A=P\\left(\\frac12\\right)^{t/T}$$",
+          "variables": {
+            "T": "Half-life duration"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st11",
+          "title": "Exponential Growth and Decay Models",
+          "type": "svg",
+          "caption": "A repeated growth factor increases the amount; a repeated decay factor reduces it.",
+          "alt_text": "A flow diagram from initial amount P through a repeated growth factor to later amount A, with a note that decay uses one minus the rate and the half-life model uses a factor of one half.",
+          "data": "<svg viewBox=\"0 0 520 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"220\" rx=\"12\" fill=\"#f8fafc\"/><text x=\"70\" y=\"35\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"normal\">Initial amount</text><text x=\"260\" y=\"35\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"normal\">Growth factor</text><text x=\"450\" y=\"35\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#475569\" font-weight=\"normal\">Later amount</text><rect x=\"20\" y=\"65\" width=\"100\" height=\"58\" rx=\"7\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"70\" y=\"91\" font-family=\"monospace\" font-size=\"22\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">P</text><text x=\"70\" y=\"111\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"normal\">start</text><rect x=\"210\" y=\"65\" width=\"100\" height=\"58\" rx=\"7\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"260\" y=\"91\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">(1+r)ᵗ</text><text x=\"260\" y=\"111\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"normal\">growth</text><rect x=\"400\" y=\"65\" width=\"100\" height=\"58\" rx=\"7\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"450\" y=\"91\" font-family=\"monospace\" font-size=\"22\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">A</text><text x=\"450\" y=\"111\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"normal\">after t periods</text><line x1=\"120\" y1=\"94\" x2=\"208\" y2=\"94\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"310\" y1=\"94\" x2=\"398\" y2=\"94\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"260\" y=\"166\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Decay uses the factor (1 − r)ᵗ</text><text x=\"260\" y=\"193\" font-family=\"monospace\" font-size=\"15\" text-anchor=\"middle\" fill=\"#334155\" font-weight=\"bold\">Half-life: A = P(1/2)^(t/T)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A bacterial culture contains 1,200 cells and grows by 8% each hour. Estimate the population after 3 hours.",
+          "solution_steps": [
+            "Step 1: The growth factor is $1+0.08=1.08$.",
+            "Step 2: Use $A=P(1+r)^t$: $A=1200(1.08)^3$.",
+            "Step 3: Evaluate: $A=1200(1.259712)=1511.6544$.",
+            "Step 4: Round to a whole cell."
+          ],
+          "final_answer": "Approximately 1,512 cells."
+        },
+        {
+          "problem": "A radioactive sample has a half-life of 5 years. If its initial mass is 80 g, how much remains after 15 years?",
+          "solution_steps": [
+            "Step 1: Use $A=P(1/2)^{t/T}$ with P=80, t=15 and T=5.",
+            "Step 2: $A=80(1/2)^{15/5}=80(1/2)^3$.",
+            "Step 3: $A=80/8=10$."
+          ],
+          "final_answer": "10 g"
+        },
+        {
+          "problem": "A pollutant concentration is 64 mg/L and decreases by 25% each day. What concentration remains after 3 days?",
+          "solution_steps": [
+            "Step 1: The retained fraction each day is $1-0.25=0.75$.",
+            "Step 2: Use the discrete decay model $A=P(1-r)^t$: $A=64(0.75)^3$.",
+            "Step 3: Evaluate $0.75^3=0.421875$.",
+            "Step 4: Multiply: $A=64(0.421875)=27$."
+          ],
+          "final_answer": "27 mg/L"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the growth factor for a decay problem.",
+          "correction": "For a decay of r, the retained factor is 1-r, not 1+r."
+        },
+        {
+          "mistake": "Using a percentage as a whole number.",
+          "correction": "Convert 8% to 0.08 before using the model."
+        },
+        {
+          "mistake": "Counting the starting value as an elapsed interval.",
+          "correction": "If the initial amount is at time t=0, after 3 equal intervals the exponent is 3. Identify the starting time before choosing the exponent."
+        }
+      ],
+      "quick_summary": [
+        "A fixed percentage change per interval gives a discrete exponential model.",
+        "A growth rate r uses the factor 1+r; a decay rate r uses 1-r.",
+        "Half-life halves the remaining quantity at each half-life interval.",
+        "Financial compound growth and depreciation are covered in HS Topic 18."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Check numerical values of exponential growth and decay models after choosing the correct growth or decay factor.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t07_st12": {
+      "id": "hs_math_t07_st12",
+      "title": "Exponential and logarithmic scales in scientific contexts",
+      "overview": "A logarithmic scale represents multiplicative changes using additive steps. This makes it possible to compare quantities that span very large or very small ranges. The lesson interprets common scientific scales such as pH, sound intensity level in decibels and earthquake magnitude; it distinguishes a difference on the scale from an ordinary arithmetic difference in the measured quantity.",
+      "key_concepts": [
+        {
+          "concept": "pH and hydrogen-ion concentration",
+          "definition": "A logarithmic measure of acidity.",
+          "details": [
+            "For an aqueous solution, $pH=-\\log_{10}[H^+]$, where $[H^+]$ is the hydrogen-ion concentration in mol/L.",
+            "A difference of one pH unit corresponds to a tenfold difference in hydrogen-ion concentration.",
+            "A lower pH indicates a higher hydrogen-ion concentration and greater acidity in the usual pH range."
+          ]
+        },
+        {
+          "concept": "Sound intensity level",
+          "definition": "Decibels express an intensity ratio logarithmically.",
+          "details": [
+            "The intensity level is $\\beta=10\\log_{10}(I/I_0)$ dB, where I is the sound intensity and I0 is a reference intensity.",
+            "An increase of 10 dB corresponds to an intensity ratio of 10; an increase of 20 dB corresponds to a ratio of 100.",
+            "Decibels describe a physical intensity level; perceived loudness is a separate human response."
+          ]
+        },
+        {
+          "concept": "Earthquake magnitude",
+          "definition": "Magnitude differences represent multiplicative changes.",
+          "details": [
+            "Earthquake magnitude is reported on a logarithmic scale.",
+            "In a simplified comparison of measured wave amplitude, a difference of 1 magnitude unit corresponds to about 10 times the amplitude.",
+            "A magnitude difference of 2 corresponds to about 100 times the measured wave amplitude; do not interpret magnitude values as ordinary linear counts."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "pH",
+          "equation": "$$pH=-\\log_{10}[H^+]$$",
+          "variables": {
+            "[H+]": "Hydrogen-ion concentration in mol/L"
+          }
+        },
+        {
+          "name": "Sound intensity level",
+          "equation": "$$\\beta=10\\log_{10}\\left(\\frac{I}{I_0}\\right)\\text{ dB}$$",
+          "variables": {
+            "I": "Sound intensity",
+            "I0": "Reference intensity"
+          }
+        },
+        {
+          "name": "Approximate wave-amplitude ratio for a magnitude difference",
+          "equation": "$$R=10^{\\Delta M}$$",
+          "variables": {
+            "ΔM": "Difference in a base-10 magnitude value; R is the corresponding ratio on the stated amplitude scale"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st12",
+          "title": "Reading Scientific Logarithmic Scales",
+          "type": "svg",
+          "caption": "Equal steps on a logarithmic scale correspond to multiplicative ratios, not equal additive changes.",
+          "alt_text": "Three panels compare a two-unit pH difference (100 times hydrogen-ion concentration), a 20 dB increase (100 times intensity) and a one-unit earthquake magnitude difference (about 10 times wave amplitude).",
+          "data": "<svg viewBox=\"0 0 520 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"220\" rx=\"12\" fill=\"#f8fafc\"/><rect x=\"25\" y=\"30\" width=\"145\" height=\"130\" rx=\"7\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"97\" y=\"55\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">pH scale</text><text x=\"97\" y=\"86\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">pH 3</text><text x=\"97\" y=\"112\" font-family=\"sans-serif\" font-size=\"15\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">100× [H⁺]</text><text x=\"97\" y=\"138\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"normal\">vs pH 5</text><rect x=\"188\" y=\"30\" width=\"145\" height=\"130\" rx=\"7\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"260\" y=\"55\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Sound level</text><text x=\"260\" y=\"86\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">+20 dB</text><text x=\"260\" y=\"112\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">100× intensity</text><text x=\"260\" y=\"138\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"normal\">10 dB = 10×</text><rect x=\"351\" y=\"30\" width=\"145\" height=\"130\" rx=\"7\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"423\" y=\"55\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">Magnitude</text><text x=\"423\" y=\"86\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">+1 unit</text><text x=\"423\" y=\"112\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">about 10× amplitude</text><text x=\"423\" y=\"138\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"normal\">wave measure</text><text x=\"260\" y=\"193\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#334155\" font-weight=\"bold\">Equal steps on a log scale represent equal multiplicative ratios.</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Compare two aqueous solutions with pH values 3 and 5. How do their hydrogen-ion concentrations compare?",
+          "solution_steps": [
+            "Step 1: pH is the negative base-10 logarithm of hydrogen-ion concentration.",
+            "Step 2: The pH difference is $5-3=2$ units.",
+            "Step 3: A difference of 2 logarithmic units corresponds to a factor of $10^2=100$.",
+            "Step 4: The solution with pH 3 has the greater hydrogen-ion concentration."
+          ],
+          "final_answer": "The pH 3 solution has 100 times the hydrogen-ion concentration of the pH 5 solution."
+        },
+        {
+          "problem": "A sound intensity level increases by 20 dB. By what factor has the physical intensity increased?",
+          "solution_steps": [
+            "Step 1: Use the decibel difference relationship: $\\Delta\\beta=10\\log_{10}(I_2/I_1)$.",
+            "Step 2: Substitute 20: $20=10\\log_{10}(I_2/I_1)$.",
+            "Step 3: Divide by 10: $2=\\log_{10}(I_2/I_1)$.",
+            "Step 4: Convert to exponential form: $I_2/I_1=10^2=100$."
+          ],
+          "final_answer": "The physical intensity is 100 times as large."
+        },
+        {
+          "problem": "Two earthquakes differ by 1.5 magnitude units. Compare their measured wave amplitudes using the simplified base-10 scale relationship.",
+          "solution_steps": [
+            "Step 1: Use the amplitude ratio $R=10^{\\Delta M}$.",
+            "Step 2: Substitute $\\Delta M=1.5$: $R=10^{1.5}$.",
+            "Step 3: Evaluate: $10^{1.5}\\approx31.62$."
+          ],
+          "final_answer": "The larger-magnitude event corresponds to about 31.6 times the measured wave amplitude."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating a pH difference as an ordinary concentration difference.",
+          "correction": "A one-unit pH change is a tenfold concentration ratio, not a change of one concentration unit."
+        },
+        {
+          "mistake": "Assuming a 20 dB increase means 20 times the intensity.",
+          "correction": "Each 10 dB corresponds to a factor of 10, so 20 dB corresponds to a factor of 100."
+        },
+        {
+          "mistake": "Assuming earthquake magnitude is a linear scale.",
+          "correction": "A magnitude difference represents a multiplicative ratio in measured wave amplitude."
+        }
+      ],
+      "quick_summary": [
+        "Logarithmic scales turn multiplicative ratios into additive differences.",
+        "One pH unit represents a tenfold concentration ratio.",
+        "A 10 dB increase represents ten times the physical intensity.",
+        "A magnitude difference of one corresponds to about ten times the measured wave amplitude in the simplified scale model."
+      ]
+    },
+    "hs_math_t07_st13": {
+      "id": "hs_math_t07_st13",
+      "title": "Applications of logarithms",
+      "overview": "Logarithms are useful when an unknown appears as an exponent and cannot be isolated using matching bases. This lesson applies logarithms to determine an unknown exponent or elapsed time in mathematical and scientific models. Named scientific logarithmic scales are covered in ST12, while detailed compound interest, depreciation and investment calculations are covered in High School Topic 18.",
+      "key_concepts": [
+        {
+          "concept": "Isolate the exponential part",
+          "definition": "Separate the unknown power from the starting quantity.",
+          "details": [
+            "For a model $Q=Pb^t$, divide by P to obtain $Q/P=b^t$.",
+            "Check that the ratio Q/P is positive and that b is positive and not 1 before taking logarithms.",
+            "When the base and target are not convenient powers, logarithms allow the exponent to be calculated."
+          ]
+        },
+        {
+          "concept": "Solve for an unknown exponent",
+          "definition": "Take logarithms of both sides.",
+          "details": [
+            "From $b^t=R$, obtain $t=\\log_bR=\\frac{\\log R}{\\log b}$ using common logarithms.",
+            "The same logarithm base must be used in the numerator and denominator of the change-of-base quotient.",
+            "Round only at the final step and interpret the units of t."
+          ]
+        },
+        {
+          "concept": "Interpret the result in context",
+          "definition": "Check the model and the meaning of time.",
+          "details": [
+            "Confirm that the answer satisfies the original model approximately.",
+            "If t counts equal intervals, state whether the result is an approximate number of intervals or a continuous time.",
+            "Do not use the method to replace the separate interpretation of pH, decibels or earthquake magnitude in ST12."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Finding an unknown exponent",
+          "equation": "$$b^t=R\\implies t=\\frac{\\log R}{\\log b}$$",
+          "variables": {
+            "b": "Positive base, not 1",
+            "R": "Positive ratio",
+            "t": "Unknown exponent"
+          }
+        },
+        {
+          "name": "Exponential model with unknown time",
+          "equation": "$$Q=Pb^t\\implies t=\\frac{\\log(Q/P)}{\\log b}$$",
+          "variables": {
+            "P": "Initial amount",
+            "Q": "Target amount",
+            "b": "Positive multiplier, not 1"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st13",
+          "title": "Using Logarithms to Find an Unknown Time",
+          "type": "svg",
+          "caption": "Divide to isolate the exponential term, take logarithms, then solve for the exponent.",
+          "alt_text": "A three-step workflow from a known exponential model to an isolated power and then to an unknown exponent using a logarithm; example output approximately 3.969 hours.",
+          "data": "<svg viewBox=\"0 0 520 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"220\" rx=\"12\" fill=\"#f8fafc\"/><rect x=\"25\" y=\"30\" width=\"145\" height=\"60\" rx=\"7\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"97\" y=\"55\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Known model</text><text x=\"97\" y=\"76\" font-family=\"monospace\" font-size=\"15\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Q = P bᵗ</text><rect x=\"188\" y=\"30\" width=\"145\" height=\"60\" rx=\"7\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"260\" y=\"55\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Isolate power</text><text x=\"260\" y=\"76\" font-family=\"monospace\" font-size=\"15\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Q/P = bᵗ</text><rect x=\"351\" y=\"30\" width=\"145\" height=\"60\" rx=\"7\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"423\" y=\"55\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">Use logarithms</text><text x=\"423\" y=\"76\" font-family=\"monospace\" font-size=\"11\" text-anchor=\"middle\" fill=\"#9a3412\" font-weight=\"bold\">t = log(Q/P) / log b</text><line x1=\"170\" y1=\"60\" x2=\"186\" y2=\"60\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"333\" y1=\"60\" x2=\"349\" y2=\"60\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"260\" y=\"142\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">200(1.5)ᵗ = 1000</text><text x=\"260\" y=\"178\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">t = log 5 / log 1.5 ≈ 3.969</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A microorganism population follows $N=200(1.5)^t$, where t is measured in hours. When will it reach 1,000?",
+          "solution_steps": [
+            "Step 1: Substitute N=1000: $1000=200(1.5)^t$.",
+            "Step 2: Divide by 200: $5=(1.5)^t$.",
+            "Step 3: Take common logarithms: $\\log5=t\\log1.5$.",
+            "Step 4: Solve: $t=\\frac{\\log5}{\\log1.5}\\approx3.96936$."
+          ],
+          "final_answer": "Approximately 3.97 hours."
+        },
+        {
+          "problem": "A chemical concentration follows $C=50(0.88)^t$ mg/L, where t is in hours. When will the concentration fall to 20 mg/L?",
+          "solution_steps": [
+            "Step 1: Substitute C=20: $20=50(0.88)^t$.",
+            "Step 2: Divide by 50: $0.4=(0.88)^t$.",
+            "Step 3: Take common logarithms: $\\log0.4=t\\log0.88$.",
+            "Step 4: Solve: $t=\\frac{\\log0.4}{\\log0.88}\\approx7.16785$."
+          ],
+          "final_answer": "Approximately 7.17 hours."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Taking a logarithm before isolating the exponential expression.",
+          "correction": "First divide by the initial amount or otherwise isolate the power; then take logarithms."
+        },
+        {
+          "mistake": "Using log of the base divided by log of the target.",
+          "correction": "For $b^t=R$, the correct relationship using common logarithms is $t=\\log R/\\log b$."
+        },
+        {
+          "mistake": "Rounding too early or omitting units.",
+          "correction": "Keep calculator values unrounded until the final step and state the unit of the elapsed time."
+        }
+      ],
+      "quick_summary": [
+        "Use logarithms when the unknown is an exponent.",
+        "For $b^t=R$, calculate $t=\\log R/\\log b$.",
+        "Interpret the result in the units of the model.",
+        "Scientific logarithmic scales are treated in ST12; detailed financial applications are in HS T18."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Evaluate natural or common logarithms to approximate an unknown exponent after rearranging the model algebraically.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    }
+  }
+}

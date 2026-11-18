@@ -319,14 +319,16 @@
           "equation": "\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}+\\begin{bmatrix}e&f\\\\g&h\\end{bmatrix}=\\begin{bmatrix}a+e&b+f\\\\c+g&d+h\\end{bmatrix}",
           "variables": {
             "a,b,c,d": "Entries of the first matrix",
-            "e,f,g,h": "Corresponding entries of the second matrix"
+            "e,f,g,h": "Corresponding entries of the second matrix",
+            "Condition": "The two matrices must have the same order."
           }
         },
         {
           "name": "Matrix subtraction",
           "equation": "\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}-\\begin{bmatrix}e&f\\\\g&h\\end{bmatrix}=\\begin{bmatrix}a-e&b-f\\\\c-g&d-h\\end{bmatrix}",
           "variables": {
-            "a,b,c,d,e,f,g,h": "Corresponding matrix entries"
+            "a,b,c,d,e,f,g,h": "Corresponding matrix entries",
+            "Condition": "The two matrices must have the same order."
           }
         }
       ],
@@ -971,7 +973,8 @@
           "equation": "A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix},\\quad ad-bc\\ne0",
           "variables": {
             "a,b,c,d": "Entries of A",
-            "ad − bc": "Determinant of A, which must not be zero"
+            "ad − bc": "Determinant of A, which must not be zero",
+            "Condition": "The determinant ad − bc must be non-zero."
           }
         },
         {
@@ -1089,7 +1092,8 @@
           "variables": {
             "A": "2 × 2 coefficient matrix",
             "X": "Column matrix of the two unknowns",
-            "B": "Column matrix of constants"
+            "B": "Column matrix of constants",
+            "Condition": "A must be square and invertible; for a 2 × 2 coefficient matrix, det(A) ≠ 0."
           }
         }
       ],

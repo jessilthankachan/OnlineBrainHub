@@ -7,11 +7,11 @@
     "hs_math_t10_st01": {
       "id": "hs_math_t10_st01",
       "title": "Angles in degrees and radians",
-      "overview": "Just like distance can be measured in miles or kilometers, angles can be measured in degrees or radians. While degrees are familiar from everyday life, radians are the true mathematical language of circles.",
+      "overview": "Angles can be measured in degrees or radians. Degrees divide a full turn into 360 equal parts, while radians measure an angle in relation to the radius and arc length of a circle.",
       "key_concepts": [
         {
           "concept": "The Degree System",
-          "definition": "The 360 slice.",
+          "definition": "Measuring angles in degrees",
           "details": [
             "A full circle is divided into $360^\\circ$. A straight line is $180^\\circ$. A right angle is $90^\\circ$.",
             "For extreme precision, 1 degree is split into 60 'minutes', and 1 minute is split into 60 'seconds' (the Sexagesimal system)."
@@ -19,15 +19,15 @@
         },
         {
           "concept": "The Radian System",
-          "definition": "The radius wrap.",
+          "definition": "Measuring an angle using radius and arc length",
           "details": [
-            "Imagine taking the radius of a circle, bending it like a piece of string, and laying it along the curved edge of the circle. The angle created by that slice is exactly **1 Radian**.",
-            "Because the full circumference is $2\\pi r$, it takes exactly $2\\pi$ radians (about $6.28$) to wrap around a full circle."
+            "One radian is the central angle subtended by an arc whose length equals the radius of the circle.",
+            "The circumference of a circle is $2\\pi r$, so a full turn measures $2\\pi$ radians."
           ]
         },
         {
           "concept": "The Conversion Bridge",
-          "definition": "Translating the units.",
+          "definition": "Converting between degrees and radians",
           "details": [
             "Since $360^\\circ = 2\\pi$ radians, we can simplify this to the golden rule: **$180^\\circ = \\pi$ radians**.",
             "To convert Degrees to Radians: Multiply by $\\frac{\\pi}{180^\\circ}$.",
@@ -691,8 +691,11 @@
       "formulas": [
         {
           "name": "Reciprocal (Reverse) Bearing",
-          "equation": "$$ \\text{Reverse} = \\theta \\pm 180^\\circ $$",
-          "variables": {}
+          "equation": "$$\\text{Reverse bearing}=\\begin{cases}\\theta+180^\\circ,&0^\\circ\\leq\\theta<180^\\circ\\\\\\theta-180^\\circ,&180^\\circ\\leq\\theta<360^\\circ\\end{cases}$$",
+          "variables": {
+            "θ": "Original bearing, measured clockwise from north in the range 0° ≤ θ < 360°",
+            "Reverse bearing": "Result, expressed in the range 000° to 359°"
+          }
         }
       ],
       "visual_aids": [
@@ -1272,7 +1275,7 @@
         {
           "problem": "Simplify $\\sec^2\\theta - \\tan^2\\theta$.",
           "solution_steps": [
-            "Step 1: Recall the mutant identity: $\\tan^2\\theta + 1 = \\sec^2\\theta$.",
+            "Step 1: Recall the Pythagorean identity: $\\tan^2\\theta + 1 = \\sec^2\\theta$.",
             "Step 2: Rearrange by subtracting $\\tan^2\\theta$ from both sides.",
             "Step 3: This leaves $1 = \\sec^2\\theta - \\tan^2\\theta$."
           ],

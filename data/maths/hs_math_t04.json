@@ -511,29 +511,29 @@
     "hs_math_t04_st06": {
       "id": "hs_math_t04_st06",
       "title": "Quadratic equations by factorisation",
-      "overview": "A quadratic equation (degree 2) forms a U-shaped parabola on a graph. Solving it tells us exactly where that parabola hits the floor (the $x$-axis). We call these floor-hitting spots the 'roots' of the equation.",
+      "overview": "A quadratic equation has degree 2. Its solutions are the values of the variable that make the equation true. When the corresponding quadratic function is graphed, these solutions are the x-coordinates where its graph intersects the x-axis.",
       "key_concepts": [
         {
           "concept": "The Standard Form",
-          "definition": "Setting the stage.",
+          "definition": "The standard equation form",
           "details": [
-            "Before you can factorise, you MUST move all terms to one side so the equation equals zero: $ax^2 + bx + c = 0$."
+            "Before factorising a quadratic equation, rearrange it so that one side is zero: $ax^2 + bx + c = 0$, where $a\\ne0$."
           ]
         },
         {
           "concept": "The Zero-Product Property",
-          "definition": "The magic trick.",
+          "definition": "A property used to solve a product equation",
           "details": [
-            "If you multiply two things together and the answer is $0$, one of those things MUST be zero. $A \\times B = 0 \\implies A = 0$ or $B = 0$.",
-            "This allows us to split a factored equation like $(x-2)(x+3)=0$ into two separate, tiny equations: $x-2=0$ and $x+3=0$."
+            "If the product of two real numbers or expressions is zero, at least one factor must be zero: $AB=0$ implies $A=0$ or $B=0$.",
+            "Thus, $(x-2)(x+3)=0$ gives $x-2=0$ or $x+3=0$."
           ]
         },
         {
           "concept": "Finding the Roots",
-          "definition": "Flipping the signs.",
+          "definition": "Solving each factor equation",
           "details": [
-            "Once factored into brackets, the actual roots (solutions) are the values that make the bracket zero.",
-            "If the factor is $(x - 5)$, the root is $+5$."
+            "After factorising, set each factor equal to zero and solve the resulting linear equations.",
+            "For example, if a factor is $(x-5)$, its zero is $x=5$."
           ]
         }
       ],
@@ -568,16 +568,16 @@
             "Step 1: Check standard form. It already equals zero.",
             "Step 2: Factorise. Find numbers that multiply to $12$ and add to $7$. The numbers are $3$ and $4$.",
             "Step 3: Write in bracket form: $(x + 3)(x + 4) = 0$.",
-            "Step 4: Use Zero-Product property. $x + 3 = 0 \\implies x = -3$. $x + 4 = 0 \\implies x = -4$."
+            "Step 4: Apply the zero-product property. $x + 3 = 0 \\implies x = -3$. $x + 4 = 0 \\implies x = -4$."
           ],
           "final_answer": "$x = -3, x = -4$"
         },
         {
           "problem": "Solve: $2x^2 = 8x$.",
           "solution_steps": [
-            "Step 1: Force standard form! Subtract $8x$ to set it to zero: $2x^2 - 8x = 0$.",
+            "Step 1: Rearrange into standard form: Subtract $8x$ to set it to zero: $2x^2 - 8x = 0$.",
             "Step 2: Factorise out the common factor of $2x$: $2x(x - 4) = 0$.",
-            "Step 3: Use Zero-Product property. Either $2x = 0 \\implies x = 0$, or $x - 4 = 0 \\implies x = 4$."
+            "Step 3: Apply the zero-product property. Either $2x = 0 \\implies x = 0$, or $x - 4 = 0 \\implies x = 4$."
           ],
           "final_answer": "$x = 0, x = 4$"
         }
@@ -585,11 +585,11 @@
       "common_mistakes": [
         {
           "mistake": "Dividing both sides by a variable.",
-          "correction": "If $2x^2 = 8x$, dividing both sides by $x$ gives $2x = 8 \\implies x = 4$. You just deleted $x=0$, which is a valid root! NEVER divide by a variable. Move it over and factorise it out instead."
+          "correction": "Dividing by a variable can remove a valid solution. For example, dividing $2x^2=8x$ by $x$ assumes $x\\ne0$ and loses the solution $x=0$. Instead, rearrange and factorise: $2x(x-4)=0$, so $x=0$ or $x=4$."
         },
         {
           "mistake": "Applying Zero-Product to a number other than zero.",
-          "correction": "If $(x-2)(x-3) = 12$, you CANNOT say $x-2 = 12$ and $x-3 = 12$. The property only works with ZERO. You must expand it, subtract 12 to equal zero, and re-factorise."
+          "correction": "The zero-product property applies only when a product equals zero. If $(x-2)(x-3)=12$, first expand and rearrange the equation to make one side zero; do not set either factor equal to 12."
         }
       ],
       "quick_summary": [
@@ -1237,16 +1237,16 @@
           "visual_id": "v04_s14",
           "title": "Squaring a Binomial Warning",
           "type": "svg",
-          "caption": "When squaring a side with multiple terms, you must FOIL.",
-          "alt_text": "Visual showing an equation: √(x+1) = x - 1. Arrow points down showing squaring both sides. Left side becomes just 'x+1'. Right side shows (x - 1)^2. A red warning box highlights that (x-1)^2 becomes x^2 - 2x + 1, NOT just x^2 + 1.",
-          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"40\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">√(x + 1) = x - 1</text><path d=\"M 250 50 L 250 80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"290\" y=\"70\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1d4ed8\">Square both sides</text><text x=\"250\" y=\"110\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x + 1 = (x - 1)²</text><rect x=\"100\" y=\"130\" width=\"300\" height=\"50\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">WARNING: You must FOIL the right side!</text><text x=\"250\" y=\"170\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">x + 1 = x² - 2x + 1</text></svg>"
+          "caption": "For the worked example, first note the domain restriction x ≥ 1, then square both sides and expand the binomial.",
+          "alt_text": "Visual showing the worked equation square root of x plus 5 equals x minus 1. It states that the right side must be non-negative, so x is at least 1, then shows x plus 5 equals (x minus 1) squared and expands to x squared minus 2x plus 1.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 230\"><rect width=\"500\" height=\"230\" rx=\"10\" fill=\"#f8fafc\"/><text x=\"250\" y=\"34\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">√(x + 5) = x − 1</text><rect x=\"70\" y=\"48\" width=\"360\" height=\"34\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\"/><text x=\"250\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#166534\" font-weight=\"bold\">Domain check: x − 1 ≥ 0, so x ≥ 1</text><path d=\"M250 86 L250 105\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"290\" y=\"100\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1d4ed8\">Now square both sides</text><text x=\"250\" y=\"132\" font-family=\"monospace\" font-size=\"19\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x + 5 = (x − 1)²</text><rect x=\"70\" y=\"150\" width=\"360\" height=\"62\" rx=\"6\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"250\" y=\"173\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Expand the entire binomial</text><text x=\"250\" y=\"197\" font-family=\"monospace\" font-size=\"17\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">x + 5 = x² − 2x + 1</text></svg>"
         }
       ],
       "worked_examples": [
         {
           "problem": "Solve: $\\sqrt{x + 5} = x - 1$",
           "solution_steps": [
-            "Step 1: The radical is isolated. Square both sides: $x + 5 = (x - 1)^2$.",
+            "Step 1: Since the square root is non-negative, the right-hand side must also be non-negative: $x-1\\ge0$, so first state the domain restriction $x\\ge1$. Now square both sides: $x+5=(x-1)^2$.",
             "Step 2: FOIL the right side: $x + 5 = x^2 - 2x + 1$.",
             "Step 3: Move everything to one side to form a quadratic: $0 = x^2 - 3x - 4$.",
             "Step 4: Factorise: $0 = (x - 4)(x + 1) \\implies x = 4, x = -1$.",

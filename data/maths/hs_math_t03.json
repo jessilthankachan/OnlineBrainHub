@@ -877,21 +877,21 @@
       "formulas": [
         {
           "name": "Addition and Subtraction of Algebraic Fractions",
-          "equation": "$$ \\frac{A}{B} \\pm \\frac{C}{D} = \\frac{AD \\pm BC}{BD} $$",
+          "equation": "$$\\frac{A}{B}\\pm\\frac{C}{D}=\\frac{AD\\pm BC}{BD},\\quad B\\ne0,\\ D\\ne0$$",
           "variables": {
             "A, B, C, D": "Algebraic expressions, with $B \\ne 0$ and $D \\ne 0$"
           }
         },
         {
           "name": "Multiplication of Algebraic Fractions",
-          "equation": "$$ \\frac{A}{B} \\times \\frac{C}{D} = \\frac{AC}{BD} $$",
+          "equation": "$$\\frac{A}{B}\\times\\frac{C}{D}=\\frac{AC}{BD},\\quad B\\ne0,\\ D\\ne0$$",
           "variables": {
             "A, B, C, D": "Algebraic expressions, with $B \\ne 0$ and $D \\ne 0$"
           }
         },
         {
           "name": "Division of Algebraic Fractions",
-          "equation": "$$ \\frac{A}{B} \\div \\frac{C}{D} = \\frac{AD}{BC} $$",
+          "equation": "$$\\frac{A}{B}\\div\\frac{C}{D}=\\frac{AD}{BC},\\quad B\\ne0,\\ C\\ne0,\\ D\\ne0$$",
           "variables": {
             "A, B, C, D": "Algebraic expressions, with $B \\ne 0$, $D \\ne 0$ and $C \\ne 0$"
           }

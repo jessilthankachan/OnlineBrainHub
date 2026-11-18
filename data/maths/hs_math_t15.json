@@ -241,14 +241,6 @@
       ],
       "formulas": [
         {
-          "name": "Classical Probability",
-          "equation": "$$ P(A) = \\frac{n(A)}{n(S)} $$",
-          "variables": {
-            "n(A)": "Number of favorable outcomes",
-            "n(S)": "Total number of outcomes in the sample space"
-          }
-        },
-        {
           "name": "Classical probability",
           "equation": "$$P(A)=\\frac{n(A)}{n(S)}$$",
           "variables": {
@@ -431,14 +423,6 @@
           "variables": {}
         },
         {
-          "name": "Experimental probability",
-          "equation": "$$P_{\\mathrm{exp}}(A)=\\frac{\\text{frequency of }A}{\\text{total number of trials}}$$",
-          "variables": {
-            "frequency of A": "Number of trials in which event A occurred",
-            "total number of trials": "Number of times the experiment was performed"
-          }
-        },
-        {
           "name": "Estimated future frequency",
           "equation": "$$\\text{Estimated frequency}=N\\times P_{\\mathrm{exp}}(A)$$",
           "variables": {
@@ -600,21 +584,6 @@
           "name": "At Least One Shortcut",
           "equation": "$$ P(\\text{At least one}) = 1 - P(\\text{None}) $$",
           "variables": {}
-        },
-        {
-          "name": "Complement rule",
-          "equation": "$$P(A')=1-P(A)$$",
-          "variables": {
-            "P(A)": "Probability that A occurs",
-            "P(A′)": "Probability that A does not occur"
-          }
-        },
-        {
-          "name": "At least one",
-          "equation": "$$P(\\text{at least one})=1-P(\\text{none})$$",
-          "variables": {
-            "P(none)": "Probability that no required occurrence happens"
-          }
         }
       ],
       "visual_aids": [
@@ -763,14 +732,6 @@
           "equation": "$$P(A\\cap B)=0$$",
           "variables": {
             "A ∩ B": "Outcomes common to both events"
-          }
-        },
-        {
-          "name": "Addition for mutually exclusive events",
-          "equation": "$$P(A\\cup B)=P(A)+P(B)$$",
-          "variables": {
-            "A ∪ B": "A occurs or B occurs",
-            "P(A), P(B)": "Individual event probabilities"
           }
         }
       ],
@@ -926,21 +887,6 @@
           "equation": "$$ P(A \\cap B) = P(A) \\times P(B|A) $$",
           "variables": {
             "P(B|A)": "Probability of B, given that A has already happened"
-          }
-        },
-        {
-          "name": "Independence condition",
-          "equation": "$$P(A\\cap B)=P(A)P(B)$$",
-          "variables": {
-            "P(A ∩ B)": "Probability that both A and B occur",
-            "P(A), P(B)": "Individual event probabilities"
-          }
-        },
-        {
-          "name": "Dependent multiplication",
-          "equation": "$$P(A\\cap B)=P(A)P(B\\mid A)$$",
-          "variables": {
-            "P(B | A)": "Probability of B given that A has occurred"
           }
         },
         {
@@ -1260,14 +1206,6 @@
           "variables": {}
         },
         {
-          "name": "General addition rule",
-          "equation": "$$P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$$",
-          "variables": {
-            "P(A ∪ B)": "Probability that A or B or both occur",
-            "P(A ∩ B)": "Probability that both occur"
-          }
-        },
-        {
           "name": "Mutually exclusive addition rule",
           "equation": "$$P(A\\cup B)=P(A)+P(B)$$",
           "variables": {
@@ -1434,15 +1372,6 @@
           }
         },
         {
-          "name": "Conditional probability",
-          "equation": "$$P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)},\\quad P(B)>0$$",
-          "variables": {
-            "P(A | B)": "Probability of A given B",
-            "P(A ∩ B)": "Probability that both A and B occur",
-            "P(B)": "Probability of the given condition B"
-          }
-        },
-        {
           "name": "Conditional probability from frequencies",
           "equation": "$$P(A\\mid B)=\\frac{n(A\\cap B)}{n(B)}$$",
           "variables": {
@@ -1469,15 +1398,6 @@
             "Step 2: Identify the intersection (the numerator). How many of those 28 Math students ALSO study Science? The problem states 12 study both. Numerator is 12.",
             "Step 3: Setup the fraction: $P(S \\mid M) = \\frac{12}{28}$.",
             "Step 4: Simplify the fraction: $\\frac{3}{7}$."
-          ],
-          "final_answer": "3/7"
-        },
-        {
-          "problem": "In a group of 50 students, 28 study Mathematics, 24 study Science and 12 study both. Find the probability that a student studies Science given that the student studies Mathematics.",
-          "solution_steps": [
-            "Step 1: The condition is that the student studies Mathematics, so the denominator is 28.",
-            "Step 2: Of these 28 students, 12 also study Science.",
-            "Step 3: P(Science | Mathematics) = 12/28 = 3/7."
           ],
           "final_answer": "3/7"
         },
@@ -1530,30 +1450,6 @@
       "overview": "The multiplication rule calculates the probability that two events both occur. It combines the probability of the first event with the conditional probability of the second event after the first has occurred. Independence is a special case in which the second probability is unchanged.",
       "key_concepts": [
         {
-          "concept": "The 'OR' Keyword",
-          "definition": "Union.",
-          "details": [
-            "In probability, 'OR' translates to the Union ($A \\cup B$).",
-            "It means you win if Event A happens, OR if Event B happens, OR if they both happen together."
-          ]
-        },
-        {
-          "concept": "The General Addition Rule",
-          "definition": "Subtracting the overlap.",
-          "details": [
-            "$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
-            "You add the full probability of A to the full probability of B, and then subtract the intersection exactly once to fix the double-counting."
-          ]
-        },
-        {
-          "concept": "The Mutually Exclusive Shortcut",
-          "definition": "Zero intersection.",
-          "details": [
-            "If A and B are mutually exclusive, they physically cannot overlap ($P(A \\cap B) = 0$).",
-            "The formula naturally simplifies to just $P(A) + P(B)$."
-          ]
-        },
-        {
           "concept": "The meaning of AND",
           "definition": "Both events must occur.",
           "details": [
@@ -1592,16 +1488,6 @@
       ],
       "formulas": [
         {
-          "name": "General Addition Rule",
-          "equation": "$$ P(A \\cup B) = P(A) + P(B) - P(A \\cap B) $$",
-          "variables": {}
-        },
-        {
-          "name": "Addition Rule for Independent Events",
-          "equation": "$$ P(A \\cup B) = P(A) + P(B) - (P(A) \\times P(B)) $$",
-          "variables": {}
-        },
-        {
           "name": "General multiplication rule",
           "equation": "$$P(A\\cap B)=P(A)P(B\\mid A)$$",
           "variables": {
@@ -1635,18 +1521,6 @@
       ],
       "worked_examples": [
         {
-          "problem": "One card is drawn randomly from a standard deck. Find the probability of drawing a King OR a Heart.",
-          "solution_steps": [
-            "Step 1: P(King) = $4/52$.",
-            "Step 2: P(Heart) = $13/52$.",
-            "Step 3: Can a card be a King AND a Heart? Yes, the King of Hearts. They are not mutually exclusive. P(Intersection) = $1/52$.",
-            "Step 4: Use the General Addition Rule: $4/52 + 13/52 - 1/52$.",
-            "Step 5: $17/52 - 1/52 = 16/52$.",
-            "Step 6: Simplify: $4/13$."
-          ],
-          "final_answer": "4/13"
-        },
-        {
           "problem": "A bag contains 6 red and 4 blue balls. Three balls are drawn successively without replacement. Find the probability that all three are red.",
           "solution_steps": [
             "Step 1: First red: 6/10.",
@@ -1677,6 +1551,10 @@
         }
       ],
       "common_mistakes": [
+        {
+          "mistake": "Using the multiplication rule for an OR event.",
+          "correction": "OR describes a union and is handled by the addition rule. AND describes an intersection and is handled by the multiplication rule. Identify the event being asked for before choosing a rule."
+        },
         {
           "mistake": "Adding independent events directly without subtracting the overlap.",
           "correction": "If an engine fails 10% of the time, and the backup fails 10% of the time, the chance of AT LEAST ONE failing is not $10\\% + 10\\% = 20\\%$. They can both fail at the same time ($10\\% \\times 10\\% = 1\\%$). You must subtract that overlap: $0.1 + 0.1 - 0.01 = 0.19$ (19%)."
@@ -1769,11 +1647,6 @@
         }
       ],
       "formulas": [
-        {
-          "name": "General Multiplication Rule",
-          "equation": "$$ P(A \\cap B) = P(A) \\times P(B \\mid A) $$",
-          "variables": {}
-        },
         {
           "name": "Probability of a path",
           "equation": "$$P(\\text{path})=p_1p_2\\cdots p_k$$",
@@ -1935,16 +1808,11 @@
       ],
       "formulas": [
         {
-          "name": "Combinatoric Probability",
-          "equation": "$$ P(E) = \\frac{{}^{\\text{Target}}C_{\\text{Required}}}{{}^{\\text{Total}}C_{\\text{Total Required}}} $$",
-          "variables": {}
-        },
-        {
           "name": "Probability by counting combinations",
-          "equation": "$$P(E)=\\frac{\\text{number of favourable selections}}{\\text{number of possible selections}}$$",
+          "equation": "P(E)=\\frac{\\text{number of favourable equally likely selections}}{\\text{total number of equally likely selections}}",
           "variables": {
-            "Numerator": "Number of selections satisfying E",
-            "Denominator": "Total equally likely selections"
+            "Numerator": "Count of selections satisfying event E",
+            "Denominator": "Count of all possible selections, each equally likely"
           }
         },
         {
@@ -1976,17 +1844,6 @@
             "Step 4: Combine the Numerator (AND Rule). $10 \\times 3 = 30$.",
             "Step 5: Setup final fraction: $P(E) = \\frac{30}{56}$.",
             "Step 6: Simplify: $\\frac{15}{28}$."
-          ],
-          "final_answer": "15/28"
-        },
-        {
-          "problem": "A bag contains 5 red and 3 blue balls. Three balls are selected at random without replacement. Find the probability that exactly 2 are red and 1 is blue.",
-          "solution_steps": [
-            "Step 1: Total ways to select 3 from 8: ⁸C₃ = 56.",
-            "Step 2: Ways to select 2 red from 5: ⁵C₂ = 10.",
-            "Step 3: Ways to select 1 blue from 3: ³C₁ = 3.",
-            "Step 4: Favourable selections = 10 × 3 = 30.",
-            "Step 5: Probability = 30/56 = 15/28."
           ],
           "final_answer": "15/28"
         },
@@ -2226,16 +2083,6 @@
           ]
         },
         {
-          "concept": "The four conditions for a binomial model",
-          "definition": "A fixed and consistent repeated-trial process.",
-          "details": [
-            "Fixed number of trials: the experiment is performed a predetermined number n of times.",
-            "Two outcomes per trial: each trial is classified as success or failure for the event being studied.",
-            "Constant probability: the probability p of success is the same on every trial.",
-            "Independence: the result of one trial does not affect the result of another."
-          ]
-        },
-        {
           "concept": "Success and failure probabilities",
           "definition": "The two outcomes are complementary.",
           "details": [
@@ -2297,16 +2144,6 @@
             "Step 5: Multiply it all together: $5 \\times 0.2401 \\times 0.3 = 0.36015$."
           ],
           "final_answer": "0.36015 (approx 36%)"
-        },
-        {
-          "problem": "A basketball player scores a free throw with probability 0.7. The player takes 5 independent shots. Find the probability of scoring exactly 4 times.",
-          "solution_steps": [
-            "Step 1: n = 5, r = 4, p = 0.7 and q = 0.3.",
-            "Step 2: Use P(exactly 4) = ⁵C₄(0.7)⁴(0.3)¹.",
-            "Step 3: ⁵C₄ = 5 and (0.7)⁴ = 0.2401.",
-            "Step 4: Probability = 5 × 0.2401 × 0.3 = 0.36015."
-          ],
-          "final_answer": "0.36015 (about 36.015%)"
         },
         {
           "problem": "A fair coin is tossed 4 times. Find the probability of getting exactly 2 heads.",

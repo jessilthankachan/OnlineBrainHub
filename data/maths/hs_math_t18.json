@@ -1657,12 +1657,13 @@
         },
         {
           "name": "Break-even quantity for linear cost and revenue",
-          "equation": "$$pq=F+vq$$",
+          "equation": "$$pq=F+vq,\\qquad q=\\frac{F}{p-v}\\quad(p>v)$$",
           "variables": {
             "p": "selling price per unit",
             "F": "fixed cost",
             "v": "variable cost per unit",
-            "q": "break-even quantity"
+            "q": "break-even quantity",
+            "Condition": "A positive finite break-even quantity requires selling price p to exceed variable cost v per unit"
           }
         }
       ],

@@ -11,10 +11,10 @@
       "key_concepts": [
         {
           "concept": "The Multiplication Rule (AND)",
-          "definition": "Successive choices.",
+          "definition": "Successive stages of a process.",
           "details": [
-            "If an event requires multiple independent stages to be completed together (e.g., choosing a shirt AND choosing trousers), you **multiply** the number of choices at each stage.",
-            "Example: $3 \\text{ shirts} \\times 2 \\text{ trousers} = 6 \\text{ total outfits}$."
+            "When a process is completed through successive stages, multiply the number of available choices at each stage. The number of choices at a later stage may depend on the earlier choice; use the appropriate number of choices for each stage.",
+            "Example: choosing one shirt and one pair of trousers gives $3 \\times 2 = 6$ outfits."
           ]
         },
         {
@@ -74,14 +74,6 @@
           "variables": {
             "N": "Total outcomes from mutually exclusive alternatives",
             "m, n": "Numbers of outcomes in the separate alternatives"
-          }
-        },
-        {
-          "name": "Multiplication principle",
-          "equation": "$$N=n_1n_2\\cdots n_k$$",
-          "variables": {
-            "N": "Total complete outcomes",
-            "n_i": "Number of available choices at stage i"
           }
         }
       ],
@@ -182,7 +174,7 @@
         },
         {
           "concept": "Factorial Division",
-          "definition": "The canceling trick.",
+          "definition": "Canceling common factorial factors.",
           "details": [
             "You almost never need to calculate massive factorials manually. When dividing factorials, you expand the larger one until it matches the smaller one, and then cancel them out entirely.",
             "Example: $\\frac{8!}{6!} = \\frac{8 \\times 7 \\times 6!}{6!}$. The $6!$ chunks cancel out, leaving just $8 \\times 7 = 56$."
@@ -217,25 +209,15 @@
         {
           "name": "Factorial Definition",
           "equation": "$$ n! = n \\times (n-1) \\times (n-2) \\times \\dots \\times 1 $$",
-          "variables": {}
+          "variables": {
+            "n": "Non-negative integer; by convention 0! = 1"
+          }
         },
         {
           "name": "Recursive Property",
           "equation": "$$ n! = n \\times (n-1)! $$",
-          "variables": {}
-        },
-        {
-          "name": "Factorial definition",
-          "equation": "$$n!=n(n-1)(n-2)\\cdots 2\\cdot1$$",
           "variables": {
-            "n": "A positive integer; also 0! is defined as 1"
-          }
-        },
-        {
-          "name": "Recursive property",
-          "equation": "$$n!=n(n-1)!$$",
-          "variables": {
-            "n": "A positive integer"
+            "n": "Non-negative integer; by convention 0! = 1"
           }
         },
         {
@@ -380,14 +362,6 @@
       ],
       "formulas": [
         {
-          "name": "Permutation Formula",
-          "equation": "$$ {}^nP_r = \\frac{n!}{(n-r)!} $$",
-          "variables": {
-            "n": "Total available objects",
-            "r": "Number of positions to fill"
-          }
-        },
-        {
           "name": "Permutation formula",
           "equation": "$$ {}^nP_r=\\\\frac{n!}{(n-r)!} $$",
           "variables": {
@@ -474,7 +448,7 @@
       "key_concepts": [
         {
           "concept": "The Fixed Position",
-          "definition": "Locked in place.",
+          "definition": "A fixed position.",
           "details": [
             "If a problem dictates that person A MUST stand in the first position, they are locked. They no longer have choices, and that position no longer has choices.",
             "You simply ignore them and arrange the remaining people in the remaining slots. If 5 people are in a line but 1 is fixed at the front, the math is just $4! = 24$."
@@ -492,7 +466,7 @@
         },
         {
           "concept": "The Subtraction Method (Not Together)",
-          "definition": "The complement.",
+          "definition": "Counting by the complement.",
           "details": [
             "If two objects absolutely refuse to sit next to each other, do not try to calculate it directly. It is a nightmare.",
             "Instead, calculate the Total unrestricted arrangements, and SUBTRACT the arrangements where they ARE together (from the Block Method).",
@@ -536,13 +510,6 @@
           "equation": "$$N=(n-1)!$$",
           "variables": {
             "n": "Number of distinct objects arranged in a line"
-          }
-        },
-        {
-          "name": "Two specified objects adjacent",
-          "equation": "$$N=2!(n-1)!$$",
-          "variables": {
-            "n": "Total number of distinct objects, n≥2"
           }
         },
         {
@@ -653,7 +620,7 @@
         },
         {
           "concept": "The Symmetry Property",
-          "definition": "Choosing vs Leaving behind.",
+          "definition": "Choosing a subset or its complement.",
           "details": [
             "Choosing $2$ objects from a group of $10$ is mathematically identical to choosing $8$ objects to leave behind.",
             "Therefore, ${}^{10}C_2 = {}^{10}C_8$. The general rule is ${}^nC_r = {}^nC_{n-r}$. This provides a massive shortcut when calculating large numbers."
@@ -685,19 +652,6 @@
         }
       ],
       "formulas": [
-        {
-          "name": "Combination Formula",
-          "equation": "$$ {}^nC_r = \\frac{n!}{r!(n-r)!} $$",
-          "variables": {
-            "n": "Total available objects",
-            "r": "Number of objects selected"
-          }
-        },
-        {
-          "name": "Symmetry Property",
-          "equation": "$$ {}^nC_r = {}^nC_{n-r} $$",
-          "variables": {}
-        },
         {
           "name": "Combination formula",
           "equation": "$$ {}^nC_r=\\\\frac{n!}{r!(n-r)!} $$",
@@ -849,14 +803,6 @@
           "name": "The Missing Link",
           "equation": "$$ {}^nP_r = {}^nC_r \\times r! $$",
           "variables": {}
-        },
-        {
-          "name": "Permutation-combination relationship",
-          "equation": "$$ {}^nP_r={}^nC_r\\\\times r! $$",
-          "variables": {
-            "n": "Total distinct objects",
-            "r": "Number selected and arranged"
-          }
         }
       ],
       "visual_aids": [
@@ -984,22 +930,6 @@
             "n": "Total letters/objects",
             "p, q, s": "Sizes of the identical clone groups"
           }
-        },
-        {
-          "name": "Repeated choices in r positions",
-          "equation": "$$N=n^r$$",
-          "variables": {
-            "n": "Number of choices available at each position",
-            "r": "Number of positions"
-          }
-        },
-        {
-          "name": "Arrangements with identical objects",
-          "equation": "$$N=\\\\frac{n!}{p!q!\\\\cdots}$$",
-          "variables": {
-            "n": "Total number of objects",
-            "p, q, ...": "Sizes of groups of identical objects"
-          }
         }
       ],
       "visual_aids": [
@@ -1032,15 +962,6 @@
             "Step 3: 10⁴ = 10,000."
           ],
           "final_answer": "10,000 PIN codes"
-        },
-        {
-          "problem": "How many distinct arrangements can be made using all the letters of BANANA?",
-          "solution_steps": [
-            "Step 1: There are 6 letters in total, so start with 6!.",
-            "Step 2: A occurs 3 times and N occurs 2 times.",
-            "Step 3: Divide by 3! and 2!: 6!/(3!×2!) = 720/(6×2) = 60."
-          ],
-          "final_answer": "60 arrangements"
         },
         {
           "problem": "How many distinct arrangements can be made using all the letters of LEVEL?",
@@ -1133,17 +1054,10 @@
       ],
       "formulas": [
         {
-          "name": "Circular Permutation",
-          "equation": "$$ N = (n-1)! $$",
-          "variables": {
-            "n": "Number of distinct objects"
-          }
-        },
-        {
           "name": "Circular permutations",
           "equation": "$$N=(n-1)!$$",
           "variables": {
-            "n": "Number of distinct objects arranged around the circle"
+            "n": "Number of distinct objects arranged around a circle; rotations are treated as the same arrangement and reflections as different arrangements"
           }
         }
       ],
@@ -1214,31 +1128,14 @@
     "hs_math_t14_st10": {
       "id": "hs_math_t14_st10",
       "title": "Pascal’s triangle",
-      "overview": "If you need to expand $(x+2)^2$, you can just FOIL it. But what if you need to expand $(x+2)^{10}$? Multiplying that manually would take hours and lead to errors. The Binomial Theorem uses Pascal's Triangle to instantly generate massive algebraic expansions in seconds.",
+      "overview": "Pascal’s triangle is a pattern of numbers in which each interior entry is the sum of the two entries directly above it. Each row gives the combination values for a fixed n. It is useful for counting selections and recognising binomial coefficients; the separate Binomial Theorem lesson applies those coefficients to algebraic expansions.",
       "key_concepts": [
-        {
-          "concept": "The Power Trade-Off",
-          "definition": "Ascending and descending.",
-          "details": [
-            "In an expansion of $(a+b)^n$, the power of the first term ($a$) starts at maximum ($n$) and drops down to $0$ by the end.",
-            "Simultaneously, the power of the second term ($b$) starts at $0$ and climbs up to maximum ($n$) by the end.",
-            "Example for $(a+b)^3$: The variable pattern is $a^3b^0$, $a^2b^1$, $a^1b^2$, $a^0b^3$."
-          ]
-        },
         {
           "concept": "The Coefficients",
           "definition": "Sourced from Pascal.",
           "details": [
             "The numbers that attach to the front of those variable patterns are pulled directly from Row $n$ of Pascal's Triangle (which is just the Combinations formula ${}^nC_r$).",
             "The full $(a+b)^3$ expansion is: $1a^3 + 3a^2b + 3ab^2 + 1b^3$."
-          ]
-        },
-        {
-          "concept": "Finding a Specific Term",
-          "definition": "The $T_{r+1}$ shortcut.",
-          "details": [
-            "If a test asks for the 5th term of an expansion, you do not need to expand the entire thing. You can jump straight to it using the General Term formula.",
-            "Because we start counting at 0, the $5$th term happens when $r=4$. Formula: $T_5 = {}^{n}C_4 (a)^{n-4} (b)^4$."
           ]
         },
         {
@@ -1269,18 +1166,6 @@
       ],
       "formulas": [
         {
-          "name": "The Binomial Expansion",
-          "equation": "$$ (a+b)^n = \\sum_{r=0}^{n} {}^nC_r a^{n-r} b^r $$",
-          "variables": {}
-        },
-        {
-          "name": "The General Term Shortcut",
-          "equation": "$$ T_{r+1} = {}^nC_r a^{n-r} b^r $$",
-          "variables": {
-            "r+1": "The specific term number you want to find"
-          }
-        },
-        {
           "name": "Pascal's identity",
           "equation": "$$ {}^nC_r={}^{n-1}C_{r-1}+{}^{n-1}C_r $$",
           "variables": {
@@ -1307,17 +1192,6 @@
         }
       ],
       "worked_examples": [
-        {
-          "problem": "Find the 5th term in the expansion of $(2x + 1)^6$.",
-          "solution_steps": [
-            "Step 1: Term 5 means $r+1 = 5$, so we use $r=4$.",
-            "Step 2: Total power $n = 6$. Term $A = 2x$. Term $B = 1$.",
-            "Step 3: Setup general term: $T_5 = {}^6C_4 (2x)^{6-4} (1)^4$.",
-            "Step 4: ${}^6C_4 = 15$.",
-            "Step 5: $T_5 = 15(2x)^2(1) = 15(4x^2) = 60x^2$."
-          ],
-          "final_answer": "60x²"
-        },
         {
           "problem": "Construct row 5 of Pascal's triangle.",
           "solution_steps": [
@@ -1365,12 +1239,11 @@
         }
       ],
       "quick_summary": [
-        "The Binomial Theorem expands $(a+b)^n$.",
-        "The expansion will always have exactly $(n+1)$ terms.",
-        "The power of $a$ shrinks. The power of $b$ grows. The combinations from Pascal's Triangle attach to the front.",
-        "Start with row 0 containing 1.",
-        "Make each new interior entry by adding the two entries above it.",
-        "Row n contains nCr values; rows are symmetric and sum to 2^n."
+        "Row 0 begins with 1.",
+        "Each row starts and ends with 1; each interior entry is the sum of the two entries above it.",
+        "Row n contains the values nC0, nC1, …, nCn.",
+        "Rows are symmetric and the sum of row n is 2^n.",
+        "The Binomial Theorem lesson uses these coefficients to expand powers of a binomial."
       ]
     },
     "hs_math_t14_st09": {
@@ -1429,16 +1302,6 @@
         }
       ],
       "formulas": [
-        {
-          "name": "Pascal's Identity",
-          "equation": "$$ {}^nC_r = {}^{n-1}C_{r-1} + {}^{n-1}C_r $$",
-          "variables": {}
-        },
-        {
-          "name": "Sum of Combinations",
-          "equation": "$$ \\sum_{r=0}^{n} {}^nC_r = 2^n $$",
-          "variables": {}
-        },
         {
           "name": "Binomial theorem for positive integer powers",
           "equation": "$$ (a+b)^n=\\\\sum_{r=0}^{n}{}^nC_r a^{n-r}b^r $$",
@@ -1637,15 +1500,6 @@
             "Step 3: Both selections are required, so multiply: 15×10=150."
           ],
           "final_answer": "150 committees"
-        },
-        {
-          "problem": "Eight students are available. A team of 3 is selected, and then one of the 3 is appointed captain. How many outcomes are possible?",
-          "solution_steps": [
-            "Step 1: Select the team: ⁸C₃=56.",
-            "Step 2: Choose the captain from the 3 selected students: 3 choices.",
-            "Step 3: Multiply: 56×3=168."
-          ],
-          "final_answer": "168 outcomes"
         },
         {
           "problem": "A code consists of one letter chosen from 6 letters followed by a two-digit sequence using digits 0–4. Repetition of digits is allowed. How many codes are possible?",

@@ -336,7 +336,7 @@
           "name": "Fundamental logarithm relationship",
           "equation": "$$a^x=N\\iff\\log_a N=x$$",
           "variables": {
-            "a": "Base: a > 0 and a ≠ 1",
+            "a": "Logarithm base, with a > 0 and a ≠ 1",
             "N": "Argument: N > 0",
             "x": "Exponent / logarithm value"
           }
@@ -434,7 +434,7 @@
           "name": "Equivalent exponential and logarithmic forms",
           "equation": "$$a^x=N\\iff\\log_aN=x$$",
           "variables": {
-            "a": "Base: a > 0 and a ≠ 1",
+            "a": "Logarithm base, with a > 0 and a ≠ 1",
             "N": "Positive result / argument",
             "x": "Exponent / logarithm value"
           }
@@ -443,7 +443,7 @@
           "name": "Change of base",
           "equation": "$$\\log_aN=\\frac{\\log N}{\\log a}$$",
           "variables": {
-            "a": "Positive base, not 1",
+            "a": "Logarithm base, with a > 0 and a ≠ 1",
             "N": "Positive argument"
           }
         }
@@ -541,22 +541,26 @@
           "name": "Product law",
           "equation": "$$\\log_a(MN)=\\log_aM+\\log_aN$$",
           "variables": {
-            "M, N": "Positive arguments"
+            "M, N": "Positive logarithm arguments",
+            "a": "Logarithm base, with a > 0 and a ≠ 1"
           }
         },
         {
           "name": "Quotient law",
           "equation": "$$\\log_a\\left(\\frac{M}{N}\\right)=\\log_aM-\\log_aN$$",
           "variables": {
-            "M, N": "Positive arguments"
+            "M, N": "M > 0 and N > 0",
+            "a": "Logarithm base, with a > 0 and a ≠ 1"
           }
         },
         {
           "name": "Power law",
           "equation": "$$\\log_a(M^p)=p\\log_aM$$",
           "variables": {
-            "M": "Positive argument",
-            "p": "Exponent"
+            "M": "Positive logarithm argument; p is a real exponent",
+            "p": "Exponent",
+            "a": "Logarithm base, with a > 0 and a ≠ 1",
+            "M, N": "Positive logarithm arguments"
           }
         }
       ],
@@ -655,7 +659,7 @@
           "name": "Logarithmic solution",
           "equation": "$$a^x=N\\implies x=\\log_a N=\\frac{\\log N}{\\log a}$$",
           "variables": {
-            "a": "Positive base, not 1",
+            "a": "Logarithm base, with a > 0 and a ≠ 1",
             "N": "Positive number"
           }
         }
@@ -768,7 +772,7 @@
           "name": "Equal logarithms with the same base",
           "equation": "$$\\log_aM=\\log_aN\\iff M=N$$",
           "variables": {
-            "a": "Positive base, not 1",
+            "a": "Logarithm base, with a > 0 and a ≠ 1",
             "M, N": "Positive arguments"
           }
         }
@@ -962,7 +966,8 @@
             "A": "Vertical scale and reflection",
             "b": "Logarithm base",
             "h": "Horizontal shift; vertical asymptote x=h",
-            "k": "Vertical shift"
+            "k": "Vertical shift",
+            "a": "Logarithm base, with a > 0 and a ≠ 1"
           }
         }
       ],

@@ -13,8 +13,8 @@
           "concept": "The Strict Rules",
           "definition": "What makes a polynomial?",
           "details": [
-            "**Allowed:** non-negative integer exponents ($0,1,2,\\ldots$), such as $x^2$, $x^3$ and constant terms; coefficients may be integers, fractions or decimals (for example, $\frac12x$).",
-            "**Not allowed:** a variable with a negative exponent ($x^{-2}$), in a denominator ($\frac{3}{x}$), under a radical ($\\sqrt{x}$), or with a fractional exponent ($x^{1/2}$).",
+            "**Allowed:** non-negative integer exponents ($0,1,2,\\ldots$), such as $x^2$, $x^3$ and constant terms; coefficients may be integers, fractions or decimals (for example, $\\frac12x$).",
+            "**Not allowed:** a variable with a negative exponent ($x^{-2}$), in a denominator ($\\frac{3}{x}$), under a radical ($\\sqrt{x}$), or with a fractional exponent ($x^{1/2}$).",
             "The same rule applies to every variable in a multivariable term. For example, $3x^2y^3$ is a polynomial term because both exponents are non-negative integers."
           ]
         },
@@ -333,7 +333,7 @@
         },
         {
           "name": "Degree of a product",
-          "equation": "$$\\deg(PQ)=\\deg(P)+\\deg(Q)$$",
+          "equation": "$$\\deg(PQ)=\\deg(P)+\\deg(Q),\\quad P\\ne0,\\ Q\\ne0$$",
           "variables": {
             "P,Q": "Non-zero polynomials over the real numbers"
           }
@@ -950,8 +950,8 @@
           "concept": "Sum and product of quadratic roots",
           "definition": "Read the root relationships from the coefficients.",
           "details": [
-            "For $ax^2+bx+c=0$, where $a\ne0$, let the roots be $\u0007lpha$ and $\beta$.",
-            "Their sum is $\u0007lpha+\beta=-\frac ba$, and their product is $\u0007lpha\beta=\frac ca$.",
+            "For $ax^2+bx+c=0$, where $a\ne0$, let the roots be $\\alpha$ and $\\beta$.",
+            "Their sum is $\\alpha+\\beta=-\\frac ba$, and their product is $\\alpha\\beta=\\frac ca$.",
             "These relationships hold for real or complex roots, although complex-root analysis is developed more fully at Higher Secondary level."
           ]
         },
@@ -977,14 +977,14 @@
           "equation": "$$\\alpha+\\beta=-\\frac ba\\qquad\\text{and}\\qquad\\alpha\\beta=\\frac ca$$",
           "variables": {
             "a,b,c": "Coefficients in $ax^2+bx+c=0$, with $a\ne0$",
-            "\u0007lpha,\beta": "The two roots"
+            "α, β": "The two roots"
           }
         },
         {
           "name": "Constructing a monic quadratic",
           "equation": "$$x^2-(\\alpha+\\beta)x+\\alpha\\beta=0$$",
           "variables": {
-            "\u0007lpha,\beta": "The two roots"
+            "α, β": "The two roots"
           }
         }
       ],
@@ -1003,10 +1003,10 @@
           "problem": "Find the sum and product of the roots of $3x^2+5x-2=0$.",
           "solution_steps": [
             "Step 1: Identify $a=3$, $b=5$ and $c=-2$.",
-            "Step 2: Sum of roots $=-\frac ba=-\frac53$.",
-            "Step 3: Product of roots $=\frac ca=-\frac23$."
+            "Step 2: Sum of roots $=-\\frac ba=-\\frac53$.",
+            "Step 3: Product of roots $=\\frac ca=-\\frac23$."
           ],
-          "final_answer": "Sum: $-\frac53$; product: $-\frac23$."
+          "final_answer": "Sum: $-\\frac53$; product: $-\\frac23$."
         },
         {
           "problem": "Construct a monic quadratic equation whose roots have sum $9$ and product $20$.",

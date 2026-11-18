@@ -631,24 +631,26 @@
           "concept": "Restrictions for Real Values",
           "definition": "Check the base and root index.",
           "details": [
-            "When $n$ is even, the real $n$-th root requires a non-negative base ($a\\ge0$). When $n$ is odd, negative bases are allowed.",
-            "If the rational exponent is negative, the base cannot be zero ($a\\ne0$).",
-            "These restrictions are stated after the fraction $m/n$ has been reduced to lowest terms with positive denominator."
+            "First reduce m/n to lowest terms and write n as a positive integer. For a positive base a, the expression is defined for every rational exponent.",
+            "For a negative base a, a real value is possible when the reduced denominator n is odd. If n is even, a negative base has no real nth root.",
+            "For a zero base, a positive exponent gives 0, but a zero or negative exponent is undefined. In particular, negative exponents require a ≠ 0.",
+            "These restrictions apply to the reduced fraction m/n. For example, (-8)^(2/3) is real, while (-8)^(1/2) is not real."
           ]
         }
       ],
       "formulas": [
         {
           "name": "Rational Exponent Rule",
-          "equation": "$$ a^{m/n}=\\sqrt[n]{a^m}=(\\sqrt[n]{a})^m $$",
+          "equation": "$$a^{m/n}=(\\sqrt[n]{a})^m,\\quad m\\in\\mathbb Z,\\ n\\in\\mathbb N,\\ \\gcd(|m|,n)=1;\\quad a\\geq0\\text{ if }n\\text{ is even; if }a<0,\\ n\\text{ must be odd}$$",
           "variables": {
-            "m": "Numerator of the reduced rational exponent",
-            "n": "Positive denominator (root index)"
+            "a": "Real base",
+            "m": "Integer numerator",
+            "n": "Positive integer denominator; the fraction m/n is in lowest terms"
           }
         },
         {
           "name": "Negative Rational Exponent",
-          "equation": "$$ a^{-m/n}=\\frac{1}{a^{m/n}},\\quad a\\ne0 $$",
+          "equation": "$$a^{-m/n}=\\frac{1}{a^{m/n}},\\quad a\\ne0,\\quad m/n\\text{ satisfies the domain conditions of the rational-exponent rule}$$",
           "variables": {}
         }
       ],
@@ -749,9 +751,10 @@
       "formulas": [
         {
           "name": "Product Property of Radicals",
-          "equation": "$$ \\sqrt{ab} = \\sqrt{a} \\times \\sqrt{b} $$",
+          "equation": "$$\\sqrt{ab}=\\sqrt a\\,\\sqrt b,\\quad a\\geq0,\\ b\\geq0$$",
           "variables": {
-            "a, b": "Non-negative real numbers"
+            "a": "Non-negative real number",
+            "b": "Non-negative real number"
           }
         }
       ],
@@ -1022,9 +1025,9 @@
           "concept": "Upper and Lower Bounds",
           "definition": "The zone of uncertainty.",
           "details": [
-            "If a positive measurement is rounded to the nearest unit $u$, its actual value lies from half a unit below the rounded value up to, but not including, half a unit above it under the usual round-half-up convention.",
-            "For example, a length recorded as $120\\text{ cm}$ to the nearest $10\\text{ cm}$ satisfies $115\\text{ cm}\\le L<125\\text{ cm}$.",
-            "The lower bound is $120-5=115\\text{ cm}$ and the upper bound is $120+5=125\\text{ cm}$."
+            "For a positive measurement rounded to the nearest unit u, the actual value lies from half a unit below the recorded value, inclusive, to half a unit above it, exclusive, when exact ties are rounded away from zero.",
+            "For example, a positive length recorded as 120 cm to the nearest 10 cm satisfies 115 cm ≤ L < 125 cm.",
+            "For negative recorded values, the included and excluded endpoints reverse under the same tie rule. If the recorded value is zero, both endpoints are excluded. Always state the rounding convention when endpoint inclusion matters."
           ]
         },
         {
@@ -1039,11 +1042,11 @@
       "formulas": [
         {
           "name": "Bounds for a rounded measurement",
-          "equation": "$$ L=x-\\frac{u}{2},\\qquad U=x+\\frac{u}{2},\\qquad L\\le t<U $$",
+          "equation": "$$\\begin{aligned}x>0:&\\quad x-\\frac{u}{2}\\le t<x+\\frac{u}{2}\\\\x<0:&\\quad x-\\frac{u}{2}<t\\le x+\\frac{u}{2}\\\\x=0:&\\quad -\\frac{u}{2}<t<\\frac{u}{2}\\end{aligned}$$",
           "variables": {
             "x": "Recorded rounded value",
-            "u": "Unit to which the value was rounded",
-            "t": "Actual value (usual round-half-up convention)"
+            "u": "Positive unit to which the value was rounded",
+            "t": "Actual value, assuming rounding to nearest with exact ties rounded away from zero"
           }
         },
         {
@@ -1075,7 +1078,7 @@
         {
           "problem": "A rectangle's length is $12\\text{ cm}$ (measured to the nearest cm) and width is $5\\text{ cm}$ (nearest cm). Find the upper bound of its area.",
           "solution_steps": [
-            "Step 1: Length $12\\text{ cm}$ to the nearest cm has upper bound $12.5\\text{ cm}$, with $12\\le L<12.5$.",
+            "Step 1: Length $12\\text{ cm}$ to the nearest cm has lower bound $11.5\\text{ cm}$ and upper bound $12.5\\text{ cm}$, with $11.5\\le L<12.5$.",
             "Step 2: Width $5\\text{ cm}$ to the nearest cm has upper bound $5.5\\text{ cm}$, with $4.5\\le W<5.5$.",
             "Step 3: Both dimensions are positive, so the area is less than the product of their upper bounds: $A<12.5\\times5.5$.",
             "Step 4: Calculate the upper bound: $12.5\\times5.5=68.75\\text{ cm}^2$."

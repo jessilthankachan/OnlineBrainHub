@@ -467,7 +467,8 @@
           "equation": "$$f'(a)=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}{h}$$",
           "variables": {
             "a": "Input at which the derivative is evaluated",
-            "h": "A non-zero input change approaching zero"
+            "h": "A non-zero input change approaching zero",
+            "Condition": "The derivative exists at the point under consideration"
           }
         },
         {
@@ -475,7 +476,8 @@
           "equation": "$$f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}$$",
           "variables": {
             "f(x)": "Original function",
-            "f′(x)": "Derivative function"
+            "f′(x)": "Derivative function",
+            "Condition": "The derivative exists at the point under consideration"
           }
         }
       ],
@@ -585,7 +587,7 @@
           "name": "Power rule",
           "equation": "$$\\frac{d}{dx}(x^n)=nx^{n-1}$$",
           "variables": {
-            "n": "The exponent"
+            "n": "Integer exponent; apply where x^n is defined and differentiable"
           }
         },
         {

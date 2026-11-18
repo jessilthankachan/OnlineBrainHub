@@ -11,7 +11,7 @@
       "key_concepts": [
         {
           "concept": "Categorical Data",
-          "definition": "Words and labels.",
+          "definition": "Categories recorded as labels or groups.",
           "details": [
             "**Nominal:** Categories with absolutely no mathematical ranking (e.g., eye color, car brand, blood type).",
             "**Ordinal:** Categories that have a strict, logical ranking (e.g., Bronze/Silver/Gold medals, or 'Poor/Average/Excellent' survey ratings)."
@@ -19,7 +19,7 @@
         },
         {
           "concept": "Numerical Data",
-          "definition": "Math and measurements.",
+          "definition": "Values recorded as counts or measurements.",
           "details": [
             "**Discrete:** numerical data that takes separate, countable values, such as the number of students or goals scored. Values may include fixed steps (for example, shoe sizes such as 8, 8.5 and 9), but not every value in an interval is possible.",
             "**Continuous:** measured data that can take any value within a range in principle, such as height, time or temperature. The recorded precision depends on the measuring instrument."
@@ -27,7 +27,7 @@
         },
         {
           "concept": "Sampling Methods",
-          "definition": "Building the group.",
+          "definition": "The complete group and the selected observations.",
           "details": [
             "**Population:** The entire universe of people or items you want to study.",
             "**Sample:** A small chunk of the population you actually test.",
@@ -36,7 +36,7 @@
         },
         {
           "concept": "Primary and secondary data",
-          "definition": "Where information comes from.",
+          "definition": "Information collected first-hand or obtained from existing sources.",
           "details": [
             "**Primary data** is collected first-hand for the investigation, such as measurements taken by a student or answers to a survey designed for a study.",
             "**Secondary data** has already been collected by another person or organisation and is reused, such as published census tables or historical weather records.",
@@ -45,7 +45,7 @@
         },
         {
           "concept": "Foundational sampling methods",
-          "definition": "Ways to select a sample.",
+          "definition": "Common methods for selecting observations.",
           "details": [
             "**Simple random sampling:** every member of the population has an equal chance of selection; use a fair random method.",
             "**Systematic sampling:** choose a starting point and then select every fixed-numbered member from an ordered list.",
@@ -55,7 +55,7 @@
         },
         {
           "concept": "Census and sample",
-          "definition": "Two ways to collect information.",
+          "definition": "Collecting information from every member or from a selected part of the population.",
           "details": [
             "A **census** collects information from every member of the target population. A **sample survey** collects information from only part of it.",
             "A census can be costly or impractical; a carefully selected sample can provide useful estimates with less time and effort.",
@@ -78,9 +78,9 @@
         {
           "problem": "Identify the data type: The time taken for 5 runners to finish a 100m sprint.",
           "solution_steps": [
-            "Step 1: Is it a word label (Categorical) or a mathematical number (Numerical)? Time is a number. Numerical.",
-            "Step 2: Is it counted in solid blocks (Discrete), or can it be broken down infinitely (Continuous)? Time can be measured in seconds, milliseconds, microseconds. It is fluid.",
-            "Step 3: Therefore, it is Continuous Numerical Data."
+            "Step 1: Time is recorded as a numerical measurement, so it is numerical data.",
+            "Step 2: In principle, time can take any value within an interval, depending on the precision of measurement. It is therefore continuous data.",
+            "Step 3: The recorded values may be rounded to the nearest second or millisecond, but this does not change the underlying data type."
           ],
           "final_answer": "Numerical Continuous"
         },
@@ -98,7 +98,7 @@
       "common_mistakes": [
         {
           "mistake": "Thinking shoe sizes are continuous.",
-          "correction": "Even though a shoe size might have a decimal (e.g., Size 9.5), you cannot buy a Size 9.532 shoe. Because it hops in locked, fixed increments (0.5 steps), shoe size is mathematically Discrete."
+          "correction": "Shoe sizes are discrete because they are available only at specified increments (for example, whole or half sizes), rather than at every possible value in an interval."
         },
         {
           "mistake": "Assuming every sample is representative simply because it contains many people.",
@@ -106,19 +106,19 @@
         }
       ],
       "quick_summary": [
-        "Nominal = Names. Ordinal = Ranks.",
-        "Discrete = Counted (whole items). Continuous = Measured (decimals allowed).",
-        "A Census tests everyone. A Sample tests a small group to guess the whole."
+        "Nominal data are categories without an order; ordinal data are categories with an order.",
+        "Discrete numerical data are countable; continuous numerical data are measured and can take any value in an interval in principle.",
+        "A census includes every member of the target population; a sample includes only selected members."
       ]
     },
     "hs_math_t16_st02": {
       "id": "hs_math_t16_st02",
       "title": "Frequency distributions",
-      "overview": "If you look at a spreadsheet with 500 test scores, it just looks like static. A Frequency Distribution compresses that raw data into organized groups, allowing human eyes to instantly spot trends, peaks, and patterns.",
+      "overview": "A frequency distribution organises raw observations into categories or class intervals and records how often each value or group occurs. It makes large datasets easier to summarise, compare and interpret.",
       "key_concepts": [
         {
           "concept": "Tally and Frequency",
-          "definition": "The raw count.",
+          "definition": "The number of observations in a category or value.",
           "details": [
             "Frequency ($f$) is just a fancy word for 'how many times did this specific thing happen?'",
             "If $6$ people scored a $90\\%$ on a test, the frequency of $90\\%$ is $6$."
@@ -126,7 +126,7 @@
         },
         {
           "concept": "Grouped Intervals",
-          "definition": "The data buckets.",
+          "definition": "Non-overlapping groups used to organise numerical observations.",
           "details": [
             "For large datasets (like ages $0$ to $100$), listing every single number is useless. We group them into 'Class Intervals' (e.g., $10-19$, $20-29$).",
             "The **Class Width** is the mathematical size of the bucket. Because measurements are continuous, the true boundaries of $10-19$ are $9.5$ to $19.5$, meaning the class width is exactly $10$."
@@ -134,7 +134,7 @@
         },
         {
           "concept": "Cumulative Frequency",
-          "definition": "The running total.",
+          "definition": "The total frequency accumulated up to a specified class.",
           "details": [
             "Cumulative frequency adds up the data as you move down the table.",
             "It answers questions like 'How many people scored *below* an $80\\%$?' by summing all the frequencies leading up to that point."
@@ -151,7 +151,7 @@
         },
         {
           "concept": "Choosing a useful table",
-          "definition": "Organising raw data without hiding its meaning.",
+          "definition": "A table that organises observations clearly and completely.",
           "details": [
             "List categories or class intervals in a clear, non-overlapping order and record a tally before writing each frequency.",
             "Include a total row. For a frequency table, the total frequency must equal the number of observations.",
@@ -191,9 +191,9 @@
         {
           "problem": "Calculate the class midpoint for the interval $20–29$.",
           "solution_steps": [
-            "Step 1: The midpoint is simply the exact mathematical center of the interval.",
-            "Step 2: Add the lower limit to the upper limit: $20 + 29 = 49$.",
-            "Step 3: Divide by 2: $\\frac{49}{2} = 24.5$."
+            "Step 1: The class midpoint is the average of the lower and upper class limits.",
+            "Step 2: Add the limits: 20 + 29 = 49.",
+            "Step 3: Divide by 2: 49 ÷ 2 = 24.5."
           ],
           "final_answer": "24.5"
         },
@@ -210,7 +210,7 @@
       "common_mistakes": [
         {
           "mistake": "Calculating Class Width by subtracting the printed limits.",
-          "correction": "If you subtract $29 - 20$, you get $9$. This is incorrect. The class width for $20-29$ is $10$ (because it mathematically spans from $19.5$ to $29.5$). Counting on your fingers ($20, 21, 22...$) proves there are $10$ numbers."
+          "correction": "For inclusive integer classes such as 20–29, the continuous class boundaries are 19.5 and 29.5. The class width is 29.5 − 19.5 = 10. Subtracting the printed limits gives 9 and does not give the class width."
         },
         {
           "mistake": "Using the frequency as the percentage.",
@@ -218,9 +218,9 @@
         }
       ],
       "quick_summary": [
-        "Frequency ($f$) = How many times it happened.",
-        "Grouped Data puts massive lists into manageable buckets (Class Intervals).",
-        "Cumulative Frequency tracks the running total down the table."
+        "Frequency is the number of observations in a category or class.",
+        "Grouped frequency tables organise numerical data into non-overlapping class intervals.",
+        "Cumulative frequency is the running total of frequencies; relative frequency is a class frequency divided by the total."
       ]
     },
     "hs_math_t16_st03": {
@@ -285,14 +285,6 @@
           "variables": {}
         },
         {
-          "name": "Estimated mean from grouped data",
-          "equation": "$$\\bar{x}\\approx\\frac{\\sum fm}{\\sum f}$$",
-          "variables": {
-            "f": "Class frequency",
-            "m": "Class midpoint"
-          }
-        },
-        {
           "name": "Class midpoint",
           "equation": "$$m=\\frac{L+U}{2}$$",
           "variables": {
@@ -322,16 +314,6 @@
             "Step 5: Apply formula $\\bar{x} \\approx \\frac{\\sum fm}{\\sum f} = \\frac{86}{8} = 10.75$."
           ],
           "final_answer": "10.75"
-        },
-        {
-          "problem": "The classes 0–9 and 10–19 have frequencies 3 and 5. Estimate the mean.",
-          "solution_steps": [
-            "Step 1: Midpoints are 4.5 and 14.5.",
-            "Step 2: Multiply by frequencies: 3 × 4.5 = 13.5 and 5 × 14.5 = 72.5.",
-            "Step 3: Add the products: 13.5 + 72.5 = 86. Add frequencies: 3 + 5 = 8.",
-            "Step 4: Estimated mean = 86/8 = 10.75."
-          ],
-          "final_answer": "Estimated mean = 10.75."
         },
         {
           "problem": "A continuous class runs from 20 up to, but not including, 30. Find its width and midpoint.",
@@ -409,24 +391,6 @@
         }
       ],
       "formulas": [
-        {
-          "name": "Frequency Density",
-          "equation": "$$ \\text{Frequency Density} = \\frac{\\text{Frequency}}{\\text{Class Width}} $$",
-          "variables": {}
-        },
-        {
-          "name": "Bar Area Rule",
-          "equation": "$$ \\text{Frequency} = \\text{Class Width} \\times \\text{Frequency Density} $$",
-          "variables": {}
-        },
-        {
-          "name": "Frequency density",
-          "equation": "$$\\text{Frequency density}=\\frac{f}{w}$$",
-          "variables": {
-            "f": "Class frequency",
-            "w": "Class width"
-          }
-        },
         {
           "name": "Histogram bar area",
           "equation": "$$\\text{Bar area}=w\\times\\text{frequency density}=f$$",
@@ -769,7 +733,8 @@
           "equation": "$$ \\text{Position} = \\frac{k(n+1)}{100} $$",
           "variables": {
             "k": "The desired percentile (e.g., 25, 50, 90)",
-            "n": "Total number of observations"
+            "n": "Total number of observations",
+            "Convention": "This is one convention only; other percentile definitions may give different results. If the position is non-integer, interpolate linearly between the adjacent ordered observations."
           }
         }
       ],
@@ -803,6 +768,15 @@
             "Step 3: The upper half is 11, 13, 15; its median is Q3 = 13."
           ],
           "final_answer": "Q1 = 5, Q2 = 9, Q3 = 13."
+        },
+        {
+          "problem": "Using the k(n+1)/100 convention, estimate the 25th percentile of the ordered data 2, 4, 6, 8, 10, 12, 14.",
+          "solution_steps": [
+            "Step 1: There are n = 7 observations and k = 25.",
+            "Step 2: Position = 25(7+1)/100 = 2. This is the second observation.",
+            "Step 3: The second observation is 4."
+          ],
+          "final_answer": "P25 = 4"
         }
       ],
       "common_mistakes": [
@@ -918,14 +892,14 @@
     "hs_math_t16_st07": {
       "id": "hs_math_t16_st07",
       "title": "Variance and standard deviation",
-      "overview": "If two cities both have an average temperature of 20°C, but one swings from -10°C to 50°C and the other stays between 18°C and 22°C, the mean is useless for showing how chaotic the first city is. Variance and Standard Deviation mathematically measure exactly how 'spread out' or chaotic a dataset is compared to its center.",
+      "overview": "If two cities both have an average temperature of 20°C, but one swings from -10°C to 50°C and the other stays between 18°C and 22°C, the mean is useless for showing how chaotic the first city is. Variance and Standard Deviation mathematically measure exactly how 'spread out' or chaotic a dataset is compared to its center. In this lesson, the data set is treated as the complete population being described; the formulas divide by the total number of observations (or total frequency). A sample-based estimate of population variance uses a different convention and is outside this calculation method.",
       "key_concepts": [
         {
           "concept": "Deviation from the Mean",
           "definition": "The individual distance.",
           "details": [
-            "A deviation is how far a single data point is from the average: $x - \\bar{x}$.",
-            "If the average is 10 and you scored 12, your deviation is +2."
+            "A deviation for an observation is its difference from the population mean: $x-\\mu$.",
+            "If the population mean is 10 and an observation is 12, its deviation is +2."
           ]
         },
         {
@@ -949,35 +923,38 @@
           "concept": "Calculating spread around the mean",
           "definition": "Squaring deviations prevents positive and negative differences cancelling.",
           "details": [
-            "Find the mean, subtract it from each observation, square each difference, and average the squared differences for the data set being described.",
-            "Standard deviation is the square root of this average squared deviation, so it is expressed in the same units as the original data.",
-            "A standard deviation of zero means every observation is equal. Larger values indicate greater spread around the mean, when comparing data measured on the same scale.",
-            "For a frequency table, each squared deviation is counted according to its frequency. More advanced distinctions between sample and population estimators are treated later."
+            "For the complete data set being described, find the population mean, subtract it from each observation, square each difference, and average the squared differences.",
+            "The population variance divides the sum of squared deviations by the number of observations; for a frequency table, each squared deviation is counted according to its frequency and the total is divided by the sum of frequencies.",
+            "The population standard deviation is the square root of the population variance, so it is expressed in the same units as the original data.",
+            "A standard deviation of zero means every observation is equal. Larger values indicate greater spread around the mean when comparing data measured on the same scale."
           ]
         }
       ],
       "formulas": [
         {
-          "name": "Variance for the complete data set",
-          "equation": "$$\\text{Variance}=\\frac{\\sum (x-\\bar{x})^2}{n}$$",
+          "name": "Population variance for a complete data set",
+          "equation": "$$σ^2=\\frac{\\sum (x-\\mu)^2}{N}$$",
           "variables": {
             "x": "Each observation",
-            "x̄": "Mean of the data set",
-            "n": "Number of observations"
+            "μ": "Population mean",
+            "N": "Number of observations in the complete data set"
           }
         },
         {
-          "name": "Standard deviation",
-          "equation": "$$\\text{Standard deviation}=\\sqrt{\\text{Variance}}$$",
-          "variables": {}
+          "name": "Population standard deviation",
+          "equation": "$$σ=\\sqrt{\\u03c3^2}$$",
+          "variables": {
+            "σ²": "Population variance"
+          }
         },
         {
-          "name": "Variance from a frequency table",
-          "equation": "$$\\text{Variance}=\\frac{\\sum f(x-\\bar{x})^2}{\\sum f}$$",
+          "name": "Population variance from a frequency table",
+          "equation": "$$σ^2=\\frac{\\sum f(x-\\mu)^2}{\\sum f}$$",
           "variables": {
             "f": "Frequency",
             "x": "Data value",
-            "x̄": "Mean"
+            "μ": "Population mean",
+            "Σf": "Total frequency"
           }
         }
       ],
@@ -995,24 +972,24 @@
         {
           "problem": "Find the variance and standard deviation of the data set: $4, 6, 8, 10, 12$.",
           "solution_steps": [
-            "Step 1: Find the mean ($\\mu$). $(4+6+8+10+12) / 5 = 40 / 5 = 8$.",
+            "Step 1: Find the population mean ($\\mu$). $(4+6+8+10+12) / 5 = 40 / 5 = 8$.",
             "Step 2: Find the deviation for each number: $-4, -2, 0, 2, 4$.",
             "Step 3: Square each deviation: $16, 4, 0, 4, 16$.",
             "Step 4: Sum the squared deviations: $16 + 4 + 0 + 4 + 16 = 40$.",
-            "Step 5: Find Variance ($\\sigma^2$) by dividing by $N$: $40 / 5 = 8$.",
+            "Step 5: Find Population variance ($\\sigma^2$) by dividing by $N$: $40 / 5 = 8$.",
             "Step 6: Find Standard Deviation ($\\sigma$) by taking the square root: $\\sqrt{8} \\approx 2.83$."
           ],
-          "final_answer": "Variance = 8, SD ≈ 2.83"
+          "final_answer": "Population variance = 8, SD ≈ 2.83"
         },
         {
           "problem": "Find the variance and standard deviation of 2, 4, 6.",
           "solution_steps": [
             "Step 1: Mean = (2 + 4 + 6)/3 = 4.",
             "Step 2: Deviations are −2, 0, 2; squared deviations are 4, 0, 4.",
-            "Step 3: Variance = (4 + 0 + 4)/3 = 8/3 ≈ 2.67.",
+            "Step 3: Population variance = (4 + 0 + 4)/3 = 8/3 ≈ 2.67.",
             "Step 4: Standard deviation = √(8/3) ≈ 1.63."
           ],
-          "final_answer": "Variance = 8/3 ≈ 2.67; standard deviation ≈ 1.63."
+          "final_answer": "Population variance = 8/3 ≈ 2.67; standard deviation ≈ 1.63."
         }
       ],
       "common_mistakes": [
@@ -1361,16 +1338,16 @@
           "concept": "Interpolation",
           "definition": "Safe predictions.",
           "details": [
-            "Interpolation means using the line of best fit to estimate a value that falls WITHIN the range of your existing data points.",
-            "Because it is supported by surrounding data, interpolation is generally very reliable."
+            "Interpolation means estimating a value for an x-value within the observed range of x-values.",
+            "It is generally more defensible than extrapolation because the estimate lies within the range represented by the data, but it is not guaranteed to be accurate; the model fit and data quality still matter."
           ]
         },
         {
           "concept": "Extrapolation",
           "definition": "Dangerous predictions.",
           "details": [
-            "Extrapolation means using the line to predict a value far OUTSIDE the range of your observed data.",
-            "This is highly unreliable because real-world trends rarely continue in a perfect straight line forever (e.g., predicting a test score of $106\\%$ for studying 10 hours)."
+            "Extrapolation means estimating a value for an x-value outside the observed range of x-values.",
+            "It is often less reliable because the observed relationship may change beyond the data range. Predictions should be treated cautiously and checked against the context."
           ]
         },
         {
@@ -1386,8 +1363,8 @@
           "concept": "Limits of prediction",
           "definition": "Predictions depend on the range and pattern of the observed data.",
           "details": [
-            "Interpolation estimates within the range of observed x-values and is generally more defensible because it is supported by nearby data.",
-            "Extrapolation estimates outside the observed range and is less reliable because the pattern may change.",
+            "Interpolation estimates within the observed range of x-values and is generally more defensible, but not automatically reliable.",
+            "Extrapolation estimates outside the observed range and is usually more uncertain because the pattern may change.",
             "Predictions should be interpreted in context and should not imply more precision than the data or graph supports."
           ]
         }
@@ -1411,9 +1388,9 @@
       ],
       "worked_examples": [
         {
-          "problem": "A line of best fit for study hours ($x$) vs test score ($y$) is approximated by the equation $y = 7.2x + 34$. Predict the score for a student who studies 4.5 hours.",
+          "problem": "A line of best fit for study hours (x) versus test score (y) is y = 7.2x + 34. The observed study-hour values range from 1 to 6 hours. Predict the score for a student who studies 4.5 hours.",
           "solution_steps": [
-            "Step 1: Check if this is interpolation or extrapolation. Assuming the data ranged from 1 to 6 hours, 4.5 is interpolation (safe).",
+            "Step 1: The observed x-values range from 1 to 6 hours. Since 4.5 lies within this range, this is interpolation. The estimate is still subject to the quality of the model and data.",
             "Step 2: Substitute $x = 4.5$ into the equation.",
             "Step 3: $y = 7.2(4.5) + 34$.",
             "Step 4: $y = 32.4 + 34$.",
@@ -1455,8 +1432,9 @@
           "concept": "Center vs Spread",
           "definition": "The full picture.",
           "details": [
-            "Averages (Mean, Median) only tell you the center point.",
-            "You MUST also analyze the spread (Range, IQR, Standard Deviation) to determine consistency. A school with a tiny IQR has highly consistent students. A school with a massive IQR is chaotic, filled with failing students and geniuses."
+            "Averages (mean and median) describe the centre of a distribution.",
+            "Spread measures (range, interquartile range and standard deviation) describe variability. The IQR is the range of the middle 50% of observations, from Q1 to Q3; it is not a measure of spread around the mean.",
+            "When two groups are measured in the same units and under comparable conditions, a smaller IQR indicates that the middle half of that group's observations are less spread out. It does not imply that every observation is close to the mean or that the group contains no outliers."
           ]
         },
         {
@@ -1509,9 +1487,9 @@
           "problem": "Service A has a Mean delivery time of 30 mins and an IQR of 6 mins. Service B has a Mean delivery time of 32 mins and an IQR of 12 mins. Which is more consistent?",
           "solution_steps": [
             "Step 1: Look at the Mean to find the average speed. Service A (30m) is faster than Service B (32m).",
-            "Step 2: Look at the IQR to find consistency (the spread of the middle 50% of deliveries).",
-            "Step 3: Service A has an IQR of 6. Service B has an IQR of 12.",
-            "Step 4: Because Service A has a much smaller IQR, its delivery times are tightly clustered around the mean. It is far more consistent."
+            "Step 2: Compare the IQRs, which measure the spread of the middle 50% of delivery times.",
+            "Step 3: Service A has IQR 6 minutes; Service B has IQR 12 minutes.",
+            "Step 4: The middle 50% of Service A's delivery times is less spread out. Therefore, Service A is more consistent by this IQR comparison. The IQR does not describe spread around the mean."
           ],
           "final_answer": "Service A is more consistent (Smaller IQR)"
         },
@@ -1544,35 +1522,35 @@
     "hs_math_t16_st15": {
       "id": "hs_math_t16_st15",
       "title": "Sampling bias and misleading representations",
-      "overview": "Numbers don't lie, but the people making the graphs often do. By manipulating how a sample is collected or how a graph's axes are drawn, you can trick the human brain into seeing massive differences where none actually exist.",
+      "overview": "Statistical conclusions can be misleading when the sample does not represent the target population or when data are displayed in a distorted way. Evaluating a statistical claim requires checking how the data were collected, who responded, what is omitted and how graphs are scaled.",
       "key_concepts": [
         {
           "concept": "Types of Sampling Bias",
-          "definition": "Rigging the test.",
+          "definition": "Sampling methods and response patterns that can produce an unrepresentative sample.",
           "details": [
-            "**Selection Bias:** Picking a group that naturally favors one outcome (e.g., surveying people outside a gym to find the town's average fitness level).",
-            "**Voluntary Response Bias:** Only people with extreme, angry, or highly positive opinions bother to fill out internet polls. The silent majority is ignored.",
-            "**Non-Response Bias:** When the people who refuse to answer a survey share a specific trait, skewing the data."
+            "**Selection bias:** The selection process gives some members of the target population a greater chance of inclusion than others, in a way that may affect the result.",
+            "**Voluntary-response bias:** People choose whether to respond. Those with strong positive or negative views may be more likely to take part, although this is not true of every voluntary survey.",
+            "**Non-response bias:** People who do not respond differ in relevant ways from those who do respond, potentially affecting the findings."
           ]
         },
         {
           "concept": "Truncated Axes",
-          "definition": "The zoom-in trick.",
+          "definition": "A vertical axis that begins above zero can make differences between values appear larger.",
           "details": [
-            "If Company A sells 90 products and Company B sells 100, the difference is only 11%.",
-            "But if a graph's Y-axis starts at 80 instead of 0, Company B's bar will look physically twice as tall as Company A's bar, deceiving the viewer."
+            "Suppose Company A sells 90 products and Company B sells 100. The difference is 10 products, or about 11.1% of Company A’s sales.",
+            "If a bar chart starts its vertical axis at 80, the visible bar heights are 10 and 20 units. The second bar appears twice as tall even though the actual values differ by about 11.1%. The axis break or shortened scale must be clearly indicated."
           ]
         },
         {
           "concept": "Distorted 2D Areas",
-          "definition": "The multiplier trap.",
+          "definition": "Scaling both dimensions of a pictogram changes its area by the product of the scale factors.",
           "details": [
             "If you want to show that one quantity is double another (200 vs 100), and you double the height AND the width of a visual icon (like a money bag), the area becomes FOUR times larger, drastically exaggerating the difference."
           ]
         },
         {
           "concept": "Other sources of misleading data",
-          "definition": "Bias can enter before and after data collection.",
+          "definition": "Other features of survey design that can affect the quality of conclusions.",
           "details": [
             "**Non-response bias** occurs when people who do not respond differ in relevant ways from those who do respond.",
             "**Question wording and response options** can influence answers. Leading, ambiguous or incomplete questions may produce distorted results.",
@@ -1581,7 +1559,7 @@
         },
         {
           "concept": "Misleading graphs and summaries",
-          "definition": "Visual choices can exaggerate or conceal differences.",
+          "definition": "Graph design and summary choices that can alter how data are perceived.",
           "details": [
             "A truncated vertical axis can make small differences between bar heights appear dramatic. For bar charts, a zero baseline is usually appropriate; if an axis is shortened, make the break clear and explain it.",
             "Unequal intervals, inconsistent scales, missing labels or inappropriate graph types can mislead readers.",
@@ -1605,12 +1583,12 @@
         {
           "problem": "A company posts a voluntary online survey. Out of 200 responses, 160 customers report being satisfied. The company announces: '80% of all our customers are satisfied.' Why is this claim misleading?",
           "solution_steps": [
-            "Step 1: The math is technically correct ($160/200 = 80\\%$).",
-            "Step 2: However, the sampling method is flawed. This is a 'Voluntary Response Bias'.",
-            "Step 3: Only customers with strong opinions (either very happy or very angry) bother to fill out internet surveys.",
-            "Step 4: The 200 people do not randomly or accurately represent the thousands of normal customers."
+            "Step 1: The proportion of satisfied respondents is 160 ÷ 200 = 0.80, or 80%.",
+            "Step 2: The survey used voluntary online responses rather than a probability sample of all customers.",
+            "Step 3: Customers who chose to respond may differ from those who did not. The direction and size of this difference cannot be determined from the response count alone.",
+            "Step 4: The 80% result describes the 200 respondents. Without evidence that they represent all customers, the company should not present 80% as an established estimate for its entire customer population."
           ],
-          "final_answer": "It suffers from Voluntary Response Bias"
+          "final_answer": "The survey is subject to voluntary-response bias. The 80% figure describes the respondents; it cannot automatically be generalised to all customers."
         },
         {
           "problem": "A pictogram uses a square icon to represent 100 items. A second square is drawn with twice the height and twice the width. What quantity does its area visually suggest?",
@@ -1625,17 +1603,18 @@
       "common_mistakes": [
         {
           "mistake": "Accepting visual size at face value in infographics.",
-          "correction": "Always look for the actual numbers printed on the axes. Marketing departments routinely shrink the Y-axis (truncation) or warp the area of 2D images to make small growth look explosive."
+          "correction": "Compare the numerical values and axis scale, not just the apparent bar heights or icon sizes. A shortened axis is not automatically invalid, but it must be clearly marked and interpreted carefully."
         },
         {
           "mistake": "Assuming a technically correct percentage guarantees a fair conclusion.",
-          "correction": "Check whether the sample represents the target population, how questions were asked, who did not respond, and whether the claim generalises beyond the respondents."
+          "correction": "A correctly calculated percentage can still support an unjustified generalisation. Examine the sampling method, response rate, question wording, coverage and the population to which the conclusion is applied."
         }
       ],
       "quick_summary": [
-        "A sample is completely useless if the selection process is biased.",
-        "Truncated axes (starting above 0) visually exaggerate small differences.",
-        "Voluntary internet polls never represent the true population accurately."
+        "Sampling bias can make a sample unrepresentative; a large sample does not automatically remove bias.",
+        "Voluntary-response results describe the respondents and may not represent the full target population.",
+        "Check graph scales, axis breaks, labels and pictogram areas before interpreting visual differences.",
+        "A valid statistical conclusion must match the data collected and the population actually represented."
       ]
     }
   }

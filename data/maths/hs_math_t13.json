@@ -1,0 +1,1264 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t13",
+  "topicTitle": "Matrices and Determinants",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t13_st01": {
+      "id": "hs_math_t13_st01",
+      "title": "Definition and types of matrices",
+      "overview": "A matrix is a rectangular arrangement of entries in rows and columns. Matrices provide a compact way to organise numbers and are used in calculations and simple models. Matrices are classified by their shape and, in some cases, by the entries they contain.",
+      "key_concepts": [
+        {
+          "concept": "Rows and columns",
+          "definition": "The two directions used to arrange matrix entries.",
+          "details": [
+            "A **row** is a horizontal line of entries; a **column** is a vertical line.",
+            "The order of a matrix is written as rows × columns. For example, a matrix with two rows and three columns has order 2 × 3."
+          ]
+        },
+        {
+          "concept": "Row and column matrices",
+          "definition": "Matrices with exactly one row or exactly one column.",
+          "details": [
+            "A row matrix has order 1 × n, such as [2  5  7].",
+            "A column matrix has order m × 1, such as a column containing 2, 5 and 7."
+          ]
+        },
+        {
+          "concept": "Square and rectangular matrices",
+          "definition": "Classifications based on the relationship between rows and columns.",
+          "details": [
+            "A **square matrix** has the same number of rows and columns, for example a 2 × 2 or 3 × 3 matrix.",
+            "A **rectangular matrix** has different numbers of rows and columns, for example a 2 × 3 matrix."
+          ]
+        },
+        {
+          "concept": "Zero and identity matrices",
+          "definition": "Two important special square/rectangular arrangements.",
+          "details": [
+            "A **zero matrix** has zero in every position; it may be rectangular or square.",
+            "An **identity matrix** is square, has 1s along its main diagonal and 0s elsewhere. The identity matrix of order 2 is [[1,0],[0,1]]."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s01_types",
+          "title": "Common matrix shapes",
+          "type": "svg",
+          "caption": "Examples of row, column, square and rectangular matrices.",
+          "alt_text": "Four matrices illustrate row, column, square and rectangular shapes with their orders.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 210\">\n<rect width=\"640\" height=\"210\" rx=\"12\" fill=\"#f8fafc\"/>\n<g font-family=\"sans-serif\" fill=\"#0f172a\" font-size=\"15\" font-weight=\"bold\">\n<text x=\"95\" y=\"28\" text-anchor=\"middle\">Row matrix</text><text x=\"245\" y=\"28\" text-anchor=\"middle\">Column matrix</text><text x=\"395\" y=\"28\" text-anchor=\"middle\">Square matrix</text><text x=\"545\" y=\"28\" text-anchor=\"middle\">Rectangular matrix</text>\n</g>\n<g font-family=\"monospace\" font-size=\"23\" fill=\"#1e3a8a\" text-anchor=\"middle\">\n<text x=\"95\" y=\"100\">[ 2  5  7 ]</text>\n<text x=\"245\" y=\"75\">[ 2 ]</text><text x=\"245\" y=\"108\">[ 5 ]</text><text x=\"245\" y=\"141\">[ 7 ]</text>\n<text x=\"395\" y=\"90\">[ 1  2 ]</text><text x=\"395\" y=\"125\">[ 3  4 ]</text>\n<text x=\"545\" y=\"90\">[ 1  2  3 ]</text><text x=\"545\" y=\"125\">[ 4  5  6 ]</text>\n</g>\n<g font-family=\"sans-serif\" font-size=\"13\" fill=\"#475569\" text-anchor=\"middle\">\n<text x=\"95\" y=\"175\">1 × 3</text><text x=\"245\" y=\"175\">3 × 1</text><text x=\"395\" y=\"175\">2 × 2</text><text x=\"545\" y=\"175\">2 × 3</text>\n</g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify each matrix by its shape: (i) [3  0  -2], (ii) [[1],[4],[6]], (iii) [[2,1],[0,5]], (iv) [[1,2,3],[4,5,6]].",
+          "solution_steps": [
+            "(i) It has one row and three columns, so it is a row matrix of order 1 × 3.",
+            "(ii) It has three rows and one column, so it is a column matrix of order 3 × 1.",
+            "(iii) It has two rows and two columns, so it is a square matrix of order 2 × 2.",
+            "(iv) It has two rows and three columns, so it is a rectangular matrix of order 2 × 3."
+          ],
+          "final_answer": "(i) Row; (ii) Column; (iii) Square; (iv) Rectangular."
+        },
+        {
+          "problem": "Identify the special type of matrix: [[1,0,0],[0,1,0],[0,0,1]].",
+          "solution_steps": [
+            "It is square because it has three rows and three columns.",
+            "Every main-diagonal entry is 1 and every other entry is 0.",
+            "Therefore it is the identity matrix of order 3."
+          ],
+          "final_answer": "Identity matrix I₃."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calling every matrix with zeros in it a zero matrix.",
+          "correction": "A zero matrix must have every entry equal to zero."
+        },
+        {
+          "mistake": "Thinking an identity matrix can be rectangular.",
+          "correction": "An identity matrix must be square so that its main diagonal can contain 1s with zeros in all other positions."
+        }
+      ],
+      "quick_summary": [
+        "A matrix is arranged in rows and columns.",
+        "Order is written rows × columns.",
+        "Row, column, square and rectangular describe shape.",
+        "A zero matrix contains only zeros; an identity matrix is square with 1s on the main diagonal and zeros elsewhere."
+      ]
+    },
+    "hs_math_t13_st02": {
+      "id": "hs_math_t13_st02",
+      "title": "Matrix dimensions and elements",
+      "overview": "The dimensions of a matrix describe its number of rows and columns. Each entry has a precise position, identified by its row number and column number. These conventions allow matrix data to be read and interpreted accurately.",
+      "key_concepts": [
+        {
+          "concept": "Order or dimensions",
+          "definition": "The size of a matrix.",
+          "details": [
+            "A matrix with m rows and n columns has order m × n.",
+            "The first number always gives the number of rows; the second gives the number of columns."
+          ]
+        },
+        {
+          "concept": "Elements and subscripts",
+          "definition": "The notation used to identify an entry.",
+          "details": [
+            "An entry in row i and column j is written as aᵢⱼ when the matrix is named A.",
+            "The first subscript identifies the row and the second identifies the column. Thus a₂₃ is in row 2, column 3."
+          ]
+        },
+        {
+          "concept": "Number of elements",
+          "definition": "The total number of entries in a matrix.",
+          "details": [
+            "Multiply the number of rows by the number of columns to find the total number of entries.",
+            "A 4 × 3 matrix contains 4 × 3 = 12 entries."
+          ]
+        },
+        {
+          "concept": "Interpreting matrix entries",
+          "definition": "Reading a value using its row and column labels.",
+          "details": [
+            "In a table of monthly sales, for example, a row may represent a product and a column may represent a month.",
+            "The meaning of an entry depends on the labels assigned to its row and column."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Order and total number of elements",
+          "equation": "m\\times n\\quad\\text{and}\\quad N=mn",
+          "variables": {
+            "m": "Number of rows",
+            "n": "Number of columns",
+            "N": "Total number of entries"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s02",
+          "title": "Matrix Address System",
+          "type": "svg",
+          "caption": "The first subscript is the Row (Y-axis drop). The second subscript is the Column (X-axis shift).",
+          "alt_text": "Visual showing a 2x3 matrix with element addresses instead of numbers. Top row: a11, a12, a13. Bottom row: a21, a22, a23. An arrow points to a23 explaining 'Row 2, Column 3'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"100\" y=\"130\" font-family=\"monospace\" font-size=\"100\" fill=\"#94a3b8\">[</text><text x=\"320\" y=\"130\" font-family=\"monospace\" font-size=\"100\" fill=\"#94a3b8\">]</text><text x=\"130\" y=\"80\" font-family=\"monospace\" font-size=\"20\" fill=\"#1e3a8a\" font-weight=\"bold\">a₁₁</text><text x=\"200\" y=\"80\" font-family=\"monospace\" font-size=\"20\" fill=\"#1e3a8a\" font-weight=\"bold\">a₁₂</text><text x=\"270\" y=\"80\" font-family=\"monospace\" font-size=\"20\" fill=\"#1e3a8a\" font-weight=\"bold\">a₁₃</text><text x=\"130\" y=\"130\" font-family=\"monospace\" font-size=\"20\" fill=\"#ea580c\" font-weight=\"bold\">a₂₁</text><text x=\"200\" y=\"130\" font-family=\"monospace\" font-size=\"20\" fill=\"#ea580c\" font-weight=\"bold\">a₂₂</text><rect x=\"265\" y=\"105\" width=\"45\" height=\"35\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\" rx=\"5\"/><text x=\"270\" y=\"130\" font-family=\"monospace\" font-size=\"20\" fill=\"#ea580c\" font-weight=\"bold\">a₂₃</text><path d=\"M 285 145 L 285 160 L 350 160\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"360\" y=\"165\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\" font-weight=\"bold\">Row 2, Column 3</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A matrix has 24 entries and 4 rows. Find its order.",
+          "solution_steps": [
+            "Let the number of columns be n.",
+            "Use total entries = rows × columns: 24 = 4n.",
+            "Divide by 4 to obtain n = 6.",
+            "Write the order as rows × columns."
+          ],
+          "final_answer": "4 × 6"
+        },
+        {
+          "problem": "Given A = [[3,6,9],[2,4,8],[5,7,11]], find a₂₃.",
+          "solution_steps": [
+            "The first subscript 2 identifies row 2, which is [2, 4, 8].",
+            "The second subscript 3 identifies the third entry in that row.",
+            "The third entry is 8."
+          ],
+          "final_answer": "a₂₃ = 8"
+        },
+        {
+          "problem": "A school records the number of students choosing three clubs. The rows represent Classes 9 and 10, and the columns represent Art, Music and Science. What does the entry in row 2, column 3 represent?",
+          "solution_steps": [
+            "Row 2 represents Class 10.",
+            "Column 3 represents Science.",
+            "The entry gives the number of Class 10 students who chose Science."
+          ],
+          "final_answer": "The number of Class 10 students choosing Science."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reading a₂₃ as the number twenty-three.",
+          "correction": "Read it as 'a, two, three': the entry in row 2 and column 3."
+        },
+        {
+          "mistake": "Writing order as columns × rows.",
+          "correction": "Always write rows first and columns second."
+        }
+      ],
+      "quick_summary": [
+        "Order = rows × columns.",
+        "The entry aᵢⱼ is in row i and column j.",
+        "Total number of entries = rows × columns.",
+        "Use row and column labels to interpret contextual matrices."
+      ]
+    },
+    "hs_math_t13_st03": {
+      "id": "hs_math_t13_st03",
+      "title": "Equality of matrices",
+      "overview": "Two matrices are equal only when they have the same order and every pair of corresponding entries is equal. This condition can be used to find unknown values in matrices.",
+      "key_concepts": [
+        {
+          "concept": "Conditions for equality",
+          "definition": "Both size and corresponding entries must match.",
+          "details": [
+            "Matrices A and B are equal if they have the same number of rows and columns.",
+            "For matrices of the same order, each entry in A must equal the entry in the same position in B."
+          ]
+        },
+        {
+          "concept": "Finding unknown entries",
+          "definition": "Use corresponding positions to form ordinary equations.",
+          "details": [
+            "If two matrices are equal, equate their corresponding entries one position at a time.",
+            "Solve the resulting equations and substitute the values back to check the equality."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s03_equal",
+          "title": "Equality of matrices",
+          "type": "svg",
+          "caption": "Corresponding entries must match in matrices of the same order.",
+          "alt_text": "Two equal 2 by 2 matrices with the unknown x corresponding to 4.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 190\">\n<rect width=\"600\" height=\"190\" rx=\"12\" fill=\"#f8fafc\"/>\n<g font-family=\"monospace\" font-size=\"27\" fill=\"#0f172a\" text-anchor=\"middle\">\n<text x=\"145\" y=\"76\">[ 2  x ]</text><text x=\"145\" y=\"116\">[ 5  7 ]</text>\n<text x=\"300\" y=\"98\" font-family=\"sans-serif\" font-size=\"30\">=</text>\n<text x=\"455\" y=\"76\">[ 2  4 ]</text><text x=\"455\" y=\"116\">[ 5  7 ]</text>\n</g>\n<rect x=\"112\" y=\"47\" width=\"64\" height=\"38\" rx=\"5\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<rect x=\"421\" y=\"47\" width=\"64\" height=\"38\" rx=\"5\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<g font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\" text-anchor=\"middle\"><text x=\"300\" y=\"160\">Same order and matching entries give x = 4</text></g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find x and y if [[x,5],[3,y]] = [[7,5],[3,9]].",
+          "solution_steps": [
+            "The matrices have the same order, so corresponding entries must be equal.",
+            "Compare the first-row, first-column entries: x = 7.",
+            "Compare the second-row, second-column entries: y = 9."
+          ],
+          "final_answer": "x = 7, y = 9"
+        },
+        {
+          "problem": "If [[2a, b-1],[3, c+2]] = [[8,4],[3,7]], find a, b and c.",
+          "solution_steps": [
+            "Compare the first entries: 2a = 8, so a = 4.",
+            "Compare the second entries: b - 1 = 4, so b = 5.",
+            "Compare the fourth entries: c + 2 = 7, so c = 5.",
+            "The third entries are both 3, so that position is already equal."
+          ],
+          "final_answer": "a = 4, b = 5, c = 5"
+        },
+        {
+          "problem": "Can a 2 × 3 matrix be equal to a 3 × 2 matrix?",
+          "solution_steps": [
+            "Equality requires the matrices to have the same order.",
+            "The orders 2 × 3 and 3 × 2 are different."
+          ],
+          "final_answer": "No. They cannot be equal."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Checking only the numerical entries and ignoring the order.",
+          "correction": "First confirm that both matrices have the same order; then compare every corresponding entry."
+        },
+        {
+          "mistake": "Comparing entries in different positions.",
+          "correction": "Compare entries in the same row and same column only."
+        }
+      ],
+      "quick_summary": [
+        "Equal matrices have the same order.",
+        "Every pair of corresponding entries must be equal.",
+        "Unknown entries can be found by equating corresponding positions."
+      ]
+    },
+    "hs_math_t13_st04": {
+      "id": "hs_math_t13_st04",
+      "title": "Matrix addition and subtraction",
+      "overview": "Matrices of the same order can be added or subtracted by combining entries in corresponding positions. The operation is performed separately at every position, so the order of the result remains unchanged.",
+      "key_concepts": [
+        {
+          "concept": "Compatibility condition",
+          "definition": "The matrices must have the same order.",
+          "details": [
+            "Addition and subtraction are defined only when both matrices have equal numbers of rows and equal numbers of columns.",
+            "For example, a 2 × 2 matrix cannot be added to a 2 × 3 matrix."
+          ]
+        },
+        {
+          "concept": "Entry-by-entry operations",
+          "definition": "Combine corresponding entries.",
+          "details": [
+            "Add or subtract the entry in each position of the first matrix with the entry in the same position of the second.",
+            "The result has the same order as the two original matrices."
+          ]
+        },
+        {
+          "concept": "Properties",
+          "definition": "Addition is commutative; subtraction is not.",
+          "details": [
+            "A + B = B + A.",
+            "In general, A − B is not equal to B − A. Reversing the order changes the signs of the result."
+          ]
+        },
+        {
+          "concept": "Contextual interpretation",
+          "definition": "Combine or compare data recorded in matching layouts.",
+          "details": [
+            "If two matrices record quantities for the same products and locations, their entries can be added to obtain totals or subtracted to find differences.",
+            "The row and column meanings must match, not merely the matrix dimensions."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Matrix addition",
+          "equation": "\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}+\\begin{bmatrix}e&f\\\\g&h\\end{bmatrix}=\\begin{bmatrix}a+e&b+f\\\\c+g&d+h\\end{bmatrix}",
+          "variables": {
+            "a,b,c,d": "Entries of the first matrix",
+            "e,f,g,h": "Corresponding entries of the second matrix"
+          }
+        },
+        {
+          "name": "Matrix subtraction",
+          "equation": "\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}-\\begin{bmatrix}e&f\\\\g&h\\end{bmatrix}=\\begin{bmatrix}a-e&b-f\\\\c-g&d-h\\end{bmatrix}",
+          "variables": {
+            "a,b,c,d,e,f,g,h": "Corresponding matrix entries"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s04",
+          "title": "Element-by-Element Math",
+          "type": "svg",
+          "caption": "Only identical positions interact with each other.",
+          "alt_text": "Visual showing Matrix A + Matrix B = Result. The top-left element of A is blue, top-left of B is blue, top-left of Result is blue showing 'a+e'. This highlights the position-to-position mapping.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"40\" y=\"110\" font-family=\"monospace\" font-size=\"40\" fill=\"#94a3b8\">[</text><text x=\"100\" y=\"110\" font-family=\"monospace\" font-size=\"40\" fill=\"#94a3b8\">]</text><text x=\"60\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#3b82f6\" font-weight=\"bold\">a</text><text x=\"90\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#64748b\" font-weight=\"bold\">b</text><text x=\"60\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#64748b\" font-weight=\"bold\">c</text><text x=\"90\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#64748b\" font-weight=\"bold\">d</text><text x=\"130\" y=\"105\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\" font-weight=\"bold\">+</text><text x=\"160\" y=\"110\" font-family=\"monospace\" font-size=\"40\" fill=\"#94a3b8\">[</text><text x=\"220\" y=\"110\" font-family=\"monospace\" font-size=\"40\" fill=\"#94a3b8\">]</text><text x=\"180\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#3b82f6\" font-weight=\"bold\">e</text><text x=\"210\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#64748b\" font-weight=\"bold\">f</text><text x=\"180\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#64748b\" font-weight=\"bold\">g</text><text x=\"210\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#64748b\" font-weight=\"bold\">h</text><text x=\"250\" y=\"105\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\" font-weight=\"bold\">=</text><text x=\"290\" y=\"110\" font-family=\"monospace\" font-size=\"40\" fill=\"#94a3b8\">[</text><text x=\"420\" y=\"110\" font-family=\"monospace\" font-size=\"40\" fill=\"#94a3b8\">]</text><text x=\"320\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#3b82f6\" font-weight=\"bold\">a+e</text><text x=\"380\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#64748b\" font-weight=\"bold\">b+f</text><text x=\"320\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#64748b\" font-weight=\"bold\">c+g</text><text x=\"380\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#64748b\" font-weight=\"bold\">d+h</text><path d=\"M 65 70 Q 120 40 185 70\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 185 70 Q 250 40 330 70\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given A = [[3,5],[2,7]] and B = [[1,4],[6,2]], find A + B and A − B.",
+          "solution_steps": [
+            "Both matrices have order 2 × 2, so both operations are defined.",
+            "Add corresponding entries: A + B = [[3+1, 5+4],[2+6, 7+2]].",
+            "Subtract corresponding entries in the stated order: A − B = [[3−1, 5−4],[2−6, 7−2]]."
+          ],
+          "final_answer": "A + B = [[4,9],[8,9]]; A − B = [[2,1],[-4,5]]."
+        },
+        {
+          "problem": "Given A = [[3,5],[2,7]] and B = [[1,4],[6,2]], find X if X + A = B.",
+          "solution_steps": [
+            "Subtract A from both sides: X = B − A.",
+            "Subtract corresponding entries: [[1−3,4−5],[6−2,2−7]]."
+          ],
+          "final_answer": "X = [[-2,-1],[4,-5]]"
+        },
+        {
+          "problem": "A shop records notebook and pen sales at two branches. On Monday the sales matrix is [[12,20],[15,18]] and on Tuesday it is [[8,14],[10,12]], with rows representing branches and columns representing notebooks and pens. Find the two-day totals.",
+          "solution_steps": [
+            "The matrices have the same order and the same row and column meanings.",
+            "Add corresponding entries: [[12+8,20+14],[15+10,18+12]]."
+          ],
+          "final_answer": "[[20,34],[25,30]] items."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding matrices of different orders.",
+          "correction": "Check that both matrices have exactly the same order before adding or subtracting."
+        },
+        {
+          "mistake": "Combining a row entry with a column entry.",
+          "correction": "Only combine entries in the same position."
+        },
+        {
+          "mistake": "Reversing the order in subtraction.",
+          "correction": "A − B and B − A are generally different; follow the order given."
+        }
+      ],
+      "quick_summary": [
+        "Addition and subtraction require equal orders.",
+        "Operate on corresponding entries.",
+        "The result has the same order as the original matrices.",
+        "Addition is commutative; subtraction is not."
+      ],
+      "utilities": [
+        {
+          "title": "Matrix Calculator",
+          "description": "Check matrix calculations after completing the worked steps by hand.",
+          "url": "https://onlinetoolpad.com/math/MATRIX_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t13_st05": {
+      "id": "hs_math_t13_st05",
+      "title": "Scalar multiplication",
+      "overview": "Scalar multiplication means multiplying every entry of a matrix by the same ordinary number, called a scalar. It changes the values of the entries but does not change the order of the matrix.",
+      "key_concepts": [
+        {
+          "concept": "Multiplying by a scalar",
+          "definition": "Apply the scalar to every entry.",
+          "details": [
+            "If k is a scalar, kA is formed by multiplying each entry of A by k.",
+            "The resulting matrix has the same order as A."
+          ]
+        },
+        {
+          "concept": "Positive, negative and zero scalars",
+          "definition": "The sign and size of the scalar affect every entry.",
+          "details": [
+            "A positive scalar preserves the sign of each nonzero entry when it is positive.",
+            "A negative scalar reverses the sign of each nonzero entry.",
+            "Multiplication by zero produces a zero matrix of the same order."
+          ]
+        },
+        {
+          "concept": "Combining scalar multiplication with addition or subtraction",
+          "definition": "Scalar multiplication distributes over matrix addition and subtraction.",
+          "details": [
+            "For compatible matrices, k(A + B) = kA + kB and k(A − B) = kA − kB.",
+            "Scalar multiples of the same matrix can also be combined: kA + mA = (k + m)A."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Scalar multiplication",
+          "equation": "k\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}=\\begin{bmatrix}ka&kb\\\\kc&kd\\end{bmatrix}",
+          "variables": {
+            "k": "Scalar multiplier",
+            "a,b,c,d": "Entries of the matrix"
+          }
+        },
+        {
+          "name": "Distributive property",
+          "equation": "k(A+B)=kA+kB,\\quad k(A-B)=kA-kB",
+          "variables": {
+            "k": "Scalar",
+            "A,B": "Matrices of the same order"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s05",
+          "title": "Distributing the Scalar",
+          "type": "svg",
+          "caption": "The scalar penetrates the brackets and attaches to every element.",
+          "alt_text": "Visual showing a scalar '3' outside a 2x2 matrix [2, 4; 1, 5]. Four arrows point from the '3' to each of the four numbers inside. Result shows [3(2), 3(4); 3(1), 3(5)] leading to final matrix [6, 12; 3, 15].",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"40\" y=\"110\" font-family=\"monospace\" font-size=\"24\" fill=\"#ef4444\" font-weight=\"bold\">3</text><text x=\"70\" y=\"110\" font-family=\"monospace\" font-size=\"40\" fill=\"#94a3b8\">[</text><text x=\"130\" y=\"110\" font-family=\"monospace\" font-size=\"40\" fill=\"#94a3b8\">]</text><text x=\"90\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#0f172a\" font-weight=\"bold\">2</text><text x=\"120\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#0f172a\" font-weight=\"bold\">4</text><text x=\"90\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#0f172a\" font-weight=\"bold\">1</text><text x=\"120\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#0f172a\" font-weight=\"bold\">5</text><text x=\"160\" y=\"105\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\" font-weight=\"bold\">=</text><text x=\"190\" y=\"110\" font-family=\"monospace\" font-size=\"40\" fill=\"#94a3b8\">[</text><text x=\"300\" y=\"110\" font-family=\"monospace\" font-size=\"40\" fill=\"#94a3b8\">]</text><text x=\"210\" y=\"90\" font-family=\"monospace\" font-size=\"16\" fill=\"#0f172a\" font-weight=\"bold\"><tspan fill=\"#ef4444\">3</tspan>(2)</text><text x=\"260\" y=\"90\" font-family=\"monospace\" font-size=\"16\" fill=\"#0f172a\" font-weight=\"bold\"><tspan fill=\"#ef4444\">3</tspan>(4)</text><text x=\"210\" y=\"120\" font-family=\"monospace\" font-size=\"16\" fill=\"#0f172a\" font-weight=\"bold\"><tspan fill=\"#ef4444\">3</tspan>(1)</text><text x=\"260\" y=\"120\" font-family=\"monospace\" font-size=\"16\" fill=\"#0f172a\" font-weight=\"bold\"><tspan fill=\"#ef4444\">3</tspan>(5)</text><text x=\"330\" y=\"105\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\" font-weight=\"bold\">=</text><text x=\"370\" y=\"110\" font-family=\"monospace\" font-size=\"40\" fill=\"#94a3b8\">[</text><text x=\"430\" y=\"110\" font-family=\"monospace\" font-size=\"40\" fill=\"#94a3b8\">]</text><text x=\"390\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#1d4ed8\" font-weight=\"bold\">6</text><text x=\"420\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#1d4ed8\" font-weight=\"bold\">12</text><text x=\"390\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#1d4ed8\" font-weight=\"bold\">3</text><text x=\"420\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#1d4ed8\" font-weight=\"bold\">15</text><path d=\"M 55 90 Q 75 70 95 75\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1\"/><path d=\"M 55 110 Q 75 130 95 125\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given B = [[3,-4],[-2,5]], calculate -2B.",
+          "solution_steps": [
+            "Multiply every entry by −2.",
+            "−2 × 3 = −6 and −2 × (−4) = 8.",
+            "−2 × (−2) = 4 and −2 × 5 = −10."
+          ],
+          "final_answer": "[[-6,8],[4,-10]]"
+        },
+        {
+          "problem": "If A = [[1,2],[3,4]], find 3A − 2A.",
+          "solution_steps": [
+            "Find each scalar multiple: 3A = [[3,6],[9,12]] and 2A = [[2,4],[6,8]].",
+            "Subtract corresponding entries: [[3−2,6−4],[9−6,12−8]]."
+          ],
+          "final_answer": "[[1,2],[3,4]] = A"
+        },
+        {
+          "problem": "A library has 2 identical sets of books, each represented by the quantity matrix [[4,3],[2,5]] for two sections and two categories. Find the combined quantity matrix.",
+          "solution_steps": [
+            "Two identical sets means multiply the matrix by the scalar 2.",
+            "Multiply every entry by 2."
+          ],
+          "final_answer": "[[8,6],[4,10]]"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying only one row or one column.",
+          "correction": "Multiply every entry in every row and column."
+        },
+        {
+          "mistake": "Changing the order of the matrix.",
+          "correction": "Scalar multiplication changes entries, not the number of rows or columns."
+        },
+        {
+          "mistake": "Applying a negative scalar without changing all signs.",
+          "correction": "A negative scalar multiplies every entry, so each nonzero entry changes sign."
+        }
+      ],
+      "quick_summary": [
+        "Multiply every entry by the scalar.",
+        "The order remains unchanged.",
+        "A negative scalar reverses signs; zero gives the zero matrix.",
+        "Scalar multiplication distributes over matrix addition and subtraction."
+      ]
+    },
+    "hs_math_t13_st07": {
+      "id": "hs_math_t13_st07",
+      "title": "Identity and zero matrices",
+      "overview": "Zero and identity matrices play special roles in matrix operations. A zero matrix acts as the additive identity, while an identity matrix acts as the multiplicative identity for compatible matrix products.",
+      "key_concepts": [
+        {
+          "concept": "Zero matrix",
+          "definition": "A matrix whose every entry is zero.",
+          "details": [
+            "A zero matrix is written O (or 0). It may have any order, including rectangular orders.",
+            "For any matrix A of the same order, A + O = A and A − O = A.",
+            "When dimensions are compatible, multiplying a matrix by a zero matrix gives a zero matrix of the resulting order."
+          ]
+        },
+        {
+          "concept": "Identity matrix",
+          "definition": "A square matrix with 1s on the main diagonal and 0s elsewhere.",
+          "details": [
+            "The identity matrix of order 2 is I₂ = [[1,0],[0,1]].",
+            "For a matrix A of order m × n, AIₙ = A and IₘA = A. The identity matrix on the right has order n × n; the one on the left has order m × m."
+          ]
+        },
+        {
+          "concept": "Choosing the correct order",
+          "definition": "Matrix operations require dimension compatibility.",
+          "details": [
+            "An identity matrix must be square.",
+            "For addition with A, the zero matrix must have the same order as A."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Additive identity",
+          "equation": "A+O=O+A=A",
+          "variables": {
+            "A": "Any matrix",
+            "O": "Zero matrix of the same order as A"
+          }
+        },
+        {
+          "name": "Multiplicative identity",
+          "equation": "AI_n=A,\\quad I_mA=A",
+          "variables": {
+            "A": "An m × n matrix",
+            "Iₙ": "Identity matrix of order n",
+            "Iₘ": "Identity matrix of order m"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s06",
+          "title": "Identity vs Zero",
+          "type": "svg",
+          "caption": "Identity matrices must be square and have a diagonal of 1s. Zero matrices can be any shape.",
+          "alt_text": "Visual showing an Identity Matrix (I_3) on the left, a 3x3 grid with 1s on the diagonal and 0s elsewhere. On the right, a Zero Matrix (O) that is a 2x3 rectangle filled entirely with 0s.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"70\" y=\"40\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Identity (I₃)</text><text x=\"30\" y=\"120\" font-family=\"monospace\" font-size=\"80\" fill=\"#94a3b8\">[</text><text x=\"130\" y=\"120\" font-family=\"monospace\" font-size=\"80\" fill=\"#94a3b8\">]</text><text x=\"60\" y=\"80\" font-family=\"monospace\" font-size=\"18\" fill=\"#b91c1c\" font-weight=\"bold\">1</text><text x=\"90\" y=\"80\" font-family=\"monospace\" font-size=\"18\" fill=\"#94a3b8\">0</text><text x=\"120\" y=\"80\" font-family=\"monospace\" font-size=\"18\" fill=\"#94a3b8\">0</text><text x=\"60\" y=\"110\" font-family=\"monospace\" font-size=\"18\" fill=\"#94a3b8\">0</text><text x=\"90\" y=\"110\" font-family=\"monospace\" font-size=\"18\" fill=\"#b91c1c\" font-weight=\"bold\">1</text><text x=\"120\" y=\"110\" font-family=\"monospace\" font-size=\"18\" fill=\"#94a3b8\">0</text><text x=\"60\" y=\"140\" font-family=\"monospace\" font-size=\"18\" fill=\"#94a3b8\">0</text><text x=\"90\" y=\"140\" font-family=\"monospace\" font-size=\"18\" fill=\"#94a3b8\">0</text><text x=\"120\" y=\"140\" font-family=\"monospace\" font-size=\"18\" fill=\"#b91c1c\" font-weight=\"bold\">1</text><line x1=\"50\" y1=\"65\" x2=\"130\" y2=\"145\" stroke=\"#fecaca\" stroke-width=\"12\" stroke-linecap=\"round\" opacity=\"0.5\"/><text x=\"350\" y=\"40\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Zero Matrix (O₂ₓ₃)</text><text x=\"290\" y=\"110\" font-family=\"monospace\" font-size=\"60\" fill=\"#94a3b8\">[</text><text x=\"390\" y=\"110\" font-family=\"monospace\" font-size=\"60\" fill=\"#94a3b8\">]</text><text x=\"320\" y=\"85\" font-family=\"monospace\" font-size=\"18\" fill=\"#15803d\" font-weight=\"bold\">0</text><text x=\"350\" y=\"85\" font-family=\"monospace\" font-size=\"18\" fill=\"#15803d\" font-weight=\"bold\">0</text><text x=\"380\" y=\"85\" font-family=\"monospace\" font-size=\"18\" fill=\"#15803d\" font-weight=\"bold\">0</text><text x=\"320\" y=\"115\" font-family=\"monospace\" font-size=\"18\" fill=\"#15803d\" font-weight=\"bold\">0</text><text x=\"350\" y=\"115\" font-family=\"monospace\" font-size=\"18\" fill=\"#15803d\" font-weight=\"bold\">0</text><text x=\"380\" y=\"115\" font-family=\"monospace\" font-size=\"18\" fill=\"#15803d\" font-weight=\"bold\">0</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Let A = [[2,3],[4,5]]. Find A + O and AI₂.",
+          "solution_steps": [
+            "The zero matrix of order 2 × 2 is O = [[0,0],[0,0]].",
+            "Add corresponding entries: A + O = [[2+0,3+0],[4+0,5+0]] = A.",
+            "Use I₂ = [[1,0],[0,1]]. Multiplying A by I₂ leaves A unchanged."
+          ],
+          "final_answer": "A + O = [[2,3],[4,5]] and AI₂ = [[2,3],[4,5]]."
+        },
+        {
+          "problem": "State the order of the zero matrix required for A + O if A has order 3 × 2. State the order of an identity matrix that can be multiplied on the right of A without changing it.",
+          "solution_steps": [
+            "For addition, O must have the same order as A.",
+            "For right multiplication, the identity matrix order must equal the number of columns of A."
+          ],
+          "final_answer": "Zero matrix: 3 × 2; right identity matrix: I₂ of order 2 × 2."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming every zero matrix is square.",
+          "correction": "A zero matrix can have any order; it only needs every entry to be zero."
+        },
+        {
+          "mistake": "Using an identity matrix of the wrong order.",
+          "correction": "For A of order m × n, use Iₙ on the right and Iₘ on the left."
+        },
+        {
+          "mistake": "Assuming the identity matrix contains all ones.",
+          "correction": "Only the main diagonal contains 1s; all off-diagonal entries are 0."
+        }
+      ],
+      "quick_summary": [
+        "A zero matrix contains only zeros and is the additive identity.",
+        "An identity matrix is square, with 1s on its main diagonal and zeros elsewhere.",
+        "Use identity matrices of compatible order when multiplying."
+      ]
+    },
+    "hs_math_t13_st06": {
+      "id": "hs_math_t13_st06",
+      "title": "Matrix multiplication",
+      "overview": "Matrix multiplication combines rows of the first matrix with columns of the second. The product is defined only when the number of columns in the first matrix equals the number of rows in the second.",
+      "key_concepts": [
+        {
+          "concept": "Compatibility and order of the product",
+          "definition": "The inner dimensions must match.",
+          "details": [
+            "If A has order m × n and B has order n × p, AB is defined and has order m × p.",
+            "If the inner dimensions do not match, the product is not defined."
+          ]
+        },
+        {
+          "concept": "Row-by-column method",
+          "definition": "Each product entry is a sum of products.",
+          "details": [
+            "To find an entry, multiply the entries in the relevant row of A by the corresponding entries in the relevant column of B, then add those products.",
+            "The entry in row i and column j of AB is obtained from row i of A and column j of B."
+          ]
+        },
+        {
+          "concept": "Order matters",
+          "definition": "Matrix multiplication is generally not commutative.",
+          "details": [
+            "Even when both AB and BA are defined, they are generally different.",
+            "It is possible for AB to be defined while BA is not defined."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Dimension rule",
+          "equation": "(m\\times n)(n\\times p)=m\\times p",
+          "variables": {
+            "m,n": "Dimensions of the first matrix",
+            "n,p": "Dimensions of the second matrix; the inner n values must match",
+            "m × p": "Order of the product"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s07",
+          "title": "The Dimension Check",
+          "type": "svg",
+          "caption": "The inner numbers must match to allow multiplication. The outer numbers dictate the shape of the final answer.",
+          "alt_text": "Visual showing '(2 x 3) * (3 x 4) = (2 x 4)'. A green bracket links the two '3's in the middle, labeled 'Inner Dimensions Match'. A blue bracket links the '2' and '4' on the outside, labeled 'Outer Dimensions -> Final Answer Size'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"100\" y=\"100\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\" font-weight=\"bold\">(2 × </text><text x=\"170\" y=\"100\" font-family=\"monospace\" font-size=\"24\" fill=\"#16a34a\" font-weight=\"bold\">3</text><text x=\"190\" y=\"100\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\" font-weight=\"bold\">) × (</text><text x=\"250\" y=\"100\" font-family=\"monospace\" font-size=\"24\" fill=\"#16a34a\" font-weight=\"bold\">3</text><text x=\"270\" y=\"100\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\" font-weight=\"bold\"> × 4)</text><path d=\"M 175 110 L 175 130 L 255 130 L 255 110\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"215\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Inner: Must Match</text><path d=\"M 110 75 L 110 55 L 305 55 L 305 75\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><text x=\"210\" y=\"45\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Outer: Final Shape (2 x 4)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Multiply A = [[1,2],[3,4]] by B = [[2,0],[1,3]].",
+          "solution_steps": [
+            "Both matrices are 2 × 2, so the product is defined and will be 2 × 2.",
+            "Top-left: (1 × 2) + (2 × 1) = 4.",
+            "Top-right: (1 × 0) + (2 × 3) = 6.",
+            "Bottom-left: (3 × 2) + (4 × 1) = 10.",
+            "Bottom-right: (3 × 0) + (4 × 3) = 12."
+          ],
+          "final_answer": "AB = [[4,6],[10,12]]."
+        },
+        {
+          "problem": "A has order 2 × 3 and B has order 3 × 4. Is AB defined, and what is its order?",
+          "solution_steps": [
+            "The number of columns of A is 3 and the number of rows of B is 3, so the inner dimensions match.",
+            "The product order is given by the outer dimensions: 2 × 4."
+          ],
+          "final_answer": "Yes. AB is defined and has order 2 × 4."
+        },
+        {
+          "problem": "A has order 2 × 3 and B has order 2 × 4. Is AB defined?",
+          "solution_steps": [
+            "The inner dimensions are 3 and 2.",
+            "They are not equal, so the product cannot be formed."
+          ],
+          "final_answer": "No. AB is not defined."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying entries in matching positions.",
+          "correction": "Use row-by-column multiplication, not position-by-position multiplication."
+        },
+        {
+          "mistake": "Checking the outer dimensions instead of the inner dimensions.",
+          "correction": "The number of columns of the first matrix must equal the number of rows of the second."
+        },
+        {
+          "mistake": "Assuming AB = BA.",
+          "correction": "Matrix multiplication is generally non-commutative; check the order of the factors."
+        }
+      ],
+      "quick_summary": [
+        "For (m × n)(n × p), the inner dimensions must match.",
+        "The product has order m × p.",
+        "Find each entry using row-by-column multiplication.",
+        "AB is generally not equal to BA."
+      ],
+      "utilities": [
+        {
+          "title": "Matrix Calculator",
+          "description": "Check matrix calculations after completing the worked steps by hand.",
+          "url": "https://onlinetoolpad.com/math/MATRIX_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t13_st08": {
+      "id": "hs_math_t13_st08",
+      "title": "Transpose of a matrix",
+      "overview": "The transpose of a matrix is formed by interchanging its rows and columns. The operation changes the order from m × n to n × m and provides a useful way to reorganise matrix data.",
+      "key_concepts": [
+        {
+          "concept": "Definition of transpose",
+          "definition": "Interchange rows and columns.",
+          "details": [
+            "The transpose of A is written Aᵀ.",
+            "The first row of A becomes the first column of Aᵀ; the second row becomes the second column, and so on."
+          ]
+        },
+        {
+          "concept": "Order of a transpose",
+          "definition": "The dimensions are reversed.",
+          "details": [
+            "If A has order m × n, then Aᵀ has order n × m.",
+            "A square matrix remains the same order after transposition."
+          ]
+        },
+        {
+          "concept": "Basic properties",
+          "definition": "Transposition can be applied more than once and to simple sums or scalar multiples.",
+          "details": [
+            "(Aᵀ)ᵀ = A.",
+            "(A + B)ᵀ = Aᵀ + Bᵀ when A and B have the same order.",
+            "(kA)ᵀ = kAᵀ for a scalar k.",
+            "The transpose of a product is not required in this introductory treatment."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Order of transpose",
+          "equation": "A_{m\\times n}^{T}\\text{ has order }n\\times m",
+          "variables": {
+            "m": "Number of rows of A",
+            "n": "Number of columns of A"
+          }
+        },
+        {
+          "name": "Basic transpose properties",
+          "equation": "(A^T)^T=A,\\quad (A+B)^T=A^T+B^T,\\quad (kA)^T=kA^T",
+          "variables": {
+            "A,B": "Matrices of the same order where addition is used",
+            "k": "Scalar"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s08_transpose",
+          "title": "Forming a transpose",
+          "type": "svg",
+          "caption": "Rows of the original matrix become columns of the transpose.",
+          "alt_text": "A 2 by 3 matrix is transposed into a 3 by 2 matrix.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 620 205\">\n<rect width=\"620\" height=\"205\" rx=\"12\" fill=\"#f8fafc\"/>\n<g font-family=\"monospace\" font-size=\"26\" fill=\"#0f172a\" text-anchor=\"middle\">\n<text x=\"130\" y=\"80\">[ 1  2  3 ]</text><text x=\"130\" y=\"120\">[ 4  5  6 ]</text>\n<text x=\"300\" y=\"100\" font-family=\"sans-serif\" font-size=\"30\">→</text>\n<text x=\"475\" y=\"65\">[ 1  4 ]</text><text x=\"475\" y=\"100\">[ 2  5 ]</text><text x=\"475\" y=\"135\">[ 3  6 ]</text>\n</g>\n<g font-family=\"sans-serif\" font-size=\"14\" fill=\"#475569\" text-anchor=\"middle\"><text x=\"130\" y=\"165\">A is 2 × 3</text><text x=\"475\" y=\"175\">Aᵀ is 3 × 2</text><text x=\"300\" y=\"190\">Rows become columns</text></g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the transpose of A = [[1,2,3],[4,5,6]].",
+          "solution_steps": [
+            "A has two rows and three columns.",
+            "Write the first row [1,2,3] as the first column.",
+            "Write the second row [4,5,6] as the second column."
+          ],
+          "final_answer": "Aᵀ = [[1,4],[2,5],[3,6]], of order 3 × 2."
+        },
+        {
+          "problem": "Find the transpose of B = [[2,0],[-1,5]].",
+          "solution_steps": [
+            "The first row [2,0] becomes the first column.",
+            "The second row [−1,5] becomes the second column."
+          ],
+          "final_answer": "Bᵀ = [[2,-1],[0,5]]."
+        },
+        {
+          "problem": "If A = [[1,2],[3,4]], verify that (Aᵀ)ᵀ = A.",
+          "solution_steps": [
+            "First transpose A: Aᵀ = [[1,3],[2,4]].",
+            "Transpose again: (Aᵀ)ᵀ = [[1,2],[3,4]]."
+          ],
+          "final_answer": "(Aᵀ)ᵀ = A."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Changing the values instead of changing their positions.",
+          "correction": "A transpose does not change any entry's value; it changes its row and column position."
+        },
+        {
+          "mistake": "Keeping the same order for a rectangular matrix.",
+          "correction": "An m × n matrix becomes n × m after transposition."
+        },
+        {
+          "mistake": "Transposing only the first row.",
+          "correction": "Every row of the original matrix becomes a column in the transpose."
+        }
+      ],
+      "quick_summary": [
+        "Transpose interchanges rows and columns.",
+        "Aᵀ has order n × m when A has order m × n.",
+        "Transposing twice returns the original matrix.",
+        "Transpose distributes over addition and scalar multiplication."
+      ],
+      "utilities": [
+        {
+          "title": "Matrix Calculator",
+          "description": "Check matrix calculations after completing the worked steps by hand.",
+          "url": "https://onlinetoolpad.com/math/MATRIX_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t13_st09": {
+      "id": "hs_math_t13_st09",
+      "title": "Determinants of \\\\(2 \\times 2\\\\) matrices",
+      "overview": "The determinant of a 2 × 2 matrix is a single number calculated from its four entries. It helps determine whether the matrix has an inverse and gives the area-scaling factor of the associated two-dimensional linear transformation.",
+      "key_concepts": [
+        {
+          "concept": "Determinant of a 2 × 2 matrix",
+          "definition": "Calculate the product of the main diagonal minus the product of the other diagonal.",
+          "details": [
+            "For A = [[a,b],[c,d]], det(A) = ad − bc.",
+            "The determinant is a number, not another matrix. It is written det(A) or |A|."
+          ]
+        },
+        {
+          "concept": "Singular and non-singular matrices",
+          "definition": "The determinant determines whether a 2 × 2 matrix is invertible.",
+          "details": [
+            "If det(A) = 0, A is singular and has no inverse.",
+            "If det(A) ≠ 0, A is non-singular and its inverse exists."
+          ]
+        },
+        {
+          "concept": "Geometric interpretation",
+          "definition": "The absolute value of the determinant gives the area scale factor.",
+          "details": [
+            "A two-dimensional linear transformation with determinant D multiplies areas by |D|.",
+            "A negative determinant indicates that orientation is reversed as well as area being scaled.",
+            "If the determinant is zero, area is collapsed to zero; the image lies on a line or a point."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Determinant formula",
+          "equation": "\\det(A)=\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}=ad-bc",
+          "variables": {
+            "a,b,c,d": "Entries of the 2 × 2 matrix"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s09",
+          "title": "Calculating the Determinant",
+          "type": "svg",
+          "caption": "Multiply the main diagonal (blue), then subtract the secondary diagonal (red).",
+          "alt_text": "Visual showing matrix [a b; c d]. A blue arrow points diagonally from a to d. A red arrow points diagonally from b to c. Equation below says '|A| = (a × d) - (b × c)'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"160\" y=\"110\" font-family=\"monospace\" font-size=\"80\" fill=\"#94a3b8\">[</text><text x=\"300\" y=\"110\" font-family=\"monospace\" font-size=\"80\" fill=\"#94a3b8\">]</text><text x=\"200\" y=\"70\" font-family=\"monospace\" font-size=\"24\" fill=\"#1e3a8a\" font-weight=\"bold\">a</text><text x=\"260\" y=\"70\" font-family=\"monospace\" font-size=\"24\" fill=\"#b91c1c\" font-weight=\"bold\">b</text><text x=\"200\" y=\"130\" font-family=\"monospace\" font-size=\"24\" fill=\"#b91c1c\" font-weight=\"bold\">c</text><text x=\"260\" y=\"130\" font-family=\"monospace\" font-size=\"24\" fill=\"#1e3a8a\" font-weight=\"bold\">d</text><path d=\"M 215 75 L 255 115\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\" stroke-linecap=\"round\" opacity=\"0.5\"/><path d=\"M 265 75 L 215 115\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"4\" stroke-linecap=\"round\" opacity=\"0.5\"/><rect x=\"150\" y=\"150\" width=\"200\" height=\"40\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"175\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">det(A) = ad - bc</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the determinant of B = [[-2,3],[4,1]].",
+          "solution_steps": [
+            "Identify a = −2, b = 3, c = 4 and d = 1.",
+            "Use det(B) = ad − bc.",
+            "ad = (−2)(1) = −2 and bc = (3)(4) = 12.",
+            "Subtract: −2 − 12 = −14."
+          ],
+          "final_answer": "det(B) = -14"
+        },
+        {
+          "problem": "Determine whether C = [[3,6],[2,4]] is singular.",
+          "solution_steps": [
+            "Calculate det(C) = (3 × 4) − (6 × 2).",
+            "det(C) = 12 − 12 = 0.",
+            "A matrix with determinant zero is singular."
+          ],
+          "final_answer": "C is singular; it has no inverse."
+        },
+        {
+          "problem": "A 2 × 2 transformation matrix has determinant −3. By what factor does it change the area of a shape?",
+          "solution_steps": [
+            "The area scale factor is the absolute value of the determinant.",
+            "|−3| = 3."
+          ],
+          "final_answer": "Areas are multiplied by 3; orientation is reversed."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding the diagonal products instead of subtracting.",
+          "correction": "Use ad − bc: multiply the main diagonal, then subtract the product of the other diagonal."
+        },
+        {
+          "mistake": "Ignoring negative signs.",
+          "correction": "Substitute signed values carefully; subtracting a negative product becomes addition."
+        },
+        {
+          "mistake": "Using the determinant formula for a non-square matrix.",
+          "correction": "A determinant is defined only for square matrices; this subtopic covers 2 × 2 matrices."
+        }
+      ],
+      "quick_summary": [
+        "For [[a,b],[c,d]], det = ad − bc.",
+        "A zero determinant means singular; a nonzero determinant means non-singular.",
+        "The absolute determinant gives the area scale factor for a 2D linear transformation."
+      ],
+      "utilities": [
+        {
+          "title": "Matrix Calculator",
+          "description": "Check matrix calculations after completing the worked steps by hand.",
+          "url": "https://onlinetoolpad.com/math/MATRIX_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t13_st10": {
+      "id": "hs_math_t13_st10",
+      "title": "Inverse of a \\\\(2 \\times 2\\\\) matrix",
+      "overview": "The inverse of a square matrix reverses the effect of multiplication by that matrix. A 2 × 2 matrix has an inverse only when its determinant is nonzero. The inverse is calculated using a standard formula and can be checked by multiplication.",
+      "key_concepts": [
+        {
+          "concept": "When an inverse exists",
+          "definition": "A 2 × 2 matrix is invertible exactly when its determinant is nonzero.",
+          "details": [
+            "If det(A) = 0, A is singular and A⁻¹ does not exist.",
+            "If det(A) ≠ 0, A is non-singular and has an inverse."
+          ]
+        },
+        {
+          "concept": "Formula for the inverse",
+          "definition": "Swap the main-diagonal entries, change the signs of the other two entries, and divide by the determinant.",
+          "details": [
+            "For A = [[a,b],[c,d]], interchange a and d.",
+            "Replace b by −b and c by −c.",
+            "Multiply the resulting matrix by 1/(ad − bc)."
+          ]
+        },
+        {
+          "concept": "Verification",
+          "definition": "A matrix multiplied by its inverse gives the identity matrix.",
+          "details": [
+            "Check the result by calculating AA⁻¹ or A⁻¹A.",
+            "The product should be the identity matrix of the same order."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Inverse of a 2 × 2 matrix",
+          "equation": "A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix},\\quad ad-bc\\ne0",
+          "variables": {
+            "a,b,c,d": "Entries of A",
+            "ad − bc": "Determinant of A, which must not be zero"
+          }
+        },
+        {
+          "name": "Verification rule",
+          "equation": "AA^{-1}=A^{-1}A=I_2",
+          "variables": {
+            "I₂": "Identity matrix of order 2"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s10",
+          "title": "The Inverse Algorithm",
+          "type": "svg",
+          "caption": "Swap the main diagonal, flip the signs of the other diagonal, and scale by the determinant fraction.",
+          "alt_text": "Visual showing matrix [a, b; c, d]. An arrow points to a new matrix [d, -b; -c, a]. Text reads '1: Swap 'a' and 'd'. 2: Change signs of 'b' and 'c'. 3: Multiply whole thing by 1/|A|'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"40\" y=\"110\" font-family=\"monospace\" font-size=\"80\" fill=\"#94a3b8\">[</text><text x=\"130\" y=\"110\" font-family=\"monospace\" font-size=\"80\" fill=\"#94a3b8\">]</text><text x=\"70\" y=\"70\" font-family=\"monospace\" font-size=\"24\" fill=\"#1e3a8a\" font-weight=\"bold\">a</text><text x=\"110\" y=\"70\" font-family=\"monospace\" font-size=\"24\" fill=\"#b91c1c\" font-weight=\"bold\">b</text><text x=\"70\" y=\"120\" font-family=\"monospace\" font-size=\"24\" fill=\"#b91c1c\" font-weight=\"bold\">c</text><text x=\"110\" y=\"120\" font-family=\"monospace\" font-size=\"24\" fill=\"#1e3a8a\" font-weight=\"bold\">d</text><path d=\"M 160 85 L 210 85 M 200 75 L 210 85 L 200 95\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"3\"/><text x=\"230\" y=\"100\" font-family=\"monospace\" font-size=\"30\" fill=\"#047857\" font-weight=\"bold\">1/|A|</text><text x=\"320\" y=\"110\" font-family=\"monospace\" font-size=\"80\" fill=\"#94a3b8\">[</text><text x=\"430\" y=\"110\" font-family=\"monospace\" font-size=\"80\" fill=\"#94a3b8\">]</text><text x=\"350\" y=\"70\" font-family=\"monospace\" font-size=\"24\" fill=\"#1e3a8a\" font-weight=\"bold\">d</text><text x=\"390\" y=\"70\" font-family=\"monospace\" font-size=\"24\" fill=\"#b91c1c\" font-weight=\"bold\">-b</text><text x=\"350\" y=\"120\" font-family=\"monospace\" font-size=\"24\" fill=\"#b91c1c\" font-weight=\"bold\">-c</text><text x=\"400\" y=\"120\" font-family=\"monospace\" font-size=\"24\" fill=\"#1e3a8a\" font-weight=\"bold\">a</text><rect x=\"40\" y=\"150\" width=\"420\" height=\"35\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"172\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Swap Blue (Main) | Flip Signs Red (Other)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the inverse of B = [[4,2],[1,3]].",
+          "solution_steps": [
+            "Find the determinant: (4 × 3) − (2 × 1) = 10.",
+            "Since the determinant is not zero, the inverse exists.",
+            "Swap the main-diagonal entries 4 and 3, and change the signs of 2 and 1.",
+            "B⁻¹ = (1/10)[[3,−2],[−1,4]]."
+          ],
+          "final_answer": "B⁻¹ = [[3/10,-1/5],[-1/10,2/5]]."
+        },
+        {
+          "problem": "Find the inverse of A = [[2,1],[5,3]] and verify it.",
+          "solution_steps": [
+            "det(A) = (2 × 3) − (1 × 5) = 1.",
+            "Swap 2 and 3 and change the signs of 1 and 5: [[3,−1],[−5,2]].",
+            "The determinant is 1, so A⁻¹ = [[3,−1],[−5,2]].",
+            "Multiply A by A⁻¹: [[2,1],[5,3]][[3,−1],[−5,2]] = [[1,0],[0,1]]."
+          ],
+          "final_answer": "A⁻¹ = [[3,-1],[-5,2]]; AA⁻¹ = I₂."
+        },
+        {
+          "problem": "Does C = [[2,4],[1,2]] have an inverse?",
+          "solution_steps": [
+            "det(C) = (2 × 2) − (4 × 1) = 0.",
+            "A matrix with determinant zero is singular."
+          ],
+          "final_answer": "No. C⁻¹ does not exist."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Swapping the wrong entries.",
+          "correction": "Only swap the main-diagonal entries a and d; keep b and c in their positions but change their signs."
+        },
+        {
+          "mistake": "Forgetting to divide by the determinant.",
+          "correction": "Multiply every entry of the adjusted matrix by 1/det(A)."
+        },
+        {
+          "mistake": "Trying to invert a singular matrix.",
+          "correction": "Check the determinant first; if it is zero, the inverse does not exist."
+        }
+      ],
+      "quick_summary": [
+        "A 2 × 2 matrix has an inverse only if its determinant is nonzero.",
+        "Swap the main-diagonal entries and change the signs of the other two.",
+        "Divide the resulting matrix by the determinant.",
+        "Verify by multiplying to obtain I₂."
+      ],
+      "utilities": [
+        {
+          "title": "Matrix Calculator",
+          "description": "Check matrix calculations after completing the worked steps by hand.",
+          "url": "https://onlinetoolpad.com/math/MATRIX_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t13_st11": {
+      "id": "hs_math_t13_st11",
+      "title": "Solving simultaneous equations using matrices",
+      "overview": "A pair of simultaneous linear equations in two unknowns can be written as a matrix equation AX = B. If the coefficient matrix A is non-singular, multiply by its inverse to obtain the values of the unknowns.",
+      "key_concepts": [
+        {
+          "concept": "Writing equations as AX = B",
+          "definition": "Separate coefficients, variables and constants.",
+          "details": [
+            "For p x + q y = r and s x + t y = u, A = [[p,q],[s,t]], X = [[x],[y]] and B = [[r],[u]].",
+            "The matrix equation AX = B represents the original pair of equations."
+          ]
+        },
+        {
+          "concept": "Solving using the inverse",
+          "definition": "Multiply on the left by the inverse of the coefficient matrix.",
+          "details": [
+            "If A⁻¹ exists, A⁻¹AX = A⁻¹B.",
+            "Since A⁻¹A = I, the solution is X = A⁻¹B.",
+            "The order of multiplication matters; the inverse matrix is placed to the left of B."
+          ]
+        },
+        {
+          "concept": "Checking and interpreting the solution",
+          "definition": "Substitute the values back into both original equations.",
+          "details": [
+            "A nonzero determinant of A gives a unique solution by the inverse method.",
+            "If det(A) = 0, A⁻¹ does not exist, so this inverse-matrix method cannot be used. The equations may be inconsistent or dependent."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Inverse-matrix solution",
+          "equation": "AX=B,\\quad X=A^{-1}B\\quad(\\det A\\ne0)",
+          "variables": {
+            "A": "2 × 2 coefficient matrix",
+            "X": "Column matrix of the two unknowns",
+            "B": "Column matrix of constants"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s11",
+          "title": "Deconstructing Equations into Matrices",
+          "type": "svg",
+          "caption": "Extract the coefficients, variables, and constants into three distinct blocks.",
+          "alt_text": "Visual showing '2x + 3y = 13' and '1x + 1y = 5'. Arrows point down extracting the numbers into Matrix A [2 3; 1 1], Matrix X [x; y], and Matrix B [13; 5]. Equation at bottom: A * X = B.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"160\" y=\"35\" font-family=\"monospace\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e3a8a\">2x + 3y = 13</text><text x=\"160\" y=\"65\" font-family=\"monospace\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e3a8a\">1x + 1y =  5</text><path d=\"M 180 75 L 120 110 M 240 75 L 240 110 M 290 75 L 350 110\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><polygon points=\"120,110 125,100 130,105\" fill=\"#94a3b8\"/><polygon points=\"240,110 235,100 245,100\" fill=\"#94a3b8\"/><polygon points=\"350,110 340,105 345,100\" fill=\"#94a3b8\"/><text x=\"50\" y=\"160\" font-family=\"monospace\" font-size=\"50\" fill=\"#94a3b8\">[</text><text x=\"120\" y=\"160\" font-family=\"monospace\" font-size=\"50\" fill=\"#94a3b8\">]</text><text x=\"70\" y=\"135\" font-family=\"monospace\" font-size=\"18\" fill=\"#1d4ed8\" font-weight=\"bold\">2 3</text><text x=\"70\" y=\"165\" font-family=\"monospace\" font-size=\"18\" fill=\"#1d4ed8\" font-weight=\"bold\">1 1</text><text x=\"200\" y=\"160\" font-family=\"monospace\" font-size=\"50\" fill=\"#94a3b8\">[</text><text x=\"240\" y=\"160\" font-family=\"monospace\" font-size=\"50\" fill=\"#94a3b8\">]</text><text x=\"220\" y=\"135\" font-family=\"monospace\" font-size=\"18\" fill=\"#ea580c\" font-weight=\"bold\">x</text><text x=\"220\" y=\"165\" font-family=\"monospace\" font-size=\"18\" fill=\"#ea580c\" font-weight=\"bold\">y</text><text x=\"270\" y=\"150\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\" font-weight=\"bold\">=</text><text x=\"310\" y=\"160\" font-family=\"monospace\" font-size=\"50\" fill=\"#94a3b8\">[</text><text x=\"370\" y=\"160\" font-family=\"monospace\" font-size=\"50\" fill=\"#94a3b8\">]</text><text x=\"330\" y=\"135\" font-family=\"monospace\" font-size=\"18\" fill=\"#15803d\" font-weight=\"bold\">13</text><text x=\"340\" y=\"165\" font-family=\"monospace\" font-size=\"18\" fill=\"#15803d\" font-weight=\"bold\">5</text><text x=\"95\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A</text><text x=\"230\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">X</text><text x=\"350\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">B</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve 3x − 2y = 4 and x + y = 3 using matrices.",
+          "solution_steps": [
+            "Write A = [[3,−2],[1,1]], X = [[x],[y]] and B = [[4],[3]].",
+            "det(A) = (3 × 1) − (−2 × 1) = 5, so A⁻¹ = (1/5)[[1,2],[−1,3]].",
+            "Calculate X = A⁻¹B = (1/5)[[1,2],[−1,3]][[4],[3]].",
+            "The product is (1/5)[[10],[5]] = [[2],[1]].",
+            "Check: 3(2) − 2(1) = 4 and 2 + 1 = 3."
+          ],
+          "final_answer": "x = 2, y = 1"
+        },
+        {
+          "problem": "Solve 2x + y = 7 and x + y = 5 using the inverse-matrix method.",
+          "solution_steps": [
+            "A = [[2,1],[1,1]], X = [[x],[y]], B = [[7],[5]].",
+            "det(A) = (2 × 1) − (1 × 1) = 1.",
+            "A⁻¹ = [[1,−1],[−1,2]].",
+            "X = A⁻¹B = [[1,−1],[−1,2]][[7],[5]] = [[2],[3]].",
+            "Check: 2(2) + 3 = 7 and 2 + 3 = 5."
+          ],
+          "final_answer": "x = 2, y = 3"
+        },
+        {
+          "problem": "What does det(A) = 0 tell you when A is the coefficient matrix of a pair of simultaneous linear equations?",
+          "solution_steps": [
+            "A determinant of zero means A is singular.",
+            "A singular matrix has no inverse, so the inverse-matrix method cannot be applied.",
+            "The equations may represent distinct parallel lines (no solution) or the same line (infinitely many solutions)."
+          ],
+          "final_answer": "The inverse method is unavailable; the system may have no solution or infinitely many solutions."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Writing X = BA⁻¹.",
+          "correction": "Multiply by A⁻¹ on the left to obtain X = A⁻¹B."
+        },
+        {
+          "mistake": "Using the constants as rows instead of a column matrix.",
+          "correction": "Keep the coefficient matrix, variable column and constant column in the same equation order."
+        },
+        {
+          "mistake": "Assuming det(A) = 0 means there is no solution in every case.",
+          "correction": "It means the inverse method is unavailable; the system may have no solution or infinitely many solutions."
+        },
+        {
+          "mistake": "Not checking the final values.",
+          "correction": "Substitute both values into both original equations."
+        }
+      ],
+      "quick_summary": [
+        "Write the system as AX = B.",
+        "If det(A) ≠ 0, calculate X = A⁻¹B.",
+        "Check the solution in both original equations.",
+        "If det(A) = 0, the inverse-matrix method cannot be used."
+      ],
+      "utilities": [
+        {
+          "title": "Matrix Calculator",
+          "description": "Check matrix calculations after completing the worked steps by hand.",
+          "url": "https://onlinetoolpad.com/math/MATRIX_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t13_st12": {
+      "id": "hs_math_t13_st12",
+      "title": "Applications of matrices",
+      "overview": "Matrices organise related information into a consistent row-and-column structure. They can also be used with matrix operations to calculate totals, compare data and represent simple practical relationships.",
+      "key_concepts": [
+        {
+          "concept": "Organising data",
+          "definition": "Rows and columns represent clearly labelled categories.",
+          "details": [
+            "A matrix can record quantities for different products, locations, time periods or groups.",
+            "The row and column labels must be stated so that each entry can be interpreted correctly."
+          ]
+        },
+        {
+          "concept": "Using matrix operations in practical calculations",
+          "definition": "Addition, subtraction, scalar multiplication and matrix multiplication can process organised data.",
+          "details": [
+            "Addition can combine totals recorded in matching layouts.",
+            "Scalar multiplication can scale all entries by a common factor.",
+            "Matrix multiplication can combine a table of per-unit requirements with a column of production quantities to calculate total requirements."
+          ]
+        },
+        {
+          "concept": "Simple relationship tables",
+          "definition": "A matrix can record whether pairs of items are connected or related.",
+          "details": [
+            "For a simple network, rows and columns may represent the same set of locations.",
+            "An entry such as 1 may represent a direct connection and 0 may represent no direct connection, provided the convention is defined."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s12",
+          "title": "The Adjacency Matrix",
+          "type": "svg",
+          "caption": "Mapping physical network connections into a mathematical grid of 1s and 0s.",
+          "alt_text": "Visual showing 3 nodes (A, B, C) forming a triangle. A connects to B. B connects to C. A does not connect to C. Next to it is a 3x3 matrix showing 1s where connections exist (A-B, B-C) and 0s where they don't (A-C).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"100\" cy=\"50\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"100\" y=\"55\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">A</text><circle cx=\"200\" cy=\"150\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"200\" y=\"155\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">B</text><circle cx=\"50\" cy=\"150\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"50\" y=\"155\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">C</text><path d=\"M 100 70 L 200 130\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"3\"/><path d=\"M 70 150 L 180 150\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"3\"/><text x=\"280\" y=\"130\" font-family=\"monospace\" font-size=\"100\" fill=\"#94a3b8\">[</text><text x=\"420\" y=\"130\" font-family=\"monospace\" font-size=\"100\" fill=\"#94a3b8\">]</text><text x=\"320\" y=\"50\" font-family=\"monospace\" font-size=\"16\" fill=\"#0f172a\" font-weight=\"bold\">A B C</text><text x=\"300\" y=\"80\" font-family=\"monospace\" font-size=\"16\" fill=\"#0f172a\" font-weight=\"bold\">A</text><text x=\"300\" y=\"110\" font-family=\"monospace\" font-size=\"16\" fill=\"#0f172a\" font-weight=\"bold\">B</text><text x=\"300\" y=\"140\" font-family=\"monospace\" font-size=\"16\" fill=\"#0f172a\" font-weight=\"bold\">C</text><text x=\"320\" y=\"80\" font-family=\"monospace\" font-size=\"18\" fill=\"#94a3b8\" font-weight=\"bold\">0</text><text x=\"350\" y=\"80\" font-family=\"monospace\" font-size=\"18\" fill=\"#16a34a\" font-weight=\"bold\">1</text><text x=\"380\" y=\"80\" font-family=\"monospace\" font-size=\"18\" fill=\"#ef4444\" font-weight=\"bold\">0</text><text x=\"320\" y=\"110\" font-family=\"monospace\" font-size=\"18\" fill=\"#16a34a\" font-weight=\"bold\">1</text><text x=\"350\" y=\"110\" font-family=\"monospace\" font-size=\"18\" fill=\"#94a3b8\" font-weight=\"bold\">0</text><text x=\"380\" y=\"110\" font-family=\"monospace\" font-size=\"18\" fill=\"#16a34a\" font-weight=\"bold\">1</text><text x=\"320\" y=\"140\" font-family=\"monospace\" font-size=\"18\" fill=\"#ef4444\" font-weight=\"bold\">0</text><text x=\"350\" y=\"140\" font-family=\"monospace\" font-size=\"18\" fill=\"#16a34a\" font-weight=\"bold\">1</text><text x=\"380\" y=\"140\" font-family=\"monospace\" font-size=\"18\" fill=\"#94a3b8\" font-weight=\"bold\">0</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A factory uses 4 units of wood and 2 units of metal per chair. It uses 6 units of wood and 3 units of metal per table. The factory produces 10 chairs and 5 tables. Find the total amounts of wood and metal required.",
+          "solution_steps": [
+            "Arrange the material requirements with rows for wood and metal and columns for chairs and tables: A = [[4,6],[2,3]].",
+            "Arrange production quantities in the same column order: B = [[10],[5]].",
+            "Multiply AB: [[(4 × 10) + (6 × 5)],[(2 × 10) + (3 × 5)]].",
+            "Calculate the entries: [[40 + 30],[20 + 15]]."
+          ],
+          "final_answer": "Wood = 70 units; metal = 35 units."
+        },
+        {
+          "problem": "A school records the number of students participating in two activities at two campuses. The matrix for Campus A is [[18,12],[10,15]] and for Campus B is [[14,9],[8,11]], with the same row and column labels. Find the combined participation matrix.",
+          "solution_steps": [
+            "Both matrices use the same order and category labels.",
+            "Add corresponding entries: [[18+14,12+9],[10+8,15+11]]."
+          ],
+          "final_answer": "[[32,21],[18,26]] students."
+        },
+        {
+          "problem": "Three towns are labelled P, Q and R. A direct-road connection is represented by 1 and no direct road by 0. If P connects directly to Q but not R, write the first row of the connection matrix using the column order P, Q, R.",
+          "solution_steps": [
+            "The columns are P, Q and R in that order.",
+            "There is no direct road from P to itself in this simple example, a road from P to Q, and no road from P to R."
+          ],
+          "final_answer": "[0, 1, 0]."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using matrices without defining what rows and columns represent.",
+          "correction": "State the row and column labels before interpreting entries or performing contextual calculations."
+        },
+        {
+          "mistake": "Multiplying matrices whose category order does not match.",
+          "correction": "The column meanings of the first matrix must align with the row meanings of the second matrix."
+        },
+        {
+          "mistake": "Treating an entry as meaningful without its units or labels.",
+          "correction": "Include the context, category and units when explaining a matrix result."
+        }
+      ],
+      "quick_summary": [
+        "Matrices organise related data in rows and columns.",
+        "Clear row and column labels are essential.",
+        "Matrix operations can combine data and calculate totals in practical situations.",
+        "Always interpret results using the context and units."
+      ]
+    }
+  }
+}

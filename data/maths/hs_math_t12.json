@@ -1,0 +1,1482 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t12",
+  "topicTitle": "Vectors and Transformations",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t12_st01": {
+      "id": "hs_math_t12_st01",
+      "title": "Scalar and vector quantities",
+      "overview": "A quantity can be described by its size alone or by both its size and direction. Scalars have magnitude only, whereas vectors have magnitude and direction. This distinction is essential when describing movement, forces and other quantities in two dimensions.",
+      "key_concepts": [
+        {
+          "concept": "Scalar Quantities",
+          "definition": "Magnitude only.",
+          "details": [
+            "A scalar quantity is described by its magnitude only; a numerical value and unit are used when the quantity has a physical unit.",
+            "Examples include mass (5 kg), time (10 s), temperature (20 °C) and speed (60 km/h)."
+          ]
+        },
+        {
+          "concept": "Vector Quantities",
+          "definition": "Magnitude AND Direction.",
+          "details": [
+            "A vector tells you both the size of the measurement and exactly where it is pointing.",
+            "**Examples:** Force ($20$ N East), Displacement ($5$ m up), Velocity ($60$ km/h North).",
+            "Vectors are written in bold ($\\mathbf{v}$) or with a tiny arrow on top ($\\vec{v}$)."
+          ]
+        },
+        {
+          "concept": "Distance vs. Displacement",
+          "definition": "The classic trap.",
+          "details": [
+            "**Distance (Scalar):** The total path you walked. If you walk $5$m East, then $5$m West, your distance is $10$m.",
+            "**Displacement (Vector):** How far out of place you are from where you started. If you walk $5$m East, then $5$m West, your displacement is $0$m."
+          ]
+        },
+        {
+          "concept": "Representing direction",
+          "definition": "Direction may be stated using words, compass bearings or angles measured from a reference axis.",
+          "details": [
+            "Examples include 8 m east, 12 N vertically upward, and a velocity of 15 m/s at 30° above the positive horizontal axis.",
+            "A direction must be interpreted relative to a stated reference. An angle measured anticlockwise from the positive x-axis is not the same convention as a compass bearing."
+          ]
+        },
+        {
+          "concept": "When direction changes the result",
+          "definition": "Equal magnitudes do not necessarily describe equal vectors.",
+          "details": [
+            "A 5 N force east and a 5 N force west have equal magnitudes but opposite directions, so they are different vectors.",
+            "Two journeys can have the same distance but different displacements because their starting and ending positions or routes differ."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s01",
+          "title": "Distance vs Displacement",
+          "type": "svg",
+          "caption": "Distance tracks the whole journey. Displacement only cares about the start and the end.",
+          "alt_text": "Visual showing a winding path from Point A to Point B. The curly path is labeled 'Distance = 15m (Scalar)'. A straight, direct arrow pointing from A to B is labeled 'Displacement = 8m East (Vector)'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"50\" cy=\"100\" r=\"6\" fill=\"#0f172a\"/><text x=\"50\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">A</text><circle cx=\"400\" cy=\"100\" r=\"6\" fill=\"#0f172a\"/><text x=\"400\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">B</text><path d=\"M 50 100 Q 100 20, 200 100 T 400 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\" stroke-dasharray=\"6,6\"/><text x=\"200\" y=\"45\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Distance = 15m (Scalar)</text><path d=\"M 50 100 L 380 100\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"4\"/><polygon points=\"380,100 370,95 370,105\" fill=\"#ef4444\"/><text x=\"225\" y=\"125\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">Displacement = 8m East (Vector)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A car drives $100$ km North in 2 hours, then immediately turns around and drives $40$ km South in 1 hour. Calculate its average speed and average velocity.",
+          "solution_steps": [
+            "Step 1: Understand the difference. Speed is Scalar (Distance / Time). Velocity is Vector (Displacement / Time).",
+            "Step 2: Total Time = $2 + 1 = 3$ hours.",
+            "Step 3: Total Distance = $100 + 40 = 140$ km. Average Speed = $140 / 3 = 46.67$ km/h.",
+            "Step 4: Total Displacement = $100$ (North) - $40$ (South) = $60$ km North.",
+            "Step 5: Average Velocity = $60 / 3 = 20$ km/h North."
+          ],
+          "final_answer": "Speed: 46.67 km/h, Velocity: 20 km/h North"
+        },
+        {
+          "problem": "A student walks 6 m east and then 8 m north. Find the total distance travelled and the magnitude of the displacement.",
+          "solution_steps": [
+            "Total distance is the length of the complete route: 6 + 8 = 14 m.",
+            "The eastward and northward displacements are perpendicular, so they form the two shorter sides of a right triangle.",
+            "Displacement magnitude = √(6² + 8²) = √100 = 10 m.",
+            "Direction: tan θ = 8/6, so θ ≈ 53.13° north of east."
+          ],
+          "final_answer": "Distance = 14 m; displacement = 10 m at approximately 53.13° north of east."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking negative signs mean less value.",
+          "correction": "In scalars, $-5^\\circ$C is colder (less) than $5^\\circ$C. But in vectors, $-5$m/s does not mean you are going slower than $0$m/s. The negative sign is purely a directional compass heading (e.g., Left or Down instead of Right or Up)."
+        },
+        {
+          "mistake": "Assuming that two quantities with the same numerical value are the same vector.",
+          "correction": "Compare both magnitude and direction. For example, 10 m east and 10 m west have equal magnitudes but opposite directions."
+        }
+      ],
+      "quick_summary": [
+        "Scalars just have a number.",
+        "Vectors have a number AND a direction.",
+        "Displacement is the straight-line shortcut from start to finish, while Distance tracks every step."
+      ],
+      "utilities": []
+    },
+    "hs_math_t12_st02": {
+      "id": "hs_math_t12_st02",
+      "title": "Vector notation and representation",
+      "overview": "A vector can be represented geometrically by a directed line segment and algebraically by components. The arrow shows its direction, while its length represents its magnitude. In two dimensions, column notation records the horizontal and vertical components.",
+      "key_concepts": [
+        {
+          "concept": "The Directed Line Segment",
+          "definition": "The arrow.",
+          "details": [
+            "Visually, a vector is an arrow. The length is the magnitude, the arrowhead is the direction.",
+            "If it starts at point A and ends at point B, it is written as $\\overrightarrow{AB}$."
+          ]
+        },
+        {
+          "concept": "Column Vector Notation",
+          "definition": "Stacking the coordinates.",
+          "details": [
+            "Instead of writing $(x, y)$, 2D vectors are stacked vertically: $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$.",
+            "The top number is horizontal movement (Positive = Right, Negative = Left).",
+            "The bottom number is vertical movement (Positive = Up, Negative = Down)."
+          ]
+        },
+        {
+          "concept": "Equal and Opposite",
+          "definition": "The clones and the mirrors.",
+          "details": [
+            "**Equal Vectors:** Have the exact same magnitude and direction. It does NOT matter where they are drawn on the page. If $\\mathbf{a} = \\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$ and $\\mathbf{b} = \\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$, then $\\mathbf{a} = \\mathbf{b}$.",
+            "**Opposite Vectors:** Same length, pointing backward. If $\\mathbf{a} = \\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$, its opposite is $-\\mathbf{a} = \\begin{pmatrix} -3 \\\\ -2 \\end{pmatrix}$."
+          ]
+        },
+        {
+          "concept": "Vectors on a coordinate grid",
+          "definition": "The components describe the change in coordinates from the tail of the arrow to its head.",
+          "details": [
+            "A vector (3, 2) means a change of 3 units horizontally and 2 units vertically, regardless of the point where the arrow begins.",
+            "A negative horizontal component points left; a negative vertical component points down.",
+            "A vector is not the same thing as a point: a point gives a location, while a vector gives a displacement."
+          ]
+        },
+        {
+          "concept": "Parallel vectors",
+          "definition": "Non-zero vectors are parallel when one is a scalar multiple of the other.",
+          "details": [
+            "For example, (2, 3) and (−4, −6) are parallel because the second is −2 times the first.",
+            "A positive multiplier gives the same direction; a negative multiplier gives the opposite direction."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Vector Between Two Points",
+          "equation": "$$ \\overrightarrow{AB} = \\begin{pmatrix} x_B - x_A \\\\ y_B - y_A \\end{pmatrix} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s02",
+          "title": "Column Vector Breakdowns",
+          "type": "svg",
+          "caption": "A diagonal vector is just horizontal and vertical steps packed together.",
+          "alt_text": "Visual showing a coordinate grid. A vector arrow points from (1,1) to (4,3). A dashed line goes right 3 units. A dashed line goes up 2 units. Text labels the column vector as [3 over 2].",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g stroke=\"#e2e8f0\" stroke-width=\"1\"><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"180\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"180\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"180\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"180\"/><line x1=\"250\" y1=\"20\" x2=\"250\" y2=\"180\"/><line x1=\"20\" y1=\"50\" x2=\"280\" y2=\"50\"/><line x1=\"20\" y1=\"100\" x2=\"280\" y2=\"100\"/><line x1=\"20\" y1=\"150\" x2=\"280\" y2=\"150\"/></g><circle cx=\"50\" cy=\"150\" r=\"5\" fill=\"#0f172a\"/><circle cx=\"200\" cy=\"50\" r=\"5\" fill=\"#0f172a\"/><path d=\"M 50 150 L 195 53\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><polygon points=\"195,53 185,55 190,62\" fill=\"#1d4ed8\"/><path d=\"M 50 150 L 200 150\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><path d=\"M 200 150 L 200 60\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/><polygon points=\"200,60 195,65 205,65\" fill=\"#16a34a\"/><text x=\"125\" y=\"170\" font-family=\"monospace\" font-size=\"14\" font-weight=\"bold\" fill=\"#c2410c\">x = +3</text><text x=\"215\" y=\"110\" font-family=\"monospace\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">y = +2</text><rect x=\"330\" y=\"60\" width=\"120\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"10\"/><text x=\"360\" y=\"105\" font-family=\"sans-serif\" font-size=\"18\" font-weight=\"bold\" fill=\"#0f172a\">a = </text><path d=\"M 400 70 L 390 70 L 390 130 L 400 130\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M 420 70 L 430 70 L 430 130 L 420 130\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"410\" y=\"95\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">3</text><text x=\"410\" y=\"120\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">2</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Point A is at $(3, 2)$ and Point B is at $(8, 6)$. Find the column vector $\\overrightarrow{AB}$.",
+          "solution_steps": [
+            "Step 1: The vector from A to B is found by taking the End Coordinates (B) and subtracting the Start Coordinates (A).",
+            "Step 2: X component: $8 - 3 = 5$.",
+            "Step 3: Y component: $6 - 2 = 4$.",
+            "Step 4: Stack them vertically: $\\begin{pmatrix} 5 \\\\ 4 \\end{pmatrix}$."
+          ],
+          "final_answer": "Vector (5, 4)"
+        },
+        {
+          "problem": "A directed segment starts at A(−2, 4) and ends at B(3, 1). Find its column vector and state the horizontal and vertical movement.",
+          "solution_steps": [
+            "Subtract the starting coordinates from the ending coordinates.",
+            "Horizontal component = 3 − (−2) = 5.",
+            "Vertical component = 1 − 4 = −3.",
+            "Write the components as a column vector."
+          ],
+          "final_answer": "AB = (5, −3)ᵀ: 5 units right and 3 units down."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Subtracting Start from End incorrectly.",
+          "correction": "When finding $\\overrightarrow{AB}$, students often instinctively subtract the smaller number from the bigger number. You MUST always subtract $B - A$ strictly. If $A$ is $(5, 5)$ and $B$ is $(2, 2)$, the vector is $(2-5, 2-5) = \\begin{pmatrix} -3 \\\\ -3 \\end{pmatrix}$. The vector must be negative because you are moving backward."
+        },
+        {
+          "mistake": "Treating a position such as (3, 2) as automatically being a vector from any starting point.",
+          "correction": "The ordered pair may represent a point or vector depending on context. A displacement vector is found by subtracting the start coordinates from the end coordinates."
+        }
+      ],
+      "quick_summary": [
+        "A vector is an arrow.",
+        "Column notation stacks X on top of Y.",
+        "Vectors are equal if they share the exact same column numbers, regardless of where they are drawn.",
+        "To find the vector between two points, always subtract the End point minus the Start point."
+      ],
+      "utilities": []
+    },
+    "hs_math_t12_st03": {
+      "id": "hs_math_t12_st03",
+      "title": "Magnitude and direction",
+      "overview": "The magnitude of a two-dimensional vector is its length, found using Pythagoras' theorem. Its direction is the angle it makes with a stated reference axis. The signs of the components determine the quadrant and must be considered when interpreting an inverse-trigonometric result.",
+      "key_concepts": [
+        {
+          "concept": "Magnitude (Length)",
+          "definition": "The hypotenuse.",
+          "details": [
+            "Because a vector's $x$ and $y$ components form a perfect right-angled triangle, the physical length of the vector arrow is simply the hypotenuse.",
+            "Formula: $|\\mathbf{a}| = \\sqrt{x^2 + y^2}$.",
+            "Even if the components are negative, squaring them makes them positive. Magnitude is ALWAYS a positive physical length."
+          ]
+        },
+        {
+          "concept": "Direction (Angle)",
+          "definition": "The inverse tangent.",
+          "details": [
+            "For a non-zero vector, direction is measured from a stated reference axis. In this lesson, the standard direction angle is measured anticlockwise from the positive x-axis.",
+            "The ratio tan θ = y/x gives a reference angle, but the signs of x and y determine the correct quadrant.",
+            "Use atan2(y, x), where available, or calculate the reference angle and adjust it for the quadrant."
+          ]
+        },
+        {
+          "concept": "The Quadrant Trap",
+          "definition": "Calculator limits.",
+          "details": [
+            "If your vector is $\\begin{pmatrix} -3 \\\\ -4 \\end{pmatrix}$ (pointing down and left in Q3), your calculator will do $-4 / -3 = +1.33$ and tell you the angle is in Q1. You must manually check your $x$ and $y$ signs to determine the true quadrant and adjust the angle if necessary."
+          ]
+        },
+        {
+          "concept": "Direction and quadrant",
+          "definition": "The signs of x and y locate a non-zero vector in one of the four coordinate quadrants.",
+          "details": [
+            "Quadrant I: x positive, y positive; Quadrant II: x negative, y positive.",
+            "Quadrant III: x negative, y negative; Quadrant IV: x positive, y negative.",
+            "The reference angle is an acute angle made with the nearest horizontal axis. The standard direction angle is measured anticlockwise from the positive x-axis."
+          ]
+        },
+        {
+          "concept": "Using inverse tangent safely",
+          "definition": "The ratio y/x gives a reference angle, but the quadrant determines the standard direction angle.",
+          "details": [
+            "A calculator's tan⁻¹(y/x) result alone may not identify the correct quadrant.",
+            "Where available, atan2(y, x) returns the direction with the correct quadrant. Otherwise determine the reference angle and adjust it using the signs of x and y.",
+            "The zero vector (0, 0) has magnitude zero and no defined direction."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Vector Magnitude",
+          "equation": "$$ |\\mathbf{a}| = \\sqrt{x^2 + y^2} $$",
+          "variables": {}
+        },
+        {
+          "name": "Vector Direction",
+          "equation": "$$\\theta = \\operatorname{atan2}(y,x)$$",
+          "variables": {
+            "x": "Horizontal component",
+            "y": "Vertical component"
+          }
+        },
+        {
+          "name": "Direction angle from the positive x-axis",
+          "equation": "$$\\theta = \\operatorname{atan2}(y,x)$$",
+          "variables": {
+            "x": "Horizontal component",
+            "y": "Vertical component",
+            "θ": "Direction angle, commonly expressed between 0° and 360° or between −180° and 180° depending on convention"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s03",
+          "title": "Extracting Magnitude and Direction",
+          "type": "svg",
+          "caption": "The column vector provides the legs. You calculate the hypotenuse and the angle.",
+          "alt_text": "Visual showing a right triangle formed by a vector. The horizontal bottom leg is labeled x (Adjacent). The vertical right leg is labeled y (Opposite). The diagonal vector arrow is labeled |a| (Magnitude = Hypotenuse). The bottom left angle is labeled θ.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"100\" y1=\"150\" x2=\"250\" y2=\"150\" stroke=\"#ea580c\" stroke-width=\"4\" stroke-dasharray=\"6,6\"/><line x1=\"250\" y1=\"150\" x2=\"250\" y2=\"50\" stroke=\"#16a34a\" stroke-width=\"4\" stroke-dasharray=\"6,6\"/><path d=\"M 100 150 L 243 55\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"5\"/><polygon points=\"243,55 233,55 240,65\" fill=\"#1d4ed8\"/><path d=\"M 140 150 A 40 40 0 0 0 133 128\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"145\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">θ</text><text x=\"150\" y=\"175\" font-family=\"monospace\" font-size=\"16\" fill=\"#c2410c\" font-weight=\"bold\">x (Adj)</text><text x=\"265\" y=\"105\" font-family=\"monospace\" font-size=\"16\" fill=\"#15803d\" font-weight=\"bold\">y (Opp)</text><text x=\"130\" y=\"90\" font-family=\"monospace\" font-size=\"16\" fill=\"#1e3a8a\" font-weight=\"bold\" transform=\"rotate(-33 130 90)\">|a| (Hyp)</text><rect x=\"330\" y=\"50\" width=\"150\" height=\"100\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"405\" y=\"80\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">|a| = √(x² + y²)</text><text x=\"405\" y=\"120\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">θ = tan⁻¹(y/x)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the magnitude and direction of the vector $\\mathbf{v} = \\begin{pmatrix} -3 \\\\ 4 \\end{pmatrix}$.",
+          "solution_steps": [
+            "Step 1: Magnitude $= \\sqrt{(-3)^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$ units.",
+            "Step 2: Find reference angle using positive numbers: $\\alpha = \\tan^{-1}(4/3) \\approx 53.13^\\circ$.",
+            "Step 3: Check quadrant. X is negative (left), Y is positive (up). The vector is in Q2.",
+            "Step 4: True angle measured from positive x-axis: $180^\\circ - 53.13^\\circ = 126.87^\\circ$."
+          ],
+          "final_answer": "Mag: 5, Dir: 126.87°"
+        },
+        {
+          "problem": "Find the magnitude and standard direction angle of v = (−5, −5)ᵀ.",
+          "solution_steps": [
+            "Magnitude = √[(−5)² + (−5)²] = √50 = 5√2 ≈ 7.07.",
+            "The absolute component values are equal, so the reference angle is tan⁻¹(5/5) = 45°.",
+            "Both components are negative, so the vector lies in Quadrant III.",
+            "The standard anticlockwise angle from the positive x-axis is 180° + 45° = 225°."
+          ],
+          "final_answer": "Magnitude = 5√2 ≈ 7.07; direction = 225°."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating a negative magnitude.",
+          "correction": "A length can never be negative. If your vector is $\\begin{pmatrix} -3 \\\\ -4 \\end{pmatrix}$, squaring $-3$ gives positive $9$. Squaring $-4$ gives positive $16$. The magnitude is always a positive length (e.g., $5$)."
+        },
+        {
+          "mistake": "Using tan⁻¹(y/x) without checking the signs of both components.",
+          "correction": "Always identify the quadrant first, or use atan2(y, x) if your calculator supports it."
+        }
+      ],
+      "quick_summary": [
+        "Magnitude ($|\\mathbf{v}|$) is the Pythagorean hypotenuse of the column components.",
+        "Direction is $\\tan^{-1}(y/x)$.",
+        "Always manually check which quadrant your vector is pointing into so you can fix the calculator's angle."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Evaluate square roots and inverse trigonometric calculations used in vector magnitude and direction.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t12_st04": {
+      "id": "hs_math_t12_st04",
+      "title": "Adding and subtracting vectors",
+      "overview": "Vector addition combines displacements or other directed quantities to produce a resultant vector. Vector subtraction is addition of the opposite vector. Vectors can be added algebraically by components or geometrically using head-to-tail and parallelogram constructions.",
+      "key_concepts": [
+        {
+          "concept": "The Column Addition Rule",
+          "definition": "The easiest math.",
+          "details": [
+            "To add vectors mathematically, just add the tops together, and add the bottoms together.",
+            "$\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} + \\begin{pmatrix} 4 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 2+4 \\\\ 3-1 \\end{pmatrix} = \\begin{pmatrix} 6 \\\\ 2 \\end{pmatrix}$."
+          ]
+        },
+        {
+          "concept": "The Triangle Rule (Head-to-Tail)",
+          "definition": "Visual addition.",
+          "details": [
+            "To add vectors on a graph, draw the first vector. Then, start the second vector exactly where the first one ended (like attaching lego pieces).",
+            "The Resultant vector is the straight line drawn from the very beginning to the very end."
+          ]
+        },
+        {
+          "concept": "Vector Subtraction",
+          "definition": "Adding the opposite.",
+          "details": [
+            "To subtract a vector, you simply flip its direction ($180^\\circ$) and then add it normally.",
+            "$\\mathbf{a} - \\mathbf{b}$ is the exact same operation as $\\mathbf{a} + (-\\mathbf{b})$."
+          ]
+        },
+        {
+          "concept": "Parallelogram rule",
+          "definition": "Two vectors drawn from the same starting point form adjacent sides of a parallelogram; the diagonal from the common start is their sum.",
+          "details": [
+            "Complete the parallelogram using lines parallel to the two vectors.",
+            "The diagonal from the common tail represents the resultant. This construction gives the same result as the triangle (head-to-tail) rule."
+          ]
+        },
+        {
+          "concept": "Properties of vector addition",
+          "definition": "Vector addition is commutative and associative.",
+          "details": [
+            "Commutative: a + b = b + a. Changing the order does not change the resultant.",
+            "Associative: (a + b) + c = a + (b + c). Grouping does not change the resultant.",
+            "The zero vector leaves a vector unchanged: a + 0 = a. The opposite vector cancels it: a + (−a) = 0."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Vector Addition",
+          "equation": "$$ \\begin{pmatrix} a_1 \\\\ a_2 \\end{pmatrix} + \\begin{pmatrix} b_1 \\\\ b_2 \\end{pmatrix} = \\begin{pmatrix} a_1+b_1 \\\\ a_2+b_2 \\end{pmatrix} $$",
+          "variables": {}
+        },
+        {
+          "name": "Vector subtraction by components",
+          "equation": "$$\\begin{pmatrix}a_1\\\\a_2\\end{pmatrix}-\\begin{pmatrix}b_1\\\\b_2\\end{pmatrix}=\\begin{pmatrix}a_1-b_1\\\\a_2-b_2\\end{pmatrix}$$",
+          "variables": {
+            "a₁, a₂": "Components of vector a",
+            "b₁, b₂": "Components of vector b"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s04",
+          "title": "The Triangle Rule (Head-to-Tail)",
+          "type": "svg",
+          "caption": "The Resultant is the shortcut from the start of A to the end of B.",
+          "alt_text": "Visual showing vector A drawn diagonally up and right. Vector B starts at the tip of A and goes right and slightly down. The Resultant vector R is drawn as a dashed line from the start of A straight to the tip of B. Label 'R = A + B'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"100\" cy=\"150\" r=\"5\" fill=\"#0f172a\"/><path d=\"M 100 150 L 213 46\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><polygon points=\"213,46 203,49 210,57\" fill=\"#1d4ed8\"/><text x=\"140\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#1e3a8a\" font-weight=\"bold\">a</text><path d=\"M 215 45 L 345 85\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"4\"/><polygon points=\"345,85 334,81 337,90\" fill=\"#16a34a\"/><text x=\"285\" y=\"55\" font-family=\"monospace\" font-size=\"18\" fill=\"#15803d\" font-weight=\"bold\">b</text><path d=\"M 100 150 L 340 92\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\" stroke-dasharray=\"6,6\"/><polygon points=\"340,92 330,95 333,103\" fill=\"#ea580c\"/><text x=\"220\" y=\"145\" font-family=\"monospace\" font-size=\"18\" fill=\"#c2410c\" font-weight=\"bold\">R = a + b</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $\\mathbf{p} = \\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix}$ and $\\mathbf{q} = \\begin{pmatrix} -2 \\\\ 5 \\end{pmatrix}$. Find the vector $\\mathbf{p} - \\mathbf{q}$.",
+          "solution_steps": [
+            "Step 1: Set up the subtraction vertically: $\\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix} - \\begin{pmatrix} -2 \\\\ 5 \\end{pmatrix}$.",
+            "Step 2: Subtract the top components: $4 - (-2) = 4 + 2 = 6$.",
+            "Step 3: Subtract the bottom components: $-3 - 5 = -8$.",
+            "Step 4: Re-stack into a vector: $\\begin{pmatrix} 6 \\\\ -8 \\end{pmatrix}$."
+          ],
+          "final_answer": "Vector (6, -8)"
+        },
+        {
+          "problem": "A = (−2, 5)ᵀ and B = (4, −1)ᵀ. Find A + B and A − B.",
+          "solution_steps": [
+            "Add corresponding components: A + B = (−2 + 4, 5 + (−1))ᵀ = (2, 4)ᵀ.",
+            "Subtract corresponding components: A − B = (−2 − 4, 5 − (−1))ᵀ = (−6, 6)ᵀ."
+          ],
+          "final_answer": "A + B = (2, 4)ᵀ; A − B = (−6, 6)ᵀ."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding magnitudes directly.",
+          "correction": "If a boat has a 10km/h engine, and a 5km/h crosswind hits it, the final speed is NOT $15$km/h. You cannot add magnitudes directly unless the vectors are pointing in the exact same direction. You must add their components first, then use Pythagoras to find the new true magnitude."
+        },
+        {
+          "mistake": "Joining vectors tail-to-tail and drawing the resultant from the wrong endpoints.",
+          "correction": "For the triangle rule, place the tail of the second vector at the head of the first. Draw the resultant from the first tail to the final head."
+        }
+      ],
+      "quick_summary": [
+        "Adding vectors combines their total effect into a 'Resultant'.",
+        "Mathematically: Just add the top numbers, then add the bottom numbers.",
+        "Visually: Attach them Head-to-Tail, and draw a line from start to finish."
+      ],
+      "utilities": []
+    },
+    "hs_math_t12_st05": {
+      "id": "hs_math_t12_st05",
+      "title": "Scalar multiplication of vectors",
+      "overview": "Multiplying a vector by a scalar multiplies every component by that number. The absolute value of the scalar changes the magnitude, while its sign determines whether the direction is retained or reversed.",
+      "key_concepts": [
+        {
+          "concept": "Positive Scalars",
+          "definition": "Scaling up or down.",
+          "details": [
+            "Multiplying a vector by a positive number changes its magnitude but keeps the arrow pointing in the exact same direction.",
+            "If $\\mathbf{a} = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$, then $2\\mathbf{a} = \\begin{pmatrix} 4 \\\\ 6 \\end{pmatrix}$. The vector is exactly twice as long."
+          ]
+        },
+        {
+          "concept": "Negative Scalars",
+          "definition": "The 180-degree flip.",
+          "details": [
+            "Multiplying by a negative scalar changes the magnitude by the scalar's absolute value and reverses the vector's direction.",
+            "Multiplying by −1 preserves the magnitude and reverses the direction by 180°."
+          ]
+        },
+        {
+          "concept": "Parallel Vectors",
+          "definition": "The scalar test.",
+          "details": [
+            "Two vectors are perfectly parallel if one is just a scalar multiple of the other.",
+            "If $\\mathbf{a} = \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$ and $\\mathbf{b} = \\begin{pmatrix} 3 \\\\ 6 \\end{pmatrix}$, they are parallel because $\\mathbf{b} = 3\\mathbf{a}$."
+          ]
+        },
+        {
+          "concept": "Special scalar values",
+          "definition": "The scalar 1 preserves a vector, −1 reverses it, and 0 produces the zero vector.",
+          "details": [
+            "For any vector a, 1a = a, (−1)a = −a and 0a = 0.",
+            "For a non-zero vector a, multiplying by a non-zero scalar keeps the result parallel to a."
+          ]
+        },
+        {
+          "concept": "Checking parallelism",
+          "definition": "Two non-zero two-dimensional vectors are parallel if their corresponding components have a common scalar multiplier.",
+          "details": [
+            "If b = ka for some real number k, the vectors are parallel.",
+            "For a = (a₁, a₂)ᵀ and b = (b₁, b₂)ᵀ, compare component ratios where division is defined; alternatively check a₁b₂ − a₂b₁ = 0."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Scalar Multiplication (Column)",
+          "equation": "$$ k \\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} kx \\\\ ky \\end{pmatrix} $$",
+          "variables": {
+            "k": "A scalar (ordinary number)"
+          }
+        },
+        {
+          "name": "Magnitude Scaling",
+          "equation": "$$ |k\\mathbf{a}| = |k| \\cdot |\\mathbf{a}| $$",
+          "variables": {}
+        },
+        {
+          "name": "Parallel-vector test in two dimensions",
+          "equation": "$$a_1b_2-a_2b_1=0$$",
+          "variables": {
+            "a₁, a₂": "Components of vector a",
+            "b₁, b₂": "Components of vector b"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s05",
+          "title": "Scaling and Reversing",
+          "type": "svg",
+          "caption": "A scalar stretches the vector. A negative sign flips its direction.",
+          "alt_text": "Visual showing 3 vectors. Top: A short blue vector pointing up/right labeled 'a'. Middle: A blue vector twice as long pointing in the same direction labeled '2a'. Bottom: A red vector twice as long pointing down/left (opposite direction) labeled '-2a'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 100 80 L 145 53\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><polygon points=\"145,53 135,55 140,62\" fill=\"#1d4ed8\"/><text x=\"130\" y=\"45\" font-family=\"monospace\" font-size=\"16\" fill=\"#1e3a8a\" font-weight=\"bold\">a</text><path d=\"M 200 120 L 290 66\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><polygon points=\"290,66 280,68 285,75\" fill=\"#1d4ed8\"/><text x=\"260\" y=\"55\" font-family=\"monospace\" font-size=\"16\" fill=\"#1e3a8a\" font-weight=\"bold\">2a (Doubled)</text><path d=\"M 450 66 L 360 120\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"4\"/><polygon points=\"360,120 370,118 365,111\" fill=\"#ef4444\"/><text x=\"420\" y=\"140\" font-family=\"monospace\" font-size=\"16\" fill=\"#b91c1c\" font-weight=\"bold\">-2a (Flipped)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $\\mathbf{a} = \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix}$ and $\\mathbf{b} = \\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}$, calculate $2\\mathbf{a} + 3\\mathbf{b}$.",
+          "solution_steps": [
+            "Step 1: Scale vector $\\mathbf{a}$ by 2: $2 \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix}$.",
+            "Step 2: Scale vector $\\mathbf{b}$ by 3: $3 \\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix} = \\begin{pmatrix} 9 \\\\ -6 \\end{pmatrix}$.",
+            "Step 3: Add the resulting column vectors: $\\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix} + \\begin{pmatrix} 9 \\\\ -6 \\end{pmatrix}$.",
+            "Step 4: Top: $4 + 9 = 13$. Bottom: $2 + (-6) = -4$."
+          ],
+          "final_answer": "Vector (13, -4)"
+        },
+        {
+          "problem": "Given a = (−3, 4)ᵀ, find −2a and its magnitude.",
+          "solution_steps": [
+            "Multiply each component by −2: −2a = (6, −8)ᵀ.",
+            "The original magnitude is √[(-3)² + 4²] = 5.",
+            "Magnitude after scaling = |−2| × 5 = 10.",
+            "The negative scalar reverses the direction; the magnitude remains non-negative."
+          ],
+          "final_answer": "−2a = (6, −8)ᵀ and |−2a| = 10."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying a negative scalar to the magnitude.",
+          "correction": "If a vector has a magnitude of $5$, and you multiply the vector by $-4$, the new magnitude is NOT $-20$. Length cannot be negative. The new magnitude is $+20$, and the negative sign simply means it is pointing backward."
+        },
+        {
+          "mistake": "Saying that a negative scalar gives a negative vector magnitude.",
+          "correction": "Magnitude is a length and cannot be negative. Use |k| when calculating the new magnitude: |ka| = |k||a|."
+        }
+      ],
+      "quick_summary": [
+        "Multiply the top and bottom components of the column vector by the scalar.",
+        "Negative scalars flip the arrow backwards.",
+        "If vector B is a scalar multiple of vector A, they are perfectly parallel."
+      ],
+      "utilities": []
+    },
+    "hs_math_t12_st07": {
+      "id": "hs_math_t12_st07",
+      "title": "Components of a vector",
+      "overview": "Resolving a vector means expressing it as horizontal and vertical components. When the magnitude and angle are known, trigonometric ratios give the components. The angle convention and signs must be handled consistently.",
+      "key_concepts": [
+        {
+          "concept": "Resolving into X and Y",
+          "definition": "Using Sine and Cosine.",
+          "details": [
+            "If a vector has a magnitude $V$ and points at an angle $\\theta$ from the flat horizontal x-axis:",
+            "**Horizontal Component ($V_x$):** The Adjacent side. $V_x = V \\cos \\theta$.",
+            "**Vertical Component ($V_y$):** The Opposite side. $V_y = V \\sin \\theta$."
+          ]
+        },
+        {
+          "concept": "Reassembling the Vector",
+          "definition": "Going backwards.",
+          "details": [
+            "If you are given the components ($V_x$ and $V_y$), you rebuild the vector exactly like we did in Subtopic 3.",
+            "Magnitude: $V = \\sqrt{V_x^2 + V_y^2}$.",
+            "Direction: $\\theta = \\tan^{-1}(\\frac{V_y}{V_x})$."
+          ]
+        },
+        {
+          "concept": "Adding Forces",
+          "definition": "The master application.",
+          "details": [
+            "You cannot add two diagonal forces together if they are pointing different ways. You must resolve BOTH of them into their $x$ and $y$ components first.",
+            "Once broken down, you simply add all the $x$'s together, and add all the $y$'s together to build the final Resultant column vector."
+          ]
+        },
+        {
+          "concept": "Signs of resolved components",
+          "definition": "Component signs depend on the direction of the vector relative to the positive coordinate axes.",
+          "details": [
+            "A vector in Quadrant II has a negative horizontal component and a positive vertical component.",
+            "A vector in Quadrant III has both components negative; a vector in Quadrant IV has a positive horizontal component and a negative vertical component.",
+            "The formulas Vx = V cos θ and Vy = V sin θ assume θ is measured from the positive x-axis."
+          ]
+        },
+        {
+          "concept": "Resultant from several vectors",
+          "definition": "Resolve each vector, add all horizontal components and add all vertical components.",
+          "details": [
+            "The resultant components are Rx = ΣVx and Ry = ΣVy.",
+            "Then find the resultant magnitude using √(Rx² + Ry²) and its direction using the signs of Rx and Ry together with inverse trigonometry."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Horizontal Component",
+          "equation": "$$ V_x = V \\cos \\theta $$",
+          "variables": {}
+        },
+        {
+          "name": "Vertical Component",
+          "equation": "$$ V_y = V \\sin \\theta $$",
+          "variables": {}
+        },
+        {
+          "name": "Resultant components",
+          "equation": "$$R_x=\\sum V_x,\\qquad R_y=\\sum V_y$$",
+          "variables": {
+            "Rₓ, Rᵧ": "Horizontal and vertical components of the resultant",
+            "Vₓ, Vᵧ": "Components of each vector"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s07",
+          "title": "Resolving a Vector",
+          "type": "svg",
+          "caption": "A diagonal force is just a horizontal and vertical force happening at the same time.",
+          "alt_text": "Visual showing a diagonal red arrow labeled 'Force = V'. A dashed blue horizontal line is labeled 'Vx = V*cos(θ)'. A dashed green vertical line is labeled 'Vy = V*sin(θ)'. The angle between the red and blue line is θ.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 100 150 L 324 38\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"5\"/><polygon points=\"324,38 313,40 320,48\" fill=\"#ef4444\"/><path d=\"M 100 150 L 330 150\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\" stroke-dasharray=\"6,6\"/><polygon points=\"330,150 320,145 320,155\" fill=\"#3b82f6\"/><path d=\"M 330 150 L 330 45\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"4\" stroke-dasharray=\"6,6\"/><polygon points=\"330,45 325,55 335,55\" fill=\"#10b981\"/><path d=\"M 160 150 A 60 60 0 0 0 152 124\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"165\" y=\"140\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\">θ</text><rect x=\"110\" y=\"50\" width=\"100\" height=\"35\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\" transform=\"rotate(-27 110 50)\"/><text x=\"160\" y=\"73\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\" transform=\"rotate(-27 160 73)\">Force V</text><text x=\"215\" y=\"175\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Vx = V cos(θ)</text><text x=\"345\" y=\"105\" font-family=\"monospace\" font-size=\"16\" fill=\"#047857\" font-weight=\"bold\">Vy = V sin(θ)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A force of $20$ N acts at an angle of $30^\\circ$ above the positive horizontal direction. Write this force as a column vector.",
+          "solution_steps": [
+            "Step 1: The magnitude $V = 20$. The angle $\\theta = 30^\\circ$.",
+            "Step 2: Find horizontal component: $V_x = V \\cos \\theta = 20 \\cos 30^\\circ$.",
+            "Step 3: Using special angles, $\\cos 30^\\circ = 0.8660$. So $V_x = 20 \\times 0.8660 = 17.32$ N.",
+            "Step 4: Find vertical component: $V_y = V \\sin \\theta = 20 \\sin 30^\\circ$.",
+            "Step 5: Using special angles, $\\sin 30^\\circ = 0.5$. So $V_y = 20 \\times 0.5 = 10$ N.",
+            "Step 6: Stack into a column vector: $\\begin{pmatrix} 17.32 \\\\ 10 \\end{pmatrix}$."
+          ],
+          "final_answer": "Vector (17.32, 10)"
+        },
+        {
+          "problem": "A vector has magnitude 12 units and direction 150° measured anticlockwise from the positive x-axis. Find its components.",
+          "solution_steps": [
+            "Use Vx = V cos θ and Vy = V sin θ.",
+            "Vx = 12 cos 150° = 12(−√3/2) = −6√3 ≈ −10.39.",
+            "Vy = 12 sin 150° = 12(1/2) = 6.",
+            "The signs are consistent with Quadrant II: left and up."
+          ],
+          "final_answer": "V ≈ (−10.39, 6)ᵀ units."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Mixing up Sine and Cosine.",
+          "correction": "X uses Cosine. Y uses Sine. This is ONLY true if the angle $\\theta$ is touching the horizontal x-axis. If a problem gives you an angle against the vertical y-axis, you must subtract it from $90^\\circ$ to find the x-axis angle before plugging it into these formulas."
+        },
+        {
+          "mistake": "Using positive values for both components even when the vector points left or down.",
+          "correction": "Use the actual signs of cosine and sine in the vector's quadrant. Components are directed quantities and may be negative."
+        }
+      ],
+      "quick_summary": [
+        "Resolving means breaking a diagonal vector into X and Y.",
+        "$X = V \\cos \\theta$.",
+        "$Y = V \\sin \\theta$.",
+        "To add complex forces together, resolve them into columns first, then add the columns."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Evaluate sine, cosine and inverse trigonometric calculations for resolving vectors.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t12_st06": {
+      "id": "hs_math_t12_st06",
+      "title": "Position vectors",
+      "overview": "A position vector locates a point relative to the origin. If P has coordinates (x, y), its position vector is (x, y)ᵀ. Subtracting position vectors gives the displacement from one point to another.",
+      "key_concepts": [
+        {
+          "concept": "The Origin Anchor",
+          "definition": "Coordinates to Columns.",
+          "details": [
+            "If a point $P$ is at coordinate $(4, 3)$, its Position Vector is the arrow drawn from the origin $(0,0)$ to $P$, written as $\\overrightarrow{OP} = \\begin{pmatrix} 4 \\\\ 3 \\end{pmatrix}$.",
+            "It is standard to use lowercase bold letters for position vectors, so $\\overrightarrow{OA} = \\mathbf{a}$ and $\\overrightarrow{OB} = \\mathbf{b}$."
+          ]
+        },
+        {
+          "concept": "Vector Between Two Points",
+          "definition": "The subtraction rule.",
+          "details": [
+            "To find the vector that travels from point $A$ to point $B$ ($\\overrightarrow{AB}$), you subtract their position vectors: End minus Start.",
+            "$\\overrightarrow{AB} = \\mathbf{b} - \\mathbf{a}$."
+          ]
+        },
+        {
+          "concept": "Recovering a point from a displacement",
+          "definition": "The endpoint position vector equals the starting position vector plus the displacement.",
+          "details": [
+            "If AB = d and the position vector of A is a, then the position vector of B is b = a + d.",
+            "This is the reverse of the rule AB = b − a."
+          ]
+        },
+        {
+          "concept": "Position vectors and coordinate axes",
+          "definition": "The components of a position vector are the coordinates of its endpoint when its tail is at the origin.",
+          "details": [
+            "The position vector of the origin is the zero vector.",
+            "A point and its position vector may have the same numerical coordinates, but they represent different mathematical ideas: location and directed displacement from the origin."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Displacement Vector",
+          "equation": "$$ \\overrightarrow{AB} = \\mathbf{b} - \\mathbf{a} $$",
+          "variables": {
+            "a, b": "Position vectors of points A and B"
+          }
+        },
+        {
+          "name": "Endpoint position vector",
+          "equation": "$$\\mathbf{b}=\\mathbf{a}+\\overrightarrow{AB}$$",
+          "variables": {
+            "a": "Position vector of A",
+            "b": "Position vector of B"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s06",
+          "title": "Position vs Displacement",
+          "type": "svg",
+          "caption": "The displacement vector AB forms a triangle with the two position vectors.",
+          "alt_text": "Visual showing the Origin (O) at bottom left. Arrow 'a' goes from O to point A. Arrow 'b' goes from O to point B. A dashed arrow goes from A to B labeled 'AB = b - a'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"50\" cy=\"150\" r=\"5\" fill=\"#0f172a\"/><text x=\"40\" y=\"170\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">O (0,0)</text><circle cx=\"200\" cy=\"40\" r=\"5\" fill=\"#0f172a\"/><text x=\"190\" y=\"30\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">A</text><circle cx=\"400\" cy=\"90\" r=\"5\" fill=\"#0f172a\"/><text x=\"410\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\">B</text><path d=\"M 50 150 L 194 44\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><polygon points=\"194,44 183,46 190,55\" fill=\"#3b82f6\"/><text x=\"100\" y=\"90\" font-family=\"monospace\" font-size=\"18\" fill=\"#1e3a8a\" font-weight=\"bold\">a</text><path d=\"M 50 150 L 392 92\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"4\"/><polygon points=\"392,92 381,90 385,99\" fill=\"#10b981\"/><text x=\"240\" y=\"145\" font-family=\"monospace\" font-size=\"18\" fill=\"#047857\" font-weight=\"bold\">b</text><path d=\"M 200 40 L 391 88\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\" stroke-dasharray=\"6,6\"/><polygon points=\"391,88 380,85 383,95\" fill=\"#ea580c\"/><rect x=\"260\" y=\"40\" width=\"120\" height=\"35\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"320\" y=\"63\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">AB = b - a</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "The position vector of A is $\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$. The displacement from A to B is $\\overrightarrow{AB} = \\begin{pmatrix} 4 \\\\ -1 \\end{pmatrix}$. Find the position vector of B.",
+          "solution_steps": [
+            "Step 1: We know the relationship: $\\overrightarrow{AB} = \\mathbf{b} - \\mathbf{a}$.",
+            "Step 2: Rearrange to solve for $\\mathbf{b}$: $\\mathbf{b} = \\mathbf{a} + \\overrightarrow{AB}$.",
+            "Step 3: Substitute the columns: $\\mathbf{b} = \\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix} + \\begin{pmatrix} 4 \\\\ -1 \\end{pmatrix}$.",
+            "Step 4: Add components: Top $= 3+4 = 7$. Bottom $= 2 + (-1) = 1$."
+          ],
+          "final_answer": "Vector (7, 1)"
+        },
+        {
+          "problem": "The position vectors of A and B are a = (−1, 3)ᵀ and b = (5, −2)ᵀ. Find AB and BA.",
+          "solution_steps": [
+            "AB = b − a = (5 − (−1), −2 − 3)ᵀ = (6, −5)ᵀ.",
+            "BA = a − b = (−1 − 5, 3 − (−2))ᵀ = (−6, 5)ᵀ.",
+            "The two vectors are opposites: BA = −AB."
+          ],
+          "final_answer": "AB = (6, −5)ᵀ; BA = (−6, 5)ᵀ."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Subtracting in the wrong order.",
+          "correction": "When finding the vector $\\overrightarrow{AB}$, the formula is ALWAYS $\\mathbf{b} - \\mathbf{a}$ (Destination minus Origin). If you do $\\mathbf{a} - \\mathbf{b}$, you are finding the vector for the return trip ($\\overrightarrow{BA}$)."
+        },
+        {
+          "mistake": "Confusing the position vector of B with the displacement AB.",
+          "correction": "The position vector b starts at the origin. The displacement AB starts at A and ends at B, and is calculated as b − a."
+        }
+      ],
+      "quick_summary": [
+        "A position vector joins the origin to a point.",
+        "For points A and B with position vectors a and b, AB = b − a.",
+        "The displacement from A to B is the reverse of BA."
+      ],
+      "utilities": []
+    },
+    "hs_math_t12_st08": {
+      "id": "hs_math_t12_st08",
+      "title": "Vector geometry",
+      "overview": "Vector geometry uses position and displacement vectors to describe relationships between points and line segments. Scalar multiples identify parallel directions, while vector equations can establish collinearity and divide a line segment in a given ratio.",
+      "key_concepts": [
+        {
+          "concept": "Proving Collinear Points",
+          "definition": "The straight line test.",
+          "details": [
+            "Three points ($A$, $B$, and $C$) are 'collinear' if they sit on the exact same straight line.",
+            "To prove this, calculate the vector $\\overrightarrow{AB}$ and the vector $\\overrightarrow{AC}$. If one vector is just a perfect scalar multiple of the other (e.g. $\\overrightarrow{AC} = 2\\overrightarrow{AB}$), they are parallel. Since they share point A, they must be on the same straight line."
+          ]
+        },
+        {
+          "concept": "The Section Formula",
+          "definition": "Splitting the line.",
+          "details": [
+            "If you have a line segment $AB$, and a point $P$ splits that line in a ratio of $m:n$ (e.g. $1:2$), you can find the position vector of $P$ using the section formula.",
+            "$\\mathbf{p} = \\frac{n\\mathbf{a} + m\\mathbf{b}}{m+n}$. (Notice how $n$ multiplies $A$, and $m$ multiplies $B$. They cross over)."
+          ]
+        },
+        {
+          "concept": "Parallelogram Proofs",
+          "definition": "Matching the sides.",
+          "details": [
+            "To prove a shape $ABCD$ is a parallelogram, you only need to calculate two vectors: $\\overrightarrow{AB}$ and $\\overrightarrow{DC}$.",
+            "If $\\overrightarrow{AB} = \\overrightarrow{DC}$ (meaning they have the exact same column numbers), the sides are perfectly parallel and identical in length, proving the shape is a parallelogram."
+          ]
+        },
+        {
+          "concept": "Internal division of a line segment",
+          "definition": "A point P divides AB internally in the ratio m:n when AP:PB = m:n.",
+          "details": [
+            "If the position vectors of A and B are a and b, then p = (n a + m b)/(m+n).",
+            "The multipliers cross over: n multiplies the position vector of A, and m multiplies the position vector of B.",
+            "The formula gives a weighted average, so an internal division point lies between A and B when m and n are positive."
+          ]
+        },
+        {
+          "concept": "Using vectors to establish a parallelogram",
+          "definition": "Opposite sides of a parallelogram are equal and parallel as directed vectors when taken in corresponding directions.",
+          "details": [
+            "For quadrilateral ABCD in order, AB = DC is one valid vector test for a parallelogram.",
+            "Another equivalent test is AD = BC. Check the direction of each vector before comparing components."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "The Section Formula",
+          "equation": "$$ \\mathbf{p} = \\frac{n\\mathbf{a} + m\\mathbf{b}}{m+n} $$",
+          "variables": {
+            "m, n": "The ratio parts (m:n)"
+          }
+        },
+        {
+          "name": "Collinearity test using displacement vectors",
+          "equation": "$$\\overrightarrow{AC}=k\\overrightarrow{AB}$$",
+          "variables": {
+            "k": "A real scalar; if A, B and C are collinear, such a scalar exists"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s08",
+          "title": "The Section Formula Cross-Over",
+          "type": "svg",
+          "caption": "When splitting a line in a ratio, the multipliers cross over to the opposite position vectors.",
+          "alt_text": "Visual showing origin O with position vectors a and b pointing to points A and B. Line segment AB connects them. Point P is on the line, splitting it in ratio m:n. Arched arrows show 'n' multiplying vector 'a', and 'm' multiplying vector 'b'.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"250\" cy=\"200\" r=\"5\" fill=\"#0f172a\"/><text x=\"250\" y=\"220\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"bold\">Origin (O)</text><circle cx=\"100\" cy=\"50\" r=\"5\" fill=\"#0f172a\"/><text x=\"80\" y=\"55\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\">A</text><circle cx=\"400\" cy=\"50\" r=\"5\" fill=\"#0f172a\"/><text x=\"415\" y=\"55\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\">B</text><line x1=\"100\" y1=\"50\" x2=\"400\" y2=\"50\" stroke=\"#64748b\" stroke-width=\"4\"/><circle cx=\"200\" cy=\"50\" r=\"5\" fill=\"#ea580c\"/><text x=\"195\" y=\"35\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#c2410c\" font-weight=\"bold\">P</text><text x=\"150\" y=\"40\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\" font-weight=\"bold\">m</text><text x=\"300\" y=\"40\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\" font-weight=\"bold\">n</text><path d=\"M 250 200 L 100 50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><text x=\"150\" y=\"140\" font-family=\"monospace\" font-size=\"18\" fill=\"#1d4ed8\" font-weight=\"bold\">a</text><path d=\"M 250 200 L 400 50\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\"/><text x=\"340\" y=\"140\" font-family=\"monospace\" font-size=\"18\" fill=\"#047857\" font-weight=\"bold\">b</text><path d=\"M 290 60 Q 220 100 160 120\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><polygon points=\"160,120 170,115 165,110\" fill=\"#0f172a\"/><path d=\"M 160 60 Q 230 100 330 120\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><polygon points=\"330,120 320,115 325,110\" fill=\"#0f172a\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $A=(1,2)$, $B=(3,6)$, and $C=(5,10)$. Prove they are collinear.",
+          "solution_steps": [
+            "Step 1: Find vector $\\overrightarrow{AB}$: $\\begin{pmatrix} 3-1 \\\\ 6-2 \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 4 \\end{pmatrix}$.",
+            "Step 2: Find vector $\\overrightarrow{AC}$: $\\begin{pmatrix} 5-1 \\\\ 10-2 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ 8 \\end{pmatrix}$.",
+            "Step 3: Compare them. We can see that $\\begin{pmatrix} 4 \\\\ 8 \\end{pmatrix} = 2 \\begin{pmatrix} 2 \\\\ 4 \\end{pmatrix}$. Therefore, $\\overrightarrow{AC} = 2\\overrightarrow{AB}$.",
+            "Step 4: Because $\\overrightarrow{AC}$ is a scalar multiple of $\\overrightarrow{AB}$, they are parallel. Because they share point A, they must be on the exact same straight line."
+          ],
+          "final_answer": "Collinear proven (AC = 2AB)"
+        },
+        {
+          "problem": "The position vectors of A and B are $\\mathbf{a} = \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix}$ and $\\mathbf{b} = \\begin{pmatrix} 8 \\\\ 7 \\end{pmatrix}$. Point P divides AB internally in the ratio $1:2$. Find the position vector of P.",
+          "solution_steps": [
+            "Step 1: The ratio is $m:n = 1:2$.",
+            "Step 2: Use the section formula: $\\mathbf{p} = \\frac{n\\mathbf{a} + m\\mathbf{b}}{m+n}$.",
+            "Step 3: Substitute: $\\mathbf{p} = \\frac{2\\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix} + 1\\begin{pmatrix} 8 \\\\ 7 \\end{pmatrix}}{1+2}$.",
+            "Step 4: Expand the top: $\\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix} + \\begin{pmatrix} 8 \\\\ 7 \\end{pmatrix} = \\begin{pmatrix} 12 \\\\ 9 \\end{pmatrix}$.",
+            "Step 5: Divide by the bottom ($3$): $\\frac{1}{3} \\begin{pmatrix} 12 \\\\ 9 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ 3 \\end{pmatrix}$."
+          ],
+          "final_answer": "Vector (4, 3)"
+        },
+        {
+          "problem": "A has position vector a = (2, −1)ᵀ and B has position vector b = (8, 5)ᵀ. Point P divides AB internally in the ratio 2:1. Find p.",
+          "solution_steps": [
+            "Here m:n = 2:1, so p = (n a + m b)/(m+n).",
+            "Substitute: p = [1(2, −1)ᵀ + 2(8, 5)ᵀ]/3.",
+            "The numerator is (2, −1)ᵀ + (16, 10)ᵀ = (18, 9)ᵀ.",
+            "Divide each component by 3 to obtain p = (6, 3)ᵀ."
+          ],
+          "final_answer": "p = (6, 3)ᵀ."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reversing the Section Formula multipliers.",
+          "correction": "If the ratio is $m:n$, you multiply $\\mathbf{b}$ by $m$, and $\\mathbf{a}$ by $n$. Do not multiply $\\mathbf{a}$ by $m$. The values cross over to the opposite side."
+        },
+        {
+          "mistake": "Using the ratio multipliers on the same-side position vectors in the section formula.",
+          "correction": "For AP:PB = m:n, use p = (n a + m b)/(m+n): the ratio numbers cross over."
+        },
+        {
+          "mistake": "Comparing AB with CD instead of DC when testing a parallelogram.",
+          "correction": "For quadrilateral ABCD in order, compare AB with DC (same direction), or compare AD with BC."
+        }
+      ],
+      "quick_summary": [
+        "If vector B is a scalar multiple of vector A, they are parallel.",
+        "If parallel vectors share a point, they are collinear (a straight line).",
+        "If $\\overrightarrow{AB} = \\overrightarrow{DC}$, the shape ABCD is a parallelogram."
+      ],
+      "utilities": []
+    },
+    "hs_math_t12_st09": {
+      "id": "hs_math_t12_st09",
+      "title": "Dot product — introduction",
+      "overview": "The dot product combines two vectors to produce a scalar. In two dimensions it can be calculated from corresponding components or from the magnitudes and included angle. It provides a useful test for perpendicularity and an introductory way to determine the angle between non-zero vectors.",
+      "key_concepts": [
+        {
+          "concept": "The Component Method",
+          "definition": "Multiply and add.",
+          "details": [
+            "To find the dot product $\\mathbf{a} \\cdot \\mathbf{b}$, multiply their horizontal (x) components, multiply their vertical (y) components, and add the two results together.",
+            "$\\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2$."
+          ]
+        },
+        {
+          "concept": "The Angle Method",
+          "definition": "Using trigonometry.",
+          "details": [
+            "The dot product is fundamentally tied to the angle ($\\theta$) between the two vectors: $\\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}||\\mathbf{b}|\\cos\\theta$.",
+            "This can be algebraically rearranged to find the exact angle between any two vectors: $\\theta = \\cos^{-1}\\left(\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{|\\mathbf{a}||\\mathbf{b}|}\\right)$."
+          ]
+        },
+        {
+          "concept": "The Perpendicular Test",
+          "definition": "The zero check.",
+          "details": [
+            "Because $\\cos(90^\\circ) = 0$, the dot product of two perfectly perpendicular (orthogonal) vectors will ALWAYS be exactly $0$.",
+            "If $\\mathbf{a} \\cdot \\mathbf{b} > 0$, the angle is acute. If $\\mathbf{a} \\cdot \\mathbf{b} < 0$, the angle is obtuse."
+          ]
+        },
+        {
+          "concept": "Dot product and orientation",
+          "definition": "The dot product depends on the angle between two non-zero vectors.",
+          "details": [
+            "For an acute included angle the dot product is positive; for a right angle it is zero; for an obtuse angle it is negative.",
+            "For vectors pointing in the same direction, the dot product is the product of their magnitudes. For opposite directions, it is the negative of that product."
+          ]
+        },
+        {
+          "concept": "Conditions for using the angle formula",
+          "definition": "The angle formula requires two non-zero vectors.",
+          "details": [
+            "The expression cos θ = (a · b)/(|a||b|) is undefined if either vector is the zero vector because its magnitude is zero.",
+            "The angle θ is the smaller included angle between 0° and 180°."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Dot Product (Components)",
+          "equation": "$$ \\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2 $$",
+          "variables": {}
+        },
+        {
+          "name": "Dot Product (Angle)",
+          "equation": "$$ \\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}| |\\mathbf{b}| \\cos \\theta $$",
+          "variables": {}
+        },
+        {
+          "name": "Perpendicularity condition",
+          "equation": "$$\\mathbf{a}\\cdot\\mathbf{b}=0$$",
+          "variables": {
+            "a, b": "Non-zero perpendicular vectors"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s09",
+          "title": "Dot Product Angle States",
+          "type": "svg",
+          "caption": "The sign of the dot product instantly reveals the angle classification.",
+          "alt_text": "Visual showing three pairs of vectors. Left: Acute angle (< 90), labeled 'a · b > 0 (Positive)'. Middle: Right angle (= 90), labeled 'a · b = 0 (Zero)'. Right: Obtuse angle (> 90), labeled 'a · b < 0 (Negative)'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(50, 80)\"><path d=\"M 0 50 L 80 50\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><polygon points=\"80,50 70,45 70,55\" fill=\"#1d4ed8\"/><path d=\"M 0 50 L 50 -10\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"4\"/><polygon points=\"50,-10 40,-5 47,2\" fill=\"#15803d\"/><path d=\"M 20 50 A 20 20 0 0 0 17 30\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"20\" y=\"80\" font-family=\"monospace\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">a · b > 0</text><text x=\"25\" y=\"100\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\">(Acute)</text></g><g transform=\"translate(220, 80)\"><path d=\"M 0 50 L 80 50\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><polygon points=\"80,50 70,45 70,55\" fill=\"#1d4ed8\"/><path d=\"M 0 50 L 0 -20\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"4\"/><polygon points=\"0,-20 -5,-10 5,-10\" fill=\"#15803d\"/><polygon points=\"0,30 20,30 20,50 0,50\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"20\" y=\"80\" font-family=\"monospace\" font-size=\"14\" fill=\"#14532d\" font-weight=\"bold\">a · b = 0</text><text x=\"15\" y=\"100\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\">(Orthogonal)</text></g><g transform=\"translate(390, 80)\"><path d=\"M 0 50 L 80 50\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><polygon points=\"80,50 70,45 70,55\" fill=\"#1d4ed8\"/><path d=\"M 0 50 L -40 -10\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"4\"/><polygon points=\"-40,-10 -30,-5 -38,2\" fill=\"#15803d\"/><path d=\"M 20 50 A 20 20 0 0 1 -10 35\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"5\" y=\"80\" font-family=\"monospace\" font-size=\"14\" fill=\"#b91c1c\" font-weight=\"bold\">a · b &lt; 0</text><text x=\"10\" y=\"100\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#475569\">(Obtuse)</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the angle between $\\mathbf{p} = \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$ and $\\mathbf{q} = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$.",
+          "solution_steps": [
+            "Step 1: Calculate the dot product: $\\mathbf{p} \\cdot \\mathbf{q} = (1 \\times 1) + (0 \\times 1) = 1 + 0 = 1$.",
+            "Step 2: Calculate magnitude of $\\mathbf{p}$: $|\\mathbf{p}| = \\sqrt{1^2 + 0^2} = 1$.",
+            "Step 3: Calculate magnitude of $\\mathbf{q}$: $|\\mathbf{q}| = \\sqrt{1^2 + 1^2} = \\sqrt{2}$.",
+            "Step 4: Substitute into the rearranged angle formula: $\\cos \\theta = \\frac{\\mathbf{p} \\cdot \\mathbf{q}}{|\\mathbf{p}||\\mathbf{q}|} = \\frac{1}{1 \\times \\sqrt{2}} = \\frac{1}{\\sqrt{2}}$.",
+            "Step 5: $\\theta = \\cos^{-1}(\\frac{1}{\\sqrt{2}}) = 45^\\circ$."
+          ],
+          "final_answer": "45°"
+        },
+        {
+          "problem": "Determine whether a = (2, 3)ᵀ and b = (3, −2)ᵀ are perpendicular.",
+          "solution_steps": [
+            "Calculate the dot product: a · b = (2 × 3) + (3 × −2).",
+            "This gives 6 − 6 = 0.",
+            "Both vectors are non-zero, so a zero dot product proves that they are perpendicular."
+          ],
+          "final_answer": "The vectors are perpendicular."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating the dot product as a vector.",
+          "correction": "The answer to a dot product is ALWAYS a pure scalar number (e.g., $23$, $-8$, $0$). You cannot output a column vector."
+        },
+        {
+          "mistake": "Assuming that a zero dot product means one of the vectors must be zero.",
+          "correction": "Two non-zero vectors have zero dot product exactly when they are perpendicular. The zero vector also has zero dot product with every vector, but it has no defined direction."
+        }
+      ],
+      "quick_summary": [
+        "Multiply X by X, multiply Y by Y, and add the two numbers together.",
+        "To find the angle between any two vectors, use $\\cos \\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{|\\mathbf{a}||\\mathbf{b}|}$.",
+        "If the dot product is exactly $0$, the vectors meet at a perfect $90^\\circ$ angle."
+      ],
+      "utilities": [
+        {
+          "title": "Scientific Calculator",
+          "description": "Evaluate trigonometric and arithmetic calculations when finding the angle between vectors.",
+          "url": "https://onlinetoolpad.com/math/SCIENTIFIC_CALCULATOR",
+          "icon": "calculator"
+        }
+      ]
+    },
+    "hs_math_t12_st10": {
+      "id": "hs_math_t12_st10",
+      "title": "Translation, reflection and rotation",
+      "overview": "A geometric transformation maps each point of a figure to an image point. Translations, reflections and rotations are rigid transformations: they preserve lengths and angles. Coordinate rules make it possible to transform vertices accurately and then reconstruct the image.",
+      "key_concepts": [
+        {
+          "concept": "Translation (Sliding)",
+          "definition": "Using vectors.",
+          "details": [
+            "A translation moves every vertex of a shape by the exact same distance and direction.",
+            "It is applied using a column vector $\\begin{pmatrix} a \\\\ b \\end{pmatrix}$. To translate a point $(x, y)$, just add the vector components: $(x+a, y+b)$."
+          ]
+        },
+        {
+          "concept": "Reflection (Flipping)",
+          "definition": "The mirror line.",
+          "details": [
+            "Creates a mirror image across a specific line.",
+            "**Over x-axis:** y-coordinate changes sign. $(x, y) \\rightarrow (x, -y)$.",
+            "**Over y-axis:** x-coordinate changes sign. $(x, y) \\rightarrow (-x, y)$.",
+            "**Over $y = x$:** X and Y swap places. $(x, y) \\rightarrow (y, x)$."
+          ]
+        },
+        {
+          "concept": "Rotation (Spinning)",
+          "definition": "Circling the origin.",
+          "details": [
+            "Standard rotations in this lesson are measured about the origin (0,0), unless another centre is specified.",
+            "90° anticlockwise: (x,y) → (−y,x).",
+            "180°: (x,y) → (−x,−y). This is a half-turn about the origin (also called a point reflection in the origin), not a reflection in a line.",
+            "90° clockwise: (x,y) → (y,−x)."
+          ]
+        },
+        {
+          "concept": "Translation by a vector",
+          "definition": "Every point is moved by the same displacement vector.",
+          "details": [
+            "A translation by (a, b)ᵀ maps (x, y) to (x+a, y+b).",
+            "The orientation, side lengths and angles of the figure are unchanged."
+          ]
+        },
+        {
+          "concept": "Reflections in common lines",
+          "definition": "A reflection produces a mirror image across a line.",
+          "details": [
+            "In the x-axis: (x, y) → (x, −y). In the y-axis: (x, y) → (−x, y).",
+            "In y = x: (x, y) → (y, x). In y = −x: (x, y) → (−y, −x).",
+            "The mirror line is the perpendicular bisector of the segment joining each point to its image."
+          ]
+        },
+        {
+          "concept": "Rotations about a centre",
+          "definition": "A rotation turns a point through a specified angle around a fixed centre.",
+          "details": [
+            "For rotations about the origin: 90° anticlockwise maps (x, y) to (−y, x); 180° maps it to (−x, −y); 90° clockwise maps it to (y, −x).",
+            "For a rotation about a point C, first translate C to the origin, rotate, and then translate back.",
+            "A rotation preserves distances from the centre and the lengths and angles of the figure."
+          ]
+        },
+        {
+          "concept": "Compositions of transformations",
+          "definition": "A composition applies two or more transformations in a stated order.",
+          "details": [
+            "Apply the first transformation to the original point, then apply the next transformation to the result.",
+            "Changing the order can change the final image. Record the order clearly and use the image coordinates from one step as the input to the next."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Reflection in y = x",
+          "equation": "$$(x,y)\\mapsto(y,x)$$",
+          "variables": {}
+        },
+        {
+          "name": "Reflection in y = −x",
+          "equation": "$$(x,y)\\mapsto(-y,-x)$$",
+          "variables": {}
+        },
+        {
+          "name": "Rotation about a centre C",
+          "equation": "$$P'=C+R(P-C)$$",
+          "variables": {
+            "P": "Original point vector",
+            "C": "Centre of rotation",
+            "R": "Rotation rule or rotation matrix"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s10",
+          "title": "Coordinate Transformation Rules",
+          "type": "svg",
+          "caption": "The algebraic shortcuts for spinning and flipping points around the origin.",
+          "alt_text": "Visual showing a grid with a point P(x,y) in Q1. Arrow pointing left to Q2: 'Reflect Y-axis: (-x, y)'. Arrow pointing down to Q4: 'Reflect X-axis: (x, -y)'. Arrow curving 90 deg counter-clockwise: 'Rotate 90 CCW: (-y, x)'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><line x1=\"250\" y1=\"20\" x2=\"250\" y2=\"180\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"50\" y1=\"100\" x2=\"450\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"2\"/><circle cx=\"350\" cy=\"50\" r=\"6\" fill=\"#0f172a\"/><text x=\"365\" y=\"55\" font-family=\"monospace\" font-size=\"14\" font-weight=\"bold\">(x, y)</text><path d=\"M 330 50 L 170 50\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><polygon points=\"170,50 180,45 180,55\" fill=\"#1d4ed8\"/><circle cx=\"150\" cy=\"50\" r=\"6\" fill=\"#1d4ed8\"/><text x=\"50\" y=\"45\" font-family=\"monospace\" font-size=\"12\" fill=\"#1e3a8a\" font-weight=\"bold\">Reflect Y: (-x, y)</text><path d=\"M 350 70 L 350 130\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><polygon points=\"350,130 345,120 355,120\" fill=\"#16a34a\"/><circle cx=\"350\" cy=\"150\" r=\"6\" fill=\"#16a34a\"/><text x=\"365\" y=\"165\" font-family=\"monospace\" font-size=\"12\" fill=\"#14532d\" font-weight=\"bold\">Reflect X: (x, -y)</text><path d=\"M 330 35 Q 250 -10 170 20\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><polygon points=\"170,20 180,15 175,25\" fill=\"#ea580c\"/><circle cx=\"150\" cy=\"30\" r=\"6\" fill=\"#ea580c\"/><text x=\"10\" y=\"25\" font-family=\"monospace\" font-size=\"12\" fill=\"#c2410c\" font-weight=\"bold\">Rot 90° CCW: (-y, x)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A point $P(2, 3)$ is translated by the vector $\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$, and then reflected across the x-axis. Find the final coordinates of $P'$.",
+          "solution_steps": [
+            "Step 1: Perform the translation first. Add the vector to the coordinates: $(2+1, 3+2) = (3, 5)$.",
+            "Step 2: Perform the reflection on the NEW coordinates $(3, 5)$.",
+            "Step 3: Reflecting across the x-axis means the y-coordinate changes sign.",
+            "Step 4: $(3, 5) \\rightarrow (3, -5)$."
+          ],
+          "final_answer": "(3, -5)"
+        },
+        {
+          "problem": "Point P(4, −2) is reflected in the line y = x and then translated by (−1, 3)ᵀ. Find its final image.",
+          "solution_steps": [
+            "Reflection in y = x swaps the coordinates: (4, −2) → (−2, 4).",
+            "Apply the translation: (−2 − 1, 4 + 3) = (−3, 7)."
+          ],
+          "final_answer": "The final image is (−3, 7)."
+        },
+        {
+          "problem": "Rotate P(5, 2) by 90° anticlockwise about C(1, 1). Find the image point.",
+          "solution_steps": [
+            "Translate relative to the centre: P − C = (5−1, 2−1) = (4, 1).",
+            "Rotate 90° anticlockwise about the origin: (4, 1) → (−1, 4).",
+            "Translate back by adding C: (−1+1, 4+1) = (0, 5)."
+          ],
+          "final_answer": "P′ = (0, 5)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Changing the wrong coordinate in reflections.",
+          "correction": "When you reflect over the x-axis (the horizontal line), you are jumping UP or DOWN vertically. Therefore, the Y-coordinate changes, while the X-coordinate stays perfectly still."
+        },
+        {
+          "mistake": "Applying a rotation about the origin when the question specifies a different centre.",
+          "correction": "Subtract the centre coordinates first, rotate the relative vector, and then add the centre coordinates back."
+        },
+        {
+          "mistake": "Reversing the order in a composition.",
+          "correction": "Carry out the transformations in the order stated in the question. The output coordinates from one step become the input coordinates for the next."
+        }
+      ],
+      "quick_summary": [
+        "A translation adds the same vector to every point.",
+        "A reflection creates a mirror image across a line.",
+        "A rotation turns every point around a fixed centre.",
+        "Rigid transformations preserve lengths and angles.",
+        "For compositions, apply transformations in the stated order."
+      ],
+      "utilities": []
+    },
+    "hs_math_t12_st11": {
+      "id": "hs_math_t12_st11",
+      "title": "Enlargement and scale factors",
+      "overview": "An enlargement changes the size of a figure while preserving its shape and corresponding angles. Its centre determines the direction in which image points lie, and its scale factor determines how far each image point is from the centre compared with the original point.",
+      "key_concepts": [
+        {
+          "concept": "The Linear Scale Factor ($k$)",
+          "definition": "The multiplier.",
+          "details": [
+            "For corresponding lengths, k = image length / original length when a positive scale factor is used.",
+            "If |k| > 1, the image is larger; if 0 < |k| < 1, it is smaller.",
+            "A negative k places the image on the opposite side of the centre as well as scaling its distance from the centre."
+          ]
+        },
+        {
+          "concept": "Area scaling",
+          "definition": "The area of a two-dimensional figure changes by the square of the absolute linear scale factor.",
+          "details": [
+            "If the linear scale factor is k, the image area is the original area multiplied by k².",
+            "For example, doubling every side length multiplies the area by 2² = 4.",
+            "This topic concerns two-dimensional transformations; volume scaling is outside its approved scope."
+          ]
+        },
+        {
+          "concept": "The Center of Enlargement",
+          "definition": "The expansion point.",
+          "details": [
+            "Enlargement radiates outward from a specific coordinate point.",
+            "If the center of enlargement is the origin $(0,0)$, you simply multiply the $(x, y)$ coordinates of the shape by the scale factor $k$: $(kx, ky)$."
+          ]
+        },
+        {
+          "concept": "Enlargement from a centre other than the origin",
+          "definition": "The image point lies on the line through the centre and the original point.",
+          "details": [
+            "If C is the centre, P is the original point and k is the scale factor, then P′ = C + k(P − C).",
+            "For a positive scale factor, P′ lies on the same ray from C as P. For a negative scale factor, P′ lies on the opposite ray.",
+            "A scale factor of 1 leaves the figure unchanged; a scale factor of −1 gives a half-turn about the centre."
+          ]
+        },
+        {
+          "concept": "Effects on lengths and area",
+          "definition": "Lengths and areas change by different powers of the absolute scale factor.",
+          "details": [
+            "Corresponding lengths are multiplied by |k|.",
+            "Areas are multiplied by k², so area remains positive even when k is negative.",
+            "For a two-dimensional figure, use the area factor k². Three-dimensional volume scaling is outside this topic's 2D transformation scope."
+          ]
+        },
+        {
+          "concept": "Finding an unknown scale factor",
+          "definition": "Compare a pair of corresponding lengths, with image length divided by object length.",
+          "details": [
+            "A scale factor greater than 1 gives an enlargement in size; a scale factor between 0 and 1 gives a reduction.",
+            "A negative scale factor also places the image on the opposite side of the centre; its absolute value determines the size change."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Scaling Formulas",
+          "equation": "$$\\text{New Area}=\\text{Old Area}\\times k^2$$",
+          "variables": {
+            "k": "Linear scale factor"
+          }
+        },
+        {
+          "name": "Enlargement about centre C",
+          "equation": "$$\\mathbf{p}'=\\mathbf{c}+k(\\mathbf{p}-\\mathbf{c})$$",
+          "variables": {
+            "p": "Original point position vector",
+            "p′": "Image point position vector",
+            "c": "Centre of enlargement position vector",
+            "k": "Scale factor"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s11",
+          "title": "Area Expansion ($k^2$)",
+          "type": "svg",
+          "caption": "Doubling the linear dimensions quadruples the physical area.",
+          "alt_text": "Visual showing a small red square labeled '1x1'. Next to it is a large green square labeled '2x2'. The large green square is divided by gridlines showing it perfectly holds 4 of the small red squares. Text: 'k=2, Area factor = 4'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"100\" y=\"100\" width=\"50\" height=\"50\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"125\" y=\"165\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#b91c1c\" font-weight=\"bold\">1x1 (A=1)</text><rect x=\"250\" y=\"50\" width=\"100\" height=\"100\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"4\"/><line x1=\"300\" y1=\"50\" x2=\"300\" y2=\"150\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"250\" y1=\"100\" x2=\"350\" y2=\"100\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"300\" y=\"165\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">2x2 (A=4)</text><path d=\"M 160 125 L 230 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"230,100 220,103 223,110\" fill=\"#3b82f6\"/><text x=\"195\" y=\"90\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">k = 2</text><rect x=\"380\" y=\"70\" width=\"100\" height=\"60\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"430\" y=\"95\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">k² = 4</text><text x=\"430\" y=\"115\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Area × 4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "An enlargement has centre C(2, −1) and scale factor 2. Find the image of P(5, 3).",
+          "solution_steps": [
+            "Find the vector from the centre to P: P − C = (5−2, 3−(−1)) = (3, 4).",
+            "Multiply this vector by 2: (6, 8).",
+            "Add the centre back: P′ = (2+6, −1+8) = (8, 7)."
+          ],
+          "final_answer": "P′ = (8, 7)."
+        },
+        {
+          "problem": "A figure has area 18 cm² and is enlarged by scale factor −3. Find the image area.",
+          "solution_steps": [
+            "Area scale factor = k² = (−3)² = 9.",
+            "Image area = 18 × 9 = 162 cm².",
+            "The negative sign affects the image's position relative to the centre, not the area."
+          ],
+          "final_answer": "162 cm²."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying the Area by the linear scale factor $k$.",
+          "correction": "If a square has an area of $10$cm² and is enlarged by a scale factor of $3$, the new area is NOT $30$cm². It is $10 \\times 3^2 = 10 \\times 9 = 90$cm². Area is 2-Dimensional, so the scale factor must be squared."
+        },
+        {
+          "mistake": "Multiplying area by k rather than k².",
+          "correction": "Area is two-dimensional, so multiply the original area by the square of the scale factor."
+        },
+        {
+          "mistake": "Treating a negative scale factor as a negative length or negative area.",
+          "correction": "Use |k| for lengths and k² for area. The negative sign indicates that the image lies on the opposite side of the centre."
+        }
+      ],
+      "quick_summary": [
+        "The scale factor compares image length with original length.",
+        "Lengths scale by |k| and areas scale by k².",
+        "For centre C, the image point is P′ = C + k(P − C)."
+      ],
+      "utilities": []
+    },
+    "hs_math_t12_st12": {
+      "id": "hs_math_t12_st12",
+      "title": "Matrices for geometric transformations — introduction",
+      "overview": "A 2 × 2 transformation matrix acts on a two-dimensional coordinate column vector to produce the image coordinates. Particular matrices represent familiar enlargements, reflections and rotations. This is an introduction to using matrices for geometric transformations, not a full study of matrix algebra.",
+      "key_concepts": [
+        {
+          "concept": "Matrix Multiplication Mechanism",
+          "definition": "Row by Column.",
+          "details": [
+            "To apply a $2 \\times 2$ transformation matrix $\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ to a coordinate vector $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$, you multiply Rows into the Column.",
+            "$\\text{New X} = (a \\times x) + (b \\times y)$",
+            "$\\text{New Y} = (c \\times x) + (d \\times y)$"
+          ]
+        },
+        {
+          "concept": "The Standard Matrices",
+          "definition": "The hardcoded tools.",
+          "details": [
+            "**Enlargement (by $k$):** $\\begin{pmatrix} k & 0 \\\\ 0 & k \\end{pmatrix}$",
+            "**Reflection (X-Axis):** $\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
+            "**Reflection (Y-Axis):** $\\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+            "**Rotation ($90^\\circ$ Anti-clockwise):** $\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$"
+          ]
+        },
+        {
+          "concept": "Combining Transformations",
+          "definition": "Order is strict.",
+          "details": [
+            "If you want to Rotate a point and THEN Enlarge it, the matrices are applied from Right to Left: $E \\times (R \\times P)$. Matrix multiplication is NOT commutative; $ER$ does not yield the same result as $RE$."
+          ]
+        },
+        {
+          "concept": "Identity transformation",
+          "definition": "The identity matrix leaves every point unchanged.",
+          "details": [
+            "The identity matrix is I = [[1, 0], [0, 1]].",
+            "Multiplying I by a coordinate column vector returns the same coordinate."
+          ]
+        },
+        {
+          "concept": "Reflection in y = x",
+          "definition": "The reflection swaps the x- and y-coordinates.",
+          "details": [
+            "Its matrix is [[0, 1], [1, 0]].",
+            "Applied to (x, y)ᵀ, it gives (y, x)ᵀ."
+          ]
+        },
+        {
+          "concept": "Rotation matrices",
+          "definition": "Rotation matrices encode the standard rotations about the origin.",
+          "details": [
+            "90° anticlockwise: [[0, −1], [1, 0]].",
+            "180°: [[−1, 0], [0, −1]].",
+            "90° clockwise: [[0, 1], [−1, 0]]."
+          ]
+        },
+        {
+          "concept": "Why a 2 × 2 matrix does not translate points",
+          "definition": "A standard 2 × 2 matrix maps the origin to itself.",
+          "details": [
+            "For any 2 × 2 matrix M, M(0, 0)ᵀ = (0, 0)ᵀ.",
+            "Therefore a translation, which moves the origin, cannot be represented by an ordinary 2 × 2 matrix alone.",
+            "This topic uses vectors for translations; homogeneous coordinates and 3 × 3 translation matrices are beyond the present scope."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Matrix Application",
+          "equation": "$$ \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} ax + by \\\\ cx + dy \\end{pmatrix} $$",
+          "variables": {}
+        },
+        {
+          "name": "Identity matrix",
+          "equation": "$$I=\\begin{pmatrix}1&0\\\\0&1\\end{pmatrix}$$",
+          "variables": {}
+        },
+        {
+          "name": "Reflection in y = x",
+          "equation": "$$\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$$",
+          "variables": {}
+        },
+        {
+          "name": "Rotation by 180°",
+          "equation": "$$\\begin{pmatrix}-1&0\\\\0&-1\\end{pmatrix}$$",
+          "variables": {}
+        },
+        {
+          "name": "Rotation by 90° clockwise",
+          "equation": "$$\\begin{pmatrix}0&1\\\\-1&0\\end{pmatrix}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s12",
+          "title": "Matrix Vector Multiplication",
+          "type": "svg",
+          "caption": "Multiply across the row, and down the column.",
+          "alt_text": "Visual showing a 2x2 matrix [a b; c d] multiplying a 2x1 vector [x; y]. A red box highlights row 1 [a b] and the column [x y]. An arrow points to the result: top row is 'ax + by'. A blue box highlights row 2 [c d] and the column [x y]. Arrow points to bottom row 'cx + dy'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"50\" y=\"110\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\">[</text><text x=\"70\" y=\"80\" font-family=\"monospace\" font-size=\"20\" fill=\"#ef4444\" font-weight=\"bold\">a</text><text x=\"100\" y=\"80\" font-family=\"monospace\" font-size=\"20\" fill=\"#ef4444\" font-weight=\"bold\">b</text><text x=\"70\" y=\"130\" font-family=\"monospace\" font-size=\"20\" fill=\"#3b82f6\" font-weight=\"bold\">c</text><text x=\"100\" y=\"130\" font-family=\"monospace\" font-size=\"20\" fill=\"#3b82f6\" font-weight=\"bold\">d</text><text x=\"120\" y=\"110\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\">]</text><text x=\"150\" y=\"110\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\">[</text><text x=\"170\" y=\"80\" font-family=\"monospace\" font-size=\"20\" fill=\"#0f172a\" font-weight=\"bold\">x</text><text x=\"170\" y=\"130\" font-family=\"monospace\" font-size=\"20\" fill=\"#0f172a\" font-weight=\"bold\">y</text><text x=\"190\" y=\"110\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\">]</text><text x=\"220\" y=\"105\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\" font-weight=\"bold\">=</text><text x=\"250\" y=\"110\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\">[</text><text x=\"270\" y=\"80\" font-family=\"monospace\" font-size=\"20\" fill=\"#b91c1c\" font-weight=\"bold\">ax + by</text><text x=\"270\" y=\"130\" font-family=\"monospace\" font-size=\"20\" fill=\"#1d4ed8\" font-weight=\"bold\">cx + dy</text><text x=\"360\" y=\"110\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\">]</text><rect x=\"60\" y=\"60\" width=\"60\" height=\"30\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><rect x=\"60\" y=\"110\" width=\"60\" height=\"30\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" rx=\"5\"/><rect x=\"160\" y=\"60\" width=\"30\" height=\"80\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" rx=\"5\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Apply the $90^\\circ$ anticlockwise rotation matrix to the point $P(4, 2)$.",
+          "solution_steps": [
+            "Step 1: Set up the matrix multiplication: $\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix} \\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix}$.",
+            "Step 2: Top Row calculation: $(0 \\times 4) + (-1 \\times 2) = 0 - 2 = -2$.",
+            "Step 3: Bottom Row calculation: $(1 \\times 4) + (0 \\times 2) = 4 + 0 = 4$.",
+            "Step 4: The resulting column vector is $\\begin{pmatrix} -2 \\\\ 4 \\end{pmatrix}$.",
+            "Step 5: Therefore, the new coordinate is $P'(-2, 4)$."
+          ],
+          "final_answer": "P'(-2, 4)"
+        },
+        {
+          "problem": "Use a matrix to reflect P(−3, 5) in the line y = x.",
+          "solution_steps": [
+            "The reflection matrix is [[0, 1], [1, 0]].",
+            "Multiply: [[0, 1], [1, 0]] × (−3, 5)ᵀ = (5, −3)ᵀ.",
+            "The coordinates have been swapped, as expected for reflection in y = x."
+          ],
+          "final_answer": "P′ = (5, −3)."
+        },
+        {
+          "problem": "A point is first reflected in the x-axis and then rotated 90° anticlockwise about the origin. Find the combined matrix.",
+          "solution_steps": [
+            "The reflection in the x-axis matrix is F = [[1, 0], [0, −1]].",
+            "The 90° anticlockwise rotation matrix is R = [[0, −1], [1, 0]].",
+            "The reflection is performed first, so the combined matrix is R F.",
+            "R F = [[0, 1], [1, 0]], which is the reflection matrix in y = x.",
+            "If the order were reversed, F R = [[0, −1], [−1, 0]], a different transformation. This shows that the order matters."
+          ],
+          "final_answer": "Combined matrix = [[0, 1], [1, 0]]; reversing the order gives a different matrix."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to write Translations as a $2\\times 2$ matrix.",
+          "correction": "Translation (sliding a shape) CANNOT be performed by multiplying a standard $2\\times 2$ matrix, because $(0,0) \\times \\text{Matrix}$ will always equal $(0,0)$ (the origin gets stuck). To execute translations via matrices (as game engines do), you must upgrade to a $3\\times 3$ matrix and use 'Homogeneous Coordinates' by adding a $1$ to the bottom of the column vector."
+        },
+        {
+          "mistake": "Multiplying transformation matrices in the same order as the verbal sequence from left to right.",
+          "correction": "With column vectors, the first transformation matrix is nearest the vector and acts first. If A is followed by B, the combined matrix is BA."
+        },
+        {
+          "mistake": "Assuming a 2 × 2 matrix can perform a translation.",
+          "correction": "A 2 × 2 linear transformation fixes the origin. Use the vector translation rule in this topic; 3 × 3 homogeneous-coordinate methods are outside scope."
+        }
+      ],
+      "quick_summary": [
+        "A 2 × 2 matrix maps a coordinate column vector to its image.",
+        "Specific matrices represent enlargements, reflections and rotations.",
+        "For column vectors, the rightmost matrix acts first.",
+        "A 2 × 2 matrix fixes the origin and cannot represent a translation."
+      ],
+      "utilities": []
+    }
+  }
+}

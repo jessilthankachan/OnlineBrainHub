@@ -1,0 +1,1328 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t17",
+  "topicTitle": "Introduction to Calculus",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t17_st01": {
+      "id": "hs_math_t17_st01",
+      "title": "Understanding Limits",
+      "overview": "A limit describes the value that a function approaches as its input approaches a specified number. It helps us study behaviour near a point, even when the function is not defined at that point.",
+      "key_concepts": [
+        {
+          "concept": "The idea of approaching",
+          "definition": "A limit concerns nearby input values, not necessarily the value at the target input.",
+          "details": [
+            "When x approaches a, we examine values of x increasingly close to a from either side.",
+            "The outputs may approach a fixed number L even if f(a) is missing or has a different value.",
+            "A limit describes behaviour near a point rather than requiring the function to attain the limiting value."
+          ]
+        },
+        {
+          "concept": "Limit notation",
+          "definition": "The notation states the input being approached and the output value approached.",
+          "details": [
+            "In lim(x→a) f(x)=L, a is the target input and L is the limiting output.",
+            "Read it as: as x approaches a, f(x) approaches L.",
+            "The limit may exist even if f(a) is undefined."
+          ]
+        },
+        {
+          "concept": "Direct substitution",
+          "definition": "For polynomial functions and other functions continuous at the target, substitution gives the limit.",
+          "details": [
+            "Replace x by the value it approaches and simplify.",
+            "For f(x)=x²+2x, as x approaches 3, the output approaches 15.",
+            "If substitution gives an undefined expression, that does not by itself determine the limit; other methods or further study may be needed."
+          ]
+        },
+        {
+          "concept": "One-sided approach",
+          "definition": "A function can be approached from smaller or larger input values.",
+          "details": [
+            "The left-hand limit examines x-values less than a.",
+            "The right-hand limit examines x-values greater than a.",
+            "A two-sided limit exists only when both one-sided limits exist and are equal."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Limit notation",
+          "equation": "$$\\lim_{x\\to a}f(x)=L$$",
+          "variables": {
+            "a": "The input value being approached",
+            "L": "The output value approached"
+          }
+        },
+        {
+          "name": "Two-sided limit condition",
+          "equation": "$$\\lim_{x\\to a^-}f(x)=\\lim_{x\\to a^+}f(x)=L$$",
+          "variables": {
+            "a⁻": "Approach from the left",
+            "a⁺": "Approach from the right",
+            "L": "Common limiting value"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v17_s01",
+          "title": "A Function Approaching a Limit",
+          "type": "svg",
+          "caption": "The output values approach L as the input approaches a from both sides.",
+          "alt_text": "A curve approaches the same open point from the left and right, with dashed guides marking x=a and y=L.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\"><rect width=\"520\" height=\"220\" rx=\"10\" fill=\"#f8fafc\"/><line x1=\"45\" y1=\"175\" x2=\"485\" y2=\"175\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"95\" y1=\"195\" x2=\"95\" y2=\"25\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M110 150 Q210 135 260 95 Q320 55 455 45\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><circle cx=\"260\" cy=\"95\" r=\"7\" fill=\"#fff\" stroke=\"#dc2626\" stroke-width=\"3\"/><line x1=\"260\" y1=\"95\" x2=\"260\" y2=\"175\" stroke=\"#94a3b8\" stroke-dasharray=\"5 5\"/><line x1=\"95\" y1=\"95\" x2=\"260\" y2=\"95\" stroke=\"#94a3b8\" stroke-dasharray=\"5 5\"/><text x=\"260\" y=\"198\" text-anchor=\"middle\" font-size=\"15\" fill=\"#0f172a\">a</text><text x=\"80\" y=\"100\" text-anchor=\"end\" font-size=\"15\" fill=\"#0f172a\">L</text><text x=\"180\" y=\"65\" font-size=\"13\" fill=\"#047857\">from left</text><text x=\"330\" y=\"35\" font-size=\"13\" fill=\"#047857\">from right</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $$\\lim_{x\\to 3}(x^2+2x)$$.",
+          "solution_steps": [
+            "Substitute x=3 because the expression is a polynomial.",
+            "Calculate 3²+2(3)=9+6=15."
+          ],
+          "final_answer": "15"
+        },
+        {
+          "problem": "A function has left-hand limit 4 and right-hand limit 4 at x=2, but f(2)=7. Find the limit.",
+          "solution_steps": [
+            "Compare the two one-sided limits: both equal 4.",
+            "Since they agree, the two-sided limit exists and equals 4.",
+            "The separate function value 7 does not change the limit."
+          ],
+          "final_answer": "The limit is 4."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming the limit must equal f(a).",
+          "correction": "The limit describes nearby behaviour. The value f(a) may be different or undefined."
+        },
+        {
+          "mistake": "Checking only one side of the target.",
+          "correction": "For a two-sided limit, compare the left-hand and right-hand behaviour."
+        }
+      ],
+      "quick_summary": [
+        "A limit is the value approached by f(x) as x approaches a.",
+        "The value of the function at a can differ from the limit.",
+        "A two-sided limit exists only when the left- and right-hand limits agree.",
+        "Direct substitution is useful for polynomial functions."
+      ]
+    },
+    "hs_math_t17_st02": {
+      "id": "hs_math_t17_st02",
+      "title": "Limits from Graphs and Tables",
+      "overview": "Graphs and numerical tables provide visual and numerical ways to estimate limits. They help distinguish the value approached by a function from the value actually assigned at the target input.",
+      "key_concepts": [
+        {
+          "concept": "Reading a graph",
+          "definition": "Trace the curve towards the target input from both directions.",
+          "details": [
+            "Identify the target x-coordinate first.",
+            "Follow the graph from the left and right and estimate the y-value approached.",
+            "An open circle may show a missing function value while the curve still approaches that height."
+          ]
+        },
+        {
+          "concept": "Using a table",
+          "definition": "Choose input values increasingly close to the target from below and above.",
+          "details": [
+            "For x approaching 2, values such as 1.9, 1.99 and 1.999 approach from the left.",
+            "Values such as 2.1, 2.01 and 2.001 approach from the right.",
+            "Compare the corresponding outputs and look for a common value."
+          ]
+        },
+        {
+          "concept": "Holes and jumps",
+          "definition": "Different graph features lead to different conclusions about a limit.",
+          "details": [
+            "At a hole, the curve may approach the same height from both sides, so the limit can exist.",
+            "At a jump, the left and right approaches are different, so the two-sided limit does not exist.",
+            "A graph's filled point gives f(a); the nearby curve indicates the limit."
+          ]
+        },
+        {
+          "concept": "Estimating carefully",
+          "definition": "Tables and graphs provide estimates whose reliability depends on the scale and selected values.",
+          "details": [
+            "Use values close to the target but avoid relying on rounded values alone.",
+            "Check both sides; one-sided data alone cannot establish a two-sided limit.",
+            "A graph may conceal small details, so use a table or algebraic reasoning when appropriate."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v17_s02",
+          "title": "Graph and Table Evidence",
+          "type": "svg",
+          "caption": "A hole can have a limit, while a jump gives different one-sided approaches.",
+          "alt_text": "Two graph panels: a curve with a hole at the approached height and a jump with two distinct one-sided heights.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\"><rect width=\"520\" height=\"220\" rx=\"10\" fill=\"#f8fafc\"/><g transform=\"translate(25 20)\"><text x=\"100\" y=\"15\" text-anchor=\"middle\" font-size=\"15\" fill=\"#0f172a\">Hole</text><line x1=\"10\" y1=\"155\" x2=\"210\" y2=\"155\" stroke=\"#64748b\"/><path d=\"M20 135 L100 55 L190 135\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><circle cx=\"100\" cy=\"55\" r=\"6\" fill=\"#fff\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"100\" y=\"185\" text-anchor=\"middle\" font-size=\"13\" fill=\"#047857\">same approach</text></g><g transform=\"translate(275 20)\"><text x=\"100\" y=\"15\" text-anchor=\"middle\" font-size=\"15\" fill=\"#0f172a\">Jump</text><line x1=\"10\" y1=\"155\" x2=\"210\" y2=\"155\" stroke=\"#64748b\"/><path d=\"M20 120 L100 120 M100 55 L190 55\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"4\"/><circle cx=\"100\" cy=\"120\" r=\"5\" fill=\"#fff\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"55\" r=\"5\" fill=\"#dc2626\"/><text x=\"100\" y=\"185\" text-anchor=\"middle\" font-size=\"13\" fill=\"#b91c1c\">different approaches</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Estimate the limit of (x²−4)/(x−2) as x approaches 2 using a table.",
+          "solution_steps": [
+            "For x≠2, factor x²−4=(x−2)(x+2), so the expression equals x+2.",
+            "At x=1.9, the value is 3.9; at x=1.99, it is 3.99.",
+            "At x=2.01, the value is 4.01; at x=2.1, it is 4.1.",
+            "Values from both sides approach 4."
+          ],
+          "final_answer": "Approximately 4"
+        },
+        {
+          "problem": "A graph approaches y=3 from the left and y=5 from the right at x=1. Does the two-sided limit exist?",
+          "solution_steps": [
+            "The left-hand limit is 3.",
+            "The right-hand limit is 5.",
+            "Because 3 and 5 are different, the two-sided limit does not exist."
+          ],
+          "final_answer": "No; the one-sided limits are unequal."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reading the filled dot as the limit.",
+          "correction": "Trace the nearby curve towards the target. The filled dot indicates the function value, not necessarily the limit."
+        },
+        {
+          "mistake": "Using values from only one side.",
+          "correction": "Compare values from both sides to assess a two-sided limit."
+        }
+      ],
+      "quick_summary": [
+        "Use graphs by tracing the curve towards the target from both sides.",
+        "Use tables with input values close to the target on both sides.",
+        "A hole can have a limit; a jump with unequal one-sided values does not.",
+        "The filled point represents f(a), not automatically the limit."
+      ]
+    },
+    "hs_math_t17_st03": {
+      "id": "hs_math_t17_st03",
+      "title": "Continuity — Introduction",
+      "overview": "A function is continuous over a region when its graph has no break in that region. At this introductory level, continuity is recognised from graphs and simple functions; formal limit-based conditions are studied later.",
+      "key_concepts": [
+        {
+          "concept": "Intuitive meaning",
+          "definition": "A continuous graph has no break, jump or missing point over the interval being considered.",
+          "details": [
+            "The familiar pencil test is a useful visual guide: a continuous curve can be traced without lifting the pencil.",
+            "A hole or jump indicates a discontinuity.",
+            "Continuity is considered at a point or throughout an interval."
+          ]
+        },
+        {
+          "concept": "Common discontinuities",
+          "definition": "A graph may fail to be continuous in several visible ways.",
+          "details": [
+            "A removable break appears as a hole in an otherwise connected curve.",
+            "A jump occurs when the graph changes abruptly between different heights.",
+            "An infinite break occurs near a vertical asymptote, where values grow without bound in magnitude."
+          ]
+        },
+        {
+          "concept": "Functions that are continuous",
+          "definition": "Many elementary functions have continuous graphs throughout their natural domains.",
+          "details": [
+            "Linear and polynomial functions are continuous for every real input.",
+            "A rational function is continuous wherever its denominator is not zero.",
+            "A square-root function is continuous on its real-valued domain."
+          ]
+        },
+        {
+          "concept": "Domain and continuity",
+          "definition": "Continuity must be considered only where the function is defined.",
+          "details": [
+            "For f(x)=1/(x−2), the function is not defined at x=2.",
+            "The graph has a vertical asymptote at x=2, so it is not continuous there.",
+            "A function may be continuous on separate intervals even if it is not continuous across a break."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v17_s03",
+          "title": "Recognising Continuity",
+          "type": "svg",
+          "caption": "A connected curve is continuous; holes and jumps show discontinuities.",
+          "alt_text": "Three small graph panels showing a smooth connected curve, a hole and a jump.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\"><rect width=\"520\" height=\"220\" rx=\"10\" fill=\"#f8fafc\"/><g transform=\"translate(15 25)\"><text x=\"70\" y=\"10\" text-anchor=\"middle\" font-size=\"14\" fill=\"#0f172a\">Continuous</text><path d=\"M10 120 Q70 10 130 120\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"4\"/></g><g transform=\"translate(190 25)\"><text x=\"70\" y=\"10\" text-anchor=\"middle\" font-size=\"14\" fill=\"#0f172a\">Hole</text><path d=\"M10 120 L70 45 M70 45 L130 120\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><circle cx=\"70\" cy=\"45\" r=\"6\" fill=\"#fff\" stroke=\"#dc2626\" stroke-width=\"3\"/></g><g transform=\"translate(365 25)\"><text x=\"70\" y=\"10\" text-anchor=\"middle\" font-size=\"14\" fill=\"#0f172a\">Jump</text><path d=\"M10 105 L70 105 M70 45 L130 45\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"4\"/><circle cx=\"70\" cy=\"105\" r=\"5\" fill=\"#fff\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"45\" r=\"5\" fill=\"#dc2626\"/></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "State where f(x)=x²−1 is continuous.",
+          "solution_steps": [
+            "This is a polynomial function.",
+            "Polynomial functions are continuous for all real values of x."
+          ],
+          "final_answer": "For all real x"
+        },
+        {
+          "problem": "Identify the discontinuity of f(x)=1/(x−3).",
+          "solution_steps": [
+            "The denominator is zero when x−3=0, so x=3 is excluded from the domain.",
+            "The graph has a vertical asymptote at x=3.",
+            "The function is continuous on each side of x=3, but not at x=3."
+          ],
+          "final_answer": "Discontinuous at x=3"
+        },
+        {
+          "problem": "A graph is smooth except for an open circle at x=4. Name the type of break.",
+          "solution_steps": [
+            "The curve approaches the missing point but the point itself is absent.",
+            "This is a hole, also called a removable discontinuity."
+          ],
+          "final_answer": "A removable discontinuity"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming a graph is continuous wherever it looks smooth from far away.",
+          "correction": "Check for holes, jumps, excluded inputs and vertical asymptotes."
+        },
+        {
+          "mistake": "Ignoring the domain.",
+          "correction": "A function cannot be continuous at an input where it is not defined."
+        }
+      ],
+      "quick_summary": [
+        "Continuity means no break in the graph over the interval considered.",
+        "Holes, jumps and vertical asymptotes are common discontinuities.",
+        "Polynomials are continuous for all real inputs.",
+        "A rational function is continuous wherever its denominator is non-zero."
+      ]
+    },
+    "hs_math_t17_st04": {
+      "id": "hs_math_t17_st04",
+      "title": "Average and Instantaneous Rates of Change",
+      "overview": "Rates of change describe how an output varies as an input changes. The average rate measures change over an interval; the instantaneous rate describes the rate at one input and is understood by considering intervals that become smaller.",
+      "key_concepts": [
+        {
+          "concept": "Average rate of change",
+          "definition": "It compares the change in output with the change in input between two points.",
+          "details": [
+            "For inputs x₁ and x₂, subtract the starting output from the ending output.",
+            "Divide by the corresponding change in input.",
+            "The result is the slope of the secant line joining the two points on the graph."
+          ]
+        },
+        {
+          "concept": "Secant line",
+          "definition": "A secant line intersects a curve at two points.",
+          "details": [
+            "Its gradient gives the average rate of change over the interval.",
+            "A positive gradient means the ending output is greater than the starting output.",
+            "A negative gradient means the ending output is smaller; zero means the endpoint outputs are equal."
+          ]
+        },
+        {
+          "concept": "Instantaneous rate",
+          "definition": "It describes how rapidly the output is changing at one particular input.",
+          "details": [
+            "Imagine choosing a second point very close to the point of interest.",
+            "As the interval becomes smaller, the secant gradient may approach a single value.",
+            "That limiting gradient is the instantaneous rate of change and is represented by the derivative when it exists."
+          ]
+        },
+        {
+          "concept": "Units and interpretation",
+          "definition": "The rate of change has units of output per unit of input.",
+          "details": [
+            "If distance is measured in kilometres and time in hours, the rate is kilometres per hour.",
+            "If cost is measured in currency and production in items, the rate is currency per item.",
+            "Always state whether a rate is average over an interval or instantaneous at a point."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Average rate of change",
+          "equation": "$$\\frac{f(x_2)-f(x_1)}{x_2-x_1}$$",
+          "variables": {
+            "x₁, x₂": "The two input values",
+            "f(x₁), f(x₂)": "The corresponding output values"
+          }
+        },
+        {
+          "name": "Average velocity",
+          "equation": "$$\\text{Average velocity}=\\frac{s(t_2)-s(t_1)}{t_2-t_1}$$",
+          "variables": {
+            "s(t)": "Position at time t",
+            "t₁, t₂": "Start and end times"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v17_s04",
+          "title": "Secant Slope Across an Interval",
+          "type": "svg",
+          "caption": "The secant line joins two points; its gradient is the average rate of change.",
+          "alt_text": "A curve with two marked points joined by a secant line and labelled horizontal and vertical changes.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\"><rect width=\"520\" height=\"220\" rx=\"10\" fill=\"#f8fafc\"/><line x1=\"45\" y1=\"180\" x2=\"485\" y2=\"180\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"70\" y1=\"195\" x2=\"70\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M80 160 Q220 150 430 35\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><circle cx=\"150\" cy=\"145\" r=\"6\" fill=\"#dc2626\"/><circle cx=\"360\" cy=\"75\" r=\"6\" fill=\"#dc2626\"/><line x1=\"150\" y1=\"145\" x2=\"360\" y2=\"75\" stroke=\"#dc2626\" stroke-width=\"3\"/><line x1=\"150\" y1=\"145\" x2=\"360\" y2=\"145\" stroke=\"#16a34a\" stroke-dasharray=\"5 4\" stroke-width=\"2\"/><line x1=\"360\" y1=\"145\" x2=\"360\" y2=\"75\" stroke=\"#16a34a\" stroke-dasharray=\"5 4\" stroke-width=\"2\"/><text x=\"255\" y=\"163\" text-anchor=\"middle\" font-size=\"13\" fill=\"#047857\">change in x</text><text x=\"370\" y=\"115\" font-size=\"13\" fill=\"#047857\">change in y</text><text x=\"150\" y=\"135\" font-size=\"13\" fill=\"#0f172a\">A</text><text x=\"360\" y=\"65\" font-size=\"13\" fill=\"#0f172a\">B</text><text x=\"245\" y=\"82\" font-size=\"14\" fill=\"#b91c1c\">Secant line</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the average rate of change of f(x)=x²+2x from x=1 to x=3.",
+          "solution_steps": [
+            "Calculate f(1)=1+2=3.",
+            "Calculate f(3)=9+6=15.",
+            "Average rate=(15−3)/(3−1)=12/2=6."
+          ],
+          "final_answer": "6"
+        },
+        {
+          "problem": "A car's position changes from 10 km to 70 km over 2 hours. Find its average velocity.",
+          "solution_steps": [
+            "Change in position=70−10=60 km.",
+            "Change in time=2 hours.",
+            "Average velocity=60/2=30 km/h."
+          ],
+          "final_answer": "30 km/h"
+        },
+        {
+          "problem": "For f(x)=x², compare the average rate from x=2 to x=3 with the rate from x=2 to x=2.1.",
+          "solution_steps": [
+            "From 2 to 3: (9−4)/(3−2)=5.",
+            "From 2 to 2.1: (4.41−4)/(2.1−2)=0.41/0.1=4.1.",
+            "The shorter interval gives a rate closer to the instantaneous rate at x=2, which is 4."
+          ],
+          "final_answer": "5 and 4.1; the rates approach 4 as the interval shrinks"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reversing the subtraction in only one part of the formula.",
+          "correction": "Keep the output difference and input difference in the same order."
+        },
+        {
+          "mistake": "Calling an average rate the instantaneous rate.",
+          "correction": "An average rate applies to an interval; an instantaneous rate applies at one input."
+        },
+        {
+          "mistake": "Omitting units in applied problems.",
+          "correction": "Use output units divided by input units."
+        }
+      ],
+      "quick_summary": [
+        "Average rate of change is the slope of a secant line.",
+        "Instantaneous rate is approached as the interval shrinks.",
+        "Rates are measured in output units per input unit.",
+        "Distinguish interval rates from rates at a single point."
+      ]
+    },
+    "hs_math_t17_st05": {
+      "id": "hs_math_t17_st05",
+      "title": "Definition of a Derivative",
+      "overview": "The derivative gives the instantaneous rate of change of a function. It is defined through a limit of average rates of change and represents the gradient of the tangent to the curve when that gradient exists.",
+      "key_concepts": [
+        {
+          "concept": "Derivative at a point",
+          "definition": "The derivative at x=a is the limiting value of average rates as a nearby input approaches a.",
+          "details": [
+            "Use the two inputs a and a+h, where h is a small non-zero change.",
+            "Calculate the change in function values and divide by h.",
+            "If the limit exists, it gives the instantaneous rate at a."
+          ]
+        },
+        {
+          "concept": "Derivative function",
+          "definition": "Applying the limit definition with a variable input produces a new function.",
+          "details": [
+            "The derivative function is written f′(x).",
+            "For each suitable input x, f′(x) gives the gradient of the original graph at that input.",
+            "The original function gives output values; the derivative gives rates of change."
+          ]
+        },
+        {
+          "concept": "Tangent interpretation",
+          "definition": "The derivative at a point is the gradient of the tangent line there.",
+          "details": [
+            "A tangent line gives the local direction of the curve at the point.",
+            "The tangent gradient is the limit of secant gradients as the second point approaches the first.",
+            "At a sharp corner, the left and right tangent directions may disagree, so the derivative may not exist."
+          ]
+        },
+        {
+          "concept": "Derivative may fail to exist",
+          "definition": "Not every function has a derivative at every point.",
+          "details": [
+            "A discontinuity prevents differentiability at that point.",
+            "A sharp corner such as y=|x| at x=0 has different one-sided slopes.",
+            "A vertical tangent may also prevent a finite derivative."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Derivative at a point",
+          "equation": "$$f'(a)=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}{h}$$",
+          "variables": {
+            "a": "Input at which the derivative is evaluated",
+            "h": "A non-zero input change approaching zero"
+          }
+        },
+        {
+          "name": "Derivative function",
+          "equation": "$$f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}$$",
+          "variables": {
+            "f(x)": "Original function",
+            "f′(x)": "Derivative function"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v17_s05",
+          "title": "Secant Lines Approaching a Tangent",
+          "type": "svg",
+          "caption": "As the second point approaches the first, the secant line approaches the tangent line.",
+          "alt_text": "Curve with a fixed point, a nearby point, secant line and tangent line at the fixed point.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\"><rect width=\"520\" height=\"220\" rx=\"10\" fill=\"#f8fafc\"/><path d=\"M45 180 Q210 190 450 25\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><circle cx=\"180\" cy=\"145\" r=\"6\" fill=\"#0f172a\"/><circle cx=\"330\" cy=\"75\" r=\"6\" fill=\"#94a3b8\"/><line x1=\"80\" y1=\"190\" x2=\"390\" y2=\"45\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><line x1=\"80\" y1=\"190\" x2=\"280\" y2=\"98\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"185\" y=\"132\" font-size=\"14\" fill=\"#0f172a\">P</text><text x=\"340\" y=\"70\" font-size=\"14\" fill=\"#64748b\">Q</text><text x=\"300\" y=\"120\" font-size=\"14\" fill=\"#b91c1c\">Secant</text><text x=\"55\" y=\"150\" font-size=\"14\" fill=\"#b91c1c\">Tangent (limit)</text><text x=\"355\" y=\"180\" font-size=\"13\" fill=\"#047857\">Q approaches P</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Use the limit definition to find the derivative of f(x)=x² at x=3.",
+          "solution_steps": [
+            "Start with f′(3)=lim(h→0)[f(3+h)−f(3)]/h.",
+            "f(3+h)=(3+h)²=9+6h+h² and f(3)=9.",
+            "Substitute: lim(h→0)(6h+h²)/h.",
+            "For h≠0, simplify to lim(h→0)(6+h)=6."
+          ],
+          "final_answer": "f′(3)=6"
+        },
+        {
+          "problem": "Explain why y=|x| has no derivative at x=0.",
+          "solution_steps": [
+            "For x<0, the graph is a straight line with gradient −1.",
+            "For x>0, the graph is a straight line with gradient +1.",
+            "The one-sided gradients are different, so there is no single tangent gradient at x=0."
+          ],
+          "final_answer": "The derivative does not exist at x=0"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Substituting h=0 before simplifying.",
+          "correction": "Keep h non-zero while simplifying the difference quotient; take the limit only after cancellation where valid."
+        },
+        {
+          "mistake": "Confusing f(a) with f′(a).",
+          "correction": "f(a) is the function value; f′(a) is the instantaneous rate or tangent gradient."
+        },
+        {
+          "mistake": "Assuming every point has a derivative.",
+          "correction": "Check for corners, discontinuities and other points where a unique finite tangent gradient does not exist."
+        }
+      ],
+      "quick_summary": [
+        "The derivative measures instantaneous rate of change.",
+        "The derivative at a point is the tangent gradient.",
+        "The limit definition is built from average rates over shrinking intervals.",
+        "A derivative may fail to exist at corners or discontinuities."
+      ]
+    },
+    "hs_math_t17_st06": {
+      "id": "hs_math_t17_st06",
+      "title": "Basic Rules of Differentiation",
+      "overview": "Basic differentiation rules provide efficient ways to find derivatives of simple functions. At this level, the focus is on constants, powers, constant multiples, sums and differences.",
+      "key_concepts": [
+        {
+          "concept": "Derivative of a constant",
+          "definition": "A constant function has no change in output, so its derivative is zero.",
+          "details": [
+            "The graph of y=c is a horizontal line.",
+            "A horizontal line has gradient zero at every point.",
+            "Examples include the derivative of 7 and the derivative of π; both are zero."
+          ]
+        },
+        {
+          "concept": "Power rule",
+          "definition": "For a power of x, multiply by the exponent and reduce the exponent by one.",
+          "details": [
+            "For xⁿ, bring n down as a coefficient.",
+            "Replace the exponent n by n−1.",
+            "This rule applies to the powers used in the lesson, including positive integer powers and simple negative or fractional powers where the function is defined."
+          ]
+        },
+        {
+          "concept": "Constant multiple rule",
+          "definition": "A constant factor remains as a multiplier when differentiating.",
+          "details": [
+            "Differentiate the variable expression and keep the constant coefficient.",
+            "For example, the derivative of 5x³ is 5 times the derivative of x³.",
+            "This rule prevents the coefficient from being lost."
+          ]
+        },
+        {
+          "concept": "Sum and difference rules",
+          "definition": "Differentiate each term separately while preserving addition and subtraction.",
+          "details": [
+            "Apply the relevant rule to each term.",
+            "Keep the original plus or minus signs between the differentiated terms.",
+            "A constant term contributes zero."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Constant rule",
+          "equation": "$$\\frac{d}{dx}(c)=0$$",
+          "variables": {
+            "c": "A constant"
+          }
+        },
+        {
+          "name": "Power rule",
+          "equation": "$$\\frac{d}{dx}(x^n)=nx^{n-1}$$",
+          "variables": {
+            "n": "The exponent"
+          }
+        },
+        {
+          "name": "Constant multiple rule",
+          "equation": "$$\\frac{d}{dx}[c f(x)]=c f'(x)$$",
+          "variables": {
+            "c": "A constant multiplier"
+          }
+        },
+        {
+          "name": "Sum and difference rules",
+          "equation": "$$\\frac{d}{dx}[f(x)\\pm g(x)]=f'(x)\\pm g'(x)$$",
+          "variables": {
+            "f, g": "Differentiable functions"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v17_s06",
+          "title": "Applying the Power Rule",
+          "type": "svg",
+          "caption": "Bring the exponent down to multiply, then reduce the power by one.",
+          "alt_text": "Example showing 4x⁵ differentiating to 20x⁴, with exponent 5 moved to coefficient and power reduced to 4.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\"><rect width=\"520\" height=\"220\" rx=\"10\" fill=\"#f8fafc\"/><text x=\"55\" y=\"105\" font-size=\"38\" font-family=\"monospace\" fill=\"#0f172a\" font-weight=\"bold\">4x⁵</text><path d=\"M145 70 Q190 25 230 75\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3\"/><polygon points=\"230,75 218,69 220,82\" fill=\"#dc2626\"/><text x=\"160\" y=\"35\" font-size=\"14\" fill=\"#b91c1c\">5 × 4 = 20</text><text x=\"160\" y=\"145\" font-size=\"14\" fill=\"#047857\">5 − 1 = 4</text><path d=\"M265 105 L345 105\" stroke=\"#64748b\" stroke-width=\"3\"/><polygon points=\"345,105 333,98 333,112\" fill=\"#64748b\"/><rect x=\"360\" y=\"65\" width=\"125\" height=\"75\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"422\" y=\"110\" text-anchor=\"middle\" font-size=\"30\" font-family=\"monospace\" fill=\"#14532d\" font-weight=\"bold\">20x⁴</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Differentiate y=5x⁴−3x²+7x−9.",
+          "solution_steps": [
+            "Differentiate each term separately.",
+            "5x⁴ becomes 20x³.",
+            "−3x² becomes −6x.",
+            "7x becomes 7.",
+            "−9 becomes 0.",
+            "Combine the terms."
+          ],
+          "final_answer": "dy/dx = 20x³ − 6x + 7"
+        },
+        {
+          "problem": "Differentiate f(x)=3/x².",
+          "solution_steps": [
+            "Rewrite 3/x² as 3x⁻².",
+            "Apply the power rule: 3(−2)x⁻³.",
+            "Write with a positive exponent in the denominator."
+          ],
+          "final_answer": "f′(x)=−6/x³"
+        },
+        {
+          "problem": "Differentiate g(x)=√x.",
+          "solution_steps": [
+            "Rewrite √x as x^(1/2).",
+            "Apply the power rule: (1/2)x^(−1/2).",
+            "Rewrite using a square root in the denominator."
+          ],
+          "final_answer": "g′(x)=1/(2√x), for x>0"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Differentiating a constant as if it were a variable term.",
+          "correction": "A constant term differentiates to zero."
+        },
+        {
+          "mistake": "Forgetting to reduce the exponent by one.",
+          "correction": "After multiplying by the exponent, subtract one from the original power."
+        },
+        {
+          "mistake": "Losing a negative sign or coefficient.",
+          "correction": "Keep the coefficient and sign attached to each term throughout."
+        },
+        {
+          "mistake": "Applying the power rule to a sum as though it were a product.",
+          "correction": "Differentiate each term separately using the sum or difference rule."
+        }
+      ],
+      "quick_summary": [
+        "A constant differentiates to zero.",
+        "For xⁿ, multiply by n and reduce the power to n−1.",
+        "Keep constant coefficients when differentiating.",
+        "Differentiate sums and differences term by term."
+      ]
+    },
+    "hs_math_t17_st07": {
+      "id": "hs_math_t17_st07",
+      "title": "Derivatives of Polynomial Functions",
+      "overview": "A polynomial derivative is found by applying the basic differentiation rules to each term. The resulting derivative function can then be evaluated to find the gradient at a chosen input.",
+      "key_concepts": [
+        {
+          "concept": "Term-by-term differentiation",
+          "definition": "Each polynomial term is differentiated separately.",
+          "details": [
+            "Identify terms separated by plus or minus signs.",
+            "Apply the power rule to variable terms and the constant rule to the constant term.",
+            "Preserve the signs and combine the resulting terms."
+          ]
+        },
+        {
+          "concept": "Degree of the derivative",
+          "definition": "For a non-constant polynomial, differentiation reduces the highest power by one.",
+          "details": [
+            "A cubic polynomial generally differentiates to a quadratic polynomial.",
+            "A quadratic polynomial generally differentiates to a linear polynomial.",
+            "A non-zero constant polynomial differentiates to zero."
+          ]
+        },
+        {
+          "concept": "Gradient at a point",
+          "definition": "The derivative function gives the gradient at each input where it is defined.",
+          "details": [
+            "First find the derivative function.",
+            "Then substitute the required x-value into the derivative.",
+            "Do not substitute into the original function when the question asks for the gradient."
+          ]
+        },
+        {
+          "concept": "Interpreting the result",
+          "definition": "The sign and magnitude of the derivative describe the local slope.",
+          "details": [
+            "A positive derivative indicates an upward slope.",
+            "A negative derivative indicates a downward slope.",
+            "A zero derivative indicates a horizontal tangent at that point."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Polynomial derivative",
+          "equation": "$$\\frac{d}{dx}(a_nx^n+\\cdots+a_1x+a_0)=na_nx^{n-1}+\\cdots+a_1$$",
+          "variables": {
+            "a₀,…,aₙ": "Constant coefficients",
+            "n": "Highest exponent"
+          }
+        },
+        {
+          "name": "Gradient at x=a",
+          "equation": "$$\\text{Gradient at }x=a=f'(a)$$",
+          "variables": {
+            "f′(a)": "Derivative evaluated at x=a"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v17_s07",
+          "title": "Differentiate a Polynomial Term by Term",
+          "type": "svg",
+          "caption": "Each term produces its own derivative; the constant term disappears.",
+          "alt_text": "Polynomial 4x³−5x²+7 mapped termwise to 12x²−10x.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\"><rect width=\"520\" height=\"220\" rx=\"10\" fill=\"#f8fafc\"/><text x=\"260\" y=\"45\" text-anchor=\"middle\" font-size=\"24\" font-family=\"monospace\" fill=\"#0f172a\">4x³ − 5x² + 7</text><path d=\"M150 60 L150 95 M270 60 L270 95 M355 60 L355 95\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4 4\"/><rect x=\"100\" y=\"100\" width=\"100\" height=\"38\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><text x=\"150\" y=\"125\" text-anchor=\"middle\" font-size=\"19\" fill=\"#1e3a8a\">12x²</text><rect x=\"220\" y=\"100\" width=\"100\" height=\"38\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><text x=\"270\" y=\"125\" text-anchor=\"middle\" font-size=\"19\" fill=\"#1e3a8a\">−10x</text><rect x=\"340\" y=\"100\" width=\"70\" height=\"38\" rx=\"6\" fill=\"#f1f5f9\" stroke=\"#94a3b8\"/><text x=\"375\" y=\"125\" text-anchor=\"middle\" font-size=\"19\" fill=\"#64748b\">0</text><text x=\"260\" y=\"185\" text-anchor=\"middle\" font-size=\"22\" font-family=\"monospace\" fill=\"#047857\">f′(x)=12x²−10x</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Differentiate f(x)=3x⁴−2x³+5x−6.",
+          "solution_steps": [
+            "Differentiate 3x⁴ to obtain 12x³.",
+            "Differentiate −2x³ to obtain −6x².",
+            "Differentiate 5x to obtain 5.",
+            "Differentiate −6 to obtain 0.",
+            "Combine the terms."
+          ],
+          "final_answer": "f′(x)=12x³−6x²+5"
+        },
+        {
+          "problem": "For f(x)=2x³−5x²+4x−8, find the gradient at x=2.",
+          "solution_steps": [
+            "Differentiate: f′(x)=6x²−10x+4.",
+            "Substitute x=2: f′(2)=6(4)−20+4.",
+            "Calculate 24−20+4=8."
+          ],
+          "final_answer": "Gradient = 8"
+        },
+        {
+          "problem": "Find the point on y=x²−3x+2 where the tangent is horizontal.",
+          "solution_steps": [
+            "Differentiate: y′=2x−3.",
+            "A horizontal tangent has gradient zero, so 2x−3=0.",
+            "Solve x=3/2.",
+            "Substitute into the original function: y=9/4−9/2+2=−1/4."
+          ],
+          "final_answer": "The point is (3/2, −1/4)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Substituting the point before differentiating.",
+          "correction": "Differentiate the original polynomial first, then evaluate the derivative at the given input."
+        },
+        {
+          "mistake": "Dropping a term or changing its sign.",
+          "correction": "Work term by term and preserve each sign."
+        },
+        {
+          "mistake": "Confusing the derivative value with the point's y-coordinate.",
+          "correction": "The derivative gives the gradient; use the original function to find the point's y-coordinate."
+        }
+      ],
+      "quick_summary": [
+        "Differentiate every polynomial term separately.",
+        "The constant term becomes zero.",
+        "For a non-constant polynomial, the degree decreases by one.",
+        "Evaluate f′(a) to obtain the gradient at x=a."
+      ]
+    },
+    "hs_math_t17_st12": {
+      "id": "hs_math_t17_st12",
+      "title": "Tangents and Gradients of Curves",
+      "overview": "The derivative gives the gradient of a curve at a point. Once the point and gradient are known, the point-slope equation of a straight line can be used to form the tangent equation.",
+      "key_concepts": [
+        {
+          "concept": "Gradient of a curve",
+          "definition": "The derivative evaluated at a point gives the tangent gradient.",
+          "details": [
+            "Differentiate the function to obtain f′(x).",
+            "Substitute the x-coordinate of the point into f′(x).",
+            "The result is the gradient of the tangent at that point, provided the derivative exists."
+          ]
+        },
+        {
+          "concept": "Finding the point",
+          "definition": "The point on the curve must satisfy the original function.",
+          "details": [
+            "If only x=a is given, calculate y=f(a).",
+            "The tangent point is (a,f(a)).",
+            "Keep the original function for coordinates and the derivative for the gradient."
+          ]
+        },
+        {
+          "concept": "Equation of a tangent",
+          "definition": "Use the point-slope form of a straight line.",
+          "details": [
+            "Substitute the tangent gradient for m.",
+            "Substitute the coordinates of the point for (x₁,y₁).",
+            "Simplify the resulting equation if required."
+          ]
+        },
+        {
+          "concept": "Vertical and horizontal tangents",
+          "definition": "The ordinary gradient formula describes finite slopes.",
+          "details": [
+            "A horizontal tangent has gradient zero.",
+            "A vertical tangent has no finite gradient and cannot be written in the usual y=mx+c form.",
+            "At this level, focus on points where the derivative gives a finite tangent gradient."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Tangent gradient",
+          "equation": "$$m=f'(a)$$",
+          "variables": {
+            "a": "The x-coordinate of the point",
+            "m": "Tangent gradient"
+          }
+        },
+        {
+          "name": "Point-slope equation",
+          "equation": "$$y-y_1=m(x-x_1)$$",
+          "variables": {
+            "(x₁,y₁)": "Point on the tangent",
+            "m": "Gradient of the tangent"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v17_s12",
+          "title": "Finding a Tangent Line",
+          "type": "svg",
+          "caption": "Differentiate for the slope, use the original function for the point, then apply point-slope form.",
+          "alt_text": "A curve and tangent line touching at P(a,f(a)), with gradient m=f′(a).",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\"><rect width=\"520\" height=\"220\" rx=\"10\" fill=\"#f8fafc\"/><line x1=\"40\" y1=\"180\" x2=\"490\" y2=\"180\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M55 160 Q210 10 450 155\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><circle cx=\"250\" cy=\"85\" r=\"6\" fill=\"#0f172a\"/><line x1=\"105\" y1=\"145\" x2=\"395\" y2=\"25\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"260\" y=\"75\" font-size=\"14\" fill=\"#0f172a\">P(a,f(a))</text><text x=\"370\" y=\"35\" font-size=\"14\" fill=\"#b91c1c\">Tangent</text><text x=\"70\" y=\"45\" font-size=\"14\" fill=\"#047857\">m=f′(a)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the tangent to y=x² at x=2.",
+          "solution_steps": [
+            "Find the point: y=2²=4, so the point is (2,4).",
+            "Differentiate: y′=2x.",
+            "At x=2, the tangent gradient is m=4.",
+            "Use y−4=4(x−2).",
+            "Simplify."
+          ],
+          "final_answer": "y=4x−4"
+        },
+        {
+          "problem": "Find the tangent to y=x³−x at x=1.",
+          "solution_steps": [
+            "Point: y=1−1=0, so the point is (1,0).",
+            "Differentiate: y′=3x²−1.",
+            "At x=1, m=3−1=2.",
+            "Use y−0=2(x−1)."
+          ],
+          "final_answer": "y=2x−2"
+        },
+        {
+          "problem": "Find the gradient of y=2x²+3x at x=−1.",
+          "solution_steps": [
+            "Differentiate: y′=4x+3.",
+            "Substitute x=−1: 4(−1)+3=−1."
+          ],
+          "final_answer": "−1"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the derivative to find the y-coordinate.",
+          "correction": "Use the original function for the point and the derivative for the tangent gradient."
+        },
+        {
+          "mistake": "Using the wrong point in point-slope form.",
+          "correction": "Check that the point lies on the original curve before writing the tangent equation."
+        },
+        {
+          "mistake": "Assuming every tangent has a finite gradient.",
+          "correction": "A vertical tangent does not have a finite gradient in the usual slope formula."
+        }
+      ],
+      "quick_summary": [
+        "The derivative at x=a gives the tangent gradient.",
+        "The original function gives the point (a,f(a)).",
+        "Use y−y₁=m(x−x₁) to form the tangent equation.",
+        "A horizontal tangent has gradient zero."
+      ]
+    },
+    "hs_math_t17_st13": {
+      "id": "hs_math_t17_st13",
+      "title": "Increasing and Decreasing Functions",
+      "overview": "The sign of the derivative indicates whether a differentiable function is increasing or decreasing over an interval. Simple sign tests help describe the behaviour of a graph.",
+      "key_concepts": [
+        {
+          "concept": "Increasing function",
+          "definition": "A function is increasing on an interval when its output rises as the input increases.",
+          "details": [
+            "Where f′(x)>0 throughout an interval, the graph has a positive slope and is increasing there.",
+            "A positive derivative means the tangent slopes upward from left to right.",
+            "Use interval language to state where the function increases."
+          ]
+        },
+        {
+          "concept": "Decreasing function",
+          "definition": "A function is decreasing on an interval when its output falls as the input increases.",
+          "details": [
+            "Where f′(x)<0 throughout an interval, the graph has a negative slope and is decreasing there.",
+            "A negative derivative means the tangent slopes downward from left to right.",
+            "Do not confuse a negative derivative with a negative function value."
+          ]
+        },
+        {
+          "concept": "Stationary input",
+          "definition": "A stationary point can occur where the derivative is zero.",
+          "details": [
+            "Solve f′(x)=0 to locate stationary inputs.",
+            "A stationary input divides the number line into intervals to test.",
+            "A zero derivative alone does not establish whether the point is a maximum or minimum."
+          ]
+        },
+        {
+          "concept": "Derivative sign chart",
+          "definition": "Testing the derivative in each interval identifies the direction of change.",
+          "details": [
+            "Find the critical input values from f′(x)=0.",
+            "Choose a test value in each interval.",
+            "A positive result indicates increasing behaviour; a negative result indicates decreasing behaviour."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Increasing condition",
+          "equation": "$$f'(x)>0$$",
+          "variables": {
+            "f′(x)": "Derivative of the function"
+          }
+        },
+        {
+          "name": "Decreasing condition",
+          "equation": "$$f'(x)<0$$",
+          "variables": {
+            "f′(x)": "Derivative of the function"
+          }
+        },
+        {
+          "name": "Stationary condition",
+          "equation": "$$f'(x)=0$$",
+          "variables": {
+            "f′(x)": "Derivative of the function"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v17_s13",
+          "title": "Derivative Sign and Direction",
+          "type": "svg",
+          "caption": "Positive derivative indicates increasing behaviour; negative derivative indicates decreasing behaviour.",
+          "alt_text": "A curve rises to a stationary point then falls, with positive and negative derivative regions marked.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\"><rect width=\"520\" height=\"220\" rx=\"10\" fill=\"#f8fafc\"/><path d=\"M45 165 Q150 20 260 55 Q360 85 475 170\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><path d=\"M55 155 Q150 35 250 55\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"4\"/><path d=\"M260 55 Q360 85 465 160\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"4\"/><circle cx=\"260\" cy=\"55\" r=\"6\" fill=\"#0f172a\"/><text x=\"135\" y=\"110\" font-size=\"15\" fill=\"#047857\">f′(x)&gt;0</text><text x=\"360\" y=\"115\" font-size=\"15\" fill=\"#b91c1c\">f′(x)&lt;0</text><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-size=\"13\" fill=\"#0f172a\">f′(x)=0</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find where f(x)=x²−4x+3 is increasing and decreasing.",
+          "solution_steps": [
+            "Differentiate: f′(x)=2x−4.",
+            "Solve 2x−4=0 to obtain x=2.",
+            "For x<2, choose x=0: f′(0)=−4, so the function is decreasing.",
+            "For x>2, choose x=3: f′(3)=2, so the function is increasing."
+          ],
+          "final_answer": "Decreasing on (−∞,2); increasing on (2,∞)"
+        },
+        {
+          "problem": "Determine the intervals of increase and decrease for f(x)=x³−3x.",
+          "solution_steps": [
+            "Differentiate: f′(x)=3x²−3=3(x−1)(x+1).",
+            "Stationary inputs are x=−1 and x=1.",
+            "Test x=−2: f′(−2)=9>0, so increasing on (−∞,−1).",
+            "Test x=0: f′(0)=−3<0, so decreasing on (−1,1).",
+            "Test x=2: f′(2)=9>0, so increasing on (1,∞)."
+          ],
+          "final_answer": "Increasing on (−∞,−1) and (1,∞); decreasing on (−1,1)"
+        },
+        {
+          "problem": "What does f′(x)=0 tell us at a point?",
+          "solution_steps": [
+            "The tangent gradient is zero at that input, so the tangent is horizontal.",
+            "The point is stationary, but further sign analysis is needed to classify it."
+          ],
+          "final_answer": "It is a stationary point; it may be a maximum, minimum or another type of stationary point"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Testing intervals in the original function.",
+          "correction": "Use test values in the derivative, because its sign gives the direction of change."
+        },
+        {
+          "mistake": "Assuming f′(x)=0 always means a maximum or minimum.",
+          "correction": "Check whether the derivative changes sign across the stationary input."
+        },
+        {
+          "mistake": "Including a stationary endpoint in an open interval without explanation.",
+          "correction": "State intervals carefully and handle domain endpoints separately where relevant."
+        }
+      ],
+      "quick_summary": [
+        "Positive derivative means increasing; negative derivative means decreasing.",
+        "Solve f′(x)=0 to locate stationary inputs.",
+        "Use a sign chart to test each interval.",
+        "A stationary point is not automatically a maximum or minimum."
+      ]
+    },
+    "hs_math_t17_st14": {
+      "id": "hs_math_t17_st14",
+      "title": "Stationary Points — Introduction",
+      "overview": "A stationary point is a point on a differentiable curve where the tangent is horizontal. Introductory graphical reasoning can identify simple local maxima and minima by observing whether the curve changes direction.",
+      "key_concepts": [
+        {
+          "concept": "Stationary point",
+          "definition": "A stationary point occurs where the derivative is zero.",
+          "details": [
+            "At a stationary point, the tangent is horizontal.",
+            "Solve f′(x)=0 to find candidate x-coordinates.",
+            "Substitute each candidate into the original function to find its y-coordinate."
+          ]
+        },
+        {
+          "concept": "Local maximum",
+          "definition": "A local maximum is a point higher than nearby points on the graph.",
+          "details": [
+            "The graph rises before the point and falls after it.",
+            "In a derivative sign chart, the derivative changes from positive to negative.",
+            "The point is a local peak, not necessarily the highest value over the entire domain."
+          ]
+        },
+        {
+          "concept": "Local minimum",
+          "definition": "A local minimum is a point lower than nearby points on the graph.",
+          "details": [
+            "The graph falls before the point and rises after it.",
+            "In a derivative sign chart, the derivative changes from negative to positive.",
+            "The point is a local valley, not necessarily the lowest value over the entire domain."
+          ]
+        },
+        {
+          "concept": "Not every stationary point is an extremum",
+          "definition": "A horizontal tangent does not guarantee a peak or valley.",
+          "details": [
+            "A curve may flatten and continue increasing or decreasing.",
+            "For example, y=x³ has a horizontal tangent at x=0 but continues increasing on both sides.",
+            "Use the graph or sign change to decide whether the stationary point is a local maximum or minimum."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Stationary point condition",
+          "equation": "$$f'(a)=0$$",
+          "variables": {
+            "a": "Stationary input"
+          }
+        },
+        {
+          "name": "Local maximum sign change",
+          "equation": "$$f'(x): +\\;\\to\\;-$$",
+          "variables": {
+            "f′(x)": "Derivative sign on either side"
+          }
+        },
+        {
+          "name": "Local minimum sign change",
+          "equation": "$$f'(x): -\\;\\to\\;+$$",
+          "variables": {
+            "f′(x)": "Derivative sign on either side"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v17_s14",
+          "title": "Local Maximum and Minimum",
+          "type": "svg",
+          "caption": "A local maximum changes from increasing to decreasing; a local minimum changes from decreasing to increasing.",
+          "alt_text": "Two curve sketches: hill and valley with horizontal tangents and direction arrows.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\"><rect width=\"520\" height=\"220\" rx=\"10\" fill=\"#f8fafc\"/><path d=\"M35 145 Q110 15 185 145\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><line x1=\"90\" y1=\"45\" x2=\"130\" y2=\"45\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"110\" y=\"180\" text-anchor=\"middle\" font-size=\"14\" fill=\"#0f172a\">Local maximum</text><text x=\"60\" y=\"80\" font-size=\"13\" fill=\"#16a34a\">+</text><text x=\"155\" y=\"80\" font-size=\"13\" fill=\"#dc2626\">−</text><path d=\"M310 40 Q385 175 460 40\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><line x1=\"365\" y1=\"105\" x2=\"405\" y2=\"105\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"385\" y=\"195\" text-anchor=\"middle\" font-size=\"14\" fill=\"#0f172a\">Local minimum</text><text x=\"330\" y=\"90\" font-size=\"13\" fill=\"#dc2626\">−</text><text x=\"435\" y=\"90\" font-size=\"13\" fill=\"#16a34a\">+</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find and classify the stationary point of f(x)=x²−6x+5.",
+          "solution_steps": [
+            "Differentiate: f′(x)=2x−6.",
+            "Set f′(x)=0: 2x−6=0, so x=3.",
+            "Find the y-coordinate: f(3)=9−18+5=−4.",
+            "The parabola opens upwards, so this stationary point is a local minimum."
+          ],
+          "final_answer": "Local minimum at (3,−4)"
+        },
+        {
+          "problem": "Find the stationary point of f(x)=−x²+4x+1 and classify it.",
+          "solution_steps": [
+            "Differentiate: f′(x)=−2x+4.",
+            "Set −2x+4=0, giving x=2.",
+            "Find f(2)=−4+8+1=5.",
+            "The parabola opens downwards, so the stationary point is a local maximum."
+          ],
+          "final_answer": "Local maximum at (2,5)"
+        },
+        {
+          "problem": "Is the stationary point of y=x³ at x=0 a local maximum or minimum?",
+          "solution_steps": [
+            "Differentiate: y′=3x², which is zero at x=0.",
+            "For x<0 and x>0, the derivative is positive except at zero.",
+            "The function increases on both sides, so it does not change direction."
+          ],
+          "final_answer": "Neither; it is a stationary point but not a local maximum or minimum"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calling every stationary point an extremum.",
+          "correction": "Check the graph or the derivative sign on both sides."
+        },
+        {
+          "mistake": "Reporting only the x-coordinate.",
+          "correction": "Substitute the stationary input into the original function to obtain the full point."
+        },
+        {
+          "mistake": "Confusing local and absolute extrema.",
+          "correction": "A local extremum is compared with nearby values; an absolute extremum is compared with the entire domain."
+        }
+      ],
+      "quick_summary": [
+        "A stationary point has a horizontal tangent and f′(a)=0.",
+        "A + to − sign change indicates a local maximum.",
+        "A − to + sign change indicates a local minimum.",
+        "A stationary point need not be a maximum or minimum."
+      ]
+    },
+    "hs_math_t17_st16": {
+      "id": "hs_math_t17_st16",
+      "title": "Simple Indefinite Integrals",
+      "overview": "Integration reverses differentiation. An indefinite integral represents a family of functions whose derivatives equal the given function. At this level, integrate simple polynomial terms and verify answers by differentiating.",
+      "key_concepts": [
+        {
+          "concept": "Antiderivative",
+          "definition": "An antiderivative of a function is a function whose derivative is the original function.",
+          "details": [
+            "If F′(x)=f(x), then F is an antiderivative of f.",
+            "A function can have many antiderivatives that differ by a constant.",
+            "Differentiating an antiderivative returns the original integrand."
+          ]
+        },
+        {
+          "concept": "Indefinite integral notation",
+          "definition": "The integral sign represents the family of antiderivatives.",
+          "details": [
+            "In ∫f(x) dx, f(x) is the integrand and x is the variable of integration.",
+            "The symbol dx indicates integration with respect to x.",
+            "The constant of integration +C must be included because the derivative of any constant is zero."
+          ]
+        },
+        {
+          "concept": "Reverse power rule",
+          "definition": "For a power xⁿ with n not equal to −1, increase the power by one and divide by the new power.",
+          "details": [
+            "Add 1 to the exponent.",
+            "Divide the coefficient by the new exponent.",
+            "The rule applies term by term to simple polynomial expressions."
+          ]
+        },
+        {
+          "concept": "Sum and constant multiple rules",
+          "definition": "Integrate each term separately while retaining coefficients and signs.",
+          "details": [
+            "The integral of a sum is the sum of the integrals.",
+            "A constant multiplier can be taken outside the integral.",
+            "Integrate constant terms as constant multiples of x."
+          ]
+        },
+        {
+          "concept": "Checking an integral",
+          "definition": "Differentiate the proposed antiderivative to verify it.",
+          "details": [
+            "Differentiate the answer term by term.",
+            "The result should equal the original integrand.",
+            "The constant C disappears when differentiated."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Reverse power rule",
+          "equation": "$$\\int x^n\\,dx=\\frac{x^{n+1}}{n+1}+C,\\quad n\\ne -1$$",
+          "variables": {
+            "n": "Exponent, not equal to −1",
+            "C": "Arbitrary constant of integration"
+          }
+        },
+        {
+          "name": "Constant multiple rule",
+          "equation": "$$\\int c f(x)\\,dx=c\\int f(x)\\,dx$$",
+          "variables": {
+            "c": "Constant"
+          }
+        },
+        {
+          "name": "Sum and difference rules",
+          "equation": "$$\\int[f(x)\\pm g(x)]\\,dx=\\int f(x)\\,dx\\pm\\int g(x)\\,dx$$",
+          "variables": {
+            "f, g": "Integrable functions"
+          }
+        },
+        {
+          "name": "Integral of a constant",
+          "equation": "$$\\int k\\,dx=kx+C$$",
+          "variables": {
+            "k": "Constant"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v17_s16",
+          "title": "Integration as Reverse Differentiation",
+          "type": "svg",
+          "caption": "Integration reverses differentiation: x³ differentiates to 3x², so 3x² integrates to x³+C.",
+          "alt_text": "Arrow from x³ to 3x² labelled differentiate and reverse arrow labelled integrate.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\"><rect width=\"520\" height=\"220\" rx=\"10\" fill=\"#f8fafc\"/><rect x=\"35\" y=\"65\" width=\"155\" height=\"70\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"112\" y=\"108\" text-anchor=\"middle\" font-size=\"25\" font-family=\"monospace\" fill=\"#1e3a8a\">x³ + C</text><rect x=\"330\" y=\"65\" width=\"155\" height=\"70\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"407\" y=\"108\" text-anchor=\"middle\" font-size=\"25\" font-family=\"monospace\" fill=\"#14532d\">3x²</text><path d=\"M190 82 L330 82\" stroke=\"#2563eb\" stroke-width=\"3\"/><polygon points=\"330,82 318,75 318,89\" fill=\"#2563eb\"/><text x=\"260\" y=\"68\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1e3a8a\">Differentiate</text><path d=\"M330 120 L190 120\" stroke=\"#16a34a\" stroke-width=\"3\"/><polygon points=\"190,120 202,113 202,127\" fill=\"#16a34a\"/><text x=\"260\" y=\"150\" text-anchor=\"middle\" font-size=\"13\" fill=\"#14532d\">Integrate</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate ∫6x² dx.",
+          "solution_steps": [
+            "Increase the exponent 2 to 3.",
+            "Divide the coefficient 6 by 3 to obtain 2.",
+            "Add the constant of integration."
+          ],
+          "final_answer": "2x³+C"
+        },
+        {
+          "problem": "Evaluate ∫(4x³−6x+5) dx.",
+          "solution_steps": [
+            "Integrate 4x³: 4x⁴/4=x⁴.",
+            "Integrate −6x: −6x²/2=−3x².",
+            "Integrate 5: 5x.",
+            "Add +C."
+          ],
+          "final_answer": "x⁴−3x²+5x+C"
+        },
+        {
+          "problem": "Find an antiderivative of 8x³+2x and verify it.",
+          "solution_steps": [
+            "Integrate: 8x³ becomes 2x⁴; 2x becomes x².",
+            "An antiderivative is 2x⁴+x²+C.",
+            "Differentiate: 8x³+2x+0, which matches the integrand."
+          ],
+          "final_answer": "2x⁴+x²+C"
+        },
+        {
+          "problem": "Evaluate ∫7 dx.",
+          "solution_steps": [
+            "The integrand is a constant.",
+            "The integral of a constant k is kx+C."
+          ],
+          "final_answer": "7x+C"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting the constant of integration.",
+          "correction": "Always include +C in an indefinite integral."
+        },
+        {
+          "mistake": "Subtracting one from the power as in differentiation.",
+          "correction": "Integration increases the exponent by one, then divides by the new exponent."
+        },
+        {
+          "mistake": "Dividing by the old exponent.",
+          "correction": "Divide by n+1 after increasing the power from n to n+1."
+        },
+        {
+          "mistake": "Not checking the result.",
+          "correction": "Differentiate the proposed antiderivative and confirm that it returns the integrand."
+        }
+      ],
+      "quick_summary": [
+        "Integration is the reverse process of differentiation.",
+        "Increase the power by one and divide by the new power.",
+        "Integrate polynomial sums term by term.",
+        "Include +C in every indefinite integral.",
+        "Differentiate your answer to verify it."
+      ]
+    }
+  }
+}

@@ -1,0 +1,1719 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t18",
+  "topicTitle": "Financial Mathematics and Mathematical Modelling",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t18_st01": {
+      "id": "hs_math_t18_st01",
+      "title": "Ratios, rates and proportions",
+      "overview": "Ratios, rates and proportions describe how quantities compare and how they change together. They are used to scale recipes, compare prices, calculate speed and fuel efficiency, share amounts fairly and solve practical problems involving direct or inverse relationships.",
+      "key_concepts": [
+        {
+          "concept": "Ratios",
+          "definition": "A ratio compares quantities by division.",
+          "details": [
+            "A ratio a:b compares a parts of the first quantity with b parts of the second. Both quantities must be expressed in compatible units before comparison. Ratios can be simplified by dividing every term by the same non-zero factor. A ratio does not state an actual total unless the total number of parts or one quantity is known."
+          ]
+        },
+        {
+          "concept": "Rates and unit rates",
+          "definition": "A rate compares quantities measured in different units.",
+          "details": [
+            "Examples include kilometres per hour, currency per kilogram and litres per minute. A unit rate gives the amount for one unit of the denominator, making comparisons easier. Convert units consistently before dividing."
+          ]
+        },
+        {
+          "concept": "Direct proportion",
+          "definition": "Two quantities are directly proportional when their ratio is constant.",
+          "details": [
+            "If y is directly proportional to x, y=kx for a constant k. Doubling x doubles y and halving x halves y. The graph is a straight line through the origin. The constant k is found from any corresponding pair of non-zero values."
+          ]
+        },
+        {
+          "concept": "Inverse proportion",
+          "definition": "Two quantities are inversely proportional when their product is constant.",
+          "details": [
+            "If y is inversely proportional to x, xy=k or y=k/x. Increasing one quantity decreases the other so their product remains unchanged. For a fixed amount of work, more workers may mean fewer days, provided all workers work at the same rate and conditions remain unchanged."
+          ]
+        },
+        {
+          "concept": "Scale factors",
+          "definition": "A scale factor changes corresponding dimensions by the same multiplier.",
+          "details": [
+            "If every length is multiplied by k, areas are multiplied by k² and volumes by k³. This matters when enlarging maps, models, containers and similar shapes."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Direct proportion",
+          "equation": "$$y=kx$$",
+          "variables": {
+            "y": "dependent quantity",
+            "x": "independent quantity",
+            "k": "constant of proportionality"
+          }
+        },
+        {
+          "name": "Inverse proportion",
+          "equation": "$$xy=k \\quad\\text{or}\\quad y=\\frac{k}{x}$$",
+          "variables": {
+            "x, y": "related non-zero quantities",
+            "k": "constant product"
+          }
+        },
+        {
+          "name": "Unit rate",
+          "equation": "$$\\text{Unit rate}=\\frac{\\text{quantity}}{\\text{number of units}}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s01",
+          "title": "Direct and inverse proportion",
+          "type": "svg",
+          "caption": "Direct proportion is a straight line through the origin; inverse proportion decreases as x increases.",
+          "alt_text": "Two coordinate plots: a rising straight line through the origin and a decreasing inverse curve.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Direct and inverse proportion\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Direct and inverse proportion</text>\n<g stroke=\"#64748b\" stroke-width=\"2\"><path d=\"M45 165 H245 M65 180 V55 M285 165 H485 M305 180 V55\"/></g><path d=\"M65 165 L220 65\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><path d=\"M315 70 C340 105 390 145 465 158\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"4\"/><text x=\"150\" y=\"190\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#1e40af\">y = kx</text><text x=\"395\" y=\"190\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#166534\">y = k/x</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Illustrative shapes; axes are not to scale</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A total of 840 units is shared in the ratio 2:3:7. Find the largest share.",
+          "solution_steps": [
+            "Add the ratio parts: 2+3+7=12 parts.",
+            "One part is 840÷12=70 units.",
+            "The largest share is 7×70=490 units."
+          ],
+          "final_answer": "490 units"
+        },
+        {
+          "problem": "Eight identical pumps empty a tank in 15 hours. How long would 12 identical pumps take at the same rate?",
+          "solution_steps": [
+            "For a fixed job, pumps and time are inversely proportional.",
+            "The constant product is 8×15=120 pump-hours.",
+            "Let t be the time for 12 pumps: 12t=120, so t=10."
+          ],
+          "final_answer": "10 hours"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Comparing quantities in different units without converting them.",
+          "correction": "Convert to compatible units first; for example, 2 m:50 cm becomes 200 cm:50 cm = 4:1."
+        },
+        {
+          "mistake": "Assuming every relationship is directly proportional.",
+          "correction": "Check whether the ratio y/x is constant (direct) or the product xy is constant (inverse). A fixed starting charge usually means the relationship is not directly proportional."
+        }
+      ],
+      "quick_summary": [
+        "A ratio compares quantities; a rate compares quantities with different units.",
+        "A unit rate is calculated per one unit.",
+        "Direct proportion has the form y=kx; inverse proportion has xy=k.",
+        "Length, area and volume scale by k, k² and k³ respectively."
+      ]
+    },
+    "hs_math_t18_st02": {
+      "id": "hs_math_t18_st02",
+      "title": "Percentages and percentage change",
+      "overview": "Percentages express quantities per hundred. In practical finance, percentage multipliers make increases, decreases and repeated changes easier to calculate. Reverse percentages are used when a final value is known but the original value is not.",
+      "key_concepts": [
+        {
+          "concept": "Percentage multipliers",
+          "definition": "A multiplier converts a percentage change into one multiplication.",
+          "details": [
+            "For an increase of r%, multiply by 1+r/100. For a decrease of r%, multiply by 1-r/100. The multiplier acts on the value immediately before that change."
+          ]
+        },
+        {
+          "concept": "Percentage change",
+          "definition": "Percentage change compares the change with the original value.",
+          "details": [
+            "Subtract the original value from the new value, divide by the original value, and multiply by 100%. A positive result is an increase; a negative result is a decrease."
+          ]
+        },
+        {
+          "concept": "Successive percentage changes",
+          "definition": "Two or more percentage changes are applied one after another.",
+          "details": [
+            "Apply each multiplier in sequence. The second percentage is generally calculated on the value after the first change, so the percentages should not simply be added or subtracted."
+          ]
+        },
+        {
+          "concept": "Reverse percentages",
+          "definition": "A reverse percentage finds the starting value from a changed value.",
+          "details": [
+            "Divide the final value by the relevant multiplier. For example, if a final price is 1.2 times the original, divide the final price by 1.2 to recover the original."
+          ]
+        },
+        {
+          "concept": "Percentage points",
+          "definition": "A percentage-point change is the arithmetic difference between two percentages.",
+          "details": [
+            "A rate rising from 12% to 15% rises by 3 percentage points. Its relative percentage increase is 3/12×100%=25%. These describe different comparisons."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Percentage change",
+          "equation": "$$\\text{Percentage change}=\\frac{\\text{new value}-\\text{original value}}{\\text{original value}}\\times100\\%$$",
+          "variables": {}
+        },
+        {
+          "name": "Increase/decrease multiplier",
+          "equation": "$$M=1\\pm\\frac{r}{100}$$",
+          "variables": {
+            "r": "percentage change; use + for an increase and − for a decrease"
+          }
+        },
+        {
+          "name": "Reverse percentage",
+          "equation": "$$\\text{Original value}=\\frac{\\text{final value}}{M}$$",
+          "variables": {
+            "M": "multiplier for the change"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s02",
+          "title": "Percentage multiplier",
+          "type": "svg",
+          "caption": "An increase and its reverse are represented by multiplication and division by the same multiplier.",
+          "alt_text": "Original value is multiplied by 1.15 to reach a value after a 15% increase; division by 1.15 reverses it.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Percentage multiplier\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Percentage multiplier</text>\n<rect x=\"28\" y=\"78\" width=\"130\" height=\"54\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"93\" y=\"110\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#1e3a8a\">Original</text><rect x=\"362\" y=\"78\" width=\"130\" height=\"54\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"427\" y=\"110\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#166534\">Final</text><path d=\"M160 90 H350 M340 82 L350 90 L340 98\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"255\" y=\"75\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#1e40af\">× 1.15</text><path d=\"M350 122 H160 M170 114 L160 122 L170 130\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"255\" y=\"151\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#991b1b\">÷ 1.15</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Example: 15% increase</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A price of 800 currency units increases by 12% and then decreases by 10%. Find the final price and overall percentage change.",
+          "solution_steps": [
+            "Increase multiplier = 1.12; new price = 800×1.12=896.",
+            "Decrease multiplier = 0.90; final price = 896×0.90=806.40.",
+            "Change = 806.40−800=6.40.",
+            "Percentage change = 6.40/800×100%=0.8% increase."
+          ],
+          "final_answer": "806.40 units; overall increase of 0.8%"
+        },
+        {
+          "problem": "After a 20% discount, a jacket costs 640 units. Find its original marked price.",
+          "solution_steps": [
+            "A 20% discount leaves 80% of the original price.",
+            "Multiplier = 0.80.",
+            "Original price = 640÷0.80=800."
+          ],
+          "final_answer": "800 units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding successive percentage changes directly.",
+          "correction": "Use each multiplier in sequence because the base changes after every step."
+        },
+        {
+          "mistake": "Subtracting the percentage from the final value in a reverse-percentage problem.",
+          "correction": "Divide by the original change multiplier; the percentage was applied to the original value, not the final value."
+        }
+      ],
+      "quick_summary": [
+        "Convert increases and decreases to multipliers.",
+        "Apply successive changes one after another.",
+        "For a reverse percentage, divide by the multiplier.",
+        "Percentage points measure an absolute difference between percentage rates."
+      ]
+    },
+    "hs_math_t18_st03": {
+      "id": "hs_math_t18_st03",
+      "title": "Profit, loss and discount",
+      "overview": "Commercial calculations compare the cost of obtaining an item, its marked price and the price actually paid or received. Correctly identifying the reference value is essential: profit and loss percentages are based on cost price, while discount percentages are based on marked price.",
+      "key_concepts": [
+        {
+          "concept": "Cost price and selling price",
+          "definition": "Cost price is the amount paid to obtain an item; selling price is the amount received when it is sold.",
+          "details": [
+            "If selling price exceeds cost price, there is a profit. If selling price is below cost price, there is a loss. Other costs such as transport may be included in cost when a problem specifies them."
+          ]
+        },
+        {
+          "concept": "Profit and loss percentages",
+          "definition": "Profit or loss percentage measures the gain or loss relative to cost price.",
+          "details": [
+            "Profit = selling price−cost price. Loss = cost price−selling price. The denominator for either percentage is cost price, because it is the original amount invested in the item."
+          ]
+        },
+        {
+          "concept": "Marked price and discount",
+          "definition": "Marked price is the displayed price before discount; discount is the reduction from it.",
+          "details": [
+            "Discount = marked price−selling price. Discount percentage is calculated using marked price as the reference amount."
+          ]
+        },
+        {
+          "concept": "Successive discounts",
+          "definition": "Successive discounts are applied to the reduced price at each stage.",
+          "details": [
+            "A discount of a% followed by b% leaves a fraction (1−a/100)(1−b/100) of the marked price. The combined discount is not generally a+b percent."
+          ]
+        },
+        {
+          "concept": "Commercial decision context",
+          "definition": "A selling price must be interpreted alongside costs and discounts.",
+          "details": [
+            "A large discount does not automatically mean a loss: compare the final selling price with the cost price. State clearly which price is used as the percentage base."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Profit and loss",
+          "equation": "$$\\text{Profit}=SP-CP,\\quad \\text{Loss}=CP-SP$$",
+          "variables": {
+            "SP": "selling price",
+            "CP": "cost price"
+          }
+        },
+        {
+          "name": "Profit/loss percentage",
+          "equation": "$$\\text{Profit or loss }\\% =\\frac{\\text{profit or loss}}{CP}\\times100\\%$$",
+          "variables": {
+            "CP": "cost price"
+          }
+        },
+        {
+          "name": "Discount percentage",
+          "equation": "$$\\text{Discount }\\% =\\frac{MP-SP}{MP}\\times100\\%$$",
+          "variables": {
+            "MP": "marked price",
+            "SP": "selling price"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s03",
+          "title": "Price relationships",
+          "type": "svg",
+          "caption": "Profit is measured from cost price; discount is measured from marked price.",
+          "alt_text": "A price chain showing cost price, selling price and marked price with the relevant differences.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Price relationships\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Price relationships</text>\n<rect x=\"20\" y=\"78\" width=\"145\" height=\"54\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"92\" y=\"110\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#1e3a8a\">Cost price</text><rect x=\"188\" y=\"78\" width=\"145\" height=\"54\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"260\" y=\"110\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#166534\">Selling price</text><rect x=\"355\" y=\"78\" width=\"145\" height=\"54\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"427\" y=\"110\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#92400e\">Marked price</text><path d=\"M165 105 H185 M178 98 L185 105 L178 112\" stroke=\"#16a34a\" stroke-width=\"3\" fill=\"none\"/><path d=\"M355 105 H336 M343 98 L336 105 L343 112\" stroke=\"#dc2626\" stroke-width=\"3\" fill=\"none\"/><text x=\"176\" y=\"68\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"12\" fill=\"#166534\">Profit</text><text x=\"344\" y=\"68\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"12\" fill=\"#991b1b\">Discount</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">The percentage base depends on the comparison</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A shop buys an item for 500 units and marks it at 800 units. It gives a 15% discount. Find the selling price and profit percentage.",
+          "solution_steps": [
+            "Discount = 15% of 800 = 120 units.",
+            "Selling price = 800−120=680 units.",
+            "Profit = 680−500=180 units.",
+            "Profit percentage = 180/500×100%=36%."
+          ],
+          "final_answer": "Selling price = 680 units; profit = 36%"
+        },
+        {
+          "problem": "An item marked at 1,000 units receives successive discounts of 10% and 5%. Find the final price and equivalent single discount.",
+          "solution_steps": [
+            "After 10% discount: 1,000×0.90=900.",
+            "After a further 5% discount: 900×0.95=855.",
+            "Total discount = 1,000−855=145 units.",
+            "Equivalent discount = 145/1,000×100%=14.5%."
+          ],
+          "final_answer": "855 units; equivalent discount = 14.5%"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating profit percentage using selling price.",
+          "correction": "Use cost price as the denominator for profit and loss percentages."
+        },
+        {
+          "mistake": "Calculating discount percentage using cost price.",
+          "correction": "Use marked price as the denominator because discount is taken from the marked price."
+        }
+      ],
+      "quick_summary": [
+        "Profit = SP−CP; loss = CP−SP.",
+        "Profit and loss percentages use cost price.",
+        "Discount percentage uses marked price.",
+        "Successive discounts are applied one after another."
+      ]
+    },
+    "hs_math_t18_st04": {
+      "id": "hs_math_t18_st04",
+      "title": "Simple and compound interest",
+      "overview": "Interest is the amount paid for borrowing money or earned for saving or lending it. Simple interest is calculated on the original principal, while compound interest is calculated on the principal together with accumulated interest. The difference becomes more significant over longer periods.",
+      "key_concepts": [
+        {
+          "concept": "Principal, rate and time",
+          "definition": "Principal is the starting amount; rate is the percentage charged or earned per year; time is the duration.",
+          "details": [
+            "Check whether the stated rate is annual or for another period. The time unit must match the rate period. A rate of 6% per annum means 6% for one year."
+          ]
+        },
+        {
+          "concept": "Simple interest",
+          "definition": "Simple interest is calculated on the original principal throughout the term.",
+          "details": [
+            "The interest earned each equal time period is constant when the rate and principal remain unchanged. Total amount is principal plus total interest."
+          ]
+        },
+        {
+          "concept": "Compound interest",
+          "definition": "Compound interest is calculated on the updated balance after each compounding period.",
+          "details": [
+            "Interest from an earlier period becomes part of the balance on which later interest is calculated. This is why compound growth accelerates over time."
+          ]
+        },
+        {
+          "concept": "Compounding frequency",
+          "definition": "Compounding frequency is the number of times interest is added to the balance per year.",
+          "details": [
+            "For annual rate R% compounded n times per year, the rate per period is R/(100n) as a decimal and the number of periods over T years is nT. The quoted annual rate and compounding frequency must be interpreted as stated."
+          ]
+        },
+        {
+          "concept": "Comparing interest methods",
+          "definition": "Simple and compound interest can be compared using the same principal, rate and time.",
+          "details": [
+            "For a positive rate and more than one compounding period, compound interest generally produces a larger accumulated amount than simple interest. This comparison assumes no deposits or withdrawals during the period."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Simple interest",
+          "equation": "$$I=\\frac{PRT}{100},\\quad A=P+I$$",
+          "variables": {
+            "P": "principal",
+            "R": "annual simple-interest rate in percent",
+            "T": "time in years",
+            "I": "interest",
+            "A": "final amount"
+          }
+        },
+        {
+          "name": "Compound amount",
+          "equation": "$$A=P\\left(1+\\frac{R}{100n}\\right)^{nT}$$",
+          "variables": {
+            "P": "principal",
+            "R": "nominal annual rate in percent",
+            "n": "compounding periods per year",
+            "T": "time in years",
+            "A": "final amount"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s04",
+          "title": "Simple and compound interest",
+          "type": "svg",
+          "caption": "Simple interest adds a constant amount per period; compound interest adds interest to an increasing balance.",
+          "alt_text": "A straight rising line for simple interest and an upward-curving line for compound interest.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Simple and compound growth\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Simple and compound growth</text>\n<path d=\"M55 165 H475 M55 165 V52\" stroke=\"#64748b\" stroke-width=\"2\" fill=\"none\"/><path d=\"M65 150 L450 75\" stroke=\"#2563eb\" stroke-width=\"4\" fill=\"none\"/><path d=\"M65 150 C190 140 310 105 450 35\" stroke=\"#16a34a\" stroke-width=\"4\" fill=\"none\"/><text x=\"350\" y=\"94\" font-family=\"Arial\" font-size=\"13\" fill=\"#1d4ed8\">Simple</text><text x=\"365\" y=\"43\" font-family=\"Arial\" font-size=\"13\" fill=\"#166534\">Compound</text><text x=\"260\" y=\"184\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"12\" fill=\"#475569\">Time</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Conceptual comparison from the same starting amount</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the simple interest and final amount on 6,000 units at 5% per year for 3 years.",
+          "solution_steps": [
+            "Use I=PRT/100.",
+            "I=(6,000×5×3)/100=900 units.",
+            "A=P+I=6,000+900=6,900 units."
+          ],
+          "final_answer": "Interest = 900 units; amount = 6,900 units"
+        },
+        {
+          "problem": "A deposit of 10,000 units earns 6% per year compounded annually for 2 years. Find the final amount.",
+          "solution_steps": [
+            "P=10,000, annual rate=0.06 and number of years=2.",
+            "A=10,000(1.06)².",
+            "A=10,000×1.1236=11,236 units.",
+            "Compound interest = 11,236−10,000=1,236 units."
+          ],
+          "final_answer": "Final amount = 11,236 units; compound interest = 1,236 units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using months as years in an annual-rate formula.",
+          "correction": "Convert months to years, or use a rate expressed for the matching period."
+        },
+        {
+          "mistake": "Reporting the compound amount as the interest earned.",
+          "correction": "The compound amount includes the principal. Subtract the principal to obtain compound interest."
+        }
+      ],
+      "quick_summary": [
+        "Simple interest is calculated on the original principal.",
+        "Compound interest is calculated on the changing balance.",
+        "Match rate period, time and compounding frequency.",
+        "Final amount includes principal and interest."
+      ]
+    },
+    "hs_math_t18_st05": {
+      "id": "hs_math_t18_st05",
+      "title": "Depreciation and asset value",
+      "overview": "Depreciation describes the reduction in the recorded or estimated value of an asset over time. A machine, vehicle or device may lose value through use, ageing or obsolescence. Straight-line depreciation reduces value by a fixed amount each year; reducing-balance depreciation reduces it by a fixed percentage of the current value.",
+      "key_concepts": [
+        {
+          "concept": "Asset cost, book value and residual value",
+          "definition": "Book value is the asset value recorded at a particular time; residual value is the estimated value at the end of its useful life.",
+          "details": [
+            "Original cost is the amount paid to acquire the asset. Accumulated depreciation is the total reduction recorded so far. Book value is original cost minus accumulated depreciation. Residual value is also called salvage value."
+          ]
+        },
+        {
+          "concept": "Straight-line depreciation",
+          "definition": "Straight-line depreciation allocates the same amount of value loss to each year.",
+          "details": [
+            "The depreciable amount is original cost minus residual value. Divide it by useful life to obtain annual depreciation. Under this simple model, book value decreases linearly and reaches the residual value at the end of the useful life."
+          ]
+        },
+        {
+          "concept": "Reducing-balance depreciation",
+          "definition": "Reducing-balance depreciation removes the same percentage of the current book value each period.",
+          "details": [
+            "Each year's depreciation is calculated on the value at the start of that year. The value therefore decreases by repeated multiplication by 1−r, where r is the depreciation rate as a decimal."
+          ]
+        },
+        {
+          "concept": "Choosing and comparing methods",
+          "definition": "Different methods produce different patterns of book value over time.",
+          "details": [
+            "Straight-line depreciation is useful when an equal annual allocation is assumed. Reducing-balance depreciation represents a larger absolute reduction in early years and smaller reductions later. These are mathematical models; actual resale value may differ."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Annual straight-line depreciation",
+          "equation": "$$D=\\frac{C-S}{N}$$",
+          "variables": {
+            "D": "annual depreciation amount",
+            "C": "original cost",
+            "S": "residual value",
+            "N": "useful life in years"
+          }
+        },
+        {
+          "name": "Straight-line book value after t years",
+          "equation": "$$V=C-tD$$",
+          "variables": {
+            "V": "book value",
+            "C": "original cost",
+            "t": "number of years elapsed",
+            "D": "annual depreciation"
+          }
+        },
+        {
+          "name": "Reducing-balance book value",
+          "equation": "$$V=C(1-r)^t$$",
+          "variables": {
+            "V": "book value after t years",
+            "C": "original cost",
+            "r": "depreciation rate per year as a decimal",
+            "t": "number of years"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s05",
+          "title": "Two depreciation patterns",
+          "type": "svg",
+          "caption": "Straight-line depreciation falls by a fixed amount; reducing-balance depreciation falls by a fixed percentage.",
+          "alt_text": "A straight descending line and a curved descending reducing-balance pattern.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Depreciation patterns\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Depreciation patterns</text>\n<path d=\"M55 165 H475 M55 165 V48\" stroke=\"#64748b\" stroke-width=\"2\" fill=\"none\"/><path d=\"M65 58 L450 150\" stroke=\"#2563eb\" stroke-width=\"4\" fill=\"none\"/><path d=\"M65 58 C190 125 310 145 450 155\" stroke=\"#16a34a\" stroke-width=\"4\" fill=\"none\"/><text x=\"300\" y=\"92\" font-family=\"Arial\" font-size=\"13\" fill=\"#1d4ed8\">Straight-line</text><text x=\"330\" y=\"145\" font-family=\"Arial\" font-size=\"13\" fill=\"#166534\">Reducing balance</text><text x=\"260\" y=\"185\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"12\" fill=\"#475569\">Time</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Illustrative value against time</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A machine costs 15,000 units and is expected to have a residual value of 3,000 units after 6 years. Find annual straight-line depreciation and book value after 4 years.",
+          "solution_steps": [
+            "Depreciable amount = 15,000−3,000=12,000 units.",
+            "Annual depreciation = 12,000÷6=2,000 units.",
+            "After 4 years, accumulated depreciation = 4×2,000=8,000 units.",
+            "Book value = 15,000−8,000=7,000 units."
+          ],
+          "final_answer": "Annual depreciation = 2,000 units; book value = 7,000 units"
+        },
+        {
+          "problem": "An asset worth 20,000 units depreciates by 10% per year using the reducing-balance method. Find its value after 2 years.",
+          "solution_steps": [
+            "Annual remaining-value multiplier = 1−0.10=0.90.",
+            "After 2 years, V=20,000×0.90².",
+            "V=20,000×0.81=16,200 units."
+          ],
+          "final_answer": "16,200 units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying the reducing-balance percentage to the original cost every year.",
+          "correction": "Apply the percentage to the current book value at the start of each period."
+        },
+        {
+          "mistake": "Forgetting residual value in straight-line depreciation.",
+          "correction": "Depreciate only the amount C−S over the useful life."
+        }
+      ],
+      "quick_summary": [
+        "Depreciation is a model of asset value reduction.",
+        "Straight-line depreciation is a fixed amount per year.",
+        "Reducing-balance depreciation is a fixed percentage of current value.",
+        "Book value is original cost less accumulated depreciation."
+      ]
+    },
+    "hs_math_t18_st06": {
+      "id": "hs_math_t18_st06",
+      "title": "Loans and repayment calculations",
+      "overview": "A loan is an amount borrowed under an agreement to repay the principal and the interest charged. Repayment calculations help compare the amount borrowed, the cost of borrowing and the effect of regular instalments. This lesson introduces repayment schedules and amortisation without requiring advanced loan-formula derivations.",
+      "key_concepts": [
+        {
+          "concept": "Principal and total borrowing cost",
+          "definition": "Principal is the amount borrowed; interest is the cost charged for borrowing it.",
+          "details": [
+            "Total repayment equals principal plus all interest and any additional charges included in the problem. Total borrowing cost should be distinguished from the amount originally borrowed."
+          ]
+        },
+        {
+          "concept": "Instalments",
+          "definition": "An instalment is a scheduled payment made at regular intervals.",
+          "details": [
+            "Payments may be weekly, monthly, quarterly or annually. A stated instalment amount and number of payments can be multiplied to find total payments, but fees and interest must be considered separately if they are not included."
+          ]
+        },
+        {
+          "concept": "Interest and principal portions",
+          "definition": "A loan payment may be divided between interest due and reduction of principal.",
+          "details": [
+            "Interest for a period is calculated on the outstanding balance according to the loan's stated rate and method. The remainder of the payment reduces the principal. The exact calculation depends on the lender's terms."
+          ]
+        },
+        {
+          "concept": "Amortisation",
+          "definition": "Amortisation is the gradual repayment of a loan through scheduled payments.",
+          "details": [
+            "In a common reducing-balance arrangement, the outstanding principal decreases over time. If the interest rate is unchanged, the interest portion often becomes smaller and a larger share of a fixed payment goes towards principal."
+          ]
+        },
+        {
+          "concept": "Reading a repayment schedule",
+          "definition": "A repayment schedule records the opening balance, interest, payment, principal reduction and closing balance for each period.",
+          "details": [
+            "Check that closing balance equals opening balance plus interest minus payment. A final small adjustment may be needed due to rounding or contract terms."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Total repayment",
+          "equation": "$$\\text{Total repayment}=\\text{number of instalments}\\times\\text{instalment amount}$$",
+          "variables": {}
+        },
+        {
+          "name": "Total borrowing cost",
+          "equation": "$$\\text{Borrowing cost}=\\text{total repayment}-\\text{principal}$$",
+          "variables": {}
+        },
+        {
+          "name": "Simple-interest loan total",
+          "equation": "$$A=P+\\frac{PRT}{100}$$",
+          "variables": {
+            "P": "principal",
+            "R": "annual simple-interest rate in percent",
+            "T": "time in years"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s06",
+          "title": "How a repayment reduces a loan",
+          "type": "svg",
+          "caption": "Each payment covers interest due and may reduce the outstanding principal.",
+          "alt_text": "A payment bar split into an interest portion and principal-repayment portion.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Loan instalment\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Loan instalment</text>\n<rect x=\"70\" y=\"78\" width=\"380\" height=\"58\" rx=\"8\" fill=\"#e2e8f0\"/><rect x=\"70\" y=\"78\" width=\"105\" height=\"58\" rx=\"8\" fill=\"#fbbf24\"/><rect x=\"175\" y=\"78\" width=\"275\" height=\"58\" rx=\"8\" fill=\"#86efac\"/><text x=\"122\" y=\"111\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#713f12\">Interest</text><text x=\"312\" y=\"111\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"15\" fill=\"#14532d\">Principal repaid</text><text x=\"260\" y=\"160\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"12\" fill=\"#475569\">Illustrative split; actual proportions vary by loan and period.</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Conceptual payment breakdown</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A borrower takes a simple-interest loan of 8,000 units at 7.5% per year for 2 years. Find the interest and total repayment.",
+          "solution_steps": [
+            "I=PRT/100=(8,000×7.5×2)/100.",
+            "I=1,200 units.",
+            "Total repayment=8,000+1,200=9,200 units."
+          ],
+          "final_answer": "Interest = 1,200 units; total repayment = 9,200 units"
+        },
+        {
+          "problem": "A loan is repaid in 24 equal monthly instalments of 450 units. The original principal was 9,600 units. Find the total paid and the borrowing cost, assuming no separate fees.",
+          "solution_steps": [
+            "Total paid=24×450=10,800 units.",
+            "Borrowing cost=10,800−9,600=1,200 units."
+          ],
+          "final_answer": "Total paid = 10,800 units; borrowing cost = 1,200 units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating every instalment as a reduction of principal.",
+          "correction": "A payment may first cover interest due; only the remainder reduces the principal."
+        },
+        {
+          "mistake": "Assuming all loans use the same interest and fee structure.",
+          "correction": "Use the rate, compounding method, fees and repayment schedule stated in the question."
+        }
+      ],
+      "quick_summary": [
+        "Principal is the amount borrowed; interest is the borrowing cost.",
+        "Total repayment includes principal and interest.",
+        "Instalments can include both interest and principal reduction.",
+        "Check a repayment schedule by reconciling opening and closing balances."
+      ]
+    },
+    "hs_math_t18_st07": {
+      "id": "hs_math_t18_st07",
+      "title": "Investments and returns",
+      "overview": "An investment may produce a gain through an increase in its value and through income such as interest or dividends. Mathematical return measures help compare outcomes over a stated period. Calculations in this lesson are for understanding financial mathematics, not for recommending particular investments.",
+      "key_concepts": [
+        {
+          "concept": "Capital gain or loss and income",
+          "definition": "An investment's total gain can include a change in value and income received.",
+          "details": [
+            "Capital gain is final value minus initial value. Income may include dividends, interest or distributions. A fall in value creates a capital loss, which may be partly or fully offset by income."
+          ]
+        },
+        {
+          "concept": "Percentage return",
+          "definition": "Percentage return expresses total gain or loss relative to the initial investment.",
+          "details": [
+            "Add relevant income to the change in value, then divide by the initial amount and multiply by 100%. State the period over which the return occurred."
+          ]
+        },
+        {
+          "concept": "Simple annual average",
+          "definition": "A simple average annual return divides a total percentage change by the number of years.",
+          "details": [
+            "This is an arithmetic average of the total percentage return per year, not necessarily the actual compounded annual rate. It can be misleading when comparing investments over multiple years."
+          ]
+        },
+        {
+          "concept": "Annualised compound return",
+          "definition": "Annualised compound return is the constant yearly rate that would produce the same overall growth over the holding period.",
+          "details": [
+            "For an investment with no additional contributions or withdrawals, divide final value by initial value, take the power 1/n for n years, and subtract 1. This assumes reinvestment or equivalent compounding."
+          ]
+        },
+        {
+          "concept": "Comparing investments fairly",
+          "definition": "Return comparisons need matching time periods and consistent treatment of income and costs.",
+          "details": [
+            "Consider whether returns are before or after fees and taxes, whether income is included, and whether risk or inflation is relevant. A higher past return alone does not establish that an investment is better."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Total gain",
+          "equation": "$$G=(V_f-V_i)+I$$",
+          "variables": {
+            "V_f": "final value",
+            "V_i": "initial value",
+            "I": "income received"
+          }
+        },
+        {
+          "name": "Percentage return",
+          "equation": "$$\\text{Return }\\% =\\frac{G}{V_i}\\times100\\%$$",
+          "variables": {
+            "G": "total gain or loss",
+            "V_i": "initial investment"
+          }
+        },
+        {
+          "name": "Annualised compound return",
+          "equation": "$$r=\\left(\\frac{V_f}{V_i}\\right)^{1/n}-1$$",
+          "variables": {
+            "V_f": "final value, assuming no extra cash flows",
+            "V_i": "initial value",
+            "n": "number of years",
+            "r": "annualised rate as a decimal"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s07",
+          "title": "Sources of investment return",
+          "type": "svg",
+          "caption": "Total gain may come from a change in asset value and income received.",
+          "alt_text": "Initial investment leads to final asset value change plus cash income to produce total gain.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Sources of investment return\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Sources of investment return</text>\n<rect x=\"20\" y=\"82\" width=\"135\" height=\"54\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"87\" y=\"114\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#1e3a8a\">Initial value</text><rect x=\"192\" y=\"55\" width=\"140\" height=\"45\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"262\" y=\"83\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#166534\">Value change</text><rect x=\"192\" y=\"120\" width=\"140\" height=\"45\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"262\" y=\"148\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#92400e\">Income received</text><rect x=\"365\" y=\"82\" width=\"135\" height=\"54\" rx=\"8\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"2\"/><text x=\"432\" y=\"114\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#5b21b6\">Total gain</text><path d=\"M155 109 H180 M173 102 L180 109 L173 116 M332 78 L355 100 M348 93 L355 100 L345 101 M332 142 L355 120 M345 119 L355 120 L353 130\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Include both value change and income</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "An investment costs 5,000 units. It is later sold for 5,350 units and paid 150 units of income. Find the total percentage return.",
+          "solution_steps": [
+            "Capital gain=5,350−5,000=350 units.",
+            "Total gain=350+150=500 units.",
+            "Return=500/5,000×100%=10%."
+          ],
+          "final_answer": "10%"
+        },
+        {
+          "problem": "An investment grows from 8,000 units to 9,245 units over 2 years, with no additional deposits or withdrawals. Find its annualised compound return.",
+          "solution_steps": [
+            "Growth factor=9,245/8,000=1.155625.",
+            "Annual growth factor is √1.155625=1.075.",
+            "Annualised rate=1.075−1=0.075=7.5%."
+          ],
+          "final_answer": "7.5% per year"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ignoring income received when calculating total return.",
+          "correction": "Include relevant interest, dividends or distributions in total gain."
+        },
+        {
+          "mistake": "Dividing a multi-year return by the number of years and calling it compound annual growth.",
+          "correction": "Use the annualised compound-return formula when a compounded annual rate is required."
+        }
+      ],
+      "quick_summary": [
+        "Total gain includes value change and income.",
+        "Percentage return is measured relative to the initial investment.",
+        "Annualised compound return accounts for compounding over time.",
+        "Compare like periods and note fees, taxes and inflation where relevant."
+      ]
+    },
+    "hs_math_t18_st08": {
+      "id": "hs_math_t18_st08",
+      "title": "Currency conversion and exchange rates",
+      "overview": "An exchange rate gives the value of one currency in terms of another. Currency conversion is a ratio calculation: multiply or divide according to how the rate is written. Banks and exchange providers may apply fees or a spread, so the amount received can differ from the amount suggested by a headline rate.",
+      "key_concepts": [
+        {
+          "concept": "Reading an exchange rate",
+          "definition": "An exchange rate states how many units of one currency equal a specified amount of another.",
+          "details": [
+            "For example, 1 unit of currency A = 1.25 units of currency B. Identify the currency represented by 1 and the currency being received before choosing multiplication or division."
+          ]
+        },
+        {
+          "concept": "Converting from the base currency",
+          "definition": "When the rate gives units of target currency per one unit of starting currency, multiply.",
+          "details": [
+            "If 1 A = r B, then x A = xr B. The units show why multiplication is appropriate: A cancels and the result is in B."
+          ]
+        },
+        {
+          "concept": "Converting back",
+          "definition": "To convert from the quoted target currency back to the base currency, divide by the rate.",
+          "details": [
+            "If x B is converted back using 1 A = r B, then x/r A is obtained. The reverse rate is the reciprocal, provided no fees or spread are applied."
+          ]
+        },
+        {
+          "concept": "Fees and exchange-rate spread",
+          "definition": "A fee is a stated charge; a spread is the difference between the provider's buying and selling rates.",
+          "details": [
+            "A percentage fee may be deducted from the converted amount or added to the cost, depending on the stated terms. Always follow the wording and state whether the fee is charged before or after conversion."
+          ]
+        },
+        {
+          "concept": "Exchange-rate changes",
+          "definition": "A change in an exchange rate affects the amount received in a conversion.",
+          "details": [
+            "Keep the currency order unchanged when comparing rates. If the quoted number rises, the first currency buys more units of the second currency under that quotation."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Conversion using a quoted rate",
+          "equation": "$$\\text{Target amount}=\\text{Starting amount}\\times r$$",
+          "variables": {
+            "r": "units of target currency per one unit of starting currency"
+          }
+        },
+        {
+          "name": "Reverse conversion",
+          "equation": "$$\\text{Starting amount}=\\frac{\\text{Target amount}}{r}$$",
+          "variables": {
+            "r": "quoted target units per one starting unit"
+          }
+        },
+        {
+          "name": "Percentage exchange-rate change",
+          "equation": "$$\\frac{\\text{new rate}-\\text{old rate}}{\\text{old rate}}\\times100\\%$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s08",
+          "title": "Currency conversion",
+          "type": "svg",
+          "caption": "Multiply when converting from the currency represented by 1 in the quoted rate; divide to reverse it.",
+          "alt_text": "A starting currency amount is multiplied by the quoted rate to produce a target currency amount.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Currency conversion\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Currency conversion</text>\n<rect x=\"28\" y=\"78\" width=\"140\" height=\"58\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"98\" y=\"102\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#1e3a8a\">Starting</text><text x=\"98\" y=\"120\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#1e3a8a\">A currency</text><rect x=\"352\" y=\"78\" width=\"140\" height=\"58\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"422\" y=\"102\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#166534\">Target</text><text x=\"422\" y=\"120\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#166534\">B currency</text><path d=\"M175 107 H342 M332 99 L342 107 L332 115\" stroke=\"#2563eb\" stroke-width=\"3\" fill=\"none\"/><text x=\"258\" y=\"85\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#1e40af\">× 1.25</text><text x=\"258\" y=\"150\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"12\" fill=\"#475569\">Reverse conversion: ÷ 1.25</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Example quotation: 1 A = 1.25 B</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "The exchange rate is 1 unit of currency A = 1.20 units of currency B. How many units of B are received for 350 units of A, before fees?",
+          "solution_steps": [
+            "The rate is expressed as B per 1 A, so multiply.",
+            "350×1.20=420."
+          ],
+          "final_answer": "420 units of currency B"
+        },
+        {
+          "problem": "Using the same rate, how many units of A are equivalent to 540 units of B, before fees?",
+          "solution_steps": [
+            "To reverse the conversion, divide by 1.20.",
+            "540÷1.20=450."
+          ],
+          "final_answer": "450 units of currency A"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying in both directions.",
+          "correction": "Write the units beside the rate and check which units should cancel. Reverse the conversion by dividing."
+        },
+        {
+          "mistake": "Ignoring fees or using the wrong provider rate.",
+          "correction": "Apply the fee and the correct buy/sell rate exactly as stated; distinguish the market rate from the amount actually received."
+        }
+      ],
+      "quick_summary": [
+        "Read the exchange rate carefully and identify the currency represented by 1.",
+        "Multiply to convert from the base currency in the quotation.",
+        "Divide to convert back.",
+        "Fees and spreads affect the amount actually received."
+      ]
+    },
+    "hs_math_t18_st09": {
+      "id": "hs_math_t18_st09",
+      "title": "Tax, inflation and purchasing power",
+      "overview": "Taxes and service charges change the amount paid for goods and services. Inflation describes a general rise in prices over time and reduces the purchasing power of a fixed amount of money. Comparing nominal and real values helps explain why a rise in income may not represent an increase in what that income can buy.",
+      "key_concepts": [
+        {
+          "concept": "Tax and service charges",
+          "definition": "A tax or service charge is an amount added according to a stated rule.",
+          "details": [
+            "For a percentage tax applied to a price, calculate the tax from the specified taxable amount. If multiple charges apply to the same base, their percentages may be added; if one charge applies after another, use successive multipliers. Follow the problem's stated method."
+          ]
+        },
+        {
+          "concept": "Inflation and price indices",
+          "definition": "Inflation is a rise in the general level of prices over time.",
+          "details": [
+            "A price index measures the relative level of prices compared with a chosen base period, commonly set to 100. A higher index means that the representative basket costs more than in the base period."
+          ]
+        },
+        {
+          "concept": "Purchasing power",
+          "definition": "Purchasing power is the quantity of goods and services that money can buy.",
+          "details": [
+            "If prices rise while the amount of money stays fixed, purchasing power falls. A 5% rise in a particular item's price means the same amount buys fewer units of that item; a general inflation index represents a wider basket."
+          ]
+        },
+        {
+          "concept": "Nominal and real values",
+          "definition": "Nominal value is the stated money amount; real value adjusts it for a price index.",
+          "details": [
+            "If the price index is 125 relative to a base of 100, one unit of money buys 100/125 of the base-period basket. Real value in base-period purchasing-power units is nominal value divided by the index/100."
+          ]
+        },
+        {
+          "concept": "Nominal and real rates of return",
+          "definition": "A nominal return is measured in money terms; a real return adjusts for inflation.",
+          "details": [
+            "The exact real return compares the growth multiplier of the investment with the price-level growth multiplier. Subtracting inflation from the nominal rate is an approximation that is most suitable when both rates are small."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Price after a percentage tax",
+          "equation": "$$\\text{Final price}=P\\left(1+\\frac{t}{100}\\right)$$",
+          "variables": {
+            "P": "taxable price",
+            "t": "tax rate in percent"
+          }
+        },
+        {
+          "name": "Real value in base-period units",
+          "equation": "$$\\text{Real value}=\\frac{\\text{Nominal value}}{\\text{Price index}/100}$$",
+          "variables": {}
+        },
+        {
+          "name": "Exact real rate",
+          "equation": "$$r_{real}=\\frac{1+r_{nominal}}{1+r_{inflation}}-1$$",
+          "variables": {
+            "rates": "nominal return and inflation are decimals"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s09",
+          "title": "Inflation and purchasing power",
+          "type": "svg",
+          "caption": "When the price level rises, a fixed nominal amount buys a smaller quantity of the same basket.",
+          "alt_text": "Two bars: same money amount compared with lower and higher price levels; purchasing power falls as prices rise.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Purchasing power and prices\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Purchasing power and prices</text>\n<text x=\"145\" y=\"66\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#0f172a\">Earlier prices</text><text x=\"375\" y=\"66\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#0f172a\">Higher prices</text><rect x=\"80\" y=\"85\" width=\"130\" height=\"68\" rx=\"8\" fill=\"#86efac\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"310\" y=\"115\" width=\"130\" height=\"38\" rx=\"8\" fill=\"#fca5a5\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"145\" y=\"124\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"15\" fill=\"#14532d\">More goods</text><text x=\"375\" y=\"139\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#7f1d1d\">Fewer goods</text><text x=\"260\" y=\"180\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"12\" fill=\"#475569\">The same amount of money buys less when prices rise.</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Same nominal money amount</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A service costs 240 units before a tax of 8%. Find the amount paid after tax.",
+          "solution_steps": [
+            "Tax=8% of 240=19.20 units.",
+            "Final price=240+19.20=259.20 units."
+          ],
+          "final_answer": "259.20 units"
+        },
+        {
+          "problem": "A monthly income is 3,000 units and the relevant price index is 120, with the base period set to 100. Find the income's value in base-period purchasing-power units.",
+          "solution_steps": [
+            "Price-index multiplier=120/100=1.20.",
+            "Real value=3,000÷1.20=2,500 units."
+          ],
+          "final_answer": "2,500 base-period units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying a tax to the wrong base amount.",
+          "correction": "Identify the taxable amount and whether one charge is applied before or after another."
+        },
+        {
+          "mistake": "Treating a nominal pay rise as an automatic increase in purchasing power.",
+          "correction": "Compare the income change with the change in prices; use the price index to calculate real value."
+        }
+      ],
+      "quick_summary": [
+        "Percentage taxes depend on the taxable base and stated order.",
+        "Inflation is a rise in the general price level.",
+        "Purchasing power falls when prices rise and money is unchanged.",
+        "Real values adjust nominal amounts for changes in the price level."
+      ]
+    },
+    "hs_math_t18_st13": {
+      "id": "hs_math_t18_st13",
+      "title": "Interpreting formulas and real-world data",
+      "overview": "Mathematical models describe selected features of real situations. To use them correctly, identify the variables, constants and parameters, understand the units, substitute values carefully and judge whether the result is reasonable. This lesson establishes the interpretation skills needed before constructing specific model families.",
+      "key_concepts": [
+        {
+          "concept": "Variables, constants and parameters",
+          "definition": "Variables can change; constants are fixed mathematical values; parameters are fixed values within a particular model or scenario.",
+          "details": [
+            "In a cost model C=5+2x, x is the variable quantity, 5 is a fixed starting charge and 2 is a parameter describing cost per unit. A parameter may change in a different scenario."
+          ]
+        },
+        {
+          "concept": "Substitution and interpretation",
+          "definition": "Substitution replaces a variable with a stated value to calculate an output.",
+          "details": [
+            "Write the substitution clearly and preserve brackets where needed. Interpret the numerical answer in the context: a calculated value may represent cost, distance, time, mass or another quantity."
+          ]
+        },
+        {
+          "concept": "Units and dimensional consistency",
+          "definition": "Units describe what a numerical quantity measures and must be consistent in calculations.",
+          "details": [
+            "Multiplying speed in km/h by time in hours gives distance in kilometres. Quantities with incompatible units cannot be added directly. Unit cancellation is a useful check on formulas."
+          ]
+        },
+        {
+          "concept": "Reading tables and real-world data",
+          "definition": "A table records observed or calculated values for specified inputs.",
+          "details": [
+            "Look for units, headings, scale, patterns and exceptional values. A trend in a small table may suggest a relationship, but it does not by itself prove that the same pattern continues indefinitely."
+          ]
+        },
+        {
+          "concept": "Assumptions and reasonableness",
+          "definition": "A model is based on assumptions and may only be valid over a certain range.",
+          "details": [
+            "Estimate the expected size of an answer before calculating. Check units, signs, context and practical restrictions. For example, a model may produce a fractional number of whole items, requiring a practical interpretation."
+          ]
+        },
+        {
+          "concept": "Limitations and precision",
+          "definition": "A model simplifies reality and its output should not be treated as more precise than the inputs justify.",
+          "details": [
+            "Measurements may be rounded, data may be incomplete and conditions may change. Report appropriate units and rounding, and explain important limitations."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Distance from constant speed",
+          "equation": "$$d=vt$$",
+          "variables": {
+            "d": "distance",
+            "v": "constant speed",
+            "t": "time"
+          }
+        },
+        {
+          "name": "Linear unit conversion",
+          "equation": "$$\\text{converted quantity}=\\text{original quantity}\\times\\text{conversion factor}$$",
+          "variables": {}
+        },
+        {
+          "name": "Percentage error",
+          "equation": "$$\\text{Percentage error}=\\frac{|\\text{estimate}-\\text{reference}|}{|\\text{reference}|}\\times100\\%$$",
+          "variables": {
+            "estimate": "approximate or measured value",
+            "reference": "accepted comparison value; non-zero"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s10",
+          "title": "Check units in a formula",
+          "type": "svg",
+          "caption": "In distance = speed × time, the time units cancel and the result has units of distance.",
+          "alt_text": "Equation d = v × t with units km = (km/h) × h.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Dimensional consistency\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Dimensional consistency</text>\n<rect x=\"25\" y=\"83\" width=\"125\" height=\"58\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"87\" y=\"107\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"#1e3a8a\">km</text><text x=\"87\" y=\"126\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"11\" fill=\"#1e3a8a\">distance</text><text x=\"172\" y=\"118\" font-family=\"Arial\" font-size=\"22\" fill=\"#0f172a\">=</text><rect x=\"205\" y=\"83\" width=\"125\" height=\"58\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"267\" y=\"107\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"#166534\">km/h</text><text x=\"267\" y=\"126\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"11\" fill=\"#166534\">speed</text><text x=\"347\" y=\"118\" font-family=\"Arial\" font-size=\"22\" fill=\"#0f172a\">×</text><rect x=\"378\" y=\"83\" width=\"115\" height=\"58\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"435\" y=\"107\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"#92400e\">h</text><text x=\"435\" y=\"126\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"11\" fill=\"#92400e\">time</text><text x=\"260\" y=\"171\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#475569\">Hours cancel, leaving kilometres.</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Speed × time produces distance</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A vehicle travels at 72 km/h for 25 minutes. Calculate the distance travelled.",
+          "solution_steps": [
+            "Convert time to hours: 25/60=5/12 hour.",
+            "Use d=vt.",
+            "d=72×5/12=30 km."
+          ],
+          "final_answer": "30 km"
+        },
+        {
+          "problem": "A delivery service charges a fixed fee of 4 units plus 1.5 units per kilometre. Write a formula for a trip of x kilometres and find the cost for 12 km.",
+          "solution_steps": [
+            "Let C be the total cost in units.",
+            "Fixed fee is 4 and variable cost is 1.5x, so C=4+1.5x.",
+            "For x=12, C=4+1.5×12=22."
+          ],
+          "final_answer": "C=4+1.5x; cost for 12 km = 22 units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding quantities with incompatible units.",
+          "correction": "Convert to matching units before addition or subtraction; use unit cancellation to check multiplication and division."
+        },
+        {
+          "mistake": "Treating a model's output as automatically realistic.",
+          "correction": "Check assumptions, allowed input range, units, rounding and practical constraints."
+        }
+      ],
+      "quick_summary": [
+        "Identify variables, constants, parameters and units.",
+        "Substitute values carefully and interpret the output in context.",
+        "Check dimensional consistency and reasonableness.",
+        "Every model has assumptions and limitations."
+      ]
+    },
+    "hs_math_t18_st10": {
+      "id": "hs_math_t18_st10",
+      "title": "Linear mathematical models",
+      "overview": "A linear model represents a situation in which a quantity changes at a constant rate. It commonly has a fixed starting value and a variable part that changes in proportion to an input. Examples include a service fee plus a constant charge per unit, regular savings without interest and uniform distance travelled at constant speed.",
+      "key_concepts": [
+        {
+          "concept": "The structure of a linear model",
+          "definition": "A linear model can be written as y=mx+c.",
+          "details": [
+            "The gradient m describes the change in y for each one-unit increase in x. The intercept c is the value of y when x=0. In context, c may represent a fixed fee or initial amount."
+          ]
+        },
+        {
+          "concept": "Constructing a model from words",
+          "definition": "Identify the starting value and the constant rate of change.",
+          "details": [
+            "Use the starting value as the intercept and the rate as the gradient. A decreasing quantity has a negative gradient. Define each variable and include its units."
+          ]
+        },
+        {
+          "concept": "Interpreting a graph",
+          "definition": "A straight-line graph represents a constant gradient.",
+          "details": [
+            "A positive gradient indicates increase; a negative gradient indicates decrease; a zero gradient indicates no change. The intercept and gradient should be interpreted using the context and axis units."
+          ]
+        },
+        {
+          "concept": "Making predictions",
+          "definition": "A linear model can estimate an output for a given input within a reasonable range.",
+          "details": [
+            "Substitute the input value into the model. Predictions outside the observed range are extrapolations and may be unreliable if the real situation does not continue at a constant rate."
+          ]
+        },
+        {
+          "concept": "Comparing two linear models",
+          "definition": "The intersection of two linear models represents an input at which their outputs are equal.",
+          "details": [
+            "Set the two expressions equal and solve. Compare the outputs on either side of the intersection to decide which option is lower or higher for a particular input."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Linear model",
+          "equation": "$$y=mx+c$$",
+          "variables": {
+            "y": "output",
+            "x": "input",
+            "m": "gradient or constant rate of change",
+            "c": "initial value or vertical intercept"
+          }
+        },
+        {
+          "name": "Gradient from two points",
+          "equation": "$$m=\\frac{y_2-y_1}{x_2-x_1}$$",
+          "variables": {
+            "(x_1,y_1), (x_2,y_2)": "two distinct points on the line"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s11",
+          "title": "Anatomy of a linear model",
+          "type": "svg",
+          "caption": "The intercept is the starting value and the gradient is the constant rate of change.",
+          "alt_text": "Straight line with positive slope, y-intercept c and rise/run gradient m.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Linear model y = mx + c\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Linear model y = mx + c</text>\n<path d=\"M55 170 H470 M75 180 V45\" stroke=\"#64748b\" stroke-width=\"2\" fill=\"none\"/><path d=\"M75 135 L430 55\" stroke=\"#2563eb\" stroke-width=\"4\" fill=\"none\"/><circle cx=\"75\" cy=\"135\" r=\"5\" fill=\"#dc2626\"/><path d=\"M210 105 H300 V85\" stroke=\"#16a34a\" stroke-width=\"3\" fill=\"none\"/><text x=\"95\" y=\"128\" font-family=\"Arial\" font-size=\"13\" fill=\"#991b1b\">c</text><text x=\"315\" y=\"91\" font-family=\"Arial\" font-size=\"13\" fill=\"#166534\">rise / run = m</text><text x=\"350\" y=\"42\" font-family=\"Arial\" font-size=\"14\" fill=\"#1e40af\">y = mx + c</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Gradient and intercept</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A taxi charges a fixed booking fee of 6 units and 2.5 units per kilometre. Write a cost model and calculate the cost of a 14 km trip.",
+          "solution_steps": [
+            "Let x be distance in km and C be cost in units.",
+            "The fixed fee is 6 and the rate is 2.5 per km.",
+            "C=2.5x+6.",
+            "For x=14, C=2.5×14+6=41."
+          ],
+          "final_answer": "C=2.5x+6; cost = 41 units"
+        },
+        {
+          "problem": "Plan A costs C=5+3x units and Plan B costs C=17+1.5x units, where x is the number of units used. Find the usage at which the costs are equal.",
+          "solution_steps": [
+            "Set the costs equal: 5+3x=17+1.5x.",
+            "Subtract 1.5x: 5+1.5x=17.",
+            "Subtract 5 and divide by 1.5: x=8.",
+            "At x=8, both cost 29 units."
+          ],
+          "final_answer": "8 units of usage; both plans cost 29 units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the gradient as the starting value.",
+          "correction": "The gradient is the rate of change; the intercept is the value when x=0."
+        },
+        {
+          "mistake": "Assuming a linear model is valid for every possible input.",
+          "correction": "Use it within a justified range and discuss whether the constant-rate assumption remains realistic."
+        }
+      ],
+      "quick_summary": [
+        "A linear model has the form y=mx+c.",
+        "m is the constant rate; c is the starting value.",
+        "A negative gradient represents a decrease.",
+        "The intersection of two models occurs where their outputs are equal."
+      ]
+    },
+    "hs_math_t18_st11": {
+      "id": "hs_math_t18_st11",
+      "title": "Quadratic models",
+      "overview": "Quadratic models describe situations where the rate of change itself varies in a regular way. Their graphs are parabolas and can represent the path of a projectile, the area of a changing rectangle or a simplified relationship between price and revenue. The focus here is on constructing and interpreting accessible models using quadratic knowledge learned elsewhere.",
+      "key_concepts": [
+        {
+          "concept": "Quadratic model form",
+          "definition": "A quadratic model has the form y=ax²+bx+c, where a is non-zero.",
+          "details": [
+            "The coefficient a determines whether the parabola opens upward or downward. The coefficients b and c affect its position and shape; c is the value when x=0."
+          ]
+        },
+        {
+          "concept": "The vertex and turning point",
+          "definition": "The vertex is the turning point of a parabola.",
+          "details": [
+            "If a is positive, the parabola opens upwards and the vertex is a minimum. If a is negative, it opens downwards and the vertex is a maximum. The turning point may represent a maximum height, minimum cost or maximum area."
+          ]
+        },
+        {
+          "concept": "Interpreting roots and intercepts",
+          "definition": "A root is an input for which the model output is zero.",
+          "details": [
+            "In a context, a root may represent when a height reaches ground level or when a profit is zero. Only roots that make sense under the problem's restrictions should be retained."
+          ]
+        },
+        {
+          "concept": "Constructing a quadratic from a context",
+          "definition": "A quadratic model can arise when one variable is multiplied by another variable that depends linearly on it.",
+          "details": [
+            "For example, revenue equals price multiplied by quantity. If quantity decreases linearly as price increases, the revenue expression may be quadratic."
+          ]
+        },
+        {
+          "concept": "Domain and practical restrictions",
+          "definition": "The mathematical graph may extend beyond the meaningful range of the real situation.",
+          "details": [
+            "Lengths, time, quantities and prices may have restrictions such as non-negative values. Interpret the vertex and roots only within the domain relevant to the context."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Quadratic model",
+          "equation": "$$y=ax^2+bx+c,\\quad a\\ne0$$",
+          "variables": {
+            "a, b, c": "fixed coefficients",
+            "x": "input",
+            "y": "model output"
+          }
+        },
+        {
+          "name": "Vertex input coordinate",
+          "equation": "$$x_v=-\\frac{b}{2a}$$",
+          "variables": {
+            "a, b": "coefficients of x² and x",
+            "x_v": "input coordinate of the vertex"
+          }
+        },
+        {
+          "name": "Revenue",
+          "equation": "$$R=pq$$",
+          "variables": {
+            "p": "price per item",
+            "q": "quantity sold",
+            "R": "revenue"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s12",
+          "title": "Quadratic model and vertex",
+          "type": "svg",
+          "caption": "The vertex gives the maximum or minimum of a quadratic graph.",
+          "alt_text": "A downward-opening parabola with its vertex marked as a maximum.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Quadratic model\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Quadratic model</text>\n<path d=\"M55 165 H475 M260 180 V42\" stroke=\"#64748b\" stroke-width=\"2\" fill=\"none\"/><path d=\"M95 160 Q260 -15 425 160\" stroke=\"#2563eb\" stroke-width=\"4\" fill=\"none\"/><circle cx=\"260\" cy=\"73\" r=\"6\" fill=\"#dc2626\"/><text x=\"275\" y=\"64\" font-family=\"Arial\" font-size=\"13\" fill=\"#991b1b\">Vertex (maximum)</text><text x=\"430\" y=\"185\" font-family=\"Arial\" font-size=\"12\" fill=\"#475569\">x</text><text x=\"270\" y=\"48\" font-family=\"Arial\" font-size=\"12\" fill=\"#475569\">y</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Downward-opening example</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A ball's height in metres after t seconds is modelled by h=−5t²+20t+1. Find the time at which it reaches its maximum height and the maximum height.",
+          "solution_steps": [
+            "Here a=−5 and b=20, so the graph opens downwards and has a maximum.",
+            "The vertex time is t=−b/(2a)=−20/(−10)=2 seconds.",
+            "h(2)=−5(4)+20(2)+1=21 metres."
+          ],
+          "final_answer": "Maximum height = 21 m at 2 s"
+        },
+        {
+          "problem": "A seller's quantity model is q=60−2p, where p is the price per item. Form a revenue model and find the price giving maximum revenue.",
+          "solution_steps": [
+            "Revenue R=pq, so R=p(60−2p)=60p−2p².",
+            "The vertex occurs at p=−b/(2a)=−60/(−4)=15.",
+            "R(15)=60×15−2×15²=450."
+          ],
+          "final_answer": "Revenue model R=60p−2p²; maximum revenue = 450 units at price 15 units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reporting the vertex input as the maximum output.",
+          "correction": "Substitute the vertex input into the original model to find the maximum or minimum value."
+        },
+        {
+          "mistake": "Keeping a mathematical solution that violates the context.",
+          "correction": "Check restrictions such as non-negative time, price, length or quantity."
+        }
+      ],
+      "quick_summary": [
+        "Quadratic models have the form ax²+bx+c.",
+        "The sign of a determines whether the vertex is a minimum or maximum.",
+        "The vertex is a turning point; roots give zero-output inputs.",
+        "Always interpret the model within its practical domain."
+      ]
+    },
+    "hs_math_t18_st12": {
+      "id": "hs_math_t18_st12",
+      "title": "Exponential growth and decay models",
+      "overview": "Exponential models describe repeated percentage growth or decay. Unlike a linear model, which adds or subtracts a fixed amount per period, an exponential model multiplies by a fixed factor each period. These models are useful for compound growth, depreciation and simplified population or decay situations.",
+      "key_concepts": [
+        {
+          "concept": "Repeated percentage growth",
+          "definition": "Exponential growth occurs when a quantity increases by the same percentage in each equal time period.",
+          "details": [
+            "The growth factor is 1+r, where r is the percentage rate written as a decimal. Each period's increase is calculated from the current amount, not the original amount."
+          ]
+        },
+        {
+          "concept": "Repeated percentage decay",
+          "definition": "Exponential decay occurs when a quantity decreases by the same percentage in each equal time period.",
+          "details": [
+            "The remaining-value factor is 1−r. The amount removed in each period becomes smaller when the same percentage is taken from a decreasing balance."
+          ]
+        },
+        {
+          "concept": "Interpreting parameters",
+          "definition": "The initial amount and multiplier determine an exponential model.",
+          "details": [
+            "In A=P(1+r)^t, P is the initial amount, r is the rate per period as a decimal and t is the number of periods. For decay, use 1−r as the multiplier."
+          ]
+        },
+        {
+          "concept": "Half-life",
+          "definition": "Half-life is the time taken for a decaying quantity to reduce to half its amount.",
+          "details": [
+            "After each half-life, the amount is multiplied by one-half. The number of elapsed half-lives is time divided by the duration of one half-life."
+          ]
+        },
+        {
+          "concept": "Model limitations",
+          "definition": "An exponential model assumes a constant percentage rate over equal time periods.",
+          "details": [
+            "Real populations, prices and asset values may be affected by limits, changing conditions or irregular rates. Continuous growth models and advanced exponential-function theory are not required here."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Repeated growth",
+          "equation": "$$A=P(1+r)^t$$",
+          "variables": {
+            "A": "amount after t periods",
+            "P": "initial amount",
+            "r": "growth rate per period as a decimal",
+            "t": "number of periods"
+          }
+        },
+        {
+          "name": "Repeated decay",
+          "equation": "$$A=P(1-r)^t$$",
+          "variables": {
+            "A": "amount after t periods",
+            "P": "initial amount",
+            "r": "decay rate per period as a decimal",
+            "t": "number of periods"
+          }
+        },
+        {
+          "name": "Half-life model",
+          "equation": "$$A=P\\left(\\frac12\\right)^{t/T}$$",
+          "variables": {
+            "T": "duration of one half-life",
+            "t": "elapsed time",
+            "P": "initial amount",
+            "A": "remaining amount"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s13",
+          "title": "Linear and exponential growth",
+          "type": "svg",
+          "caption": "A linear model adds a fixed amount; an exponential model multiplies by a fixed factor.",
+          "alt_text": "Two curves start at the same amount; exponential growth bends upward.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Linear and exponential growth\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Linear and exponential growth</text>\n<path d=\"M55 165 H475 M55 165 V45\" stroke=\"#64748b\" stroke-width=\"2\" fill=\"none\"/><path d=\"M65 150 L450 65\" stroke=\"#2563eb\" stroke-width=\"4\" fill=\"none\"/><path d=\"M65 150 C200 145 300 120 450 35\" stroke=\"#16a34a\" stroke-width=\"4\" fill=\"none\"/><text x=\"350\" y=\"86\" font-family=\"Arial\" font-size=\"13\" fill=\"#1d4ed8\">Linear</text><text x=\"375\" y=\"42\" font-family=\"Arial\" font-size=\"13\" fill=\"#166534\">Exponential</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Conceptual comparison</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A town has a population of 12,000 and grows by 3% each year. Estimate the population after 2 years using the model.",
+          "solution_steps": [
+            "Growth factor=1+0.03=1.03.",
+            "A=12,000×1.03².",
+            "A=12,000×1.0609=12,730.8.",
+            "A population estimate is approximately 12,731 people."
+          ],
+          "final_answer": "Approximately 12,731 people"
+        },
+        {
+          "problem": "A substance has a mass of 240 g and a half-life of 4 hours. Find the mass remaining after 12 hours.",
+          "solution_steps": [
+            "Number of half-lives=12÷4=3.",
+            "A=240×(1/2)³.",
+            "A=240×1/8=30 g."
+          ],
+          "final_answer": "30 g"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding the same numerical increase each period when the rate is a percentage.",
+          "correction": "Use a multiplier on the current amount for each period."
+        },
+        {
+          "mistake": "Using the percentage rate as a whole number in the multiplier.",
+          "correction": "Convert 5% to 0.05 before forming 1.05 or 0.95."
+        }
+      ],
+      "quick_summary": [
+        "Exponential models use a constant multiplier per period.",
+        "Growth multiplier is 1+r; decay multiplier is 1−r.",
+        "Half-life halves the quantity at equal time intervals.",
+        "Check that the constant-rate assumption is reasonable."
+      ]
+    },
+    "hs_math_t18_st14": {
+      "id": "hs_math_t18_st14",
+      "title": "Optimisation and decision-making",
+      "overview": "Optimisation means choosing an option that gives the best outcome under stated conditions. In practical situations, the goal may be to maximise profit or output, or minimise cost or time. Tables, graphs and algebra help compare alternatives while respecting budgets, capacity and other constraints.",
+      "key_concepts": [
+        {
+          "concept": "Objective and constraints",
+          "definition": "The objective is the quantity to maximise or minimise; constraints are the limits that choices must satisfy.",
+          "details": [
+            "For example, a business may want to maximise profit while staying within a budget and production capacity. Write the objective and each restriction in terms of clearly defined variables."
+          ]
+        },
+        {
+          "concept": "Feasible choices",
+          "definition": "A feasible choice satisfies every stated constraint.",
+          "details": [
+            "A choice may satisfy one condition but fail another. Check all constraints, including non-negative quantities and any whole-number requirements."
+          ]
+        },
+        {
+          "concept": "Comparing options with tables",
+          "definition": "A table can compare the objective value for a manageable set of possible choices.",
+          "details": [
+            "List feasible choices, calculate the objective consistently and identify the best result. Tables are especially useful when the choices are discrete or the number of options is small."
+          ]
+        },
+        {
+          "concept": "Graphical interpretation",
+          "definition": "A graph can show how a quantity changes and where restrictions apply.",
+          "details": [
+            "For two variables, inequalities can define a feasible region. Points outside that region violate at least one constraint. The graph should be interpreted with the context and axis units."
+          ]
+        },
+        {
+          "concept": "Trade-offs and sensitivity",
+          "definition": "A decision often involves balancing competing costs and benefits.",
+          "details": [
+            "A change in prices, budgets or capacity may change which option is best. Test relevant alternatives and explain why the chosen solution is feasible and preferable."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Profit",
+          "equation": "$$\\text{Profit}=\\text{Revenue}-\\text{Total cost}$$",
+          "variables": {}
+        },
+        {
+          "name": "Budget constraint",
+          "equation": "$$c_1x+c_2y\\le B$$",
+          "variables": {
+            "c₁, c₂": "unit costs of two items",
+            "x, y": "quantities chosen",
+            "B": "available budget"
+          }
+        },
+        {
+          "name": "Break-even condition",
+          "equation": "$$\\text{Revenue}=\\text{Total cost}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s14",
+          "title": "Feasible choices under a budget",
+          "type": "svg",
+          "caption": "The feasible region contains combinations that satisfy the budget and non-negativity restrictions.",
+          "alt_text": "A triangular region under a budget line in the first quadrant.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"A feasible region\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">A feasible region</text>\n<path d=\"M55 170 H300 M55 170 V40\" stroke=\"#64748b\" stroke-width=\"2\" fill=\"none\"/><path d=\"M55 170 L55 60 L245 170 Z\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M55 60 L245 170\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"115\" y=\"125\" font-family=\"Arial\" font-size=\"13\" fill=\"#166534\">Feasible</text><text x=\"325\" y=\"100\" font-family=\"Arial\" font-size=\"13\" fill=\"#475569\">Outside region</text><text x=\"170\" y=\"192\" font-family=\"Arial\" font-size=\"12\" fill=\"#475569\">Quantity x</text><text x=\"60\" y=\"35\" font-family=\"Arial\" font-size=\"12\" fill=\"#475569\">Quantity y</text>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Illustrative budget constraint</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A student has a budget of 100 units. Notebooks cost 8 units each and pens cost 2 units each. Write the budget constraint and decide whether 8 notebooks and 15 pens are affordable.",
+          "solution_steps": [
+            "Let x be notebooks and y be pens.",
+            "The budget condition is 8x+2y≤100, with x≥0 and y≥0.",
+            "For x=8 and y=15, cost=8×8+2×15=64+30=94.",
+            "Since 94≤100, the choice is affordable."
+          ],
+          "final_answer": "8x+2y≤100; the choice costs 94 units and is feasible"
+        },
+        {
+          "problem": "A delivery company compares two plans: Plan A costs 20+4d and Plan B costs 35+3d units, where d is distance in km. Find when their costs are equal and identify the cheaper plan for a 20 km trip.",
+          "solution_steps": [
+            "Set 20+4d=35+3d, giving d=15 km.",
+            "At 20 km, Plan A costs 20+4×20=100 units.",
+            "Plan B costs 35+3×20=95 units.",
+            "Plan B is cheaper for this trip."
+          ],
+          "final_answer": "Equal at 15 km; at 20 km Plan B is cheaper (95 units)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating a budget limit as a requirement to spend exactly the budget.",
+          "correction": "Use ≤ for a maximum budget; equality is only required when the question states the full budget must be used."
+        },
+        {
+          "mistake": "Choosing the numerically best objective value without checking feasibility.",
+          "correction": "First eliminate choices that violate any constraint, then compare the remaining feasible choices."
+        }
+      ],
+      "quick_summary": [
+        "Optimisation selects the best feasible option.",
+        "The objective states what is being maximised or minimised.",
+        "Constraints define the permitted choices.",
+        "Explain the result using the practical context and its limits."
+      ]
+    },
+    "hs_math_t18_st15": {
+      "id": "hs_math_t18_st15",
+      "title": "Multi-step applied mathematical problems",
+      "overview": "Real situations often require several mathematical ideas in sequence. A commercial problem may combine a discount, tax, profit calculation and a comparison of plans; a business model may combine revenue, costs and a break-even calculation. Successful solutions require a clear plan, consistent units, accurate calculations and an interpretation that respects the context.",
+      "key_concepts": [
+        {
+          "concept": "Planning a multi-step solution",
+          "definition": "Identify the required result, the information given and the mathematical relationships connecting them.",
+          "details": [
+            "Write down known quantities with units. Decide which quantity must be found first and organise the steps in a logical order. Do not substitute values until the meaning of each variable is clear."
+          ]
+        },
+        {
+          "concept": "Order of operations in financial contexts",
+          "definition": "The order of percentage changes matters when each is applied to the updated amount.",
+          "details": [
+            "For example, a discount may be applied to a marked price before tax is calculated on the discounted price. Use successive multipliers when each stage acts on the result of the previous stage."
+          ]
+        },
+        {
+          "concept": "Revenue, cost and break-even",
+          "definition": "Revenue is money received from sales; total cost includes fixed and variable costs.",
+          "details": [
+            "Profit is revenue minus total cost. Break-even occurs when revenue equals total cost. Solving this equality gives the sales quantity at which there is neither profit nor loss."
+          ]
+        },
+        {
+          "concept": "Combining models and constraints",
+          "definition": "A model may need to be combined with practical limits such as whole units, capacity or a budget.",
+          "details": [
+            "After solving an equation or model, check whether the result is permitted. If an answer represents a number of indivisible items, compare nearby whole-number choices."
+          ]
+        },
+        {
+          "concept": "Communicating and checking conclusions",
+          "definition": "A complete solution includes a numerical result and a contextual explanation.",
+          "details": [
+            "Check units, rounding, signs and reasonableness. State assumptions and identify limitations that could change the result. Do not claim a model proves more than its assumptions allow."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Selling price after discount and tax",
+          "equation": "$$SP=MP\\left(1-\\frac{d}{100}\\right)\\left(1+\\frac{t}{100}\\right)$$",
+          "variables": {
+            "MP": "marked price",
+            "d": "discount rate in percent",
+            "t": "tax rate in percent, applied after discount"
+          }
+        },
+        {
+          "name": "Total cost with fixed and variable components",
+          "equation": "$$C=F+vq$$",
+          "variables": {
+            "F": "fixed cost",
+            "v": "variable cost per unit",
+            "q": "quantity"
+          }
+        },
+        {
+          "name": "Revenue and profit",
+          "equation": "$$R=pq,\\quad \\Pi=R-C$$",
+          "variables": {
+            "p": "selling price per unit",
+            "q": "quantity sold",
+            "R": "revenue",
+            "C": "total cost",
+            "Π": "profit"
+          }
+        },
+        {
+          "name": "Break-even quantity for linear cost and revenue",
+          "equation": "$$pq=F+vq$$",
+          "variables": {
+            "p": "selling price per unit",
+            "F": "fixed cost",
+            "v": "variable cost per unit",
+            "q": "break-even quantity"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v18_s15",
+          "title": "A multi-step decision pipeline",
+          "type": "svg",
+          "caption": "Organise a problem into data, model, calculation and contextual check.",
+          "alt_text": "Four connected stages: identify data, choose relationships, calculate, interpret and check.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" role=\"img\" aria-label=\"Multi-step problem pipeline\">\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Multi-step problem pipeline</text>\n<g font-family=\"Arial\" font-size=\"13\" text-anchor=\"middle\"><rect x=\"12\" y=\"82\" width=\"112\" height=\"58\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"68\" y=\"106\" fill=\"#1e3a8a\">Identify</text><text x=\"68\" y=\"123\" fill=\"#1e3a8a\">data</text><rect x=\"140\" y=\"82\" width=\"112\" height=\"58\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"196\" y=\"106\" fill=\"#166534\">Choose</text><text x=\"196\" y=\"123\" fill=\"#166534\">model</text><rect x=\"268\" y=\"82\" width=\"112\" height=\"58\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"324\" y=\"106\" fill=\"#92400e\">Calculate</text><text x=\"324\" y=\"123\" fill=\"#92400e\">carefully</text><rect x=\"396\" y=\"82\" width=\"112\" height=\"58\" rx=\"8\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"2\"/><text x=\"452\" y=\"106\" fill=\"#5b21b6\">Interpret</text><text x=\"452\" y=\"123\" fill=\"#5b21b6\">and check</text></g><g stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"><path d=\"M124 111 H137 M131 104 L138 111 L131 118 M252 111 H265 M259 104 L266 111 L259 118 M380 111 H393 M387 104 L394 111 L387 118\"/></g>\n<text x=\"260\" y=\"202\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#475569\">Use a sequence and check each stage</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "An item is marked at 1,200 units. A discount of 15% is applied, followed by a 5% tax on the discounted price. Find the final amount paid.",
+          "solution_steps": [
+            "Discount multiplier=0.85; discounted price=1,200×0.85=1,020 units.",
+            "Tax multiplier=1.05; final amount=1,020×1.05=1,071 units.",
+            "The tax is applied after the discount, as stated."
+          ],
+          "final_answer": "1,071 units"
+        },
+        {
+          "problem": "A manufacturer has fixed costs of 750 units and variable costs of 12 units per item. Each item sells for 27 units. Find the break-even quantity and the profit when 80 items are sold.",
+          "solution_steps": [
+            "Cost model: C=750+12q. Revenue model: R=27q.",
+            "At break-even, 27q=750+12q, so 15q=750 and q=50.",
+            "For 80 items, revenue=27×80=2,160 units.",
+            "Cost=750+12×80=1,710 units.",
+            "Profit=2,160−1,710=450 units."
+          ],
+          "final_answer": "Break-even quantity = 50 items; profit at 80 items = 450 units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying tax to the original price when the problem says it is charged after discount.",
+          "correction": "Follow the stated sequence: first calculate the discounted amount, then apply tax to that amount."
+        },
+        {
+          "mistake": "Stopping after finding a break-even quantity when the question asks for profit at another quantity.",
+          "correction": "Substitute the requested quantity into both revenue and cost models, then calculate profit as revenue minus cost."
+        }
+      ],
+      "quick_summary": [
+        "Plan the steps before calculating.",
+        "Apply percentage changes in the order stated.",
+        "Build and use revenue and cost models consistently.",
+        "Check feasibility, units, rounding and reasonableness before stating the conclusion."
+      ]
+    }
+  }
+}

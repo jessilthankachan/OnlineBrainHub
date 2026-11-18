@@ -604,12 +604,16 @@
         {
           "name": "Area Scale Factor",
           "equation": "$$ A_{\\text{new}} = k^2 \\times A_{\\text{original}} \\implies k = \\sqrt{\\frac{A_{\\text{new}}}{A_{\\text{original}}}} $$",
-          "variables": {}
+          "variables": {
+            "k": "Length scale-factor magnitude. For an enlargement/reduction, use the positive root when only lengths and areas are considered. Area ratio determines k^2 and therefore does not by itself distinguish a positive from a negative signed transformation factor."
+          }
         },
         {
           "name": "Volume Scale Factor",
           "equation": "$$ V_{\\text{new}} = k^3 \\times V_{\\text{original}} \\implies k = \\sqrt[3]{\\frac{V_{\\text{new}}}{V_{\\text{original}}}} $$",
-          "variables": {}
+          "variables": {
+            "k": "Length scale-factor magnitude for similar solids; the formula uses a positive scale factor. Physical volume scales by the cube of the length factor."
+          }
         }
       ],
       "visual_aids": [

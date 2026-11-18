@@ -750,9 +750,10 @@
           "solution_steps": [
             "Step 1: The student can spend exactly $\\$40$ or anything less than $\\$40$.",
             "Step 2: 'Less than or equal to' translates to $\\leq$.",
-            "Step 3: Let the amount spent be $x$."
+            "Step 3: Let the amount spent be $x$.",
+            "Step 4: The amount spent cannot be negative, so the full contextual restriction is $0 \\u2264 x \\u2264 40$."
           ],
-          "final_answer": "$x \\leq 40$"
+          "final_answer": "$0 \\leq x \\leq 40$"
         },
         {
           "problem": "Write an inequality: A person must be at least 18 years old.",

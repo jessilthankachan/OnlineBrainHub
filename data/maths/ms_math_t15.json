@@ -39,7 +39,11 @@
         {
           "name": "Profit / Loss Percentages",
           "equation": "$$ \\text{Profit }\\% = \\frac{\\text{Profit}}{\\text{CP}} \\times 100\\% \\quad | \\quad \\text{Loss }\\% = \\frac{\\text{Loss}}{\\text{CP}} \\times 100\\% $$",
-          "variables": {}
+          "variables": {
+            "CP": "Cost Price: the amount paid to buy or make the product.",
+            "Profit": "Selling Price minus Cost Price, when the result is positive.",
+            "Loss": "Cost Price minus Selling Price, when the result is positive."
+          }
         }
       ],
       "visual_aids": [

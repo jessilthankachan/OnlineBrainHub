@@ -123,7 +123,9 @@
         {
           "name": "Cross-Multiplication for Ratios",
           "equation": "$$ \\text{If } a:b = c:d \\text{, then } a \\times d = b \\times c $$",
-          "variables": {}
+          "variables": {
+            "a, b, c, d": "Terms in the two equivalent ratios; the divisors b and d must be non-zero."
+          }
         }
       ],
       "visual_aids": [
@@ -789,7 +791,7 @@
           "name": "Map Distance",
           "equation": "$$ \\text{Map Distance} = \\frac{\\text{Actual Distance}}{\\text{Scale Factor}} $$",
           "variables": {
-            "Scale factor": "Actual distance represented by one unit on the drawing, expressed in the same unit as map distance"
+            "Scale factor": "The actual distance represented by one unit of map distance. For a ratio scale such as 1:25,000, convert both distances to the same unit and use 25,000 as the multiplier. For a stated scale such as 1 cm represents 4 km, use 4 km per cm and keep the units consistent."
           }
         }
       ],

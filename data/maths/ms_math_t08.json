@@ -802,7 +802,8 @@
           "variables": {
             "m": "Gradient (Slope)",
             "y_2 - y_1": "Rise (Vertical change)",
-            "x_2 - x_1": "Run (Horizontal change)"
+            "x_2 - x_1": "Run (Horizontal change)",
+            "Condition": "$x_2 \\ne x_1$; the two points must have different x-coordinates. A vertical line has undefined gradient."
           }
         }
       ],

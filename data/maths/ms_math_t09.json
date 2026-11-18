@@ -783,18 +783,23 @@
           "name": "Sum of Interior Angles",
           "equation": "$$ S = (n - 2) \\times 180^\\circ $$",
           "variables": {
-            "n": "Number of sides"
+            "n": "Number of sides",
+            "Condition": "For a simple polygon with n >= 3 sides."
           }
         },
         {
           "name": "Single Interior Angle (Regular)",
           "equation": "$$ \\text{Angle} = \\frac{(n - 2) \\times 180^\\circ}{n} $$",
-          "variables": {}
+          "variables": {
+            "n": "Number of sides of a regular polygon (n >= 3)."
+          }
         },
         {
           "name": "Single Exterior Angle (Regular)",
           "equation": "$$ \\text{Angle} = \\frac{360^\\circ}{n} $$",
-          "variables": {}
+          "variables": {
+            "n": "Number of sides of a regular polygon (n >= 3)."
+          }
         }
       ],
       "visual_aids": [

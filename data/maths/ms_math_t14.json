@@ -525,7 +525,11 @@
         {
           "name": "Theoretical Probability",
           "equation": "$$ P(A) = \\frac{\\text{Number of favorable outcomes}}{\\text{Total number of possible outcomes}} $$",
-          "variables": {}
+          "variables": {
+            "Favorable outcomes": "Outcomes belonging to event A.",
+            "Total possible outcomes": "All outcomes in the sample space.",
+            "Condition": "This ratio formula applies when all individual outcomes are equally likely."
+          }
         }
       ],
       "visual_aids": [

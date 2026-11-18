@@ -753,7 +753,7 @@
         {
           "problem": "Convert the improper fraction $\\frac{5}{4}$ to a percentage.",
           "solution_steps": [
-            "Step 1: An improper fraction will always be over $100\\%$.",
+            "Step 1: Since the numerator $5$ is greater than the denominator $4$, the fraction is greater than $1$, so its percentage is greater than $100\\%$.",
             "Step 2: Method 1: $4 \\times 25 = 100$. Multiply top by $25$: $5 \\times 25 = 125$. $\\frac{125}{100} = 125\\%$.",
             "Step 3: Method 2: $5 \\div 4 = 1.25$. $1.25 \\times 100 = 125\\%$."
           ],
@@ -767,7 +767,7 @@
         },
         {
           "mistake": "Believing a percentage cannot be greater than $100\\%$.",
-          "correction": "Improper fractions and mixed numbers yield percentages over $100\\%$. This is completely valid (e.g., scoring bonus points, or calculating price inflation)."
+          "correction": "A fraction greater than $1$ gives a percentage over $100\\%$. A fraction equal to $1$ gives exactly $100\\%$; for example, $\\frac{4}{4}=100\\%$."
         }
       ],
       "quick_summary": [
@@ -919,8 +919,11 @@
       "formulas": [
         {
           "name": "Reverse Percentage Formula",
-          "equation": "$$ \\text{Original Quantity} = \\frac{\\text{Final Quantity}}{\\text{Decimal Percentage}} $$",
-          "variables": {}
+          "equation": "$$ \\text{Original Quantity} = \\frac{\\text{Final Quantity}}{\\text{Decimal Multiplier}} $$",
+          "variables": {
+            "Final Quantity": "The amount after the percentage increase or decrease.",
+            "Decimal Multiplier": "The proportion of the original quantity remaining or the new total: for example, 0.80 after a 20% decrease or 1.15 after a 15% increase."
+          }
         }
       ],
       "visual_aids": [
@@ -1010,12 +1013,19 @@
         {
           "name": "Percentage Change",
           "equation": "$$ \\text{Percentage Change} = \\frac{|\\text{New} - \\text{Original}|}{\\text{Original}} \\times 100\\% $$",
-          "variables": {}
+          "variables": {
+            "New value": "Value after the change",
+            "Original value": "Starting value; it must not be zero because it is the denominator.",
+            "Interpretation": "The absolute-value formula gives the magnitude of the percentage change. Compare New with Original separately to identify an increase (New > Original) or decrease (New < Original). Original must be non-zero."
+          }
         },
         {
           "name": "New Value (Multiplier Method)",
           "equation": "$$ \\text{New} = \\text{Original} \\times \\text{Multiplier} $$",
-          "variables": {}
+          "variables": {
+            "Original": "The starting quantity.",
+            "Multiplier": "For an increase of r%, use 1 + r/100. For a decrease of r%, use 1 - r/100."
+          }
         }
       ],
       "visual_aids": [
@@ -1098,7 +1108,10 @@
         {
           "name": "Percentage Change",
           "equation": "$$ \\text{Percentage change} = \\frac{|\\text{New value} - \\text{Original value}|}{\\text{Original value}} \\times 100\\% $$",
-          "variables": {}
+          "variables": {
+            "New value": "Value after the change",
+            "Original value": "Starting value; it must not be zero because it is the denominator."
+          }
         }
       ],
       "visual_aids": [

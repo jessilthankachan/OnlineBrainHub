@@ -890,6 +890,13 @@
             "w": "Width",
             "h": "Height"
           }
+        },
+        {
+          "name": "Lateral Surface Area of a Cube",
+          "equation": "$$ \\text{LSA} = 4a^2 $$",
+          "variables": {
+            "a": "Edge length of the cube; the top and bottom faces are excluded."
+          }
         }
       ],
       "visual_aids": [

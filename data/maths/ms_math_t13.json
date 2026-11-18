@@ -462,7 +462,7 @@
           "details": [
             "**Upward slope (Increasing):** The value is going up over time.",
             "**Downward slope (Decreasing):** The value is dropping over time.",
-            "**Flat horizontal line (Constant):** No change. The value stayed exactly the same.",
+            "**Flat horizontal line (Constant):** No change in the plotted quantity. On a distance-from-start versus time graph, this means the object is stationary.",
             "**Jagged peaks and valleys (Fluctuating):** The value goes up and down repeatedly."
           ]
         },
@@ -496,7 +496,7 @@
       ],
       "worked_examples": [
         {
-          "problem": "A line graph tracks a cyclist's distance. At Hour 2, the distance is $30\\text{ km}$. At Hour 3, the distance is still $30\\text{ km}$. What does this horizontal section of the line indicate?",
+          "problem": "A distance-time graph shows a cyclist's distance from the starting point. At Hour 2, the distance is $30\\text{ km}$. At Hour 3, the distance is still $30\\text{ km}$. What does this horizontal section of the line indicate?",
           "solution_steps": [
             "Step 1: Check the y-axis value at both times. It remained at $30\\text{ km}$.",
             "Step 2: If the distance did not change while time passed, the cyclist was not moving.",
@@ -945,7 +945,7 @@
           "concept": "The Truncated Y-Axis",
           "definition": "Skipping the zero.",
           "details": [
-            "If a bar chart's y-axis starts at $80$ instead of $0$, a bar that reaches $100$ will look *twice* as tall as a bar that reaches $90$, even though the actual difference is only a tiny percentage. **Always check if the y-axis starts at 0!**"
+            "If a bar chart's y-axis starts at $80$ instead of $0$, a bar that reaches $100$ will look twice as tall as a bar that reaches $90$, even though the actual values differ by only $10$ (about $11.1\\%$ relative to $90$). The doubled bar height is a visual effect of the truncated scale, not a $100\\%$ increase in the data values. **Always check if the y-axis starts at 0!**"
           ]
         },
         {
@@ -981,8 +981,12 @@
       "formulas": [
         {
           "name": "Percentage Change",
-          "equation": "$$ \\text{Percentage Change} = \\frac{\\text{New} - \\text{Original}}{\\text{Original}} \\times 100 $$",
-          "variables": {}
+          "equation": "$$ \\text{Percentage Change} = \\frac{\\text{New} - \\text{Original}}{\\text{Original}} \\times 100\\% $$",
+          "variables": {
+            "New": "Value after the change.",
+            "Original": "Starting value; it must be non-zero.",
+            "Interpretation": "A positive result is an increase; a negative result is a decrease."
+          }
         }
       ],
       "visual_aids": [
@@ -1001,9 +1005,9 @@
           "solution_steps": [
             "Step 1: Check the vertical (y) axis.",
             "Step 2: If the 100 bar is twice as tall as the 95 bar, the axis does not start at 0. It likely starts at 90.",
-            "Step 3: This truncated axis artificially exaggerates a tiny 5-unit increase to make it look like a massive $100\\%$ jump."
+            "Step 3: The truncated axis makes the bar for 100 appear twice as tall as the bar for 95 because the displayed heights above 90 are 10 and 5. This doubles the visible bar height; it does not mean the data value increased by 100%. The actual increase is $\\frac{100-95}{95}\\times100\\% \\approx 5.26\\%$."
           ],
-          "final_answer": "The vertical axis is truncated (does not start at 0)."
+          "final_answer": "The vertical axis is truncated (it does not start at 0), exaggerating the visual difference. The actual increase from 95 to 100 is about 5.26%, not 100%."
         }
       ],
       "common_mistakes": [

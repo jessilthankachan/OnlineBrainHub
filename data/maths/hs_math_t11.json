@@ -1,0 +1,1643 @@
+{
+  "subject": "math",
+  "topicId": "hs_math_t11",
+  "topicTitle": "Mensuration and Three-Dimensional Geometry",
+  "grade": "High School",
+  "subtopics": {
+    "hs_math_t11_st01": {
+      "id": "hs_math_t11_st01",
+      "title": "Perimeter and area of plane figures",
+      "overview": "Plane mensuration measures two different attributes of a flat figure: the length of its outside boundary and the amount of surface enclosed. The correct formula depends on the shape, and area formulas that use a height require a perpendicular height.",
+      "key_concepts": [
+        {
+          "concept": "Perimeter",
+          "definition": "The total length of the outside boundary.",
+          "details": "Add the lengths of all outer sides. Perimeter is a one-dimensional measure, so its units are cm, m or another length unit. For a rectangle, P = 2(l + w); for a square, P = 4a. For a regular polygon with n equal sides of length a, P = na."
+        },
+        {
+          "concept": "Area",
+          "definition": "The measure of the two-dimensional region enclosed by a boundary.",
+          "details": "Area can be understood as the number of unit squares that cover a region without gaps or overlaps. It is measured in square units such as cm² or m². Rectangle: A = lw; square: A = a²; triangle: A = ½bh; parallelogram: A = bh; trapezium/trapezoid: A = ½(a+b)h, where a and b are the parallel sides."
+        },
+        {
+          "concept": "Area of a rhombus and kite",
+          "definition": "Area determined by the lengths of the diagonals.",
+          "details": "For a rhombus or kite whose diagonals are perpendicular, A = ½d₁d₂. The diagonals are the full lengths between opposite vertices, not half-diagonals."
+        },
+        {
+          "concept": "Choosing dimensions",
+          "definition": "Use the measurement that is perpendicular to the selected base.",
+          "details": "In a triangle or parallelogram, the height is the shortest perpendicular distance between the base line and the opposite vertex or parallel side. It may lie outside an obtuse triangle. A sloping side is not automatically the height."
+        },
+        {
+          "concept": "Units and dimensional meaning",
+          "definition": "Perimeter is length; area is length multiplied by length.",
+          "details": "If lengths are in metres, area is in m². Convert all lengths to one unit before substituting. For area conversions, square the linear conversion factor: 1 m² = 10,000 cm²."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Rectangle and square",
+          "equation": "$$P_{rect}=2(l+w),\\quad A_{rect}=lw;\\qquad P_{sq}=4a,\\quad A_{sq}=a^2$$",
+          "variables": {
+            "l": "length",
+            "w": "width",
+            "a": "side length"
+          }
+        },
+        {
+          "name": "Triangle and parallelogram",
+          "equation": "$$A_{triangle}=\\frac12 bh,\\qquad A_{parallelogram}=bh$$",
+          "variables": {
+            "b": "chosen base",
+            "h": "perpendicular height"
+          }
+        },
+        {
+          "name": "Trapezium / trapezoid",
+          "equation": "$$A=\\frac12(a+b)h$$",
+          "variables": {
+            "a,b": "lengths of the parallel sides",
+            "h": "perpendicular distance between the parallel sides"
+          }
+        },
+        {
+          "name": "Rhombus and kite",
+          "equation": "$$A=\\frac12 d_1d_2$$",
+          "variables": {
+            "d₁,d₂": "lengths of the diagonals"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s01",
+          "title": "Perpendicular height in plane figures",
+          "type": "svg",
+          "caption": "The perpendicular height, not a sloping side, is used in area formulas.",
+          "alt_text": "Triangle and parallelogram diagrams show a dashed perpendicular height meeting the base at a right angle, with sloping sides distinguished from height.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s01-title v11_s01-desc\">\n<title id=\"v11_s01-title\">Perpendicular height in plane figures</title>\n<desc id=\"v11_s01-desc\">Triangle and parallelogram diagrams show a dashed perpendicular height meeting the base at a right angle, with sloping sides distinguished from height.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<polygon points=\"55,175 205,175 155,55\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<line x1=\"155\" y1=\"55\" x2=\"155\" y2=\"175\" stroke=\"#dc2626\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/>\n<path d=\"M155 163 h12 v12\" fill=\"none\" stroke=\"#111827\" stroke-width=\"2\"/>\n<text x=\"164\" y=\"115\" font-size=\"16\" fill=\"#b91c1c\">h</text><text x=\"110\" y=\"199\" font-size=\"15\">base b</text>\n<polygon points=\"315,175 475,175 425,65 265,65\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<line x1=\"425\" y1=\"65\" x2=\"425\" y2=\"175\" stroke=\"#dc2626\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/>\n<path d=\"M425 163 h12 v12\" fill=\"none\" stroke=\"#111827\" stroke-width=\"2\"/>\n<text x=\"434\" y=\"120\" font-size=\"16\" fill=\"#b91c1c\">h</text><text x=\"370\" y=\"199\" font-size=\"15\">base b</text>\n<text x=\"260\" y=\"28\" font-size=\"14\" fill=\"#334155\">Height is perpendicular to the base</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A trapezium has parallel sides 10 cm and 16 cm and perpendicular height 5 cm. Find its area.",
+          "solution_steps": [
+            "Use A = ½(a+b)h.",
+            "Substitute a = 10 cm, b = 16 cm and h = 5 cm.",
+            "A = ½(10+16)×5 = ½×26×5.",
+            "A = 13×5 = 65 cm²."
+          ],
+          "final_answer": "65 cm²"
+        },
+        {
+          "problem": "A rectangular garden is 12 m long and 7.5 m wide. Find the fencing length and the area.",
+          "solution_steps": [
+            "Perimeter P = 2(l+w) = 2(12+7.5) = 39 m.",
+            "Area A = lw = 12×7.5 = 90 m²."
+          ],
+          "final_answer": "Fencing length = 39 m; area = 90 m²"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using a sloping side as the height of a triangle or parallelogram.",
+          "correction": "Draw or identify a perpendicular line to the base. Use that perpendicular distance as h."
+        },
+        {
+          "mistake": "Confusing perimeter units with area units.",
+          "correction": "Write length answers in units such as cm and area answers in square units such as cm²."
+        },
+        {
+          "mistake": "Converting m² to cm² using a factor of 100 only.",
+          "correction": "Square the linear factor: 1 m² = (100 cm)² = 10,000 cm²."
+        }
+      ],
+      "quick_summary": [
+        "Perimeter measures the outer boundary; area measures the enclosed surface.",
+        "Use perpendicular height in triangle, parallelogram and trapezium formulas.",
+        "For a regular n-sided polygon, perimeter = n × side length.",
+        "Area units are squared; convert squared units by squaring the length conversion factor."
+      ],
+      "utilities": [
+        {
+          "title": "Area Calculator",
+          "description": "Calculate areas of common plane figures using the dimensions you provide.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/area_calculator"
+        }
+      ]
+    },
+    "hs_math_t11_st02": {
+      "id": "hs_math_t11_st02",
+      "title": "Area of composite shapes",
+      "overview": "A composite plane figure is formed by combining two or more familiar shapes or by removing a smaller region from a larger one. Its area can be found by partitioning it into simple shapes or subtracting cut-outs. Perimeter must be treated separately because only exposed boundary segments count.",
+      "key_concepts": [
+        {
+          "concept": "Decomposition and addition",
+          "definition": "Split a complex figure into non-overlapping familiar parts.",
+          "details": "Draw construction lines to make rectangles, triangles, trapezia, semicircles or other known shapes. Find each part's area and add. Check that the parts cover the required region exactly once."
+        },
+        {
+          "concept": "Subtraction method",
+          "definition": "Subtract missing regions from a simple enclosing shape.",
+          "details": "Enclose the figure in a rectangle or another familiar shape. Calculate the enclosing area, calculate the cut-out area, and subtract: required area = whole area − removed area."
+        },
+        {
+          "concept": "Finding missing dimensions",
+          "definition": "Use the total lengths to determine smaller lengths.",
+          "details": "When a shape is split, a remaining segment may be the difference between an overall length and a known part. For example, if a total width is 12 m and one section is 4 m, the remaining width is 8 m."
+        },
+        {
+          "concept": "Composite perimeter",
+          "definition": "Add only the lengths on the outside boundary.",
+          "details": "Internal partition lines are not part of the perimeter. Trace the outside edge once. For an L-shape, derive missing outer lengths from aligned horizontal and vertical totals."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Addition method",
+          "equation": "$$A_{composite}=A_1+A_2+\\cdots+A_n$$",
+          "variables": {
+            "A₁,…,Aₙ": "areas of non-overlapping component shapes"
+          }
+        },
+        {
+          "name": "Subtraction method",
+          "equation": "$$A_{required}=A_{whole}-A_{removed}$$",
+          "variables": {
+            "Awhole": "area of the enclosing shape",
+            "Aremoved": "total area of cut-outs"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s02",
+          "title": "Two methods for a composite area",
+          "type": "svg",
+          "caption": "The same L-shaped region can be split into rectangles or treated as a large rectangle with a corner removed.",
+          "alt_text": "Two L-shaped diagrams: one partitioned into two rectangles, and one shown as a full rectangle with the missing corner shaded.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s02-title v11_s02-desc\">\n<title id=\"v11_s02-title\">Two methods for a composite area</title>\n<desc id=\"v11_s02-desc\">Two L-shaped diagrams: one partitioned into two rectangles, and one shown as a full rectangle with the missing corner shaded.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<path d=\"M45 35 H105 V105 H190 V175 H45 Z\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<line x1=\"105\" y1=\"105\" x2=\"105\" y2=\"175\" stroke=\"#1d4ed8\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/>\n<text x=\"73\" y=\"78\" font-size=\"17\" fill=\"#1e3a8a\">A₁</text><text x=\"135\" y=\"145\" font-size=\"17\" fill=\"#1e3a8a\">A₂</text>\n<text x=\"115\" y=\"212\" text-anchor=\"middle\" font-size=\"14\">Add: A₁ + A₂</text>\n<rect x=\"300\" y=\"35\" width=\"155\" height=\"140\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<rect x=\"360\" y=\"35\" width=\"95\" height=\"70\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/>\n<text x=\"328\" y=\"90\" font-size=\"16\" fill=\"#14532d\">Keep</text><text x=\"405\" y=\"76\" text-anchor=\"middle\" font-size=\"13\" fill=\"#991b1b\">Cut-out</text>\n<text x=\"377\" y=\"212\" text-anchor=\"middle\" font-size=\"14\">Subtract: whole minus cut-out</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "An L-shaped floor is made from a 10 m × 8 m rectangle with a 4 m × 3 m corner removed. Find its area.",
+          "solution_steps": [
+            "Area of the full rectangle = 10×8 = 80 m².",
+            "Area of the removed rectangle = 4×3 = 12 m².",
+            "Required area = 80−12 = 68 m²."
+          ],
+          "final_answer": "68 m²"
+        },
+        {
+          "problem": "A shape consists of a 9 cm × 4 cm rectangle and a right triangle with base 4 cm and height 3 cm attached along a 4 cm side. Find the total area.",
+          "solution_steps": [
+            "Rectangle area = 9×4 = 36 cm².",
+            "Triangle area = ½×4×3 = 6 cm².",
+            "Total area = 36+6 = 42 cm²."
+          ],
+          "final_answer": "42 cm²"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding the area of an overlapping part twice.",
+          "correction": "Choose non-overlapping pieces or subtract the overlap once."
+        },
+        {
+          "mistake": "Including an internal dividing line in the perimeter.",
+          "correction": "Trace only the exposed outside boundary; partition lines are not perimeter."
+        },
+        {
+          "mistake": "Using an original total length for a smaller partition without recalculating it.",
+          "correction": "Subtract the known section from the overall length to find the remaining dimension."
+        }
+      ],
+      "quick_summary": [
+        "Break composite figures into familiar non-overlapping shapes, or subtract cut-outs from an enclosing shape.",
+        "Calculate missing dimensions before applying formulas.",
+        "Area is combined by addition/subtraction; perimeter includes only the exposed outside edges."
+      ],
+      "utilities": [
+        {
+          "title": "Area Calculator",
+          "description": "Calculate the component areas used when solving composite plane-figure problems.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/area_calculator"
+        }
+      ]
+    },
+    "hs_math_t11_st03": {
+      "id": "hs_math_t11_st03",
+      "title": "Circumference and area of circles",
+      "overview": "A circle is the set of points in a plane at a fixed distance from a centre. Its radius, diameter, circumference and area are related by the constant π. Use the radius in the area formula and distinguish exact answers involving π from decimal approximations.",
+      "key_concepts": [
+        {
+          "concept": "Radius and diameter",
+          "definition": "The radius joins the centre to the circle; the diameter passes through the centre.",
+          "details": "The diameter is twice the radius: d = 2r. A diameter is the longest chord of a circle."
+        },
+        {
+          "concept": "Circumference",
+          "definition": "The length of the complete circular boundary.",
+          "details": "The ratio of circumference to diameter is the constant π. Thus C = πd = 2πr. Circumference is a length and is measured in linear units."
+        },
+        {
+          "concept": "Area of a circle",
+          "definition": "The measure of the region enclosed by the circumference.",
+          "details": "A = πr². The radius must be squared. If the diameter is given, first calculate r = d/2."
+        },
+        {
+          "concept": "Reverse calculations",
+          "definition": "Find a missing radius or diameter from circumference or area.",
+          "details": "From C = 2πr, r = C/(2π). From A = πr², r = √(A/π). A radius is positive, so take the positive square root."
+        },
+        {
+          "concept": "Parts of a circle",
+          "definition": "A semicircle is half a disk; an annulus is the region between two concentric circles.",
+          "details": "Semicircle area = ½πr². The perimeter of a semicircular region includes the curved half-circumference plus the diameter: P = πr+2r. An annulus has area π(R²−r²), where R is the outer radius and r the inner radius."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Circumference and area",
+          "equation": "$$C=2\\pi r=\\pi d,\\qquad A=\\pi r^2$$",
+          "variables": {
+            "r": "radius",
+            "d": "diameter",
+            "π": "approximately 3.14159"
+          }
+        },
+        {
+          "name": "Semicircle",
+          "equation": "$$A=\\frac12\\pi r^2,\\qquad P=\\pi r+2r$$",
+          "variables": {
+            "r": "radius; P includes the diameter"
+          }
+        },
+        {
+          "name": "Annulus",
+          "equation": "$$A=\\pi(R^2-r^2)$$",
+          "variables": {
+            "R": "outer radius",
+            "r": "inner radius"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s03",
+          "title": "Parts and measurements of a circle",
+          "type": "svg",
+          "caption": "The radius is half the diameter; circumference is the boundary and area is the enclosed region.",
+          "alt_text": "Circle diagram with centre O, radius r, diameter d and circular boundary labelled circumference C.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s03-title v11_s03-desc\">\n<title id=\"v11_s03-title\">Parts and measurements of a circle</title>\n<desc id=\"v11_s03-desc\">Circle diagram with centre O, radius r, diameter d and circular boundary labelled circumference C.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<circle cx=\"150\" cy=\"112\" r=\"78\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"4\"/>\n<line x1=\"72\" y1=\"112\" x2=\"228\" y2=\"112\" stroke=\"#dc2626\" stroke-width=\"3\"/>\n<line x1=\"150\" y1=\"112\" x2=\"228\" y2=\"112\" stroke=\"#15803d\" stroke-width=\"4\"/>\n<circle cx=\"150\" cy=\"112\" r=\"4\" fill=\"#111827\"/>\n<text x=\"140\" y=\"102\" font-size=\"14\">O</text><text x=\"185\" y=\"101\" font-size=\"15\" fill=\"#15803d\">r</text>\n<text x=\"150\" y=\"135\" text-anchor=\"middle\" font-size=\"15\" fill=\"#b91c1c\">d = 2r</text>\n<text x=\"285\" y=\"85\" font-size=\"17\" fill=\"#1d4ed8\">Boundary: C = 2πr</text>\n<text x=\"285\" y=\"120\" font-size=\"17\" fill=\"#1d4ed8\">Inside: A = πr²</text>\n<text x=\"285\" y=\"155\" font-size=\"14\" fill=\"#334155\">C is a length; A is an area</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A circular pond has radius 7 m. Find its circumference and area in terms of π and using π = 22/7.",
+          "solution_steps": [
+            "C = 2πr = 2×π×7 = 14π m = 44 m.",
+            "A = πr² = π×7² = 49π m² = 154 m²."
+          ],
+          "final_answer": "Circumference = 14π m = 44 m; area = 49π m² = 154 m²"
+        },
+        {
+          "problem": "A circular plate has area 154 cm². Find its radius using π = 22/7.",
+          "solution_steps": [
+            "Use A = πr².",
+            "154 = (22/7)r², so r² = 154×7/22 = 49.",
+            "r = √49 = 7 cm (take the positive value)."
+          ],
+          "final_answer": "7 cm"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Substituting the diameter directly into A = πr².",
+          "correction": "If diameter d is given, use r = d/2 before calculating area."
+        },
+        {
+          "mistake": "Giving the semicircle's curved arc as its full perimeter.",
+          "correction": "Add the straight diameter: P = πr+2r."
+        },
+        {
+          "mistake": "Rounding π too early when an exact answer is requested.",
+          "correction": "Keep answers in terms of π until a decimal approximation is specifically required."
+        }
+      ],
+      "quick_summary": [
+        "C = πd = 2πr; A = πr².",
+        "Diameter = 2 × radius.",
+        "For a semicircular region, perimeter includes the diameter.",
+        "For an annulus, subtract the inner circle's area from the outer circle's area."
+      ],
+      "utilities": [
+        {
+          "title": "Area Calculator",
+          "description": "Calculate the area of a circle from its radius or diameter.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/area_calculator"
+        }
+      ]
+    },
+    "hs_math_t11_st04": {
+      "id": "hs_math_t11_st04",
+      "title": "Arc length and sector area",
+      "overview": "A sector is a region bounded by two radii and an arc. The arc length and sector area are the same fraction of the full circumference and area as the central angle is of one complete revolution. Degree formulas use 360°, while radian formulas require the angle in radians.",
+      "key_concepts": [
+        {
+          "concept": "Central angle and fraction of a circle",
+          "definition": "The central angle determines the fraction of the full circle represented by a sector.",
+          "details": "For θ degrees, the fraction is θ/360. A 90° sector is one quarter of a circle; a 180° sector is a semicircle."
+        },
+        {
+          "concept": "Arc length",
+          "definition": "The length of the curved part of the sector boundary.",
+          "details": "For degrees, L = (θ/360)×2πr. For radians, L = rθ. Arc length is a linear measurement."
+        },
+        {
+          "concept": "Sector area",
+          "definition": "The area enclosed by two radii and the included arc.",
+          "details": "For degrees, A = (θ/360)×πr². For radians, A = ½r²θ. Sector area is measured in square units."
+        },
+        {
+          "concept": "Sector perimeter",
+          "definition": "The total boundary length of the sector.",
+          "details": "The perimeter includes the arc and both radii: P = L+2r. Do not confuse it with arc length alone."
+        },
+        {
+          "concept": "Degrees and radians",
+          "definition": "Two ways of measuring angles.",
+          "details": "A full turn is 360° or 2π radians. Convert degrees to radians by multiplying by π/180. Use the radian formulas only when θ is expressed in radians."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Arc length (degrees)",
+          "equation": "$$L=\\frac{\\theta}{360^\\circ}\\,2\\pi r$$",
+          "variables": {
+            "θ": "central angle in degrees",
+            "r": "radius"
+          }
+        },
+        {
+          "name": "Sector area (degrees)",
+          "equation": "$$A=\\frac{\\theta}{360^\\circ}\\,\\pi r^2$$",
+          "variables": {
+            "θ": "central angle in degrees",
+            "r": "radius"
+          }
+        },
+        {
+          "name": "Arc length and sector area (radians)",
+          "equation": "$$L=r\\theta,\\qquad A=\\frac12r^2\\theta$$",
+          "variables": {
+            "θ": "central angle in radians",
+            "r": "radius"
+          }
+        },
+        {
+          "name": "Sector perimeter",
+          "equation": "$$P=L+2r$$",
+          "variables": {
+            "L": "arc length",
+            "r": "radius"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s04",
+          "title": "A sector and its central angle",
+          "type": "svg",
+          "caption": "A sector is a fraction of a full circle determined by its central angle.",
+          "alt_text": "Circle sector diagram showing two radii, central angle theta, shaded sector and curved arc.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s04-title v11_s04-desc\">\n<title id=\"v11_s04-title\">A sector and its central angle</title>\n<desc id=\"v11_s04-desc\">Circle sector diagram showing two radii, central angle theta, shaded sector and curved arc.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<circle cx=\"150\" cy=\"120\" r=\"88\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/>\n<path d=\"M150 120 L238 120 A88 88 0 0 0 150 32 Z\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<line x1=\"150\" y1=\"120\" x2=\"238\" y2=\"120\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<line x1=\"150\" y1=\"120\" x2=\"150\" y2=\"32\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<path d=\"M180 120 A30 30 0 0 0 150 90\" fill=\"none\" stroke=\"#111827\" stroke-width=\"2\"/>\n<text x=\"178\" y=\"101\" font-size=\"15\">θ</text><text x=\"193\" y=\"137\" font-size=\"14\" fill=\"#15803d\">r</text>\n<text x=\"275\" y=\"65\" font-size=\"16\" fill=\"#1d4ed8\">Arc: L</text>\n<text x=\"275\" y=\"100\" font-size=\"16\" fill=\"#1d4ed8\">Sector area: A</text>\n<text x=\"275\" y=\"140\" font-size=\"14\">Fraction = θ / 360°</text>\n<text x=\"275\" y=\"164\" font-size=\"14\">for degree measure</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A sector has radius 7 cm and central angle 90°. Find its arc length, area and perimeter using π = 22/7.",
+          "solution_steps": [
+            "Arc length L = (90/360)×2×(22/7)×7 = ¼×44 = 11 cm.",
+            "Sector area A = (90/360)×(22/7)×7² = ¼×154 = 38.5 cm².",
+            "Perimeter P = L+2r = 11+14 = 25 cm."
+          ],
+          "final_answer": "Arc length = 11 cm; area = 38.5 cm²; perimeter = 25 cm"
+        },
+        {
+          "problem": "An arc is 6π cm long and subtends an angle of π/2 radians. Find the radius.",
+          "solution_steps": [
+            "Use the radian formula L = rθ.",
+            "r = L/θ = 6π ÷ (π/2) = 6π×2/π = 12 cm."
+          ],
+          "final_answer": "12 cm"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using a degree value in a radian formula or vice versa.",
+          "correction": "Check the angle unit first. Convert degrees to radians when using L = rθ or A = ½r²θ."
+        },
+        {
+          "mistake": "Calling arc length the sector perimeter.",
+          "correction": "Add both radii to the arc: P = L+2r."
+        },
+        {
+          "mistake": "Using θ/360 when θ is in radians.",
+          "correction": "The denominator 360 applies only to degrees; use the radian formulas for radians."
+        }
+      ],
+      "quick_summary": [
+        "Arc length is the corresponding fraction of the circumference.",
+        "Sector area is the same fraction of the circle's area.",
+        "For radians, L = rθ and A = ½r²θ.",
+        "Sector perimeter = arc length + two radii."
+      ]
+    },
+    "hs_math_t11_st05": {
+      "id": "hs_math_t11_st05",
+      "title": "Surface area of prisms",
+      "overview": "A prism has two congruent, parallel bases and a constant cross-section along its length. Its surface area is the sum of its base faces and lateral faces. A net makes the faces visible and helps distinguish lateral surface area from total surface area.",
+      "key_concepts": [
+        {
+          "concept": "Prism and its faces",
+          "definition": "A prism has two matching parallel bases connected by parallelogram faces.",
+          "details": "In a right prism, the lateral faces are rectangles. The length of the prism is the perpendicular distance between its bases. A cuboid and cube are special prisms."
+        },
+        {
+          "concept": "Lateral surface area",
+          "definition": "The combined area of the side faces, excluding the two bases.",
+          "details": "For a right prism, LSA = perimeter of base × prism length. If the base perimeter is P and prism length is h, LSA = Ph."
+        },
+        {
+          "concept": "Total surface area",
+          "definition": "The area of every external face, including both bases.",
+          "details": "TSA = Ph+2B for a right prism, where B is the area of one base. For a cuboid this becomes 2(lw+lh+wh); for a cube it is 6a²."
+        },
+        {
+          "concept": "Open-ended prisms and practical surfaces",
+          "definition": "Count only the faces that are actually present or exposed.",
+          "details": "An open-top box has one base and its lateral faces, so its area is Ph+B. If both ends are open, only the lateral faces are counted. For painting or wrapping, exclude hidden or absent faces."
+        },
+        {
+          "concept": "Nets",
+          "definition": "A net is a flat arrangement of all faces that folds into the solid.",
+          "details": "The net of a prism contains two congruent base shapes and one rectangle for each side of the base. The rectangle widths correspond to the base side lengths and their common height is the prism length."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Right prism lateral surface area",
+          "equation": "$$LSA=Ph$$",
+          "variables": {
+            "P": "perimeter of the base",
+            "h": "perpendicular distance between the bases"
+          }
+        },
+        {
+          "name": "Right prism total surface area",
+          "equation": "$$TSA=Ph+2B$$",
+          "variables": {
+            "P": "perimeter of the base",
+            "h": "prism length",
+            "B": "area of one base"
+          }
+        },
+        {
+          "name": "Cuboid and cube",
+          "equation": "$$TSA_{cuboid}=2(lw+lh+wh),\\qquad TSA_{cube}=6a^2$$",
+          "variables": {
+            "l,w,h": "cuboid dimensions",
+            "a": "cube edge"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s05",
+          "title": "Net of a right triangular prism",
+          "type": "svg",
+          "caption": "A prism net has two congruent bases and rectangular lateral faces.",
+          "alt_text": "Net of a triangular prism: three rectangles in a strip and two congruent triangles attached as the bases.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s05-title v11_s05-desc\">\n<title id=\"v11_s05-title\">Net of a right triangular prism</title>\n<desc id=\"v11_s05-desc\">Net of a triangular prism: three rectangles in a strip and two congruent triangles attached as the bases.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<rect x=\"65\" y=\"75\" width=\"115\" height=\"70\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n<rect x=\"180\" y=\"75\" width=\"95\" height=\"70\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/>\n<rect x=\"275\" y=\"75\" width=\"130\" height=\"70\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n<polygon points=\"65,75 125,25 180,75\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/>\n<polygon points=\"65,145 125,195 180,145\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/>\n<text x=\"122\" y=\"115\" text-anchor=\"middle\" font-size=\"14\">Rectangle</text>\n<text x=\"227\" y=\"115\" text-anchor=\"middle\" font-size=\"14\">Rectangle</text>\n<text x=\"340\" y=\"115\" text-anchor=\"middle\" font-size=\"14\">Rectangle</text>\n<text x=\"125\" y=\"18\" text-anchor=\"middle\" font-size=\"13\">Base 1</text>\n<text x=\"125\" y=\"218\" text-anchor=\"middle\" font-size=\"13\">Base 2</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A right triangular prism has a triangular base with sides 3 cm, 4 cm and 5 cm. The perpendicular height of the triangle is 4 cm to the 3 cm base, and the prism length is 10 cm. Find its LSA and TSA.",
+          "solution_steps": [
+            "Base perimeter P = 3+4+5 = 12 cm.",
+            "LSA = Ph = 12×10 = 120 cm².",
+            "Base area B = ½×3×4 = 6 cm².",
+            "TSA = LSA+2B = 120+12 = 132 cm²."
+          ],
+          "final_answer": "LSA = 120 cm²; TSA = 132 cm²"
+        },
+        {
+          "problem": "A cuboid measures 8 cm × 5 cm × 3 cm. Find its total surface area.",
+          "solution_steps": [
+            "TSA = 2(lw+lh+wh).",
+            "= 2(8×5 + 8×3 + 5×3).",
+            "= 2(40+24+15) = 2×79 = 158 cm²."
+          ],
+          "final_answer": "158 cm²"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the area of a base as the lateral surface area.",
+          "correction": "For a right prism, multiply the base perimeter by the prism length: LSA = Ph."
+        },
+        {
+          "mistake": "Forgetting one or both bases in total surface area.",
+          "correction": "TSA includes all external faces; add 2B for a closed prism."
+        },
+        {
+          "mistake": "Counting an absent lid or an internal joining face.",
+          "correction": "Read whether the prism is open, closed or joined to another solid and count only exposed faces."
+        }
+      ],
+      "quick_summary": [
+        "For a right prism, LSA = base perimeter × prism length.",
+        "TSA = LSA + areas of both bases.",
+        "A net displays all faces and helps prevent omissions.",
+        "Open prisms require only the areas of faces that exist and are exposed."
+      ],
+      "utilities": [
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Check surface-area calculations for common three-dimensional solids.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator"
+        }
+      ]
+    },
+    "hs_math_t11_st06": {
+      "id": "hs_math_t11_st06",
+      "title": "Volume of prisms",
+      "overview": "The volume of a prism is the area of its constant cross-section multiplied by the perpendicular distance between its two congruent bases. This rule works for triangular, rectangular, trapezoidal and other prisms. The cross-sectional area and prism length must use compatible units.",
+      "key_concepts": [
+        {
+          "concept": "Constant cross-section",
+          "definition": "Every slice parallel to the bases has the same shape and area.",
+          "details": "This property allows a prism to be viewed as identical layers stacked along its length. The area of one base is often written B or A."
+        },
+        {
+          "concept": "Volume rule",
+          "definition": "Multiply the base or cross-sectional area by the prism length.",
+          "details": "V = Bh. For a triangular prism, B = ½b×h_triangle; multiply this area by the prism length. Do not confuse the triangle's perpendicular height with the prism's length."
+        },
+        {
+          "concept": "Units of volume",
+          "definition": "Volume measures three-dimensional space.",
+          "details": "If dimensions are in centimetres, volume is in cm³. If the base area is in m² and prism length in m, volume is in m³."
+        },
+        {
+          "concept": "Capacity",
+          "definition": "Capacity is the amount a container can hold.",
+          "details": "For water or other liquids, use internal dimensions. 1 cm³ = 1 mL, 1000 cm³ = 1 L and 1 m³ = 1000 L."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Volume of any prism",
+          "equation": "$$V=Bh$$",
+          "variables": {
+            "B": "area of a constant cross-section",
+            "h": "perpendicular distance between the bases / prism length"
+          }
+        },
+        {
+          "name": "Triangular prism",
+          "equation": "$$V=\\left(\\frac12 bh_t\\right)L$$",
+          "variables": {
+            "b": "base of triangular cross-section",
+            "hₜ": "perpendicular height of triangle",
+            "L": "length of prism"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s06",
+          "title": "Volume as repeated cross-sectional layers",
+          "type": "svg",
+          "caption": "A prism is formed by extending a fixed cross-sectional area through a length.",
+          "alt_text": "An extruded triangular cross-section forming a triangular prism, with cross-sectional area B and prism length L.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s06-title v11_s06-desc\">\n<title id=\"v11_s06-title\">Volume as repeated cross-sectional layers</title>\n<desc id=\"v11_s06-desc\">An extruded triangular cross-section forming a triangular prism, with cross-sectional area B and prism length L.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<polygon points=\"70,150 135,45 205,150\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<polygon points=\"230,125 295,20 365,125\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<path d=\"M70 150 L230 125 M135 45 L295 20 M205 150 L365 125\" stroke=\"#475569\" stroke-width=\"2\"/>\n<text x=\"140\" y=\"125\" font-size=\"15\" fill=\"#1e3a8a\">B</text>\n\n<text x=\"188\" y=\"190\" font-size=\"15\" fill=\"#b91c1c\">Length L</text>\n<text x=\"390\" y=\"80\" font-size=\"17\">V = B × L</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A triangular prism has a triangular cross-section with base 6 cm and perpendicular height 4 cm. Its length is 12 cm. Find its volume.",
+          "solution_steps": [
+            "Area of triangular cross-section B = ½×6×4 = 12 cm².",
+            "Volume V = B×L = 12×12 = 144 cm³."
+          ],
+          "final_answer": "144 cm³"
+        },
+        {
+          "problem": "A prism has a cross-sectional area of 35 cm² and volume 420 cm³. Find its length.",
+          "solution_steps": [
+            "Use V = Bh, so h = V/B.",
+            "h = 420/35 = 12 cm."
+          ],
+          "final_answer": "12 cm"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the triangle's height as the prism length.",
+          "correction": "The triangle's height is used to calculate B; multiply B by the separate prism length."
+        },
+        {
+          "mistake": "Using inconsistent units.",
+          "correction": "Convert all dimensions to one length unit before calculating the base area and volume."
+        },
+        {
+          "mistake": "Writing volume in square units.",
+          "correction": "Volume is measured in cubic units such as cm³ or m³."
+        }
+      ],
+      "quick_summary": [
+        "The volume of every prism is V = base area × perpendicular length.",
+        "Find the cross-sectional area first, then multiply by the prism length.",
+        "Use internal dimensions for container capacity.",
+        "Volume uses cubic units."
+      ],
+      "utilities": [
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Check volume calculations for common three-dimensional solids.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator"
+        }
+      ]
+    },
+    "hs_math_t11_st07": {
+      "id": "hs_math_t11_st07",
+      "title": "Cylinders",
+      "overview": "A right circular cylinder has two equal, parallel circular bases joined by a curved surface. When the curved surface is cut along a vertical line and unrolled, it forms a rectangle whose dimensions are the circumference of the base and the cylinder's height. This explains the curved-surface-area formula.",
+      "key_concepts": [
+        {
+          "concept": "Cylinder dimensions",
+          "definition": "A cylinder is described by its radius r and perpendicular height h.",
+          "details": "The radius is measured from the centre of a circular base to its edge. The diameter is 2r. The height is the perpendicular distance between the circular bases."
+        },
+        {
+          "concept": "Curved surface area",
+          "definition": "The area of the curved wall only.",
+          "details": "Unrolling the curved wall gives a rectangle of width 2πr and height h. Therefore CSA = 2πrh."
+        },
+        {
+          "concept": "Total surface area",
+          "definition": "The curved wall plus the two circular ends.",
+          "details": "For a closed cylinder, TSA = 2πrh+2πr² = 2πr(h+r). For an open-top cylinder, include only one circular base: area = 2πrh+πr²."
+        },
+        {
+          "concept": "Volume",
+          "definition": "The area of a circular base multiplied by the height.",
+          "details": "V = πr²h. Use the internal radius and internal height when calculating a tank's capacity."
+        },
+        {
+          "concept": "Hollow cylinders and practical containers",
+          "definition": "The inner and outer radii may both matter.",
+          "details": "For a hollow cylindrical wall, the material's cross-sectional area is π(R²−r²), where R is the outer radius and r is the inner radius. For a pipe of length h, material volume = π(R²−r²)h. Identify whether the problem asks for the material or the space inside."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Cylinder curved surface area",
+          "equation": "$$CSA=2\\pi rh$$",
+          "variables": {
+            "r": "radius of circular base",
+            "h": "perpendicular height"
+          }
+        },
+        {
+          "name": "Cylinder total surface area (closed)",
+          "equation": "$$TSA=2\\pi rh+2\\pi r^2=2\\pi r(h+r)$$",
+          "variables": {
+            "r": "radius",
+            "h": "height"
+          }
+        },
+        {
+          "name": "Cylinder volume",
+          "equation": "$$V=\\pi r^2h$$",
+          "variables": {
+            "r": "radius",
+            "h": "height"
+          }
+        },
+        {
+          "name": "Hollow cylindrical material volume",
+          "equation": "$$V=\\pi h(R^2-r^2)$$",
+          "variables": {
+            "R": "outer radius",
+            "r": "inner radius",
+            "h": "length"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s07",
+          "title": "Unrolling a cylinder's curved surface",
+          "type": "svg",
+          "caption": "The curved surface unfolds into a rectangle with width equal to the base circumference.",
+          "alt_text": "Net of a cylinder showing a rectangle of width 2πr and height h, with two circular bases of radius r.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s07-title v11_s07-desc\">\n<title id=\"v11_s07-title\">Unrolling a cylinder's curved surface</title>\n<desc id=\"v11_s07-desc\">Net of a cylinder showing a rectangle of width 2πr and height h, with two circular bases of radius r.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<rect x=\"75\" y=\"70\" width=\"300\" height=\"105\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<text x=\"225\" y=\"125\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">Rectangle: 2πr × h</text>\n<line x1=\"75\" y1=\"188\" x2=\"375\" y2=\"188\" stroke=\"#15803d\" stroke-width=\"2\"/>\n<text x=\"225\" y=\"210\" text-anchor=\"middle\" font-size=\"14\" fill=\"#15803d\">width = circumference = 2πr</text>\n<circle cx=\"425\" cy=\"75\" r=\"32\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/>\n<circle cx=\"425\" cy=\"170\" r=\"32\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/>\n<line x1=\"425\" y1=\"75\" x2=\"457\" y2=\"75\" stroke=\"#15803d\" stroke-width=\"2\"/>\n<text x=\"439\" y=\"65\" font-size=\"13\">r</text>\n<text x=\"225\" y=\"42\" text-anchor=\"middle\" font-size=\"15\">Curved wall</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A closed cylinder has radius 3 cm and height 8 cm. Find its CSA, TSA and volume in terms of π.",
+          "solution_steps": [
+            "CSA = 2πrh = 2π×3×8 = 48π cm².",
+            "TSA = 2πrh+2πr² = 48π+18π = 66π cm².",
+            "V = πr²h = π×9×8 = 72π cm³."
+          ],
+          "final_answer": "CSA = 48π cm²; TSA = 66π cm²; volume = 72π cm³"
+        },
+        {
+          "problem": "A cylindrical tank has internal radius 20 cm and height 60 cm. Find its capacity in litres using π = 3.14.",
+          "solution_steps": [
+            "V = πr²h = 3.14×20²×60.",
+            "V = 3.14×400×60 = 75,360 cm³.",
+            "Since 1000 cm³ = 1 L, capacity = 75,360/1000 = 75.36 L."
+          ],
+          "final_answer": "75.36 L"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using diameter as the radius.",
+          "correction": "If diameter is given, divide it by 2 before substituting."
+        },
+        {
+          "mistake": "Including two circular bases for an open-top cylinder.",
+          "correction": "Count only the bases that are present and exposed."
+        },
+        {
+          "mistake": "Using external dimensions for tank capacity.",
+          "correction": "Use internal dimensions because the liquid occupies the inside space."
+        }
+      ],
+      "quick_summary": [
+        "CSA = 2πrh; it is the rectangle formed by unrolling the curved wall.",
+        "A closed cylinder has TSA = 2πrh+2πr².",
+        "Volume = πr²h.",
+        "For hollow cylinders, distinguish material volume from internal capacity."
+      ],
+      "utilities": [
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Calculate cylinder volume and surface area from radius and height.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator"
+        }
+      ]
+    },
+    "hs_math_t11_st08": {
+      "id": "hs_math_t11_st08",
+      "title": "Cones",
+      "overview": "A right circular cone has one circular base and a curved surface that narrows to an apex. Its volume is one-third of the volume of a cylinder with the same base radius and vertical height. Surface-area calculations use the slant height, while volume uses the perpendicular vertical height.",
+      "key_concepts": [
+        {
+          "concept": "Cone dimensions",
+          "definition": "A cone has a base radius, vertical height and slant height.",
+          "details": "The vertical height h is perpendicular to the base and joins the apex to the centre of the base. The slant height l runs along the sloping surface from the apex to the base rim."
+        },
+        {
+          "concept": "Slant height and Pythagoras",
+          "definition": "A central cross-section forms a right triangle.",
+          "details": "For a right circular cone, l² = h²+r². Thus l = √(h²+r²). The radius, vertical height and slant height are not interchangeable."
+        },
+        {
+          "concept": "Curved and total surface area",
+          "definition": "The curved surface is the cone's lateral covering; total area also includes its circular base.",
+          "details": "CSA = πrl. TSA = πrl+πr² = πr(l+r). The curved surface unrolls into a sector of a circle."
+        },
+        {
+          "concept": "Volume",
+          "definition": "The cone holds one-third the volume of a cylinder with the same base and height.",
+          "details": "V = ⅓πr²h. The vertical height, not the slant height, is used."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Cone volume",
+          "equation": "$$V=\\frac13\\pi r^2h$$",
+          "variables": {
+            "r": "base radius",
+            "h": "vertical height"
+          }
+        },
+        {
+          "name": "Cone curved and total surface area",
+          "equation": "$$CSA=\\pi rl,\\qquad TSA=\\pi rl+\\pi r^2=\\pi r(l+r)$$",
+          "variables": {
+            "r": "base radius",
+            "l": "slant height"
+          }
+        },
+        {
+          "name": "Slant height",
+          "equation": "$$l=\\sqrt{r^2+h^2}$$",
+          "variables": {
+            "r": "base radius",
+            "h": "vertical height"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s08",
+          "title": "Vertical height and slant height of a cone",
+          "type": "svg",
+          "caption": "The radius, vertical height and slant height form a right triangle in a cone's central cross-section.",
+          "alt_text": "Cross-section of a cone showing vertical height h, base radius r and slant height l, with a right-angle marker between h and r.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s08-title v11_s08-desc\">\n<title id=\"v11_s08-title\">Vertical height and slant height of a cone</title>\n<desc id=\"v11_s08-desc\">Cross-section of a cone showing vertical height h, base radius r and slant height l, with a right-angle marker between h and r.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<path d=\"M260 25 L125 175 L395 175 Z\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"175\" stroke=\"#15803d\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/>\n<line x1=\"260\" y1=\"175\" x2=\"395\" y2=\"175\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<line x1=\"260\" y1=\"25\" x2=\"395\" y2=\"175\" stroke=\"#dc2626\" stroke-width=\"3\"/>\n<path d=\"M260 160 h15 v15\" fill=\"none\" stroke=\"#111827\" stroke-width=\"2\"/>\n<text x=\"235\" y=\"105\" font-size=\"16\" fill=\"#15803d\">h</text>\n<text x=\"325\" y=\"194\" font-size=\"16\" fill=\"#15803d\">r</text>\n<text x=\"342\" y=\"93\" font-size=\"16\" fill=\"#b91c1c\">l</text>\n<text x=\"45\" y=\"50\" font-size=\"15\">l² = h² + r²</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A cone has radius 3 cm and vertical height 4 cm. Find its slant height, CSA and volume using π = 3.14.",
+          "solution_steps": [
+            "Slant height l = √(3²+4²) = √25 = 5 cm.",
+            "CSA = πrl = 3.14×3×5 = 47.1 cm².",
+            "Volume = ⅓πr²h = ⅓×3.14×9×4 = 37.68 cm³."
+          ],
+          "final_answer": "Slant height = 5 cm; CSA = 47.1 cm²; volume = 37.68 cm³"
+        },
+        {
+          "problem": "A cone has radius 7 cm and slant height 10 cm. Find its total surface area in terms of π.",
+          "solution_steps": [
+            "TSA = πr(l+r).",
+            "= π×7×(10+7) = 119π cm²."
+          ],
+          "final_answer": "119π cm²"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using slant height in the volume formula.",
+          "correction": "Volume uses vertical height h; use Pythagoras if h is not given."
+        },
+        {
+          "mistake": "Using vertical height in the curved-area formula.",
+          "correction": "Cone CSA uses slant height l."
+        },
+        {
+          "mistake": "Omitting the circular base when total surface area is requested.",
+          "correction": "Add πr² to the curved surface area for a closed solid cone."
+        }
+      ],
+      "quick_summary": [
+        "Volume uses vertical height: V = ⅓πr²h.",
+        "Curved surface area uses slant height: CSA = πrl.",
+        "TSA of a solid cone = πrl+πr².",
+        "For a right cone, l² = h²+r²."
+      ],
+      "utilities": [
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Check cone volume and surface-area calculations.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator"
+        }
+      ]
+    },
+    "hs_math_t11_st09": {
+      "id": "hs_math_t11_st09",
+      "title": "Spheres and hemispheres",
+      "overview": "A sphere is a three-dimensional surface whose points are all at the same distance from its centre. A hemisphere is half of a sphere. The flat circular face created by cutting a sphere through its centre must be included when total surface area of a solid hemisphere is requested.",
+      "key_concepts": [
+        {
+          "concept": "Sphere surface area",
+          "definition": "The area of the entire curved outer surface of a sphere.",
+          "details": "A sphere has no flat faces, edges or vertices. Its surface area is 4πr²."
+        },
+        {
+          "concept": "Sphere volume",
+          "definition": "The space enclosed by the sphere.",
+          "details": "V = 4/3πr³. The radius is cubed, so volume is measured in cubic units."
+        },
+        {
+          "concept": "Hemisphere volume and curved area",
+          "definition": "A hemisphere is exactly half of a sphere.",
+          "details": "Its volume is 2/3πr³ and its curved surface area is 2πr²."
+        },
+        {
+          "concept": "Hemisphere total surface area",
+          "definition": "The curved dome plus its flat circular base.",
+          "details": "For a solid hemisphere, TSA = 2πr²+πr² = 3πr². For an open bowl or hollow hemisphere where the flat base is absent, the curved area alone may be required."
+        },
+        {
+          "concept": "Joined hemispheres",
+          "definition": "Two hemispheres of the same radius can form a sphere.",
+          "details": "When two hemispheres are joined along their circular bases, the joining faces are internal and are not included in the external surface area."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sphere",
+          "equation": "$$SA=4\\pi r^2,\\qquad V=\\frac43\\pi r^3$$",
+          "variables": {
+            "r": "radius"
+          }
+        },
+        {
+          "name": "Hemisphere",
+          "equation": "$$CSA=2\\pi r^2,\\quad TSA=3\\pi r^2,\\quad V=\\frac23\\pi r^3$$",
+          "variables": {
+            "r": "radius"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s09",
+          "title": "Sphere and hemisphere surfaces",
+          "type": "svg",
+          "caption": "A solid hemisphere has a curved dome and one flat circular base.",
+          "alt_text": "Full sphere and hemisphere comparison. The hemisphere's curved surface is 2πr² and its base is πr², giving TSA 3πr².",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s09-title v11_s09-desc\">\n<title id=\"v11_s09-title\">Sphere and hemisphere surfaces</title>\n<desc id=\"v11_s09-desc\">Full sphere and hemisphere comparison. The hemisphere's curved surface is 2πr² and its base is πr², giving TSA 3πr².</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<circle cx=\"130\" cy=\"105\" r=\"62\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<ellipse cx=\"130\" cy=\"105\" rx=\"62\" ry=\"16\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/>\n<text x=\"130\" y=\"190\" text-anchor=\"middle\" font-size=\"15\">Sphere: 4πr²</text>\n<path d=\"M300 115 A65 65 0 0 1 430 115 Z\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<ellipse cx=\"365\" cy=\"115\" rx=\"65\" ry=\"17\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<text x=\"365\" y=\"190\" text-anchor=\"middle\" font-size=\"15\">Hemisphere: TSA 3πr²</text>\n<text x=\"365\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" fill=\"#15803d\">Dome 2πr² + base πr²</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the total surface area and volume of a solid hemisphere of radius 7 cm using π = 22/7.",
+          "solution_steps": [
+            "TSA = 3πr² = 3×(22/7)×49 = 462 cm².",
+            "Volume = ⅔πr³ = ⅔×(22/7)×343 = 718⅔ cm³."
+          ],
+          "final_answer": "TSA = 462 cm²; volume = 718⅔ cm³"
+        },
+        {
+          "problem": "A sphere has radius 3 cm. Find its surface area and volume in terms of π.",
+          "solution_steps": [
+            "SA = 4πr² = 4π×9 = 36π cm².",
+            "V = 4/3πr³ = 4/3×π×27 = 36π cm³."
+          ],
+          "final_answer": "Surface area = 36π cm²; volume = 36π cm³"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using 2πr² as the total surface area of a solid hemisphere.",
+          "correction": "2πr² is only the curved surface area. Add the flat base πr² to get 3πr²."
+        },
+        {
+          "mistake": "Using r² instead of r³ in sphere volume.",
+          "correction": "Volume is three-dimensional and uses r cubed."
+        },
+        {
+          "mistake": "Counting the circular joining face of two joined hemispheres.",
+          "correction": "The joining face is internal; include only exposed outer surfaces."
+        }
+      ],
+      "quick_summary": [
+        "Sphere SA = 4πr² and volume = 4/3πr³.",
+        "Hemisphere volume is half the sphere volume.",
+        "Hemisphere CSA = 2πr²; solid hemisphere TSA = 3πr².",
+        "Always identify whether a flat base is present and exposed."
+      ],
+      "utilities": [
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Calculate sphere and hemisphere surface areas and volumes.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator"
+        }
+      ]
+    },
+    "hs_math_t11_st10": {
+      "id": "hs_math_t11_st10",
+      "title": "Pyramids",
+      "overview": "A pyramid has one polygonal base and triangular side faces that meet at a common apex. A regular pyramid has a regular polygon as its base and the apex vertically above the base centre. Its volume uses perpendicular height, while the lateral surface area of a regular pyramid uses the slant height of its triangular faces.",
+      "key_concepts": [
+        {
+          "concept": "Parts of a pyramid",
+          "definition": "A pyramid has a base, triangular lateral faces, edges and an apex.",
+          "details": "The perpendicular height h is the shortest distance from the apex to the base plane. The slant height l of a regular pyramid is measured along the altitude of a triangular side face from the apex to the midpoint of a base edge."
+        },
+        {
+          "concept": "Volume",
+          "definition": "A pyramid has one-third the volume of a prism with the same base area and perpendicular height.",
+          "details": "V = ⅓Bh, where B is the base area. The formula applies to pyramids with different polygonal bases."
+        },
+        {
+          "concept": "Lateral surface area of a regular pyramid",
+          "definition": "The sum of the areas of its triangular side faces.",
+          "details": "For a regular pyramid, LSA = ½Pl, where P is the base perimeter and l is the slant height. For a non-regular pyramid, calculate each triangular face area and add them."
+        },
+        {
+          "concept": "Total surface area",
+          "definition": "The lateral area plus the base area.",
+          "details": "TSA = LSA+B. If the base is open or attached to another solid, include only the faces that are exposed."
+        },
+        {
+          "concept": "Square pyramid",
+          "definition": "A useful special case.",
+          "details": "For a square base of side a, B = a² and P = 4a. Therefore V = ⅓a²h, LSA = 2al and TSA = a²+2al. In a regular square pyramid, l² = h²+(a/2)²."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Pyramid volume",
+          "equation": "$$V=\\frac13Bh$$",
+          "variables": {
+            "B": "area of base",
+            "h": "perpendicular height"
+          }
+        },
+        {
+          "name": "Regular pyramid lateral and total surface area",
+          "equation": "$$LSA=\\frac12Pl,\\qquad TSA=\\frac12Pl+B$$",
+          "variables": {
+            "P": "perimeter of base",
+            "l": "slant height of a triangular face",
+            "B": "base area"
+          }
+        },
+        {
+          "name": "Regular square pyramid",
+          "equation": "$$V=\\frac13a^2h,\\quad LSA=2al,\\quad TSA=a^2+2al$$",
+          "variables": {
+            "a": "side of square base",
+            "h": "perpendicular height",
+            "l": "slant height"
+          }
+        },
+        {
+          "name": "Regular square pyramid height relationship",
+          "equation": "$$l=\\sqrt{h^2+\\left(\\frac a2\\right)^2}$$",
+          "variables": {
+            "a": "base side",
+            "h": "perpendicular height",
+            "l": "face slant height"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s10",
+          "title": "A regular square pyramid",
+          "type": "svg",
+          "caption": "The perpendicular height runs to the centre of the base; the face slant height runs to the midpoint of a base side.",
+          "alt_text": "Square pyramid with apex, square base, perpendicular height h, slant height l on a triangular face, and half-base distance a/2.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s10-title v11_s10-desc\">\n<title id=\"v11_s10-title\">A regular square pyramid</title>\n<desc id=\"v11_s10-desc\">Square pyramid with apex, square base, perpendicular height h, slant height l on a triangular face, and half-base distance a/2.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<polygon points=\"260,25 105,165 260,205 415,165\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<path d=\"M260 25 L105 165 L260 205 L415 165 Z M260 25 L260 125\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"3\"/>\n<line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"185\" stroke=\"#15803d\" stroke-width=\"3\" stroke-dasharray=\"6 5\"/>\n<line x1=\"260\" y1=\"25\" x2=\"337\" y2=\"185\" stroke=\"#dc2626\" stroke-width=\"3\"/>\n<line x1=\"260\" y1=\"185\" x2=\"337\" y2=\"185\" stroke=\"#15803d\" stroke-width=\"2\"/>\n<text x=\"242\" y=\"110\" font-size=\"16\" fill=\"#15803d\">h</text>\n<text x=\"312\" y=\"95\" font-size=\"16\" fill=\"#b91c1c\">l</text>\n<text x=\"292\" y=\"202\" font-size=\"14\">a/2</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A square pyramid has base side 6 cm and perpendicular height 4 cm. Find its volume.",
+          "solution_steps": [
+            "Base area B = 6² = 36 cm².",
+            "V = ⅓Bh = ⅓×36×4 = 48 cm³."
+          ],
+          "final_answer": "48 cm³"
+        },
+        {
+          "problem": "A regular square pyramid has base side 10 cm and face slant height 13 cm. Find its lateral and total surface areas.",
+          "solution_steps": [
+            "Base perimeter P = 4×10 = 40 cm.",
+            "LSA = ½Pl = ½×40×13 = 260 cm².",
+            "Base area B = 10² = 100 cm².",
+            "TSA = LSA+B = 260+100 = 360 cm²."
+          ],
+          "final_answer": "LSA = 260 cm²; TSA = 360 cm²"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using slant height in the volume formula.",
+          "correction": "Pyramid volume uses perpendicular height from the apex to the base plane."
+        },
+        {
+          "mistake": "Using the slant height of one face as the height of every triangular face in an irregular pyramid.",
+          "correction": "For a non-regular pyramid, calculate each face with its own perpendicular face height."
+        },
+        {
+          "mistake": "Forgetting the base in total surface area.",
+          "correction": "Add the base area if the base is part of the exposed solid surface."
+        }
+      ],
+      "quick_summary": [
+        "Pyramid volume = ⅓ × base area × perpendicular height.",
+        "For a regular pyramid, LSA = ½ × base perimeter × face slant height.",
+        "TSA = LSA + base area.",
+        "Do not confuse vertical height with face slant height."
+      ],
+      "utilities": [
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Check pyramid volume and surface-area calculations where supported by the calculator.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator"
+        }
+      ]
+    },
+    "hs_math_t11_st11": {
+      "id": "hs_math_t11_st11",
+      "title": "Frustums — introduction",
+      "overview": "A frustum is the portion of a cone or pyramid left after its top is cut off by a plane parallel to the base. It has two parallel, similar bases of different sizes. This introductory lesson focuses on identifying dimensions and using standard formulas without lengthy derivations.",
+      "key_concepts": [
+        {
+          "concept": "Geometry of a frustum",
+          "definition": "A frustum has a larger lower base and a smaller upper base.",
+          "details": "For a conical frustum, denote the larger and smaller radii by R and r. The vertical height is h and the slant height of the curved side is s. The two circular bases are parallel."
+        },
+        {
+          "concept": "Conical frustum volume",
+          "definition": "The space inside the truncated cone.",
+          "details": "V = ⅓πh(R²+r²+Rr). Both radii are needed. The height h is perpendicular to the circular bases."
+        },
+        {
+          "concept": "Conical frustum curved surface area",
+          "definition": "The curved band between the two circular rims.",
+          "details": "CSA = π(R+r)s. For a closed frustum, total surface area also includes both circular ends: TSA = π(R+r)s+πR²+πr²."
+        },
+        {
+          "concept": "Slant height",
+          "definition": "The sloping distance between corresponding points on the two circular rims.",
+          "details": "In a right circular frustum, the vertical height h and radial difference R−r form the legs of a right triangle: s = √(h²+(R−r)²)."
+        },
+        {
+          "concept": "Frustum of a regular pyramid",
+          "definition": "A parallel cut through a pyramid produces two similar polygonal bases.",
+          "details": "For a regular pyramid frustum, volume is V = h/3(B₁+B₂+√(B₁B₂)), where B₁ and B₂ are the areas of the parallel bases. Its lateral area is ½(P₁+P₂)s for a right regular frustum, with corresponding base perimeters P₁ and P₂."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Conical frustum volume",
+          "equation": "$$V=\\frac13\\pi h(R^2+r^2+Rr)$$",
+          "variables": {
+            "R": "larger base radius",
+            "r": "smaller base radius",
+            "h": "vertical height"
+          }
+        },
+        {
+          "name": "Conical frustum curved and total surface area",
+          "equation": "$$CSA=\\pi(R+r)s,\\quad TSA=\\pi(R+r)s+\\pi R^2+\\pi r^2$$",
+          "variables": {
+            "R,r": "larger and smaller radii",
+            "s": "slant height"
+          }
+        },
+        {
+          "name": "Conical frustum slant height",
+          "equation": "$$s=\\sqrt{h^2+(R-r)^2}$$",
+          "variables": {
+            "h": "vertical height",
+            "R−r": "difference between radii"
+          }
+        },
+        {
+          "name": "Regular pyramid frustum volume",
+          "equation": "$$V=\\frac h3\\left(B_1+B_2+\\sqrt{B_1B_2}\\right)$$",
+          "variables": {
+            "B₁,B₂": "areas of the parallel bases",
+            "h": "perpendicular height"
+          }
+        },
+        {
+          "name": "Regular pyramid frustum lateral surface area",
+          "equation": "$$LSA=\\frac12(P_1+P_2)s$$",
+          "variables": {
+            "P₁, P₂": "perimeters of the two parallel bases",
+            "s": "slant height of the trapezoidal lateral faces"
+          }
+        },
+        {
+          "name": "Regular pyramid frustum total surface area",
+          "equation": "$$TSA=\\frac12(P_1+P_2)s+B_1+B_2$$",
+          "variables": {
+            "P₁, P₂": "perimeters of the two parallel bases",
+            "s": "slant height",
+            "B₁, B₂": "areas of the two parallel bases"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s11",
+          "title": "Dimensions of a conical frustum",
+          "type": "svg",
+          "caption": "The vertical height, difference of radii and slant height form a right triangle.",
+          "alt_text": "Conical frustum with larger radius R, smaller radius r, vertical height h and slant height s.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s11-title v11_s11-desc\">\n<title id=\"v11_s11-title\">Dimensions of a conical frustum</title>\n<desc id=\"v11_s11-desc\">Conical frustum with larger radius R, smaller radius r, vertical height h and slant height s.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<path d=\"M175 55 L105 175 L415 175 L345 55 Z\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<ellipse cx=\"260\" cy=\"55\" rx=\"85\" ry=\"17\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n<ellipse cx=\"260\" cy=\"175\" rx=\"155\" ry=\"27\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n<line x1=\"260\" y1=\"55\" x2=\"345\" y2=\"55\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"260\" y1=\"175\" x2=\"415\" y2=\"175\" stroke=\"#111827\" stroke-width=\"2\"/>\n<line x1=\"345\" y1=\"55\" x2=\"415\" y2=\"175\" stroke=\"#dc2626\" stroke-width=\"3\"/>\n<line x1=\"345\" y1=\"55\" x2=\"345\" y2=\"175\" stroke=\"#15803d\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/>\n<text x=\"300\" y=\"45\" font-size=\"15\">r</text><text x=\"330\" y=\"170\" font-size=\"15\">R</text>\n<text x=\"375\" y=\"112\" font-size=\"15\" fill=\"#b91c1c\">s</text><text x=\"350\" y=\"142\" font-size=\"15\" fill=\"#15803d\">h</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A conical frustum has R = 7 cm, r = 3 cm and vertical height 3 cm. Find its slant height.",
+          "solution_steps": [
+            "s = √(h²+(R−r)²).",
+            "s = √(3²+(7−3)²) = √(9+16) = √25 = 5 cm."
+          ],
+          "final_answer": "5 cm"
+        },
+        {
+          "problem": "A conical frustum has R = 5 cm, r = 2 cm and h = 6 cm. Find its volume in terms of π.",
+          "solution_steps": [
+            "V = ⅓πh(R²+r²+Rr).",
+            "= ⅓π×6×(25+4+10).",
+            "= 2π×39 = 78π cm³."
+          ],
+          "final_answer": "78π cm³"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using R+r instead of R−r in the slant-height calculation.",
+          "correction": "The right triangle's horizontal leg is the difference of the radii, R−r."
+        },
+        {
+          "mistake": "Using slant height in the volume formula.",
+          "correction": "The frustum volume formula uses vertical height h."
+        },
+        {
+          "mistake": "Leaving out one circular end when total surface area of a closed frustum is requested.",
+          "correction": "Add both base areas πR² and πr² to the curved area."
+        }
+      ],
+      "quick_summary": [
+        "A frustum is formed by cutting a cone or pyramid parallel to its base.",
+        "For a conical frustum, identify R, r, vertical height h and slant height s.",
+        "Use vertical height for volume and slant height for curved surface area.",
+        "For a closed conical frustum, TSA includes both circular ends."
+      ],
+      "utilities": [
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Check frustum volume or surface-area calculations if the selected calculator supports the required shape.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator"
+        }
+      ]
+    },
+    "hs_math_t11_st12": {
+      "id": "hs_math_t11_st12",
+      "title": "Composite three-dimensional solids",
+      "overview": "A composite solid is made by joining two or more simple solids or by removing part of a solid. Volume is usually found by adding or subtracting component volumes. Surface area requires identifying only the surfaces exposed on the outside; faces joined internally are not counted.",
+      "key_concepts": [
+        {
+          "concept": "Volume of joined solids",
+          "definition": "Add the volumes of non-overlapping components.",
+          "details": "If solids are joined without overlapping volume, V_total = V₁+V₂+…. Ensure that shared interfaces do not represent extra material."
+        },
+        {
+          "concept": "Volume of removed parts and hollow solids",
+          "definition": "Subtract the volume of holes or cavities from the original solid.",
+          "details": "For a drilled cylindrical hole, subtract πr²h from the original volume. For a hollow object, distinguish the material volume from the internal capacity."
+        },
+        {
+          "concept": "External surface area",
+          "definition": "Count only faces exposed to the outside.",
+          "details": "When two solids are joined along a face, the touching faces become internal and must be excluded. Calculate the exposed curved and flat surfaces separately."
+        },
+        {
+          "concept": "Holes and tunnels",
+          "definition": "A hole can reduce volume while creating additional exposed surface.",
+          "details": "A drilled tunnel contributes a new internal curved surface to the object's total boundary. Whether this surface is included depends on whether the question asks for all exposed material surface."
+        },
+        {
+          "concept": "Plan a composite-solid calculation",
+          "definition": "Draw, label and separate the solid into familiar components.",
+          "details": "Identify each component, list the dimensions, mark hidden joining faces, calculate component volumes or exposed surface areas, and combine the results with the correct operation."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Joined solid volume",
+          "equation": "$$V_{total}=V_1+V_2+\\cdots$$",
+          "variables": {
+            "V₁,V₂,…": "volumes of separate components"
+          }
+        },
+        {
+          "name": "Solid with a removed part",
+          "equation": "$$V_{remaining}=V_{original}-V_{removed}$$",
+          "variables": {
+            "Voriginal": "volume before removal",
+            "Vremoved": "volume removed"
+          }
+        },
+        {
+          "name": "Exposed surface area",
+          "equation": "$$SA_{external}=\\sum SA_{exposed\\ faces}$$",
+          "variables": {
+            "SA_external": "Sum of areas of faces on the external boundary only"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s12",
+          "title": "Exposed and hidden faces in a joined solid",
+          "type": "svg",
+          "caption": "The circular face where a hemisphere joins a cylinder is internal and is not part of the external surface.",
+          "alt_text": "Composite solid made of a hemisphere on a cylinder. The shared circular interface is marked as hidden; exposed surfaces are hemisphere curved area, cylinder curved area and bottom base.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s12-title v11_s12-desc\">\n<title id=\"v11_s12-title\">Exposed and hidden faces in a joined solid</title>\n<desc id=\"v11_s12-desc\">Composite solid made of a hemisphere on a cylinder. The shared circular interface is marked as hidden; exposed surfaces are hemisphere curved area, cylinder curved area and bottom base.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<path d=\"M150 95 A65 65 0 0 1 280 95\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"3\"/>\n<path d=\"M150 95 L150 180 M280 95 L280 180\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<path d=\"M150 180 A65 15 0 0 0 280 180\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<ellipse cx=\"215\" cy=\"95\" rx=\"65\" ry=\"15\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/>\n<path d=\"M280 95 L350 55\" stroke=\"#dc2626\" stroke-width=\"2\"/>\n<text x=\"355\" y=\"52\" font-size=\"14\" fill=\"#b91c1c\">Hidden joint</text>\n<text x=\"355\" y=\"82\" font-size=\"13\">Do not count</text>\n<text x=\"215\" y=\"215\" text-anchor=\"middle\" font-size=\"14\">Count only exposed surfaces</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A solid consists of a cylinder of radius 3 cm and height 8 cm with a hemisphere of radius 3 cm attached on top. Find the external surface area in terms of π.",
+          "solution_steps": [
+            "Exposed surfaces: hemisphere curved area, cylinder curved area and cylinder bottom.",
+            "Hemisphere CSA = 2πr² = 2π×9 = 18π cm².",
+            "Cylinder CSA = 2πrh = 2π×3×8 = 48π cm².",
+            "Bottom base = πr² = 9π cm².",
+            "External area = 18π+48π+9π = 75π cm²."
+          ],
+          "final_answer": "75π cm²"
+        },
+        {
+          "problem": "A cuboid measuring 10 cm × 8 cm × 6 cm has a cylindrical hole of radius 2 cm drilled completely through its 6 cm depth. Find the remaining volume in terms of π.",
+          "solution_steps": [
+            "Cuboid volume = 10×8×6 = 480 cm³.",
+            "Hole volume = πr²h = π×2²×6 = 24π cm³.",
+            "Remaining volume = 480−24π cm³."
+          ],
+          "final_answer": "480−24π cm³"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding the total surface areas of joined solids without adjustment.",
+          "correction": "Remove the joining faces from the total because they are hidden inside the composite object."
+        },
+        {
+          "mistake": "Adding the volume of a hole instead of subtracting it.",
+          "correction": "A hole is removed material; subtract its volume from the original solid."
+        },
+        {
+          "mistake": "Assuming surface area always decreases when a hole is drilled.",
+          "correction": "A tunnel creates new internal curved surface, so total exposed boundary area may increase."
+        }
+      ],
+      "quick_summary": [
+        "Add component volumes for joined solids; subtract cavities and holes.",
+        "For surface area, count only externally exposed faces.",
+        "Internal joining faces are not part of the outside surface.",
+        "A hole may reduce volume but add a new internal surface."
+      ],
+      "utilities": [
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Check component volumes and surface areas for standard solids used in composite-solid problems.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator"
+        }
+      ]
+    },
+    "hs_math_t11_st13": {
+      "id": "hs_math_t11_st13",
+      "title": "Similar solids and scale factors",
+      "overview": "Similar solids have the same shape but may have different sizes. Corresponding linear dimensions are in a constant ratio k. Surface areas scale by the square of this ratio and volumes scale by its cube. These relationships allow unknown dimensions, areas or volumes to be found without repeating every measurement.",
+      "key_concepts": [
+        {
+          "concept": "Similar solids",
+          "definition": "Two solids are similar when their corresponding lengths are proportional and their corresponding angles match.",
+          "details": "One solid can be enlarged or reduced uniformly to obtain the other. The ratio of corresponding lengths is the linear scale factor k."
+        },
+        {
+          "concept": "Linear scale factor",
+          "definition": "The ratio between corresponding lengths.",
+          "details": "If a corresponding edge changes from 4 cm to 10 cm, k = 10/4 = 2.5 from the smaller solid to the larger one. State clearly which direction the scale factor describes."
+        },
+        {
+          "concept": "Surface-area scale factor",
+          "definition": "Areas depend on two dimensions.",
+          "details": "If the linear scale factor is k, the surface-area scale factor is k². Thus A₂ = k²A₁ for corresponding total or corresponding surface areas."
+        },
+        {
+          "concept": "Volume scale factor",
+          "definition": "Volumes depend on three dimensions.",
+          "details": "The volume scale factor is k³. Thus V₂ = k³V₁. Doubling every length multiplies surface area by 4 and volume by 8."
+        },
+        {
+          "concept": "Reverse scale-factor problems",
+          "definition": "Recover a length scale factor from area or volume information.",
+          "details": "If the area ratio is q, the positive linear scale factor is √q. If the volume ratio is q, the positive linear scale factor is ∛q. Then use k to determine corresponding lengths."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Linear scale factor",
+          "equation": "$$k=\\frac{\\text{corresponding length in solid 2}}{\\text{corresponding length in solid 1}}$$",
+          "variables": {
+            "k": "linear scale factor"
+          }
+        },
+        {
+          "name": "Surface-area ratio",
+          "equation": "$$\\frac{A_2}{A_1}=k^2$$",
+          "variables": {
+            "A₁,A₂": "corresponding surface areas"
+          }
+        },
+        {
+          "name": "Volume ratio",
+          "equation": "$$\\frac{V_2}{V_1}=k^3$$",
+          "variables": {
+            "V₁,V₂": "volumes of similar solids"
+          }
+        },
+        {
+          "name": "Reverse scale factors",
+          "equation": "$$k=\\sqrt{\\frac{A_2}{A_1}},\\qquad k=\\sqrt[3]{\\frac{V_2}{V_1}}$$",
+          "variables": {
+            "Area ratio": "A₂/A₁",
+            "Volume ratio": "V₂/V₁"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s13",
+          "title": "Linear, area and volume scale factors",
+          "type": "svg",
+          "caption": "When all lengths are multiplied by k, area is multiplied by k² and volume by k³.",
+          "alt_text": "Three linked panels showing a line enlarged by k, a square enlarged by k in both dimensions, and a cube enlarged by k in three dimensions.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s13-title v11_s13-desc\">\n<title id=\"v11_s13-title\">Linear, area and volume scale factors</title>\n<desc id=\"v11_s13-desc\">Three linked panels showing a line enlarged by k, a square enlarged by k in both dimensions, and a cube enlarged by k in three dimensions.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<line x1=\"45\" y1=\"65\" x2=\"115\" y2=\"65\" stroke=\"#2563eb\" stroke-width=\"5\"/>\n<line x1=\"45\" y1=\"100\" x2=\"185\" y2=\"100\" stroke=\"#2563eb\" stroke-width=\"5\"/>\n<text x=\"115\" y=\"130\" text-anchor=\"middle\" font-size=\"14\">Length × k</text>\n<rect x=\"235\" y=\"45\" width=\"55\" height=\"55\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n<rect x=\"320\" y=\"45\" width=\"80\" height=\"80\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n<text x=\"320\" y=\"150\" text-anchor=\"middle\" font-size=\"14\">Area × k²</text>\n<polygon points=\"435,65 475,45 510,65 470,85\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/>\n<polygon points=\"435,65 435,110 470,130 470,85\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/>\n<polygon points=\"470,85 510,65 510,110 470,130\" fill=\"#86efac\" stroke=\"#15803d\" stroke-width=\"2\"/>\n<text x=\"470\" y=\"155\" text-anchor=\"middle\" font-size=\"14\">Volume × k³</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Two similar cubes have corresponding edge lengths 3 cm and 6 cm. If the smaller cube has volume 27 cm³, find the larger cube's volume.",
+          "solution_steps": [
+            "Linear scale factor k = 6/3 = 2.",
+            "Volume scale factor = k³ = 2³ = 8.",
+            "Larger volume = 8×27 = 216 cm³."
+          ],
+          "final_answer": "216 cm³"
+        },
+        {
+          "problem": "Two similar solids have surface areas in the ratio 25:49. Find the ratio of their corresponding lengths and their volume ratio.",
+          "solution_steps": [
+            "Linear ratio = √25:√49 = 5:7.",
+            "Volume ratio = 5³:7³ = 125:343."
+          ],
+          "final_answer": "Length ratio = 5:7; volume ratio = 125:343"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using k instead of k² for surface area or k³ for volume.",
+          "correction": "Remember that area has two dimensions and volume has three."
+        },
+        {
+          "mistake": "Reversing the scale factor.",
+          "correction": "Define the direction of comparison before calculating k; larger-to-smaller and smaller-to-larger are reciprocals."
+        },
+        {
+          "mistake": "Taking a negative square or cube root for a physical scale factor.",
+          "correction": "A scale factor between lengths is positive; use the positive root."
+        }
+      ],
+      "quick_summary": [
+        "Similar solids have proportional corresponding lengths.",
+        "Length ratio = k; surface-area ratio = k²; volume ratio = k³.",
+        "Double lengths means four times the area and eight times the volume.",
+        "Use square roots or cube roots to recover a linear scale factor from area or volume ratios."
+      ]
+    },
+    "hs_math_t11_st14": {
+      "id": "hs_math_t11_st14",
+      "title": "Applications of mensuration",
+      "overview": "Mensuration is used to estimate materials, costs, storage capacities and dimensions in practical situations. The key skill is translating the wording of a problem into the correct geometric quantity, choosing the relevant exposed surfaces or internal dimensions, converting units and interpreting the result.",
+      "key_concepts": [
+        {
+          "concept": "Choose the required quantity",
+          "definition": "Identify whether the task concerns a boundary, covering or capacity.",
+          "details": "Fencing, edging and borders require perimeter. Painting, tiling and wrapping require surface area. Filling, pouring and excavation require volume. A practical question may require more than one of these."
+        },
+        {
+          "concept": "Material and cost estimates",
+          "definition": "Calculate the required area or volume before applying a rate.",
+          "details": "For tiles, number required = floor area ÷ area of one tile; round up to a whole tile and allow for wastage if the problem specifies it. For paint or sheet material, use the relevant exposed surface area and subtract doors, windows or openings where appropriate."
+        },
+        {
+          "concept": "Capacity and internal dimensions",
+          "definition": "The space available inside a container determines its capacity.",
+          "details": "Use internal dimensions for tanks and containers. Convert cubic centimetres to litres using 1000 cm³ = 1 L, and cubic metres to litres using 1 m³ = 1000 L."
+        },
+        {
+          "concept": "Dimensional unit conversions",
+          "definition": "Length, area and volume conversions use different powers.",
+          "details": "If 1 m = 100 cm, then 1 m² = 10,000 cm² and 1 m³ = 1,000,000 cm³. Convert all dimensions to compatible units before calculating."
+        },
+        {
+          "concept": "Interpret and check results",
+          "definition": "A numerical answer must match the requested quantity and its unit.",
+          "details": "A number of tiles must be a whole number, a cost must be expressed in currency, and a capacity must be in units such as litres. Check whether the question asks for internal or external dimensions, open or closed surfaces, and whether wastage is included."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Number of tiles",
+          "equation": "$$N=\\frac{\\text{floor area}}{\\text{area of one tile}}$$",
+          "variables": {
+            "N": "number of tiles; round up if a fraction is needed"
+          }
+        },
+        {
+          "name": "Capacity conversions",
+          "equation": "$$1\\text{ L}=1000\\text{ cm}^3,\\qquad 1\\text{ m}^3=1000\\text{ L}$$",
+          "variables": {
+            "L": "litre"
+          }
+        },
+        {
+          "name": "Dimensional conversions",
+          "equation": "$$1\\text{ m}^2=10^4\\text{ cm}^2,\\qquad 1\\text{ m}^3=10^6\\text{ cm}^3$$",
+          "variables": {
+            "Area factor": "square the length factor",
+            "Volume factor": "cube the length factor"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s14",
+          "title": "Select the correct mensuration quantity",
+          "type": "svg",
+          "caption": "The practical action tells you whether to calculate perimeter, surface area or volume.",
+          "alt_text": "Three rows link perimeter to fencing, surface area to painting or tiling, and volume to filling or storage capacity.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\" role=\"img\" aria-labelledby=\"v11_s14-title v11_s14-desc\">\n<title id=\"v11_s14-title\">Select the correct mensuration quantity</title>\n<desc id=\"v11_s14-desc\">Three rows link perimeter to fencing, surface area to painting or tiling, and volume to filling or storage capacity.</desc>\n<rect x=\"1\" y=\"1\" width=\"518\" height=\"228\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/>\n<rect x=\"25\" y=\"25\" width=\"150\" height=\"45\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\"/>\n<rect x=\"25\" y=\"90\" width=\"150\" height=\"45\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#15803d\"/>\n<rect x=\"25\" y=\"155\" width=\"150\" height=\"45\" rx=\"6\" fill=\"#ffedd5\" stroke=\"#c2410c\"/>\n<text x=\"100\" y=\"53\" text-anchor=\"middle\" font-size=\"16\">Perimeter</text>\n<text x=\"100\" y=\"118\" text-anchor=\"middle\" font-size=\"16\">Surface area</text>\n<text x=\"100\" y=\"183\" text-anchor=\"middle\" font-size=\"16\">Volume</text>\n<path d=\"M185 47 H225 M185 112 H225 M185 177 H225\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<text x=\"240\" y=\"53\" font-size=\"16\">Fencing / edging</text>\n<text x=\"240\" y=\"118\" font-size=\"16\">Painting / tiling</text>\n<text x=\"240\" y=\"183\" font-size=\"16\">Filling / capacity</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A room is 8 m long and 6 m wide. It is tiled with square tiles of side 40 cm. Find the number of tiles required, ignoring wastage.",
+          "solution_steps": [
+            "Floor area = 8×6 = 48 m².",
+            "Convert tile side: 40 cm = 0.4 m.",
+            "Tile area = 0.4×0.4 = 0.16 m².",
+            "Number of tiles = 48/0.16 = 300."
+          ],
+          "final_answer": "300 tiles"
+        },
+        {
+          "problem": "A cylindrical tank has internal radius 0.5 m and internal height 2 m. Find its capacity in litres using π = 3.14.",
+          "solution_steps": [
+            "V = πr²h = 3.14×0.5²×2.",
+            "V = 3.14×0.25×2 = 1.57 m³.",
+            "Convert: 1.57×1000 = 1570 L."
+          ],
+          "final_answer": "1570 L"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using volume when the question asks how much paint or tile is needed.",
+          "correction": "Painting and tiling normally require surface area; filling requires volume."
+        },
+        {
+          "mistake": "Forgetting to convert tile dimensions into the same unit as the floor.",
+          "correction": "Convert all lengths to one unit before calculating area."
+        },
+        {
+          "mistake": "Using external dimensions to estimate tank capacity.",
+          "correction": "Use internal dimensions because capacity is the volume of the space inside."
+        },
+        {
+          "mistake": "Rounding a tile count down when a fraction remains.",
+          "correction": "A fraction of a tile still requires another tile; round up unless the problem specifies another arrangement."
+        }
+      ],
+      "quick_summary": [
+        "Fencing uses perimeter; painting and tiling use surface area; filling uses volume.",
+        "Use internal dimensions for capacity and exposed surfaces for material estimates.",
+        "Square length-conversion factors for area and cube them for volume.",
+        "Interpret the answer and round appropriately for the real-world task."
+      ],
+      "utilities": [
+        {
+          "title": "Area Calculator",
+          "description": "Calculate floor, wall and other plane areas for practical material estimates.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/area_calculator"
+        },
+        {
+          "title": "Volume and Surface Area Calculator",
+          "description": "Calculate volumes and surface areas of common solids for storage and material estimates.",
+          "icon": "calculator",
+          "url": "https://onlinetoolpad.com/math/Volume_and_Surface_Area_Calculator"
+        }
+      ]
+    }
+  }
+}

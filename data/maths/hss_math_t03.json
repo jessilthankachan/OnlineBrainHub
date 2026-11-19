@@ -48,12 +48,12 @@
       ],
       "visual_aids": [
         {
-          "visual_id": "v03_st01",
-          "title": "Polynomial Structure",
+          "visual_id": "hss_math_t03_st01_reviewed01",
+          "title": "Polynomial degree and leading coefficient",
           "type": "svg",
-          "caption": "Leading term determines degree and leading coefficient.",
-          "alt_text": "Leading term determines degree and leading coefficient.",
-          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\">\n<rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Polynomial Structure</text>\n<rect x=\"65\" y=\"65\" width=\"390\" height=\"60\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<text x=\"260\" y=\"103\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"22\" fill=\"#1e40af\">aₙxⁿ + … + a₁x + a₀</text>\n<text x=\"260\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">Leading term determines degree and leading coefficient.</text>\n</svg>"
+          "caption": "For P(x)=−3x⁴+2x²−5, degree is 4, leading coefficient is −3 and constant term is −5.",
+          "alt_text": "Polynomial with terms ranked by descending powers and key coefficients labelled.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Polynomial degree and leading coefficient\">\n<rect width=\"600\" height=\"320\" rx=\"16\" fill=\"#f8fafc\"/>\n<text x=\"300\" y=\"32\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0f172a\">Polynomial degree and leading coefficient</text>\n<rect x=\"55\" y=\"95\" width=\"490\" height=\"105\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"300\" y=\"130\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"21\" font-weight=\"400\" fill=\"#1e3a8a\">P(x) = −3x⁴ + 0x³ + 2x² + 0x − 5</text><text x=\"150\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"400\" fill=\"#1d4ed8\">degree = 4</text><text x=\"300\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"16\" font-weight=\"400\" fill=\"#1d4ed8\">leading coefficient = −3</text><text x=\"465\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"15\" font-weight=\"400\" fill=\"#1d4ed8\">constant = −5</text>\n<text x=\"300\" y=\"300\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#475569\">Read the highest exponent and its coefficient</text>\n</svg>"
         }
       ],
       "worked_examples": [
@@ -131,12 +131,12 @@
       "formulas": [],
       "visual_aids": [
         {
-          "visual_id": "v03_st02",
-          "title": "Polynomial Operations",
+          "visual_id": "hss_math_t03_st02_reviewed01",
+          "title": "Polynomial operations: combine like terms",
           "type": "svg",
-          "caption": "Combine coefficients of like powers.",
-          "alt_text": "Combine coefficients of like powers.",
-          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\">\n<rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Polynomial Operations</text>\n<rect x=\"55\" y=\"65\" width=\"150\" height=\"55\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><text x=\"130\" y=\"99\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" fill=\"#1e40af\">P(x)</text>\n<text x=\"260\" y=\"100\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"24\" fill=\"#334155\">+</text>\n<rect x=\"315\" y=\"65\" width=\"150\" height=\"55\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\"/><text x=\"390\" y=\"99\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" fill=\"#166534\">Q(x)</text>\n<text x=\"260\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">Combine coefficients of like powers.</text>\n</svg>"
+          "caption": "(2x³−x+4)+(x³+3x²+x−1)=3x³+3x²+3.",
+          "alt_text": "Aligned polynomial addition showing like powers combined.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Polynomial operations: combine like terms\">\n<rect width=\"600\" height=\"320\" rx=\"16\" fill=\"#f8fafc\"/>\n<text x=\"300\" y=\"32\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0f172a\">Polynomial operations: combine like terms</text>\n<rect x=\"55\" y=\"85\" width=\"490\" height=\"145\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"300\" y=\"125\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"400\" fill=\"#1d4ed8\">2x³ + 0x² − x + 4</text><text x=\"300\" y=\"160\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"400\" fill=\"#15803d\">+  x³ + 3x² + x − 1</text><line x1=\"170\" y1=\"174\" x2=\"430\" y2=\"174\" stroke=\"#334155\" stroke-width=\"2\" /><text x=\"300\" y=\"205\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#6d28d9\">3x³ + 3x² + 0x + 3</text>\n<text x=\"300\" y=\"300\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#475569\">Only coefficients of matching powers are added</text>\n</svg>"
         }
       ],
       "worked_examples": [
@@ -236,12 +236,12 @@
       ],
       "visual_aids": [
         {
-          "visual_id": "v03_st03",
-          "title": "Algebraic Identity",
+          "visual_id": "hss_math_t03_st03_reviewed01",
+          "title": "Algebraic identity by substitution",
           "type": "svg",
-          "caption": "An identity is true for all permitted values.",
-          "alt_text": "An identity is true for all permitted values.",
-          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\">\n<rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Algebraic Identity</text>\n<rect x=\"65\" y=\"65\" width=\"390\" height=\"60\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/>\n<text x=\"260\" y=\"103\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"22\" fill=\"#92400e\">(a + b)² = a² + 2ab + b²</text>\n<text x=\"260\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">An identity is true for all permitted values.</text>\n</svg>"
+          "caption": "(a+b)³=a³+3a²b+3ab²+b³. With a=2,b=1: 27=8+12+6+1.",
+          "alt_text": "Expansion of a cube identity with a numerical verification.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Algebraic identity by substitution\">\n<rect width=\"600\" height=\"320\" rx=\"16\" fill=\"#f8fafc\"/>\n<text x=\"300\" y=\"32\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0f172a\">Algebraic identity by substitution</text>\n<rect x=\"55\" y=\"85\" width=\"490\" height=\"150\" rx=\"10\" fill=\"#fffbeb\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"300\" y=\"125\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"18\" font-weight=\"400\" fill=\"#92400e\">(a + b)³ = a³ + 3a²b + 3ab² + b³</text><text x=\"300\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"400\" fill=\"#78350f\">a = 2, b = 1</text><text x=\"300\" y=\"210\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#166534\">27 = 8 + 12 + 6 + 1</text>\n<text x=\"300\" y=\"300\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#475569\">An identity holds for all permitted values</text>\n</svg>"
         }
       ],
       "worked_examples": [
@@ -325,12 +325,12 @@
       ],
       "visual_aids": [
         {
-          "visual_id": "v03_st04",
-          "title": "Polynomial Division",
+          "visual_id": "hss_math_t03_st07_reviewed01",
+          "title": "Polynomial long division with quotient and remainder",
           "type": "svg",
-          "caption": "Dividend = divisor × quotient + remainder.",
-          "alt_text": "Dividend = divisor × quotient + remainder.",
-          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\">\n<rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Polynomial Division</text>\n<rect x=\"45\" y=\"65\" width=\"120\" height=\"55\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><text x=\"105\" y=\"98\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"#1e40af\">P(x)</text>\n<path d=\"M165 92 L210 92 M202 84 L210 92 L202 100\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n<rect x=\"215\" y=\"65\" width=\"120\" height=\"55\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\"/><text x=\"275\" y=\"98\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"#166534\">D(x)Q(x)</text>\n<text x=\"365\" y=\"99\" font-family=\"Arial\" font-size=\"16\" fill=\"#334155\">+ R(x)</text>\n<text x=\"260\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">Dividend = divisor × quotient + remainder.</text>\n</svg>"
+          "caption": "(x³+2x²−x−2) ÷ (x+2) = x²−1, remainder 0.",
+          "alt_text": "Long division result with dividend, divisor, quotient and remainder identified.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Polynomial long division with quotient and remainder\">\n<rect width=\"600\" height=\"320\" rx=\"16\" fill=\"#f8fafc\"/>\n<text x=\"300\" y=\"32\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0f172a\">Polynomial long division with quotient and remainder</text>\n<rect x=\"55\" y=\"85\" width=\"490\" height=\"135\" rx=\"10\" fill=\"#f5f3ff\" stroke=\"#7c3aed\" stroke-width=\"2\"/><text x=\"300\" y=\"125\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"18\" font-weight=\"400\" fill=\"#5b21b6\">Dividend = x³ + 2x² − x − 2</text><text x=\"300\" y=\"165\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"400\" fill=\"#5b21b6\">Divisor = x + 2</text><text x=\"300\" y=\"205\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"700\" fill=\"#166534\">Quotient = x² − 1     Remainder = 0</text>\n<text x=\"300\" y=\"300\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#475569\">Dividend = divisor × quotient + remainder</text>\n</svg>"
         }
       ],
       "worked_examples": [
@@ -410,12 +410,12 @@
       ],
       "visual_aids": [
         {
-          "visual_id": "v03_st05",
-          "title": "Remainder Theorem",
+          "visual_id": "hss_math_t03_st05_reviewed01",
+          "title": "Remainder theorem example",
           "type": "svg",
-          "caption": "For division by x − a.",
-          "alt_text": "For division by x − a.",
-          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\">\n<rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Remainder Theorem</text>\n<rect x=\"105\" y=\"65\" width=\"310\" height=\"60\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<text x=\"260\" y=\"103\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"23\" fill=\"#1e40af\">R = P(a)</text>\n<text x=\"260\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">For division by x − a.</text>\n</svg>"
+          "caption": "For P(x)=2x³−3x+1, division by x−2 leaves remainder P(2)=11.",
+          "alt_text": "Substitution x=2 into a polynomial gives the remainder on division by x−2.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Remainder theorem example\">\n<rect width=\"600\" height=\"320\" rx=\"16\" fill=\"#f8fafc\"/>\n<text x=\"300\" y=\"32\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0f172a\">Remainder theorem example</text>\n<rect x=\"70\" y=\"90\" width=\"460\" height=\"125\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"300\" y=\"130\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"19\" font-weight=\"400\" fill=\"#1e3a8a\">P(2) = 2(2³) − 3(2) + 1</text><text x=\"300\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" font-weight=\"700\" fill=\"#166534\">= 16 − 6 + 1 = 11</text>\n<text x=\"300\" y=\"300\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#475569\">Remainder when divided by x − a is P(a)</text>\n</svg>"
         }
       ],
       "worked_examples": [
@@ -495,12 +495,12 @@
       ],
       "visual_aids": [
         {
-          "visual_id": "v03_st06",
-          "title": "Factor Theorem",
+          "visual_id": "hss_math_t03_st06_reviewed01",
+          "title": "Factor theorem example",
           "type": "svg",
-          "caption": "A zero remainder confirms a linear factor.",
-          "alt_text": "A zero remainder confirms a linear factor.",
-          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\">\n<rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Factor Theorem</text>\n<rect x=\"105\" y=\"65\" width=\"310\" height=\"60\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n<text x=\"260\" y=\"103\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"22\" fill=\"#166534\">P(a) = 0 ⇔ (x − a) is a factor</text>\n<text x=\"260\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">A zero remainder confirms a linear factor.</text>\n</svg>"
+          "caption": "P(x)=x³−4x²+x+6; P(2)=0, so (x−2) is a factor.",
+          "alt_text": "Evaluate P(2) and show the zero remainder condition for the factor theorem.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Factor theorem example\">\n<rect width=\"600\" height=\"320\" rx=\"16\" fill=\"#f8fafc\"/>\n<text x=\"300\" y=\"32\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0f172a\">Factor theorem example</text>\n<rect x=\"65\" y=\"85\" width=\"470\" height=\"135\" rx=\"10\" fill=\"#ecfdf5\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"300\" y=\"125\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"400\" fill=\"#166534\">P(2) = 8 − 16 + 2 + 6 = 0</text><text x=\"300\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"400\" fill=\"#14532d\">Therefore:  P(x) = (x − 2)(x² − 2x − 3)</text>\n<text x=\"300\" y=\"300\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#475569\">P(a)=0 if and only if (x−a) is a factor</text>\n</svg>"
         }
       ],
       "worked_examples": [
@@ -581,12 +581,12 @@
       "formulas": [],
       "visual_aids": [
         {
-          "visual_id": "v03_st07",
-          "title": "Polynomial Factorisation",
+          "visual_id": "hss_math_t03_st04_reviewed01",
+          "title": "Factorisation by grouping",
           "type": "svg",
-          "caption": "Rewrite a sum as a product of factors.",
-          "alt_text": "Rewrite a sum as a product of factors.",
-          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\">\n<rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Polynomial Factorisation</text>\n<rect x=\"45\" y=\"65\" width=\"180\" height=\"55\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><text x=\"135\" y=\"99\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"18\" fill=\"#1e40af\">P(x)</text>\n<path d=\"M225 92 L285 92 M277 84 L285 92 L277 100\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n<rect x=\"290\" y=\"65\" width=\"185\" height=\"55\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\"/><text x=\"382\" y=\"99\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"18\" fill=\"#166534\">F₁(x)F₂(x)</text>\n<text x=\"260\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">Rewrite a sum as a product of factors.</text>\n</svg>"
+          "caption": "x³+2x²−x−2 = x²(x+2)−1(x+2)=(x+2)(x−1)(x+1).",
+          "alt_text": "Grouping terms to extract a common binomial and factor a difference of squares.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Factorisation by grouping\">\n<rect width=\"600\" height=\"320\" rx=\"16\" fill=\"#f8fafc\"/>\n<text x=\"300\" y=\"32\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0f172a\">Factorisation by grouping</text>\n<rect x=\"55\" y=\"90\" width=\"490\" height=\"130\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"300\" y=\"125\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"21\" font-weight=\"400\" fill=\"#1e3a8a\">x³ + 2x² − x − 2</text><text x=\"300\" y=\"160\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"19\" font-weight=\"400\" fill=\"#1d4ed8\">= (x + 2)(x² − 1)</text><text x=\"300\" y=\"195\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"19\" font-weight=\"700\" fill=\"#15803d\">= (x + 2)(x − 1)(x + 1)</text>\n<text x=\"300\" y=\"300\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#475569\">Check by expanding the factors</text>\n</svg>"
         }
       ],
       "worked_examples": [
@@ -659,12 +659,12 @@
       "formulas": [],
       "visual_aids": [
         {
-          "visual_id": "v03_s08",
-          "title": "Roots on a Graph",
+          "visual_id": "hss_math_t03_st08_reviewed01",
+          "title": "Zeros, multiplicity and graph crossings",
           "type": "svg",
-          "caption": "The 'zeros' of a polynomial are exactly where its graph intersects the horizontal x-axis.",
-          "alt_text": "A coordinate graph showing a smooth wavy curve crossing the x-axis at -3, 1, and 4. These intersection points are highlighted with red dots and labeled 'Zeros: P(x) = 0'.",
-          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 50 125 L 450 125\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 250 20 L 250 230\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"450\" y=\"145\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"end\" fill=\"#64748b\" font-weight=\"bold\">x-axis</text><path d=\"M 50 200 C 100 0, 150 -50, 200 125 C 250 300, 300 250, 350 125 C 380 50, 420 50, 450 20\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"123\" cy=\"125\" r=\"6\" fill=\"#ef4444\"/><text x=\"123\" y=\"110\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">-3</text><circle cx=\"278\" cy=\"125\" r=\"6\" fill=\"#ef4444\"/><text x=\"278\" y=\"110\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">1</text><circle cx=\"365\" cy=\"125\" r=\"6\" fill=\"#ef4444\"/><text x=\"365\" y=\"110\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">4</text><rect x=\"250\" y=\"160\" width=\"180\" height=\"40\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\" rx=\"5\"/><text x=\"340\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">Zeros: P(x) = 0</text></svg>"
+          "caption": "P(x)=(x−1)²(x+2) has zeros −2 and 1; x=1 is a repeated zero of multiplicity 2.",
+          "alt_text": "Polynomial graph crossing at −2 and touching the axis at repeated root 1.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Zeros, multiplicity and graph crossings\">\n<rect width=\"600\" height=\"320\" rx=\"16\" fill=\"#f8fafc\"/>\n<text x=\"300\" y=\"32\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0f172a\">Zeros, multiplicity and graph crossings</text>\n<line x1=\"70\" y1=\"180\" x2=\"540\" y2=\"180\" stroke=\"#334155\" stroke-width=\"2\" /><line x1=\"300\" y1=\"75\" x2=\"300\" y2=\"260\" stroke=\"#94a3b8\" stroke-width=\"1\" /><path d=\"M 90 245 C 130 240 130 180 170 180 C 235 95 330 95 390 180 C 430 180 455 100 520 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"170\" cy=\"180\" r=\"5\" fill=\"#16a34a\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"390\" cy=\"180\" r=\"5\" fill=\"#16a34a\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"170\" y=\"205\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"14\" font-weight=\"400\" fill=\"#166534\">−2</text><text x=\"390\" y=\"205\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"14\" font-weight=\"400\" fill=\"#166534\">1 (double)</text>\n<text x=\"300\" y=\"300\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#475569\">Odd multiplicity crosses; even multiplicity touches (illustrative shape)</text>\n</svg>"
         }
       ],
       "worked_examples": [
@@ -774,12 +774,12 @@
       ],
       "visual_aids": [
         {
-          "visual_id": "v03_st09",
-          "title": "Vieta Relationships",
+          "visual_id": "hss_math_t03_st09_reviewed01",
+          "title": "Zeros and coefficients: a cubic example",
           "type": "svg",
-          "caption": "Root relationships can be read without solving for roots.",
-          "alt_text": "Root relationships can be read without solving for roots.",
-          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\">\n<rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Vieta Relationships</text>\n<rect x=\"45\" y=\"60\" width=\"430\" height=\"75\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\"/>\n<text x=\"260\" y=\"88\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"#1e40af\">Sum of roots  ↔  coefficients</text>\n<text x=\"260\" y=\"116\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"#1e40af\">Products of roots  ↔  coefficients</text>\n<text x=\"260\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">Root relationships can be read without solving for roots.</text>\n</svg>"
+          "caption": "For x³−6x²+11x−6=0, roots 1,2,3; sum=6, pairwise sum=11, product=6.",
+          "alt_text": "Roots mapped to Vieta coefficient relationships for a monic cubic.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Zeros and coefficients: a cubic example\">\n<rect width=\"600\" height=\"320\" rx=\"16\" fill=\"#f8fafc\"/>\n<text x=\"300\" y=\"32\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0f172a\">Zeros and coefficients: a cubic example</text>\n<rect x=\"55\" y=\"80\" width=\"490\" height=\"155\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"300\" y=\"118\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"19\" font-weight=\"400\" fill=\"#1e3a8a\">P(x) = x³ − 6x² + 11x − 6</text><text x=\"300\" y=\"160\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"400\" fill=\"#1d4ed8\">α + β + γ = 1 + 2 + 3 = 6</text><text x=\"300\" y=\"190\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"16\" font-weight=\"400\" fill=\"#1d4ed8\">αβ + βγ + γα = 2 + 6 + 3 = 11</text><text x=\"300\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"400\" fill=\"#15803d\">αβγ = 1·2·3 = 6</text>\n<text x=\"300\" y=\"300\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#475569\">For a monic cubic x³−s₁x²+s₂x−s₃</text>\n</svg>"
         }
       ],
       "worked_examples": [
@@ -872,12 +872,12 @@
       ],
       "visual_aids": [
         {
-          "visual_id": "v03_st10",
-          "title": "Symmetric Expressions",
+          "visual_id": "hss_math_t03_st10_reviewed01",
+          "title": "Symmetric expressions in roots",
           "type": "svg",
-          "caption": "A symmetric expression is unchanged when roots are permuted.",
-          "alt_text": "A symmetric expression is unchanged when roots are permuted.",
-          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\">\n<rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Symmetric Expressions</text>\n<circle cx=\"175\" cy=\"95\" r=\"35\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"345\" cy=\"95\" r=\"35\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n<text x=\"175\" y=\"102\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"21\" fill=\"#1e40af\">α</text><text x=\"345\" y=\"102\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"21\" fill=\"#166534\">β</text>\n<path d=\"M220 95 L300 95\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"260\" y=\"80\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">swap</text>\n<text x=\"260\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">A symmetric expression is unchanged when roots are permuted.</text>\n</svg>"
+          "caption": "For roots α=1, β=2, γ=3, the symmetric sum α²+β²+γ²=(α+β+γ)²−2(αβ+βγ+γα)=14.",
+          "alt_text": "A permutation-invariant root expression evaluated from elementary symmetric sums.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Symmetric expressions in roots\">\n<rect width=\"600\" height=\"320\" rx=\"16\" fill=\"#f8fafc\"/>\n<text x=\"300\" y=\"32\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0f172a\">Symmetric expressions in roots</text>\n<rect x=\"55\" y=\"85\" width=\"490\" height=\"145\" rx=\"10\" fill=\"#f5f3ff\" stroke=\"#7c3aed\" stroke-width=\"2\"/><text x=\"300\" y=\"125\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" font-weight=\"400\" fill=\"#5b21b6\">α² + β² + γ²</text><text x=\"300\" y=\"165\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"400\" fill=\"#5b21b6\">= (α + β + γ)² − 2(αβ + βγ + γα)</text><text x=\"300\" y=\"205\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#166534\">= 6² − 2(11) = 14</text>\n<text x=\"300\" y=\"300\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#475569\">The value is unchanged when roots are permuted</text>\n</svg>"
         }
       ],
       "worked_examples": [
@@ -959,12 +959,12 @@
       "formulas": [],
       "visual_aids": [
         {
-          "visual_id": "v03_st11",
-          "title": "Polynomial Roots",
+          "visual_id": "hss_math_t03_st11_reviewed01",
+          "title": "Polynomial equation with a complex-conjugate pair",
           "type": "svg",
-          "caption": "Real roots are x-intercepts; complex roots may not appear on the real graph.",
-          "alt_text": "Real roots are x-intercepts; complex roots may not appear on the real graph.",
-          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\">\n<rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Polynomial Roots</text>\n<line x1=\"75\" y1=\"120\" x2=\"445\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<path d=\"M90 110 Q160 20 220 110 T350 110 T440 110\" stroke=\"#2563eb\" stroke-width=\"3\" fill=\"none\"/>\n<g fill=\"#16a34a\"><circle cx=\"125\" cy=\"120\" r=\"5\"/><circle cx=\"220\" cy=\"120\" r=\"5\"/><circle cx=\"315\" cy=\"120\" r=\"5\"/></g>\n<text x=\"125\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"12\" fill=\"#166534\">root</text><text x=\"220\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"12\" fill=\"#166534\">root</text><text x=\"315\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"12\" fill=\"#166534\">root</text>\n<text x=\"260\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">Real roots are x-intercepts; complex roots may not appear on the real graph.</text>\n</svg>"
+          "caption": "x³−2x²+5x−10=(x−2)(x²+5); roots are 2, i√5 and −i√5.",
+          "alt_text": "Factorisation displays one real root and a conjugate pair of complex roots.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Polynomial equation with a complex-conjugate pair\">\n<rect width=\"600\" height=\"320\" rx=\"16\" fill=\"#f8fafc\"/>\n<text x=\"300\" y=\"32\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0f172a\">Polynomial equation with a complex-conjugate pair</text>\n<rect x=\"55\" y=\"85\" width=\"490\" height=\"145\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"300\" y=\"125\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"400\" fill=\"#1e3a8a\">x³ − 2x² + 5x − 10 = 0</text><text x=\"300\" y=\"165\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"400\" fill=\"#1d4ed8\">(x − 2)(x² + 5) = 0</text><text x=\"300\" y=\"205\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"19\" font-weight=\"700\" fill=\"#166534\">x = 2,   x = i√5,   x = −i√5</text>\n<text x=\"300\" y=\"300\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#475569\">Non-real roots of real-coefficient polynomials occur in conjugate pairs</text>\n</svg>"
         }
       ],
       "worked_examples": [
@@ -1042,12 +1042,12 @@
       "formulas": [],
       "visual_aids": [
         {
-          "visual_id": "v03_st12",
-          "title": "Polynomial Applications",
+          "visual_id": "hss_math_t03_st12_reviewed01",
+          "title": "Polynomial factorisation in a modelling problem",
           "type": "svg",
-          "caption": "Factorisation can reveal dimensions and simplify rational expressions.",
-          "alt_text": "Factorisation can reveal dimensions and simplify rational expressions.",
-          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\">\n<rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Polynomial Applications</text>\n<rect x=\"75\" y=\"60\" width=\"370\" height=\"65\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<text x=\"260\" y=\"88\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"18\" fill=\"#1e40af\">x² + 5x + 6</text>\n<text x=\"260\" y=\"113\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"18\" fill=\"#166534\">= (x + 2)(x + 3)</text>\n<text x=\"260\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">Factorisation can reveal dimensions and simplify rational expressions.</text>\n</svg>"
+          "caption": "A rectangle with sides x+2 and x+3 has area x²+5x+6; factorisation reveals the dimensions.",
+          "alt_text": "Area model links a quadratic expression to two linear dimensions.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Polynomial factorisation in a modelling problem\">\n<rect width=\"600\" height=\"320\" rx=\"16\" fill=\"#f8fafc\"/>\n<text x=\"300\" y=\"32\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0f172a\">Polynomial factorisation in a modelling problem</text>\n<rect x=\"170\" y=\"90\" width=\"260\" height=\"125\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"300\" y1=\"90\" x2=\"300\" y2=\"215\" stroke=\"#2563eb\" stroke-width=\"2\" /><line x1=\"170\" y1=\"152\" x2=\"430\" y2=\"152\" stroke=\"#2563eb\" stroke-width=\"2\" /><text x=\"300\" y=\"80\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"15\" font-weight=\"400\" fill=\"#1d4ed8\">x + 3</text><text x=\"300\" y=\"238\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"15\" font-weight=\"400\" fill=\"#1d4ed8\">x + 2</text><text x=\"235\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"14\" font-weight=\"400\" fill=\"#1e3a8a\">x²+3x</text><text x=\"365\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"14\" font-weight=\"400\" fill=\"#1e3a8a\">2x+6</text><text x=\"300\" y=\"275\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"400\" fill=\"#166534\">Area = (x + 2)(x + 3) = x² + 5x + 6</text>\n<text x=\"300\" y=\"300\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#475569\">Factorisation connects algebraic structure to dimensions</text>\n</svg>"
         }
       ],
       "worked_examples": [

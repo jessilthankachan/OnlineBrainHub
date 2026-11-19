@@ -21,7 +21,7 @@
           "concept": "Row and column matrices",
           "definition": "Matrices with exactly one row or exactly one column.",
           "details": [
-            "A row matrix has order 1 × n, such as [2  5  7].",
+            "A row matrix has order 1 × n, such as \\(\\begin{bmatrix} 2 & 5 & 7 \\end{bmatrix}\\).",
             "A column matrix has order m × 1, such as a column containing 2, 5 and 7."
           ]
         },
@@ -38,7 +38,7 @@
           "definition": "Two important special square/rectangular arrangements.",
           "details": [
             "A **zero matrix** has zero in every position; it may be rectangular or square.",
-            "An **identity matrix** is square, has 1s along its main diagonal and 0s elsewhere. The identity matrix of order 2 is [[1,0],[0,1]]."
+            "An **identity matrix** is square, has 1s along its main diagonal and 0s elsewhere. The identity matrix of order 2 is \\(\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}\\)."
           ]
         }
       ],
@@ -55,7 +55,7 @@
       ],
       "worked_examples": [
         {
-          "problem": "Classify each matrix by its shape: (i) [3  0  -2], (ii) [[1],[4],[6]], (iii) [[2,1],[0,5]], (iv) [[1,2,3],[4,5,6]].",
+          "problem": "Classify each matrix by its shape: (i) \\(\\begin{bmatrix} 3 & 0 & -2 \\end{bmatrix}\\), (ii) \\(\\begin{bmatrix} 1 \\\\ 4 \\\\ 6 \\end{bmatrix}\\), (iii) \\(\\begin{bmatrix} 2 & 1 \\\\ 0 & 5 \\end{bmatrix}\\), (iv) \\(\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix}\\).",
           "solution_steps": [
             "(i) It has one row and three columns, so it is a row matrix of order 1 × 3.",
             "(ii) It has three rows and one column, so it is a column matrix of order 3 × 1.",
@@ -65,7 +65,7 @@
           "final_answer": "(i) Row; (ii) Column; (iii) Square; (iv) Rectangular."
         },
         {
-          "problem": "Identify the special type of matrix: [[1,0,0],[0,1,0],[0,0,1]].",
+          "problem": "Identify the special type of matrix: \\(\\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}\\).",
           "solution_steps": [
             "It is square because it has three rows and three columns.",
             "Every main-diagonal entry is 1 and every other entry is 0.",
@@ -162,9 +162,9 @@
           "final_answer": "4 × 6"
         },
         {
-          "problem": "Given A = [[3,6,9],[2,4,8],[5,7,11]], find a₂₃.",
+          "problem": "Given A = \\(\\begin{bmatrix} 3 & 6 & 9 \\\\ 2 & 4 & 8 \\\\ 5 & 7 & 11 \\end{bmatrix}\\), find a₂₃.",
           "solution_steps": [
-            "The first subscript 2 identifies row 2, which is [2, 4, 8].",
+            "The first subscript 2 identifies row 2, which is \\(\\begin{bmatrix} 2 & 4 & 8 \\end{bmatrix}\\).",
             "The second subscript 3 identifies the third entry in that row.",
             "The third entry is 8."
           ],
@@ -232,7 +232,7 @@
       ],
       "worked_examples": [
         {
-          "problem": "Find x and y if [[x,5],[3,y]] = [[7,5],[3,9]].",
+          "problem": "Find x and y if \\(\\begin{bmatrix} x & 5 \\\\ 3 & y \\end{bmatrix}\\) = \\(\\begin{bmatrix} 7 & 5 \\\\ 3 & 9 \\end{bmatrix}\\).",
           "solution_steps": [
             "The matrices have the same order, so corresponding entries must be equal.",
             "Compare the first-row, first-column entries: x = 7.",
@@ -241,7 +241,7 @@
           "final_answer": "x = 7, y = 9"
         },
         {
-          "problem": "If [[2a, b-1],[3, c+2]] = [[8,4],[3,7]], find a, b and c.",
+          "problem": "If \\(\\begin{bmatrix} 2a & b-1 \\\\ 3 & c+2 \\end{bmatrix}\\) = \\(\\begin{bmatrix} 8 & 4 \\\\ 3 & 7 \\end{bmatrix}\\), find a, b and c.",
           "solution_steps": [
             "Compare the first entries: 2a = 8, so a = 4.",
             "Compare the second entries: b - 1 = 4, so b = 5.",
@@ -344,29 +344,29 @@
       ],
       "worked_examples": [
         {
-          "problem": "Given A = [[3,5],[2,7]] and B = [[1,4],[6,2]], find A + B and A − B.",
+          "problem": "Given A = \\(\\begin{bmatrix} 3 & 5 \\\\ 2 & 7 \\end{bmatrix}\\) and B = \\(\\begin{bmatrix} 1 & 4 \\\\ 6 & 2 \\end{bmatrix}\\), find A + B and A − B.",
           "solution_steps": [
             "Both matrices have order 2 × 2, so both operations are defined.",
-            "Add corresponding entries: A + B = [[3+1, 5+4],[2+6, 7+2]].",
-            "Subtract corresponding entries in the stated order: A − B = [[3−1, 5−4],[2−6, 7−2]]."
+            "Add corresponding entries: A + B = \\(\\begin{bmatrix} 3+1 & 5+4 \\\\ 2+6 & 7+2 \\end{bmatrix}\\).",
+            "Subtract corresponding entries in the stated order: A − B = \\(\\begin{bmatrix} 3−1 & 5−4 \\\\ 2−6 & 7−2 \\end{bmatrix}\\)."
           ],
-          "final_answer": "A + B = [[4,9],[8,9]]; A − B = [[2,1],[-4,5]]."
+          "final_answer": "A + B = \\(\\begin{bmatrix} 4 & 9 \\\\ 8 & 9 \\end{bmatrix}\\); A − B = \\(\\begin{bmatrix} 2 & 1 \\\\ -4 & 5 \\end{bmatrix}\\)."
         },
         {
-          "problem": "Given A = [[3,5],[2,7]] and B = [[1,4],[6,2]], find X if X + A = B.",
+          "problem": "Given A = \\(\\begin{bmatrix} 3 & 5 \\\\ 2 & 7 \\end{bmatrix}\\) and B = \\(\\begin{bmatrix} 1 & 4 \\\\ 6 & 2 \\end{bmatrix}\\), find X if X + A = B.",
           "solution_steps": [
             "Subtract A from both sides: X = B − A.",
-            "Subtract corresponding entries: [[1−3,4−5],[6−2,2−7]]."
+            "Subtract corresponding entries: \\(\\begin{bmatrix} 1−3 & 4−5 \\\\ 6−2 & 2−7 \\end{bmatrix}\\)."
           ],
-          "final_answer": "X = [[-2,-1],[4,-5]]"
+          "final_answer": "X = \\(\\begin{bmatrix} -2 & -1 \\\\ 4 & -5 \\end{bmatrix}\\)"
         },
         {
-          "problem": "A shop records notebook and pen sales at two branches. On Monday the sales matrix is [[12,20],[15,18]] and on Tuesday it is [[8,14],[10,12]], with rows representing branches and columns representing notebooks and pens. Find the two-day totals.",
+          "problem": "A shop records notebook and pen sales at two branches. On Monday the sales matrix is \\(\\begin{bmatrix} 12 & 20 \\\\ 15 & 18 \\end{bmatrix}\\) and on Tuesday it is \\(\\begin{bmatrix} 8 & 14 \\\\ 10 & 12 \\end{bmatrix}\\), with rows representing branches and columns representing notebooks and pens. Find the two-day totals.",
           "solution_steps": [
             "The matrices have the same order and the same row and column meanings.",
-            "Add corresponding entries: [[12+8,20+14],[15+10,18+12]]."
+            "Add corresponding entries: \\(\\begin{bmatrix} 12+8 & 20+14 \\\\ 15+10 & 18+12 \\end{bmatrix}\\)."
           ],
-          "final_answer": "[[20,34],[25,30]] items."
+          "final_answer": "\\(\\begin{bmatrix} 20 & 34 \\\\ 25 & 30 \\end{bmatrix}\\) items."
         }
       ],
       "common_mistakes": [
@@ -459,29 +459,29 @@
       ],
       "worked_examples": [
         {
-          "problem": "Given B = [[3,-4],[-2,5]], calculate -2B.",
+          "problem": "Given B = \\(\\begin{bmatrix} 3 & -4 \\\\ -2 & 5 \\end{bmatrix}\\), calculate -2B.",
           "solution_steps": [
             "Multiply every entry by −2.",
             "−2 × 3 = −6 and −2 × (−4) = 8.",
             "−2 × (−2) = 4 and −2 × 5 = −10."
           ],
-          "final_answer": "[[-6,8],[4,-10]]"
+          "final_answer": "\\(\\begin{bmatrix} -6 & 8 \\\\ 4 & -10 \\end{bmatrix}\\)"
         },
         {
-          "problem": "If A = [[1,2],[3,4]], find 3A − 2A.",
+          "problem": "If A = \\(\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}\\), find 3A − 2A.",
           "solution_steps": [
-            "Find each scalar multiple: 3A = [[3,6],[9,12]] and 2A = [[2,4],[6,8]].",
-            "Subtract corresponding entries: [[3−2,6−4],[9−6,12−8]]."
+            "Find each scalar multiple: 3A = \\(\\begin{bmatrix} 3 & 6 \\\\ 9 & 12 \\end{bmatrix}\\) and 2A = \\(\\begin{bmatrix} 2 & 4 \\\\ 6 & 8 \\end{bmatrix}\\).",
+            "Subtract corresponding entries: \\(\\begin{bmatrix} 3−2 & 6−4 \\\\ 9−6 & 12−8 \\end{bmatrix}\\)."
           ],
-          "final_answer": "[[1,2],[3,4]] = A"
+          "final_answer": "\\(\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}\\) = A"
         },
         {
-          "problem": "A library has 2 identical sets of books, each represented by the quantity matrix [[4,3],[2,5]] for two sections and two categories. Find the combined quantity matrix.",
+          "problem": "A library has 2 identical sets of books, each represented by the quantity matrix \\(\\begin{bmatrix} 4 & 3 \\\\ 2 & 5 \\end{bmatrix}\\) for two sections and two categories. Find the combined quantity matrix.",
           "solution_steps": [
             "Two identical sets means multiply the matrix by the scalar 2.",
             "Multiply every entry by 2."
           ],
-          "final_answer": "[[8,6],[4,10]]"
+          "final_answer": "\\(\\begin{bmatrix} 8 & 6 \\\\ 4 & 10 \\end{bmatrix}\\)"
         }
       ],
       "common_mistakes": [
@@ -523,7 +523,7 @@
           "concept": "Identity matrix",
           "definition": "A square matrix with 1s on the main diagonal and 0s elsewhere.",
           "details": [
-            "The identity matrix of order 2 is I₂ = [[1,0],[0,1]].",
+            "The identity matrix of order 2 is I₂ = \\(\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}\\).",
             "For a matrix A of order m × n, AIₙ = A and IₘA = A. The identity matrix on the right has order n × n; the one on the left has order m × m."
           ]
         },
@@ -567,13 +567,13 @@
       ],
       "worked_examples": [
         {
-          "problem": "Let A = [[2,3],[4,5]]. Find A + O and AI₂.",
+          "problem": "Let A = \\(\\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}\\). Find A + O and AI₂.",
           "solution_steps": [
-            "The zero matrix of order 2 × 2 is O = [[0,0],[0,0]].",
-            "Add corresponding entries: A + O = [[2+0,3+0],[4+0,5+0]] = A.",
-            "Use I₂ = [[1,0],[0,1]]. Multiplying A by I₂ leaves A unchanged."
+            "The zero matrix of order 2 × 2 is O = \\(\\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}\\).",
+            "Add corresponding entries: A + O = \\(\\begin{bmatrix} 2+0 & 3+0 \\\\ 4+0 & 5+0 \\end{bmatrix}\\) = A.",
+            "Use I₂ = \\(\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}\\). Multiplying A by I₂ leaves A unchanged."
           ],
-          "final_answer": "A + O = [[2,3],[4,5]] and AI₂ = [[2,3],[4,5]]."
+          "final_answer": "A + O = \\(\\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}\\) and AI₂ = \\(\\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}\\)."
         },
         {
           "problem": "State the order of the zero matrix required for A + O if A has order 3 × 2. State the order of an identity matrix that can be multiplied on the right of A without changing it.",
@@ -657,7 +657,7 @@
       ],
       "worked_examples": [
         {
-          "problem": "Multiply A = [[1,2],[3,4]] by B = [[2,0],[1,3]].",
+          "problem": "Multiply A = \\(\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}\\) by B = \\(\\begin{bmatrix} 2 & 0 \\\\ 1 & 3 \\end{bmatrix}\\).",
           "solution_steps": [
             "Both matrices are 2 × 2, so the product is defined and will be 2 × 2.",
             "Top-left: (1 × 2) + (2 × 1) = 4.",
@@ -665,7 +665,7 @@
             "Bottom-left: (3 × 2) + (4 × 1) = 10.",
             "Bottom-right: (3 × 0) + (4 × 3) = 12."
           ],
-          "final_answer": "AB = [[4,6],[10,12]]."
+          "final_answer": "AB = \\(\\begin{bmatrix} 4 & 6 \\\\ 10 & 12 \\end{bmatrix}\\)."
         },
         {
           "problem": "A has order 2 × 3 and B has order 3 × 4. Is AB defined, and what is its order?",
@@ -775,27 +775,27 @@
       ],
       "worked_examples": [
         {
-          "problem": "Find the transpose of A = [[1,2,3],[4,5,6]].",
+          "problem": "Find the transpose of A = \\(\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix}\\).",
           "solution_steps": [
             "A has two rows and three columns.",
-            "Write the first row [1,2,3] as the first column.",
-            "Write the second row [4,5,6] as the second column."
+            "Write the first row \\(\\begin{bmatrix} 1 & 2 & 3 \\end{bmatrix}\\) as the first column.",
+            "Write the second row \\(\\begin{bmatrix} 4 & 5 & 6 \\end{bmatrix}\\) as the second column."
           ],
-          "final_answer": "Aᵀ = [[1,4],[2,5],[3,6]], of order 3 × 2."
+          "final_answer": "Aᵀ = \\(\\begin{bmatrix} 1 & 4 \\\\ 2 & 5 \\\\ 3 & 6 \\end{bmatrix}\\), of order 3 × 2."
         },
         {
-          "problem": "Find the transpose of B = [[2,0],[-1,5]].",
+          "problem": "Find the transpose of B = \\(\\begin{bmatrix} 2 & 0 \\\\ -1 & 5 \\end{bmatrix}\\).",
           "solution_steps": [
-            "The first row [2,0] becomes the first column.",
-            "The second row [−1,5] becomes the second column."
+            "The first row \\(\\begin{bmatrix} 2 & 0 \\end{bmatrix}\\) becomes the first column.",
+            "The second row \\(\\begin{bmatrix} −1 & 5 \\end{bmatrix}\\) becomes the second column."
           ],
-          "final_answer": "Bᵀ = [[2,-1],[0,5]]."
+          "final_answer": "Bᵀ = \\(\\begin{bmatrix} 2 & -1 \\\\ 0 & 5 \\end{bmatrix}\\)."
         },
         {
-          "problem": "If A = [[1,2],[3,4]], verify that (Aᵀ)ᵀ = A.",
+          "problem": "If A = \\(\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}\\), verify that (Aᵀ)ᵀ = A.",
           "solution_steps": [
-            "First transpose A: Aᵀ = [[1,3],[2,4]].",
-            "Transpose again: (Aᵀ)ᵀ = [[1,2],[3,4]]."
+            "First transpose A: Aᵀ = \\(\\begin{bmatrix} 1 & 3 \\\\ 2 & 4 \\end{bmatrix}\\).",
+            "Transpose again: (Aᵀ)ᵀ = \\(\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}\\)."
           ],
           "final_answer": "(Aᵀ)ᵀ = A."
         }
@@ -838,7 +838,7 @@
           "concept": "Determinant of a 2 × 2 matrix",
           "definition": "Calculate the product of the main diagonal minus the product of the other diagonal.",
           "details": [
-            "For A = [[a,b],[c,d]], det(A) = ad − bc.",
+            "For A = \\(\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\), det(A) = ad − bc.",
             "The determinant is a number, not another matrix. It is written det(A) or |A|."
           ]
         },
@@ -881,7 +881,7 @@
       ],
       "worked_examples": [
         {
-          "problem": "Find the determinant of B = [[-2,3],[4,1]].",
+          "problem": "Find the determinant of B = \\(\\begin{bmatrix} -2 & 3 \\\\ 4 & 1 \\end{bmatrix}\\).",
           "solution_steps": [
             "Identify a = −2, b = 3, c = 4 and d = 1.",
             "Use det(B) = ad − bc.",
@@ -891,7 +891,7 @@
           "final_answer": "det(B) = -14"
         },
         {
-          "problem": "Determine whether C = [[3,6],[2,4]] is singular.",
+          "problem": "Determine whether C = \\(\\begin{bmatrix} 3 & 6 \\\\ 2 & 4 \\end{bmatrix}\\) is singular.",
           "solution_steps": [
             "Calculate det(C) = (3 × 4) − (6 × 2).",
             "det(C) = 12 − 12 = 0.",
@@ -923,7 +923,7 @@
         }
       ],
       "quick_summary": [
-        "For [[a,b],[c,d]], det = ad − bc.",
+        "For \\(\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\), det = ad − bc.",
         "A zero determinant means singular; a nonzero determinant means non-singular.",
         "The absolute determinant gives the area scale factor for a 2D linear transformation."
       ],
@@ -953,7 +953,7 @@
           "concept": "Formula for the inverse",
           "definition": "Swap the main-diagonal entries, change the signs of the other two entries, and divide by the determinant.",
           "details": [
-            "For A = [[a,b],[c,d]], interchange a and d.",
+            "For A = \\(\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\), interchange a and d.",
             "Replace b by −b and c by −c.",
             "Multiply the resulting matrix by 1/(ad − bc)."
           ]
@@ -997,27 +997,27 @@
       ],
       "worked_examples": [
         {
-          "problem": "Find the inverse of B = [[4,2],[1,3]].",
+          "problem": "Find the inverse of B = \\(\\begin{bmatrix} 4 & 2 \\\\ 1 & 3 \\end{bmatrix}\\).",
           "solution_steps": [
             "Find the determinant: (4 × 3) − (2 × 1) = 10.",
             "Since the determinant is not zero, the inverse exists.",
             "Swap the main-diagonal entries 4 and 3, and change the signs of 2 and 1.",
-            "B⁻¹ = (1/10)[[3,−2],[−1,4]]."
+            "B⁻¹ = (1/10)\\(\\begin{bmatrix} 3 & −2 \\\\ −1 & 4 \\end{bmatrix}\\)."
           ],
-          "final_answer": "B⁻¹ = [[3/10,-1/5],[-1/10,2/5]]."
+          "final_answer": "B⁻¹ = \\(\\begin{bmatrix} 3/10 & -1/5 \\\\ -1/10 & 2/5 \\end{bmatrix}\\)."
         },
         {
-          "problem": "Find the inverse of A = [[2,1],[5,3]] and verify it.",
+          "problem": "Find the inverse of A = \\(\\begin{bmatrix} 2 & 1 \\\\ 5 & 3 \\end{bmatrix}\\) and verify it.",
           "solution_steps": [
             "det(A) = (2 × 3) − (1 × 5) = 1.",
-            "Swap 2 and 3 and change the signs of 1 and 5: [[3,−1],[−5,2]].",
-            "The determinant is 1, so A⁻¹ = [[3,−1],[−5,2]].",
-            "Multiply A by A⁻¹: [[2,1],[5,3]][[3,−1],[−5,2]] = [[1,0],[0,1]]."
+            "Swap 2 and 3 and change the signs of 1 and 5: \\(\\begin{bmatrix} 3 & −1 \\\\ −5 & 2 \\end{bmatrix}\\).",
+            "The determinant is 1, so A⁻¹ = \\(\\begin{bmatrix} 3 & −1 \\\\ −5 & 2 \\end{bmatrix}\\).",
+            "Multiply A by A⁻¹: \\(\\begin{bmatrix} 2 & 1 \\\\ 5 & 3 \\end{bmatrix}\\)\\(\\begin{bmatrix} 3 & −1 \\\\ −5 & 2 \\end{bmatrix}\\) = \\(\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}\\)."
           ],
-          "final_answer": "A⁻¹ = [[3,-1],[-5,2]]; AA⁻¹ = I₂."
+          "final_answer": "A⁻¹ = \\(\\begin{bmatrix} 3 & -1 \\\\ -5 & 2 \\end{bmatrix}\\); AA⁻¹ = I₂."
         },
         {
-          "problem": "Does C = [[2,4],[1,2]] have an inverse?",
+          "problem": "Does C = \\(\\begin{bmatrix} 2 & 4 \\\\ 1 & 2 \\end{bmatrix}\\) have an inverse?",
           "solution_steps": [
             "det(C) = (2 × 2) − (4 × 1) = 0.",
             "A matrix with determinant zero is singular."
@@ -1063,7 +1063,7 @@
           "concept": "Writing equations as AX = B",
           "definition": "Separate coefficients, variables and constants.",
           "details": [
-            "For p x + q y = r and s x + t y = u, A = [[p,q],[s,t]], X = [[x],[y]] and B = [[r],[u]].",
+            "For p x + q y = r and s x + t y = u, A = \\(\\begin{bmatrix} p & q \\\\ s & t \\end{bmatrix}\\), X = \\(\\begin{bmatrix} x \\\\ y \\end{bmatrix}\\) and B = \\(\\begin{bmatrix} r \\\\ u \\end{bmatrix}\\).",
             "The matrix equation AX = B represents the original pair of equations."
           ]
         },
@@ -1111,10 +1111,10 @@
         {
           "problem": "Solve 3x − 2y = 4 and x + y = 3 using matrices.",
           "solution_steps": [
-            "Write A = [[3,−2],[1,1]], X = [[x],[y]] and B = [[4],[3]].",
-            "det(A) = (3 × 1) − (−2 × 1) = 5, so A⁻¹ = (1/5)[[1,2],[−1,3]].",
-            "Calculate X = A⁻¹B = (1/5)[[1,2],[−1,3]][[4],[3]].",
-            "The product is (1/5)[[10],[5]] = [[2],[1]].",
+            "Write A = \\(\\begin{bmatrix} 3 & −2 \\\\ 1 & 1 \\end{bmatrix}\\), X = \\(\\begin{bmatrix} x \\\\ y \\end{bmatrix}\\) and B = \\(\\begin{bmatrix} 4 \\\\ 3 \\end{bmatrix}\\).",
+            "det(A) = (3 × 1) − (−2 × 1) = 5, so A⁻¹ = (1/5)\\(\\begin{bmatrix} 1 & 2 \\\\ −1 & 3 \\end{bmatrix}\\).",
+            "Calculate X = A⁻¹B = (1/5)\\(\\begin{bmatrix} 1 & 2 \\\\ −1 & 3 \\end{bmatrix}\\)\\(\\begin{bmatrix} 4 \\\\ 3 \\end{bmatrix}\\).",
+            "The product is (1/5)\\(\\begin{bmatrix} 10 \\\\ 5 \\end{bmatrix}\\) = \\(\\begin{bmatrix} 2 \\\\ 1 \\end{bmatrix}\\).",
             "Check: 3(2) − 2(1) = 4 and 2 + 1 = 3."
           ],
           "final_answer": "x = 2, y = 1"
@@ -1122,10 +1122,10 @@
         {
           "problem": "Solve 2x + y = 7 and x + y = 5 using the inverse-matrix method.",
           "solution_steps": [
-            "A = [[2,1],[1,1]], X = [[x],[y]], B = [[7],[5]].",
+            "A = \\(\\begin{bmatrix} 2 & 1 \\\\ 1 & 1 \\end{bmatrix}\\), X = \\(\\begin{bmatrix} x \\\\ y \\end{bmatrix}\\), B = \\(\\begin{bmatrix} 7 \\\\ 5 \\end{bmatrix}\\).",
             "det(A) = (2 × 1) − (1 × 1) = 1.",
-            "A⁻¹ = [[1,−1],[−1,2]].",
-            "X = A⁻¹B = [[1,−1],[−1,2]][[7],[5]] = [[2],[3]].",
+            "A⁻¹ = \\(\\begin{bmatrix} 1 & −1 \\\\ −1 & 2 \\end{bmatrix}\\).",
+            "X = A⁻¹B = \\(\\begin{bmatrix} 1 & −1 \\\\ −1 & 2 \\end{bmatrix}\\)\\(\\begin{bmatrix} 7 \\\\ 5 \\end{bmatrix}\\) = \\(\\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}\\).",
             "Check: 2(2) + 3 = 7 and 2 + 3 = 5."
           ],
           "final_answer": "x = 2, y = 3"
@@ -1219,20 +1219,20 @@
         {
           "problem": "A factory uses 4 units of wood and 2 units of metal per chair. It uses 6 units of wood and 3 units of metal per table. The factory produces 10 chairs and 5 tables. Find the total amounts of wood and metal required.",
           "solution_steps": [
-            "Arrange the material requirements with rows for wood and metal and columns for chairs and tables: A = [[4,6],[2,3]].",
-            "Arrange production quantities in the same column order: B = [[10],[5]].",
-            "Multiply AB: [[(4 × 10) + (6 × 5)],[(2 × 10) + (3 × 5)]].",
-            "Calculate the entries: [[40 + 30],[20 + 15]]."
+            "Arrange the material requirements with rows for wood and metal and columns for chairs and tables: A = \\(\\begin{bmatrix} 4 & 6 \\\\ 2 & 3 \\end{bmatrix}\\).",
+            "Arrange production quantities in the same column order: B = \\(\\begin{bmatrix} 10 \\\\ 5 \\end{bmatrix}\\).",
+            "Multiply AB: \\(\\begin{bmatrix} (4 × 10) + (6 × 5) \\\\ (2 × 10) + (3 × 5) \\end{bmatrix}\\).",
+            "Calculate the entries: \\(\\begin{bmatrix} 40 + 30 \\\\ 20 + 15 \\end{bmatrix}\\)."
           ],
           "final_answer": "Wood = 70 units; metal = 35 units."
         },
         {
-          "problem": "A school records the number of students participating in two activities at two campuses. The matrix for Campus A is [[18,12],[10,15]] and for Campus B is [[14,9],[8,11]], with the same row and column labels. Find the combined participation matrix.",
+          "problem": "A school records the number of students participating in two activities at two campuses. The matrix for Campus A is \\(\\begin{bmatrix} 18 & 12 \\\\ 10 & 15 \\end{bmatrix}\\) and for Campus B is \\(\\begin{bmatrix} 14 & 9 \\\\ 8 & 11 \\end{bmatrix}\\), with the same row and column labels. Find the combined participation matrix.",
           "solution_steps": [
             "Both matrices use the same order and category labels.",
-            "Add corresponding entries: [[18+14,12+9],[10+8,15+11]]."
+            "Add corresponding entries: \\(\\begin{bmatrix} 18+14 & 12+9 \\\\ 10+8 & 15+11 \\end{bmatrix}\\)."
           ],
-          "final_answer": "[[32,21],[18,26]] students."
+          "final_answer": "\\(\\begin{bmatrix} 32 & 21 \\\\ 18 & 26 \\end{bmatrix}\\) students."
         },
         {
           "problem": "Three towns are labelled P, Q and R. A direct-road connection is represented by 1 and no direct road by 0. If P connects directly to Q but not R, write the first row of the connection matrix using the column order P, Q, R.",
@@ -1240,7 +1240,7 @@
             "The columns are P, Q and R in that order.",
             "There is no direct road from P to itself in this simple example, a road from P to Q, and no road from P to R."
           ],
-          "final_answer": "[0, 1, 0]."
+          "final_answer": "\\(\\begin{bmatrix} 0 & 1 & 0 \\end{bmatrix}\\)."
         }
       ],
       "common_mistakes": [

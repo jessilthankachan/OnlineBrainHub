@@ -1,0 +1,1477 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t05",
+  "topicTitle": "Sequences and Series",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t05_st01": {
+      "id": "hss_math_t05_st01",
+      "title": "Sequences and general terms",
+      "overview": "A sequence is an ordered list whose terms are indexed by positive integers. A sequence may be specified by an explicit rule that gives a_n directly, by a recurrence that defines a term from earlier terms, or by a verbal pattern. The index n identifies position, not the value. Always state the starting index and any domain restriction when they matter.",
+      "key_concepts": [
+        {
+          "concept": "The Structure of a Sequence",
+          "definition": "Ordered terms.",
+          "details": [
+            "A sequence is written as an ordered list: $a_1, a_2, a_3, \\dots, a_n$.",
+            "The subscript represents the 'position' (e.g., $a_3$ is the third term). The letter itself represents the actual numerical 'value' at that position."
+          ]
+        },
+        {
+          "concept": "The General Term ($a_n$)",
+          "definition": "The master formula.",
+          "details": [
+            "The general term is an algebraic formula that instantly generates the value of any term simply by plugging in its position number ($n$).",
+            "Example: If $a_n = 2n + 1$, the 100th term ($a_{100}$) is $2(100) + 1 = 201$."
+          ]
+        },
+        {
+          "concept": "Finite vs Infinite",
+          "definition": "When does it stop?",
+          "details": [
+            "**Finite Sequence:** Has a specific final term and a limited number of elements (e.g., $1, 2, 3, 4, 5$).",
+            "**Infinite Sequence:** Continues forever, denoted by an ellipsis ($\\dots$) at the end."
+          ]
+        },
+        {
+          "concept": "Explicit and recursive definitions",
+          "definition": "An explicit rule gives a_n directly in terms of n.",
+          "details": [
+            "An explicit rule gives a_n directly in terms of n. A recursive rule gives one or more initial terms and a rule for generating later terms from earlier ones. For example, a_n=3n-1 is explicit, whereas a_1=2 and a_n=a_(n-1)+3 for n≥2 is recursive; both generate 2,5,8,11,…."
+          ]
+        },
+        {
+          "concept": "Determining a general term",
+          "definition": "Look for a stable relationship between the index and term values.",
+          "details": [
+            "Look for a stable relationship between the index and term values. Constant first differences suggest a linear rule; constant second differences suggest a quadratic rule. These patterns are useful clues, but a finite list alone does not uniquely determine a sequence unless a rule or pattern convention is specified."
+          ]
+        },
+        {
+          "concept": "Relationships between terms",
+          "definition": "A recurrence can express how terms change, such as a_(n+1)-a_n=d or a_(n+1)=r a_n.",
+          "details": [
+            "A recurrence can express how terms change, such as a_(n+1)-a_n=d or a_(n+1)=r a_n. Index shifts must be handled carefully: a_(n+1) is the term after a_n."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Explicit sequence notation",
+          "formula": "a_n=f(n), n in the stated index set",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Recursive sequence notation",
+          "formula": "a_(n+1)=F(n,a_n), together with the required initial term(s)",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "First-difference test",
+          "formula": "Δa_n=a_(n+1)-a_n",
+          "description": "Use with the stated conditions and variable definitions."
+        }
+      ],
+      "visual_aids": [
+        {
+          "type": "svg",
+          "title": "Sequences and General Terms — visual guide",
+          "description": "Original schematic to support the lesson concept.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 180\" role=\"img\" aria-label=\"Sequences and General Terms: conceptual illustration\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"164\" rx=\"12\" fill=\"#f5f7fb\" stroke=\"#718096\"/><text x=\"320\" y=\"42\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#172554\">Sequences and General Terms</text><text x=\"320\" y=\"83\" text-anchor=\"middle\" font-size=\"18\" font-family=\"Arial\" fill=\"#1f2937\">Sequence Index</text><path d=\"M100 112 H540\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"370\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"480\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">1</text><text x=\"260\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">2</text><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">3</text><text x=\"480\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the first 4 terms of the sequence given by the general formula $a_n = n^2 - n$.",
+          "solution_steps": [
+            "Step 1: Substitute $n = 1$: $a_1 = (1)^2 - 1 = 1 - 1 = 0$.",
+            "Step 2: Substitute $n = 2$: $a_2 = (2)^2 - 2 = 4 - 2 = 2$.",
+            "Step 3: Substitute $n = 3$: $a_3 = (3)^2 - 3 = 9 - 3 = 6$.",
+            "Step 4: Substitute $n = 4$: $a_4 = (4)^2 - 4 = 16 - 4 = 12$."
+          ],
+          "final_answer": "0, 2, 6, 12"
+        },
+        {
+          "problem": "A sequence is defined by a_1=4 and a_n=a_(n-1)+5 for n≥2. Find its first five terms and state a general term.",
+          "solution_steps": [
+            "Start with a_1=4",
+            "Add 5 repeatedly: a_2=9, a_3=14, a_4=19 and a_5=24",
+            "This is an AP with first term 4 and common difference 5, so a_n=4+(n-1)5=5n-1."
+          ],
+          "final_answer": "4, 9, 14, 19, 24; a_n=5n-1"
+        },
+        {
+          "problem": "The first four terms are 2, 6, 12, 20. Find a plausible general term.",
+          "solution_steps": [
+            "The first differences are 4, 6, 8, so the second differences are constant at 2",
+            "A quadratic rule is plausible",
+            "Testing a_n=n(n+1): n=1,2,3,4 gives 2,6,12,20."
+          ],
+          "final_answer": "a_n=n(n+1) (for the stated pattern)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing the position ($n$) with the value ($a_n$).",
+          "correction": "In $a_5 = 15$, $5$ is just the address (where it is in the list), and $15$ is what actually lives at that address."
+        }
+      ],
+      "quick_summary": [
+        "A sequence is an ordered list of numbers.",
+        "Positions are indexed with positive integers ($1, 2, 3, \\dots$).",
+        "The general term $a_n$ provides an algebraic blueprint to calculate the value of a term at any position.",
+        "Explicit and recursive definitions",
+        "Determining a general term",
+        "Relationships between terms"
+      ],
+      "registry_scope": "Approved lesson scope: Advanced sequence notation; explicit and recursive definitions; relationships between terms; methods for determining general terms."
+    },
+    "hss_math_t05_st02": {
+      "id": "hss_math_t05_st02",
+      "title": "Arithmetic progressions",
+      "overview": "An arithmetic progression (AP) is a sequence in which the difference between consecutive terms is constant. This constant is the common difference d. The common difference may be positive, negative or zero, so an AP may increase, decrease or remain constant.",
+      "key_concepts": [
+        {
+          "concept": "The Common Difference ($d$)",
+          "definition": "The constant step.",
+          "details": [
+            "In an AP, the difference between any term and its immediate predecessor is always identical.",
+            "It is calculated exactly as $d = a_2 - a_1 = a_3 - a_2$.",
+            "If $d$ is positive, the sequence grows. If negative, it shrinks."
+          ]
+        },
+        {
+          "concept": "The General Term Formula",
+          "definition": "Skipping ahead.",
+          "details": [
+            "To find the $n$th term, you don't add $d$ $n$ times. You start at the first term ($a$) and add the difference $(n-1)$ times (because you don't add the difference to the first term itself).",
+            "Formula: $a_n = a + (n-1)d$."
+          ]
+        },
+        {
+          "concept": "Common difference",
+          "definition": "For consecutive terms, d=a_(n+1)-a_n.",
+          "details": [
+            "For consecutive terms, d=a_(n+1)-a_n. The same value must be obtained at every position."
+          ]
+        },
+        {
+          "concept": "General term",
+          "definition": "Starting with first term a, the nth term is a+(n-1)d.",
+          "details": [
+            "Starting with first term a, the nth term is a+(n-1)d. The factor n-1 appears because there are n-1 equal steps from the first term to the nth term."
+          ]
+        },
+        {
+          "concept": "Useful term relationships",
+          "definition": "For three consecutive AP terms x,y,z, the middle term is the arithmetic mean: 2y=x+z.",
+          "details": [
+            "For three consecutive AP terms x,y,z, the middle term is the arithmetic mean: 2y=x+z. If two terms are known, use their index difference: a_m-a_n=(m-n)d."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Common difference",
+          "formula": "d=a_(n+1)-a_n",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Nth term of an AP",
+          "formula": "a_n=a+(n-1)d",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Difference of two terms",
+          "formula": "a_m-a_n=(m-n)d",
+          "description": "Use with the stated conditions and variable definitions."
+        }
+      ],
+      "visual_aids": [
+        {
+          "type": "svg",
+          "title": "Arithmetic Progressions (AP) — visual guide",
+          "description": "Original schematic to support the lesson concept.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 180\" role=\"img\" aria-label=\"Arithmetic Progressions (AP): conceptual illustration\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"164\" rx=\"12\" fill=\"#f5f7fb\" stroke=\"#718096\"/><text x=\"320\" y=\"42\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#172554\">Arithmetic Progressions (AP)</text><text x=\"320\" y=\"83\" text-anchor=\"middle\" font-size=\"18\" font-family=\"Arial\" fill=\"#1f2937\">Ap Steps</text><path d=\"M100 112 H540\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"370\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"480\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">1</text><text x=\"260\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">2</text><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">3</text><text x=\"480\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the 20th term of the arithmetic progression: $3, 7, 11, 15, \\dots$",
+          "solution_steps": [
+            "Step 1: Identify the first term: $a = 3$.",
+            "Step 2: Calculate the common difference: $d = 7 - 3 = 4$.",
+            "Step 3: Set up the formula for $n=20$: $a_{20} = a + (20 - 1)d$.",
+            "Step 4: Substitute the values: $a_{20} = 3 + (19)(4)$.",
+            "Step 5: Calculate: $3 + 76 = 79$."
+          ],
+          "final_answer": "79"
+        },
+        {
+          "problem": "In an AP, the 7th term is 22 and the 13th term is 40. Find the first term and common difference.",
+          "solution_steps": [
+            "a+6d=22 and a+12d=40",
+            "Subtracting gives 6d=18, so d=3",
+            "Then a+18=22, hence a=4."
+          ],
+          "final_answer": "First term 4; common difference 3"
+        },
+        {
+          "problem": "Which term of the AP 5, 9, 13, … is 81?",
+          "solution_steps": [
+            "Here a=5 and d=4",
+            "Set 81=5+(n-1)4",
+            "Thus 76=4(n-1), n-1=19 and n=20."
+          ],
+          "final_answer": "81 is the 20th term"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating the common difference backwards.",
+          "correction": "Always subtract the earlier term from the later term ($a_2 - a_1$), NEVER the other way around. If the sequence is $10, 8, 6$, then $d = 8 - 10 = -2$."
+        }
+      ],
+      "quick_summary": [
+        "An Arithmetic Progression (AP) changes by a constant amount $d$ each step.",
+        "The common difference $d$ can be positive, negative, or zero.",
+        "The value of any term is found using the formula $a_n = a + (n-1)d$.",
+        "Common difference",
+        "General term",
+        "Useful term relationships"
+      ],
+      "registry_scope": "Approved lesson scope: General term, common difference, properties and multi-condition problems involving arithmetic progressions."
+    },
+    "hss_math_t05_st03": {
+      "id": "hss_math_t05_st03",
+      "title": "Sum of an arithmetic progression",
+      "overview": "The sum of the first n terms of an AP can be found without adding every term individually. Pairing the first and last terms, the second and second-last terms, and so on gives equal pair sums. This leads to the finite AP sum formulas.",
+      "key_concepts": [
+        {
+          "concept": "The Sum Formula Concept",
+          "definition": "Pairing terms.",
+          "details": [
+            "If you write an AP out forwards and backwards and add them, every vertical pair sums to the exact same total: $(a + l)$, where $a$ is the first term and $l$ is the last.",
+            "Since there are $n$ pairs, the total double-sum is $n(a+l)$. Dividing by 2 gives the final sum."
+          ]
+        },
+        {
+          "concept": "The Two Formulas",
+          "definition": "Depending on what you know.",
+          "details": [
+            "**Formula 1 (Known Last Term):** $S_n = \\frac{n}{2}(a + l)$. Use this if you know exactly what the final term is.",
+            "**Formula 2 (Unknown Last Term):** $S_n = \\frac{n}{2}[2a + (n-1)d]$. Use this if you only know the starting term, the difference, and how many terms to add."
+          ]
+        },
+        {
+          "concept": "Pairing method",
+          "definition": "In a finite AP, the first and last terms sum to a+l; every symmetric pair has the same sum.",
+          "details": [
+            "In a finite AP, the first and last terms sum to a+l; every symmetric pair has the same sum. There are n/2 pairs when n is even, and the equivalent formula also works when n is odd."
+          ]
+        },
+        {
+          "concept": "Choosing the formula",
+          "definition": "Use S_n=n/2(a+l) when the last term is known.",
+          "details": [
+            "Use S_n=n/2(a+l) when the last term is known. Use S_n=n/2[2a+(n-1)d] when the first term and common difference are known."
+          ]
+        },
+        {
+          "concept": "Contextual sums",
+          "definition": "For equally spaced quantities, identify the first value, final value, number of terms and common difference before substituting..",
+          "details": [
+            "For equally spaced quantities, identify the first value, final value, number of terms and common difference before substituting."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Finite AP sum using last term",
+          "formula": "S_n=n/2(a+l)",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Finite AP sum using common difference",
+          "formula": "S_n=n/2[2a+(n-1)d]",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Last term",
+          "formula": "l=a+(n-1)d",
+          "description": "Use with the stated conditions and variable definitions."
+        }
+      ],
+      "visual_aids": [
+        {
+          "type": "svg",
+          "title": "Sum of an Arithmetic Progression — visual guide",
+          "description": "Original schematic to support the lesson concept.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 180\" role=\"img\" aria-label=\"Sum of an Arithmetic Progression: conceptual illustration\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"164\" rx=\"12\" fill=\"#f5f7fb\" stroke=\"#718096\"/><text x=\"320\" y=\"42\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#172554\">Sum of an Arithmetic Progression</text><text x=\"320\" y=\"83\" text-anchor=\"middle\" font-size=\"18\" font-family=\"Arial\" fill=\"#1f2937\">Ap Sum</text><path d=\"M100 112 H540\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"370\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"480\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">1</text><text x=\"260\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">2</text><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">3</text><text x=\"480\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the sum of the first $10$ terms of the AP: $2, 5, 8, 11, \\dots$",
+          "solution_steps": [
+            "Step 1: Identify the variables: $a = 2$, $d = 3$, $n = 10$. The last term is unknown, so use Formula 2.",
+            "Step 2: Apply the formula: $S_{10} = \\frac{10}{2}[2(2) + (10 - 1)(3)]$.",
+            "Step 3: Simplify inside the brackets: $5 \\times [4 + (9)(3)]$.",
+            "Step 4: Continue simplifying: $5 \\times [4 + 27]$.",
+            "Step 5: Final calculation: $5 \\times 31 = 155$."
+          ],
+          "final_answer": "155"
+        },
+        {
+          "problem": "An auditorium has 18 rows. The first row has 20 seats and each next row has 2 more seats. Find the total number of seats.",
+          "solution_steps": [
+            "The row counts form an AP with a=20, d=2 and n=18",
+            "The last row has l=20+17(2)=54 seats",
+            "S_18=18/2(20+54)=9×74=666."
+          ],
+          "final_answer": "666 seats"
+        },
+        {
+          "problem": "Find the sum of all multiples of 7 from 7 to 140.",
+          "solution_steps": [
+            "This is an AP with a=7, l=140 and d=7",
+            "The number of terms is n=140/7=20",
+            "S_20=20/2(7+140)=10×147."
+          ],
+          "final_answer": "1470"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying the formula without checking if the sequence is truly an AP.",
+          "correction": "These sum formulas strictly and exclusively apply to Arithmetic Progressions. If the sequence is geometric or has no pattern, these formulas will yield wildly incorrect answers."
+        }
+      ],
+      "quick_summary": [
+        "Adding the terms of a sequence creates a 'Series'.",
+        "The sum of an AP is found by pairing the first and last terms and multiplying by half the total number of terms.",
+        "If the last term is unknown, substitute the $a_n$ formula in to get $S_n = \\frac{n}{2}[2a + (n-1)d]$.",
+        "Pairing method",
+        "Choosing the formula",
+        "Contextual sums"
+      ],
+      "registry_scope": "Approved lesson scope: Derivation and application of finite arithmetic progression sum formulas, including contextual and multi-step problems."
+    },
+    "hss_math_t05_st04": {
+      "id": "hss_math_t05_st04",
+      "title": "Geometric progressions",
+      "overview": "A geometric progression (GP) is a sequence in which each term after the first is obtained by multiplying the preceding term by a constant called the common ratio r. The ratio may be positive, negative or zero. A negative ratio produces alternating signs.",
+      "key_concepts": [
+        {
+          "concept": "The Common Ratio ($r$)",
+          "definition": "The multiplying factor.",
+          "details": [
+            "In a GP, you get to the next term by multiplying by a constant non-zero number.",
+            "It is calculated exactly as $r = \\frac{a_2}{a_1} = \\frac{a_3}{a_2}$.",
+            "If $r > 1$, the sequence grows. If $0 < r < 1$, it shrinks. If $r$ is negative, the sequence alternates between positive and negative numbers."
+          ]
+        },
+        {
+          "concept": "The General Term Formula",
+          "definition": "Exponential steps.",
+          "details": [
+            "To find the $n$th term, start at the first term ($a$) and multiply by the ratio $r$, exactly $(n-1)$ times.",
+            "Formula: $a_n = ar^{n-1}$."
+          ]
+        },
+        {
+          "concept": "Common ratio",
+          "definition": "For nonzero preceding terms, r=a_(n+1)/a_n.",
+          "details": [
+            "For nonzero preceding terms, r=a_(n+1)/a_n. Equivalently a_(n+1)=r a_n. The recurrence remains meaningful even when a term is zero."
+          ]
+        },
+        {
+          "concept": "Nth term",
+          "definition": "Repeated multiplication gives a_n=a r^(n-1).",
+          "details": [
+            "Repeated multiplication gives a_n=a r^(n-1). The exponent is n-1 because the first term has undergone zero multiplications."
+          ]
+        },
+        {
+          "concept": "Sign and magnitude",
+          "definition": "If r>1 and a>0, magnitudes grow; if 0<r<1, they decrease.",
+          "details": [
+            "If r>1 and a>0, magnitudes grow; if 0<r<1, they decrease. If r<0, signs alternate. If r=1, all terms equal a; if r=0, all terms after the first are zero."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Common ratio",
+          "formula": "r=a_(n+1)/a_n (when a_n≠0)",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Nth term of a GP",
+          "formula": "a_n=a r^(n-1)",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Three consecutive GP terms",
+          "formula": "b²=ac",
+          "description": "Use with the stated conditions and variable definitions."
+        }
+      ],
+      "visual_aids": [
+        {
+          "type": "svg",
+          "title": "Geometric Progressions (GP) — visual guide",
+          "description": "Original schematic to support the lesson concept.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 180\" role=\"img\" aria-label=\"Geometric Progressions (GP): conceptual illustration\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"164\" rx=\"12\" fill=\"#f5f7fb\" stroke=\"#718096\"/><text x=\"320\" y=\"42\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#172554\">Geometric Progressions (GP)</text><text x=\"320\" y=\"83\" text-anchor=\"middle\" font-size=\"18\" font-family=\"Arial\" fill=\"#1f2937\">Gp Steps</text><path d=\"M100 112 H540\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"370\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"480\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">1</text><text x=\"260\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">2</text><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">3</text><text x=\"480\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the 5th term of the geometric progression: $2, 6, 18, \\dots$",
+          "solution_steps": [
+            "Step 1: Identify the first term: $a = 2$.",
+            "Step 2: Calculate the common ratio: $r = \\frac{6}{2} = 3$.",
+            "Step 3: Set up the formula for $n=5$: $a_5 = ar^{5-1}$.",
+            "Step 4: Substitute the values: $a_5 = 2(3)^4$.",
+            "Step 5: Calculate the exponent first: $3^4 = 81$.",
+            "Step 6: Multiply: $2 \\times 81 = 162$."
+          ],
+          "final_answer": "162"
+        },
+        {
+          "problem": "A GP has third term 12 and fifth term 48. Find all possible real common ratios and the first term.",
+          "solution_steps": [
+            "a r²=12 and a r⁴=48",
+            "Dividing gives r²=4, so r=2 or r=-2",
+            "If r=2, a=12/4=3",
+            "If r=-2, a=3 as well."
+          ],
+          "final_answer": "r=2 or r=-2; first term a=3"
+        },
+        {
+          "problem": "Insert the missing term x so that 4, x, 36 are consecutive terms of a GP.",
+          "solution_steps": [
+            "For three consecutive GP terms, the square of the middle term equals the product of the outer terms: x²=4×36=144",
+            "Hence x=12 or x=-12."
+          ],
+          "final_answer": "x=12 or x=-12"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying $a$ and $r$ before applying the exponent.",
+          "correction": "In the formula $ar^{n-1}$, strict order of operations (BODMAS/PEMDAS) applies. You MUST evaluate $r^{n-1}$ completely before multiplying the result by $a$."
+        }
+      ],
+      "quick_summary": [
+        "A Geometric Progression (GP) progresses by multiplying a constant ratio $r$ each step.",
+        "The ratio is found by dividing a term by the term directly before it.",
+        "The value of any term is found using the exponential formula $a_n = ar^{n-1}$.",
+        "Common ratio",
+        "Nth term",
+        "Sign and magnitude"
+      ],
+      "registry_scope": "Approved lesson scope: General term, common ratio, positive and negative ratios, missing terms and advanced geometric progression problems."
+    },
+    "hss_math_t05_st05": {
+      "id": "hss_math_t05_st05",
+      "title": "Sum of a finite geometric progression",
+      "overview": "A finite GP sum is obtained by multiplying the sum by the common ratio and subtracting. The resulting expression is valid for r≠1; when r=1, all n terms equal a and the sum is na.",
+      "key_concepts": [
+        {
+          "concept": "The Sum Formulas",
+          "definition": "Bypassing manual addition.",
+          "details": [
+            "To find the sum of $n$ terms in a GP, use the formula: $S_n = \\frac{a(1-r^n)}{1-r}$.",
+            "Alternatively, to avoid negative numbers when $r > 1$, use the equivalent form: $S_n = \\frac{a(r^n-1)}{r-1}$."
+          ]
+        },
+        {
+          "concept": "Derivation Method",
+          "definition": "The subtraction trick.",
+          "details": [
+            "The formula is derived by writing the full sum $S_n$, multiplying the entire equation by $r$, and subtracting the new equation from the original. This elegantly cancels out all the middle terms, leaving only the first term and the newly created last term."
+          ]
+        },
+        {
+          "concept": "The Special Case ($r=1$)",
+          "definition": "Division by zero warning.",
+          "details": [
+            "If the common ratio $r = 1$, the formula breaks because the denominator becomes zero.",
+            "However, if $r = 1$, the sequence is just a constant number repeated (e.g., $5, 5, 5$). The sum is simply $n \\times a$."
+          ]
+        },
+        {
+          "concept": "Derivation by subtraction",
+          "definition": "Let S_n=a+ar+…+ar^(n-1).",
+          "details": [
+            "Let S_n=a+ar+…+ar^(n-1). Then rS_n=ar+…+ar^n. Subtracting cancels the common middle terms and leaves S_n(1-r)=a(1-r^n)."
+          ]
+        },
+        {
+          "concept": "Formula selection",
+          "definition": "The expression a(1-r^n)/(1-r) is convenient for r<1; a(r^n-1)/(r-1) is algebraically equivalent.",
+          "details": [
+            "The expression a(1-r^n)/(1-r) is convenient for r<1; a(r^n-1)/(r-1) is algebraically equivalent. Either works for any real r≠1."
+          ]
+        },
+        {
+          "concept": "Special case r=1",
+          "definition": "If r=1, the sequence is a,a,…,a, so S_n=na.",
+          "details": [
+            "If r=1, the sequence is a,a,…,a, so S_n=na. Do not substitute r=1 into a formula with denominator r-1."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Finite GP sum, r≠1",
+          "formula": "S_n=a(1-r^n)/(1-r)",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Equivalent finite GP sum",
+          "formula": "S_n=a(r^n-1)/(r-1)",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Special case r=1",
+          "formula": "S_n=na",
+          "description": "Use with the stated conditions and variable definitions."
+        }
+      ],
+      "visual_aids": [
+        {
+          "type": "svg",
+          "title": "Sum of a Finite Geometric Progression — visual guide",
+          "description": "Original schematic to support the lesson concept.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 180\" role=\"img\" aria-label=\"Sum of a Finite Geometric Progression: conceptual illustration\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"164\" rx=\"12\" fill=\"#f5f7fb\" stroke=\"#718096\"/><text x=\"320\" y=\"42\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#172554\">Sum of a Finite Geometric Progression</text><text x=\"320\" y=\"83\" text-anchor=\"middle\" font-size=\"18\" font-family=\"Arial\" fill=\"#1f2937\">Gp Sum</text><path d=\"M100 112 H540\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"370\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"480\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">1</text><text x=\"260\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">2</text><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">3</text><text x=\"480\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the sum of the first 5 terms of the GP: $2, 6, 18, 54, 162$.",
+          "solution_steps": [
+            "Step 1: Identify variables. $a = 2$, $n = 5$, and $r = \\frac{6}{2} = 3$.",
+            "Step 2: Since $r > 1$, use the alternative formula: $S_n = \\frac{a(r^n - 1)}{r - 1}$.",
+            "Step 3: Substitute the values: $S_5 = \\frac{2(3^5 - 1)}{3 - 1}$.",
+            "Step 4: Evaluate the exponent and denominator: $S_5 = \\frac{2(243 - 1)}{2}$.",
+            "Step 5: Cancel the $2$s from numerator and denominator, leaving $243 - 1$."
+          ],
+          "final_answer": "242"
+        },
+        {
+          "problem": "Find the sum 5+10+20+…+640.",
+          "solution_steps": [
+            "Here a=5 and r=2",
+            "Since 5×2^(n-1)=640, 2^(n-1)=128=2^7, so n=8",
+            "Then S_8=5(2^8-1)/(2-1)=5×255."
+          ],
+          "final_answer": "1275"
+        },
+        {
+          "problem": "A GP has first term 81, common ratio 1/3 and 5 terms. Find its sum.",
+          "solution_steps": [
+            "S_5=81[1-(1/3)^5]/[1-1/3]=81(242/243)(3/2)=121."
+          ],
+          "final_answer": "121"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating $1 - r^n$ as $(1 - r)^n$.",
+          "correction": "The exponent ONLY applies to the ratio $r$, not to the $1-r$ binomial. Evaluate $r^n$ first, then subtract it from $1$."
+        }
+      ],
+      "quick_summary": [
+        "A Finite Geometric Series is the sum of a limited number of terms in a GP.",
+        "The sum is calculated using $S_n = \\frac{a(1-r^n)}{1-r}$.",
+        "If $r=1$, the formula fails, and the sum is simply $n \\times a$.",
+        "Derivation by subtraction",
+        "Formula selection",
+        "Special case r=1"
+      ],
+      "registry_scope": "Approved lesson scope: Derivation and application of finite geometric progression sum formulas, including contextual and multi-step problems."
+    },
+    "hss_math_t05_st06": {
+      "id": "hss_math_t05_st06",
+      "title": "Infinite geometric series",
+      "overview": "An infinite real geometric series is the limit of its finite partial sums. It converges to a finite real sum exactly when the common ratio satisfies |r|<1. If |r|≥1, the terms do not approach zero and the series diverges.",
+      "key_concepts": [
+        {
+          "concept": "Convergence vs Divergence",
+          "definition": "To infinity or a wall?",
+          "details": [
+            "**Divergent Series:** If the ratio $|r| \\geq 1$, the terms stay the same size or grow forever. The sum explodes to infinity (or negative infinity).",
+            "**Convergent Series:** If the ratio is a fraction strictly between $-1$ and $1$ ($|r| < 1$), the terms shrink rapidly towards zero. As $n$ approaches infinity, the sum approaches a fixed, finite 'wall' or limit."
+          ]
+        },
+        {
+          "concept": "The Infinite Sum Formula ($S_\\infty$)",
+          "definition": "The limit.",
+          "details": [
+            "If $|r| < 1$, the $r^n$ part of the finite sum formula gradually approaches exactly $0$ as $n$ approaches infinity.",
+            "Substituting $0$ for $r^n$ simplifies the finite sum formula down to just $S_\\infty = \\frac{a}{1-r}$."
+          ]
+        },
+        {
+          "concept": "Partial Sums",
+          "definition": "Approaching the limit.",
+          "details": [
+            "A partial sum ($S_1, S_2, S_3 \\dots$) is the running total as you add terms. In a convergent series, plotting these partial sums reveals a curve that flattens out precisely at the $S_\\infty$ limit."
+          ]
+        },
+        {
+          "concept": "Partial sums and convergence",
+          "definition": "The nth partial sum is S_n=a(1-r^n)/(1-r), for r≠1.",
+          "details": [
+            "The nth partial sum is S_n=a(1-r^n)/(1-r), for r≠1. If |r|<1, r^n approaches 0 as n grows, so the partial sums approach a/(1-r)."
+          ]
+        },
+        {
+          "concept": "Convergence condition",
+          "definition": "The condition is strict: -1<r<1.",
+          "details": [
+            "The condition is strict: -1<r<1. At r=1 the terms remain constant; at r=-1 the partial sums oscillate; for |r|>1 the terms grow in magnitude."
+          ]
+        },
+        {
+          "concept": "Zero first term",
+          "definition": "If a=0, every term is zero and the series sums to zero regardless of r.",
+          "details": [
+            "If a=0, every term is zero and the series sums to zero regardless of r. The usual convergence criterion is stated for a nonzero first term."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sum to infinity",
+          "formula": "S∞=a/(1-r), valid only when |r|<1",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Convergence condition",
+          "formula": "|r|<1",
+          "description": "Use with the stated conditions and variable definitions."
+        }
+      ],
+      "visual_aids": [
+        {
+          "type": "svg",
+          "title": "Infinite Geometric Series — visual guide",
+          "description": "Original schematic to support the lesson concept.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 180\" role=\"img\" aria-label=\"Infinite Geometric Series: conceptual illustration\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"164\" rx=\"12\" fill=\"#f5f7fb\" stroke=\"#718096\"/><text x=\"320\" y=\"42\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#172554\">Infinite Geometric Series</text><text x=\"320\" y=\"83\" text-anchor=\"middle\" font-size=\"18\" font-family=\"Arial\" fill=\"#1f2937\">Infinite Gp</text><path d=\"M100 112 H540\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"370\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"480\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">1</text><text x=\"260\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">2</text><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">3</text><text x=\"480\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the sum of the infinite series $1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\dots$",
+          "solution_steps": [
+            "Step 1: Identify variables. $a = 1$. $r = \\frac{1/2}{1} = \\frac{1}{2}$.",
+            "Step 2: Check convergence. $|\\frac{1}{2}| < 1$, so it is convergent and has a finite sum.",
+            "Step 3: Apply the infinite sum formula: $S_\\infty = \\frac{a}{1-r}$.",
+            "Step 4: Substitute the values: $S_\\infty = \\frac{1}{1 - 1/2}$.",
+            "Step 5: Simplify: $S_\\infty = \\frac{1}{1/2} = 2$."
+          ],
+          "final_answer": "2"
+        },
+        {
+          "problem": "Determine whether 12-6+3-1.5+… converges, and find its sum.",
+          "solution_steps": [
+            "The first term is 12 and r=-1/2",
+            "Since |r|=1/2<1, the series converges",
+            "S∞=12/[1-(-1/2)]=12/(3/2)=8."
+          ],
+          "final_answer": "Convergent; sum = 8"
+        },
+        {
+          "problem": "Determine whether 3+6+12+24+… has a finite sum to infinity.",
+          "solution_steps": [
+            "Here r=2, so |r|>1",
+            "The terms do not approach zero and the partial sums increase without bound."
+          ],
+          "final_answer": "Divergent; no finite sum to infinity"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying the $S_\\infty$ formula to a sequence where $r = 2$.",
+          "correction": "If $r = 2$, the sum is $1 + 2 + 4 + 8 + \\dots$. This diverges to infinity. Using the formula would give $\\frac{1}{1-2} = -1$, which is completely nonsensical. ALWAYS check $|r| < 1$ first."
+        }
+      ],
+      "quick_summary": [
+        "An infinite geometric series continues forever.",
+        "It only has a finite, calculable sum if the terms are shrinking ($|r| < 1$).",
+        "The infinite sum limit is calculated simply as $S_\\infty = \\frac{a}{1-r}$.",
+        "Partial sums and convergence",
+        "Convergence condition",
+        "Zero first term"
+      ],
+      "registry_scope": "Approved lesson scope: Convergence of real geometric series; condition |r| < 1; sum to infinity; divergence when the convergence condition is not satisfied."
+    },
+    "hss_math_t05_st07": {
+      "id": "hss_math_t05_st07",
+      "title": "Arithmetic and geometric means",
+      "overview": "The arithmetic mean (AM) and geometric mean (GM) are two ways to represent a central value between positive quantities. For two positive numbers, AM is at least GM, with equality exactly when the numbers are equal.",
+      "key_concepts": [
+        {
+          "concept": "The Arithmetic Mean (AM)",
+          "definition": "The additive middle.",
+          "details": [
+            "The AM of two numbers $a$ and $b$ is the number that perfectly bridges them via addition.",
+            "Formula: $AM = \\frac{a+b}{2}$.",
+            "If you place the AM between $a$ and $b$, the three numbers form a perfect Arithmetic Progression."
+          ]
+        },
+        {
+          "concept": "The Geometric Mean (GM)",
+          "definition": "The multiplicative middle.",
+          "details": [
+            "The GM of two positive numbers $a$ and $b$ is the positive number that perfectly bridges them via multiplication.",
+            "Formula: $GM = \\sqrt{ab}$.",
+            "If you place the GM between $a$ and $b$, the three numbers form a perfect Geometric Progression."
+          ]
+        },
+        {
+          "concept": "The AM-GM Inequality",
+          "definition": "The hierarchy of means.",
+          "details": [
+            "For any two distinct positive numbers, the Arithmetic Mean is strictly greater than the Geometric Mean ($AM > GM$).",
+            "They are only exactly equal ($AM = GM$) if the two original numbers are identical ($a = b$)."
+          ]
+        },
+        {
+          "concept": "Arithmetic mean",
+          "definition": "For x and y, AM=(x+y)/2.",
+          "details": [
+            "For x and y, AM=(x+y)/2. It is the value that makes x, AM, y an AP."
+          ]
+        },
+        {
+          "concept": "Geometric mean",
+          "definition": "For positive x and y, GM=√(xy), the positive value that makes x, GM, y a GP..",
+          "details": [
+            "For positive x and y, GM=√(xy), the positive value that makes x, GM, y a GP."
+          ]
+        },
+        {
+          "concept": "AM–GM inequality",
+          "definition": "For x,y>0, (x+y)/2≥√(xy).",
+          "details": [
+            "For x,y>0, (x+y)/2≥√(xy). Squaring is valid because both sides are nonnegative; it reduces to (x-y)²≥0. Equality occurs iff x=y."
+          ]
+        },
+        {
+          "concept": "Scope",
+          "definition": "The standard real geometric mean formula and the stated inequality here are for positive quantities.",
+          "details": [
+            "The standard real geometric mean formula and the stated inequality here are for positive quantities. Do not apply the positive-number AM–GM statement unchanged to arbitrary negative values."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Arithmetic mean",
+          "formula": "AM=(x+y)/2",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Geometric mean",
+          "formula": "GM=√(xy), for x,y>0",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "AM–GM inequality",
+          "formula": "(x+y)/2≥√(xy), for x,y>0",
+          "description": "Use with the stated conditions and variable definitions."
+        }
+      ],
+      "visual_aids": [
+        {
+          "type": "svg",
+          "title": "Arithmetic and Geometric Means — visual guide",
+          "description": "Original schematic to support the lesson concept.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 180\" role=\"img\" aria-label=\"Arithmetic and Geometric Means: conceptual illustration\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"164\" rx=\"12\" fill=\"#f5f7fb\" stroke=\"#718096\"/><text x=\"320\" y=\"42\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#172554\">Arithmetic and Geometric Means</text><text x=\"320\" y=\"83\" text-anchor=\"middle\" font-size=\"18\" font-family=\"Arial\" fill=\"#1f2937\">Am Gm</text><path d=\"M100 112 H540\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"370\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"480\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">1</text><text x=\"260\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">2</text><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">3</text><text x=\"480\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the AM and GM of the numbers $4$ and $16$, and verify the AM-GM inequality.",
+          "solution_steps": [
+            "Step 1: Calculate the AM: $\\frac{4 + 16}{2} = \\frac{20}{2} = 10$.",
+            "Step 2: Check the AP: $4, 10, 16$. The common difference is $+6$.",
+            "Step 3: Calculate the GM: $\\sqrt{4 \\times 16} = \\sqrt{64} = 8$.",
+            "Step 4: Check the GP: $4, 8, 16$. The common ratio is $\\times 2$.",
+            "Step 5: Verify inequality: Is $AM > GM$? Yes, $10 > 8$."
+          ],
+          "final_answer": "AM = 10, GM = 8. (10 > 8 is True)"
+        },
+        {
+          "problem": "Find the AM and GM of 9 and 25, and compare them.",
+          "solution_steps": [
+            "AM=(9+25)/2=17",
+            "GM=√(9×25)=√225=15",
+            "Thus AM≥GM, with strict inequality because 9≠25."
+          ],
+          "final_answer": "AM=17; GM=15"
+        },
+        {
+          "problem": "Two positive numbers have AM 13 and GM 12. Find the numbers.",
+          "solution_steps": [
+            "Let them be x and y",
+            "Then x+y=26 and xy=144",
+            "They are roots of t²-26t+144=0=(t-18)(t-8)."
+          ],
+          "final_answer": "8 and 18"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to find the Geometric Mean of a positive and a negative number.",
+          "correction": "You cannot take the square root of a negative product in the real number system. The Geometric Mean is specifically defined for positive numbers."
+        }
+      ],
+      "quick_summary": [
+        "The Arithmetic Mean ($AM = \\frac{a+b}{2}$) creates a 3-term AP.",
+        "The Geometric Mean ($GM = \\sqrt{ab}$) creates a 3-term GP.",
+        "For any two different positive numbers, the AM is always larger than the GM.",
+        "Arithmetic mean",
+        "Geometric mean",
+        "AM–GM inequality",
+        "Scope"
+      ],
+      "registry_scope": "Approved lesson scope: Arithmetic and geometric means; their relationship; the AM–GM inequality for positive quantities and suitable extensions."
+    },
+    "hss_math_t05_st08": {
+      "id": "hss_math_t05_st08",
+      "title": "Inserting arithmetic and geometric means",
+      "overview": "Inserting means means placing one or more terms between two given endpoints so that the resulting sequence is an AP or GP. Count the intervals carefully: inserting m means creates m+1 equal steps between the endpoints.",
+      "key_concepts": [
+        {
+          "concept": "Total Term Count",
+          "definition": "The new sequence length.",
+          "details": [
+            "If you have two starting numbers $a$ and $b$, and you want to insert $k$ means between them, your final sequence will contain $(k + 2)$ total terms.",
+            "This makes $b$ the $(k+2)$th term of the new sequence."
+          ]
+        },
+        {
+          "concept": "Inserting Multiple AMs",
+          "definition": "Finding the new difference.",
+          "details": [
+            "To insert $k$ Arithmetic Means, you must first calculate the required common difference using the endpoints.",
+            "Since $b = a_n = a + (n-1)d$, and $n = k+2$, the formula for the difference becomes: $d = \\frac{b-a}{k+1}$."
+          ]
+        },
+        {
+          "concept": "Inserting Multiple GMs",
+          "definition": "Finding the new ratio.",
+          "details": [
+            "To insert $k$ Geometric Means, you calculate the required common ratio.",
+            "Since $b = a_n = ar^{n-1}$, and $n = k+2$, the formula for the ratio becomes: $r = \\left(\\frac{b}{a}\\right)^{\\frac{1}{k+1}}$."
+          ]
+        },
+        {
+          "concept": "Inserting arithmetic means",
+          "definition": "For endpoints A and B with m inserted means, there are m+1 equal differences.",
+          "details": [
+            "For endpoints A and B with m inserted means, there are m+1 equal differences. The common difference is (B-A)/(m+1)."
+          ]
+        },
+        {
+          "concept": "Inserting geometric means",
+          "definition": "For positive endpoints A and B, a positive-ratio GP with m inserted means has r=(B/A)^(1/(m+1)).",
+          "details": [
+            "For positive endpoints A and B, a positive-ratio GP with m inserted means has r=(B/A)^(1/(m+1)). Other real ratios may be possible in special cases; check parity and sign when considering negative ratios."
+          ]
+        },
+        {
+          "concept": "Checking the result",
+          "definition": "After inserting, verify every adjacent difference (AP) or ratio (GP) is constant.",
+          "details": [
+            "After inserting, verify every adjacent difference (AP) or ratio (GP) is constant. For a GP with three consecutive terms, middle²=product of endpoints."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Common difference with m inserted AMs",
+          "formula": "d=(B-A)/(m+1)",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Positive common ratio with m inserted GMs",
+          "formula": "r=(B/A)^(1/(m+1)), A,B>0",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Number of intervals",
+          "formula": "m+1",
+          "description": "Use with the stated conditions and variable definitions."
+        }
+      ],
+      "visual_aids": [
+        {
+          "type": "svg",
+          "title": "Inserting Arithmetic and Geometric Means — visual guide",
+          "description": "Original schematic to support the lesson concept.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 180\" role=\"img\" aria-label=\"Inserting Arithmetic and Geometric Means: conceptual illustration\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"164\" rx=\"12\" fill=\"#f5f7fb\" stroke=\"#718096\"/><text x=\"320\" y=\"42\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#172554\">Inserting Arithmetic and Geometric Means</text><text x=\"320\" y=\"83\" text-anchor=\"middle\" font-size=\"18\" font-family=\"Arial\" fill=\"#1f2937\">Insert Means</text><path d=\"M100 112 H540\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"370\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"480\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">1</text><text x=\"260\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">2</text><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">3</text><text x=\"480\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Insert $3$ arithmetic means between $5$ and $21$.",
+          "solution_steps": [
+            "Step 1: Identify variables. $a = 5$, $b = 21$, $k = 3$ (means to insert).",
+            "Step 2: Calculate the common difference: $d = \\frac{b-a}{k+1}$.",
+            "Step 3: Substitute: $d = \\frac{21 - 5}{3 + 1} = \\frac{16}{4} = 4$.",
+            "Step 4: Build the AP by repeatedly adding $4$ to the starting term $5$.",
+            "Step 5: The means are $5+4=9$, $9+4=13$, and $13+4=17$. (Adding $4$ again hits $21$, proving it is correct)."
+          ],
+          "final_answer": "9, 13, 17"
+        },
+        {
+          "problem": "Insert four arithmetic means between 3 and 28.",
+          "solution_steps": [
+            "There are 5 equal intervals, so d=(28-3)/5=5",
+            "The six-term AP is 3,8,13,18,23,28."
+          ],
+          "final_answer": "8, 13, 18, 23"
+        },
+        {
+          "problem": "Insert two positive geometric means between 8 and 216.",
+          "solution_steps": [
+            "There are 3 equal ratio steps",
+            "r=(216/8)^(1/3)=27^(1/3)=3",
+            "The sequence is 8,24,72,216."
+          ],
+          "final_answer": "24 and 72"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using $k$ instead of $k+1$ in the denominator.",
+          "correction": "When you insert 3 items between two endpoints, you actually create 4 'steps' (or intervals) to get from point A to point B. Therefore, you must divide the total distance by $k+1$."
+        }
+      ],
+      "quick_summary": [
+        "Inserting $k$ means creates a new sequence of length $k+2$.",
+        "For AP insertion, calculate the required step size: $d = \\frac{b-a}{k+1}$.",
+        "For GP insertion, calculate the required multiplying factor: $r = \\left(\\frac{b}{a}\\right)^{\\frac{1}{k+1}}$.",
+        "Inserting arithmetic means",
+        "Inserting geometric means",
+        "Checking the result"
+      ],
+      "registry_scope": "Approved lesson scope: Inserting one or more arithmetic or geometric means between given quantities and solving related problems."
+    },
+    "hss_math_t05_st10": {
+      "id": "hss_math_t05_st10",
+      "title": "Sigma notation",
+      "overview": "Special series are sums whose terms follow standard polynomial patterns. The most frequently used finite sums are the first n natural numbers, their squares and their cubes. These formulas can be evaluated directly and can also be proved using mathematical induction.",
+      "key_concepts": [
+        {
+          "concept": "The Sigma Symbol ($\\Sigma$)",
+          "definition": "The summation command.",
+          "details": [
+            "The Greek capital letter Sigma ($\\Sigma$) literally translates to 'sum up'.",
+            "It comes with a formula on the right, a starting index on the bottom (e.g., $k=1$), and a stopping index on top (e.g., $5$)."
+          ]
+        },
+        {
+          "concept": "Expanding the Notation",
+          "definition": "Unpacking the compact form.",
+          "details": [
+            "To expand $\\sum_{k=1}^{3} k^2$, you plug in $k=1$, $k=2$, and $k=3$ into the formula ($k^2$) and add the results together.",
+            "Expansion: $(1)^2 + (2)^2 + (3)^2 = 1 + 4 + 9 = 14$."
+          ]
+        },
+        {
+          "concept": "Sigma Properties",
+          "definition": "Algebraic shortcuts.",
+          "details": [
+            "**Addition:** $\\sum (a_k + b_k) = \\sum a_k + \\sum b_k$. You can split sums.",
+            "**Scalar Multiple:** $\\sum (c \\cdot a_k) = c \\sum a_k$. You can pull constants out to the front of the sigma symbol."
+          ]
+        },
+        {
+          "concept": "Natural-number sum",
+          "definition": "The sum 1+2+…+n is a triangular-number pattern and grows quadratically with n..",
+          "details": [
+            "The sum 1+2+…+n is a triangular-number pattern and grows quadratically with n."
+          ]
+        },
+        {
+          "concept": "Sum of squares",
+          "definition": "The sum 1²+2²+…+n² has a cubic expression in n.",
+          "details": [
+            "The sum 1²+2²+…+n² has a cubic expression in n. Each term is squared before adding."
+          ]
+        },
+        {
+          "concept": "Sum of cubes",
+          "definition": "The sum of cubes equals the square of the sum of the first n natural numbers..",
+          "details": [
+            "The sum of cubes equals the square of the sum of the first n natural numbers."
+          ]
+        },
+        {
+          "concept": "Polynomial-pattern sums",
+          "definition": "For sums involving expressions such as ak²+bk+c, use linearity to split the sum into known sums of squares, natural numbers and constants..",
+          "details": [
+            "For sums involving expressions such as ak²+bk+c, use linearity to split the sum into known sums of squares, natural numbers and constants."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sum of natural numbers",
+          "formula": "Σk=n(n+1)/2",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Sum of squares",
+          "formula": "Σk²=n(n+1)(2n+1)/6",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Sum of cubes",
+          "formula": "Σk³=[n(n+1)/2]²",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Constant sum",
+          "formula": "Σ_(k=1)^n c=nc",
+          "description": "Use with the stated conditions and variable definitions."
+        }
+      ],
+      "visual_aids": [
+        {
+          "type": "svg",
+          "title": "Sigma Notation — visual guide",
+          "description": "Original schematic to support the lesson concept.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 180\" role=\"img\" aria-label=\"Sigma Notation: conceptual illustration\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"164\" rx=\"12\" fill=\"#f5f7fb\" stroke=\"#718096\"/><text x=\"320\" y=\"42\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#172554\">Sigma Notation</text><text x=\"320\" y=\"83\" text-anchor=\"middle\" font-size=\"18\" font-family=\"Arial\" fill=\"#1f2937\">Special Series</text><path d=\"M100 112 H540\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"370\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"480\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">1</text><text x=\"260\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">2</text><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">3</text><text x=\"480\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Expand and evaluate $\\sum_{k=1}^{4} (2k)$.",
+          "solution_steps": [
+            "Step 1: Identify the lower limit ($1$) and upper limit ($4$).",
+            "Step 2: Plug $k=1$ into the formula: $2(1) = 2$.",
+            "Step 3: Plug $k=2$ into the formula: $2(2) = 4$.",
+            "Step 4: Plug $k=3$ into the formula: $2(3) = 6$.",
+            "Step 5: Plug $k=4$ into the formula: $2(4) = 8$.",
+            "Step 6: Add the results: $2 + 4 + 6 + 8 = 20$."
+          ],
+          "final_answer": "20"
+        },
+        {
+          "problem": "Find 1³+2³+…+10³.",
+          "solution_steps": [
+            "Use the sum-of-cubes identity: [10(11)/2]²=55²."
+          ],
+          "final_answer": "3025"
+        },
+        {
+          "problem": "Evaluate Σ_(k=1)^8 (2k²+3k-1).",
+          "solution_steps": [
+            "Split the sum: 2Σk²+3Σk-Σ1",
+            "Here Σk²=8×9×17/6=204, Σk=36, and Σ1=8",
+            "Thus 408+108-8=508."
+          ],
+          "final_answer": "508"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ignoring the starting index.",
+          "correction": "Sigma does not always start at $k=1$. If the bottom index says $k=3$, you must skip $1$ and $2$, and begin your first calculation by plugging in $3$."
+        }
+      ],
+      "quick_summary": [
+        "Sigma notation compactly represents the sum of a sequence.",
+        "The bottom limit tells you where to start counting, the top limit tells you where to stop.",
+        "You substitute each integer in that range into the formula and add them all together.",
+        "Natural-number sum",
+        "Sum of squares",
+        "Sum of cubes",
+        "Polynomial-pattern sums"
+      ],
+      "registry_scope": "Approved lesson scope: Summation notation, limits and indices; index manipulation; linearity properties; expressing and evaluating finite sums."
+    },
+    "hss_math_t05_st11": {
+      "id": "hss_math_t05_st11",
+      "title": "Mathematical induction",
+      "overview": "Sigma notation is a compact way to write a finite sum. The expression beneath the sigma gives the starting index, the expression above gives the ending index, and the summand is evaluated for each integer index in that range.",
+      "key_concepts": [
+        {
+          "concept": "The Base Case",
+          "definition": "The first domino.",
+          "details": [
+            "To prove a statement $P(n)$ is true for all positive integers, you must first prove it is true for the absolute lowest possible value (usually $n = 1$).",
+            "If the first domino doesn't fall, the chain reaction never starts."
+          ]
+        },
+        {
+          "concept": "The Induction Hypothesis",
+          "definition": "Assuming the middle.",
+          "details": [
+            "We temporarily *assume* that the statement is perfectly true for some random arbitrary integer $n = k$. We write this assumed equation out, as it will be used as a tool in the final step."
+          ]
+        },
+        {
+          "concept": "The Inductive Step",
+          "definition": "The domino collision.",
+          "details": [
+            "Using the equation from our assumed $k$ step, we must algebraically *prove* that the formula works for the very next number: $n = k + 1$.",
+            "If $k$ implies $k+1$, and we already proved $1$ works (Base Case), then $1$ implies $2$, $2$ implies $3$, and the chain continues to infinity."
+          ]
+        },
+        {
+          "concept": "Reading sigma notation",
+          "definition": "In Σ_(k=m)^n f(k), k is the index, m is the lower limit, n is the upper limit, and f(k) is the summand.",
+          "details": [
+            "In Σ_(k=m)^n f(k), k is the index, m is the lower limit, n is the upper limit, and f(k) is the summand. Both limits are included."
+          ]
+        },
+        {
+          "concept": "Linearity",
+          "definition": "A constant factor may be taken outside a sum, and the sum of two expressions is the sum of their separate sums, provided the index limits match..",
+          "details": [
+            "A constant factor may be taken outside a sum, and the sum of two expressions is the sum of their separate sums, provided the index limits match."
+          ]
+        },
+        {
+          "concept": "Index changes",
+          "definition": "Changing the index variable does not change the sum if the corresponding limits and summand are changed consistently.",
+          "details": [
+            "Changing the index variable does not change the sum if the corresponding limits and summand are changed consistently. Do not confuse the index with the number of terms."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Linearity",
+          "formula": "Σ(c f(k)+g(k))=cΣf(k)+Σg(k)",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Sum of first n natural numbers",
+          "formula": "Σ_(k=1)^n k=n(n+1)/2",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Sum of squares",
+          "formula": "Σ_(k=1)^n k²=n(n+1)(2n+1)/6",
+          "description": "Use with the stated conditions and variable definitions."
+        }
+      ],
+      "visual_aids": [
+        {
+          "type": "svg",
+          "title": "Mathematical Induction — visual guide",
+          "description": "Original schematic to support the lesson concept.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 180\" role=\"img\" aria-label=\"Mathematical Induction: conceptual illustration\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"164\" rx=\"12\" fill=\"#f5f7fb\" stroke=\"#718096\"/><text x=\"320\" y=\"42\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#172554\">Mathematical Induction</text><text x=\"320\" y=\"83\" text-anchor=\"middle\" font-size=\"18\" font-family=\"Arial\" fill=\"#1f2937\">Sigma</text><path d=\"M100 112 H540\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"370\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"480\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">1</text><text x=\"260\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">2</text><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">3</text><text x=\"480\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Set up the Base Case and the Induction Hypothesis to prove that $1 + 2 + \\dots + n = \\frac{n(n+1)}{2}$.",
+          "solution_steps": [
+            "Step 1: Write the Base Case. Test $n=1$. LHS = $1$. RHS = $\\frac{1(1+1)}{2} = \\frac{2}{2} = 1$. The base case is true.",
+            "Step 2: Write the Induction Hypothesis. Assume the formula is true for $n=k$.",
+            "Step 3: Write out the assumption equation: $1 + 2 + \\dots + k = \\frac{k(k+1)}{2}$.",
+            "Step 4: This equation will now be used to try and algebraically prove the statement for $n=k+1$."
+          ],
+          "final_answer": "Base Case holds (1=1). Assume P(k) is true."
+        },
+        {
+          "problem": "Prove by mathematical induction that $1+3+5+\\cdots+(2n-1)=n^2$ for all integers $n\\ge1$.",
+          "solution_steps": [
+            "Base case n=1: left side is 1 and right side is 1.",
+            "Assume the statement holds for n=k: the sum is k².",
+            "For n=k+1, add the next odd term 2k+1: $k^2+(2k+1)=(k+1)^2$.",
+            "Thus the statement holds for k+1, completing the induction."
+          ],
+          "final_answer": "The identity holds for every integer $n\\ge1$ by mathematical induction."
+        },
+        {
+          "problem": "Prove by mathematical induction that $2^n\\ge n+1$ for all integers $n\\ge0$.",
+          "solution_steps": [
+            "Base case n=0: $2^0=1\\ge1$.",
+            "Assume $2^k\\ge k+1$ for some k≥0.",
+            "Then $2^{k+1}=2\\cdot2^k\\ge2(k+1)\\ge k+2$ because k≥0.",
+            "Therefore the statement holds for k+1."
+          ],
+          "final_answer": "$2^n\\ge n+1$ for all integers $n\\ge0$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking the hypothesis is circular logic.",
+          "correction": "We aren't assuming the *entire* theorem is true. We are only assuming it works for *one specific arbitrary step* ($k$) in order to test if the mechanics carry over to the very next step ($k+1$). The Base case anchors the assumption to reality."
+        }
+      ],
+      "quick_summary": [
+        "Mathematical Induction proves infinite statements via a logical chain reaction.",
+        "Step 1 (Base Case): Prove it works for $n=1$.",
+        "Step 2 (Inductive Step): Assume it works for $n=k$, and use that assumption to algebraically prove it works for $n=k+1$.",
+        "Reading sigma notation",
+        "Linearity",
+        "Index changes"
+      ],
+      "registry_scope": "Approved lesson scope: Formal mathematical induction proofs involving divisibility, identities, inequalities and summation formulas. Approved Draft 88 level boundary: This is the active Higher Secondary treatment of mathematical induction. Develop the formal proof structure (base case, induction hypothesis, inductive step and conclusion) and apply it to divisibility, identities, inequalities and summation formulas. The former HS T06 induction record is retired and retained only as historical registry metadata; do not expose it in learner-facing content."
+    },
+    "hss_math_t05_st09": {
+      "id": "hss_math_t05_st09",
+      "title": "Special series",
+      "overview": "Mathematical induction is a proof method for statements indexed by positive integers. A proof has a base case, an induction hypothesis, an inductive step, and a conclusion. The induction hypothesis is an assumption made temporarily to prove the next case; it is not an independent proof of all cases.",
+      "key_concepts": [
+        {
+          "concept": "Sum of Natural Numbers ($\\sum n$)",
+          "definition": "The triangle numbers.",
+          "details": [
+            "Adding $1 + 2 + 3 + \\dots + n$.",
+            "Formula: $S_n = \\frac{n(n+1)}{2}$."
+          ]
+        },
+        {
+          "concept": "Sum of Squares ($\\sum n^2$)",
+          "definition": "The pyramid volume.",
+          "details": [
+            "Adding $1^2 + 2^2 + 3^2 + \\dots + n^2$.",
+            "Formula: $S_n = \\frac{n(n+1)(2n+1)}{6}$."
+          ]
+        },
+        {
+          "concept": "Sum of Cubes ($\\sum n^3$)",
+          "definition": "The squared sum.",
+          "details": [
+            "Adding $1^3 + 2^3 + 3^3 + \\dots + n^3$.",
+            "Formula: $S_n = \\left[\\frac{n(n+1)}{2}\\right]^2$. Notice this is just the square of the first natural numbers formula!"
+          ]
+        },
+        {
+          "concept": "Base case",
+          "definition": "Verify the statement for the first integer in its stated domain, often n=1..",
+          "details": [
+            "Verify the statement for the first integer in its stated domain, often n=1."
+          ]
+        },
+        {
+          "concept": "Induction hypothesis",
+          "definition": "Assume the statement P(k) is true for an arbitrary but fixed integer k in the domain..",
+          "details": [
+            "Assume the statement P(k) is true for an arbitrary but fixed integer k in the domain."
+          ]
+        },
+        {
+          "concept": "Inductive step",
+          "definition": "Using the hypothesis, prove P(k+1).",
+          "details": [
+            "Using the hypothesis, prove P(k+1). Algebraic transformations must be justified and must lead to exactly the statement for k+1."
+          ]
+        },
+        {
+          "concept": "Conclusion",
+          "definition": "Since the base case is true and P(k) implies P(k+1), the statement holds for every integer n in the specified range..",
+          "details": [
+            "Since the base case is true and P(k) implies P(k+1), the statement holds for every integer n in the specified range."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Induction structure",
+          "formula": "P(1) true; P(k)⇒P(k+1); therefore P(n) true for all n≥1",
+          "description": "Use with the stated conditions and variable definitions."
+        }
+      ],
+      "visual_aids": [
+        {
+          "type": "svg",
+          "title": "Special Series — visual guide",
+          "description": "Original schematic to support the lesson concept.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 180\" role=\"img\" aria-label=\"Special Series: conceptual illustration\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"164\" rx=\"12\" fill=\"#f5f7fb\" stroke=\"#718096\"/><text x=\"320\" y=\"42\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#172554\">Special Series</text><text x=\"320\" y=\"83\" text-anchor=\"middle\" font-size=\"18\" font-family=\"Arial\" fill=\"#1f2937\">Induction</text><path d=\"M100 112 H540\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"370\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"480\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">1</text><text x=\"260\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">2</text><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">3</text><text x=\"480\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the sum of the squares of the first $5$ natural numbers ($1^2 + 2^2 + 3^2 + 4^2 + 5^2$).",
+          "solution_steps": [
+            "Step 1: Identify the required formula: $\\frac{n(n+1)(2n+1)}{6}$.",
+            "Step 2: Substitute $n = 5$ into the formula.",
+            "Step 3: Calculate the brackets: $\\frac{5(5+1)(2(5)+1)}{6}$.",
+            "Step 4: Simplify: $\\frac{5(6)(11)}{6}$.",
+            "Step 5: Cancel the $6$s. Multiply $5 \\times 11 = 55$."
+          ],
+          "final_answer": "55"
+        },
+        {
+          "problem": "Find $1^3+2^3+3^3+4^3+5^3$.",
+          "solution_steps": [
+            "Use the sum-of-cubes identity $1^3+2^3+\\cdots+n^3=[n(n+1)/2]^2$.",
+            "Substitute $n=5$."
+          ],
+          "final_answer": "$[5(6)/2]^2=15^2=225$."
+        },
+        {
+          "problem": "Find the sum of the first 10 odd positive integers.",
+          "solution_steps": [
+            "Use the fact that the first n odd positive integers have sum n², or add the arithmetic sequence 1+3+…+19.",
+            "Substitute n=10."
+          ],
+          "final_answer": "$10^2=100$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing the sum of squares with the square of the sum.",
+          "correction": "$\\sum (k^2)$ is NOT equal to $(\\sum k)^2$. The sum of squares has the $/6$ formula. The square of the sum happens to match the formula for the sum of cubes."
+        }
+      ],
+      "quick_summary": [
+        "Special series formulas provide instant answers for summing consecutive integers, squares, and cubes.",
+        "Sum of Natural Numbers: $\\frac{n(n+1)}{2}$.",
+        "Sum of Squares: $\\frac{n(n+1)(2n+1)}{6}$.",
+        "Sum of Cubes: $\\left[\\frac{n(n+1)}{2}\\right]^2$.",
+        "Base case",
+        "Induction hypothesis",
+        "Inductive step",
+        "Conclusion"
+      ],
+      "registry_scope": "Approved lesson scope: Derivation and evaluation of sums of natural numbers, squares, cubes and selected polynomial-pattern sums."
+    },
+    "hss_math_t05_st12": {
+      "id": "hss_math_t05_st12",
+      "title": "Applications of sequences and series",
+      "overview": "Sequences and series model situations in which quantities change by a fixed amount or a fixed multiplicative factor at each equal time step. Use an AP for constant additive change and a GP for constant percentage or multiplicative change. State the time index clearly and distinguish the initial value from the value after the first change.",
+      "key_concepts": [
+        {
+          "concept": "AP Applications (Linear Change)",
+          "definition": "Fixed additions.",
+          "details": [
+            "Use Arithmetic Progressions when a real-world value changes by a **fixed, constant amount**.",
+            "Examples: Saving 50 units every month. Paying off a loan with fixed monthly installments. Stadium seating where each row adds 4 more seats."
+          ]
+        },
+        {
+          "concept": "GP Applications (Exponential Change)",
+          "definition": "Percentage compounding.",
+          "details": [
+            "Use Geometric Progressions when a real-world value changes by a **multiplicative factor or percentage**.",
+            "Examples: Compound interest (growing by $5\\%$ each year). Bacterial growth (doubling every hour). Asset depreciation (losing $10\\%$ of its current value every year)."
+          ]
+        },
+        {
+          "concept": "Infinite GP Applications",
+          "definition": "Converging physical limits.",
+          "details": [
+            "Use Infinite Geometric Series to calculate the total outcome of infinitely decaying actions.",
+            "Example: A ball is dropped from $10$ meters, and bounces back to $50\\%$ of its height every time. The total distance traveled before stopping completely can be modeled by an infinite GP sum ($S_\\infty$)."
+          ]
+        },
+        {
+          "concept": "Additive change and AP",
+          "definition": "If a quantity increases or decreases by the same absolute amount each period, its values form an AP..",
+          "details": [
+            "If a quantity increases or decreases by the same absolute amount each period, its values form an AP."
+          ]
+        },
+        {
+          "concept": "Multiplicative change and GP",
+          "definition": "If a quantity is multiplied by the same factor each period, its values form a GP.",
+          "details": [
+            "If a quantity is multiplied by the same factor each period, its values form a GP. A percentage increase p percent gives factor 1+p/100; a decrease p percent gives factor 1-p/100."
+          ]
+        },
+        {
+          "concept": "Repeated patterns",
+          "definition": "A repeated fixed contribution may form an AP in cumulative total when the same amount is added each period; a changing balance with a fixed percentage factor forms a GP.",
+          "details": [
+            "A repeated fixed contribution may form an AP in cumulative total when the same amount is added each period; a changing balance with a fixed percentage factor forms a GP. Detailed compound-interest, loan and investment-return calculations belong to the dedicated financial mathematics topics."
+          ]
+        },
+        {
+          "concept": "Model limitations",
+          "definition": "Check that the rate and time interval are constant.",
+          "details": [
+            "Check that the rate and time interval are constant. Real-world models may be approximate when rates, conditions or measurement intervals change."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Fixed additive change",
+          "formula": "u_n=u_0+nd",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Fixed multiplicative change",
+          "formula": "u_n=u_0 r^n",
+          "description": "Use with the stated conditions and variable definitions."
+        },
+        {
+          "name": "Percentage change factor",
+          "formula": "r=1+p/100 for increase; r=1-p/100 for decrease",
+          "description": "Use with the stated conditions and variable definitions."
+        }
+      ],
+      "visual_aids": [
+        {
+          "type": "svg",
+          "title": "Applications of Sequences and Series — visual guide",
+          "description": "Original schematic to support the lesson concept.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 180\" role=\"img\" aria-label=\"Applications of Sequences and Series: conceptual illustration\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"164\" rx=\"12\" fill=\"#f5f7fb\" stroke=\"#718096\"/><text x=\"320\" y=\"42\" text-anchor=\"middle\" font-size=\"20\" font-family=\"Arial\" fill=\"#172554\">Applications of Sequences and Series</text><text x=\"320\" y=\"83\" text-anchor=\"middle\" font-size=\"18\" font-family=\"Arial\" fill=\"#1f2937\">Models</text><path d=\"M100 112 H540\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"370\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"480\" cy=\"112\" r=\"7\" fill=\"#2563eb\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">1</text><text x=\"260\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">2</text><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">3</text><text x=\"480\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-family=\"Arial\" fill=\"#334155\">4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A car was bought for $20,000$. It depreciates by $10\\%$ of its value every year. Model its value after 3 years using a GP.",
+          "solution_steps": [
+            "Step 1: Determine the starting term. Year 0 value ($a$) is $20,000$.",
+            "Step 2: Determine the common ratio. Retaining $90\\%$ of value means multiplying by $0.90$. So, $r = 0.90$.",
+            "Step 3: Set up the GP term formula. We want the value at the end of Year 3, which is 3 steps away from the start: $a_4 = ar^3$.",
+            "Step 4: Substitute: $20000(0.90)^3$.",
+            "Step 5: Calculate: $20000 \\times 0.729 = 14580$."
+          ],
+          "final_answer": "14,580"
+        },
+        {
+          "problem": "A bacteria culture contains 500 bacteria and doubles every hour. Model the count after 6 hours.",
+          "solution_steps": [
+            "The initial count is 500 at time t=0 and the hourly multiplier is 2",
+            "Therefore N(t)=500×2^t, so N(6)=500×64."
+          ],
+          "final_answer": "32,000 bacteria"
+        },
+        {
+          "problem": "A water tank contains 1,200 L and loses 50 L each hour through a steady leak. How much remains after 9 hours?",
+          "solution_steps": [
+            "This is a constant additive decrease, so V(t)=1200-50t",
+            "At t=9, V=1200-450",
+            "The model remains meaningful only while the predicted volume is nonnegative."
+          ],
+          "final_answer": "750 L"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using an AP for a percentage increase.",
+          "correction": "If a salary increases by 500 units every year, that is an AP (adding 500). If it increases by $5\\%$ every year, that is a GP (multiplying by $1.05$). Never mix them up."
+        }
+      ],
+      "quick_summary": [
+        "Arithmetic Progressions model real-world scenarios where quantities change by a fixed, flat amount (like adding seats to a row).",
+        "Geometric Progressions model scenarios where quantities change by a percentage or multiplication factor (like compound interest).",
+        "Infinite Geometric Series can calculate the exact halting limits of decaying physical actions, like a bouncing ball.",
+        "Additive change and AP",
+        "Multiplicative change and GP",
+        "Repeated patterns",
+        "Model limitations"
+      ],
+      "registry_scope": "Approved lesson scope: Multi-step modelling involving growth, repeated change and patterns. Coordinate detailed compound interest, loans, investment returns and depreciation with the dedicated financial mathematics topics."
+    }
+  }
+}

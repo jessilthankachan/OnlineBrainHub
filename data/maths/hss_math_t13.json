@@ -1,0 +1,1027 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t13",
+  "topicTitle": "Applications of Derivatives",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t13_st01": {
+      "id": "hss_math_t13_st01",
+      "title": "Rate of change",
+      "overview": "The derivative is not just an abstract geometric slope—it is a physical 'Rate of Change'. This lesson bridges the gap between calculating a derivative and using it to measure real-world phenomena like velocity, population growth, and manufacturing costs.",
+      "key_concepts": [
+        {
+          "concept": "Interpreting the Derivative",
+          "definition": "The exact speed.",
+          "details": [
+            "If $y = f(x)$, then $\\frac{dy}{dx}$ mathematically measures exactly how fast $y$ is changing for every $1$-unit change in $x$.",
+            "A positive rate means the quantity is growing. A negative rate means the quantity is shrinking."
+          ]
+        },
+        {
+          "concept": "Physical Applications",
+          "definition": "Distance, Velocity, Acceleration.",
+          "details": [
+            "If $s(t)$ is a position function based on time:",
+            "Velocity $v(t) = s'(t)$ (the rate of change of position).",
+            "Acceleration $a(t) = v'(t) = s''(t)$ (the rate of change of velocity)."
+          ]
+        },
+        {
+          "concept": "Marginal Functions",
+          "definition": "Business calculus.",
+          "details": [
+            "In economics, the 'marginal' cost or revenue is simply the derivative of the total cost or revenue function. It represents the exact cost to produce *one more* item at a specific production level."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Velocity and Acceleration",
+          "equation": "$$ v(t) = \\frac{ds}{dt}, \\quad a(t) = \\frac{dv}{dt} $$",
+          "variables": {
+            "s": "Position",
+            "t": "Time"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t13_st01_visual_added01",
+          "title": "Rate of change — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration supporting Rate of change; not to scale.",
+          "alt_text": "Original schematic illustration supporting Rate of change; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Rate of change</title><desc>Original schematic illustration supporting Rate of change; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 185 Q110 25 285 165\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M65 150 L250 75\" stroke=\"#d97706\" stroke-width=\"2.5\"/><circle cx=\"65\" cy=\"150\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"250\" cy=\"75\" r=\"4\" fill=\"#2563eb\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Rate of change</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "The distance a particle travels is given by $s(t) = 3t^2 - 4t + 5$ meters. Find its velocity at $t=2$ seconds.",
+          "solution_steps": [
+            "Step 1: Recognize that velocity is the instantaneous rate of change of distance (the first derivative).",
+            "Step 2: Differentiate the position function: $v(t) = s'(t) = 6t - 4$.",
+            "Step 3: Substitute the specific time ($t=2$) into the velocity function.",
+            "Step 4: $v(2) = 6(2) - 4 = 12 - 4 = 8$."
+          ],
+          "final_answer": "8 m/s"
+        },
+        {
+          "problem": "A machine's total cost is $C(x)=500+12x+0.04x^2$ dollars. Find the marginal cost at a production level of 50 units and interpret it.",
+          "solution_steps": [
+            "Marginal cost is the derivative of total cost: $C'(x)=12+0.08x$.",
+            "At $x=50$, $C'(50)=12+0.08(50)=16$.",
+            "The derivative has units of dollars per unit produced."
+          ],
+          "final_answer": "Marginal cost at 50 units is approximately $16 per additional unit."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ignoring the units of the derivative.",
+          "correction": "The unit of $\\frac{dy}{dx}$ is always 'units of y PER units of x'. If $C$ is Cost in dollars and $x$ is items, the derivative is strictly 'dollars per item'. An answer without the correct composite unit is meaningless."
+        }
+      ],
+      "quick_summary": [
+        "A derivative physically represents an instantaneous rate of change.",
+        "Velocity is the derivative of position. Acceleration is the derivative of velocity.",
+        "In economics, marginal cost/revenue/profit is the derivative of the total function."
+      ],
+      "registry_scope": "Approved lesson-level scope: Apply derivatives to measure rates of change in physical, economic and other contexts. Distinguish average rate over an interval from instantaneous rate at a point, and interpret units and signs. Extend the introductory treatment in HSS T12.1."
+    },
+    "hss_math_t13_st02": {
+      "id": "hss_math_t13_st02",
+      "title": "Equations of tangents and normals",
+      "overview": "Every smooth curve has a straight line that perfectly mimics its slope at any given point (the tangent), and another line that pierces it perfectly perpendicularly (the normal). Calculus allows us to pinpoint the exact equations of these lines.",
+      "key_concepts": [
+        {
+          "concept": "The Tangent Line",
+          "definition": "The surface skimmer.",
+          "details": [
+            "The slope of the tangent line ($m_t$) at $x=a$ is exactly equal to the derivative evaluated at that point: $m_t = f'(a)$.",
+            "Once you have the slope $m_t$ and the contact point $(a, f(a))$, you use the point-slope formula $y - y_1 = m(x - x_1)$ to write the equation."
+          ]
+        },
+        {
+          "concept": "The Normal Line",
+          "definition": "The perpendicular piercer.",
+          "details": [
+            "The normal line passes through the exact same contact point, but it is perpendicular to the tangent.",
+            "Its slope is the negative reciprocal of the tangent slope: $m_n = -\\frac{1}{m_t}$."
+          ]
+        },
+        {
+          "concept": "Horizontal and Vertical Tangents",
+          "definition": "The extreme slopes.",
+          "details": [
+            "If $f'(a) = 0$, the tangent is perfectly horizontal, yielding the equation $y = f(a)$.",
+            "If $f'(a)$ is undefined (division by zero), the tangent is perfectly vertical, yielding the equation $x = a$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Tangent Line Slope",
+          "equation": "$$ m_t = f'(a) $$",
+          "variables": {}
+        },
+        {
+          "name": "Normal Line Slope",
+          "equation": "$$ m_n = -\\frac{1}{f'(a)} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t13_st02_visual_added01",
+          "title": "Equations of tangents and normals — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration supporting Equations of tangents and normals; not to scale.",
+          "alt_text": "Original schematic illustration supporting Equations of tangents and normals; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Equations of tangents and normals</title><desc>Original schematic illustration supporting Equations of tangents and normals; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 185 Q110 25 285 165\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M65 150 L250 75\" stroke=\"#d97706\" stroke-width=\"2.5\"/><circle cx=\"65\" cy=\"150\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"250\" cy=\"75\" r=\"4\" fill=\"#2563eb\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Equations of tangents and normals</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the equation of the tangent line to $y = x^2 - 3x + 4$ at the point where $x=1$.",
+          "solution_steps": [
+            "Step 1: Find the full y-coordinate of the contact point by plugging $x=1$ into the original function: $y = (1)^2 - 3(1) + 4 = 2$. The point is $(1,2)$.",
+            "Step 2: Find the derivative to get the general slope formula: $y' = 2x - 3$.",
+            "Step 3: Evaluate the derivative at $x=1$ to find the specific tangent slope: $m_t = 2(1) - 3 = -1$.",
+            "Step 4: Use point-slope form: $y - y_1 = m_t(x - x_1) \\Rightarrow y - 2 = -1(x - 1)$.",
+            "Step 5: Simplify: $y - 2 = -x + 1 \\Rightarrow y = -x + 3$."
+          ],
+          "final_answer": "y = -x + 3"
+        },
+        {
+          "problem": "Find the tangent and normal to $y=x^2$ at the point $(2,4)$.",
+          "solution_steps": [
+            "Differentiate: $dy/dx=2x$.",
+            "At $x=2$, the tangent gradient is $m_t=4$.",
+            "The tangent is $y-4=4(x-2)$, or $y=4x-4$.",
+            "The normal gradient is $m_n=-1/4$.",
+            "The normal is $y-4=-\\frac14(x-2)$."
+          ],
+          "final_answer": "Tangent: $y=4x-4$; normal: $y-4=-\\frac14(x-2)$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Leaving variables in the slope.",
+          "correction": "The equation of a tangent line is a straight line ($y = mx+c$). If your final equation is $y = (2x)x + 3$, you forgot to evaluate the derivative at a specific number point. The slope $m$ MUST be a constant."
+        }
+      ],
+      "quick_summary": [
+        "The derivative $f'(a)$ gives the exact slope of the tangent line at $x=a$.",
+        "The slope of the normal line is $-\\frac{1}{f'(a)}$.",
+        "Combine the slope with the contact point $(a, f(a))$ using $y - y_1 = m(x - x_1)$ to get the final line equation."
+      ],
+      "registry_scope": "Approved lesson-level scope: Find equations of tangents and normals at specified points on curves. Obtain gradients using explicit, implicit or parametric differentiation where appropriate, and handle cases where a tangent or normal is vertical or horizontal with care."
+    },
+    "hss_math_t13_st03": {
+      "id": "hss_math_t13_st03",
+      "title": "Increasing and decreasing functions",
+      "overview": "If you are blindfolded on a roller coaster, you know you are going uphill because gravity pulls you backward, and downhill because it throws you forward. The first derivative acts as this 'gravity sensor', telling us exactly when a mathematical function is climbing or falling.",
+      "key_concepts": [
+        {
+          "concept": "The First Derivative Test for Direction",
+          "definition": "Positive vs Negative.",
+          "details": [
+            "If $f'(x) > 0$ on an interval, the slope is positive. The function is **strictly increasing** (climbing upwards).",
+            "If $f'(x) < 0$ on an interval, the slope is negative. The function is **strictly decreasing** (falling downwards)."
+          ]
+        },
+        {
+          "concept": "Sign Charts",
+          "definition": "Mapping the hills and valleys.",
+          "details": [
+            "To map out a function, first find where it stops climbing or falling (where $f'(x) = 0$). These are the 'critical points'.",
+            "These points divide the number line into intervals. Pick a random test number in each interval, plug it into the derivative, and check if the result is positive ($+$) or negative ($-$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s03",
+          "title": "Increasing and Decreasing Slopes",
+          "type": "svg",
+          "caption": "A positive derivative means the curve is rising; a negative derivative means it is falling.",
+          "alt_text": "A curve rising, flattening at the top, and then falling. The rising section has a tangent line labeled 'f'(x) > 0 (Increasing)'. The falling section has a tangent line labeled 'f'(x) < 0 (Decreasing)'.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 50 200 Q 250 -50 450 200\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><path d=\"M 70 180 L 170 80\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\" marker-end=\"url(#arrow-green)\"/><text x=\"90\" y=\"110\" font-family=\"monospace\" font-size=\"16\" fill=\"#15803d\" font-weight=\"bold\">f'(x) &gt; 0</text><text x=\"90\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#15803d\">Increasing</text><path d=\"M 330 80 L 430 180\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\" marker-end=\"url(#arrow-red)\"/><text x=\"410\" y=\"110\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"end\" fill=\"#991b1b\" font-weight=\"bold\">f'(x) &lt; 0</text><text x=\"410\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"end\" fill=\"#991b1b\">Decreasing</text><defs><marker id=\"arrow-green\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#16a34a\"/></marker><marker id=\"arrow-red\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#ef4444\"/></marker></defs></svg>"
+        },
+        {
+          "visual_id": "hss_math_t13_st03_visual_added01",
+          "title": "Increasing and decreasing functions — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration supporting Increasing and decreasing functions; not to scale.",
+          "alt_text": "Original schematic illustration supporting Increasing and decreasing functions; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Increasing and decreasing functions</title><desc>Original schematic illustration supporting Increasing and decreasing functions; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"25\" y1=\"180\" x2=\"295\" y2=\"180\" stroke=\"#64748b\"/><line x1=\"45\" y1=\"210\" x2=\"45\" y2=\"25\" stroke=\"#64748b\"/><path d=\"M55 155 Q110 15 165 110 T285 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"165\" cy=\"110\" r=\"5\" fill=\"#d97706\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Increasing and decreasing functions</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the intervals where $f(x) = x^2 - 6x + 8$ is increasing and decreasing.",
+          "solution_steps": [
+            "Step 1: Find the derivative: $f'(x) = 2x - 6$.",
+            "Step 2: Find the critical point by setting it to zero: $2x - 6 = 0 \\Rightarrow x = 3$.",
+            "Step 3: Test the interval $(-\\infty, 3)$. Let $x = 0$. $f'(0) = 2(0) - 6 = -6$ (Negative $\\Rightarrow$ Decreasing).",
+            "Step 4: Test the interval $(3, \\infty)$. Let $x = 4$. $f'(4) = 2(4) - 6 = +2$ (Positive $\\Rightarrow$ Increasing)."
+          ],
+          "final_answer": "Decreasing on (-∞, 3), Increasing on (3, ∞)"
+        },
+        {
+          "problem": "Determine where $f(x)=x^3-3x$ is increasing and decreasing.",
+          "solution_steps": [
+            "Differentiate: $f'(x)=3x^2-3=3(x-1)(x+1)$.",
+            "The critical values divide the real line into $(-\\infty,-1)$, $(-1,1)$ and $(1,\\infty)$.",
+            "The derivative is positive on the first and third intervals and negative on the middle interval."
+          ],
+          "final_answer": "Increasing on $(-\\infty,-1)$ and $(1,\\infty)$; decreasing on $(-1,1)$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Plugging test numbers into the original function.",
+          "correction": "When creating a sign chart to find direction, you MUST plug your test numbers into the *derivative* $f'(x)$, not the original function $f(x)$. The derivative tells you the direction; the original function only tells you the height."
+        }
+      ],
+      "quick_summary": [
+        "A function is increasing where its derivative is positive ($f'(x) > 0$).",
+        "A function is decreasing where its derivative is negative ($f'(x) < 0$).",
+        "Critical points divide the graph into climbing and falling zones."
+      ],
+      "registry_scope": "Approved lesson-level scope: Determine intervals on which a function increases or decreases using the sign of its first derivative and relevant critical values. Connect derivative sign with the direction of change and interval-based reasoning."
+    },
+    "hss_math_t13_st04": {
+      "id": "hss_math_t13_st04",
+      "title": "Critical and stationary points",
+      "overview": "If you throw a ball in the air, there is one microscopic instant where it stops going up, but hasn't started falling down yet. Its speed is exactly zero. In calculus, identifying these zero-slope 'stationary points' is the key to finding the peaks and valleys of any mathematical curve.",
+      "key_concepts": [
+        {
+          "concept": "Critical Numbers",
+          "definition": "The points of interest.",
+          "details": [
+            "A critical number $c$ occurs anywhere the derivative equals exactly zero ($f'(c) = 0$) OR anywhere the derivative is undefined (e.g., a sharp corner or vertical tangent).",
+            "These are the only places on a continuous graph where the function is legally allowed to change direction from up to down, or down to up."
+          ]
+        },
+        {
+          "concept": "Stationary Points",
+          "definition": "The flat spots.",
+          "details": [
+            "A stationary point is a specific type of critical point where the derivative is EXACTLY zero ($f'(c) = 0$). The tangent line is perfectly horizontal.",
+            "All stationary points are critical points, but not all critical points are stationary points (e.g., sharp corners are critical but not stationary)."
+          ]
+        },
+        {
+          "concept": "The Illusion of Reversal",
+          "definition": "The pause.",
+          "details": [
+            "Just because the derivative hits zero doesn't guarantee the graph reverses direction. The graph might flatten out to zero and then keep climbing (a 'terrace' or 'point of inflection')."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Critical Number Condition",
+          "equation": "$$ f'(c) = 0 \\quad \\text{or} \\quad f'(c) \\text{ is undefined} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t13_st04_visual_added01",
+          "title": "Critical and stationary points — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration supporting Critical and stationary points; not to scale.",
+          "alt_text": "Original schematic illustration supporting Critical and stationary points; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Critical and stationary points</title><desc>Original schematic illustration supporting Critical and stationary points; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"25\" y1=\"180\" x2=\"295\" y2=\"180\" stroke=\"#64748b\"/><line x1=\"45\" y1=\"210\" x2=\"45\" y2=\"25\" stroke=\"#64748b\"/><path d=\"M55 155 Q110 15 165 110 T285 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"165\" cy=\"110\" r=\"5\" fill=\"#d97706\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Critical and stationary points</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the critical numbers of $f(x) = x^3 - 3x + 2$.",
+          "solution_steps": [
+            "Step 1: Calculate the first derivative: $f'(x) = 3x^2 - 3$.",
+            "Step 2: Check for undefined points. This is a polynomial, so the derivative is defined everywhere. No undefined critical points.",
+            "Step 3: Set the derivative equal to zero to find stationary points: $3x^2 - 3 = 0$.",
+            "Step 4: Factor: $3(x^2 - 1) = 0 \\Rightarrow 3(x - 1)(x + 1) = 0$.",
+            "Step 5: Solve for $x$. $x = 1$ and $x = -1$."
+          ],
+          "final_answer": "x = 1, x = -1"
+        },
+        {
+          "problem": "Find the critical numbers of $f(x)=x^{2/3}$ and explain why $x=0$ is critical.",
+          "solution_steps": [
+            "For $x\\ne0$, $f'(x)=\\frac23x^{-1/3}$.",
+            "At $x=0$, the function is defined but the derivative does not exist (the slope becomes unbounded).",
+            "A critical number is in the domain and has derivative zero or derivative undefined."
+          ],
+          "final_answer": "$x=0$ is a critical number because $f$ is defined there but $f'(0)$ does not exist."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming all critical points are peaks or valleys.",
+          "correction": "A critical point only identifies a spot where the slope is zero or undefined. You MUST test the regions around it (First Derivative Test) to prove whether it is actually a maximum, a minimum, or just a terrace."
+        }
+      ],
+      "quick_summary": [
+        "A Critical Number occurs where the derivative is zero or undefined.",
+        "A Stationary Point strictly occurs where the derivative is exactly zero (horizontal tangent).",
+        "Finding critical numbers is the mandatory first step before you can locate a function's maximum or minimum values."
+      ],
+      "registry_scope": "Approved lesson-level scope: Identify critical numbers and stationary points. Distinguish points where the derivative is zero from points where it does not exist, and consider domain endpoints when identifying candidates for absolute extrema."
+    },
+    "hss_math_t13_st05": {
+      "id": "hss_math_t13_st05",
+      "title": "Local maxima and minima",
+      "overview": "If a curve represents a mountain range, a local maximum is the peak of any single hill, while a local minimum is the bottom of any single valley. These points do not have to be the highest or lowest points overall; they only need to be the highest or lowest points compared to their immediate neighbors.",
+      "key_concepts": [
+        {
+          "concept": "Local Extrema",
+          "definition": "The neighborhood peak/valley.",
+          "details": [
+            "**Local Maximum:** A point $c$ where $f(c) \\geq f(x)$ for all $x$ in a small open interval around $c$.",
+            "**Local Minimum:** A point $c$ where $f(c) \\leq f(x)$ for all $x$ in a small open interval around $c$."
+          ]
+        },
+        {
+          "concept": "Absolute Extrema",
+          "definition": "The true king.",
+          "details": [
+            "An Absolute (or Global) Maximum is the single highest point on the ENTIRE graph.",
+            "An Absolute Minimum is the single lowest point on the ENTIRE graph.",
+            "Absolute extrema can occur at local peaks/valleys, OR they can occur at the very endpoints of a closed interval $[a,b]$."
+          ]
+        },
+        {
+          "concept": "The Critical Point Connection",
+          "definition": "The search grid.",
+          "details": [
+            "Fermat's Theorem: If a function has a local maximum or minimum at $c$, and if the derivative exists there, then $f'(c) = 0$.",
+            "Therefore, all local extrema MUST occur at critical numbers. However, not all critical numbers turn into local extrema (e.g., terraces)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t13_st05_visual_added01",
+          "title": "Local maxima and minima — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration supporting Local maxima and minima; not to scale.",
+          "alt_text": "Original schematic illustration supporting Local maxima and minima; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Local maxima and minima</title><desc>Original schematic illustration supporting Local maxima and minima; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"25\" y1=\"180\" x2=\"295\" y2=\"180\" stroke=\"#64748b\"/><line x1=\"45\" y1=\"210\" x2=\"45\" y2=\"25\" stroke=\"#64748b\"/><path d=\"M55 155 Q110 15 165 110 T285 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"165\" cy=\"110\" r=\"5\" fill=\"#d97706\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Local maxima and minima</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Explain the difference between finding a local minimum and finding an absolute minimum on the interval $[-2, 5]$.",
+          "solution_steps": [
+            "Step 1: To find a local minimum, you only check the critical numbers where $f'(x) = 0$ or is undefined.",
+            "Step 2: To find the absolute minimum, you must check the y-values of all critical numbers AND you must check the y-values of the endpoints ($x=-2$ and $x=5$).",
+            "Step 3: The absolute minimum is simply whichever of those combined y-values is the lowest."
+          ],
+          "final_answer": "Absolute extrema require checking the interval endpoints."
+        },
+        {
+          "problem": "For $f(x)=x^2-4x+1$, identify the local and absolute minimum on the real line.",
+          "solution_steps": [
+            "Complete the square: $f(x)=(x-2)^2-3$.",
+            "Since $(x-2)^2\\ge0$, the smallest value is $-3$.",
+            "It occurs at $x=2$, and the parabola opens upward.",
+            "This point is both a local and absolute minimum."
+          ],
+          "final_answer": "Minimum value $-3$ at $x=2$; it is both local and absolute."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming endpoints are local extrema.",
+          "correction": "By mathematical definition, a 'local' maximum/minimum requires an open interval *around* the point (you must be able to check the left AND right sides). Because endpoints only have one side, they cannot be 'local' extrema, even if they are the 'absolute' extrema."
+        }
+      ],
+      "quick_summary": [
+        "A Local Maximum/Minimum is the highest/lowest point compared to its immediate neighbors.",
+        "An Absolute Maximum/Minimum is the highest/lowest point on the entire specified graph.",
+        "All local extrema occur at critical points, which are found by setting the derivative to zero."
+      ],
+      "registry_scope": "Approved lesson-level scope: Explain and classify local maxima and minima, distinguishing local extrema from absolute (global) extrema. Use graphs and derivative information to interpret candidate points; systematic classification tests are covered in subtopics 6 and 7."
+    },
+    "hss_math_t13_st06": {
+      "id": "hss_math_t13_st06",
+      "title": "First-derivative test",
+      "overview": "When you find a stationary point where the slope is zero, how do you know if you are standing on a peak, a valley, or just a flat terrace? The First-Derivative Test provides a mathematical sign chart to track the exact direction the curve is bending.",
+      "key_concepts": [
+        {
+          "concept": "Testing the Maximum",
+          "definition": "Up then Down.",
+          "details": [
+            "If the derivative $f'(x)$ changes from Positive (increasing) to Negative (decreasing) as you cross the critical point, the graph formed a hill. The point is a **Local Maximum**."
+          ]
+        },
+        {
+          "concept": "Testing the Minimum",
+          "definition": "Down then Up.",
+          "details": [
+            "If the derivative $f'(x)$ changes from Negative (decreasing) to Positive (increasing) as you cross the critical point, the graph formed a valley. The point is a **Local Minimum**."
+          ]
+        },
+        {
+          "concept": "The Inconclusive Terrace",
+          "definition": "No change.",
+          "details": [
+            "If the derivative does not change sign (e.g., Positive to Positive), the graph flattened out but continued in the same direction. It is neither a maximum nor a minimum."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v13_s06",
+          "title": "First Derivative Test",
+          "type": "svg",
+          "caption": "The change in the sign of the derivative dictates the shape of the extremum.",
+          "alt_text": "Three illustrations. Left: A hill shape with a '+' arrow going up and a '-' arrow going down. Middle: A valley shape with a '-' arrow going down and a '+' arrow going up. Right: A cubic shape going up, flattening, and going up again with '+' arrows on both sides.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 30 150 Q 80 50 130 150\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><path d=\"M 30 130 L 60 70\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 100 70 L 130 130\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"80\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Local Max</text><path d=\"M 190 50 Q 240 150 290 50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><path d=\"M 190 70 L 220 130\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 260 130 L 290 70\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"240\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Local Min</text><path d=\"M 350 150 Q 400 100 450 50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><path d=\"M 350 140 L 380 115\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 420 85 L 450 60\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"400\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Neither (Terrace)</text><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"4\" markerHeight=\"4\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#0f172a\"/></marker></defs></svg>"
+        },
+        {
+          "visual_id": "hss_math_t13_st06_visual_added01",
+          "title": "First-derivative test — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration supporting First-derivative test; not to scale.",
+          "alt_text": "Original schematic illustration supporting First-derivative test; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>First-derivative test</title><desc>Original schematic illustration supporting First-derivative test; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"25\" y1=\"180\" x2=\"295\" y2=\"180\" stroke=\"#64748b\"/><line x1=\"45\" y1=\"210\" x2=\"45\" y2=\"25\" stroke=\"#64748b\"/><path d=\"M55 155 Q110 15 165 110 T285 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"165\" cy=\"110\" r=\"5\" fill=\"#d97706\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">First-derivative test</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Use the first derivative test to classify the critical point at $x=2$ for $f(x) = x^2 - 4x + 3$.",
+          "solution_steps": [
+            "Step 1: Calculate the derivative: $f'(x) = 2x - 4$.",
+            "Step 2: Confirm $x=2$ is a critical point: $f'(2) = 2(2) - 4 = 0$.",
+            "Step 3: Test a number strictly to the left of $2$ (e.g., $x=1$). $f'(1) = 2(1) - 4 = -2$ (Negative / Decreasing).",
+            "Step 4: Test a number strictly to the right of $2$ (e.g., $x=3$). $f'(3) = 2(3) - 4 = +2$ (Positive / Increasing).",
+            "Step 5: Since the derivative goes from Negative to Positive, the graph goes Down then Up."
+          ],
+          "final_answer": "Local Minimum"
+        },
+        {
+          "problem": "Use the first-derivative test to classify the stationary point of $f(x)=x^3-3x^2$ at $x=2$.",
+          "solution_steps": [
+            "Differentiate: $f'(x)=3x(x-2)$.",
+            "For $x$ just below 2 (with x positive), $f'(x)<0$.",
+            "For $x$ just above 2, $f'(x)>0$.",
+            "The derivative changes from negative to positive, so the function changes from decreasing to increasing."
+          ],
+          "final_answer": "A local minimum occurs at $x=2$, with $f(2)=-4$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Testing numbers inside the original function $f(x)$.",
+          "correction": "The test strictly requires you to plug your test numbers into the DERIVATIVE $f'(x)$. Only the derivative can tell you the positive or negative direction of the curve."
+        }
+      ],
+      "quick_summary": [
+        "The First-Derivative Test classifies a stationary point by checking the slope on either side.",
+        "$+$ to $-$ indicates a Local Maximum (hill).",
+        "$-$ to $+$ indicates a Local Minimum (valley).",
+        "No sign change indicates a terrace (neither)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Apply the first-derivative sign-change test around critical points to classify local maxima and minima. Include sign charts, intervals on either side of a candidate point and cases where the test is inconclusive."
+    },
+    "hss_math_t13_st07": {
+      "id": "hss_math_t13_st07",
+      "title": "Second-derivative test",
+      "overview": "If taking test points on either side of a stationary point takes too long, we can often just look at the 'acceleration' of the curve. The Second-Derivative Test instantly checks if the curve is physically bending upwards or downwards.",
+      "key_concepts": [
+        {
+          "concept": "Concavity",
+          "definition": "The bend.",
+          "details": [
+            "The second derivative $f''(x)$ measures 'concavity'—whether the graph looks like a cup holding water (Concave Up) or an umbrella shedding water (Concave Down).",
+            "If $f''(x) > 0$, the curve is bending Upwards.",
+            "If $f''(x) < 0$, the curve is bending Downwards."
+          ]
+        },
+        {
+          "concept": "The Second-Derivative Test",
+          "definition": "The quick check.",
+          "details": [
+            "Find a critical point $c$ where $f'(c) = 0$.",
+            "Plug $c$ directly into the second derivative $f''(c)$.",
+            "If $f''(c) > 0$ (Concave Up), the point is sitting at the bottom of a cup: **Local Minimum**.",
+            "If $f''(c) < 0$ (Concave Down), the point is sitting at the top of an umbrella: **Local Maximum**."
+          ]
+        },
+        {
+          "concept": "The Inconclusive Result",
+          "definition": "When it fails.",
+          "details": [
+            "If $f''(c) = 0$, the test completely fails. It provides no information. You MUST revert to using the First-Derivative sign chart test to find the answer."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t13_st07_visual_added01",
+          "title": "Second-derivative test — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration supporting Second-derivative test; not to scale.",
+          "alt_text": "Original schematic illustration supporting Second-derivative test; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Second-derivative test</title><desc>Original schematic illustration supporting Second-derivative test; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"25\" y1=\"180\" x2=\"295\" y2=\"180\" stroke=\"#64748b\"/><line x1=\"45\" y1=\"210\" x2=\"45\" y2=\"25\" stroke=\"#64748b\"/><path d=\"M55 155 Q110 15 165 110 T285 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"165\" cy=\"110\" r=\"5\" fill=\"#d97706\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Second-derivative test</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Use the second derivative test to classify the critical point at $x=2$ for $f(x) = x^2 - 4x + 3$.",
+          "solution_steps": [
+            "Step 1: The first derivative is $f'(x) = 2x - 4$.",
+            "Step 2: Differentiate again to find the second derivative: $f''(x) = 2$.",
+            "Step 3: Evaluate the second derivative at the critical point $x=2$. $f''(2) = 2$.",
+            "Step 4: Since $f''(2)$ is positive ($> 0$), the curve is 'Concave Up' (shaped like a cup) at that exact point."
+          ],
+          "final_answer": "Local Minimum"
+        },
+        {
+          "problem": "Use the second-derivative test to classify the stationary point of $f(x)=x^2+6x+1$.",
+          "solution_steps": [
+            "First derivative: $f'(x)=2x+6$.",
+            "Set $f'(x)=0$ to obtain $x=-3$.",
+            "Second derivative: $f''(x)=2>0$.",
+            "A positive second derivative at this stationary point indicates a local minimum."
+          ],
+          "final_answer": "Local minimum at $x=-3$, where $f(-3)=-8$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking positive second derivative means Maximum.",
+          "correction": "It is highly counterintuitive, but a Positive second derivative means the curve is bending UPWARDS, which forces the stationary point to be at the BOTTOM (a Minimum). Negative = Down = Maximum."
+        }
+      ],
+      "quick_summary": [
+        "The Second-Derivative Test classifies a stationary point by checking the concavity of the curve.",
+        "$f''(c) > 0$ means Concave Up $\\Rightarrow$ Local Minimum.",
+        "$f''(c) < 0$ means Concave Down $\\Rightarrow$ Local Maximum.",
+        "If $f''(c) = 0$, the test is inconclusive."
+      ],
+      "registry_scope": "Approved lesson-level scope: Apply the second-derivative test at suitable stationary points and explain its limitations, including inconclusive cases. Connect the sign of the second derivative with local concavity and classification of extrema."
+    },
+    "hss_math_t13_st08": {
+      "id": "hss_math_t13_st08",
+      "title": "Optimisation problems",
+      "overview": "Calculus isn't just about analyzing arbitrary curves; it is the ultimate tool for efficiency. Optimisation problems use maximums and minimums to find the absolute best way to build a box, maximize a profit, or minimize travel time.",
+      "key_concepts": [
+        {
+          "concept": "The Objective Function",
+          "definition": "What you want to maximize.",
+          "details": [
+            "The very first step is writing a mathematical equation for the exact thing you are trying to optimize (e.g., Area $A = x \\times y$, or Cost $C = 5x + 2y$)."
+          ]
+        },
+        {
+          "concept": "The Constraint Equation",
+          "definition": "The limit of reality.",
+          "details": [
+            "Real-world problems always have a limit (e.g., you only have 100 meters of fencing).",
+            "You write a constraint equation (e.g., Perimeter $= 2x + 2y = 100$) and use it to substitute away one of the variables in the objective function, so your objective function only has one variable."
+          ]
+        },
+        {
+          "concept": "Solving the Model",
+          "definition": "Applying calculus.",
+          "details": [
+            "Once the objective function has only one variable, you differentiate it, set the derivative to zero to find the critical points, and use the Second-Derivative Test to verify it is actually the maximum or minimum you desire."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t13_st08_visual_added01",
+          "title": "Optimisation problems — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration supporting Optimisation problems; not to scale.",
+          "alt_text": "Original schematic illustration supporting Optimisation problems; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Optimisation problems</title><desc>Original schematic illustration supporting Optimisation problems; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"45\" y=\"48\" width=\"230\" height=\"125\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"95\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">input → function</text><text x=\"160\" y=\"132\" text-anchor=\"middle\" font-size=\"15\" fill=\"#1e3a8a\">constraint / change</text><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Optimisation problems</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A farmer has 40 meters of fencing to enclose a rectangular garden against a river (no fence needed on the river side). Find the dimensions that maximize the area.",
+          "solution_steps": [
+            "Step 1: Set up objective function. Area $A = x \\times y$.",
+            "Step 2: Set up constraint equation. He only fences 3 sides: $2x + y = 40$.",
+            "Step 3: Isolate $y$ in the constraint: $y = 40 - 2x$.",
+            "Step 4: Substitute into the objective function: $A(x) = x(40 - 2x) = 40x - 2x^2$.",
+            "Step 5: Differentiate the area: $A'(x) = 40 - 4x$.",
+            "Step 6: Set to zero to find the peak: $40 - 4x = 0 \\Rightarrow 4x = 40 \\Rightarrow x = 10$.",
+            "Step 7: If $x = 10$, plug into the constraint to find $y$: $y = 40 - 2(10) = 20$."
+          ],
+          "final_answer": "Dimensions: 10m by 20m"
+        },
+        {
+          "problem": "A rectangle has perimeter 40 cm. Find the dimensions that maximise its area.",
+          "solution_steps": [
+            "Let the sides be $x$ and $y$. The constraint is $2x+2y=40$, so $y=20-x$.",
+            "Area: $A(x)=x(20-x)=20x-x^2$, with $0<x<20$.",
+            "Differentiate: $A'(x)=20-2x$. Set it to zero: $x=10$.",
+            "Then $y=10$. Since $A''(x)=-2<0$, the area is maximised."
+          ],
+          "final_answer": "A $10$ cm by $10$ cm square; maximum area $100$ cm$^2$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to differentiate an equation with two variables.",
+          "correction": "You cannot differentiate $A = xy$ to find a maximum until you eliminate either $x$ or $y$. The entire point of the constraint equation (like perimeter or cost limits) is to provide the algebraic key to substitute one variable out."
+        }
+      ],
+      "quick_summary": [
+        "Optimisation uses calculus to find the absolute most efficient real-world values.",
+        "Write an Objective Function (what you want to maximize/minimize) and a Constraint Equation (your real-world limits).",
+        "Substitute the constraint into the objective, differentiate it, and set it to zero."
+      ],
+      "registry_scope": "Approved lesson-level scope: Solve structured optimisation problems by defining variables, forming an objective function, identifying constraints and the feasible domain, and determining and checking optimal values. Include geometric and practical contexts; develop a systematic method beyond introductory examples in HSS T12.16."
+    },
+    "hss_math_t13_st09": {
+      "id": "hss_math_t13_st09",
+      "title": "Approximation using differentials",
+      "overview": "If a factory makes a tiny error when measuring the radius of a sphere, how much does that error inflate the final volume? Differentials allow us to instantly estimate how tiny changes in input ($x$) ripple through and affect the output ($y$).",
+      "key_concepts": [
+        {
+          "concept": "The Differential Formula",
+          "definition": "The linear estimate.",
+          "details": [
+            "We know the derivative is $\\frac{dy}{dx} = f'(x)$. By treating $dy$ and $dx$ as separate algebraic entities, we get the differential equation: $dy = f'(x) dx$.",
+            "Here, $dx$ (or $\\Delta x$) is the tiny change or error in the input, and $dy$ (or $\\Delta y$) is the estimated change or error in the output."
+          ]
+        },
+        {
+          "concept": "Calculating Errors",
+          "definition": "The ripple effect.",
+          "details": [
+            "To estimate the error in Volume ($dV$) caused by a small error in radius ($dr$), differentiate the volume formula and multiply by the radius error.",
+            "Example: $V = \\frac{4}{3}\\pi r^3 \\Rightarrow dV = 4\\pi r^2 dr$."
+          ]
+        },
+        {
+          "concept": "Relative and Percentage Error",
+          "definition": "Scaling the error.",
+          "details": [
+            "**Relative Error:** The estimated error divided by the total value ($\\frac{dy}{y}$).",
+            "**Percentage Error:** The relative error multiplied by $100$ ($\\frac{dy}{y} \\times 100\\%$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Differential Equation",
+          "equation": "$$ dy = f'(x) dx $$",
+          "variables": {
+            "dx": "Small change in input",
+            "dy": "Estimated change in output"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t13_st09_visual_added01",
+          "title": "Approximation using differentials — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration supporting Approximation using differentials; not to scale.",
+          "alt_text": "Original schematic illustration supporting Approximation using differentials; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Approximation using differentials</title><desc>Original schematic illustration supporting Approximation using differentials; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"45\" y=\"48\" width=\"230\" height=\"125\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"95\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">input → function</text><text x=\"160\" y=\"132\" text-anchor=\"middle\" font-size=\"15\" fill=\"#1e3a8a\">constraint / change</text><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Approximation using differentials</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "The radius of a circle is measured as $10$ cm, with a possible measurement error of $0.1$ cm. Estimate the maximum error in the calculated Area.",
+          "solution_steps": [
+            "Step 1: Write the Area formula: $A = \\pi r^2$.",
+            "Step 2: Differentiate to find the differential equation: $dA = 2\\pi r \\cdot dr$.",
+            "Step 3: Identify the knowns. The radius $r = 10$. The error $dr = 0.1$.",
+            "Step 4: Substitute the values: $dA = 2\\pi(10)(0.1)$.",
+            "Step 5: Calculate: $dA = 20\\pi(0.1) = 2\\pi$."
+          ],
+          "final_answer": "2π cm²"
+        },
+        {
+          "problem": "For $y=x^2$, use differentials to estimate the change in $y$ when $x$ increases from 3 to 3.02.",
+          "solution_steps": [
+            "Here $dy=f'(x)dx=2x\\,dx$.",
+            "At $x=3$, $dx=0.02$, so $dy=2(3)(0.02)=0.12$.",
+            "The exact finite change is $\\Delta y=(3.02)^2-3^2=0.1204$.",
+            "The differential is a close linear estimate, not exactly the finite change."
+          ],
+          "final_answer": "Estimated change $dy=0.12$; exact change $\\Delta y=0.1204$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating the estimate as the exact change.",
+          "correction": "The true change requires calculating $f(x+\\Delta x) - f(x)$, which can be computationally heavy. The differential $dy$ is a tangent-line *approximation*. It is incredibly close for tiny changes, but it is not 100% exact."
+        }
+      ],
+      "quick_summary": [
+        "Differentials estimate how small input changes affect the final output.",
+        "The formula is strictly $dy = f'(x) dx$.",
+        "It is heavily used in physics and manufacturing to calculate how measurement tolerances inflate into volume or area errors."
+      ],
+      "registry_scope": "Approved lesson-level scope: Use differentials to estimate small changes and approximate function values. Distinguish dy from the exact finite change Δy, discuss the conditions and limitations of the approximation, and include measurement and numerical-estimation contexts."
+    },
+    "hss_math_t13_st10": {
+      "id": "hss_math_t13_st10",
+      "title": "Related rates — introduction",
+      "overview": "If you blow air into a balloon, the radius, surface area, and volume are all expanding simultaneously. 'Related Rates' uses the Chain Rule to link these moving parts, allowing us to calculate how fast one thing changes based on another.",
+      "key_concepts": [
+        {
+          "concept": "Time as the Master Variable",
+          "definition": "The invisible clock.",
+          "details": [
+            "In related rates, almost everything is changing with respect to Time ($t$).",
+            "When you differentiate a variable like Volume ($V$), it doesn't just become $1$; it becomes $\\frac{dV}{dt}$ (the rate of change of volume over time)."
+          ]
+        },
+        {
+          "concept": "The Chain Rule Link",
+          "definition": "Connecting the rates.",
+          "details": [
+            "To connect two rates, differentiate the static geometric formula linking them with respect to $t$.",
+            "For example, if Area $A = \\pi r^2$, differentiating with respect to $t$ gives $\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt}$. This links the speed of area growth to the speed of radius growth."
+          ]
+        },
+        {
+          "concept": "Snapshot in Time",
+          "definition": "The final plug-in.",
+          "details": [
+            "You MUST differentiate the formula first, while all variables are still moving. Only AFTER differentiation can you plug in the specific 'snapshot' numbers for that exact instant in time."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t13_st10_visual_added01",
+          "title": "Related rates — introduction — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration supporting Related rates — introduction; not to scale.",
+          "alt_text": "Original schematic illustration supporting Related rates — introduction; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Related rates — introduction</title><desc>Original schematic illustration supporting Related rates — introduction; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"45\" y=\"48\" width=\"230\" height=\"125\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"95\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">input → function</text><text x=\"160\" y=\"132\" text-anchor=\"middle\" font-size=\"15\" fill=\"#1e3a8a\">constraint / change</text><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Related rates — introduction</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Air is pumped into a spherical balloon at a rate of $100$ cm$^3$/s. How fast is the radius increasing when the radius is exactly $5$ cm?",
+          "solution_steps": [
+            "Step 1: Identify the given rate. Volume is increasing, so $\\frac{dV}{dt} = 100$.",
+            "Step 2: Identify the required rate. We want the speed of the radius, $\\frac{dr}{dt}$.",
+            "Step 3: Write the static connecting formula: $V = \\frac{4}{3}\\pi r^3$.",
+            "Step 4: Differentiate both sides with respect to time $t$: $\\frac{dV}{dt} = 4\\pi r^2 \\frac{dr}{dt}$.",
+            "Step 5: Substitute the known 'snapshot' values ($r=5$ and $\\frac{dV}{dt}=100$): $100 = 4\\pi (5)^2 \\frac{dr}{dt}$.",
+            "Step 6: Solve for $\\frac{dr}{dt}$: $100 = 100\\pi \\frac{dr}{dt} \\Rightarrow \\frac{dr}{dt} = \\frac{1}{\\pi}$."
+          ],
+          "final_answer": "1/π cm/s"
+        },
+        {
+          "problem": "The radius of a circular ripple increases at $2$ cm/s. Find the rate of increase of its area when the radius is 5 cm.",
+          "solution_steps": [
+            "Area is $A=\\pi r^2$. Differentiate with respect to time: $dA/dt=2\\pi r\\,dr/dt$.",
+            "Substitute $r=5$ cm and $dr/dt=2$ cm/s.",
+            "Then $dA/dt=2\\pi(5)(2)=20\\pi$.",
+            "The units are square centimetres per second."
+          ],
+          "final_answer": "$20\\pi$ cm$^2$/s."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Plugging the snapshot numbers in before differentiating.",
+          "correction": "If you plug $r=5$ into $V = \\frac{4}{3}\\pi r^3$ immediately, you get a constant volume. The derivative of a constant is zero. You must differentiate the variables while they are still 'alive' as algebraic letters, and only substitute the specific numbers at the very end."
+        }
+      ],
+      "quick_summary": [
+        "Related Rates problems link the speeds of multiple moving parts.",
+        "Differentiate the geometric formula with respect to time ($t$), generating $\\frac{d}{dt}$ tags on every variable via the Chain Rule.",
+        "Substitute the specific numerical rates and dimensions only after differentiation is complete."
+      ],
+      "registry_scope": "Approved lesson-level scope: Introduce related rates by differentiating equations connecting interdependent quantities with respect to time. Include diagrams where useful, consistent units, signs, variable dependencies and interpretation of the resulting rate."
+    },
+    "hss_math_t13_st11": {
+      "id": "hss_math_t13_st11",
+      "title": "Curve sketching",
+      "overview": "Curve sketching is the ultimate synthesis of calculus and algebra. By finding a function's intercepts, asymptotes, and critical points, we can sketch a highly accurate blueprint of its graph without needing a calculator.",
+      "key_concepts": [
+        {
+          "concept": "The Algebra Phase",
+          "definition": "Roots and Boundaries.",
+          "details": [
+            "Find the y-intercept by setting $x=0$. Find the x-intercepts (roots) by setting $y=0$.",
+            "Find Vertical Asymptotes by checking for division by zero.",
+            "Find Horizontal Asymptotes by checking the Limits at Infinity."
+          ]
+        },
+        {
+          "concept": "The First Derivative Phase",
+          "definition": "Slopes and Peaks.",
+          "details": [
+            "Calculate $f'(x)$ and set it to zero to find Critical Points.",
+            "Use a sign chart to determine where the graph is Increasing ($+$) or Decreasing ($-$).",
+            "Identify Local Maxima and Minima."
+          ]
+        },
+        {
+          "concept": "The Second Derivative Phase",
+          "definition": "Bends and Inflections.",
+          "details": [
+            "Calculate $f''(x)$ and set it to zero to find Points of Inflection (where the curve physically changes its bending direction).",
+            "Use a sign chart to determine where the graph is Concave Up ($+$) or Concave Down ($-$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t13_st11_visual_added01",
+          "title": "Curve sketching — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration supporting Curve sketching; not to scale.",
+          "alt_text": "Original schematic illustration supporting Curve sketching; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Curve sketching</title><desc>Original schematic illustration supporting Curve sketching; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 185 Q110 25 285 165\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M65 150 L250 75\" stroke=\"#d97706\" stroke-width=\"2.5\"/><circle cx=\"65\" cy=\"150\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"250\" cy=\"75\" r=\"4\" fill=\"#2563eb\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Curve sketching</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the point of inflection for the curve $y = x^3 - 6x^2 + 9x$.",
+          "solution_steps": [
+            "Step 1: A point of inflection occurs where concavity changes, which requires setting the second derivative to zero.",
+            "Step 2: Find the first derivative: $y' = 3x^2 - 12x + 9$.",
+            "Step 3: Find the second derivative: $y'' = 6x - 12$.",
+            "Step 4: Set the second derivative to zero: $6x - 12 = 0 \\Rightarrow 6x = 12 \\Rightarrow x = 2$.",
+            "Step 5: Find the corresponding y-coordinate by plugging $x=2$ back into the ORIGINAL equation.",
+            "Step 6: $y = (2)^3 - 6(2)^2 + 9(2) = 8 - 24 + 18 = 2$."
+          ],
+          "final_answer": "Point of Inflection: (2, 2)"
+        },
+        {
+          "problem": "Analyse $f(x)=x^3-3x$ for stationary points, monotonicity, concavity and inflection.",
+          "solution_steps": [
+            "Domain is all real numbers; the function is odd and has intercepts $x=0,\\pm\\sqrt3$.",
+            "$f'(x)=3(x^2-1)$, so stationary points occur at $x=\\pm1$.",
+            "The function increases on $(-\\infty,-1)$ and $(1,\\infty)$ and decreases on $(-1,1)$.",
+            "$f(-1)=2$ is a local maximum and $f(1)=-2$ is a local minimum.",
+            "$f''(x)=6x$; concave down for $x<0$, concave up for $x>0$, with inflection at $(0,0)$."
+          ],
+          "final_answer": "Local maximum $(-1,2)$; local minimum $(1,-2)$; inflection point $(0,0)$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing a stationary point with an inflection point.",
+          "correction": "A stationary point ($f'=0$) is where the graph flattens into a peak or valley. An inflection point ($f''=0$) is where the curve changes its bend (e.g., from an umbrella shape to a cup shape). They are calculated using different derivatives."
+        }
+      ],
+      "quick_summary": [
+        "Curve sketching combines algebra (intercepts/asymptotes) with calculus (slopes/concavity).",
+        "The First Derivative reveals where the curve is climbing, falling, or peaking.",
+        "The Second Derivative reveals where the curve is bending up, bending down, or flipping its bend entirely (Inflection Point)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Analyse and sketch curves by integrating domain, intercepts, symmetry where relevant, critical points, monotonicity, local extrema, concavity, inflection points and asymptotic behaviour where applicable. Use earlier derivative tests without reteaching them."
+    },
+    "hss_math_t13_st12": {
+      "id": "hss_math_t13_st12",
+      "title": "Real-world applications of derivatives",
+      "overview": "This lesson integrates derivative methods in realistic, multi-step situations. A derivative describes an instantaneous rate of change and can be interpreted using context, units and sign. The examples connect motion, growth, cost, revenue and geometric change without replacing the dedicated optimisation and related-rates lessons.",
+      "key_concepts": [
+        {
+          "concept": "Interpreting a derivative in context",
+          "definition": "The derivative gives an instantaneous rate at a specified input value.",
+          "details": [
+            "Identify the dependent and independent variables before differentiating.",
+            "State the meaning and units of the derivative, such as metres per second, items per day or rupees per item.",
+            "A positive derivative indicates an increasing quantity at that instant; a negative derivative indicates a decreasing quantity."
+          ]
+        },
+        {
+          "concept": "Motion",
+          "definition": "Derivatives connect position, velocity and acceleration.",
+          "details": [
+            "If position is $s(t)$, velocity is $v(t)=s'(t)$.",
+            "Acceleration is $a(t)=v'(t)=s''(t)$.",
+            "The sign of velocity gives direction along the chosen coordinate axis; speed is the magnitude of velocity."
+          ]
+        },
+        {
+          "concept": "Growth and decay",
+          "definition": "A derivative measures the instantaneous growth or decline of a quantity.",
+          "details": [
+            "For a population or stored quantity $P(t)$, $P'(t)$ measures its instantaneous rate of change.",
+            "Interpret the sign and units in the context; a negative value indicates decline."
+          ]
+        },
+        {
+          "concept": "Economic interpretation",
+          "definition": "Derivatives describe marginal quantities and rates of change.",
+          "details": [
+            "For total cost $C(x)$, marginal cost is $C'(x)$.",
+            "For revenue $R(x)$, marginal revenue is $R'(x)$.",
+            "Use the units to explain the meaning; for example, rupees per additional item."
+          ]
+        },
+        {
+          "concept": "Geometric change",
+          "definition": "A derivative can describe how a geometric measurement changes with a changing input.",
+          "details": [
+            "Differentiate the relevant formula with respect to its independent variable.",
+            "Substitute the specified input value only after differentiating.",
+            "Related-rates problems requiring several interdependent time rates are treated in the dedicated related-rates subtopic."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Velocity and acceleration",
+          "equation": "$$v(t)=s'(t),\\qquad a(t)=s''(t)$$",
+          "variables": {
+            "s": "Position or displacement",
+            "t": "Time"
+          }
+        },
+        {
+          "name": "Marginal cost and revenue",
+          "equation": "$$MC=C'(x),\\qquad MR=R'(x)$$",
+          "variables": {
+            "C": "Total cost",
+            "R": "Total revenue",
+            "x": "Output or quantity"
+          }
+        },
+        {
+          "name": "Instantaneous percentage rate",
+          "equation": "$$\\text{Percentage rate} = \\frac{P'(t)}{P(t)}\\times100\\%$$",
+          "variables": {
+            "P": "Positive quantity depending on time",
+            "t": "Time"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t13_st12_visual_added01",
+          "title": "Real-world applications of derivatives — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration supporting Real-world applications of derivatives; not to scale.",
+          "alt_text": "Original schematic illustration supporting Real-world applications of derivatives; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Real-world applications of derivatives</title><desc>Original schematic illustration supporting Real-world applications of derivatives; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 170 Q110 30 160 115 T275 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M45 195 Q160 140 275 195\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2.5\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Real-world applications of derivatives</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A vehicle's position is $s(t)=t^3-6t^2+9t$ metres. Find its velocity and acceleration at $t=2$ s, and interpret the velocity sign.",
+          "solution_steps": [
+            "Differentiate position: $v(t)=s'(t)=3t^2-12t+9$.",
+            "At $t=2$, $v(2)=12-24+9=-3$ m/s.",
+            "Differentiate again: $a(t)=v'(t)=6t-12$.",
+            "At $t=2$, $a(2)=0$ m/s$^2$.",
+            "The negative velocity means the vehicle is moving in the negative direction of the chosen axis at that instant."
+          ],
+          "final_answer": "Velocity $=-3$ m/s; acceleration $=0$ m/s$^2$ at $t=2$ s."
+        },
+        {
+          "problem": "A company's revenue is $R(x)=100x-0.5x^2$ rupees, where $x$ is the number of items sold. Find the marginal revenue at $x=40$.",
+          "solution_steps": [
+            "Differentiate: $R'(x)=100-x$.",
+            "Substitute $x=40$: $R'(40)=60$.",
+            "The units are rupees per item, so this is the instantaneous rate at which revenue changes with sales near 40 items."
+          ],
+          "final_answer": "Marginal revenue at 40 items is 60 rupees per item."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Giving a numerical derivative without units or contextual interpretation.",
+          "correction": "State what the derivative measures and use dependent-variable units per independent-variable unit."
+        },
+        {
+          "mistake": "Confusing velocity with speed.",
+          "correction": "Velocity can be negative because it includes direction; speed is the non-negative magnitude of velocity."
+        },
+        {
+          "mistake": "Treating a marginal value as the exact change for one whole additional unit.",
+          "correction": "A derivative is an instantaneous rate; it approximates a small change and is not generally the exact finite change over a full unit."
+        }
+      ],
+      "quick_summary": [
+        "Use derivatives to interpret instantaneous rates in context.",
+        "Always identify variables, signs and units.",
+        "Motion, growth, economic quantities and geometric measurements provide common applications.",
+        "Keep systematic optimisation and related-rates procedures in their dedicated subtopics."
+      ],
+      "registry_scope": "Approved lesson-level scope: Integrate derivative methods in realistic, multi-step contexts such as motion, growth, cost, revenue, production and geometric change. Avoid duplicating the dedicated optimisation and related-rates methods in subtopics 8 and 10. Boundary: HSS T13 is the systematic treatment of derivative applications, including optimisation and curve analysis. HSS T12 remains focused on differentiation techniques and introductory examples."
+    }
+  }
+}

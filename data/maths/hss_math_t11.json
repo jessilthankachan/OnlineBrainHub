@@ -1,0 +1,965 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t11",
+  "topicTitle": "Limits and Continuity",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t11_st01": {
+      "id": "hss_math_t11_st01",
+      "title": "Concept of a limit",
+      "overview": "Calculus starts with the idea that we can analyze what a function is 'trying' to do, even if it is mathematically impossible to do it. A limit describes the exact destination a function is approaching, regardless of whether it actually arrives there.",
+      "key_concepts": [
+        {
+          "concept": "The Definition of a Limit",
+          "definition": "The journey, not the destination.",
+          "details": [
+            "A limit evaluates what output ($y$-value) a function approaches as the input ($x$-value) gets infinitely close to a specific number.",
+            "Notation: $\\lim_{x \\to a} f(x) = L$."
+          ]
+        },
+        {
+          "concept": "Limit vs Function Value",
+          "definition": "Missing the point.",
+          "details": [
+            "The value of the function is what exactly happens AT $x=a$. The limit is what happens NEAR $x=a$.",
+            "A function might have a hole (undefined) at $x=3$, but the limit as $x \\to 3$ can still exist if the surrounding points are clearly aiming at a specific target."
+          ]
+        },
+        {
+          "concept": "Direct Substitution",
+          "definition": "The easiest check.",
+          "details": [
+            "For simple, continuous polynomials, the limit is often exactly equal to the function value. You can find the limit simply by plugging $x=a$ directly into the formula."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Limit Notation",
+          "equation": "$$ \\lim_{x \\to a} f(x) = L $$",
+          "variables": {
+            "a": "The value x approaches",
+            "L": "The limit value"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t11_st01_visual01",
+          "title": "Limit approaching a point",
+          "type": "svg",
+          "caption": "The curve approaches the marked point as x approaches a.",
+          "alt_text": "The curve approaches the marked point as x approaches a.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"270\" viewBox=\"0 0 300 270\" role=\"img\" aria-label=\"Limit approaching a point\">\n<title>Limit approaching a point</title><desc>The curve approaches the marked point as x approaches a.</desc>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"268\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"30\" y1=\"130\" x2=\"270\" y2=\"130\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"245\"/><path d=\"M45 215 L255 45\"/><circle cx=\"150\" cy=\"130\" r=\"5\" fill=\"white\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M142 130 H158 M150 122 V138\" stroke=\"#2563eb\"/></g>\n<text x=\"150\" y=\"255\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">Limit approaching a point</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\lim_{x \\to 3} (2x + 4)$.",
+          "solution_steps": [
+            "Step 1: Check if direct substitution works (no division by zero or negative square roots).",
+            "Step 2: Substitute $x = 3$ directly into the expression.",
+            "Step 3: Calculate $2(3) + 4 = 6 + 4 = 10$."
+          ],
+          "final_answer": "10"
+        },
+        {
+          "problem": "Evaluate $\\lim_{x\\to 2}\\frac{x^2-4}{x-2}$, and compare the limit with the function's value at $x=2$.",
+          "solution_steps": [
+            "Direct substitution gives $0/0$, so it does not determine the limit.",
+            "Factor the numerator: $x^2-4=(x-2)(x+2)$.",
+            "For $x\\ne2$, the expression simplifies to $x+2$.",
+            "As $x$ approaches 2, $x+2$ approaches 4. The original expression is undefined at $x=2$."
+          ],
+          "final_answer": "The limit is $4$; the original function is undefined at $x=2$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming a limit doesn't exist just because the function is undefined.",
+          "correction": "If $f(x) = \\frac{x^2 - 4}{x - 2}$, plugging in $x=2$ gives an error (0/0). However, the limit as $x \\to 2$ is perfectly valid (it approaches $4$). The limit does not care about the error at the exact point."
+        }
+      ],
+      "quick_summary": [
+        "A limit describes the value a function gets closer and closer to as the input approaches a target.",
+        "The limit evaluates the surrounding trend, NOT the exact point itself.",
+        "Always try direct substitution first. If it yields a real number, that is your limit."
+      ],
+      "registry_scope": "Approved lesson-level scope: Explain the limit of a function as the input approaches a value using intuitive, graphical, numerical and symbolic interpretations. Distinguish the limiting value from the function's actual value at the point, and introduce limit notation and the conditions under which a limit is discussed."
+    },
+    "hss_math_t11_st02": {
+      "id": "hss_math_t11_st02",
+      "title": "Limits from graphs and tables",
+      "overview": "Before we calculate limits with heavy algebra, we can estimate them visually or numerically. By closing in from both the left side and the right side, we can confirm if a function is aiming at a unified target.",
+      "key_concepts": [
+        {
+          "concept": "One-Sided Limits",
+          "definition": "Left and Right approaches.",
+          "details": [
+            "**Left-Hand Limit ($x \\to a^-$):** Approaching $a$ using numbers slightly smaller than $a$ (e.g., $2.9, 2.99, 2.999$).",
+            "**Right-Hand Limit ($x \\to a^+$):** Approaching $a$ using numbers slightly larger than $a$ (e.g., $3.1, 3.01, 3.001$)."
+          ]
+        },
+        {
+          "concept": "The Two-Sided Agreement",
+          "definition": "The condition for existence.",
+          "details": [
+            "A standard, two-sided limit ONLY exists if both the left-hand limit and right-hand limit point to the exact same numerical destination.",
+            "If the left side approaches $4$ and the right side approaches $5$, the overall limit Does Not Exist (DNE)."
+          ]
+        },
+        {
+          "concept": "Graph Interpretation",
+          "definition": "Holes vs Points.",
+          "details": [
+            "**Open Circle:** The function is undefined at that specific point, but the limit can still target the open circle.",
+            "**Filled Point:** The actual value of the function. If it floats above an open circle, the limit still targets the open circle, not the floating point."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s02",
+          "title": "Limit vs Function Value",
+          "type": "svg",
+          "caption": "The limit points to the hole, regardless of where the actual function point is placed.",
+          "alt_text": "A graph of a line with an open hole at x=2, y=3. A filled black dot floats above the hole at x=2, y=5. Arrows from the left and right point toward the open hole at y=3.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 100 200 L 400 200\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 250 220 L 250 30\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 50 200 L 240 105\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><path d=\"M 260 95 L 450 0\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><circle cx=\"250\" cy=\"100\" r=\"6\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"250\" cy=\"50\" r=\"6\" fill=\"#ef4444\"/><text x=\"265\" y=\"55\" font-family=\"monospace\" font-size=\"14\" fill=\"#991b1b\" font-weight=\"bold\">f(2) = 5</text><text x=\"270\" y=\"115\" font-family=\"monospace\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">Lim = 3</text><text x=\"245\" y=\"215\" font-family=\"monospace\" font-size=\"14\" fill=\"#0f172a\">2</text><path d=\"M 150 150 L 230 110\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 350 50 L 270 90\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#16a34a\"/></marker></defs></svg>"
+        },
+        {
+          "visual_id": "hss_math_t11_st02_visual01",
+          "title": "Reading a limit from a graph",
+          "type": "svg",
+          "caption": "Both sides approach the same height, even if the point is open.",
+          "alt_text": "Both sides approach the same height, even if the point is open.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"270\" viewBox=\"0 0 300 270\" role=\"img\" aria-label=\"Reading a limit from a graph\">\n<title>Reading a limit from a graph</title><desc>Both sides approach the same height, even if the point is open.</desc>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"268\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"30\" y1=\"130\" x2=\"270\" y2=\"130\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"245\"/><path d=\"M45 205 Q105 145 145 105 M155 105 Q205 55 255 35\"/><circle cx=\"150\" cy=\"105\" r=\"6\" fill=\"white\" stroke=\"#2563eb\" stroke-width=\"2\"/></g>\n<text x=\"150\" y=\"255\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">Reading a limit from a graph</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Use a table to estimate $\\lim_{x \\to 2} (3x - 1)$.",
+          "solution_steps": [
+            "Step 1: Test values slightly less than 2 (Left side). $f(1.9) = 4.7$, $f(1.99) = 4.97$, $f(1.999) = 4.997$.",
+            "Step 2: Test values slightly greater than 2 (Right side). $f(2.1) = 5.3$, $f(2.01) = 5.03$, $f(2.001) = 5.003$.",
+            "Step 3: Observe the trend. The left side is aiming for $5$. The right side is aiming for $5$.",
+            "Step 4: Since both sides agree, the limit is $5$."
+          ],
+          "final_answer": "5"
+        },
+        {
+          "problem": "A table gives $f(1.9)=3.9$, $f(1.99)=3.99$, $f(2.01)=4.01$ and $f(2.1)=4.1$. Estimate $\\lim_{x\\to2}f(x)$.",
+          "solution_steps": [
+            "The inputs below 2 produce outputs close to 4 as they approach 2.",
+            "The inputs above 2 also produce outputs close to 4.",
+            "Both sides of the table support the same approaching value.",
+            "The table suggests a limit of 4; it does not by itself prove the limit."
+          ],
+          "final_answer": "Estimated limit: $4$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Only checking one side of the table or graph.",
+          "correction": "Many functions (like absolute value fractions or piece-wise functions) 'break' at a point and go in two completely different directions. If you only check the left side, you might wrongly assume the limit exists."
+        }
+      ],
+      "quick_summary": [
+        "A true limit only exists if the Left-Hand limit perfectly matches the Right-Hand limit.",
+        "Graphs use open circles for undefined points, but limits still track straight toward them.",
+        "Numerical tables prove limits by squeezing the input infinitely close to the target value from both sides."
+      ],
+      "registry_scope": "Approved lesson-level scope: Estimate and interpret limits from graphs and numerical tables, including cases where the function value at the target point differs from the limiting value or is undefined. Use left- and right-hand behaviour visually as preparation for formal one-sided limits."
+    },
+    "hss_math_t11_st03": {
+      "id": "hss_math_t11_st03",
+      "title": "Algebraic evaluation of limits",
+      "overview": "When direct substitution results in a mathematical error like $0/0$, the limit is hiding behind an algebraic mask. By factorising, cancelling, or rationalising, we can remove the 'problem' and reveal the true limit.",
+      "key_concepts": [
+        {
+          "concept": "The Indeterminate Form ($0/0$)",
+          "definition": "The masked limit.",
+          "details": [
+            "If direct substitution yields $\\frac{0}{0}$, it is called an indeterminate form.",
+            "This does NOT mean the limit is undefined. It means you must do algebraic work to simplify the expression before trying substitution again."
+          ]
+        },
+        {
+          "concept": "Factorisation Method",
+          "definition": "Canceling the hole.",
+          "details": [
+            "If the numerator and denominator are polynomials, factor both completely. The term causing the zero (e.g., $(x-3)$) will usually cancel out from the top and bottom.",
+            "Once canceled, you can safely apply direct substitution to what's left."
+          ]
+        },
+        {
+          "concept": "Rationalisation Method",
+          "definition": "Clearing square roots.",
+          "details": [
+            "If the expression contains square roots, multiply the top and bottom by the conjugate (e.g., multiply by $\\sqrt{x} + 2$ if the problem has $\\sqrt{x} - 2$).",
+            "This forces a 'difference of squares' that clears the root and usually creates a cancellable factor."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t11_st03_visual01",
+          "title": "Algebraic cancellation",
+          "type": "svg",
+          "caption": "Factorisation may remove a common factor near the target.",
+          "alt_text": "Factorisation may remove a common factor near the target.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"270\" viewBox=\"0 0 300 270\" role=\"img\" aria-label=\"Algebraic cancellation\">\n<title>Algebraic cancellation</title><desc>Factorisation may remove a common factor near the target.</desc>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"268\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\"><rect x=\"42\" y=\"48\" width=\"216\" height=\"145\" rx=\"10\" fill=\"none\" stroke=\"#64748b\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-size=\"19\">x² − a²</text><path d=\"M90 105 H210\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"18\">(x − a)(x + a)</text><text x=\"150\" y=\"174\" text-anchor=\"middle\" font-size=\"13\">cancel only when x ≠ a</text></g>\n<text x=\"150\" y=\"255\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">Algebraic cancellation</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\lim_{x \\to 3} \\frac{x^2 - 9}{x - 3}$.",
+          "solution_steps": [
+            "Step 1: Attempt direct substitution. $\\frac{3^2 - 9}{3 - 3} = \\frac{0}{0}$. Indeterminate form.",
+            "Step 2: Factorise the numerator. It is a difference of squares: $(x - 3)(x + 3)$.",
+            "Step 3: Rewrite the limit: $\\lim_{x \\to 3} \\frac{(x - 3)(x + 3)}{x - 3}$.",
+            "Step 4: Cancel the common $(x - 3)$ term from top and bottom. We are left with $\\lim_{x \\to 3} (x + 3)$.",
+            "Step 5: Apply direct substitution to the new expression: $3 + 3 = 6$."
+          ],
+          "final_answer": "6"
+        },
+        {
+          "problem": "Evaluate $\\lim_{x\\to 1}\\frac{x^2+x-2}{x-1}$.",
+          "solution_steps": [
+            "Direct substitution gives $0/0$, so factorise.",
+            "Write $x^2+x-2=(x+2)(x-1)$.",
+            "For $x\\ne1$, cancel the common factor to obtain $x+2$.",
+            "Now take the limit: $1+2=3$. The original expression excludes $x=1$."
+          ],
+          "final_answer": "$3$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Stopping at $0/0$ and answering 'Does Not Exist'.",
+          "correction": "$\\frac{0}{0}$ is an alarm bell telling you to factorise. A limit only strictly 'does not exist' algebraically if you get a non-zero number over zero (like $\\frac{5}{0}$), which indicates an infinite asymptote, not a hole."
+        }
+      ],
+      "quick_summary": [
+        "If substituting $x$ yields $0/0$, the limit is indeterminate and requires algebraic simplification.",
+        "Factorising polynomials allows you to cancel the 'problem' term.",
+        "Rationalising expressions with conjugates allows you to clear square roots causing $0/0$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Evaluate limits by direct substitution where valid, factorisation, algebraic simplification and rationalisation. State relevant domain restrictions and distinguish the simplified expression from the original function's domain."
+    },
+    "hss_math_t11_st04": {
+      "id": "hss_math_t11_st04",
+      "title": "Standard limits",
+      "overview": "Some limits are too complex to solve with basic algebra. To deal with these, mathematicians derived several 'Standard Limit' formulas. Memorizing these acts as a master key for solving advanced trigonometric and exponential limits instantly.",
+      "key_concepts": [
+        {
+          "concept": "The Trigonometric Standard Limit",
+          "definition": "The Sine ratio.",
+          "details": [
+            "$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.",
+            "This only works if $x$ is measured strictly in RADIANS.",
+            "It also means that for very small angles near zero, $\\sin(x)$ is practically equal to $x$ itself."
+          ]
+        },
+        {
+          "concept": "The Matching Principle",
+          "definition": "Balancing the argument.",
+          "details": [
+            "To use the formula $\\lim_{x \\to 0} \\frac{\\sin(kx)}{kx} = 1$, the variable inside the sine MUST perfectly match the variable in the denominator.",
+            "If you have $\\frac{\\sin(5x)}{x}$, you must multiply the top and bottom by $5$ to force the denominator to match before evaluating."
+          ]
+        },
+        {
+          "concept": "The Algebraic Power Limit",
+          "definition": "The variable base.",
+          "details": [
+            "$\\lim_{x \\to a} \\frac{x^n - a^n}{x - a} = n a^{n-1}$.",
+            "This bypasses having to do massive polynomial divisions for high powers."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Standard Sine Limit",
+          "equation": "$$ \\lim_{x \\to 0} \\frac{\\sin x}{x} = 1 $$",
+          "variables": {
+            "x": "Angle in radians"
+          }
+        },
+        {
+          "name": "Standard Power Limit",
+          "equation": "$$ \\lim_{x \\to a} \\frac{x^n - a^n}{x - a} = n a^{n-1} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t11_st04_visual01",
+          "title": "Standard trigonometric limit",
+          "type": "svg",
+          "caption": "The standard sine limit assumes angles are measured in radians.",
+          "alt_text": "The standard sine limit assumes angles are measured in radians.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"270\" viewBox=\"0 0 300 270\" role=\"img\" aria-label=\"Standard trigonometric limit\">\n<title>Standard trigonometric limit</title><desc>The standard sine limit assumes angles are measured in radians.</desc>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"268\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"30\" y1=\"130\" x2=\"270\" y2=\"130\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"245\"/><path d=\"M35 130 Q75 30 115 70 T195 190 T265 130\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"205\" y=\"42\" font-size=\"13\">sin x</text></g>\n<text x=\"150\" y=\"255\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">Standard trigonometric limit</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\lim_{x \\to 0} \\frac{\\sin 5x}{x}$.",
+          "solution_steps": [
+            "Step 1: Recognize this is close to the standard form $\\frac{\\sin u}{u}$, but the denominator ($x$) does not match the internal argument ($5x$).",
+            "Step 2: Multiply the numerator and denominator by $5$ to force a match: $\\lim_{x \\to 0} \\frac{5 \\sin 5x}{5x}$.",
+            "Step 3: Pull the constant $5$ out to the front: $5 \\times \\lim_{x \\to 0} \\frac{\\sin 5x}{5x}$.",
+            "Step 4: The limit block $\\frac{\\sin 5x}{5x}$ evaluates perfectly to $1$ via the standard formula.",
+            "Step 5: Multiply the constant: $5 \\times 1 = 5$."
+          ],
+          "final_answer": "5"
+        },
+        {
+          "problem": "Evaluate $\\lim_{x\\to0}\\frac{\\sin(5x)}{2x}$, with angles measured in radians.",
+          "solution_steps": [
+            "Rewrite the expression as $\\frac{5}{2}\\cdot\\frac{\\sin(5x)}{5x}$.",
+            "As $x\\to0$, the quantity $5x\\to0$.",
+            "Use the standard limit $\\lim_{u\\to0}\\frac{\\sin u}{u}=1$.",
+            "Multiply by the constant factor $5/2$."
+          ],
+          "final_answer": "$\\frac{5}{2}$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Pulling coefficients out of the sine function.",
+          "correction": "$\\sin(5x)$ is NOT equal to $5 \\sin(x)$. You cannot pull the $5$ out to cancel it with the denominator. You must manipulate the denominator to match the sine's internal argument."
+        }
+      ],
+      "quick_summary": [
+        "Standard limits are pre-proven formulas that bypass complex calculus proofs.",
+        "The most critical formula is $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$ (requires radians).",
+        "To use standard limits, use algebra to force the expression to perfectly match the strict layout of the formula."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop and apply standard limits, including important trigonometric limits and suitable exponential and logarithmic limits. State conditions for use and use radians in trigonometric limit results. These limits support derivative definitions and derivations in HSS T12."
+    },
+    "hss_math_t11_st05": {
+      "id": "hss_math_t11_st05",
+      "title": "One-sided limits",
+      "overview": "Some functions behave wildly differently depending on which direction you approach them from. One-sided limits allow us to study the left side and right side of a 'broken' function independently.",
+      "key_concepts": [
+        {
+          "concept": "Left-Hand Limit ($x \\to a^-$)",
+          "definition": "Approaching from below.",
+          "details": [
+            "We examine the function's behavior as $x$ gets closer to $a$ using only numbers smaller than $a$ (coming from the negative direction).",
+            "Notation: $\\lim_{x \\to a^-} f(x)$."
+          ]
+        },
+        {
+          "concept": "Right-Hand Limit ($x \\to a^+$)",
+          "definition": "Approaching from above.",
+          "details": [
+            "We examine the function's behavior as $x$ gets closer to $a$ using only numbers larger than $a$ (coming from the positive direction).",
+            "Notation: $\\lim_{x \\to a^+} f(x)$."
+          ]
+        },
+        {
+          "concept": "Piecewise Functions",
+          "definition": "The fractured graph.",
+          "details": [
+            "One-sided limits are critical for piecewise functions (functions that have different formulas for different ranges of $x$). You must evaluate the left limit using the formula for $x < a$ and the right limit using the formula for $x > a$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t11_st05_visual01",
+          "title": "Left- and right-hand limits",
+          "type": "svg",
+          "caption": "Compare the values approached from the left and from the right.",
+          "alt_text": "Compare the values approached from the left and from the right.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"270\" viewBox=\"0 0 300 270\" role=\"img\" aria-label=\"Left- and right-hand limits\">\n<title>Left- and right-hand limits</title><desc>Compare the values approached from the left and from the right.</desc>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"268\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"30\" y1=\"130\" x2=\"270\" y2=\"130\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"245\"/><path d=\"M45 185 H145 M155 65 H255\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"185\" r=\"5\" fill=\"white\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"65\" r=\"5\" fill=\"white\" stroke=\"#2563eb\" stroke-width=\"2\"/></g>\n<text x=\"150\" y=\"255\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">Left- and right-hand limits</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $f(x) = x+1$ for $x < 2$ and $f(x) = x+4$ for $x > 2$, find the left and right hand limits at $x=2$.",
+          "solution_steps": [
+            "Step 1: Calculate the left-hand limit ($x \\to 2^-$). Since $x < 2$, we use the formula $x+1$.",
+            "Step 2: Substitute $x=2$ into $x+1$: $2 + 1 = 3$. The left limit is $3$.",
+            "Step 3: Calculate the right-hand limit ($x \\to 2^+$). Since $x > 2$, we use the formula $x+4$.",
+            "Step 4: Substitute $x=2$ into $x+4$: $2 + 4 = 6$. The right limit is $6$."
+          ],
+          "final_answer": "Left limit = 3, Right limit = 6"
+        },
+        {
+          "problem": "For $f(x)=\\frac{|x|}{x}$ when $x\\ne0$, determine the left-hand and right-hand limits at 0.",
+          "solution_steps": [
+            "For $x<0$, $|x|=-x$, so $f(x)=-1$. Thus the left-hand limit is $-1$.",
+            "For $x>0$, $|x|=x$, so $f(x)=1$. Thus the right-hand limit is $1$.",
+            "The one-sided limits are unequal, so the two-sided limit does not exist."
+          ],
+          "final_answer": "$\\lim_{x\\to0^-}f(x)=-1$, $\\lim_{x\\to0^+}f(x)=1$; the two-sided limit does not exist."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $x \\to 3^-$ means plugging in $-3$.",
+          "correction": "The superscript minus sign does NOT make the number negative. $x \\to 3^-$ means you are approaching positive $3$ from the left side (like $2.9, 2.99$). It has nothing to do with $-3$."
+        }
+      ],
+      "quick_summary": [
+        "A Left-Hand limit tests values slightly smaller than the target.",
+        "A Right-Hand limit tests values slightly larger than the target.",
+        "If a function has different formulas depending on whether $x$ is greater or less than a number, you must use one-sided limits to analyze the break."
+      ],
+      "registry_scope": "Approved lesson-level scope: Define left-hand and right-hand limits and use them to decide whether a two-sided limit exists. Include piecewise functions and cases where one-sided limits differ or one side fails to exist. Keep focus on limits rather than full discontinuity classification."
+    },
+    "hss_math_t11_st06": {
+      "id": "hss_math_t11_st06",
+      "title": "Limits at infinity",
+      "overview": "What happens to a function if you plug in a billion? What about a trillion? Limits at infinity allow us to mathematically predict the long-term, 'end behavior' of a function as it stretches forever to the left or right.",
+      "key_concepts": [
+        {
+          "concept": "Approaching Infinity ($x \\to \\pm\\infty$)",
+          "definition": "The endless journey.",
+          "details": [
+            "As $x$ increases without bound ($x \\to +\\infty$), we observe what the $y$-value approaches.",
+            "If the $y$-value levels off at a specific number (like $y$ approaches $0$), that number is the limit."
+          ]
+        },
+        {
+          "concept": "The $\\frac{1}{x}$ Rule",
+          "definition": "Crumbs of a pie.",
+          "details": [
+            "If you divide $1$ pie among an infinite number of people, everyone gets zero pie.",
+            "$\\lim_{x \\to \\pm\\infty} \\frac{1}{x} = 0$. This applies to any constant divided by $x$ to any positive power."
+          ]
+        },
+        {
+          "concept": "Highest-Power Method",
+          "definition": "Rational functions.",
+          "details": [
+            "To evaluate the limit of a polynomial fraction at infinity, divide every single term in the numerator and denominator by the highest power of $x$ present in the denominator.",
+            "This turns almost every term into a $\\frac{1}{x}$ fraction, which instantly evaluates to zero, leaving only the leading coefficients."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Limit at Infinity (Inverse)",
+          "equation": "$$ \\lim_{x \\to \\pm\\infty} \\frac{k}{x^n} = 0 $$",
+          "variables": {
+            "k": "Any constant",
+            "n": "Any positive power"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t11_st06_visual01",
+          "title": "End behaviour and horizontal limit",
+          "type": "svg",
+          "caption": "A finite limit as x tends to infinity describes end behaviour.",
+          "alt_text": "A finite limit as x tends to infinity describes end behaviour.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"270\" viewBox=\"0 0 300 270\" role=\"img\" aria-label=\"End behaviour and horizontal limit\">\n<title>End behaviour and horizontal limit</title><desc>A finite limit as x tends to infinity describes end behaviour.</desc>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"268\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"30\" y1=\"130\" x2=\"270\" y2=\"130\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"245\"/><path d=\"M35 55 Q90 65 130 100 T255 130\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><path d=\"M30 130 H270\" stroke=\"#dc8b24\" stroke-dasharray=\"5 4\"/></g>\n<text x=\"150\" y=\"255\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">End behaviour and horizontal limit</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\lim_{x \\to \\infty} \\frac{4x^2 - 3x + 2}{2x^2 + 5}$.",
+          "solution_steps": [
+            "Step 1: Identify the highest power of $x$ in the denominator. It is $x^2$.",
+            "Step 2: Divide every term by $x^2$.",
+            "Step 3: $\\frac{\\frac{4x^2}{x^2} - \\frac{3x}{x^2} + \\frac{2}{x^2}}{\\frac{2x^2}{x^2} + \\frac{5}{x^2}} = \\frac{4 - \\frac{3}{x} + \\frac{2}{x^2}}{2 + \\frac{5}{x^2}}$.",
+            "Step 4: As $x \\to \\infty$, all terms with $x$ in the denominator become $0$.",
+            "Step 5: The expression collapses to $\\frac{4 - 0 + 0}{2 + 0} = \\frac{4}{2}$."
+          ],
+          "final_answer": "2"
+        },
+        {
+          "problem": "Evaluate $\\lim_{x\\to\\infty}\\frac{3x^2-2x+1}{x^2+4}$.",
+          "solution_steps": [
+            "Divide numerator and denominator by the highest power, $x^2$.",
+            "The expression becomes $\\frac{3-2/x+1/x^2}{1+4/x^2}$.",
+            "As $x\\to\\infty$, $1/x$ and $1/x^2$ approach 0.",
+            "The resulting ratio approaches $3/1$."
+          ],
+          "final_answer": "$3$; the horizontal asymptote at the positive end is $y=3$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Plugging in 'infinity' like a regular number.",
+          "correction": "Infinity is a concept, not a number. You cannot calculate $\\frac{\\infty}{\\infty}$. You must use algebraic methods (like dividing by the highest power) to see the true limit."
+        }
+      ],
+      "quick_summary": [
+        "Limits at infinity determine the 'end behavior' of a graph.",
+        "Any constant divided by $x$ (or $x^n$) approaches $0$ as $x$ approaches infinity.",
+        "For fractions with polynomials, divide everything by the highest power of $x$ in the denominator to simplify."
+      ],
+      "registry_scope": "Approved lesson-level scope: Study limits as the input tends to positive or negative infinity, including rational functions and finite horizontal limiting values. Interpret end behaviour and horizontal asymptotes. Distinguish this from unbounded behaviour near a finite input in subtopic 7."
+    },
+    "hss_math_t11_st07": {
+      "id": "hss_math_t11_st07",
+      "title": "Infinite limits and vertical asymptotes",
+      "overview": "Sometimes, as you approach a specific number on the x-axis, the graph doesn't aim for a hole—it violently skyrockets to infinity or plunges to negative infinity. This creates an invisible barrier called a Vertical Asymptote.",
+      "key_concepts": [
+        {
+          "concept": "Infinite Limits",
+          "definition": "Unbounded explosion.",
+          "details": [
+            "If a function evaluates to $\\frac{\\text{non-zero number}}{0}$, the limit is infinite ($\\pm\\infty$).",
+            "Example: $\\lim_{x \\to 0} \\frac{1}{x^2} = +\\infty$. The denominator gets incredibly small, making the overall fraction infinitely large."
+          ]
+        },
+        {
+          "concept": "Vertical Asymptote",
+          "definition": "The invisible wall.",
+          "details": [
+            "A vertical line $x = a$ is a vertical asymptote if at least one of the one-sided limits approaches $+\\infty$ or $-\\infty$.",
+            "The graph will get infinitely close to this vertical line but will never cross it."
+          ]
+        },
+        {
+          "concept": "Directional Explosion",
+          "definition": "Up or down?",
+          "details": [
+            "When dealing with infinite limits, you must test the left and right sides to see if they both go UP ($\\infty$), both go DOWN ($-\\infty$), or split in opposite directions. Only one-sided limits can give you the full picture."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t11_st07_visual01",
+          "title": "Vertical asymptote",
+          "type": "svg",
+          "caption": "The function grows without bound near the finite input x = a.",
+          "alt_text": "The function grows without bound near the finite input x = a.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"270\" viewBox=\"0 0 300 270\" role=\"img\" aria-label=\"Vertical asymptote\">\n<title>Vertical asymptote</title><desc>The function grows without bound near the finite input x = a.</desc>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"268\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"30\" y1=\"130\" x2=\"270\" y2=\"130\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"245\" stroke=\"#dc8b24\" stroke-dasharray=\"5 4\"/><path d=\"M45 35 Q105 45 140 225 M160 225 Q195 45 255 35\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/></g>\n<text x=\"150\" y=\"255\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">Vertical asymptote</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\lim_{x \\to 3^+} \\frac{1}{x - 3}$.",
+          "solution_steps": [
+            "Step 1: Attempt direct substitution. $\\frac{1}{3-3} = \\frac{1}{0}$. This indicates an infinite limit.",
+            "Step 2: Test a value slightly larger than $3$ (since it is $3^+$). Let $x = 3.01$.",
+            "Step 3: Evaluate: $\\frac{1}{3.01 - 3} = \\frac{1}{0.01} = +100$.",
+            "Step 4: Because the result is positive and growing massively, the limit approaches positive infinity."
+          ],
+          "final_answer": "+∞"
+        },
+        {
+          "problem": "Find the one-sided behaviour of $f(x)=\\frac{1}{(x-2)^2}$ as $x\\to2$.",
+          "solution_steps": [
+            "For every $x\\ne2$, $(x-2)^2$ is positive.",
+            "As $x$ approaches 2 from either side, $(x-2)^2$ approaches 0 through positive values.",
+            "The reciprocal therefore increases without bound on both sides.",
+            "The line $x=2$ is a vertical asymptote."
+          ],
+          "final_answer": "$\\lim_{x\\to2^-}f(x)=+\\infty$ and $\\lim_{x\\to2^+}f(x)=+\\infty$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming all zero denominators create asymptotes.",
+          "correction": "If the substitution yields $0/0$, it is usually a removable 'hole', not an asymptote. A vertical asymptote strictly requires a NON-ZERO number divided by zero."
+        }
+      ],
+      "quick_summary": [
+        "A non-zero number divided by zero indicates an infinite limit ($\\pm\\infty$).",
+        "These infinite limits create Vertical Asymptotes ($x = a$).",
+        "Use one-sided limits (testing $a^+$ and $a^-$) to determine if the graph shoots UP to $+\\infty$ or DOWN to $-\\infty$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Study infinite limits as the input approaches a finite value, including one-sided unbounded behaviour and vertical asymptotes. Explicitly contrast this with limits at infinity, where the input itself becomes unbounded."
+    },
+    "hss_math_t11_st08": {
+      "id": "hss_math_t11_st08",
+      "title": "Indeterminate forms — introductory",
+      "overview": "In calculus, seeing $0/0$ doesn't mean the answer is $0$, $1$, or 'undefined'. It means the true answer is trapped in a mathematical stalemate between the numerator and denominator, waiting for you to break the tie.",
+      "key_concepts": [
+        {
+          "concept": "The $0/0$ Stalemate",
+          "definition": "The ultimate conflict.",
+          "details": [
+            "Zero divided by any number is $0$. Any number divided by zero is $\\infty$. A number divided by itself is $1$.",
+            "When you get $0/0$, all three mathematical rules collide. The expression is 'indeterminate' because it does not provide enough information to declare a winner."
+          ]
+        },
+        {
+          "concept": "Other Indeterminate Forms",
+          "definition": "Beyond zero.",
+          "details": [
+            "While $0/0$ is the most common, $\\frac{\\infty}{\\infty}$ is another massive indeterminate form (covered in limits at infinity).",
+            "In higher calculus, forms like $0 \\times \\infty$ or $1^\\infty$ are also indeterminate."
+          ]
+        },
+        {
+          "concept": "The Resolution",
+          "definition": "Forcing the truth.",
+          "details": [
+            "An indeterminate form ALWAYS requires a secondary algebraic technique to resolve: factorisation, rationalisation, or (in later courses) L'Hôpital's Rule."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t11_st08_visual01",
+          "title": "Indeterminate form 0 over 0",
+          "type": "svg",
+          "caption": "The form 0/0 requires further algebra; it is not itself a limit value.",
+          "alt_text": "The form 0/0 requires further algebra; it is not itself a limit value.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"270\" viewBox=\"0 0 300 270\" role=\"img\" aria-label=\"Indeterminate form 0 over 0\">\n<title>Indeterminate form 0 over 0</title><desc>The form 0/0 requires further algebra; it is not itself a limit value.</desc>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"268\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\"><rect x=\"45\" y=\"55\" width=\"210\" height=\"135\" rx=\"12\" fill=\"none\" stroke=\"#64748b\"/><text x=\"150\" y=\"115\" text-anchor=\"middle\" font-size=\"34\">0</text><path d=\"M105 128 H195\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"150\" y=\"165\" text-anchor=\"middle\" font-size=\"34\">0</text></g>\n<text x=\"150\" y=\"255\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">Indeterminate form 0 over 0</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Why does substituting $x=2$ into $\\frac{x^2 - 4}{x - 2}$ fail to find the limit?",
+          "solution_steps": [
+            "Step 1: Substitute $x=2$ into the numerator: $2^2 - 4 = 0$.",
+            "Step 2: Substitute $x=2$ into the denominator: $2 - 2 = 0$.",
+            "Step 3: The result is $0/0$.",
+            "Step 4: This is an indeterminate form, meaning the actual mathematical value of the limit is hidden and cannot be determined by substitution alone."
+          ],
+          "final_answer": "It results in the indeterminate form 0/0, providing no useful information."
+        },
+        {
+          "problem": "Evaluate $\\lim_{x\\to0}\\frac{\\sqrt{x+4}-2}{x}$ by rationalisation.",
+          "solution_steps": [
+            "Direct substitution gives $0/0$, an indeterminate form.",
+            "Multiply numerator and denominator by the conjugate $\\sqrt{x+4}+2$.",
+            "The numerator becomes $(x+4)-4=x$, so for $x\\ne0$ the expression simplifies to $\\frac{1}{\\sqrt{x+4}+2}$.",
+            "Let $x$ approach 0 in the simplified expression."
+          ],
+          "final_answer": "$\\frac14$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Evaluating $0/0$ as exactly $0$, $1$, or undefined.",
+          "correction": "$0/0$ is none of those things. It is simply a warning sign that says 'You must do algebra before trying again'."
+        }
+      ],
+      "quick_summary": [
+        "An indeterminate form (like $0/0$) occurs when direct substitution fails to provide a mathematically sound answer.",
+        "It does NOT mean the limit fails to exist; the limit is just hidden.",
+        "You must simplify the expression using factorisation or rationalisation to bypass the $0/0$ trap."
+      ],
+      "registry_scope": "Approved lesson-level scope: Introduce indeterminate forms, especially 0/0 and infinity/infinity, and resolve suitable examples using factorisation, rationalisation and algebraic simplification. Keep the treatment introductory; exclude L'Hôpital's rule and advanced limit techniques."
+    },
+    "hss_math_t11_st09": {
+      "id": "hss_math_t11_st09",
+      "title": "Continuity at a point",
+      "overview": "A limit tells us where a graph is aiming, but it doesn't guarantee the graph actually connects there. 'Continuity' is the mathematical guarantee that a graph is a solid, unbroken line at a specific point.",
+      "key_concepts": [
+        {
+          "concept": "The Definition of Continuity",
+          "definition": "The unbroken path.",
+          "details": [
+            "A function is continuous at a point $x=a$ if and only if the limit as $x \\to a$ exactly matches the actual function value $f(a)$."
+          ]
+        },
+        {
+          "concept": "The Three Conditions",
+          "definition": "The continuity checklist.",
+          "details": [
+            "1. The function must actually exist there: $f(a)$ is defined.",
+            "2. The two-sided limit must exist: $\\lim_{x \\to a} f(x)$ exists.",
+            "3. They must be perfectly equal: $\\lim_{x \\to a} f(x) = f(a)$."
+          ]
+        },
+        {
+          "concept": "Visualizing Continuity",
+          "definition": "The pencil test.",
+          "details": [
+            "If you can draw through the point $x=a$ on the graph without lifting your pencil, the function is continuous there."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Continuity Condition",
+          "equation": "$$ \\lim_{x \\to a} f(x) = f(a) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t11_st09_visual01",
+          "title": "Continuity at a point",
+          "type": "svg",
+          "caption": "At a continuous point, the limit equals the function value.",
+          "alt_text": "At a continuous point, the limit equals the function value.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"270\" viewBox=\"0 0 300 270\" role=\"img\" aria-label=\"Continuity at a point\">\n<title>Continuity at a point</title><desc>At a continuous point, the limit equals the function value.</desc>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"268\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"30\" y1=\"130\" x2=\"270\" y2=\"130\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"245\"/><path d=\"M45 210 Q150 130 255 50\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"150\" cy=\"130\" r=\"5\" fill=\"#2563eb\"/></g>\n<text x=\"150\" y=\"255\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">Continuity at a point</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Determine if $f(x) = x^2$ is continuous at $x=2$.",
+          "solution_steps": [
+            "Step 1: Check Condition 1. Does $f(2)$ exist? Yes, $f(2) = 2^2 = 4$.",
+            "Step 2: Check Condition 2. Does the limit exist? Yes, $\\lim_{x \\to 2} (x^2) = 4$.",
+            "Step 3: Check Condition 3. Do they equal each other? Yes, $4 = 4$.",
+            "Step 4: Because all three conditions pass, the function is continuous."
+          ],
+          "final_answer": "Yes, it is continuous at x=2."
+        },
+        {
+          "problem": "Find $k$ so that $f(x)=\\begin{cases}kx+1,&x<2\\\\7,&x=2\\\\2x+1,&x>2\\end{cases}$ is continuous at $x=2$.",
+          "solution_steps": [
+            "The left-hand limit is $2k+1$.",
+            "The right-hand limit is $2(2)+1=5$.",
+            "For continuity, both one-sided limits must agree and equal $f(2)=7$.",
+            "The right-hand limit is 5, not 7, regardless of $k$. Therefore no value of $k$ makes this function continuous at 2."
+          ],
+          "final_answer": "No such value of $k$ exists."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking a limit guarantees continuity.",
+          "correction": "A limit can perfectly exist even if the function has a hole at that exact spot. The limit only cares about the approach; continuity cares about the arrival."
+        }
+      ],
+      "quick_summary": [
+        "Continuity means a function has no breaks, jumps, or holes at a specific point.",
+        "It is verified using a strict 3-step checklist.",
+        "The most critical rule is that the mathematical limit MUST equal the actual function output: $\\lim f(x) = f(a)$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Define continuity at a point using three conditions: the function value exists, the two-sided limit exists, and the limit equals the function value. Apply these conditions to graphs, algebraic and piecewise functions, and simple parameter problems."
+    },
+    "hss_math_t11_st10": {
+      "id": "hss_math_t11_st10",
+      "title": "Continuity over an interval",
+      "overview": "While continuity at a single point is useful, we often need to know if an entire section of a graph is safe and unbroken. This expands the concept of continuity across a continuous range of numbers.",
+      "key_concepts": [
+        {
+          "concept": "Open Interval Continuity $(a,b)$",
+          "definition": "Inside the borders.",
+          "details": [
+            "A function is continuous on an open interval $(a,b)$ if it is continuous at absolutely every single point strictly between $a$ and $b$."
+          ]
+        },
+        {
+          "concept": "Closed Interval Continuity $[a,b]$",
+          "definition": "Including the borders.",
+          "details": [
+            "To be continuous on a closed interval $[a,b]$, the function must be continuous inside $(a,b)$, AND it must connect smoothly to the endpoints.",
+            "This requires one-sided limits: $\\lim_{x \\to a^+} f(x) = f(a)$ (connecting to the left edge) and $\\lim_{x \\to b^-} f(x) = f(b)$ (connecting to the right edge)."
+          ]
+        },
+        {
+          "concept": "Polynomials",
+          "definition": "The perfect functions.",
+          "details": [
+            "Polynomials (like $x^2 + 3x - 5$) are perfectly continuous over the entire infinite real number line $(-\\infty, \\infty)$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t11_st10_visual01",
+          "title": "Continuity on an interval",
+          "type": "svg",
+          "caption": "Continuity on a closed interval includes one-sided continuity at endpoints.",
+          "alt_text": "Continuity on a closed interval includes one-sided continuity at endpoints.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"270\" viewBox=\"0 0 300 270\" role=\"img\" aria-label=\"Continuity on an interval\">\n<title>Continuity on an interval</title><desc>Continuity on a closed interval includes one-sided continuity at endpoints.</desc>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"268\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"30\" y1=\"130\" x2=\"270\" y2=\"130\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"245\"/><path d=\"M45 215 Q100 25 150 110 T255 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"45\" cy=\"215\" r=\"5\" fill=\"#2563eb\"/></g>\n<text x=\"150\" y=\"255\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">Continuity on an interval</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Is $f(x) = \\frac{1}{x-2}$ continuous on the interval $(1, 5)$?",
+          "solution_steps": [
+            "Step 1: Identify where the function breaks. The denominator cannot be zero.",
+            "Step 2: $x - 2 = 0 \\Rightarrow x = 2$. The function is broken (undefined) at $x = 2$.",
+            "Step 3: Check if $x = 2$ falls inside the requested interval $(1, 5)$.",
+            "Step 4: Since $2$ is between $1$ and $5$, the function has a massive break inside the interval."
+          ],
+          "final_answer": "No, it is not continuous on (1, 5)."
+        },
+        {
+          "problem": "Determine whether $f(x)=\\sqrt{x-1}$ is continuous on its domain.",
+          "solution_steps": [
+            "The domain is $[1,\\infty)$.",
+            "The square-root function is continuous wherever its radicand is non-negative.",
+            "Thus the function is continuous for every interior point $x>1$.",
+            "At the included endpoint $x=1$, the right-hand limit is 0 and equals $f(1)=0$, so it is right-continuous there."
+          ],
+          "final_answer": "Continuous on $[1,\\infty)$, using right-continuity at the endpoint."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming a function is discontinuous simply because it has an undefined point.",
+          "correction": "If $f(x) = \\frac{1}{x-2}$, it is broken at $x=2$. However, if a question asks 'Is it continuous on $(5, 10)$?', the answer is YES, because the break at $x=2$ is nowhere near that specific interval."
+        }
+      ],
+      "quick_summary": [
+        "Continuity over an interval means the function has no breaks anywhere inside that specific range.",
+        "Closed intervals require checking one-sided limits to ensure the graph properly anchors to the endpoints.",
+        "Always check the domain restrictions (like division by zero) to see if they fall inside your interval."
+      ],
+      "registry_scope": "Approved lesson-level scope: Study continuity on open, closed and other intervals as appropriate, including one-sided continuity at interval endpoints. Use standard examples and avoid repeating the pointwise continuity test at length."
+    },
+    "hss_math_t11_st11": {
+      "id": "hss_math_t11_st11",
+      "title": "Types of discontinuities",
+      "overview": "When a function breaks, it doesn't always break in the same way. Classifying the type of 'break' tells us exactly what went wrong algebraically, and whether the graph can be easily repaired.",
+      "key_concepts": [
+        {
+          "concept": "Removable Discontinuity",
+          "definition": "The pothole.",
+          "details": [
+            "Occurs when the two-sided limit exists, but the function value $f(a)$ is either undefined or plotted somewhere else (a floating dot).",
+            "It is 'removable' because you can repair the graph simply by filling in that one single missing point."
+          ]
+        },
+        {
+          "concept": "Jump Discontinuity",
+          "definition": "The cliff.",
+          "details": [
+            "Occurs when the Left-Hand Limit and Right-Hand Limit both exist as finite numbers, but they do NOT equal each other.",
+            "The graph physically teleports from one y-value to another. Common in step functions and piecewise functions."
+          ]
+        },
+        {
+          "concept": "Infinite Discontinuity",
+          "definition": "The asymptote.",
+          "details": [
+            "Occurs when one or both of the one-sided limits shoot off to $\\pm\\infty$.",
+            "This creates a Vertical Asymptote, completely splitting the graph in half."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v11_s11",
+          "title": "Types of Discontinuities",
+          "type": "svg",
+          "caption": "Removable (hole), Jump (teleport), and Infinite (asymptote).",
+          "alt_text": "Three small graphs side-by-side. Graph 1 shows a smooth curve with a single open hole in the middle (Removable). Graph 2 shows a horizontal line that stops, drops down, and continues (Jump). Graph 3 shows a curve shooting up on the left of an asymptote and shooting down on the right (Infinite).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 30 150 Q 80 150 80 100 T 130 50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"80\" cy=\"100\" r=\"5\" fill=\"#f8fafc\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"80\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Removable</text><path d=\"M 200 130 L 250 130\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><path d=\"M 250 70 L 300 70\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><circle cx=\"250\" cy=\"130\" r=\"4\" fill=\"#16a34a\"/><circle cx=\"250\" cy=\"70\" r=\"4\" fill=\"#f8fafc\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M 250 120 L 250 80\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"250\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Jump</text><path d=\"M 420 20 L 420 150\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 370 150 Q 410 150 415 30\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><path d=\"M 470 50 Q 430 50 425 150\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"420\" y=\"180\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">Infinite</text></svg>"
+        },
+        {
+          "visual_id": "hss_math_t11_st11_visual01",
+          "title": "Types of discontinuity",
+          "type": "svg",
+          "caption": "A hole, a jump and unbounded behaviour are distinct discontinuity patterns.",
+          "alt_text": "A hole, a jump and unbounded behaviour are distinct discontinuity patterns.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"270\" viewBox=\"0 0 300 270\" role=\"img\" aria-label=\"Types of discontinuity\">\n<title>Types of discontinuity</title><desc>A hole, a jump and unbounded behaviour are distinct discontinuity patterns.</desc>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"268\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"30\" y1=\"130\" x2=\"270\" y2=\"130\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"245\"/><path d=\"M40 190 L140 90 M160 170 L255 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"150\" cy=\"110\" r=\"5\" fill=\"white\" stroke=\"#dc8b24\" stroke-width=\"2\"/></g>\n<text x=\"150\" y=\"255\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">Types of discontinuity</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify the discontinuity in $f(x) = \\frac{x^2 - 4}{x - 2}$ at $x=2$.",
+          "solution_steps": [
+            "Step 1: Check the limit as $x \\to 2$. (From a previous lesson, we know this limit is $4$).",
+            "Step 2: Check the function value $f(2)$. It is undefined ($0/0$).",
+            "Step 3: Because the limit exists but the function value is missing, the graph just has a single hole at $(2,4)$."
+          ],
+          "final_answer": "Removable Discontinuity"
+        },
+        {
+          "problem": "Classify the discontinuity of $f(x)=\\frac{x^2-1}{x-1}$ at $x=1$ when the function is defined only for $x\\ne1$.",
+          "solution_steps": [
+            "For $x\\ne1$, factorise and simplify: $f(x)=x+1$.",
+            "The left-hand and right-hand limits at 1 both equal 2.",
+            "The function has no value at 1, although the finite limit exists.",
+            "A single point could be filled by defining $f(1)=2$ to make the function continuous."
+          ],
+          "final_answer": "A removable discontinuity (a hole) at $x=1$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing a Jump discontinuity with an Infinite discontinuity.",
+          "correction": "A jump happens between two finite numbers (e.g., $y=3$ jumps to $y=5$). An infinite discontinuity means the y-value is exploding off the graph entirely toward $\\pm\\infty$."
+        }
+      ],
+      "quick_summary": [
+        "A Removable discontinuity is a single missing 'hole' where the limit still exists.",
+        "A Jump discontinuity occurs when the left and right limits are different finite numbers.",
+        "An Infinite discontinuity occurs at vertical asymptotes where limits approach $\\pm\\infty$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Classify removable, jump and infinite discontinuities using graphs and function examples. Explain how one-sided limits and function values identify each type, without duplicating the full continuity definition from subtopic 9."
+    },
+    "hss_math_t11_st12": {
+      "id": "hss_math_t11_st12",
+      "title": "Properties of continuous functions",
+      "overview": "If you know that two basic functions are continuous, you don't need to rebuild their proofs from scratch to know if their combination is continuous. The algebraic properties of continuity allow us to quickly clear complex equations.",
+      "key_concepts": [
+        {
+          "concept": "Algebraic Combinations",
+          "definition": "The safe operations.",
+          "details": [
+            "If $f(x)$ and $g(x)$ are both continuous at a point, then their Sum ($f+g$), Difference ($f-g$), and Product ($f \\times g$) are also guaranteed to be continuous at that point."
+          ]
+        },
+        {
+          "concept": "The Quotient Rule",
+          "definition": "The division warning.",
+          "details": [
+            "The quotient $\\frac{f(x)}{g(x)}$ is continuous EVERYWHERE that $f$ and $g$ are continuous, EXCEPT where the denominator $g(x) = 0$."
+          ]
+        },
+        {
+          "concept": "The Intermediate Value Theorem (IVT)",
+          "definition": "Crossing the line.",
+          "details": [
+            "If a continuous function goes from a negative value (e.g., $y = -5$) to a positive value (e.g., $y = +3$), it MUST cross $y = 0$ at some point in between.",
+            "Because the function is continuous, it cannot 'teleport' over the x-axis. It guarantees that a mathematical root exists."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t11_st12_visual01",
+          "title": "Intermediate Value Theorem",
+          "type": "svg",
+          "caption": "A continuous function takes every intermediate value between its endpoint values.",
+          "alt_text": "A continuous function takes every intermediate value between its endpoint values.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"270\" viewBox=\"0 0 300 270\" role=\"img\" aria-label=\"Intermediate Value Theorem\">\n<title>Intermediate Value Theorem</title><desc>A continuous function takes every intermediate value between its endpoint values.</desc>\n<rect x=\"1\" y=\"1\" width=\"298\" height=\"268\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"30\" y1=\"130\" x2=\"270\" y2=\"130\"/><line x1=\"50\" y1=\"220\" x2=\"50\" y2=\"35\"/><path d=\"M50 205 Q130 195 175 120 T255 45\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"50\" cy=\"205\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"255\" cy=\"45\" r=\"4\" fill=\"#2563eb\"/></g>\n<text x=\"150\" y=\"255\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">Intermediate Value Theorem</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $f(x) = x^2$ and $g(x) = x - 3$, determine where $h(x) = \\frac{f(x)}{g(x)}$ is continuous.",
+          "solution_steps": [
+            "Step 1: Identify that both $f(x)$ and $g(x)$ are polynomials. Therefore, they are perfectly continuous everywhere.",
+            "Step 2: Apply the quotient property. $h(x)$ will be continuous everywhere EXCEPT where the denominator is zero.",
+            "Step 3: Set the denominator to zero: $x - 3 = 0 \\Rightarrow x = 3$.",
+            "Step 4: The function is continuous for all real numbers except $3$."
+          ],
+          "final_answer": "Continuous on (-∞, 3) ∪ (3, ∞)"
+        },
+        {
+          "problem": "Use the Intermediate Value Theorem to show that $x^3+x-1=0$ has a root between 0 and 1.",
+          "solution_steps": [
+            "Let $f(x)=x^3+x-1$, a polynomial and therefore continuous on $[0,1]$.",
+            "Evaluate $f(0)=-1$ and $f(1)=1$.",
+            "The value 0 lies between $-1$ and 1.",
+            "By the Intermediate Value Theorem, some $c\\in(0,1)$ satisfies $f(c)=0$."
+          ],
+          "final_answer": "At least one root exists in $(0,1)$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying the Intermediate Value Theorem to discontinuous functions.",
+          "correction": "The IVT ONLY works if the function is guaranteed continuous over the interval. A function like $y = \\frac{1}{x}$ goes from $-1$ to $+1$, but it NEVER crosses zero—it teleports across a vertical asymptote."
+        }
+      ],
+      "quick_summary": [
+        "Adding, subtracting, or multiplying continuous functions creates a new continuous function.",
+        "Dividing continuous functions is safe everywhere except where the denominator equals zero.",
+        "The Intermediate Value Theorem guarantees that a continuous path between two heights must pass through every height in between."
+      ],
+      "registry_scope": "Approved lesson-level scope: Establish closure properties of continuous functions under sums, differences, products, quotients where the denominator is non-zero, and compositions. Introduce the Intermediate Value Theorem and its interpretation at an accessible Higher Secondary level. Exclude advanced real-analysis proofs and a full epsilon-delta course."
+    }
+  }
+}

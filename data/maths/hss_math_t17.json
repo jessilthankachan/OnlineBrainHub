@@ -1,0 +1,1112 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t17",
+  "topicTitle": "Probability and Probability Distributions",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t17_st01": {
+      "id": "hss_math_t17_st01",
+      "title": "Random experiments and sample spaces",
+      "overview": "Probability is the mathematical study of uncertainty. To calculate probabilities, we first need to define the experiment we are observing and identify all possible outcomes that can occur.",
+      "key_concepts": [
+        {
+          "concept": "Random vs. Deterministic Experiments",
+          "definition": "Predictability of outcomes.",
+          "details": [
+            "A deterministic experiment always produces the exact same result under the same conditions (e.g., $5+3=8$).",
+            "A random experiment is a process where the exact outcome cannot be predicted with certainty, even though all possible outcomes are known (e.g., rolling a die)."
+          ]
+        },
+        {
+          "concept": "The Sample Space ($S$)",
+          "definition": "The complete list of possibilities.",
+          "details": [
+            "The sample space ($S$ or $\\Omega$) is the set of all possible outcomes of a random experiment.",
+            "For a single coin toss: $S = \\{H, T\\}$.",
+            "For rolling two dice, there are $6 \\times 6 = 36$ possible ordered outcomes in the sample space."
+          ]
+        },
+        {
+          "concept": "Finite vs Infinite Sample Spaces",
+          "definition": "Counting the outcomes.",
+          "details": [
+            "Finite: Has a limited number of outcomes (e.g., drawing a card from a 52-card deck).",
+            "Infinite: Has an unlimited number of outcomes (e.g., the number of coin tosses until the first Head appears, or the exact continuous time until a lightbulb burns out)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st01_visual_added01",
+          "title": "Random experiments and sample spaces — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Random experiments and sample spaces.",
+          "alt_text": "Original schematic teaching aid for Random experiments and sample spaces.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Random experiments and sample spaces</title><desc>Original schematic illustration for Random experiments and sample spaces.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><circle cx=\"75\" cy=\"105\" r=\"24\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><circle cx=\"160\" cy=\"105\" r=\"24\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><circle cx=\"245\" cy=\"105\" r=\"24\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><text x=\"75\" y=\"110\" text-anchor=\"middle\">1</text><text x=\"160\" y=\"110\" text-anchor=\"middle\">2</text><text x=\"245\" y=\"110\" text-anchor=\"middle\">3</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Random experiments and sample spaces</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A person has three shirts (Red, Blue, Green) and two pairs of trousers (Black, White). How many different outfits can be formed, and what is the sample space?",
+          "solution_steps": [
+            "Step 1: Determine the number of choices for each stage. Shirts = 3, Trousers = 2.",
+            "Step 2: Multiply the choices to find the total outcomes: $3 \\times 2 = 6$.",
+            "Step 3: List the combinations systematically to form the sample space $S$."
+          ],
+          "final_answer": "6 outcomes. S = {(R,Black), (R,White), (B,Black), (B,White), (G,Black), (G,White)}"
+        },
+        {
+          "problem": "A fair six-sided die is rolled once. Write the sample space and the event that the result is greater than 4.",
+          "solution_steps": [
+            "The possible outcomes are the six face values.",
+            "An event is a subset of the sample space.",
+            "The outcomes greater than 4 are 5 and 6."
+          ],
+          "final_answer": "$S=\\{1,2,3,4,5,6\\}$; $A=\\{5,6\\}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ignoring the order of outcomes when keeping track of sequences.",
+          "correction": "When flipping a coin twice, the outcome (Heads, Tails) is different from (Tails, Heads). Order matters when tracking a sequence of events."
+        }
+      ],
+      "quick_summary": [
+        "A random experiment produces uncertain outcomes from a known set of possibilities.",
+        "The sample space is the complete set of all possible outcomes.",
+        "If a multi-stage experiment has $m$ choices for the first stage and $n$ for the second, there are $m \\times n$ total outcomes."
+      ],
+      "registry_scope": "Draft 81 approved audit: Introduce random experiments, outcomes and sample spaces; include finite and suitable countable examples and connect repeated trials with empirical frequency without confusing it with the axiomatic definition."
+    },
+    "hss_math_t17_st02": {
+      "id": "hss_math_t17_st02",
+      "title": "Events and event operations",
+      "overview": "While a sample space contains all possible outcomes, an 'event' is a specific subset of those outcomes that we are interested in. We can combine different events using logical operations like 'AND', 'OR', and 'NOT'.",
+      "key_concepts": [
+        {
+          "concept": "Events as Subsets",
+          "definition": "A specific condition.",
+          "details": [
+            "An event is any subset of the sample space. If you roll a die, the sample space is $\\{1,2,3,4,5,6\\}$. The event 'rolling an even number' is the subset $A = \\{2,4,6\\}$."
+          ]
+        },
+        {
+          "concept": "Event Operations (Union and Intersection)",
+          "definition": "Combining conditions.",
+          "details": [
+            "**Union ($A \\cup B$):** The event that A occurs, OR B occurs, OR both occur. (Contains all outcomes in A or B).",
+            "**Intersection ($A \\cap B$):** The event that BOTH A AND B occur simultaneously. (Contains only shared outcomes)."
+          ]
+        },
+        {
+          "concept": "Mutually Exclusive & Exhaustive Events",
+          "definition": "No overlap vs complete coverage.",
+          "details": [
+            "**Mutually Exclusive:** Events that cannot happen at the same time. Their intersection is empty ($A \\cap B = \\varnothing$).",
+            "**Exhaustive:** Events whose union covers the entire sample space ($A \\cup B = S$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st02_visual_added01",
+          "title": "Events and event operations — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Events and event operations.",
+          "alt_text": "Original schematic teaching aid for Events and event operations.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Events and event operations</title><desc>Original schematic illustration for Events and event operations.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><circle cx=\"125\" cy=\"115\" r=\"57\" fill=\"#dbeafe\" fill-opacity=\".8\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"115\" r=\"57\" fill=\"#fed7aa\" fill-opacity=\".7\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"96\" y=\"118\" font-size=\"13\">A</text><text x=\"222\" y=\"118\" font-size=\"13\">B</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Events and event operations</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A die is rolled. Let $A = \\{2,4,6\\}$ (even numbers) and $B = \\{4,5,6\\}$ (numbers greater than 3). Find $A \\cup B$ and $A \\cap B$.",
+          "solution_steps": [
+            "Step 1: For the Union ($A \\cup B$), combine all elements from both sets without writing duplicates.",
+            "Step 2: $A \\cup B = \\{2,4,5,6\\}$.",
+            "Step 3: For the Intersection ($A \\cap B$), find only the elements that appear in BOTH sets.",
+            "Step 4: $A \\cap B = \\{4,6\\}$."
+          ],
+          "final_answer": "Union = {2,4,5,6}, Intersection = {4,6}"
+        },
+        {
+          "problem": "For a die roll, let $A=\\{1,2,3\\}$ and $B=\\{3,4,5\\}$. Find $A\\cup B$, $A\\cap B$ and $A^c$ in the sample space $S=\\{1,2,3,4,5,6\\}$.",
+          "solution_steps": [
+            "The union contains outcomes in at least one event.",
+            "The intersection contains outcomes common to both events.",
+            "The complement contains outcomes in the sample space that are not in $A$."
+          ],
+          "final_answer": "$A\\cup B=\\{1,2,3,4,5\\}$; $A\\cap B=\\{3\\}$; $A^c=\\{4,5,6\\}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing Mutually Exclusive with Exhaustive.",
+          "correction": "Mutually exclusive means they don't overlap ($A \\cap B = \\varnothing$). Exhaustive means they combine to form the whole sample space ($A \\cup B = S$). Two events can be one, both, or neither."
+        }
+      ],
+      "quick_summary": [
+        "An event is a subset of the sample space containing the outcomes of interest.",
+        "Union ($A \\cup B$) means 'A or B'. Intersection ($A \\cap B$) means 'A and B'.",
+        "Mutually exclusive events cannot happen at the same time (no shared outcomes)."
+      ],
+      "registry_scope": "Draft 81 approved audit: Treat events as subsets of sample spaces; cover union, intersection, complement and mutually exclusive events using set notation, Venn diagrams and event relationships."
+    },
+    "hss_math_t17_st03": {
+      "id": "hss_math_t17_st03",
+      "title": "Axioms of probability",
+      "overview": "To calculate probabilities rigorously, mathematics relies on three foundational rules known as the Kolmogorov Axioms. Every probability calculation is built upon these three simple laws.",
+      "key_concepts": [
+        {
+          "concept": "Axiom 1: Non-negativity",
+          "definition": "No negative chances.",
+          "details": [
+            "The probability of any event must be greater than or equal to zero: $P(A) \\geq 0$. You cannot have a -20% chance of something happening."
+          ]
+        },
+        {
+          "concept": "Axiom 2: Normalization",
+          "definition": "The certainty of the sample space.",
+          "details": [
+            "The probability of the entire sample space happening is exactly 1: $P(S) = 1$. When an experiment is run, *some* outcome from the sample space is guaranteed to occur."
+          ]
+        },
+        {
+          "concept": "Axiom 3: Additivity",
+          "definition": "Adding separate events.",
+          "details": [
+            "If two events $A$ and $B$ are mutually exclusive (they cannot happen together), the probability of either happening is the sum of their individual probabilities: $P(A \\cup B) = P(A) + P(B)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Probability of a Complement",
+          "equation": "$$ P(A^c) = 1 - P(A) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st03_visual_added01",
+          "title": "Axioms of probability — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Axioms of probability.",
+          "alt_text": "Original schematic teaching aid for Axioms of probability.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Axioms of probability</title><desc>Original schematic illustration for Axioms of probability.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"55\" y=\"65\" width=\"210\" height=\"100\" rx=\"8\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><path d=\"M75 145 L125 105 L175 125 L245 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"160\" y=\"48\" text-anchor=\"middle\" font-size=\"14\" fill=\"#334155\">probability model</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Axioms of probability</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "The probability that a student passes an exam is 0.85. What is the probability that the student fails?",
+          "solution_steps": [
+            "Step 1: Identify the event $A$ (passing) and its complement $A^c$ (failing).",
+            "Step 2: Use the complement rule derived from the axioms: $P(A^c) = 1 - P(A)$.",
+            "Step 3: $P(A^c) = 1 - 0.85 = 0.15$."
+          ],
+          "final_answer": "0.15"
+        },
+        {
+          "problem": "A random experiment has outcomes with event $A$ having probability 0.37. State the probability bounds and find the probability of the complement.",
+          "solution_steps": [
+            "The axioms require probabilities to be non-negative and no greater than 1.",
+            "The complement rule gives $P(A^c)=1-P(A)$.",
+            "Substitute the given probability."
+          ],
+          "final_answer": "$0\\leq P(A)\\leq1$ and $P(A^c)=0.63$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding probabilities for events that overlap.",
+          "correction": "Axiom 3 ($P(A \\cup B) = P(A) + P(B)$) ONLY applies if the events are mutually exclusive. If they overlap, you must subtract the intersection to avoid double-counting."
+        }
+      ],
+      "quick_summary": [
+        "All probabilities must be between 0 and 1 (inclusive).",
+        "The total probability of all possible outcomes in the sample space always equals 1.",
+        "The probability of an event NOT happening is $1 - P(\\text{event})$."
+      ],
+      "registry_scope": "Draft 81 approved audit: Explain non-negativity, certainty, impossibility and additivity for mutually exclusive events; distinguish the axiomatic framework from frequency-based intuition."
+    },
+    "hss_math_t17_st04": {
+      "id": "hss_math_t17_st04",
+      "title": "Addition rule of probability",
+      "overview": "When calculating the probability that Event A *OR* Event B occurs, we can't always just add their probabilities together. If the events can happen at the same time, simple addition will count the overlapping outcomes twice.",
+      "key_concepts": [
+        {
+          "concept": "The General Addition Rule",
+          "definition": "Fixing the double-count.",
+          "details": [
+            "To find the probability of $A \\cup B$ (A or B), add the individual probabilities, then subtract the probability of their intersection (A and B).",
+            "$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$."
+          ]
+        },
+        {
+          "concept": "Mutually Exclusive Events",
+          "definition": "The simplified rule.",
+          "details": [
+            "If A and B are mutually exclusive, they have no overlap ($P(A \\cap B) = 0$).",
+            "The formula simplifies to $P(A \\cup B) = P(A) + P(B)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Addition Rule",
+          "equation": "$$ P(A \\cup B) = P(A) + P(B) - P(A \\cap B) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st04_visual_added01",
+          "title": "Addition rule of probability — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Addition rule of probability.",
+          "alt_text": "Original schematic teaching aid for Addition rule of probability.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Addition rule of probability</title><desc>Original schematic illustration for Addition rule of probability.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><circle cx=\"125\" cy=\"115\" r=\"57\" fill=\"#dbeafe\" fill-opacity=\".8\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"115\" r=\"57\" fill=\"#fed7aa\" fill-opacity=\".7\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"96\" y=\"118\" font-size=\"13\">A</text><text x=\"222\" y=\"118\" font-size=\"13\">B</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Addition rule of probability</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "In a class, the probability that a student studies Math is 0.6, Physics is 0.5, and BOTH Math and Physics is 0.2. Find the probability that a student studies Math OR Physics.",
+          "solution_steps": [
+            "Step 1: Identify the knowns. $P(M) = 0.6$, $P(P) = 0.5$, $P(M \\cap P) = 0.2$.",
+            "Step 2: Apply the General Addition Rule: $P(M \\cup P) = P(M) + P(P) - P(M \\cap P)$.",
+            "Step 3: Substitute the values: $0.6 + 0.5 - 0.2$.",
+            "Step 4: Calculate the result: $1.1 - 0.2 = 0.9$."
+          ],
+          "final_answer": "0.9"
+        },
+        {
+          "problem": "If $P(A)=0.45$, $P(B)=0.35$ and $P(A\\cap B)=0.15$, find $P(A\\cup B)$.",
+          "solution_steps": [
+            "Use the inclusion-exclusion addition rule.",
+            "Substitute the three probabilities.",
+            "Evaluate."
+          ],
+          "final_answer": "$P(A\\cup B)=0.45+0.35-0.15=0.65$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding overlapping probabilities without subtracting the intersection.",
+          "correction": "If $P(A)=0.6$ and $P(B)=0.5$, adding them gives $1.1$, which violates the laws of probability. You MUST subtract the overlap."
+        }
+      ],
+      "quick_summary": [
+        "The word 'OR' in probability generally points to the Addition Rule.",
+        "Always check if events can happen at the same time (overlap) before adding.",
+        "If they overlap, use $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$."
+      ],
+      "registry_scope": "Draft 81 approved audit: Apply the addition rule to overlapping and mutually exclusive events, including the inclusion-exclusion relationship and contextual examples."
+    },
+    "hss_math_t17_st05": {
+      "id": "hss_math_t17_st05",
+      "title": "Conditional probability",
+      "overview": "Sometimes, knowing that one event has already happened changes the probability of a second event. Conditional probability measures the likelihood of an event occurring *given* that a specific condition is already known to be true.",
+      "key_concepts": [
+        {
+          "concept": "The Restricted Sample Space",
+          "definition": "Zooming in.",
+          "details": [
+            "When we are given that Event B has occurred, the entire universe of possibilities shrinks. We ignore the original sample space and only look at the outcomes inside B.",
+            "We denote 'Probability of A given B' as $P(A \\mid B)$."
+          ]
+        },
+        {
+          "concept": "The Conditional Probability Formula",
+          "definition": "The mathematical calculation.",
+          "details": [
+            "To find $P(A \\mid B)$, we take the probability of the overlap (A and B) and divide it by the probability of the new restricted sample space (B).",
+            "$P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}$ (where $P(B) > 0$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Conditional Probability",
+          "equation": "$$ P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st05_visual_added01",
+          "title": "Conditional probability — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Conditional probability.",
+          "alt_text": "Original schematic teaching aid for Conditional probability.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Conditional probability</title><desc>Original schematic illustration for Conditional probability.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><circle cx=\"125\" cy=\"115\" r=\"57\" fill=\"#dbeafe\" fill-opacity=\".8\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"115\" r=\"57\" fill=\"#fed7aa\" fill-opacity=\".7\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"96\" y=\"118\" font-size=\"13\">A</text><text x=\"222\" y=\"118\" font-size=\"13\">B</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Conditional probability</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A card is drawn from a standard 52-card deck. What is the probability that it is a King, given that it is a face card?",
+          "solution_steps": [
+            "Step 1: Identify the events. A = King, B = Face card.",
+            "Step 2: Calculate $P(B)$. There are 12 face cards (J, Q, K of four suits). $P(B) = 12/52$.",
+            "Step 3: Calculate $P(A \\cap B)$. There are 4 Kings, and all 4 are face cards. $P(A \\cap B) = 4/52$.",
+            "Step 4: Apply the formula: $P(A \\mid B) = \\frac{4/52}{12/52}$.",
+            "Step 5: Simplify the fraction: $4/12 = 1/3$."
+          ],
+          "final_answer": "1/3"
+        },
+        {
+          "problem": "A bag contains 5 red and 3 blue counters. One counter is selected. Let $R$ be red and $B$ be blue. Find $P(R\\mid R\\cup B)$ and explain the conditioning event.",
+          "solution_steps": [
+            "The event $R\\cup B$ is the entire set of possible selections, so its probability is 1.",
+            "The conditional probability formula is $P(R\\mid R\\cup B)=P(R\\cap(R\\cup B))/P(R\\cup B)$.",
+            "Since $R$ is contained in $R\\cup B$, the numerator is $P(R)=5/8$."
+          ],
+          "final_answer": "$P(R\\mid R\\cup B)=\\frac{5}{8}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing $P(A \\mid B)$ with $P(B \\mid A)$.",
+          "correction": "The order matters heavily. The probability of having a cough given you have a cold is very high. The probability of having a cold given you have a cough is much lower, because many other things cause coughs. Always divide by the probability of the 'given' condition."
+        }
+      ],
+      "quick_summary": [
+        "Conditional probability is the probability of an event given that another event has already occurred.",
+        "It effectively shrinks the sample space down to only the outcomes where the given condition is true.",
+        "The formula is $P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}$."
+      ],
+      "registry_scope": "Draft 81 approved audit: Define conditional probability using a restricted sample space and standard notation; solve single- and multi-stage contextual problems while making the conditioning event explicit."
+    },
+    "hss_math_t17_st06": {
+      "id": "hss_math_t17_st06",
+      "title": "Independent events",
+      "overview": "In probability, two events are independent if the occurrence of one event has absolutely no effect on the likelihood of the other event occurring. If flipping a coin yields 'Heads', it does not change the probability of the next flip being 'Heads'.",
+      "key_concepts": [
+        {
+          "concept": "The Independence Test",
+          "definition": "Checking the math.",
+          "details": [
+            "Two events $A$ and $B$ are mathematically independent if and only if $P(A \\cap B) = P(A) \\times P(B)$.",
+            "If the probability of them happening together equals the product of their individual probabilities, they do not affect each other."
+          ]
+        },
+        {
+          "concept": "Conditional Independence",
+          "definition": "Unchanged likelihood.",
+          "details": [
+            "Another way to define independence is using conditional probability: $P(A \\mid B) = P(A)$.",
+            "This means knowing that B happened didn't change the probability of A happening."
+          ]
+        },
+        {
+          "concept": "Independent vs Mutually Exclusive",
+          "definition": "A critical distinction.",
+          "details": [
+            "**Mutually Exclusive:** If A happens, B CANNOT happen ($P(A \\cap B) = 0$). This is the ultimate form of dependence.",
+            "**Independent:** If A happens, B's chances are totally unaffected. Non-zero independent events can never be mutually exclusive."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Independence Condition",
+          "equation": "$$ P(A \\cap B) = P(A) \\times P(B) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st06_visual_added01",
+          "title": "Independent events — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Independent events.",
+          "alt_text": "Original schematic teaching aid for Independent events.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Independent events</title><desc>Original schematic illustration for Independent events.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><circle cx=\"125\" cy=\"115\" r=\"57\" fill=\"#dbeafe\" fill-opacity=\".8\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"115\" r=\"57\" fill=\"#fed7aa\" fill-opacity=\".7\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"96\" y=\"118\" font-size=\"13\">A</text><text x=\"222\" y=\"118\" font-size=\"13\">B</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Independent events</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $P(A) = 0.5$, $P(B) = 0.4$, and $P(A \\cap B) = 0.2$. Are events A and B independent?",
+          "solution_steps": [
+            "Step 1: Check the mathematical condition for independence: $P(A \\cap B) = P(A) \\times P(B)$.",
+            "Step 2: Calculate the product of their individual probabilities: $0.5 \\times 0.4 = 0.2$.",
+            "Step 3: Compare this product to the given intersection probability. $0.2 = 0.2$.",
+            "Step 4: Since the values are equal, the events are independent."
+          ],
+          "final_answer": "Yes, they are independent."
+        },
+        {
+          "problem": "Events $A$ and $B$ are mutually exclusive, with $P(A)=0.3$ and $P(B)=0.4$. Can they be independent?",
+          "solution_steps": [
+            "Mutual exclusivity means $P(A\\cap B)=0$.",
+            "Independence would require $P(A\\cap B)=P(A)P(B)=0.12$.",
+            "These values differ, so the events are not independent."
+          ],
+          "final_answer": "No. Since both probabilities are positive, mutually exclusive events cannot be independent."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming that 'Mutually Exclusive' and 'Independent' mean the same thing.",
+          "correction": "They are almost opposites. Mutually exclusive means they absolutely affect each other (one prevents the other). Independent means they don't affect each other at all."
+        }
+      ],
+      "quick_summary": [
+        "Events are independent if one happening doesn't change the probability of the other.",
+        "You can test for independence using the formula: $P(A \\cap B) = P(A) \\times P(B)$.",
+        "Drawing objects WITH replacement usually creates independent events. Drawing WITHOUT replacement creates dependent events."
+      ],
+      "registry_scope": "Draft 81 approved audit: Test independence using equivalent probability relationships; distinguish independence from mutual exclusivity and explain that mutually exclusive events with positive probabilities are not independent."
+    },
+    "hss_math_t17_st07": {
+      "id": "hss_math_t17_st07",
+      "title": "Multiplication rule",
+      "overview": "While the Addition Rule is used to find the probability of Event A *OR* Event B, the Multiplication Rule is used to find the probability of Event A *AND* Event B occurring together in a sequence or simultaneously.",
+      "key_concepts": [
+        {
+          "concept": "The General Multiplication Rule",
+          "definition": "Accounting for dependence.",
+          "details": [
+            "To find the probability of a sequence of events, multiply the probability of the first event by the *conditional* probability of the second event.",
+            "$P(A \\cap B) = P(A) \\times P(B \\mid A)$."
+          ]
+        },
+        {
+          "concept": "Multiplication Rule for Independent Events",
+          "definition": "The simplified version.",
+          "details": [
+            "If the events are independent, $P(B \\mid A)$ is just $P(B)$.",
+            "The formula simplifies to $P(A \\cap B) = P(A) \\times P(B)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Multiplication Rule",
+          "equation": "$$ P(A \\cap B) = P(A) \\times P(B \\mid A) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st07_visual_added01",
+          "title": "Multiplication rule — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Multiplication rule.",
+          "alt_text": "Original schematic teaching aid for Multiplication rule.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Multiplication rule</title><desc>Original schematic illustration for Multiplication rule.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"55\" y=\"65\" width=\"210\" height=\"100\" rx=\"8\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><path d=\"M75 145 L125 105 L175 125 L245 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"160\" y=\"48\" text-anchor=\"middle\" font-size=\"14\" fill=\"#334155\">probability model</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Multiplication rule</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Two cards are drawn successively from a standard 52-card deck WITHOUT replacement. Find the probability that both cards are red.",
+          "solution_steps": [
+            "Step 1: Probability of the first card being red (Event A): There are 26 red cards in 52. $P(A) = 26/52 = 1/2$.",
+            "Step 2: Probability of the second card being red GIVEN the first was red ($P(B \\mid A)$). There are now 25 red cards left in a 51-card deck. $P(B \\mid A) = 25/51$.",
+            "Step 3: Multiply them together: $(1/2) \\times (25/51)$.",
+            "Step 4: $25 / 102$."
+          ],
+          "final_answer": "25/102"
+        },
+        {
+          "problem": "A box contains 4 white and 6 black balls. Two balls are drawn without replacement. Find the probability that both are white.",
+          "solution_steps": [
+            "The probability the first ball is white is $4/10$.",
+            "After one white ball is removed, 3 white balls remain among 9 balls.",
+            "Apply the multiplication rule."
+          ],
+          "final_answer": "$P(WW)=\\frac{4}{10}\\times\\frac{3}{9}=\\frac{2}{15}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting to update the totals when drawing 'without replacement'.",
+          "correction": "When you remove an item without putting it back, both the total number of target items AND the total number of items in the whole pool decrease by 1 for the next calculation."
+        }
+      ],
+      "quick_summary": [
+        "The word 'AND' in probability generally points to the Multiplication Rule.",
+        "For independent events, simply multiply their probabilities.",
+        "For dependent events, you must multiply the first probability by the updated (conditional) probability of the second event."
+      ],
+      "registry_scope": "Draft 81 approved audit: Apply the multiplication rule to dependent and independent events in multi-stage experiments; use counting methods from HSS T06 where appropriate without repeating their instruction."
+    },
+    "hss_math_t17_st08": {
+      "id": "hss_math_t17_st08",
+      "title": "Bayes’ theorem",
+      "overview": "If conditional probability looks forward (e.g., given you have a disease, what is the probability you test positive?), Bayes' Theorem looks backward. It allows us to reverse the condition: given that you tested positive, what is the probability you actually have the disease?",
+      "key_concepts": [
+        {
+          "concept": "Prior vs Posterior Probability",
+          "definition": "Updating beliefs.",
+          "details": [
+            "**Prior Probability:** The baseline probability of an event before any new evidence is considered (e.g., $P(D)$, the baseline rate of a disease).",
+            "**Posterior Probability:** The updated probability of the event AFTER considering new evidence (e.g., $P(D \\mid +)$, the probability you have the disease given a positive test)."
+          ]
+        },
+        {
+          "concept": "The Mechanics of Bayes' Theorem",
+          "definition": "The formula.",
+          "details": [
+            "Bayes' Theorem mathematically flips a conditional probability using the base rates.",
+            "$P(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Bayes' Theorem (Two Events)",
+          "equation": "$$ P(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st08_visual_added01",
+          "title": "Bayes’ theorem — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Bayes’ theorem.",
+          "alt_text": "Original schematic teaching aid for Bayes’ theorem.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Bayes’ theorem</title><desc>Original schematic illustration for Bayes’ theorem.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"55\" y=\"65\" width=\"210\" height=\"100\" rx=\"8\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><path d=\"M75 145 L125 105 L175 125 L245 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"160\" y=\"48\" text-anchor=\"middle\" font-size=\"14\" fill=\"#334155\">probability model</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Bayes’ theorem</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A factory has two machines. Machine A produces 60% of the items, with a 2% defect rate. Machine B produces 40% of the items, with a 3% defect rate. If a randomly chosen item is found to be defective, what is the probability it came from Machine A?",
+          "solution_steps": [
+            "Step 1: Identify the pieces. $P(A) = 0.60$, $P(B) = 0.40$. Defect rates: $P(D \\mid A) = 0.02$, $P(D \\mid B) = 0.03$.",
+            "Step 2: We want to find $P(A \\mid D)$. Using Bayes' theorem: $P(A \\mid D) = \\frac{P(D \\mid A)P(A)}{P(D \\mid A)P(A) + P(D \\mid B)P(B)}$.",
+            "Step 3: Calculate the numerator (Defective AND from A): $0.02 \\times 0.60 = 0.012$.",
+            "Step 4: Calculate the denominator (Total Defective): $(0.02 \\times 0.60) + (0.03 \\times 0.40) = 0.012 + 0.012 = 0.024$.",
+            "Step 5: Divide: $0.012 / 0.024 = 0.5$."
+          ],
+          "final_answer": "0.5 (or 50%)"
+        },
+        {
+          "problem": "A disease affects 1% of a population. A test is positive for 90% of people with the disease and for 5% of people without it. Find the probability that a person has the disease given a positive result.",
+          "solution_steps": [
+            "Let $D$ denote disease and $+$ denote a positive test.",
+            "The total probability of a positive result is $P(+)=P(+\\mid D)P(D)+P(+\\mid D^c)P(D^c)$.",
+            "Substitute: $P(+)=0.90(0.01)+0.05(0.99)=0.0595$.",
+            "Apply Bayes' theorem: $P(D\\mid +)=P(+\\mid D)P(D)/P(+)$.",
+            "Evaluate the ratio."
+          ],
+          "final_answer": "$P(D\\mid +)=\\frac{0.009}{0.0595}\\approx0.1513$ (about 15.13%)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ignoring the base rate (Prior Probability).",
+          "correction": "Even if a medical test is 99% accurate, if a disease is extremely rare (e.g., 1 in 10,000 people), a positive test result still means it is highly likely you DO NOT have the disease. The raw number of false positives from the healthy population overwhelms the true positives."
+        }
+      ],
+      "quick_summary": [
+        "Bayes' Theorem allows you to 'reverse' conditional probabilities.",
+        "It updates the baseline probability of an event (Prior) using new evidence to find the true likelihood (Posterior).",
+        "It is heavily used in medical testing, spam filtering, and machine learning."
+      ],
+      "registry_scope": "Draft 81 approved audit: Apply Bayes’ theorem using partitions of a sample space and reverse conditional probability; interpret prior probabilities, evidence and updated probabilities in context."
+    },
+    "hss_math_t17_st09": {
+      "id": "hss_math_t17_st09",
+      "title": "Random variables",
+      "overview": "A random variable acts as a bridge between the physical outcomes of a random experiment and the world of mathematics. It takes descriptive outcomes (like 'Heads' or 'Tails') and translates them into numerical values so we can perform math on them.",
+      "key_concepts": [
+        {
+          "concept": "Definition of a Random Variable",
+          "definition": "The numerical translator.",
+          "details": [
+            "A random variable (usually denoted by a capital letter like $X$) is a function that assigns a real number to every possible outcome in a sample space."
+          ]
+        },
+        {
+          "concept": "Discrete Random Variables",
+          "definition": "Countable outputs.",
+          "details": [
+            "A random variable is 'Discrete' if it can only take specific, isolated values (like integers).",
+            "Example: $X$ = The number of heads in 3 coin tosses. The only possible values are $X = 0, 1, 2, 3$."
+          ]
+        },
+        {
+          "concept": "Continuous Random Variables",
+          "definition": "Uncountable outputs.",
+          "details": [
+            "A random variable is 'Continuous' if it can take any value within an interval, meaning there are infinitely many microscopic possibilities.",
+            "Example: $X$ = The exact time it takes to run a race. It could be 12.1 seconds, 12.15 seconds, 12.1589 seconds, etc."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st09_visual_added01",
+          "title": "Random variables — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Random variables.",
+          "alt_text": "Original schematic teaching aid for Random variables.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Random variables</title><desc>Original schematic illustration for Random variables.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 H280 M55 185 V35\" stroke=\"#64748b\"/><path d=\"M65 175 L95 135 L125 95 L155 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"210\" y=\"60\" font-size=\"13\" fill=\"#1e3a8a\">distribution</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Random variables</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A coin is tossed twice. Let $X$ be the random variable representing the number of heads obtained. What are the possible values of $X$?",
+          "solution_steps": [
+            "Step 1: List the sample space of the physical experiment. $S = \\{TT, TH, HT, HH\\}$.",
+            "Step 2: Apply the random variable $X$ (count the heads) to each outcome.",
+            "Step 3: For TT, $X=0$. For TH, $X=1$. For HT, $X=1$. For HH, $X=2$.",
+            "Step 4: List the unique numerical outputs."
+          ],
+          "final_answer": "X = {0, 1, 2}"
+        },
+        {
+          "problem": "A fair die is rolled and $X$ is defined as the number shown. State whether $X$ is discrete or continuous and list its possible values.",
+          "solution_steps": [
+            "The die has a finite set of outcomes.",
+            "The random variable assigns a numerical value to each outcome.",
+            "Its possible values are countable."
+          ],
+          "final_answer": "$X$ is discrete, with possible values $\\{1,2,3,4,5,6\\}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing a random variable with an algebraic variable.",
+          "correction": "In algebra, an unknown $x$ usually has one specific hidden value that you must solve for. A random variable $X$ describes a spread of multiple possible values that haven't occurred yet."
+        }
+      ],
+      "quick_summary": [
+        "A random variable translates physical outcomes of experiments into numbers.",
+        "Discrete random variables have countable outcomes (like counting cars).",
+        "Continuous random variables have measurable outcomes that fall along a continuum (like measuring weight or time)."
+      ],
+      "registry_scope": "Draft 81 approved audit: Introduce discrete and continuous random variables, their possible values and how numerical values are assigned to outcomes; establish the distinction before studying distributions."
+    },
+    "hss_math_t17_st10": {
+      "id": "hss_math_t17_st10",
+      "title": "Probability distributions",
+      "overview": "Once a random variable has converted experimental outcomes into numbers, a probability distribution acts as a master table or formula, mapping each numerical value to its exact probability of occurring.",
+      "key_concepts": [
+        {
+          "concept": "Probability Mass Function (PMF)",
+          "definition": "The map for discrete variables.",
+          "details": [
+            "Used for Discrete random variables. It gives the exact probability that $X$ will take a specific value $x$.",
+            "Two rules: 1) All probabilities must be between 0 and 1. 2) The sum of all probabilities in the distribution must exactly equal 1 ($\\sum p(x) = 1$)."
+          ]
+        },
+        {
+          "concept": "Probability Density Function (PDF)",
+          "definition": "The map for continuous variables.",
+          "details": [
+            "Used for Continuous random variables. Because there are infinite points on a continuum, the probability of hitting one exact microscopic point is technically zero ($P(X=a) = 0$).",
+            "Instead, we calculate probabilities over *intervals* by finding the area under the PDF curve using integration."
+          ]
+        },
+        {
+          "concept": "Cumulative Distribution Function (CDF)",
+          "definition": "The running total.",
+          "details": [
+            "The CDF, $F(x)$, gives the probability that a random variable is less than or equal to a specific value: $F(x) = P(X \\leq x)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Discrete Total Probability",
+          "equation": "$$ \\sum P(X=x) = 1 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st10_visual_added01",
+          "title": "Probability distributions — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Probability distributions.",
+          "alt_text": "Original schematic teaching aid for Probability distributions.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Probability distributions</title><desc>Original schematic illustration for Probability distributions.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 H280 M55 185 V35\" stroke=\"#64748b\"/><path d=\"M65 175 L95 135 L125 95 L155 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"210\" y=\"60\" font-size=\"13\" fill=\"#1e3a8a\">distribution</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Probability distributions</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A discrete random variable $X$ has the following probability distribution: P(X=0)=0.1, P(X=1)=0.3, P(X=2)=0.4, P(X=3)=k. Find the value of k and calculate P(X $\\geq$ 2).",
+          "solution_steps": [
+            "Step 1: Use the rule that all probabilities must sum to 1. $0.1 + 0.3 + 0.4 + k = 1$.",
+            "Step 2: Solve for k: $0.8 + k = 1 \\Rightarrow k = 0.2$.",
+            "Step 3: Calculate $P(X \\geq 2)$. This includes the events where $X=2$ and $X=3$.",
+            "Step 4: $P(X \\geq 2) = P(X=2) + P(X=3) = 0.4 + 0.2 = 0.6$."
+          ],
+          "final_answer": "k = 0.2, P(X ≥ 2) = 0.6"
+        },
+        {
+          "problem": "A continuous random variable has density $f(x)=c$ for $0\\leq x\\leq4$ and zero elsewhere. Find $c$ and $P(1\\leq X\\leq3)$.",
+          "solution_steps": [
+            "A probability density integrates to 1 over its full range.",
+            "Thus $\\int_0^4 c\\,dx=1$, so $4c=1$.",
+            "The required probability is the area under the density from 1 to 3.",
+            "Evaluate $\\int_1^3\\frac14\\,dx$."
+          ],
+          "final_answer": "$c=\\frac14$ and $P(1\\leq X\\leq3)=\\frac12$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to find an exact point probability for a continuous distribution.",
+          "correction": "For a continuous variable (like time), the probability of an event taking *exactly* 2.00000000 seconds is 0. You can only find the probability of a range, e.g., $P(1.9 \\leq X \\leq 2.1)$."
+        }
+      ],
+      "quick_summary": [
+        "A probability distribution lists all possible numerical outcomes and their probabilities.",
+        "For discrete variables, all probabilities must sum to 1.",
+        "For continuous variables, probabilities are areas under a curve, and the total area must equal 1."
+      ],
+      "registry_scope": "Draft 81 approved audit: Cover PMF, PDF and CDF, their interpretation and normalisation; introduce suitable discrete and continuous distributions, including uniform and normal distributions with standardisation. Treat Poisson as optional enrichment rather than a compulsory core.",
+      "distribution_note": "For a discrete random variable, a PMF assigns probabilities to individual values and the probabilities sum to 1. For a continuous random variable, a PDF is a non-negative density whose integral over the full domain is 1; probabilities are areas over intervals, and P(X=a)=0. A CDF is F(x)=P(X≤x) for either type.",
+      "normal_distribution_note": "For a normal random variable X with mean μ and standard deviation σ>0, standardise using Z=(X−μ)/σ. The standard normal variable has mean 0 and standard deviation 1. Poisson distribution is optional enrichment in this registry."
+    },
+    "hss_math_t17_st11": {
+      "id": "hss_math_t17_st11",
+      "title": "Expected value and variance",
+      "overview": "If you play a game of chance 1,000 times, what average outcome should you expect? Expected Value calculates this long-term mathematical average, while Variance measures how wildly the results will swing above and below that average.",
+      "key_concepts": [
+        {
+          "concept": "Expected Value E(X)",
+          "definition": "The long-term average.",
+          "details": [
+            "The expected value (or mean, $\\mu$) is found by multiplying every possible outcome by its probability, and adding them all together.",
+            "It represents the balance point of the distribution, not necessarily the most likely single outcome."
+          ]
+        },
+        {
+          "concept": "Variance Var(X)",
+          "definition": "The spread.",
+          "details": [
+            "Variance measures the average squared distance from the expected value. A high variance means outcomes are highly unpredictable and spread out.",
+            "Standard Deviation ($\\sigma$) is simply the square root of the Variance, bringing the spread back into the original units of measurement."
+          ]
+        },
+        {
+          "concept": "Linear Transformations",
+          "definition": "Shifting the rules.",
+          "details": [
+            "If you multiply a random variable by a constant and add a constant ($aX + b$):",
+            "The new Expected Value shifts directly: $E(aX + b) = aE(X) + b$.",
+            "The new Variance ignores addition and squares the multiplier: $\\operatorname{Var}(aX + b) = a^2\\operatorname{Var}(X)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Expected Value (Discrete)",
+          "equation": "$$ E(X) = \\sum x \\cdot p(x) $$",
+          "variables": {}
+        },
+        {
+          "name": "Variance (Shortcut Formula)",
+          "equation": "$$ \\operatorname{Var}(X) = E(X^2) - [E(X)]^2 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st11_visual_added01",
+          "title": "Expected value and variance — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Expected value and variance.",
+          "alt_text": "Original schematic teaching aid for Expected value and variance.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Expected value and variance</title><desc>Original schematic illustration for Expected value and variance.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 H280 M55 185 V35\" stroke=\"#64748b\"/><path d=\"M65 175 L95 135 L125 95 L155 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"210\" y=\"60\" font-size=\"13\" fill=\"#1e3a8a\">distribution</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Expected value and variance</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A game has the following payouts and probabilities: $0 (0.5 prob), $10 (0.3 prob), and $20 (0.2 prob). What is the expected payout E(X)?",
+          "solution_steps": [
+            "Step 1: Set up the Expected Value formula: $E(X) = \\sum x \\cdot P(X=x)$.",
+            "Step 2: Multiply each payout by its probability: $(0 \\times 0.5) + (10 \\times 0.3) + (20 \\times 0.2)$.",
+            "Step 3: Simplify the terms: $0 + 3 + 4$.",
+            "Step 4: Add them together to get the expected average payout."
+          ],
+          "final_answer": "$7"
+        },
+        {
+          "problem": "A discrete random variable has values 0, 1 and 2 with probabilities 0.2, 0.5 and 0.3. Find its mean and variance.",
+          "solution_steps": [
+            "The mean is $E(X)=\\sum xp(x)=0(0.2)+1(0.5)+2(0.3)=1.1$.",
+            "Compute $E(X^2)=0^2(0.2)+1^2(0.5)+2^2(0.3)=1.7$.",
+            "Use $\\operatorname{Var}(X)=E(X^2)-[E(X)]^2$.",
+            "The standard deviation is the square root of the variance."
+          ],
+          "final_answer": "$E(X)=1.1$; $\\operatorname{Var}(X)=1.7-1.21=0.49$; $\\sigma=0.7$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking the Expected Value must be a possible outcome.",
+          "correction": "In the example above, the expected value is $7. It is impossible to win exactly $7 in a single game. Expected Value is a long-term mathematical average, not a literal single payout."
+        }
+      ],
+      "quick_summary": [
+        "Expected Value is the probability-weighted average of all outcomes ($E(X) = \\sum x \\cdot p(x)$).",
+        "Variance measures how spread out the data is. Standard deviation is the square root of Variance.",
+        "When applying transformations, addition changes the Expected Value, but has zero effect on the Variance."
+      ],
+      "registry_scope": "Draft 81 approved audit: Develop expectation, variance and standard deviation for random variables from their probability distributions; avoid repeating elementary expected-value examples already treated in High School probability."
+    },
+    "hss_math_t17_st12": {
+      "id": "hss_math_t17_st12",
+      "title": "Bernoulli trials",
+      "overview": "A Bernoulli Trial is the simplest form of a random experiment: it only has two possible outcomes. You either win or lose, pass or fail, get Heads or get Tails. It is the building block for more complex probability models.",
+      "key_concepts": [
+        {
+          "concept": "The Binary Outcomes",
+          "definition": "Success or Failure.",
+          "details": [
+            "An experiment is a Bernoulli trial if it has exactly two mutually exclusive outcomes.",
+            "The probability of 'Success' is denoted as $p$.",
+            "The probability of 'Failure' is denoted as $q$, where $q = 1 - p$."
+          ]
+        },
+        {
+          "concept": "The Bernoulli Random Variable",
+          "definition": "0 or 1.",
+          "details": [
+            "We translate the outcomes into a discrete random variable $X$, where Success is assigned a value of 1, and Failure is assigned a value of 0.",
+            "The Expected Value $E(X) = p$.",
+            "The Variance $\\operatorname{Var}(X) = p(1-p) = pq$."
+          ]
+        },
+        {
+          "concept": "Repeated Trials",
+          "definition": "Building sequences.",
+          "details": [
+            "If you repeat a Bernoulli trial multiple times independently (like flipping a coin 5 times), the probability of any one *specific* sequence occurring is $p^r q^{n-r}$ (where $n$ is total trials and $r$ is successes)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Probability of a Specific Sequence",
+          "equation": "$$ p^r q^{n-r} $$",
+          "variables": {
+            "p": "Probability of success",
+            "q": "Probability of failure (1-p)",
+            "n": "Total trials",
+            "r": "Number of successes"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st12_visual_added01",
+          "title": "Bernoulli trials — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Bernoulli trials.",
+          "alt_text": "Original schematic teaching aid for Bernoulli trials.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Bernoulli trials</title><desc>Original schematic illustration for Bernoulli trials.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"48\" y=\"62\" width=\"224\" height=\"112\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"105\" text-anchor=\"middle\" font-size=\"16\" fill=\"#1e3a8a\">n trials</text><text x=\"160\" y=\"135\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1e3a8a\">success / failure</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Bernoulli trials</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A biased coin has a 0.6 probability of landing Heads (Success). It is tossed 4 times. Find the probability of obtaining the exact sequence: Head, Head, Tail, Tail.",
+          "solution_steps": [
+            "Step 1: Identify $p$ (Success) and $q$ (Failure). $p = 0.6$, so $q = 1 - 0.6 = 0.4$.",
+            "Step 2: Identify the sequence requirements. We want exactly 2 Successes ($r=2$) and 2 Failures ($n-r=2$) in a specific order.",
+            "Step 3: Multiply the probabilities in sequence: $0.6 \\times 0.6 \\times 0.4 \\times 0.4$.",
+            "Step 4: This is equivalent to $p^2 q^2 = 0.36 \\times 0.16$."
+          ],
+          "final_answer": "0.0576"
+        },
+        {
+          "problem": "A fair coin is tossed 6 times. State the number of trials, success probability and probability of exactly one head under the Bernoulli-trial model.",
+          "solution_steps": [
+            "There are 6 fixed trials, each with two outcomes.",
+            "The trials are independent and the success probability is constant at $p=0.5$.",
+            "For exactly one head, use $\\binom61p(1-p)^5$."
+          ],
+          "final_answer": "$n=6$, $p=0.5$; $P(X=1)=\\binom61(0.5)^6=\\frac{6}{64}=0.09375$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing the probability of a *specific sequence* with the probability of *getting a certain number of successes*.",
+          "correction": "The formula $p^r q^{n-r}$ only calculates the chance of one exact ordered sequence (like H-T-H). To find the probability of getting 2 Heads in *any* order, you must use the Binomial Distribution."
+        }
+      ],
+      "quick_summary": [
+        "A Bernoulli Trial has exactly two outcomes: Success ($p$) and Failure ($q=1-p$).",
+        "The expected value of a single Bernoulli trial is $p$, and the variance is $pq$.",
+        "To find the probability of a specific sequence of independent trials, just multiply the $p$'s and $q$'s together."
+      ],
+      "registry_scope": "Draft 81 approved audit: Explain a fixed number of independent trials, two possible outcomes per trial and constant success probability; establish these assumptions as the foundation for the binomial model.",
+      "assumptions_note": "A sequence of Bernoulli trials has a fixed number of trials, two possible outcomes per trial, independence between trials and a constant success probability p."
+    },
+    "hss_math_t17_st13": {
+      "id": "hss_math_t17_st13",
+      "title": "Binomial distribution",
+      "overview": "If you perform a Bernoulli trial multiple times (like rolling a die 10 times) and want to know the probability of getting exactly 3 'wins' in ANY order, you use the Binomial Distribution.",
+      "key_concepts": [
+        {
+          "concept": "The Binomial Conditions",
+          "definition": "The checklist.",
+          "details": [
+            "To use this model, four conditions must be met: 1) Fixed number of trials ($n$), 2) Only two outcomes (Success/Fail), 3) The trials must be independent, and 4) The probability of success ($p$) must stay exactly the same every time."
+          ]
+        },
+        {
+          "concept": "The Binomial Formula",
+          "definition": "Accounting for combinations.",
+          "details": [
+            "The probability of exactly $x$ successes in $n$ trials is $P(X=x) = \\binom{n}{x} p^x q^{n-x}$.",
+            "The $\\binom{n}{x}$ combination term is what accounts for the fact that the successes could happen in any order."
+          ]
+        },
+        {
+          "concept": "Mean and Variance",
+          "definition": "The shortcuts.",
+          "details": [
+            "For a full binomial distribution, the Expected Value (Mean) is simply $\\mu = np$.",
+            "The Variance is $\\sigma^2 = npq$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Binomial Probability",
+          "equation": "$$ P(X=x) = \\binom{n}{x} p^x (1-p)^{n-x} $$",
+          "variables": {
+            "n": "Total number of trials",
+            "x": "Number of successes desired",
+            "p": "Probability of success on a single trial"
+          }
+        },
+        {
+          "name": "Binomial Mean & Variance",
+          "equation": "$$ \\mu = np \\quad \\text{and} \\quad \\sigma^2 = npq $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st13_visual_added01",
+          "title": "Binomial distribution — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Binomial distribution.",
+          "alt_text": "Original schematic teaching aid for Binomial distribution.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Binomial distribution</title><desc>Original schematic illustration for Binomial distribution.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"48\" y=\"62\" width=\"224\" height=\"112\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"105\" text-anchor=\"middle\" font-size=\"16\" fill=\"#1e3a8a\">n trials</text><text x=\"160\" y=\"135\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1e3a8a\">success / failure</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Binomial distribution</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A factory produces components with a 10% defect rate. If 5 components are selected at random, find the probability that exactly 2 are defective.",
+          "solution_steps": [
+            "Step 1: Identify the parameters. $n = 5$ (trials), $p = 0.1$ (success = finding a defect), $q = 0.9$, and $x = 2$ (target successes).",
+            "Step 2: Apply the binomial formula: $P(X=2) = \\binom{5}{2} (0.1)^2 (0.9)^3$.",
+            "Step 3: Calculate the combination: $\\binom{5}{2} = 10$.",
+            "Step 4: Calculate the powers: $(0.1)^2 = 0.01$ and $(0.9)^3 = 0.729$.",
+            "Step 5: Multiply them all together: $10 \\times 0.01 \\times 0.729$."
+          ],
+          "final_answer": "0.0729"
+        },
+        {
+          "problem": "A fair coin is tossed 5 times. Find the probability of exactly 3 heads and state the mean and variance of the binomial random variable.",
+          "solution_steps": [
+            "Here $n=5$, $p=0.5$ and $q=0.5$.",
+            "Use $P(X=3)=\\binom53p^3q^2$.",
+            "The binomial mean is $np$ and variance is $npq$."
+          ],
+          "final_answer": "$P(X=3)=\\binom53(0.5)^5=\\frac{10}{32}=0.3125$; mean $=2.5$; variance $=1.25$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating 'At Least' probabilities by doing individual calculations for too many terms.",
+          "correction": "If asked for the probability of 'at least 1 success' out of 10 trials, do NOT calculate $P(1) + P(2) + ... + P(10)$. Use the complement rule instead: $1 - P(0)$."
+        }
+      ],
+      "quick_summary": [
+        "The Binomial Distribution calculates the probability of getting exactly $x$ successes in $n$ independent trials.",
+        "The formula combines Combinations (to account for different ordering) with the multiplication of probabilities.",
+        "The mean of a binomial distribution is $np$, and the variance is $npq$."
+      ],
+      "registry_scope": "Draft 81 approved audit: Develop the binomial probability model, its assumptions and formula, and calculate its mean and variance; apply it to suitable finite-trial contexts.",
+      "assumptions_note": "The binomial model requires n independent Bernoulli trials with the same success probability p. Let q=1−p; then P(X=r)=C(n,r)p^r q^(n−r), E(X)=np and Var(X)=npq."
+    },
+    "hss_math_t17_st14": {
+      "id": "hss_math_t17_st14",
+      "title": "Applications of probability",
+      "overview": "Probability theory is not just for dice and cards; it is a foundational tool used to quantify risk, interpret test results, design reliable systems, and make informed financial decisions in the real world.",
+      "key_concepts": [
+        {
+          "concept": "Medical Testing (Sensitivity and Specificity)",
+          "definition": "Evaluating diagnostics.",
+          "details": [
+            "**Sensitivity:** The probability a test correctly returns positive when the disease is present ($P(+ \\mid D)$).",
+            "**Specificity:** The probability a test correctly returns negative when the disease is absent ($P(- \\mid D^c)$).",
+            "A positive result must be evaluated alongside the overall rarity of the disease using Bayes' Theorem to find the true likelihood of illness."
+          ]
+        },
+        {
+          "concept": "Reliability Engineering",
+          "definition": "System failure rates.",
+          "details": [
+            "**Series Systems:** All components must work for the system to work. If components are independent, total reliability is the product of individual reliabilities ($P(A \\cap B) = P(A) \\times P(B)$).",
+            "**Parallel Systems:** Only one component needs to work. The system only fails if ALL components fail. Total reliability is $1 - P(\\text{all fail})$."
+          ]
+        },
+        {
+          "concept": "Decision Making with Expected Value",
+          "definition": "Weighing risk.",
+          "details": [
+            "In finance and insurance, decisions are often made by calculating the Expected Value of different choices.",
+            "If an investment offers a 50% chance of gaining $100 and a 50% chance of losing $20, the mathematical expected return is positive ($40), even though uncertainty remains."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t17_st14_visual_added01",
+          "title": "Applications of probability — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Applications of probability.",
+          "alt_text": "Original schematic teaching aid for Applications of probability.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Applications of probability</title><desc>Original schematic illustration for Applications of probability.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"55\" y=\"65\" width=\"210\" height=\"100\" rx=\"8\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><path d=\"M75 145 L125 105 L175 125 L245 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"160\" y=\"48\" text-anchor=\"middle\" font-size=\"14\" fill=\"#334155\">probability model</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Applications of probability</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "An airplane has two independent computer systems operating in parallel. System A has a 0.95 reliability rate, and System B has a 0.90 reliability rate. What is the probability that the airplane's overall computer network functions?",
+          "solution_steps": [
+            "Step 1: Recognize this is a parallel system. It only fails if BOTH systems fail.",
+            "Step 2: Calculate individual failure rates. $P(A_{fail}) = 1 - 0.95 = 0.05$. $P(B_{fail}) = 1 - 0.90 = 0.10$.",
+            "Step 3: Because they are independent, the probability they BOTH fail is $0.05 \\times 0.10 = 0.005$.",
+            "Step 4: The overall reliability is 1 minus the total failure rate: $1 - 0.005$."
+          ],
+          "final_answer": "0.995 (or 99.5%)"
+        },
+        {
+          "problem": "A component has probability 0.02 of failure. If 3 independent components are used in a system that works when at least one component works, find the system reliability.",
+          "solution_steps": [
+            "The system fails only if all three components fail.",
+            "By independence, the probability of all failing is $0.02^3$.",
+            "Reliability is the complement of system failure."
+          ],
+          "final_answer": "$R=1-(0.02)^3=0.999992$ (99.9992%)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming independent probabilities in a Series System are added together.",
+          "correction": "In a Series System, the reliability is MULTIPLIED. If two components each have a 90% success rate, the total system reliability drops to 81% ($0.9 \\times 0.9$), not 180%."
+        }
+      ],
+      "quick_summary": [
+        "In Series systems (like a string of Christmas lights), all parts must work. Multiply their individual reliabilities.",
+        "In Parallel systems (like backup generators), the system only fails if all parts fail. Multiply their failure rates, and subtract from 1.",
+        "Expected Value is used in finance to determine the average mathematical return of risky decisions."
+      ],
+      "registry_scope": "Draft 81 approved audit: Apply probability and distributions to experiments, quality control, reliability and decision-making; distinguish theoretical probability models from observed statistical frequencies and avoid duplicating descriptive statistics or statistical modelling. Boundary: HSS T17 covers theoretical probability models and probability distributions derived from specified random processes. Observed data, empirical frequency distributions, correlation and regression belong in HSS T18.",
+      "boundary_note": "This topic treats probabilities and distributions specified by theoretical random-process models. Observed frequency distributions, correlation, regression and empirical data modelling belong in HSS T18."
+    }
+  }
+}

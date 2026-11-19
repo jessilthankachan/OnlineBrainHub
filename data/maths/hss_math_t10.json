@@ -1,0 +1,1371 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t10",
+  "topicTitle": "Three-Dimensional Geometry and Vectors",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t10_st01": {
+      "id": "hss_math_t10_st01",
+      "title": "Three-dimensional coordinate system",
+      "overview": "To mathematically model the real world, we must step out of flat 2D planes and into 3D space. This lesson introduces the $z$-axis, mapping points in depth as well as width and height.",
+      "key_concepts": [
+        {
+          "concept": "The Three Axes and Planes",
+          "definition": "The 3D grid.",
+          "details": [
+            "A 3D system has three mutually perpendicular axes: $X$, $Y$, and $Z$, intersecting at the origin $(0,0,0)$.",
+            "These axes form three distinct flat coordinate planes: the $XY$-plane (floor), $YZ$-plane (side wall), and $XZ$-plane (front wall)."
+          ]
+        },
+        {
+          "concept": "Ordered Triples $(x,y,z)$",
+          "definition": "The 3D address.",
+          "details": [
+            "Every point requires three coordinates. For example, $P(3, 4, 5)$ means moving $3$ units along $x$, $4$ units along $y$, and $5$ units 'up' along $z$."
+          ]
+        },
+        {
+          "concept": "The Eight Octants",
+          "definition": "The 3D zones.",
+          "details": [
+            "Just as the 2D plane is divided into 4 quadrants, 3D space is divided by its three planes into 8 distinct regions called octants.",
+            "The 'First Octant' is where all three coordinates are positive $(+, +, +)$."
+          ]
+        },
+        {
+          "concept": "Coordinate planes and octants",
+          "definition": "The planes divide space into eight regions.",
+          "details": [
+            "The XY-plane has z=0, the XZ-plane has y=0 and the YZ-plane has x=0.",
+            "A point on a coordinate plane has the corresponding coordinate equal to zero. Points not on any coordinate plane lie in one of the eight octants."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Distances from coordinate planes",
+          "equation": "$$d_{XY}=|z|,\\quad d_{XZ}=|y|,\\quad d_{YZ}=|x|$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Three-dimensional coordinate planes",
+          "description": "Schematic showing three coordinate planes through the origin.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 210\"><g fill=\"none\" stroke-width=\"1.5\"><path d=\"M35 145 L170 145 L285 80 L150 80 Z\" fill=\"#60a5fa\" fill-opacity=\".18\" stroke=\"#2563eb\"/><path d=\"M150 80 L285 80 L285 15 L150 15 Z\" fill=\"#34d399\" fill-opacity=\".18\" stroke=\"#059669\"/><path d=\"M35 145 L150 80 L150 15 L35 80 Z\" fill=\"#fbbf24\" fill-opacity=\".18\" stroke=\"#d97706\"/><path d=\"M150 145 L150 10 M20 145 L292 145 M150 145 L285 70\" stroke=\"#111827\"/></g><g font-size=\"11\" fill=\"#111827\"><text x=\"294\" y=\"148\">x</text><text x=\"288\" y=\"68\">y</text><text x=\"155\" y=\"12\">z</text><text x=\"160\" y=\"158\">O</text><text x=\"205\" y=\"128\">XY</text><text x=\"260\" y=\"48\">YZ</text><text x=\"75\" y=\"88\">XZ</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "What is the perpendicular distance of the point $P(3, -4, 5)$ from the $XZ$-plane?",
+          "solution_steps": [
+            "Step 1: The $XZ$-plane is the flat surface where $y = 0$.",
+            "Step 2: The distance from a point to this plane is simply how far it travelled strictly along the $y$-axis.",
+            "Step 3: Look at the y-coordinate of $P(3, -4, 5)$, which is $-4$.",
+            "Step 4: Distance is a physical length, so we take the absolute value: $|-4| = 4$."
+          ],
+          "final_answer": "4 units"
+        },
+        {
+          "problem": "State the coordinate plane containing Q(-3,4,0), and find its distance from the XZ-plane.",
+          "solution_steps": [
+            "Since z=0, Q lies on the XY-plane.",
+            "Distance from the XZ-plane is the absolute value of the y-coordinate."
+          ],
+          "final_answer": "XY-plane; 4 units"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking the distance to an axis is just one coordinate.",
+          "correction": "The distance to a *plane* is one coordinate (e.g., distance to $XY$ plane is $|z|$). The distance to an *axis* requires Pythagoras of the other two coordinates (e.g., distance to $z$-axis is $\\sqrt{x^2 + y^2}$)."
+        }
+      ],
+      "quick_summary": [
+        "3D space uses three perpendicular axes ($x, y, z$) to form 8 octants.",
+        "Points are located using ordered triples $(x, y, z)$.",
+        "The distance from a point to a coordinate plane is just the absolute value of the missing coordinate (e.g., distance to $XY$-plane is $|z|$)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Introduce the three-dimensional Cartesian coordinate system, mutually perpendicular axes, origin, coordinate planes and octants. Plot and interpret points in space and relate 3D coordinates to the familiar 2D coordinate plane. Establish the geometric foundation for distance, section formulae, lines and vectors."
+    },
+    "hss_math_t10_st02": {
+      "id": "hss_math_t10_st02",
+      "title": "Distance between two points in 3D",
+      "overview": "The 3D distance formula is just the 2D Pythagorean theorem expanded to include depth. It calculates the exact length of a diagonal line stretching through three-dimensional space.",
+      "key_concepts": [
+        {
+          "concept": "The 3D Distance Formula",
+          "definition": "Extended Pythagoras.",
+          "details": [
+            "The distance $d$ between points $(x_1, y_1, z_1)$ and $(x_2, y_2, z_2)$ adds the squared difference of the $z$-coordinates inside the square root.",
+            "Formula: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$."
+          ]
+        },
+        {
+          "concept": "Distance from the Origin",
+          "definition": "The direct line.",
+          "details": [
+            "If one of the points is the origin $(0,0,0)$, the formula perfectly simplifies to just the magnitude of the coordinate: $d = \\sqrt{x^2 + y^2 + z^2}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "3D Distance Formula",
+          "equation": "$$ d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2} $$",
+          "variables": {}
+        },
+        {
+          "name": "Distance from Origin",
+          "equation": "$$ d = \\sqrt{x^2 + y^2 + z^2} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Distance between two points in 3D — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the distance between $A(1, 2, 3)$ and $B(4, 6, 3)$.",
+          "solution_steps": [
+            "Step 1: Identify coordinates. $x_1=1, y_1=2, z_1=3$ and $x_2=4, y_2=6, z_2=3$.",
+            "Step 2: Apply the 3D distance formula.",
+            "Step 3: $\\sqrt{(4 - 1)^2 + (6 - 2)^2 + (3 - 3)^2}$.",
+            "Step 4: Simplify inside brackets: $\\sqrt{3^2 + 4^2 + 0^2}$.",
+            "Step 5: Square and sum: $\\sqrt{9 + 16} = \\sqrt{25}$.",
+            "Step 6: Evaluate."
+          ],
+          "final_answer": "5 units"
+        },
+        {
+          "problem": "Find the distance between P(-1,2,0) and Q(2,-2,4).",
+          "solution_steps": [
+            "Coordinate differences are 3, -4 and 4.",
+            "Distance = sqrt(3²+(-4)²+4²)=sqrt(9+16+16)."
+          ],
+          "final_answer": "$$\\sqrt{41}\\text{ units}$$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Subtracting coordinates from different axes.",
+          "correction": "You must strictly subtract $x$ from $x$, $y$ from $y$, and $z$ from $z$. Mixing them up (e.g., $y_2 - x_1$) will ruin the calculation."
+        }
+      ],
+      "quick_summary": [
+        "The 3D distance formula is just the 2D formula with $(z_2 - z_1)^2$ added inside the square root.",
+        "It calculates the physical length of a line segment hanging in 3D space.",
+        "Distance from the origin is simply the square root of the sum of the squared coordinates."
+      ],
+      "registry_scope": "Approved lesson-level scope: Derive and apply the distance formula between two points in three-dimensional space using coordinate differences and the Pythagorean theorem. Include straightforward geometric and applied problems; do not repeat the 2D distance formula except as a brief link."
+    },
+    "hss_math_t10_st03": {
+      "id": "hss_math_t10_st03",
+      "title": "Section formula in 3D",
+      "overview": "If a line segment floats in 3D space, how do you find the exact coordinates of a point that cuts it into a specific ratio? The 3D Section Formula mirrors its 2D counterpart, simply adding a third calculation for the z-axis.",
+      "key_concepts": [
+        {
+          "concept": "Internal Division (Section Formula)",
+          "definition": "Splitting the line.",
+          "details": [
+            "To find point $P$ dividing segment $AB$ internally in ratio $m:n$, cross-multiply the ratio with the opposite coordinates for all three axes.",
+            "$P(x,y,z) = \\left( \\frac{mx_2 + nx_1}{m+n}, \\frac{my_2 + ny_1}{m+n}, \\frac{mz_2 + nz_1}{m+n} \\right)$."
+          ]
+        },
+        {
+          "concept": "The Midpoint Formula",
+          "definition": "The $1:1$ ratio.",
+          "details": [
+            "If the ratio is exactly equal ($m=1, n=1$), the section formula simplifies to just averaging the coordinates.",
+            "$M = \\left( \\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}, \\frac{z_1 + z_2}{2} \\right)$."
+          ]
+        },
+        {
+          "concept": "The Centroid of a 3D Triangle",
+          "definition": "The 3D center of mass.",
+          "details": [
+            "Calculated by averaging the $x, y,$ and $z$ coordinates of all three vertices of the triangle.",
+            "$G = \\left( \\frac{x_1 + x_2 + x_3}{3}, \\frac{y_1 + y_2 + y_3}{3}, \\frac{z_1 + z_2 + z_3}{3} \\right)$."
+          ]
+        },
+        {
+          "concept": "External division",
+          "definition": "A point on the extension of a segment.",
+          "details": [
+            "If P divides AB externally in the directed ratio m:n, with m not equal to n, its coordinates are ((mx2-nx1)/(m-n), (my2-ny1)/(m-n), (mz2-nz1)/(m-n)).",
+            "The denominator must be non-zero; the formula uses directed division and the resulting point lies outside the segment."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "3D Section Formula (Internal)",
+          "equation": "$$ P = \\left( \\frac{mx_2 + nx_1}{m+n}, \\frac{my_2 + ny_1}{m+n}, \\frac{mz_2 + nz_1}{m+n} \\right) $$",
+          "variables": {}
+        },
+        {
+          "name": "3D Midpoint Formula",
+          "equation": "$$ M = \\left( \\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}, \\frac{z_1 + z_2}{2} \\right) $$",
+          "variables": {}
+        },
+        {
+          "name": "3D Section Formula (External)",
+          "equation": "$$P=\\left(\\frac{mx_2-nx_1}{m-n},\\frac{my_2-ny_1}{m-n},\\frac{mz_2-nz_1}{m-n}\\right),\\quad m\\ne n$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Section formula in 3D — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the midpoint of the line segment joining $A(1, 4, -2)$ and $B(3, 0, 6)$.",
+          "solution_steps": [
+            "Step 1: The midpoint formula averages each coordinate.",
+            "Step 2: Average x-coordinates: $\\frac{1 + 3}{2} = \\frac{4}{2} = 2$.",
+            "Step 3: Average y-coordinates: $\\frac{4 + 0}{2} = \\frac{4}{2} = 2$.",
+            "Step 4: Average z-coordinates: $\\frac{-2 + 6}{2} = \\frac{4}{2} = 2$.",
+            "Step 5: Combine into a single coordinate point."
+          ],
+          "final_answer": "(2, 2, 2)"
+        },
+        {
+          "problem": "Find the point dividing A(1,2,3) and B(5,6,7) internally in the ratio 1:3.",
+          "solution_steps": [
+            "Use P=(mB+nA)/(m+n) with m=1 and n=3.",
+            "x=(5+3)/4=2; y=(6+6)/4=3; z=(7+9)/4=4."
+          ],
+          "final_answer": "P=(2,3,4)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying the internal formula when external division is requested.",
+          "correction": "If a point divides a line segment 'externally', you MUST change the addition signs in the section formula to subtraction signs: $\\frac{mx_2 - nx_1}{m-n}$."
+        }
+      ],
+      "quick_summary": [
+        "The 3D Section Formula finds the exact coordinates that divide a line segment into a specific ratio $m:n$.",
+        "The Midpoint is simply the average of the two endpoints' coordinates.",
+        "The Centroid is the average of a triangle's three vertices."
+      ],
+      "registry_scope": "Approved lesson-level scope: Apply internal and external section formulae in 3D, including the midpoint as a special case. Interpret ratios geometrically and solve coordinate examples. Keep centroid and triangle applications concise where they overlap with HSS T08."
+    },
+    "hss_math_t10_st07": {
+      "id": "hss_math_t10_st07",
+      "title": "Vector notation and representation",
+      "overview": "A vector is a directed quantity represented geometrically by an arrow and algebraically by its components. This lesson establishes the notation used for vectors in three-dimensional space.",
+      "key_concepts": [
+        {
+          "concept": "Directed line segments",
+          "definition": "A geometric representation of a vector.",
+          "details": [
+            "A directed segment from point A to point B has initial point A and terminal point B. Its direction is from A to B and its magnitude is the segment length.",
+            "A vector is independent of its position: translating an arrow without rotating or changing its length represents the same vector."
+          ]
+        },
+        {
+          "concept": "Equal and zero vectors",
+          "definition": "Vectors with the same components, and the additive identity.",
+          "details": [
+            "Two vectors are equal when they have equal magnitudes and the same direction; in component form, their corresponding components are equal.",
+            "The zero vector is (0,0,0), has magnitude zero and has no defined direction."
+          ]
+        },
+        {
+          "concept": "Component notation",
+          "definition": "Writing vectors using the coordinate directions.",
+          "details": [
+            "The standard unit vectors i, j and k point along the positive x-, y- and z-axes.",
+            "A vector v=(a,b,c) is written v=ai+bj+ck. Its components are signed; a negative component points in the corresponding negative axis direction."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Component form",
+          "equation": "$$\\mathbf v=a\\mathbf i+b\\mathbf j+c\\mathbf k$$",
+          "variables": {
+            "a,b,c": "Signed components along the x-, y- and z-axes"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Vector notation and representation — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Write the vector from A(1,-2,3) to B(4,0,-1) in component form.",
+          "solution_steps": [
+            "Subtract the coordinates of A from the corresponding coordinates of B.",
+            "The displacement components are (4-1, 0-(-2), -1-3)=(3,2,-4).",
+            "Use the unit-vector notation."
+          ],
+          "final_answer": "$$\\overrightarrow{AB}=3\\mathbf i+2\\mathbf j-4\\mathbf k$$"
+        },
+        {
+          "problem": "Determine whether a=(2,-1,4) and b=(2,-1,4) are equal, and state the zero vector in component form.",
+          "solution_steps": [
+            "The corresponding components of a and b are identical.",
+            "The zero vector has each component equal to zero."
+          ],
+          "final_answer": "The vectors are equal; zero vector=(0,0,0)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming that equal vectors must have the same initial point.",
+          "correction": "Equal vectors may be drawn at different positions. They must have the same magnitude and direction."
+        }
+      ],
+      "quick_summary": [
+        "A vector has magnitude and direction.",
+        "A vector in 3D has three signed components.",
+        "The zero vector has all components equal to zero."
+      ],
+      "registry_scope": "Approved lesson-level scope: Introduce vector notation and geometric representation, including directed line segments, equal vectors, zero vector and basic vector interpretation. Establish notation before vector magnitude and operations; do not repeat the full 2D vector introduction from High School T12 unnecessarily."
+    },
+    "hss_math_t10_st08": {
+      "id": "hss_math_t10_st08",
+      "title": "Magnitude and direction of vectors",
+      "overview": "The magnitude of a vector is its length. Its direction can be described by a unit vector or by the angles it makes with the coordinate axes.",
+      "key_concepts": [
+        {
+          "concept": "Magnitude",
+          "definition": "The non-negative length of a vector.",
+          "details": [
+            "For v=(a,b,c), apply the three-dimensional Pythagorean theorem: |v|=sqrt(a²+b²+c²).",
+            "The magnitude is zero only for the zero vector."
+          ]
+        },
+        {
+          "concept": "Unit vector",
+          "definition": "A vector of magnitude one.",
+          "details": [
+            "For a non-zero vector v, its unit vector is v/|v|.",
+            "A unit vector preserves direction while changing the magnitude to one. The zero vector cannot be normalised."
+          ]
+        },
+        {
+          "concept": "Direction angles",
+          "definition": "Angles made with the positive coordinate axes.",
+          "details": [
+            "If alpha, beta and gamma are the angles with the positive x-, y- and z-axes, their cosines are the direction cosines.",
+            "For a non-zero vector (a,b,c), these are a/|v|, b/|v| and c/|v| respectively."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Magnitude",
+          "equation": "$$|\\mathbf v|=\\sqrt{a^2+b^2+c^2}$$",
+          "variables": {}
+        },
+        {
+          "name": "Unit vector",
+          "equation": "$$\\hat{\\mathbf v}=\\frac{\\mathbf v}{|\\mathbf v|},\\quad\\mathbf v\\ne\\mathbf0$$",
+          "variables": {}
+        },
+        {
+          "name": "Direction cosine relation",
+          "equation": "$$\\cos\\alpha=\\frac a{|\\mathbf v|},\\;\\cos\\beta=\\frac b{|\\mathbf v|},\\;\\cos\\gamma=\\frac c{|\\mathbf v|}$$",
+          "variables": {}
+        },
+        {
+          "name": "Direction cosine identity",
+          "equation": "$$l^2+m^2+n^2=1$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Magnitude and direction of vectors — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the magnitude and a unit vector in the direction of v= -2i+3j+6k.",
+          "solution_steps": [
+            "Compute |v|=sqrt((-2)²+3²+6²)=sqrt(4+9+36)=7.",
+            "Divide each component by 7."
+          ],
+          "final_answer": "Magnitude = 7; unit vector = $$-\\frac27\\mathbf i+\\frac37\\mathbf j+\\frac67\\mathbf k$$"
+        },
+        {
+          "problem": "Find the direction cosines of v=2i-2j+k.",
+          "solution_steps": [
+            "Magnitude is sqrt(4+4+1)=3.",
+            "Divide each component by 3."
+          ],
+          "final_answer": "$$l=\\frac23,\\quad m=-\\frac23,\\quad n=\\frac13$$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to find a unit vector by dividing by a signed component.",
+          "correction": "Divide the entire vector by its non-negative magnitude. The magnitude is the square root of the sum of the squares of all components."
+        }
+      ],
+      "quick_summary": [
+        "Magnitude measures vector length.",
+        "A unit vector has magnitude one.",
+        "Direction cosines are the cosines of the angles with the positive coordinate axes."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop vector components, magnitude, direction and unit vectors in three-dimensional settings. Connect components to coordinate axes and distinguish general vector direction from line-specific direction ratios and direction cosines in this topic."
+    },
+    "hss_math_t10_st11": {
+      "id": "hss_math_t10_st11",
+      "title": "Position vectors",
+      "overview": "A position vector is the bridge between a static coordinate point and vector algebra. It transforms a dot on a map into an arrow pointing from the origin directly to that dot, allowing us to perform mathematical operations on locations.",
+      "key_concepts": [
+        {
+          "concept": "The Position Vector Definition",
+          "definition": "Anchored to the origin.",
+          "details": [
+            "For any point $P(x, y, z)$, its position vector is the arrow starting at the origin $O(0,0,0)$ and ending exactly at $P$.",
+            "It is denoted as $\\overrightarrow{OP}$ or simply $\\mathbf{r}$."
+          ]
+        },
+        {
+          "concept": "Component Form conversion",
+          "definition": "Points to Vectors.",
+          "details": [
+            "To turn point $P(4, 3, 5)$ into a position vector, simply attach the directional markers to the coordinates.",
+            "$\\mathbf{r} = 4\\mathbf{i} + 3\\mathbf{j} + 5\\mathbf{k}$."
+          ]
+        },
+        {
+          "concept": "Displacement Vectors",
+          "definition": "Point to Point.",
+          "details": [
+            "If you want to travel from point $A$ directly to point $B$, you create a displacement vector $\\overrightarrow{AB}$.",
+            "$\\overrightarrow{AB}$ is found by subtracting the position vector of the start point from the end point: $\\overrightarrow{OB} - \\overrightarrow{OA}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Position Vector",
+          "equation": "$$ \\overrightarrow{OP} = x\\mathbf{i} + y\\mathbf{j} + z\\mathbf{k} $$",
+          "variables": {}
+        },
+        {
+          "name": "Displacement Vector",
+          "equation": "$$ \\overrightarrow{AB} = \\overrightarrow{OB} - \\overrightarrow{OA} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Position vectors — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the displacement vector $\\overrightarrow{AB}$ connecting point $A(1, 2, 3)$ to point $B(4, 5, 6)$.",
+          "solution_steps": [
+            "Step 1: Write the position vector for $A$: $\\overrightarrow{OA} = 1\\mathbf{i} + 2\\mathbf{j} + 3\\mathbf{k}$.",
+            "Step 2: Write the position vector for $B$: $\\overrightarrow{OB} = 4\\mathbf{i} + 5\\mathbf{j} + 6\\mathbf{k}$.",
+            "Step 3: Apply the displacement formula: $\\overrightarrow{AB} = \\overrightarrow{OB} - \\overrightarrow{OA}$.",
+            "Step 4: Subtract components: $(4 - 1)\\mathbf{i} + (5 - 2)\\mathbf{j} + (6 - 3)\\mathbf{k}$."
+          ],
+          "final_answer": "3i + 3j + 3k"
+        },
+        {
+          "problem": "If position vectors of A and B are a=2i+j-k and b=-i+3j+2k, find AB.",
+          "solution_steps": [
+            "The displacement from A to B is b-a.",
+            "Subtract components: (-1-2,3-1,2-(-1))=(-3,2,3)."
+          ],
+          "final_answer": "$$\\overrightarrow{AB}=-3\\mathbf i+2\\mathbf j+3\\mathbf k$$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Subtracting Start from End incorrectly.",
+          "correction": "To find the vector $\\overrightarrow{AB}$ (traveling from $A$ to $B$), you MUST subtract $A$ from $B$ (Destination minus Origin). Doing it backwards gives the vector pointing in the opposite direction."
+        }
+      ],
+      "quick_summary": [
+        "A position vector translates a coordinate point into a vector starting from the origin.",
+        "It is formed by attaching $\\mathbf{i}, \\mathbf{j}, \\mathbf{k}$ to the $x, y, z$ coordinates.",
+        "To find the vector between two points, subtract the starting position vector from the ending position vector."
+      ],
+      "registry_scope": "Approved lesson-level scope: Use position vectors to represent points, displacement and geometric relationships in 3D. Include vector expressions for line segments and simple geometric proofs or applications. Avoid duplicating the coordinate section formula developed in subtopic 3."
+    },
+    "hss_math_t10_st09": {
+      "id": "hss_math_t10_st09",
+      "title": "Vector addition and subtraction",
+      "overview": "Vectors are added and subtracted by combining corresponding components. The geometric triangle and parallelogram laws explain these operations as joining directed segments.",
+      "key_concepts": [
+        {
+          "concept": "Component-wise operations",
+          "definition": "Add or subtract matching components.",
+          "details": [
+            "If a=(a1,a2,a3) and b=(b1,b2,b3), then a+b=(a1+b1,a2+b2,a3+b3).",
+            "Subtraction is addition of the opposite vector: a-b=a+(-b)."
+          ]
+        },
+        {
+          "concept": "Triangle and parallelogram laws",
+          "definition": "Geometric constructions for vector addition.",
+          "details": [
+            "For the triangle law, place the tail of the second vector at the head of the first; the resultant runs from the first tail to the second head.",
+            "For the parallelogram law, place both vectors at the same initial point; the diagonal from that point is their sum."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Vector addition",
+          "equation": "$$\\mathbf a+\\mathbf b=(a_1+b_1,a_2+b_2,a_3+b_3)$$",
+          "variables": {}
+        },
+        {
+          "name": "Vector subtraction",
+          "equation": "$$\\mathbf a-\\mathbf b=(a_1-b_1,a_2-b_2,a_3-b_3)$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Vector addition and subtraction — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "If a=(2,-1,3) and b=(-4,5,1), find a+b and a-b.",
+          "solution_steps": [
+            "Add corresponding components: (2-4,-1+5,3+1).",
+            "Subtract corresponding components: (2-(-4),-1-5,3-1)."
+          ],
+          "final_answer": "a+b=(-2,4,4); a-b=(6,-6,2)"
+        },
+        {
+          "problem": "Add vectors $\\mathbf a=(2,-1,3)$ and $\\mathbf b=(1,4,-2)$.",
+          "solution_steps": [
+            "Add corresponding components.",
+            "Compute $(2+1,-1+4,3-2)$."
+          ],
+          "final_answer": "$\\mathbf a+\\mathbf b=(3,3,1)$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding magnitudes instead of corresponding components.",
+          "correction": "Vector addition is component-wise; the magnitude of the resultant is calculated only after the resultant vector is found."
+        }
+      ],
+      "quick_summary": [
+        "Add and subtract corresponding components.",
+        "The triangle and parallelogram laws give geometric interpretations."
+      ],
+      "registry_scope": "Approved lesson-level scope: Teach vector addition and subtraction geometrically and component-wise, including triangle and parallelogram laws and displacement applications. Build on High School T12 operations without repeating introductory 2D examples at length."
+    },
+    "hss_math_t10_st10": {
+      "id": "hss_math_t10_st10",
+      "title": "Scalar multiplication",
+      "overview": "Multiplying a vector by a scalar changes its magnitude and may reverse its direction. Scalar multiplication also produces linear combinations of vectors.",
+      "key_concepts": [
+        {
+          "concept": "Multiplication by a scalar",
+          "definition": "Scaling each component by the same real number.",
+          "details": [
+            "For scalar k and vector a=(a1,a2,a3), ka=(ka1,ka2,ka3).",
+            "The magnitude is |ka|=|k||a|."
+          ]
+        },
+        {
+          "concept": "Direction and parallel vectors",
+          "definition": "The sign of the scalar determines orientation.",
+          "details": [
+            "If k is positive, ka has the same direction as a; if k is negative, it has the opposite direction.",
+            "For non-zero vectors, one is parallel to the other exactly when one is a scalar multiple of the other."
+          ]
+        },
+        {
+          "concept": "Linear combinations",
+          "definition": "Combining vectors with scalar coefficients.",
+          "details": [
+            "An expression ka+mb is a linear combination of vectors a and b.",
+            "The components can be evaluated using ordinary component-wise vector operations."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Scalar multiplication",
+          "equation": "$$k\\mathbf a=(ka_1,ka_2,ka_3)$$",
+          "variables": {}
+        },
+        {
+          "name": "Magnitude under scalar multiplication",
+          "equation": "$$|k\\mathbf a|=|k|\\,|\\mathbf a|$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Scalar multiplication — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given a=(1,-2,3), find -2a and its magnitude.",
+          "solution_steps": [
+            "Multiply every component by -2 to get (-2,4,-6).",
+            "The magnitude is sqrt((-2)^2+4^2+(-6)^2)=sqrt(56)."
+          ],
+          "final_answer": "-2a=(-2,4,-6); | -2a |=2sqrt(14)"
+        },
+        {
+          "problem": "If $\\mathbf a=(1,-2,3)$, find $3\\mathbf a$.",
+          "solution_steps": [
+            "Multiply each component by 3."
+          ],
+          "final_answer": "$3\\mathbf a=(3,-6,9)$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming a negative scalar changes only the magnitude.",
+          "correction": "A negative scalar reverses the vector direction as well as scaling its magnitude."
+        }
+      ],
+      "quick_summary": [
+        "A scalar multiplies every vector component.",
+        "The magnitude is scaled by the absolute value of the scalar.",
+        "A negative scalar reverses direction."
+      ],
+      "registry_scope": "Approved lesson-level scope: Teach multiplication of a vector by a scalar, including effects on magnitude and direction, parallel and antiparallel vectors, and simple linear combinations. Avoid overlap with matrix scalar multiplication in HSS T04."
+    },
+    "hss_math_t10_st12": {
+      "id": "hss_math_t10_st12",
+      "title": "Dot product of vectors",
+      "overview": "Multiplying two vectors together is not as simple as multiplying regular numbers. The Dot Product (or Scalar Product) combines two directional arrows and crushes them down into a single regular number, measuring how much they 'align' with each other.",
+      "key_concepts": [
+        {
+          "concept": "The Dot Product Result",
+          "definition": "Vector $\\times$ Vector = Scalar.",
+          "details": [
+            "Unlike vector addition which creates a new arrow, taking the dot product of two vectors results in a pure scalar (just a regular number, no direction).",
+            "A positive dot product means the vectors point generally in the same direction. A negative dot product means they point generally away from each other."
+          ]
+        },
+        {
+          "concept": "Geometric Formula",
+          "definition": "The angle calculation.",
+          "details": [
+            "$\\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}| |\\mathbf{b}| \\cos\\theta$.",
+            "It multiplies their lengths and scales the result based on the angle between them."
+          ]
+        },
+        {
+          "concept": "Algebraic Formula",
+          "definition": "The component calculation.",
+          "details": [
+            "If you only have the coordinates, simply multiply the matching components and add the three results together.",
+            "$\\mathbf{a} \\cdot \\mathbf{b} = (a_1 b_1) + (a_2 b_2) + (a_3 b_3)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Dot Product (Geometric)",
+          "equation": "$$ \\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}| |\\mathbf{b}| \\cos\\theta $$",
+          "variables": {}
+        },
+        {
+          "name": "Dot Product (Algebraic)",
+          "equation": "$$ \\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2 + a_3 b_3 $$",
+          "variables": {}
+        },
+        {
+          "name": "Dot product in components",
+          "equation": "$$\\mathbf a\\cdot\\mathbf b=a_1b_1+a_2b_2+a_3b_3$$",
+          "variables": {}
+        },
+        {
+          "name": "Scalar projection of a on b",
+          "equation": "$$\\operatorname{comp}_{\\mathbf b}(\\mathbf a)=\\frac{\\mathbf a\\cdot\\mathbf b}{|\\mathbf b|},\\quad\\mathbf b\\ne\\mathbf0$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Dot product of vectors — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the dot product of $\\mathbf{a} = 3\\mathbf{i} - 2\\mathbf{j} + 4\\mathbf{k}$ and $\\mathbf{b} = 1\\mathbf{i} + 5\\mathbf{j} - 2\\mathbf{k}$.",
+          "solution_steps": [
+            "Step 1: Multiply the $\\mathbf{i}$ components: $3 \\times 1 = 3$.",
+            "Step 2: Multiply the $\\mathbf{j}$ components: $-2 \\times 5 = -10$.",
+            "Step 3: Multiply the $\\mathbf{k}$ components: $4 \\times -2 = -8$.",
+            "Step 4: Add the results together: $3 + (-10) + (-8)$.",
+            "Step 5: $3 - 10 - 8 = -15$."
+          ],
+          "final_answer": "-15"
+        },
+        {
+          "problem": "Find the scalar projection of a=(3,4,0) on b=(1,0,0).",
+          "solution_steps": [
+            "Calculate a·b=3.",
+            "Magnitude |b|=1.",
+            "Divide the dot product by |b|."
+          ],
+          "final_answer": "3"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Leaving $\\mathbf{i}, \\mathbf{j}, \\mathbf{k}$ in the final answer.",
+          "correction": "The answer to a dot product is a SCALAR. It is just a number (like $-15$). It should never have directional letters attached to it."
+        }
+      ],
+      "quick_summary": [
+        "The Dot Product evaluates how much two vectors point in the same direction.",
+        "It outputs a single scalar number.",
+        "It can be calculated using angles ($|\\mathbf{a}| |\\mathbf{b}| \\cos\\theta$) or directly from components ($a_1b_1 + a_2b_2 + a_3b_3$)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Define and calculate the dot product, establish its algebraic and geometric properties, and apply it to perpendicularity and scalar projection. Develop the operation and its properties here; detailed angle calculations are in the following vector-angle subtopic."
+    },
+    "hss_math_t10_st14": {
+      "id": "hss_math_t10_st14",
+      "title": "Angles between vectors",
+      "overview": "If two airplanes are flying in different directions, we can use the Dot Product to calculate the exact 3D angle between their flight paths.",
+      "key_concepts": [
+        {
+          "concept": "The Angle Formula",
+          "definition": "Isolating $\\cos\\theta$.",
+          "details": [
+            "By rearranging the geometric dot product formula, we can isolate the angle: $\\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{|\\mathbf{a}| |\\mathbf{b}|}$.",
+            "Calculate the algebraic dot product for the numerator, and multiply the two individual magnitudes for the denominator."
+          ]
+        },
+        {
+          "concept": "Perpendicular Vectors (Orthogonal)",
+          "definition": "The $90^\\circ$ test.",
+          "details": [
+            "If the angle between two vectors is exactly $90^\\circ$, their cosine is $0$.",
+            "Therefore, if the dot product of two vectors is exactly $0$ ($\\mathbf{a} \\cdot \\mathbf{b} = 0$), the vectors are perfectly perpendicular."
+          ]
+        },
+        {
+          "concept": "Parallel Vectors",
+          "definition": "The $0^\\circ$ test.",
+          "details": [
+            "If two vectors are parallel, their angle is $0^\\circ$ (or $180^\\circ$). Their dot product equals the exact multiplication of their magnitudes."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Angle Between Vectors",
+          "equation": "$$ \\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{|\\mathbf{a}| |\\mathbf{b}|} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Angles between vectors — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Determine if $\\mathbf{a} = 2\\mathbf{i} + 4\\mathbf{j} - \\mathbf{k}$ and $\\mathbf{b} = 3\\mathbf{i} - \\mathbf{j} + 2\\mathbf{k}$ are perpendicular.",
+          "solution_steps": [
+            "Step 1: Check the perpendicular condition: $\\mathbf{a} \\cdot \\mathbf{b} = 0$.",
+            "Step 2: Calculate the dot product: $(2 \\times 3) + (4 \\times -1) + (-1 \\times 2)$.",
+            "Step 3: $6 - 4 - 2 = 0$.",
+            "Step 4: Because the dot product is exactly zero, the vectors meet at a $90^\\circ$ angle."
+          ],
+          "final_answer": "Yes, they are perpendicular."
+        },
+        {
+          "problem": "Find the angle between a=(1,1,0) and b=(1,0,1).",
+          "solution_steps": [
+            "Dot product is 1.",
+            "Both magnitudes are sqrt(2).",
+            "cos(theta)=1/(sqrt(2)sqrt(2))=1/2."
+          ],
+          "final_answer": "60 degrees"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Stopping at the cosine value.",
+          "correction": "The formula gives you $\\cos\\theta$. If a question asks for the actual *angle*, you must take the inverse cosine ($\\arccos$) of that value to find $\\theta$."
+        }
+      ],
+      "quick_summary": [
+        "The angle between two vectors is found by dividing their dot product by the product of their magnitudes.",
+        "If $\\mathbf{a} \\cdot \\mathbf{b} = 0$, the vectors are perfectly perpendicular.",
+        "The angle is always measured between $0^\\circ$ and $180^\\circ$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Calculate and interpret the angle between two vectors, primarily through the dot-product formula. Distinguish the angle between general vectors from the angle between lines in subtopic 14 of the approved sequence; do not re-teach dot-product properties."
+    },
+    "hss_math_t10_st13": {
+      "id": "hss_math_t10_st13",
+      "title": "Cross product of vectors",
+      "overview": "While the Dot Product produces a single number, the Cross Product takes two 3D arrows and magically produces a brand new 3D arrow that points perfectly perpendicular to both of them.",
+      "key_concepts": [
+        {
+          "concept": "The Cross Product Result",
+          "definition": "Vector $\\times$ Vector = New Vector.",
+          "details": [
+            "The cross product ($\\mathbf{a} \\times \\mathbf{b}$) creates a new vector that is $90^\\circ$ perpendicular to the flat plane created by the original two vectors.",
+            "It is heavily used in physics for calculating torque and magnetic force."
+          ]
+        },
+        {
+          "concept": "The Right-Hand Rule",
+          "definition": "Up or Down?",
+          "details": [
+            "Because there are two directions that are perpendicular to a flat plane (straight up or straight down), the direction of $\\mathbf{a} \\times \\mathbf{b}$ is determined by the right-hand rule.",
+            "Point your right fingers along $\\mathbf{a}$, curl them toward $\\mathbf{b}$, and your thumb points in the direction of the new vector."
+          ]
+        },
+        {
+          "concept": "Magnitude and Geometry",
+          "definition": "Area of a parallelogram.",
+          "details": [
+            "The magnitude of the cross product $|\\mathbf{a} \\times \\mathbf{b}| = |\\mathbf{a}| |\\mathbf{b}| \\sin\\theta$.",
+            "Geometrically, this magnitude is exactly equal to the Area of the parallelogram formed by $\\mathbf{a}$ and $\\mathbf{b}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Cross Product Magnitude",
+          "equation": "$$ |\\mathbf{a} \\times \\mathbf{b}| = |\\mathbf{a}| |\\mathbf{b}| \\sin\\theta $$",
+          "variables": {}
+        },
+        {
+          "name": "Cross product components",
+          "equation": "$$\\mathbf a\\times\\mathbf b=(a_2b_3-a_3b_2,\\;a_3b_1-a_1b_3,\\;a_1b_2-a_2b_1)$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Cross product of vectors — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "If two vectors are perfectly parallel, what is the magnitude of their cross product?",
+          "solution_steps": [
+            "Step 1: Identify the angle between parallel vectors: $\\theta = 0^\\circ$.",
+            "Step 2: Recall the formula for the magnitude of a cross product: $|\\mathbf{a}| |\\mathbf{b}| \\sin\\theta$.",
+            "Step 3: Evaluate $\\sin(0^\\circ)$, which is exactly $0$.",
+            "Step 4: Anything multiplied by zero is zero."
+          ],
+          "final_answer": "0"
+        },
+        {
+          "problem": "Calculate (1,2,0)×(0,1,3).",
+          "solution_steps": [
+            "Apply the component formula.",
+            "The first component is 2(3)-0(1)=6.",
+            "The second is 0(0)-1(3)=-3.",
+            "The third is 1(1)-2(0)=1."
+          ],
+          "final_answer": "(6,-3,1)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating $\\mathbf{a} \\times \\mathbf{b}$ and $\\mathbf{b} \\times \\mathbf{a}$ as the same thing.",
+          "correction": "Cross products are NOT commutative. Due to the right-hand rule, reversing the order flips the vector completely upside down. $\\mathbf{a} \\times \\mathbf{b} = -(\\mathbf{b} \\times \\mathbf{a})$."
+        }
+      ],
+      "quick_summary": [
+        "The Cross Product produces a new vector that is perpendicular to both original vectors.",
+        "Its direction is dictated by the Right-Hand Rule.",
+        "Its magnitude $|\\mathbf{a} \\times \\mathbf{b}|$ calculates the physical area of the parallelogram formed by the two vectors."
+      ],
+      "registry_scope": "Approved lesson-level scope: Define and calculate the cross product using geometric interpretation and component or determinant methods. Cover magnitude, direction and the right-hand rule; apply it to areas of parallelograms and triangles and tests for parallel vectors. Do not extend to vector calculus."
+    },
+    "hss_math_t10_st04": {
+      "id": "hss_math_t10_st04",
+      "title": "Direction ratios and direction cosines",
+      "overview": "To describe the exact tilt of a line in 3D space, we look at the three individual angles it makes with the X, Y, and Z axes. This gives us the Direction Cosines.",
+      "key_concepts": [
+        {
+          "concept": "Direction Angles ($\\alpha, \\beta, \\gamma$)",
+          "definition": "The three tilts.",
+          "details": [
+            "A line makes an angle $\\alpha$ with the x-axis, $\\beta$ with the y-axis, and $\\gamma$ with the z-axis."
+          ]
+        },
+        {
+          "concept": "Direction Cosines ($l, m, n$)",
+          "definition": "The formal orientation.",
+          "details": [
+            "Taking the cosine of these three angles gives the Direction Cosines: $l = \\cos\\alpha$, $m = \\cos\\beta$, $n = \\cos\\gamma$.",
+            "Important Property: The sum of their squares is always exactly $1$: $l^2 + m^2 + n^2 = 1$.",
+            "They are mathematically identical to the components of a Unit Vector."
+          ]
+        },
+        {
+          "concept": "Direction Ratios ($a, b, c$)",
+          "definition": "The raw proportions.",
+          "details": [
+            "Any set of three numbers that are proportional to the Direction Cosines are called Direction Ratios.",
+            "The components of any standard vector $(x\\mathbf{i} + y\\mathbf{j} + z\\mathbf{k})$ act as its direction ratios."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Direction Cosine Property",
+          "equation": "$$ l^2 + m^2 + n^2 = 1 $$",
+          "variables": {
+            "l, m, n": "Direction cosines"
+          }
+        },
+        {
+          "name": "Direction ratios to direction cosines",
+          "equation": "$$l=\\frac a{\\sqrt{a^2+b^2+c^2}},\\;m=\\frac b{\\sqrt{a^2+b^2+c^2}},\\;n=\\frac c{\\sqrt{a^2+b^2+c^2}}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Direction ratios and direction cosines — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "If a line makes angles of $90^\\circ, 60^\\circ,$ and $30^\\circ$ with the x, y, and z axes respectively, find its direction cosines.",
+          "solution_steps": [
+            "Step 1: Identify $\\alpha = 90^\\circ$, $\\beta = 60^\\circ$, $\\gamma = 30^\\circ$.",
+            "Step 2: Calculate $l = \\cos(90^\\circ) = 0$.",
+            "Step 3: Calculate $m = \\cos(60^\\circ) = \\frac{1}{2}$.",
+            "Step 4: Calculate $n = \\cos(30^\\circ) = \\frac{\\sqrt{3}}{2}$.",
+            "Step 5: Write them as a triplet $(l, m, n)$."
+          ],
+          "final_answer": "(0, 1/2, √3/2)"
+        },
+        {
+          "problem": "Find direction cosines for direction ratios (2,-1,2).",
+          "solution_steps": [
+            "The normalising factor is sqrt(2²+(-1)²+2²)=3.",
+            "Divide each direction ratio by 3."
+          ],
+          "final_answer": "(2/3,-1/3,2/3)"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing Direction Ratios with Direction Cosines.",
+          "correction": "Direction *Ratios* can be any numbers (e.g., $2, 4, 6$). Direction *Cosines* are strictly bounded between $-1$ and $1$, and their squares MUST add up to exactly $1$. To turn ratios into cosines, you must divide them by the vector's magnitude."
+        }
+      ],
+      "quick_summary": [
+        "Direction Cosines ($l, m, n$) are the cosines of the angles a line makes with the 3 axes.",
+        "They represent the exact components of a line's Unit Vector ($l^2 + m^2 + n^2 = 1$).",
+        "Direction Ratios ($a, b, c$) are any raw, unscaled numbers that hold those same proportions."
+      ],
+      "registry_scope": "Approved lesson-level scope: Define direction ratios and direction cosines for a line in space, establish their relationship and the normalisation condition, and calculate them from suitable coordinate data. Distinguish line-specific direction parameters from general vector magnitude and direction."
+    },
+    "hss_math_t10_st05": {
+      "id": "hss_math_t10_st05",
+      "title": "Equations of lines in space",
+      "overview": "In 2D geometry, a line is defined by a slope and a y-intercept. In 3D space, a line is defined by an anchor point and a directional vector, allowing us to trace a path cleanly through a three-dimensional void.",
+      "key_concepts": [
+        {
+          "concept": "The Vector Equation",
+          "definition": "Anchor + Path.",
+          "details": [
+            "To define a line, you need a known starting point (Position Vector $\\mathbf{a}$) and a direction to travel (Direction Vector $\\mathbf{d}$).",
+            "Equation: $\\mathbf{r} = \\mathbf{a} + t\\mathbf{d}$.",
+            "Here, $\\mathbf{r}$ is any point on the line, and $t$ is a scalar parameter (like time). As $t$ changes, you slide up and down the line."
+          ]
+        },
+        {
+          "concept": "Cartesian (Symmetric) Equation",
+          "definition": "Eliminating 't'.",
+          "details": [
+            "If the starting point is $(x_1, y_1, z_1)$ and the direction vector has components $(a, b, c)$, you can rearrange the vector equation to isolate $t$.",
+            "Equation: $\\frac{x - x_1}{a} = \\frac{y - y_1}{b} = \\frac{z - z_1}{c}$."
+          ]
+        },
+        {
+          "concept": "Line Through Two Points",
+          "definition": "Creating the direction.",
+          "details": [
+            "If you only have two points $A$ and $B$, use $A$ as your anchor, and create your direction vector by finding the displacement between them: $\\mathbf{d} = \\mathbf{b} - \\mathbf{a}$."
+          ]
+        },
+        {
+          "concept": "Zero direction components",
+          "definition": "Special cases in symmetric line form.",
+          "details": [
+            "If one direction component is zero, the corresponding coordinate is constant; do not divide by zero.",
+            "For example, a line through (1,2,3) with direction (2,0,-1) has y=2 and (x-1)/2=(z-3)/(-1)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Vector Equation of a Line",
+          "equation": "$$ \\mathbf{r} = \\mathbf{a} + t\\mathbf{d} $$",
+          "variables": {
+            "\\mathbf{a}": "Position vector of a point on the line",
+            "\\mathbf{d}": "Direction vector of the line"
+          }
+        },
+        {
+          "name": "Cartesian Equation of a Line",
+          "equation": "$$ \\frac{x - x_1}{a} = \\frac{y - y_1}{b} = \\frac{z - z_1}{c} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Equations of lines in space — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the Cartesian equation of a line passing through the point $(1, 2, 3)$ with a direction vector of $4\\mathbf{i} + 5\\mathbf{j} - 6\\mathbf{k}$.",
+          "solution_steps": [
+            "Step 1: Identify the anchor point coordinates: $x_1 = 1$, $y_1 = 2$, $z_1 = 3$.",
+            "Step 2: Identify the direction vector components: $a = 4$, $b = 5$, $c = -6$.",
+            "Step 3: Plug into the Cartesian formula: $\\frac{x - x_1}{a} = \\frac{y - y_1}{b} = \\frac{z - z_1}{c}$.",
+            "Step 4: Substitute."
+          ],
+          "final_answer": "(x - 1)/4 = (y - 2)/5 = (z - 3)/-6"
+        },
+        {
+          "problem": "Write a vector equation for the line through A(1,0,2) and B(3,1,5).",
+          "solution_steps": [
+            "A direction vector is B-A=(2,1,3).",
+            "Use A as the fixed point and (2,1,3) as the direction vector."
+          ],
+          "final_answer": "$$\\mathbf r=(\\mathbf i+2\\mathbf k)+t(2\\mathbf i+\\mathbf j+3\\mathbf k)$$"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing the point coordinates with the direction components.",
+          "correction": "In the Cartesian fraction, the NUMERATORS always contain the fixed Point (the anchor). The DENOMINATORS always contain the Direction vector components."
+        }
+      ],
+      "quick_summary": [
+        "A 3D line is mathematically defined by a starting point and a directional vector.",
+        "The Vector Equation ($\\mathbf{r} = \\mathbf{a} + t\\mathbf{d}$) uses a parameter $t$ to trace the line.",
+        "The Cartesian Equation relates the $x, y,$ and $z$ coordinates directly using ratios."
+      ],
+      "registry_scope": "Approved lesson-level scope: Represent a line in 3D using vector and Cartesian or symmetric forms where appropriate. Identify a line from a point and direction data; interpret parallel, intersecting and skew lines conceptually. Keep advanced shortest-distance calculations between skew lines outside the core scope."
+    },
+    "hss_math_t10_st06": {
+      "id": "hss_math_t10_st06",
+      "title": "Angle between two lines in 3D",
+      "overview": "Because a 3D line's path is entirely dictated by its Direction Vector, finding the angle between two lines simply requires finding the angle between their two direction vectors.",
+      "key_concepts": [
+        {
+          "concept": "Using Direction Vectors",
+          "definition": "Ignoring the anchors.",
+          "details": [
+            "The starting points of the lines do not affect the angle between them. Only the direction vectors ($\\mathbf{d_1}$ and $\\mathbf{d_2}$) matter.",
+            "Two lines in 3D space might not even intersect (skew lines), but we can still calculate the angle between their general directions."
+          ]
+        },
+        {
+          "concept": "The Angle Formula",
+          "definition": "The absolute dot product.",
+          "details": [
+            "We use the standard vector angle formula: $\\cos\\theta = \\frac{|\\mathbf{d_1} \\cdot \\mathbf{d_2}|}{|\\mathbf{d_1}| |\\mathbf{d_2}|}$.",
+            "Taking the absolute value of the dot product ensures we always calculate the acute (smaller) angle between the lines."
+          ]
+        },
+        {
+          "concept": "Parallel and Perpendicular Lines",
+          "definition": "The extreme cases.",
+          "details": [
+            "**Perpendicular:** The dot product of their direction vectors is exactly $0$ ($\\mathbf{d_1} \\cdot \\mathbf{d_2} = 0$).",
+            "**Parallel:** Their direction vectors are exact scalar multiples of each other ($\\mathbf{d_1} = k\\mathbf{d_2}$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Angle Between Lines",
+          "equation": "$$ \\cos\\theta = \\frac{|\\mathbf{d_1} \\cdot \\mathbf{d_2}|}{|\\mathbf{d_1}| |\\mathbf{d_2}|} $$",
+          "variables": {
+            "\\mathbf{d_1}, \\mathbf{d_2}": "Direction vectors of the two lines"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Angle between two lines in 3D — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the angle between the lines $\\frac{x}{2} = \\frac{y}{2} = \\frac{z}{1}$ and $\\frac{x-5}{4} = \\frac{y-2}{1} = \\frac{z-3}{8}$.",
+          "solution_steps": [
+            "Step 1: Extract the direction vector of Line 1 from its denominators: $\\mathbf{d_1} = (2, 2, 1)$.",
+            "Step 2: Extract the direction vector of Line 2 from its denominators: $\\mathbf{d_2} = (4, 1, 8)$.",
+            "Step 3: Calculate the dot product: $(2 \\times 4) + (2 \\times 1) + (1 \\times 8) = 8 + 2 + 8 = 18$.",
+            "Step 4: Calculate magnitude $|\\mathbf{d_1}| = \\sqrt{2^2 + 2^2 + 1^2} = \\sqrt{9} = 3$.",
+            "Step 5: Calculate magnitude $|\\mathbf{d_2}| = \\sqrt{4^2 + 1^2 + 8^2} = \\sqrt{81} = 9$.",
+            "Step 6: Use formula: $\\cos\\theta = \\frac{18}{3 \\times 9} = \\frac{18}{27} = \\frac{2}{3}$."
+          ],
+          "final_answer": "θ = arccos(2/3)"
+        },
+        {
+          "problem": "Find the acute angle between direction vectors (1,0,0) and (1,1,0).",
+          "solution_steps": [
+            "Their dot product is 1.",
+            "Their magnitudes are 1 and sqrt(2).",
+            "cos(theta)=1/sqrt(2)."
+          ],
+          "final_answer": "45 degrees"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the position points to calculate the angle.",
+          "correction": "The numerators in the Cartesian equation represent the anchor points. These have absolutely nothing to do with the angle. Only use the numbers in the denominators (the direction vectors)."
+        }
+      ],
+      "quick_summary": [
+        "The angle between two lines is dictated entirely by their direction vectors.",
+        "Use the absolute value of the dot product to guarantee finding the acute angle.",
+        "If the dot product of the denominators is zero, the lines are perpendicular."
+      ],
+      "registry_scope": "Approved lesson-level scope: Determine the angle between two lines in space using their direction ratios or direction vectors, including parallel and perpendicular conditions. Keep this line-based treatment distinct from the angle between general vectors."
+    },
+    "hss_math_t10_st15": {
+      "id": "hss_math_t10_st15",
+      "title": "Applications of vectors and 3D geometry",
+      "overview": "Vectors combine coordinate geometry and algebra to solve problems involving displacement, directions, perpendicularity and area. This lesson brings together the methods developed in the preceding subtopics.",
+      "key_concepts": [
+        {
+          "concept": "Displacement and geometric relationships",
+          "definition": "Representing movement and segments by vectors.",
+          "details": [
+            "For points A and B with position vectors a and b, the displacement from A to B is b-a.",
+            "A vector equation can establish geometric relationships such as parallelism, perpendicularity and collinearity."
+          ]
+        },
+        {
+          "concept": "Area using the cross product",
+          "definition": "A geometric use of vector products.",
+          "details": [
+            "The magnitude |a×b| is the area of the parallelogram formed by a and b.",
+            "The area of the triangle formed by the same two vectors is one-half of this magnitude."
+          ]
+        },
+        {
+          "concept": "Work done by a constant force",
+          "definition": "A scalar application of the dot product.",
+          "details": [
+            "For constant force F and displacement d, work W=F·d=|F||d|cos(theta).",
+            "Work is positive, zero or negative according to the angle between force and displacement."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Displacement vector",
+          "equation": "$$\\overrightarrow{AB}=\\mathbf b-\\mathbf a$$",
+          "variables": {}
+        },
+        {
+          "name": "Parallelogram and triangle areas",
+          "equation": "$$A_{\\rm parallelogram}=|\\mathbf a\\times\\mathbf b|,\\quad A_{\\rm triangle}=\\frac12|\\mathbf a\\times\\mathbf b|$$",
+          "variables": {}
+        },
+        {
+          "name": "Work by a constant force",
+          "equation": "$$W=\\mathbf F\\cdot\\mathbf d$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Applications of vectors and 3D geometry — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the area of the triangle formed by vectors a=i+2j and b=3i-j.",
+          "solution_steps": [
+            "Write the vectors as (1,2,0) and (3,-1,0).",
+            "Their cross product is (0,0,1(-1)-2(3))=(0,0,-7).",
+            "Its magnitude is 7. The triangle area is half the parallelogram area."
+          ],
+          "final_answer": "$$A=\\frac12(7)=\\frac72\\text{ square units}$$"
+        },
+        {
+          "problem": "A constant force $\\mathbf F=(2,3,0)$ newtons moves an object through displacement $\\mathbf s=(4,1,0)$ metres. Find the work done.",
+          "solution_steps": [
+            "Work is the dot product $W=\\mathbf F\\cdot\\mathbf s$.",
+            "Calculate $W=2(4)+3(1)+0(0)$."
+          ],
+          "final_answer": "$W=11$ joules."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using |a×b| as the area of a triangle.",
+          "correction": "|a×b| gives the parallelogram area. Divide by two for the triangle area."
+        }
+      ],
+      "quick_summary": [
+        "Use displacement vectors to connect points.",
+        "The cross-product magnitude gives parallelogram area.",
+        "Work by a constant force is a dot product."
+      ],
+      "registry_scope": "Approved lesson-level scope: Integrate 3D coordinate geometry and vector methods in problems involving geometric relationships, distances, areas, directions and selected physical contexts. Use determinants where appropriate for cross-product calculations without turning the lesson into a separate matrix-algebra unit. Exclude vector calculus topics such as gradient, divergence, curl and line integrals."
+    },
+    "hss_math_t10_st16": {
+      "id": "hss_math_t10_st16",
+      "title": "Equations of planes and related geometry",
+      "overview": "A plane in three-dimensional space can be specified by a point on it and a normal vector perpendicular to it. Its equation also allows basic line-plane and plane-plane relationships to be studied.",
+      "key_concepts": [
+        {
+          "concept": "Normal vector and plane equation",
+          "definition": "A vector perpendicular to every direction in the plane.",
+          "details": [
+            "If a plane passes through a point with position vector a and has non-zero normal vector n, then (r-a)·n=0.",
+            "For n=(A,B,C) and a point (x1,y1,z1), the Cartesian equation is A(x-x1)+B(y-y1)+C(z-z1)=0."
+          ]
+        },
+        {
+          "concept": "Line and plane relationships",
+          "definition": "Using the direction vector of a line and the normal of a plane.",
+          "details": [
+            "For line direction d and plane normal n, d·n=0 means the line is parallel to the plane (or lies in it).",
+            "If d is a non-zero scalar multiple of n, the line is perpendicular to the plane. Otherwise, the line generally intersects the plane at one point."
+          ]
+        },
+        {
+          "concept": "Angles involving planes",
+          "definition": "Using normal and direction vectors.",
+          "details": [
+            "The acute angle between two planes is the acute angle between their normal vectors.",
+            "The acute angle phi between a line with direction d and a plane with normal n satisfies sin(phi)=|d·n|/(|d||n|)."
+          ]
+        },
+        {
+          "concept": "Distance from a point to a plane",
+          "definition": "The perpendicular separation from a point to a plane.",
+          "details": [
+            "For plane Ax+By+Cz+D=0 and point P(x1,y1,z1), the distance is the absolute value of the plane expression at P divided by sqrt(A²+B²+C²)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Vector equation of a plane",
+          "equation": "$$(\\mathbf r-\\mathbf a)\\cdot\\mathbf n=0$$",
+          "variables": {}
+        },
+        {
+          "name": "Cartesian equation of a plane",
+          "equation": "$$Ax+By+Cz+D=0$$",
+          "variables": {}
+        },
+        {
+          "name": "Point-to-plane distance",
+          "equation": "$$d=\\frac{|Ax_1+By_1+Cz_1+D|}{\\sqrt{A^2+B^2+C^2}}$$",
+          "variables": {}
+        },
+        {
+          "name": "Angle between a line and a plane",
+          "equation": "$$\\sin\\phi=\\frac{|\\mathbf d\\cdot\\mathbf n|}{|\\mathbf d||\\mathbf n|}$$",
+          "variables": {}
+        },
+        {
+          "name": "Angle between planes",
+          "equation": "$$\\cos\\theta=\\frac{|\\mathbf n_1\\cdot\\mathbf n_2|}{|\\mathbf n_1||\\mathbf n_2|}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "title": "Equations of planes and related geometry — schematic",
+          "description": "Original schematic aid for the main geometric idea; not drawn to scale.",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 150\"><g stroke=\"#2563eb\" stroke-width=\"2\" fill=\"none\"><path d=\"M35 115 L275 35\"/><path d=\"M35 115 L275 115\" stroke=\"#64748b\"/><path d=\"M35 115 L35 20\" stroke=\"#64748b\"/><path d=\"M275 35 L265 35 L270 45\"/></g><g fill=\"#111827\" font-size=\"12\"><text x=\"42\" y=\"22\">3D geometry</text><text x=\"145\" y=\"135\">coordinate / vector representation</text><text x=\"42\" y=\"95\">O</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the perpendicular distance from P(1,2,3) to the plane 2x-y+2z-5=0.",
+          "solution_steps": [
+            "Substitute the point coordinates into the numerator: |2(1)-2+2(3)-5|=|1|=1.",
+            "The magnitude of the normal vector (2,-1,2) is sqrt(4+1+4)=3.",
+            "Divide the absolute plane expression by the normal magnitude."
+          ],
+          "final_answer": "$$d=\\frac13\\text{ unit}$$"
+        },
+        {
+          "problem": "Find the distance from the point $(1,2,3)$ to the plane $x+2y+2z-9=0$.",
+          "solution_steps": [
+            "Use the point-to-plane distance formula $|Ax_1+By_1+Cz_1+D|/\\sqrt{A^2+B^2+C^2}$.",
+            "Substitute the point and coefficients: $|1+4+6-9|/\\sqrt{1+4+4}=2/3$."
+          ],
+          "final_answer": "Distance $=\\frac23$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using a line direction vector as the normal vector of a plane without justification.",
+          "correction": "A plane equation uses a normal vector perpendicular to the plane. A line equation uses a direction vector along the line."
+        },
+        {
+          "mistake": "Using cosine rather than sine for the angle between a line and a plane.",
+          "correction": "The line-plane angle is complementary to the angle between the line direction and the plane normal; use the sine formula shown."
+        }
+      ],
+      "quick_summary": [
+        "A plane is specified by a point and a normal vector.",
+        "The coefficients A, B and C form a normal vector to Ax+By+Cz+D=0.",
+        "Point-plane distance is measured perpendicular to the plane."
+      ],
+      "registry_scope": "Approved addition in Draft 83. Introduce the vector and Cartesian equations of a plane, normal vectors, and the relationship between a line and a plane. Include angles between a line and a plane and between two planes, intersections of lines/planes at an introductory level, and perpendicular distance from a point to a plane. Keep the treatment appropriate to Higher Secondary level; exclude advanced 3D analytic geometry and shortest-distance problems between skew lines."
+    }
+  }
+}

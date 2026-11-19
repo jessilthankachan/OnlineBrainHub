@@ -1,0 +1,1244 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t01",
+  "topicTitle": "Sets, Relations and Functions",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t01_st01": {
+      "id": "hss_math_t01_st01",
+      "title": "Set notation and representation",
+      "overview": "Before exploring complex relations and functions, we must define the universe they operate in. This lesson introduces the formal language of set theory, establishing the rigorous mathematical notation required for studying subsets, operations, and probability at a higher secondary level.",
+      "key_concepts": [
+        {
+          "concept": "The Definition of a Set",
+          "definition": "A well-defined collection.",
+          "details": [
+            "A set is a well-defined collection of distinct mathematical objects (called elements or members).",
+            "\"Well-defined\" means there is a perfectly unambiguous rule to determine if an object belongs to the set. \"Even numbers\" is well-defined. \"Interesting numbers\" is subjective and fails the mathematical definition of a set."
+          ]
+        },
+        {
+          "concept": "Elements and Membership ($\\in$)",
+          "definition": "Belonging to a set.",
+          "details": [
+            "Sets are typically denoted by capital letters ($A, B, C$), while elements are denoted by lowercase letters.",
+            "The symbol $\\in$ means \"is an element of\" (e.g., $6 \\in A$). The symbol $\\notin$ means \"is not an element of\" (e.g., $9 \\notin A$)."
+          ]
+        },
+        {
+          "concept": "Set Representation Methods",
+          "definition": "Roster vs. Set-Builder.",
+          "details": [
+            "**Roster Form (Tabular):** Lists every single element explicitly inside curly braces, separated by commas (e.g., $A = \\{1, 2, 3, 4, 5\\}$).",
+            "**Set-Builder Notation:** Defines a set using a strict logical condition instead of a list. Format: $A = \\{x \\mid \\text{condition on } x\\}$. Example: $A = \\{x \\in \\mathbb{N} \\mid x < 6\\}$."
+          ]
+        },
+        {
+          "concept": "Equality of Sets",
+          "definition": "Identical contents.",
+          "details": [
+            "Two sets are strictly equal ($A = B$) if and only if they contain the exact same elements.",
+            "Order does not matter (${\\{1, 2, 3\\} = \\{3, 2, 1\\}}$) and repetitions are ignored mathematically (${\\{1, 1, 2\\} = \\{1, 2\\}}$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s01",
+          "title": "Set-Builder vs Roster Notation",
+          "type": "svg",
+          "caption": "Set-builder notation compresses infinite or large sets into logical rules.",
+          "alt_text": "Visual showing set builder notation A = {x ∈ N | x < 6} translating to Roster form A = {1, 2, 3, 4, 5}. Arrows point to specific parts of the set-builder notation to define them.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"30\" width=\"400\" height=\"60\" fill=\"#e0f2fe\" stroke=\"#3b82f6\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"65\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">A = { x ∈ ℕ | x &lt; 6 }</text><path d=\"M 215 80 L 215 110\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"215\" y=\"125\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">\"such that\"</text><rect x=\"50\" y=\"140\" width=\"400\" height=\"40\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"165\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">A = { 1, 2, 3, 4, 5 }</text><text x=\"100\" y=\"20\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1d4ed8\" font-weight=\"bold\">Set-Builder Notation</text><text x=\"100\" y=\"130\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#15803d\" font-weight=\"bold\">Roster Notation</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Convert the following descriptive set into Set-Builder and Roster notation: 'The set of integer solutions to $x^2 = 9$'.",
+          "solution_steps": [
+            "Step 1: Identify the domain. We are looking for integers ($\\mathbb{Z}$).",
+            "Step 2: Identify the condition. The condition is $x^2 = 9$.",
+            "Step 3: Construct Set-Builder: $D = \\{x \\in \\mathbb{Z} \\mid x^2 = 9\\}$.",
+            "Step 4: Solve the condition to build the Roster form. The square roots of $9$ are $3$ and $-3$.",
+            "Step 5: Construct Roster: $D = \\{-3, 3\\}$."
+          ],
+          "final_answer": "D = {x ∈ ℤ | x² = 9} and D = {-3, 3}"
+        },
+        {
+          "problem": "Write the set of natural numbers from 1 to 5 in set-builder notation.",
+          "solution_steps": [
+            "List the defining property shared by the elements.",
+            "Use the natural-number domain and the inclusive bounds."
+          ],
+          "final_answer": "$A=\\{x\\in\\mathbb N\\mid 1\\le x\\le5\\}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing membership ($\\in$) with set equality ($=$).",
+          "correction": "If $A = \\{1, 2, 3\\}$, it is correct to say $2 \\in A$. It is mathematically illegal to say $2 = A$ or $\\{2\\} \\in A$."
+        },
+        {
+          "mistake": "Repeating elements in Roster form.",
+          "correction": "A set is a collection of *distinct* objects. $\\{1, 2, 2, 3\\}$ is considered improper notation. It must be reduced to $\\{1, 2, 3\\}$."
+        }
+      ],
+      "quick_summary": [
+        "A set is a well-defined collection of distinct objects.",
+        "Curly braces $\\{ \\}$ denote a set.",
+        "Roster form lists every item; Set-builder form uses logical rules.",
+        "Order and repetition do not change a set's mathematical identity."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Use precise set notation, roster and set-builder forms, intervals and universal sets. Emphasise mathematical communication and proof-ready notation."
+    },
+    "hss_math_t01_st02": {
+      "id": "hss_math_t01_st02",
+      "title": "Types of sets and subsets",
+      "overview": "Not all sets are created equal. Some contain infinite universes of numbers, while others are entirely empty. By categorizing sets and exploring 'Subsets' (sets hiding inside other sets), we establish the hierarchy of mathematical data structures.",
+      "key_concepts": [
+        {
+          "concept": "Cardinality and Size Types",
+          "definition": "How many elements?",
+          "details": [
+            "**Cardinality:** Denoted as $n(A)$ or $|A|$, this is the physical count of distinct elements inside a finite set.",
+            "**Finite vs Infinite:** A finite set has a countable end (e.g., vowels). An infinite set has no final element (e.g., Natural numbers $\\mathbb{N}$).",
+            "**Singleton Set:** A set with exactly one element (e.g., $A = \\{7\\}$).",
+            "**Empty Set (Null Set):** A set with absolutely zero elements, denoted by $\\emptyset$ or $\\{ \\}$. Its cardinality is $0$."
+          ]
+        },
+        {
+          "concept": "Equal vs Equivalent Sets",
+          "definition": "Identity vs Count.",
+          "details": [
+            "**Equal Sets ($A = B$):** Have the exact same identical elements. (e.g., $\\{a, b, c\\} = \\{b, a, c\\}$).",
+            "**Equivalent Sets:** Have the same *cardinality* ($n(A) = n(B)$), but different elements (e.g., $\\{1, 2, 3\\}$ is equivalent to $\\{x, y, z\\}$). Equal sets are always equivalent, but equivalent sets are not always equal."
+          ]
+        },
+        {
+          "concept": "Subsets and Universal Sets",
+          "definition": "Sets within sets.",
+          "details": [
+            "**Subset ($A \\subseteq B$):** Set $A$ is a subset of $B$ if every element in $A$ is also found inside $B$. Note: Every set is a subset of itself.",
+            "**Proper Subset ($A \\subsetneq B$):** All elements of $A$ are in $B$, BUT $B$ has at least one extra element. $A$ cannot equal $B$.",
+            "**Universal Set ($U$):** The overarching 'master set' that contains all elements currently being discussed in a specific problem."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Equivalent Set Condition",
+          "equation": "$$ n(A) = n(B) $$",
+          "variables": {
+            "Condition": "For finite sets, equivalent sets have the same number of elements. For infinite sets, equivalence means that a bijection exists between the sets."
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s02",
+          "title": "Subsets vs Proper Subsets",
+          "type": "svg",
+          "caption": "A proper subset must be strictly smaller than its parent set.",
+          "alt_text": "Visual showing a Venn diagram. A large green circle is labeled 'Set B'. Inside it is a smaller blue circle labeled 'Set A'. Text says: 'A ⊊ B (Proper Subset)'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"460\" height=\"160\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" rx=\"5\"/><text x=\"30\" y=\"40\" font-family=\"monospace\" font-size=\"14\" fill=\"#64748b\" font-weight=\"bold\">Universal Set (U)</text><circle cx=\"250\" cy=\"110\" r=\"70\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"250\" y=\"60\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Set B</text><circle cx=\"250\" cy=\"130\" r=\"35\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"250\" y=\"135\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Set A</text><rect x=\"330\" y=\"130\" width=\"140\" height=\"40\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"400\" y=\"155\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A ⊊ B</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify the set $B = \\{x \\in \\mathbb{N} \\mid x^2 = 25\\}$ and determine its cardinality.",
+          "solution_steps": [
+            "Step 1: Solve the mathematical condition. $x^2 = 25$ yields $x = 5$ or $x = -5$.",
+            "Step 2: Check the domain condition. $x \\in \\mathbb{N}$ means $x$ must be a natural (positive) number. Therefore, $-5$ is rejected.",
+            "Step 3: Build the Roster form: $B = \\{5\\}$.",
+            "Step 4: Classify: Because it contains exactly one element, it is a Singleton Set.",
+            "Step 5: Determine cardinality: $n(B) = 1$."
+          ],
+          "final_answer": "Singleton Set, n(B) = 1"
+        },
+        {
+          "problem": "Classify the set $A=\\{2,4,6\\}$ as finite or infinite and state its cardinality.",
+          "solution_steps": [
+            "The set has a fixed, countable list of distinct elements.",
+            "Count the elements."
+          ],
+          "final_answer": "A is finite and $n(A)=3$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing $\\emptyset$ with $\\{\\emptyset\\}$.",
+          "correction": "$\\emptyset$ is the Empty Set (cardinality 0). $\\{\\emptyset\\}$ is a set that CONTAINS the empty set as an element. Its cardinality is 1. Do not mix these up."
+        },
+        {
+          "mistake": "Assuming an empty set cannot be a subset.",
+          "correction": "The empty set $\\emptyset$ is a mathematical subset of *every single set in existence*, including itself."
+        }
+      ],
+      "quick_summary": [
+        "Equal sets share exact elements. Equivalent sets just share the same item count.",
+        "$A \\subseteq B$ means A is a subset. $A \\subsetneq B$ means A is a proper (smaller) subset.",
+        "The Empty Set ($\\emptyset$) is a subset of everything. Every set is a subset of itself."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Distinguish finite, infinite, empty, universal, equal and equivalent sets; develop proper-subset relationships and formal examples."
+    },
+    "hss_math_t01_st03": {
+      "id": "hss_math_t01_st03",
+      "title": "Power sets",
+      "overview": "If you have a menu with 3 toppings, how many different unique pizzas could you mathematically order? The 'Power Set' captures every single possible combination (subset) that can be extracted from a master set, mapping out the entire landscape of possibilities.",
+      "key_concepts": [
+        {
+          "concept": "The Power Set Definition",
+          "definition": "The set of all sets.",
+          "details": [
+            "The Power Set of $A$, denoted by $\\mathcal{P}(A)$, is a master set that contains *every possible subset* of $A$ as its elements.",
+            "It must always include the Empty Set ($\\emptyset$) and the original Set $A$ itself."
+          ]
+        },
+        {
+          "concept": "Cardinality of the Power Set",
+          "definition": "The $2^n$ explosion.",
+          "details": [
+            "For every element in the master set, you have two choices: include it in your new subset, or leave it out. Therefore, the size of the Power Set grows exponentially.",
+            "If a set $A$ has $n$ elements, the number of subsets in its Power Set is $2^n$."
+          ]
+        },
+        {
+          "concept": "Proper vs Non-Empty Subsets",
+          "definition": "Trimming the edges.",
+          "details": [
+            "**Total Subsets:** $2^n$",
+            "**Proper Subsets:** $2^n - 1$ (This subtracts the original master set itself).",
+            "**Non-Empty Proper Subsets:** $2^n - 2$ (This subtracts the master set AND the empty set $\\emptyset$)."
+          ]
+        },
+        {
+          "concept": "Subsets of a Specific Size",
+          "definition": "The Combinatorics link.",
+          "details": [
+            "If a finite set has $n$ elements and $0 \\leq r \\leq n$, the number of subsets containing exactly $r$ elements is $\\binom{n}{r} = \\frac{n!}{r!(n-r)!}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Power Set Cardinality",
+          "equation": "$$ n(\\mathcal{P}(A)) = 2^n $$",
+          "variables": {
+            "n": "The number of elements in the original set A",
+            "Condition": "A is a finite set with n elements."
+          }
+        },
+        {
+          "name": "Proper Subsets Count",
+          "equation": "$$ 2^n - 1 $$",
+          "variables": {
+            "n": "Number of elements in the finite original set A."
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s03",
+          "title": "Constructing P(A)",
+          "type": "svg",
+          "caption": "The Power Set builds exponentially by grouping combinations of 0, 1, 2...n elements.",
+          "alt_text": "Visual showing Set A = {1, 2}. Below it, it splits into branches forming P(A). Size 0: {∅}. Size 1: {1}, {2}. Size 2: {1,2}. The total count is 2^2 = 4 subsets.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"200\" y=\"20\" width=\"100\" height=\"35\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"42\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">A = {1, 2}</text><path d=\"M 250 55 L 250 80\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 100 80 L 400 80\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 100 80 L 100 100 M 250 80 L 250 100 M 400 80 L 400 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"60\" y=\"100\" width=\"80\" height=\"35\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"100\" y=\"122\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">∅</text><rect x=\"180\" y=\"100\" width=\"140\" height=\"35\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"122\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">{1}, {2}</text><rect x=\"360\" y=\"100\" width=\"80\" height=\"35\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"400\" y=\"122\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">{1, 2}</text><text x=\"100\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">0 Elements</text><text x=\"250\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">1 Element</text><text x=\"400\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">2 Elements</text><rect x=\"150\" y=\"170\" width=\"200\" height=\"20\" fill=\"#dcfce7\" rx=\"5\"/><text x=\"250\" y=\"185\" font-family=\"monospace\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Total = 2² = 4 Subsets</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A set has $31$ proper subsets. Find the cardinality of the original set.",
+          "solution_steps": [
+            "Step 1: Write the mathematical formula for Proper Subsets: $2^n - 1$.",
+            "Step 2: Set the formula equal to the known value: $2^n - 1 = 31$.",
+            "Step 3: Solve for $2^n$: $2^n = 32$.",
+            "Step 4: Solve for the exponent $n$: $32 = 2^5$, therefore $n = 5$."
+          ],
+          "final_answer": "n = 5"
+        },
+        {
+          "problem": "Find the power set of $A = \\{p, q\\}$.",
+          "solution_steps": [
+            "Step 1: Start with the empty set: $\\emptyset$.",
+            "Step 2: List 1-element subsets: $\\{p\\}, \\{q\\}$.",
+            "Step 3: List 2-element subsets (the set itself): $\\{p, q\\}$.",
+            "Step 4: Group them all inside the master power set curly braces."
+          ],
+          "final_answer": "𝒫(A) = {∅, {p}, {q}, {p, q}}"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing an element with a subset in the Power Set.",
+          "correction": "If $A = \\{1, 2\\}$, the number $1 \\in A$. However, in the Power Set $\\mathcal{P}(A)$, the number $1$ is NOT an element. The *subset* $\\{1\\}$ is the element. So $\\{1\\} \\in \\mathcal{P}(A)$."
+        }
+      ],
+      "quick_summary": [
+        "A Power Set $\\mathcal{P}(A)$ is a master catalog of every subset that can be made from A.",
+        "Always remember to include the Empty Set $\\emptyset$ and the original set itself.",
+        "Total Subsets = $2^n$. Proper Subsets = $2^n - 1$."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Construct power sets and establish that a finite set with n elements has 2^n subsets. Include reasoning and simple proofs."
+    },
+    "hss_math_t01_st04": {
+      "id": "hss_math_t01_st04",
+      "title": "Union, intersection and difference of sets",
+      "overview": "Set operations allow us to combine, filter, and compare datasets. Just like addition and subtraction manipulate numbers, Union, Intersection, and Difference manipulate the physical elements inside sets.",
+      "key_concepts": [
+        {
+          "concept": "Union of Sets ($A \\cup B$)",
+          "definition": "The Combination.",
+          "details": [
+            "The union combines all distinct elements from both sets into a single super-set.",
+            "In mathematical logic, it represents 'OR'. If an element belongs to A, OR B, OR both, it goes into the union."
+          ]
+        },
+        {
+          "concept": "Intersection of Sets ($A \\cap B$)",
+          "definition": "The Overlap.",
+          "details": [
+            "The intersection isolates only the elements that exist in BOTH sets simultaneously.",
+            "In mathematical logic, it represents 'AND'. If sets share absolutely no elements, they are 'Disjoint Sets' ($A \\cap B = \\emptyset$)."
+          ]
+        },
+        {
+          "concept": "Difference of Sets ($A - B$)",
+          "definition": "The Removal.",
+          "details": [
+            "The difference $A - B$ (or $A \\setminus B$) contains everything in A, AFTER you delete anything that also belongs to B.",
+            "Unlike union and intersection, Difference is NOT commutative. $A - B \\neq B - A$."
+          ]
+        },
+        {
+          "concept": "The Inclusion-Exclusion Principle",
+          "definition": "Fixing the double-count.",
+          "details": [
+            "If you want to know the total size of a union, you cannot just add $n(A) + n(B)$. This double-counts the overlapping items in the intersection.",
+            "You must add the sets together and subtract the intersection once to fix the overlap: $n(A \\cup B) = n(A) + n(B) - n(A \\cap B)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Union",
+          "equation": "$$ A \\cup B = \\{x \\mid x \\in A \\text{ or } x \\in B\\} $$",
+          "variables": {}
+        },
+        {
+          "name": "Intersection",
+          "equation": "$$ A \\cap B = \\{x \\mid x \\in A \\text{ and } x \\in B\\} $$",
+          "variables": {}
+        },
+        {
+          "name": "Difference",
+          "equation": "$$ A - B = \\{x \\mid x \\in A \\text{ and } x \\notin B\\} $$",
+          "variables": {}
+        },
+        {
+          "name": "Inclusion-Exclusion (2 Sets)",
+          "equation": "$$ n(A \\cup B) = n(A) + n(B) - n(A \\cap B) $$",
+          "variables": {
+            "Condition": "A and B are finite sets; n(X) denotes the number of elements in finite set X."
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s04",
+          "title": "Set Operations Visualized",
+          "type": "svg",
+          "caption": "Union combines everything. Intersection is the overlap. Difference removes one from the other.",
+          "alt_text": "Three Venn Diagrams side-by-side. 1: Union (A U B) with both circles fully shaded. 2: Intersection (A ∩ B) with only the center overlap shaded. 3: Difference (A - B) with only the left crescent of A shaded.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><g transform=\"translate(20, 40)\"><circle cx=\"50\" cy=\"60\" r=\"40\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"60\" r=\"40\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"70\" y=\"130\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">A ∪ B</text><text x=\"70\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">(Union)</text></g><g transform=\"translate(180, 40)\"><circle cx=\"50\" cy=\"60\" r=\"40\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"60\" r=\"40\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 70 25 A 40 40 0 0 0 70 95 A 40 40 0 0 0 70 25 Z\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"70\" y=\"130\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">A ∩ B</text><text x=\"70\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">(Intersection)</text></g><g transform=\"translate(340, 40)\"><circle cx=\"50\" cy=\"60\" r=\"40\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"60\" r=\"40\" fill=\"#f8fafc\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 70 25 A 40 40 0 0 0 70 95 A 40 40 0 0 0 70 25 Z\" fill=\"#f8fafc\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"70\" y=\"130\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">A - B</text><text x=\"70\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">(Difference)</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "In a group of 50 students, 28 enjoy math ($n(M)=28$), 22 enjoy science ($n(S)=22$), and 10 enjoy both ($n(M \\cap S)=10$). How many enjoy at least one of the subjects?",
+          "solution_steps": [
+            "Step 1: 'At least one' is the mathematical keyword for Union ($M \\cup S$).",
+            "Step 2: Use the Inclusion-Exclusion principle: $n(M \\cup S) = n(M) + n(S) - n(M \\cap S)$.",
+            "Step 3: Substitute the known values: $28 + 22 - 10$.",
+            "Step 4: Calculate: $50 - 10 = 40$."
+          ],
+          "final_answer": "40 students"
+        },
+        {
+          "problem": "If $A=\\{1,2,3\\}$ and $B=\\{2,3,4\\}$, find $A\\cup B$ and $A\\cap B$.",
+          "solution_steps": [
+            "The union includes every element in either set.",
+            "The intersection includes only elements common to both sets."
+          ],
+          "final_answer": "$A\\cup B=\\{1,2,3,4\\}$; $A\\cap B=\\{2,3\\}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming Set Difference is commutative ($A - B = B - A$).",
+          "correction": "Subtracting B from A leaves only the unique items in A. Subtracting A from B leaves only the unique items in B. These are two completely different crescents on a Venn diagram."
+        }
+      ],
+      "quick_summary": [
+        "Union ($\\cup$) combines all items.",
+        "Intersection ($\\cap$) isolates the shared items.",
+        "Difference ($-$) removes the second set's items from the first.",
+        "Subtract the intersection when adding sets together to prevent double-counting."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Develop union, intersection and difference as formal operations; solve multi-set problems and establish algebraic properties."
+    },
+    "hss_math_t01_st05": {
+      "id": "hss_math_t01_st05",
+      "title": "Complement of a set",
+      "overview": "If you know exactly what is INSIDE your set, the Complement tells you exactly what is OUTSIDE of it. The complement relies entirely on the Universal Set—the established boundaries of reality for your specific math problem.",
+      "key_concepts": [
+        {
+          "concept": "The Complement Definition",
+          "definition": "Everything else.",
+          "details": [
+            "The complement of $A$ (written as $A^c$, $A'$, or $\\overline{A}$) contains all elements in the Universal Set ($U$) that are NOT in $A$.",
+            "Mathematically, it is a set difference from the universe: $A^c = U - A$."
+          ]
+        },
+        {
+          "concept": "Universal and Empty Relationships",
+          "definition": "Absolute extremes.",
+          "details": [
+            "The complement of the Universal Set is the Empty Set ($U^c = \\emptyset$).",
+            "The complement of the Empty Set is the Universal Set ($\\emptyset^c = U$).",
+            "If you double-complement a set, you are back where you started: $(A^c)^c = A$."
+          ]
+        },
+        {
+          "concept": "De Morgan's Laws",
+          "definition": "Flipping the operators.",
+          "details": [
+            "De Morgan's Laws apply when all complements are taken relative to the same Universal Set $U$.",
+            "When the complement moves inside, it flips the Union ($\\cup$) to an Intersection ($\\cap$), and vice versa.",
+            "$(A \\cup B)^c = A^c \\cap B^c$",
+            "$(A \\cap B)^c = A^c \\cup B^c$"
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Complement Definition",
+          "equation": "$$ A^c = \\{x \\in U \\mid x \\notin A\\} $$",
+          "variables": {}
+        },
+        {
+          "name": "De Morgan's Law 1",
+          "equation": "$$ (A \\cup B)^c = A^c \\cap B^c $$",
+          "variables": {}
+        },
+        {
+          "name": "De Morgan's Law 2",
+          "equation": "$$ (A \\cap B)^c = A^c \\cup B^c $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s05",
+          "title": "De Morgan's Law Visualized",
+          "type": "svg",
+          "caption": "The complement of the Union is exactly equal to the intersection of the Complements.",
+          "alt_text": "Visual showing De Morgan's Law. A rectangle U contains circles A and B. Everything OUTSIDE both circles is shaded yellow. Equation reads: (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"150\" y=\"30\" width=\"200\" height=\"120\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><circle cx=\"220\" cy=\"90\" r=\"40\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"280\" cy=\"90\" r=\"40\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"165\" y=\"50\" font-family=\"monospace\" font-size=\"14\" fill=\"#ca8a04\" font-weight=\"bold\">U</text><text x=\"210\" y=\"95\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A</text><text x=\"290\" y=\"95\" font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">B</text><rect x=\"100\" y=\"160\" width=\"300\" height=\"30\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"180\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">(A ∪ B)ᶜ = Aᶜ ∩ Bᶜ</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given Universal Set $U = \\{1, 2, 3, 4, 5, 6, 7\\}$, $A = \\{1, 2, 3\\}$, and $B = \\{3, 4, 5\\}$. Find $(A \\cup B)^c$.",
+          "solution_steps": [
+            "Step 1: Follow order of operations (brackets first). Find the Union $A \\cup B$.",
+            "Step 2: $A \\cup B = \\{1, 2, 3, 4, 5\\}$.",
+            "Step 3: Find the complement of this set relative to $U$ (what is in $U$ but not in the union?).",
+            "Step 4: The numbers left over in $U$ are $6$ and $7$."
+          ],
+          "final_answer": "{6, 7}"
+        },
+        {
+          "problem": "Let $U=\\{1,2,3,4,5,6\\}$ and $A=\\{2,4,6\\}$. Find $A^c$ relative to $U$.",
+          "solution_steps": [
+            "The complement contains elements of the universal set that are not in $A$.",
+            "Remove 2, 4 and 6 from $U$."
+          ],
+          "final_answer": "$A^c=\\{1,3,5\\}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying the complement without knowing the Universal Set.",
+          "correction": "The complement of 'Even Numbers' is 'Odd Numbers' ONLY if your Universal Set is 'Integers'. If your Universal Set is 'Real Numbers', the complement of 'Even Numbers' includes every fraction, decimal, and irrational number in existence. Context is mandatory."
+        }
+      ],
+      "quick_summary": [
+        "Complement ($A^c$) means 'Not A'.",
+        "It acts mathematically like $U - A$.",
+        "De Morgan's Laws flip unions to intersections when distributing a complement."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Study relative complements and complement laws with explicit reference to the universal set."
+    },
+    "hss_math_t01_st06": {
+      "id": "hss_math_t01_st06",
+      "title": "Venn diagrams and set identities",
+      "overview": "Venn diagrams are the ultimate visual tool for solving massive overlap problems. Alongside them, Set Identities function exactly like algebraic laws (Distribution, Commutativity), allowing you to simplify messy, complicated set notation formulas into clean, elegant expressions.",
+      "key_concepts": [
+        {
+          "concept": "The 3-Set Venn Diagram",
+          "definition": "The 8 regions of reality.",
+          "details": [
+            "When 3 circles (A, B, C) overlap inside a Universal rectangle, they create exactly 8 distinct, mutually exclusive regions.",
+            "Always build 3-set word problems from the center out: find the triple intersection ($A \\cap B \\cap C$) first, then the double overlaps, then the 'only' crescents, and finally the 'none' region on the outside."
+          ]
+        },
+        {
+          "concept": "Algebraic Set Identities",
+          "definition": "Simplifying the logic.",
+          "details": [
+            "**Commutative:** Order doesn't matter. $A \\cup B = B \\cup A$.",
+            "**Associative:** Grouping doesn't matter. $A \\cup (B \\cup C) = (A \\cup B) \\cup C$.",
+            "**Distributive:** You can distribute operators into brackets just like multiplication. $A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)$."
+          ]
+        },
+        {
+          "concept": "Absorption Laws",
+          "definition": "The logic collapse.",
+          "details": [
+            "If a set absorbs an intersection that already includes itself, it just collapses back to itself.",
+            "$A \\cup (A \\cap B) = A$.",
+            "$A \\cap (A \\cup B) = A$."
+          ]
+        },
+        {
+          "concept": "3-Set Inclusion-Exclusion",
+          "definition": "The triple-count fix.",
+          "details": [
+            "When adding three sets, you double-count the double-overlaps, and triple-count the center. You must correct this.",
+            "Formula: $n(A \\cup B \\cup C) = \\Sigma(\\text{Singles}) - \\Sigma(\\text{Pairs}) + \\text{Triple}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Distributive Law (Intersection over Union)",
+          "equation": "$$ A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C) $$",
+          "variables": {}
+        },
+        {
+          "name": "3-Set Inclusion-Exclusion",
+          "equation": "$$ n(A \\cup B \\cup C) = n(A) + n(B) + n(C) - n(A \\cap B) - n(B \\cap C) - n(C \\cap A) + n(A \\cap B \\cap C) $$",
+          "variables": {
+            "Condition": "A, B and C are finite sets; n(X) denotes the cardinality of finite set X."
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s06",
+          "title": "The Distributive Law",
+          "type": "svg",
+          "caption": "Set identities work exactly like algebraic expansion.",
+          "alt_text": "Visual showing A ∩ (B ∪ C) expanding out with arrows. An arrow takes 'A ∩' and applies it to 'B', then another arrow applies it to 'C'. The result is (A ∩ B) ∪ (A ∩ C).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"250\" y=\"60\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">A ∩ (B ∪ C)</text><path d=\"M 200 70 Q 220 110 240 70\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><polygon points=\"240,70 235,78 245,78\" fill=\"#3b82f6\"/><path d=\"M 200 70 Q 250 130 300 70\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><polygon points=\"300,70 295,78 305,78\" fill=\"#ef4444\"/><rect x=\"100\" y=\"140\" width=\"300\" height=\"40\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"250\" y=\"165\" font-family=\"monospace\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">(A ∩ B) ∪ (A ∩ C)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify the expression: $(A \\cup B) \\cap (A \\cup B^c)$",
+          "solution_steps": [
+            "Step 1: Notice that both brackets start with '$A \\cup$'. Use the Distributive Law in reverse to factor it out.",
+            "Step 2: $A \\cup (B \\cap B^c)$.",
+            "Step 3: What is the intersection of B and 'Not B'? They share nothing. $B \\cap B^c = \\emptyset$.",
+            "Step 4: The expression is now $A \\cup \\emptyset$.",
+            "Step 5: Union with empty set changes nothing (Identity Law). Result is $A$."
+          ],
+          "final_answer": "A"
+        },
+        {
+          "problem": "In a group of 30 students, 18 study Mathematics, 14 study Science and 8 study both. How many study at least one of the two subjects?",
+          "solution_steps": [
+            "Use the inclusion-exclusion principle: $n(M\\cup S)=n(M)+n(S)-n(M\\cap S)$.",
+            "Substitute the counts."
+          ],
+          "final_answer": "$18+14-8=24$ students."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Subtracting the triple intersection in a 3-Set Venn Diagram calculation.",
+          "correction": "In the inclusion-exclusion formula, you subtract the pairs (because you double-counted them), which accidentally completely deletes the center core. You must ADD the triple intersection ($+ n(A \\cap B \\cap C)$) back at the very end to restore it."
+        }
+      ],
+      "quick_summary": [
+        "Venn diagrams act as maps for complex word problems. Always build from the center outwards.",
+        "Set Identities (Distribution, De Morgan's, Absorption) let you factor and simplify set equations exactly like algebra."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Use two-set and three-set Venn diagrams; establish distributive, associative and De Morgan's laws, including elementary element-based proofs rather than relying only on diagrams."
+    },
+    "hss_math_t01_st07": {
+      "id": "hss_math_t01_st07",
+      "title": "Cartesian products",
+      "overview": "Multiplying two sets together does not result in a larger set of numbers. It constructs a grid of 'Ordered Pairs' (coordinates). The Cartesian Product is the foundational mechanism that builds the 2D graphs, 3D grids, and database tables we use every day.",
+      "key_concepts": [
+        {
+          "concept": "The Ordered Pair $(a,b)$",
+          "definition": "Order is law.",
+          "details": [
+            "Unlike a standard set where $\\{1, 2\\} = \\{2, 1\\}$, an ordered pair is locked in place. $(2, 5)$ is a completely different coordinate location than $(5, 2)$.",
+            "Two ordered pairs are equal if and only if their first components match AND their second components match."
+          ]
+        },
+        {
+          "concept": "The Cartesian Product ($A \\times B$)",
+          "definition": "The matchmaking set.",
+          "details": [
+            "The Cartesian Product creates a new set filled with every possible ordered pair combination, where the first piece comes from Set A and the second piece comes from Set B.",
+            "$A \\times B = \\{(a, b) \\mid a \\in A, b \\in B\\}$",
+            "It is generally not commutative: $A \\times B$ and $B \\times A$ usually contain ordered pairs in different orders. They are equal when the resulting ordered-pair sets happen to be the same (in particular, when $A=B$)."
+          ]
+        },
+        {
+          "concept": "Cardinality (The Grid Size)",
+          "definition": "Simple multiplication.",
+          "details": [
+            "To find how many pairs will be created, simply multiply the sizes of the two sets.",
+            "$n(A \\times B) = n(A) \\times n(B)$."
+          ]
+        },
+        {
+          "concept": "The Cartesian Square ($A^2$)",
+          "definition": "Multiplying by itself.",
+          "details": [
+            "If you multiply a set by itself ($A \\times A$), it is written as $A^2$.",
+            "If $A = \\{1, 2\\}$, then $A^2 = \\{(1,1), (1,2), (2,1), (2,2)\\}$. This is how standard coordinate geometry grids are built (e.g., $\\mathbb{R}^2$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Cartesian Product Definition",
+          "equation": "$$ A \\times B = \\{(a,b) \\mid a \\in A,\\ b \\in B\\} $$",
+          "variables": {}
+        },
+        {
+          "name": "Cardinality of Cartesian Product",
+          "equation": "$$ n(A \\times B) = n(A) \\times n(B) $$",
+          "variables": {
+            "Condition": "A and B are finite sets; n(A) and n(B) denote their cardinalities."
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s07",
+          "title": "Mapping the Cartesian Product",
+          "type": "svg",
+          "caption": "Every element in A connects to every element in B.",
+          "alt_text": "Visual showing Set A = {1, 2} on the left, and Set B = {a, b} on the right. Arrows draw lines connecting 1 to a, 1 to b, 2 to a, and 2 to b, forming the four coordinate pairs.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"50\" y=\"40\" width=\"60\" height=\"120\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\" rx=\"10\"/><text x=\"80\" y=\"70\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">1</text><text x=\"80\" y=\"140\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">2</text><rect x=\"220\" y=\"40\" width=\"60\" height=\"120\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"250\" y=\"70\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">a</text><text x=\"250\" y=\"140\" font-family=\"monospace\" font-size=\"18\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">b</text><path d=\"M 120 65 L 210 65\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"210,65 200,60 200,70\" fill=\"#0f172a\"/><path d=\"M 120 65 L 210 130\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"210,130 200,125 204,135\" fill=\"#0f172a\"/><path d=\"M 120 135 L 210 70\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"210,70 200,75 204,65\" fill=\"#0f172a\"/><path d=\"M 120 135 L 210 135\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"210,135 200,130 200,140\" fill=\"#0f172a\"/><rect x=\"330\" y=\"60\" width=\"140\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"5\"/><text x=\"400\" y=\"85\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">(1,a), (1,b)</text><text x=\"400\" y=\"120\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">(2,a), (2,b)</text><text x=\"80\" y=\"25\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Set A</text><text x=\"250\" y=\"25\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Set B</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "If $(x + 2, 3y) = (5, 12)$, find $x$ and $y$.",
+          "solution_steps": [
+            "Step 1: Ordered pairs are strictly equal across their positions. Equate the first components: $x + 2 = 5$.",
+            "Step 2: Solve for $x$: $x = 3$.",
+            "Step 3: Equate the second components: $3y = 12$.",
+            "Step 4: Solve for $y$: $y = 4$."
+          ],
+          "final_answer": "x = 3, y = 4"
+        },
+        {
+          "problem": "If $n(A) = 5$ and $n(A \\times B) = 35$, find $n(B)$.",
+          "solution_steps": [
+            "Step 1: Use the cardinality formula: $n(A \\times B) = n(A) \\times n(B)$.",
+            "Step 2: Substitute the knowns: $35 = 5 \\times n(B)$.",
+            "Step 3: Divide by 5: $n(B) = 7$."
+          ],
+          "final_answer": "n(B) = 7"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming Cartesian Products are commutative.",
+          "correction": "$A \\times B \\neq B \\times A$. The order of the coordinate is strictly locked. If $A = \\{Boys\\}$ and $B = \\{Girls\\}$, $A \\times B$ generates pairs of $(Boy, Girl)$. $B \\times A$ generates pairs of $(Girl, Boy)$."
+        }
+      ],
+      "quick_summary": [
+        "A Cartesian Product ($A \\times B$) maps every item in A to every item in B, creating coordinates.",
+        "The number of coordinates created is $n(A) \\times n(B)$.",
+        "It builds the foundation for graphing (like the X-Y plane, $\\mathbb{R}^2$)."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Study ordered pairs and Cartesian products of two or more sets, their properties and their role in defining relations."
+    },
+    "hss_math_t01_st08": {
+      "id": "hss_math_t01_st08",
+      "title": "Relations and their properties",
+      "overview": "A relation describes a connection between elements of two sets or within the same set. Relations are fundamental to understanding functions, equivalence relations, ordering systems, and mathematical structures.",
+      "key_concepts": [
+        {
+          "concept": "Relation Definition",
+          "definition": "A subset of a Cartesian product.",
+          "details": [
+            "A relation $R$ from set $A$ to set $B$ is any subset of the Cartesian product $A \\times B$. ($R \\subseteq A \\times B$).",
+            "It consists of selected ordered pairs. A relation from a set $A$ to itself is called a relation on $A$ ($R \\subseteq A \\times A$)."
+          ]
+        },
+        {
+          "concept": "Reflexive & Symmetric Relations",
+          "definition": "Self-relation and two-way streets.",
+          "details": [
+            "**Reflexive:** Every element is related to itself. $(a,a) \\in R$ for all $a \\in A$.",
+            "**Symmetric:** If $a$ is related to $b$, then $b$ is related to $a$. If $(a,b) \\in R$, then $(b,a) \\in R$."
+          ]
+        },
+        {
+          "concept": "Antisymmetric & Transitive Relations",
+          "definition": "One-way streets and chain links.",
+          "details": [
+            "**Antisymmetric:** If $aRb$ and $bRa$, then $a=b$. This does not mean that the relation must be symmetric; it rules out two-way relationships between distinct elements.",
+            "**Transitive:** If $a$ relates to $b$, and $b$ relates to $c$, then $a$ must relate to $c$. If $(a,b) \\in R$ and $(b,c) \\in R$, then $(a,c) \\in R$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s08",
+          "title": "Properties of Relations",
+          "type": "svg",
+          "caption": "A directed graph showing Reflexive (loops), Symmetric (double arrows), and Transitive (skip-arrow) relationships.",
+          "alt_text": "Three nodes labeled a, b, and c. Node a has a loop pointing to itself (Reflexive). Nodes a and b have arrows pointing to each other (Symmetric). Arrows go from a to b, b to c, and a directly to c (Transitive).",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"100\" cy=\"100\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"100\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">a</text><circle cx=\"250\" cy=\"100\" r=\"20\" fill=\"#dcfce7\" stroke=\"#14532d\" stroke-width=\"2\"/><text x=\"250\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">b</text><circle cx=\"400\" cy=\"100\" r=\"20\" fill=\"#fee2e2\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"400\" y=\"105\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">c</text><path d=\"M 90 85 C 70 50, 130 50, 110 85\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 120 90 L 230 90\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 230 110 L 120 110\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 270 100 L 380 100\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 115 85 Q 250 20 385 85\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#64748b\"/></marker></defs></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "On the set of integers, define a relation by $aRb$ if and only if $a \\leq b$. Determine its properties.",
+          "solution_steps": [
+            "Step 1: Check Reflexivity. Is $a \\leq a$? Yes. The relation is reflexive.",
+            "Step 2: Check Symmetry. If $a \\leq b$, does that mean $b \\leq a$? No. The relation is not symmetric.",
+            "Step 3: Check Antisymmetry. If $a \\leq b$ and $b \\leq a$, does $a = b$? Yes. The relation is antisymmetric.",
+            "Step 4: Check Transitivity. If $a \\leq b$ and $b \\leq c$, does $a \\leq c$? Yes. The relation is transitive."
+          ],
+          "final_answer": "Reflexive, Antisymmetric, and Transitive (This is a Partial Order)."
+        },
+        {
+          "problem": "On $A=\\{1,2,3\\}$, consider $R=\\{(1,1),(2,2),(3,3),(1,2),(2,1)\\}$. Is $R$ symmetric?",
+          "solution_steps": [
+            "For symmetry, whenever $(a,b)$ belongs to $R$, $(b,a)$ must also belong to $R$.",
+            "The only off-diagonal pair is accompanied by its reverse."
+          ],
+          "final_answer": "Yes, $R$ is symmetric."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming antisymmetric means 'not symmetric'.",
+          "correction": "A relation can be both symmetric and antisymmetric (e.g., $R = \\{(1,1), (2,2)\\}$). Antisymmetric simply means that *if* a two-way street exists, it can only happen if the two elements are identical."
+        }
+      ],
+      "quick_summary": [
+        "A relation maps elements from one set to another (or to itself).",
+        "Reflexive: everything relates to itself.",
+        "Symmetric: relationships go both ways.",
+        "Antisymmetric: relationships only go both ways if the elements are identical.",
+        "Transitive: chained relationships carry over."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Represent relations as subsets of Cartesian products; determine domain, range and inverse relations; analyse reflexive, symmetric, antisymmetric and transitive properties."
+    },
+    "hss_math_t01_st09": {
+      "id": "hss_math_t01_st09",
+      "title": "Equivalence relations",
+      "overview": "An equivalence relation combines reflexivity, symmetry, and transitivity to establish when two elements should be considered equivalent under a particular rule. This forms the foundation for modular arithmetic, grouping, and set partitions.",
+      "key_concepts": [
+        {
+          "concept": "Equivalence Relation",
+          "definition": "Reflexive, Symmetric, Transitive.",
+          "details": [
+            "A relation $R$ on a set $A$ is an equivalence relation if and only if it satisfies all three conditions: Reflexive ($aRa$), Symmetric (If $aRb$ then $bRa$), and Transitive (If $aRb$ and $bRc$, then $aRc$)."
+          ]
+        },
+        {
+          "concept": "Equivalence Classes",
+          "definition": "Groupings of identicals.",
+          "details": [
+            "An equivalence class for an element $a$, denoted $[a]$, is the set of all elements in the set that are equivalent to $a$.",
+            "Property 1: Every element belongs to its own equivalence class.",
+            "Property 2: Two equivalence classes are either perfectly identical ($[a]=[b]$) or completely disjoint (no overlap)."
+          ]
+        },
+        {
+          "concept": "Partitions of a Set",
+          "definition": "Splitting the pie.",
+          "details": [
+            "A partition of a set is a collection of non-empty subsets that are mutually disjoint and whose union covers the entire original set.",
+            "**Fundamental Theorem:** Every equivalence relation produces a unique partition of a set into equivalence classes, and every partition defines an equivalence relation."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s09",
+          "title": "Equivalence Classes Form a Partition",
+          "type": "svg",
+          "caption": "An example of equivalence classes modulo 2 on the set {1, 2, 3, 4}.",
+          "alt_text": "The set is divided into two disjoint groups: the even class containing 2 and 4, and the odd class containing 1 and 3. Together the groups cover the original set.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 230\">\n<rect width=\"520\" height=\"230\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Equivalence classes modulo 2</text>\n<rect x=\"55\" y=\"55\" width=\"180\" height=\"125\" rx=\"12\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<rect x=\"285\" y=\"55\" width=\"180\" height=\"125\" rx=\"12\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n<text x=\"145\" y=\"82\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"15\" fill=\"#1e40af\">Even class</text>\n<text x=\"375\" y=\"82\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"15\" fill=\"#166534\">Odd class</text>\n<g font-family=\"Arial\" font-size=\"20\" font-weight=\"bold\" text-anchor=\"middle\">\n<circle cx=\"110\" cy=\"125\" r=\"22\" fill=\"#fff\" stroke=\"#2563eb\"/><text x=\"110\" y=\"132\" fill=\"#1e40af\">2</text>\n<circle cx=\"180\" cy=\"125\" r=\"22\" fill=\"#fff\" stroke=\"#2563eb\"/><text x=\"180\" y=\"132\" fill=\"#1e40af\">4</text>\n<circle cx=\"340\" cy=\"125\" r=\"22\" fill=\"#fff\" stroke=\"#16a34a\"/><text x=\"340\" y=\"132\" fill=\"#166534\">1</text>\n<circle cx=\"410\" cy=\"125\" r=\"22\" fill=\"#fff\" stroke=\"#16a34a\"/><text x=\"410\" y=\"132\" fill=\"#166534\">3</text>\n</g>\n<text x=\"260\" y=\"210\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">The two disjoint classes partition {1, 2, 3, 4}</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Let $A = \\{1, 2, 3, 4\\}$. Define $aRb$ if and only if $a - b$ is divisible by $2$. Find the distinct equivalence classes.",
+          "solution_steps": [
+            "Step 1: Test the relation with element $1$. Numbers in $A$ where $x - 1$ is divisible by $2$ are $1$ and $3$. So, $[1] = \\{1, 3\\}$.",
+            "Step 2: Test the relation with element $2$. Numbers in $A$ where $x - 2$ is divisible by $2$ are $2$ and $4$. So, $[2] = \\{2, 4\\}$.",
+            "Step 3: Check remaining elements. $3 \\in [1]$ and $4 \\in [2]$. The set is fully partitioned."
+          ],
+          "final_answer": "[1] = {1, 3} and [2] = {2, 4}"
+        },
+        {
+          "problem": "On the integers, define $a\\sim b$ if $a-b$ is divisible by 3. Show that 4 is equivalent to 1.",
+          "solution_steps": [
+            "Compute the difference $4-1=3$.",
+            "Since 3 is divisible by 3, the defining condition holds."
+          ],
+          "final_answer": " $4\\sim1$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking an equivalence relation must be antisymmetric.",
+          "correction": "Equivalence relations require symmetry, NOT antisymmetry. (Partial orders require antisymmetry)."
+        },
+        {
+          "mistake": "Allowing equivalence classes to partially overlap.",
+          "correction": "Equivalence classes are either 100% identical or 100% disjoint. There is no partial overlap."
+        }
+      ],
+      "quick_summary": [
+        "An equivalence relation must be Reflexive, Symmetric, and Transitive.",
+        "Equivalence relations divide a master set into non-overlapping groups called Equivalence Classes.",
+        "These disjoint groups form a complete 'Partition' of the original set."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Prove equivalence relations and determine equivalence classes and partitions. Include accessible examples such as congruence modulo an integer."
+    },
+    "hss_math_t01_st10": {
+      "id": "hss_math_t01_st10",
+      "title": "Functions: domain, codomain and range",
+      "overview": "A function is a special type of relation that assigns exactly one output to every input. Functions are among the most important concepts in mathematics because they describe strict, predictable relationships between quantities.",
+      "key_concepts": [
+        {
+          "concept": "The Function Definition",
+          "definition": "One input, exactly one output.",
+          "details": [
+            "A function from set $A$ to set $B$ ($f: A \\rightarrow B$) assigns exactly one element in $B$ to every element in $A$.",
+            "Every function is a relation, but not every relation is a function (e.g., if input '2' maps to both '4' and '5', it fails the function test)."
+          ]
+        },
+        {
+          "concept": "Domain, Codomain, and Range",
+          "definition": "Inputs, targets, and actual hits.",
+          "details": [
+            "**Domain:** The set of all permitted inputs ($A$).",
+            "**Codomain:** The designated target set for the outputs ($B$). It is specified as part of the function definition.",
+            "**Range:** The set of *actual* outputs the function produces. The Range is always a subset of the Codomain ($\\text{Range} \\subseteq \\text{Codomain}$)."
+          ]
+        },
+        {
+          "concept": "The Vertical Line Test",
+          "definition": "Visual function check.",
+          "details": [
+            "If a vertical line intersects a graph at more than one point, the graph does not represent a function (because one x-input has multiple y-outputs)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s10",
+          "title": "Domain, Codomain, and Range",
+          "type": "svg",
+          "caption": "The range is the subset of the codomain that actually gets hit by the mapping.",
+          "alt_text": "Two ovals representing Set A and Set B. Arrows point from items in A to items in B. A dashed circle inside Set B groups only the items that have incoming arrows, labeled 'Range'. The entire Set B is labeled 'Codomain'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><ellipse cx=\"120\" cy=\"100\" rx=\"60\" ry=\"80\" fill=\"#e0f2fe\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"120\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">Domain (A)</text><ellipse cx=\"380\" cy=\"100\" rx=\"60\" ry=\"80\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"380\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Codomain (B)</text><ellipse cx=\"380\" cy=\"80\" rx=\"40\" ry=\"50\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><text x=\"380\" y=\"85\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">Range</text><circle cx=\"120\" cy=\"60\" r=\"4\" fill=\"#000\"/><circle cx=\"120\" cy=\"100\" r=\"4\" fill=\"#000\"/><circle cx=\"120\" cy=\"140\" r=\"4\" fill=\"#000\"/><circle cx=\"380\" cy=\"50\" r=\"4\" fill=\"#000\"/><circle cx=\"380\" cy=\"100\" r=\"4\" fill=\"#000\"/><circle cx=\"380\" cy=\"150\" r=\"4\" fill=\"#000\"/><path d=\"M 130 60 L 365 50\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 130 100 L 365 50\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 130 140 L 365 100\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#64748b\"/></marker></defs></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the natural domain of $f(x) = \\frac{\\sqrt{x-1}}{x-4}$.",
+          "solution_steps": [
+            "Step 1: Check the square root constraint. The expression inside must be non-negative: $x - 1 \\geq 0 \\Rightarrow x \\geq 1$.",
+            "Step 2: Check the denominator constraint. The denominator cannot be zero: $x - 4 \\neq 0 \\Rightarrow x \\neq 4$.",
+            "Step 3: Combine the constraints. $x$ must be $\\geq 1$ but cannot equal $4$."
+          ],
+          "final_answer": "Domain = [1, 4) ∪ (4, ∞)"
+        },
+        {
+          "problem": "For $f:A\\to B$ with $A=\\{1,2,3\\}$ and $B=\\{a,b\\}$, suppose $f(1)=a$, $f(2)=b$, $f(3)=a$. State the domain, codomain and range.",
+          "solution_steps": [
+            "The domain is the input set $A$.",
+            "The codomain is the declared target set $B$.",
+            "The range is the set of outputs actually attained."
+          ],
+          "final_answer": "Domain $\\{1,2,3\\}$; codomain $\\{a,b\\}$; range $\\{a,b\\}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing the Codomain with the Range.",
+          "correction": "The codomain is the universe of *potential* outputs defined by the function mapping. The range is the exact list of outputs that *actually* occur."
+        }
+      ],
+      "quick_summary": [
+        "A function maps every permitted input to exactly one output.",
+        "The Domain is the list of permitted inputs.",
+        "The Codomain is the designated target set.",
+        "The Range is the set of actual outputs produced."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Develop a formal definition of a function and mapping; distinguish domain, codomain and range; examine domain restrictions and functions on specified sets."
+    },
+    "hss_math_t01_st11": {
+      "id": "hss_math_t01_st11",
+      "title": "Types of functions: injective, surjective and bijective",
+      "overview": "Functions can be classified by how their inputs map to their outputs. Understanding whether a function hits every target or whether it assigns unique outputs to every input is critical for determining if the mathematical process can be cleanly reversed (inverted).",
+      "key_concepts": [
+        {
+          "concept": "Injective (One-to-One)",
+          "definition": "Unique outputs.",
+          "details": [
+            "A function is injective if different inputs always produce different outputs. No two inputs share an output.",
+            "Mathematically: If $f(a_1) = f(a_2)$, then $a_1 = a_2$.",
+            "**Horizontal Line Test:** A function is injective if every horizontal line intersects its graph at most once. Some horizontal lines may not intersect the graph."
+          ]
+        },
+        {
+          "concept": "Surjective (Onto)",
+          "definition": "Hitting every target.",
+          "details": [
+            "A function is surjective if every element in the Codomain is hit by at least one input.",
+            "Mathematically: $\\text{Range} = \\text{Codomain}$."
+          ]
+        },
+        {
+          "concept": "Bijective",
+          "definition": "The perfect pairing.",
+          "details": [
+            "A function is bijective if it is BOTH injective (one-to-one) and surjective (onto).",
+            "A bijective function establishes a perfect 1:1 correspondence between the Domain and Codomain, which is the mandatory requirement for a function to have an Inverse."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s11",
+          "title": "Injective, Surjective and Bijective Mappings",
+          "type": "svg",
+          "caption": "Mapping diagrams compare one-to-one, onto, and bijective functions.",
+          "alt_text": "Three mapping diagrams: injective maps distinct domain elements to distinct codomain elements; surjective maps hit every codomain element; bijective satisfies both properties.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\">\n<rect width=\"600\" height=\"245\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"100\" y=\"25\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">Injective</text>\n<text x=\"300\" y=\"25\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">Surjective</text>\n<text x=\"500\" y=\"25\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">Bijective</text>\n<g stroke=\"#64748b\" stroke-width=\"1.5\" fill=\"none\">\n<rect x=\"20\" y=\"42\" width=\"160\" height=\"170\" rx=\"8\"/><rect x=\"220\" y=\"42\" width=\"160\" height=\"170\" rx=\"8\"/><rect x=\"420\" y=\"42\" width=\"160\" height=\"170\" rx=\"8\"/>\n</g>\n<g fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\">\n<circle cx=\"55\" cy=\"90\" r=\"12\"/><circle cx=\"55\" cy=\"155\" r=\"12\"/><circle cx=\"145\" cy=\"75\" r=\"12\"/><circle cx=\"145\" cy=\"125\" r=\"12\"/><circle cx=\"145\" cy=\"175\" r=\"12\"/>\n<circle cx=\"255\" cy=\"90\" r=\"12\"/><circle cx=\"255\" cy=\"155\" r=\"12\"/><circle cx=\"345\" cy=\"75\" r=\"12\"/><circle cx=\"345\" cy=\"125\" r=\"12\"/><circle cx=\"345\" cy=\"175\" r=\"12\"/>\n<circle cx=\"455\" cy=\"90\" r=\"12\"/><circle cx=\"455\" cy=\"155\" r=\"12\"/><circle cx=\"545\" cy=\"90\" r=\"12\"/><circle cx=\"545\" cy=\"155\" r=\"12\"/>\n</g>\n<g stroke=\"#0f766e\" stroke-width=\"2\" fill=\"none\">\n<path d=\"M67 90 L133 75 M67 155 L133 125\"/>\n<path d=\"M267 90 L333 75 M267 155 L333 125 M267 155 L333 175\"/>\n<path d=\"M467 90 L533 90 M467 155 L533 155\"/>\n</g>\n<g font-family=\"Arial\" font-size=\"11\" fill=\"#334155\" text-anchor=\"middle\">\n<text x=\"100\" y=\"230\">No two inputs share an output</text><text x=\"300\" y=\"230\">Every codomain element is hit</text><text x=\"500\" y=\"230\">Both conditions hold</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify the function $f(x) = x^2$ where $f: \\mathbb{R} \\rightarrow \\mathbb{R}$.",
+          "solution_steps": [
+            "Step 1: Test for Injectivity. $f(2) = 4$ and $f(-2) = 4$. Since two different inputs give the same output, it is NOT injective.",
+            "Step 2: Test for Surjectivity. The codomain is all real numbers ($\\mathbb{R}$), but $x^2$ can never produce a negative number (Range is $[0, \\infty)$). Since Range $\\neq$ Codomain, it is NOT surjective."
+          ],
+          "final_answer": "Neither injective nor surjective."
+        },
+        {
+          "problem": "Is $f:\\mathbb R\\to\\mathbb R$, $f(x)=x^2$, injective? Give a counterexample if not.",
+          "solution_steps": [
+            "A function is injective if equal outputs imply equal inputs.",
+            "Here $f(1)=1$ and $f(-1)=1$, although $1\\ne-1$."
+          ],
+          "final_answer": "It is not injective on $\\mathbb R$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming injectivity guarantees surjectivity.",
+          "correction": "They are independent properties. A function can be one-to-one (injective) but fail to cover the entire codomain (not surjective)."
+        }
+      ],
+      "quick_summary": [
+        "Injective (One-to-One): Every input gets a unique output.",
+        "Surjective (Onto): The function uses up the entire Codomain.",
+        "Bijective: Both Injective and Surjective. Required for a function to have an inverse."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Define and test injective, surjective and bijective functions using algebraic, mapping and graphical reasoning. Include proof-based examples and counterexamples."
+    },
+    "hss_math_t01_st12": {
+      "id": "hss_math_t01_st12",
+      "title": "Composition of functions",
+      "overview": "Complex real-world processes often occur in stages. Composition of functions models this chain reaction by taking the output of one function and feeding it directly as the input into another, building layered mathematical expressions.",
+      "key_concepts": [
+        {
+          "concept": "The Composition Operation ($g \\circ f$)",
+          "definition": "Function inside a function.",
+          "details": [
+            "The composition $(g \\circ f)(x)$ means applying function $f$ first, then plugging that result into function $g$. Mathematically, $(g \\circ f)(x) = g(f(x))$.",
+            "Order matters. In almost all cases, $(g \\circ f)(x) \\neq (f \\circ g)(x)$. Function composition is generally NOT commutative."
+          ]
+        },
+        {
+          "concept": "Domain of a Composite Function",
+          "definition": "Filtering valid inputs.",
+          "details": [
+            "The domain of $f \\circ g$ consists of all inputs $x$ that are valid for $g$, BUT only if the resulting output $g(x)$ is also valid to be fed into $f$.",
+            "Domain restriction: $x \\in \\text{Domain}(g)$ AND $g(x) \\in \\text{Domain}(f)$."
+          ]
+        },
+        {
+          "concept": "Associative and Identity Properties",
+          "definition": "Mathematical flow rules.",
+          "details": [
+            "**Associative:** Function composition is associative whenever the functions' domains and codomains make the compositions well-defined: $(f \\circ g) \\circ h = f \\circ (g \\circ h)$.",
+            "**Identity:** If $I_A(x)=x$ on the domain set $A$ and $I_B(x)=x$ on the codomain set $B$, then $f \\circ I_A=f$ and $I_B \\circ f=f$ for $f:A\\to B$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Composite Function Definition",
+          "equation": "$$ (g \\circ f)(x) = g(f(x)) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s12",
+          "title": "Function Composition Machine",
+          "type": "svg",
+          "caption": "The output of f(x) acts as the raw material for g(x).",
+          "alt_text": "Visual showing an 'x' entering a blue box labeled 'f'. An arrow labeled 'f(x)' exits the blue box and directly enters a green box labeled 'g'. The final arrow exiting the green box is labeled 'g(f(x))'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"150\" y=\"60\" width=\"80\" height=\"80\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\" rx=\"10\"/><text x=\"190\" y=\"105\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">f</text><rect x=\"300\" y=\"60\" width=\"80\" height=\"80\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"340\" y=\"105\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">g</text><path d=\"M 50 100 L 140 100\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/><text x=\"95\" y=\"90\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">x</text><path d=\"M 230 100 L 290 100\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/><text x=\"260\" y=\"90\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1d4ed8\" font-weight=\"bold\">f(x)</text><path d=\"M 380 100 L 480 100\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/><text x=\"430\" y=\"90\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">g(f(x))</text><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#64748b\"/></marker></defs></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $f(x) = x^2 + 1$ and $g(x) = 3x - 2$, find $(f \\circ g)(x)$.",
+          "solution_steps": [
+            "Step 1: Write the definition of composition: $(f \\circ g)(x) = f(g(x))$.",
+            "Step 2: Substitute the inner function: $f(3x - 2)$.",
+            "Step 3: Plug $(3x - 2)$ wherever there is an $x$ in $f(x)$: $(3x - 2)^2 + 1$.",
+            "Step 4: Expand the binomial squared: $(9x^2 - 12x + 4) + 1$.",
+            "Step 5: Combine like terms: $9x^2 - 12x + 5$."
+          ],
+          "final_answer": "9x² - 12x + 5"
+        },
+        {
+          "problem": "If $f(x)=2x+1$ and $g(x)=x^2$, find $(f\\circ g)(3)$.",
+          "solution_steps": [
+            "First evaluate the inner function: $g(3)=9$.",
+            "Then evaluate $f(9)=2(9)+1$."
+          ],
+          "final_answer": "$ (f\\circ g)(3)=19$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Evaluating $(f \\circ g)(x)$ as $f(x) \\times g(x)$.",
+          "correction": "Composition is NOT multiplication. You are nesting one function inside the other as its input variable, not multiplying their independent outputs."
+        }
+      ],
+      "quick_summary": [
+        "Composition $(f \\circ g)(x)$ evaluates the inner function $g(x)$ first, and passes the result into the outer function $f$.",
+        "The order of composition completely changes the final result.",
+        "The domain is restricted by both the inner function's limits and the outer function's limits on that new output."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Study composition of two or more functions, order of composition, domain restrictions and properties of composite functions."
+    },
+    "hss_math_t01_st13": {
+      "id": "hss_math_t01_st13",
+      "title": "Inverse functions",
+      "overview": "If a function performs an operation, its inverse function reverses it, perfectly decoding the output back to the original input. This lesson explains how to find inverse functions algebraically, graph their symmetry, and understand why strict bijection is required.",
+      "key_concepts": [
+        {
+          "concept": "The Inverse Function ($f^{-1}$)",
+          "definition": "The 'undo' operation.",
+          "details": [
+            "If $f(a) = b$, then the inverse function $f^{-1}$ reverses it: $f^{-1}(b) = a$.",
+            "WARNING: $f^{-1}(x)$ is notation for the inverse function. It does NOT mean the reciprocal $\\frac{1}{f(x)}$."
+          ]
+        },
+        {
+          "concept": "The Bijection Requirement",
+          "definition": "Why some functions lack inverses.",
+          "details": [
+            "A function must be fully Bijective (Injective and Surjective) to have an inverse defined on its entire codomain.",
+            "If it isn't Injective (e.g., $x^2$ maps both $2$ and $-2$ to $4$), the inverse wouldn't know which original input to return. If it isn't Surjective, the inverse wouldn't have instructions for the unhit codomain targets."
+          ]
+        },
+        {
+          "concept": "Domain and Range Flip",
+          "definition": "Exchanging roles.",
+          "details": [
+            "The Domain of $f^{-1}$ is exactly the Range of $f$.",
+            "The Range of $f^{-1}$ is exactly the Domain of $f$.",
+            "Graphically, a function and its inverse are mirror reflections of each other across the diagonal line $y = x$."
+          ]
+        },
+        {
+          "concept": "Verification by Composition",
+          "definition": "Proving the inverse.",
+          "details": [
+            "To prove two functions are inverses, composing them in either direction must collapse everything back to just $x$.",
+            "$f^{-1}(f(x)) = x$ and $f(f^{-1}(x)) = x$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Inverse Composition Identity",
+          "equation": "$$ f(f^{-1}(x)) = x \\quad \\text{and} \\quad f^{-1}(f(x)) = x $$",
+          "variables": {
+            "Condition": "The identities hold for inputs in the appropriate domains where the compositions are defined; for an inverse function, f must be bijective from its stated domain to its stated codomain."
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s13",
+          "title": "Reflection of Inverse Function Graphs",
+          "type": "svg",
+          "caption": "The graph of an inverse function is the reflection of the original graph in y = x.",
+          "alt_text": "Two reflected curves labeled y=f(x) and y=f inverse of x, symmetric about the diagonal line y=x.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 240\">\n<rect width=\"520\" height=\"240\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"25\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">A function and its inverse</text>\n<line x1=\"70\" y1=\"190\" x2=\"450\" y2=\"45\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/>\n<text x=\"445\" y=\"38\" font-family=\"Arial\" font-size=\"13\" fill=\"#475569\">y = x</text>\n<path d=\"M90 180 Q180 145 260 115 Q340 85 430 50\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/>\n<path d=\"M90 50 Q180 85 260 115 Q340 145 430 180\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"4\"/>\n<circle cx=\"260\" cy=\"115\" r=\"5\" fill=\"#0f172a\"/>\n<text x=\"150\" y=\"95\" font-family=\"Arial\" font-size=\"14\" fill=\"#1d4ed8\">y = f(x)</text>\n<text x=\"330\" y=\"165\" font-family=\"Arial\" font-size=\"14\" fill=\"#166534\">y = f⁻¹(x)</text>\n<text x=\"260\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" fill=\"#334155\">Graphs are reflections in the line y = x</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the inverse of $f(x) = \\frac{2x-1}{3}$.",
+          "solution_steps": [
+            "Step 1: Write the function as an equation using $y$: $y = \\frac{2x-1}{3}$.",
+            "Step 2: Physically swap the variables $x$ and $y$ to build the inverse framework: $x = \\frac{2y-1}{3}$.",
+            "Step 3: Isolate the new $y$. Multiply by 3: $3x = 2y - 1$.",
+            "Step 4: Add 1: $3x + 1 = 2y$.",
+            "Step 5: Divide by 2: $y = \\frac{3x+1}{2}$.",
+            "Step 6: Relabel $y$ as $f^{-1}(x)$."
+          ],
+          "final_answer": "f⁻¹(x) = (3x + 1) / 2"
+        },
+        {
+          "problem": "Find the inverse of $f(x)=3x-5$.",
+          "solution_steps": [
+            "Write $y=3x-5$.",
+            "Interchange $x$ and $y$: $x=3y-5$.",
+            "Solve for $y$."
+          ],
+          "final_answer": "$f^{-1}(x)=\\frac{x+5}{3}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating $f^{-1}(x)$ as an exponent.",
+          "correction": "In function notation, the '-1' superscript strictly means 'inverse'. It does NOT mean $f(x)^{-1}$ (which is $\\frac{1}{f(x)}$)."
+        }
+      ],
+      "quick_summary": [
+        "An inverse function exactly reverses the mapping of the original function.",
+        "To find an inverse algebraically: Swap $x$ and $y$, then solve for $y$.",
+        "A function must be Bijective (one-to-one and onto) to have a valid inverse."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Establish conditions for inverse functions, find and verify inverses using composition, and relate the domain and range of a function to those of its inverse."
+    },
+    "hss_math_t01_st14": {
+      "id": "hss_math_t01_st14",
+      "title": "Binary operations",
+      "overview": "A binary operation defines exactly how to take two elements from a specific set and mathematically smash them together to create a new element. This concept abstracts arithmetic operations (like +, -, x) into general rules to build advanced algebraic structures like Groups.",
+      "key_concepts": [
+        {
+          "concept": "The Definition of a Binary Operation (*)",
+          "definition": "Two inputs, one internal output.",
+          "details": [
+            "A binary operation $*$ on a set $S$ is a rule that combines two elements $a,b \\in S$ to produce exactly one output $a*b$ that must also belong to $S$.",
+            "This strict requirement is called 'Closure'. If an operation outputs a number outside the original set (like subtracting two positive integers and getting a negative), it is NOT a closed binary operation on that set."
+          ]
+        },
+        {
+          "concept": "Commutativity and Associativity",
+          "definition": "Order and Grouping.",
+          "details": [
+            "**Commutative:** The order of the two elements doesn't matter. $a * b = b * a$.",
+            "**Associative:** The grouping of three elements doesn't matter. $(a * b) * c = a * (b * c)$."
+          ]
+        },
+        {
+          "concept": "Identity and Inverse Elements",
+          "definition": "Neutrality and Cancellation.",
+          "details": [
+            "**Identity Element ($e$):** A neutral element that leaves any input unchanged: $a * e = a$ and $e * a = a$. (e.g., $0$ for addition, $1$ for multiplication).",
+            "**Inverse Element ($b$):** Relative to an identity element $e$, an element $b$ is a two-sided inverse of $a$ when both $a*b=e$ and $b*a=e$. An inverse need not exist for every element in an arbitrary binary operation."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Identity Element Condition",
+          "equation": "$$ a * e = e * a = a $$",
+          "variables": {}
+        },
+        {
+          "name": "Inverse Element Condition",
+          "equation": "$$ a * b = b * a = e $$",
+          "variables": {
+            "Condition": "b is a two-sided inverse of a relative to identity e; the operation must have an identity element for this definition to apply."
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v01_s14",
+          "title": "A Binary Operation and Closure",
+          "type": "svg",
+          "caption": "The operation a*b=a+b+2 combines two real inputs and returns a real output; its identity is −2.",
+          "alt_text": "Two inputs a and b enter an operation box labeled a star b and produce a+b+2. Text notes closure over the real numbers and identity element negative two.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 235\">\n<rect width=\"520\" height=\"235\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"28\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Binary operation: a * b = a + b + 2</text>\n<rect x=\"35\" y=\"65\" width=\"115\" height=\"55\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<rect x=\"370\" y=\"65\" width=\"115\" height=\"55\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n<text x=\"92\" y=\"99\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"19\" fill=\"#1e40af\">a</text>\n<text x=\"427\" y=\"99\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"19\" fill=\"#166534\">b</text>\n<path d=\"M150 92 L220 92 M300 92 L370 92\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n<path d=\"M212 85 L220 92 L212 99 M362 85 L370 92 L362 99\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n<rect x=\"205\" y=\"65\" width=\"110\" height=\"55\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/>\n<text x=\"260\" y=\"99\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"17\" fill=\"#92400e\">a*b</text>\n<text x=\"260\" y=\"155\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"15\" fill=\"#0f172a\">= a + b + 2</text>\n<text x=\"260\" y=\"185\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#334155\">For a, b ∈ ℝ, the result is also in ℝ (closure)</text>\n<text x=\"260\" y=\"211\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"#334155\">Identity element: e = −2</text>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Define the operation $a * b = a + b + 2$ on the real numbers. Find the identity element.",
+          "solution_steps": [
+            "Step 1: Write the identity condition rule: $a * e = a$.",
+            "Step 2: Substitute the custom rule of the operation: $a + e + 2 = a$.",
+            "Step 3: Solve for $e$. Subtract $a$ from both sides: $e + 2 = 0$.",
+            "Step 4: Isolate $e$: $e = -2$.",
+            "Step 5: Check the reverse condition $e * a = a$. $(-2) + a + 2 = a$. It works."
+          ],
+          "final_answer": "e = -2"
+        },
+        {
+          "problem": "For the operation $a*b=a+b+2$ on $\\mathbb R$, find its identity element.",
+          "solution_steps": [
+            "Let $e$ be the identity and use $a*e=a$.",
+            "Then $a+e+2=a$, so $e=-2$.",
+            "Check $e*a=a$ as well."
+          ],
+          "final_answer": "The identity element is $e=-2$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming standard math rules (like commutativity) apply to custom operations.",
+          "correction": "A custom binary operation (like $a * b = a^2 - b$) must be tested. In this example, $2 * 3 = 4 - 3 = 1$, but $3 * 2 = 9 - 2 = 7$. It is NOT commutative."
+        }
+      ],
+      "quick_summary": [
+        "A binary operation combines two set elements and must result in an output within that same set (Closure).",
+        "The Identity Element is a neutral value that does nothing to the original input ($a * e = a$).",
+        "The Inverse Element is the specific value required to turn an input into the Identity Element ($a * b = e$)."
+      ],
+      "registry_scope": "Exact subtopic sequence from Pasted markdown(1).md; whitespace normalized only. User-approved 2026-11-05 scope: Study binary operations and closure, commutativity, associativity, identity and inverse elements. Use examples on familiar number systems and simple finite sets; do not extend to a full treatment of groups, rings or fields."
+    }
+  }
+}

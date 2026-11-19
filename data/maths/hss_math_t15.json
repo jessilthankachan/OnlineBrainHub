@@ -1,0 +1,831 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t15",
+  "topicTitle": "Applications of Integrals",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t15_st01": {
+      "id": "hss_math_t15_st01",
+      "title": "Area under a curve",
+      "overview": "Integration is more than an algebraic reverse-operation. It is the mathematical tool for finding the exact physical area of irregular, curved shapes by slicing them into an infinite number of microscopic rectangles.",
+      "key_concepts": [
+        {
+          "concept": "The Geometric Meaning",
+          "definition": "Infinite rectangles.",
+          "details": [
+            "A definite integral $\\int_a^b f(x) dx$ calculates the exact area trapped between the curve $y=f(x)$, the x-axis, and the vertical boundary lines $x=a$ and $x=b$."
+          ]
+        },
+        {
+          "concept": "The Definite Integral Setup",
+          "definition": "Upper and lower limits.",
+          "details": [
+            "You set up the integral by placing the leftmost boundary at the bottom (lower limit) and the rightmost boundary at the top (upper limit).",
+            "You find the antiderivative, plug in the top limit, and subtract the result of plugging in the bottom limit."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Area Under Curve",
+          "equation": "$$ A = \\int_a^b f(x) dx $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t15_st01_visual_added01",
+          "title": "Area under a curve — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration for Area under a curve; not to scale.",
+          "alt_text": "Original schematic illustration for Area under a curve; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Area under a curve</title><desc>Original schematic illustration for Area under a curve; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"30\" y1=\"175\" x2=\"290\" y2=\"175\" stroke=\"#64748b\"/><line x1=\"55\" y1=\"205\" x2=\"55\" y2=\"25\" stroke=\"#64748b\"/><path d=\"M60 155 Q115 25 270 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M60 175 L270 175\" stroke=\"#d97706\" stroke-width=\"2\"/><path d=\"M100 175 V112 M150 175 V78 M200 175 V65\" stroke=\"#d97706\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Area under a curve</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the area under the curve $y = x^2$ between $x = 1$ and $x = 3$.",
+          "solution_steps": [
+            "Step 1: Set up the definite integral: $\\int_1^3 x^2 dx$.",
+            "Step 2: Find the antiderivative: $\\frac{x^3}{3}$.",
+            "Step 3: Evaluate at the upper limit (3): $\\frac{3^3}{3} = \\frac{27}{3} = 9$.",
+            "Step 4: Evaluate at the lower limit (1): $\\frac{1^3}{3} = \\frac{1}{3}$.",
+            "Step 5: Subtract the lower evaluation from the upper: $9 - \\frac{1}{3} = \\frac{27}{3} - \\frac{1}{3} = \\frac{26}{3}$."
+          ],
+          "final_answer": "26/3 square units"
+        },
+        {
+          "problem": "For $y=4-x^2$, find the signed area represented by the integral from $x=-1$ to $x=2$.",
+          "solution_steps": [
+            "The definite integral represents signed area: regions above the x-axis contribute positively and regions below contribute negatively.",
+            "An antiderivative is $4x-\\frac{x^3}{3}$.",
+            "Evaluate at the endpoints: $[4x-\\frac{x^3}{3}]_{-1}^{2}$.",
+            "At 2 the value is $8-\\frac83=\\frac{16}{3}$. At -1 it is $-4+\\frac13=-\\frac{11}{3}$.",
+            "Subtract: $\\frac{16}{3}-(-\\frac{11}{3})=9$."
+          ],
+          "final_answer": "Signed area = $9$ square units."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting that area requires square units.",
+          "correction": "When you evaluate a definite integral for a purely algebraic problem, the answer is just a number. But when asked for 'Area', your final answer must imply physical space (e.g., 'square units' or 'm$^2$')."
+        }
+      ],
+      "quick_summary": [
+        "Definite integrals calculate the exact geometric area under a continuous curve.",
+        "The boundaries of the shape become the upper and lower limits of the integral.",
+        "The area is evaluated by calculating $F(b) - F(a)$."
+      ],
+      "registry_scope": "Draft 79 approved audit: Introduce the definite integral as signed area and as an accumulated quantity over an interval; connect graphical interpretation to evaluation without repeating the integration techniques in HSS T14."
+    },
+    "hss_math_t15_st02": {
+      "id": "hss_math_t15_st02",
+      "title": "Area between a curve and an axis",
+      "overview": "Standard definite integrals can be deceptive. If a curve dips below the x-axis, the integral treats that area as 'negative'. To find the true physical area, we must chop the integral into pieces and flip the negative zones.",
+      "key_concepts": [
+        {
+          "concept": "Signed Area vs Total Area",
+          "definition": "Mathematical vs Physical.",
+          "details": [
+            "A standard definite integral calculates 'Signed Area'. Any space below the x-axis is subtracted from the total.",
+            "To calculate 'Total Geometric Area', you must force all regions to be positive using absolute value."
+          ]
+        },
+        {
+          "concept": "Splitting the Integral",
+          "definition": "Finding the roots.",
+          "details": [
+            "If a curve crosses the x-axis inside your interval, you MUST find the exact x-intercept ($f(x) = 0$).",
+            "Split the integral at that root into two separate integrals.",
+            "Take the absolute value of the negative integral, then add the two positive areas together."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Total Geometric Area",
+          "equation": "$$ A = \\left| \\int_a^c f(x) dx \\right| + \\left| \\int_c^b f(x) dx \\right| $$",
+          "variables": {
+            "c": "Root where the curve crosses the x-axis"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v15_s02",
+          "title": "Signed Area",
+          "type": "svg",
+          "caption": "Area below the x-axis is mathematically negative. Absolute value is required to find total physical area.",
+          "alt_text": "A sine wave crossing the x-axis. The hill above the axis is shaded green and labeled '+ Area'. The valley below the axis is shaded red and labeled '- Area'.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 50 100 L 450 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 50 100 Q 150 0 250 100 T 450 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><path d=\"M 50 100 Q 150 0 250 100 Z\" fill=\"#dcfce7\" opacity=\"0.7\"/><path d=\"M 250 100 Q 350 200 450 100 Z\" fill=\"#fee2e2\" opacity=\"0.7\"/><text x=\"150\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">+ Area</text><text x=\"350\" y=\"140\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">- Area</text></svg>"
+        },
+        {
+          "visual_id": "hss_math_t15_st02_visual_added01",
+          "title": "Area between a curve and an axis — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration for Area between a curve and an axis; not to scale.",
+          "alt_text": "Original schematic illustration for Area between a curve and an axis; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Area between a curve and an axis</title><desc>Original schematic illustration for Area between a curve and an axis; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"30\" y1=\"175\" x2=\"290\" y2=\"175\" stroke=\"#64748b\"/><line x1=\"55\" y1=\"205\" x2=\"55\" y2=\"25\" stroke=\"#64748b\"/><path d=\"M60 155 Q115 25 270 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M60 175 L270 175\" stroke=\"#d97706\" stroke-width=\"2\"/><path d=\"M100 175 V112 M150 175 V78 M200 175 V65\" stroke=\"#d97706\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Area between a curve and an axis</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the total area bounded by $y = x^3$ and the x-axis between $x = -2$ and $x = 2$.",
+          "solution_steps": [
+            "Step 1: Check for roots. $x^3 = 0 \\Rightarrow x = 0$. The graph crosses the axis exactly in the middle of our interval.",
+            "Step 2: Split the integral: $\\int_{-2}^{0} x^3 dx$ and $\\int_{0}^{2} x^3 dx$.",
+            "Step 3: Evaluate the left side: $[x^4/4]$ from $-2$ to $0 = 0 - (16/4) = -4$.",
+            "Step 4: Take absolute value of the left side: $|-4| = 4$.",
+            "Step 5: Evaluate the right side: $[x^4/4]$ from $0$ to $2 = (16/4) - 0 = 4$.",
+            "Step 6: Add the absolute areas together: $4 + 4 = 8$."
+          ],
+          "final_answer": "8 square units"
+        },
+        {
+          "problem": "Find the total geometric area between $y=x-2$ and the x-axis from $x=0$ to $x=4$.",
+          "solution_steps": [
+            "Find the axis crossing: $x-2=0$, so $x=2$.",
+            "The function is below the axis on $[0,2]$ and above it on $[2,4]$.",
+            "Split and reverse the sign of the first piece: $A=\\int_0^2(2-x)dx+\\int_2^4(x-2)dx$.",
+            "The first area is $[2x-x^2/2]_0^2=2$.",
+            "The second area is $[x^2/2-2x]_2^4=2$."
+          ],
+          "final_answer": "Total geometric area = $4$ square units."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Just integrating straight from $-2$ to $2$.",
+          "correction": "If you do $\\int_{-2}^{2} x^3 dx$, the answer is exactly $0$. The negative area perfectly cancels the positive area. You MUST split the integral at the root to find total physical area."
+        }
+      ],
+      "quick_summary": [
+        "Definite integrals evaluate area below the x-axis as a negative number.",
+        "To find Total Area, you must find where the function crosses the axis ($y=0$) and split the integral there.",
+        "Take the absolute value of the negative piece and add it to the positive piece."
+      ],
+      "registry_scope": "Draft 79 approved audit: Find non-negative geometric area between a curve and the coordinate axis; identify axis crossings and split the interval where the curve changes sign."
+    },
+    "hss_math_t15_st03": {
+      "id": "hss_math_t15_st03",
+      "title": "Area between two curves",
+      "overview": "If you want to find the area sandwiched entirely between two different curves, you don't need the x-axis at all. You just need to subtract the 'floor' function from the 'ceiling' function.",
+      "key_concepts": [
+        {
+          "concept": "Top Minus Bottom",
+          "definition": "The height formula.",
+          "details": [
+            "To find the area between $f(x)$ and $g(x)$, figure out which function is physically higher on the graph.",
+            "The area is $\\int_a^b (\\text{Top Function} - \\text{Bottom Function}) dx$."
+          ]
+        },
+        {
+          "concept": "Finding the Boundaries",
+          "definition": "The intersections.",
+          "details": [
+            "Often, you are not given an $a$ and $b$ boundary. The boundaries are just wherever the two curves crash into each other.",
+            "Set the two equations equal to each other ($f(x) = g(x)$) to solve for the intersection points, which become your upper and lower limits."
+          ]
+        },
+        {
+          "concept": "Crossing Curves",
+          "definition": "Flipping the formula.",
+          "details": [
+            "If the two curves twist around each other and swap positions, you must split the integral at the intersection point, and flip which function is the 'Top' and 'Bottom'."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Area Between Curves",
+          "equation": "$$ A = \\int_a^b [f(x) - g(x)] dx $$",
+          "variables": {
+            "f(x)": "Top curve",
+            "g(x)": "Bottom curve"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t15_st03_visual_added01",
+          "title": "Area between two curves — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration for Area between two curves; not to scale.",
+          "alt_text": "Original schematic illustration for Area between two curves; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Area between two curves</title><desc>Original schematic illustration for Area between two curves; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"30\" y1=\"175\" x2=\"290\" y2=\"175\" stroke=\"#64748b\"/><line x1=\"55\" y1=\"205\" x2=\"55\" y2=\"25\" stroke=\"#64748b\"/><path d=\"M60 155 Q115 25 270 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M60 175 L270 175\" stroke=\"#d97706\" stroke-width=\"2\"/><path d=\"M100 175 V112 M150 175 V78 M200 175 V65\" stroke=\"#d97706\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Area between two curves</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the area bounded between $y = x^2$ and $y = x$.",
+          "solution_steps": [
+            "Step 1: Find the intersection boundaries by setting them equal: $x^2 = x$.",
+            "Step 2: Solve: $x^2 - x = 0 \\Rightarrow x(x-1) = 0$. The intersections (limits) are $0$ and $1$.",
+            "Step 3: Determine Top vs Bottom. Between $0$ and $1$, test $x=0.5$. $x=0.5$, but $x^2=0.25$. The straight line $y=x$ is higher.",
+            "Step 4: Set up integral: $\\int_0^1 (x - x^2) dx$.",
+            "Step 5: Integrate: $[\\frac{x^2}{2} - \\frac{x^3}{3}]$ from $0$ to $1$.",
+            "Step 6: Evaluate: $(\\frac{1}{2} - \\frac{1}{3}) - (0 - 0) = \\frac{3}{6} - \\frac{2}{6} = \\frac{1}{6}$."
+          ],
+          "final_answer": "1/6 square units"
+        },
+        {
+          "problem": "Find the area enclosed by $y=2x$ and $y=x^2$.",
+          "solution_steps": [
+            "Find intersections: $2x=x^2$, so $x(x-2)=0$ and the limits are 0 and 2.",
+            "On this interval, test $x=1$: $2x=2$ and $x^2=1$, so the line is above the parabola.",
+            "Set up $A=\\int_0^2(2x-x^2)dx$.",
+            "Evaluate $[x^2-x^3/3]_0^2=4-8/3$."
+          ],
+          "final_answer": "$\\frac{4}{3}$ square units."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Guessing which function is on top.",
+          "correction": "If you subtract Bottom minus Top, your final area will be negative. Always plug a test number from inside your interval into both functions to see which one yields a higher y-value."
+        }
+      ],
+      "quick_summary": [
+        "The area between two curves is found by integrating (Top Function - Bottom Function).",
+        "Set the two equations equal to each other to find the integration limits.",
+        "If the curves cross each other mid-way, you must split the integral and swap the Top/Bottom order."
+      ],
+      "registry_scope": "Draft 79 approved audit: Determine intersection points and identify the upper and lower curves on each interval; formulate and evaluate the difference integral for enclosed area."
+    },
+    "hss_math_t15_st04": {
+      "id": "hss_math_t15_st04",
+      "title": "Areas bounded by lines and curves",
+      "overview": "Not all areas are simple sandwiches between two functions. Sometimes an area is bounded by a curve, a slanted line, and the y-axis. These composite shapes require careful boundary detection and sometimes horizontal integration.",
+      "key_concepts": [
+        {
+          "concept": "Composite Regions",
+          "definition": "Breaking it down.",
+          "details": [
+            "If a region has different 'ceilings' at different times (e.g., the first half is capped by a circle, the second half is capped by a straight line), you CANNOT use a single integral.",
+            "You must drop a vertical line at the intersection point to split the shape into two separate integrals."
+          ]
+        },
+        {
+          "concept": "Integrating with respect to $y$ ($dy$)",
+          "definition": "Right minus Left.",
+          "details": [
+            "If a shape is extremely complicated vertically, but simple horizontally, you can integrate sideways.",
+            "Rearrange all equations so $x$ is isolated (e.g., $x = y^2$).",
+            "Integrate $\\int_c^d (\\text{Right Function} - \\text{Left Function}) dy$, using y-coordinates as the limits."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Horizontal Integration (dy)",
+          "equation": "$$ A = \\int_c^d [f(y) - g(y)] dy $$",
+          "variables": {
+            "f(y)": "Rightmost curve",
+            "g(y)": "Leftmost curve",
+            "c, d": "y-coordinate boundaries"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t15_st04_visual_added01",
+          "title": "Areas bounded by lines and curves — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration for Areas bounded by lines and curves; not to scale.",
+          "alt_text": "Original schematic illustration for Areas bounded by lines and curves; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Areas bounded by lines and curves</title><desc>Original schematic illustration for Areas bounded by lines and curves; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"30\" y1=\"175\" x2=\"290\" y2=\"175\" stroke=\"#64748b\"/><line x1=\"55\" y1=\"205\" x2=\"55\" y2=\"25\" stroke=\"#64748b\"/><path d=\"M60 155 Q115 25 270 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M60 175 L270 175\" stroke=\"#d97706\" stroke-width=\"2\"/><path d=\"M100 175 V112 M150 175 V78 M200 175 V65\" stroke=\"#d97706\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Areas bounded by lines and curves</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Set up the integral for the area bounded by $x = y^2$ and $x = 4$.",
+          "solution_steps": [
+            "Step 1: Notice the equations are given in terms of $x = f(y)$. It is easier to integrate sideways with respect to $dy$.",
+            "Step 2: Find the y-intersections by setting them equal: $y^2 = 4 \\Rightarrow y = \\pm 2$. These are the limits $c$ and $d$.",
+            "Step 3: Determine Right vs Left. The straight vertical line $x=4$ is further to the right than the curve $x=y^2$.",
+            "Step 4: Set up the integral: $\\int_{-2}^{2} (4 - y^2) dy$."
+          ],
+          "final_answer": "∫ from -2 to 2 of (4 - y²) dy"
+        },
+        {
+          "problem": "Set up and evaluate the area enclosed by the line $y=x$ and the parabola $y=x^2$.",
+          "solution_steps": [
+            "Find the intersections: $x=x^2$, giving $x=0$ and $x=1$.",
+            "For $0<x<1$, the line is above the parabola.",
+            "The area is $\\int_0^1(x-x^2)dx$.",
+            "Evaluate $[x^2/2-x^3/3]_0^1=1/2-1/3$."
+          ],
+          "final_answer": "$\\frac16$ square units."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using x-limits on a $dy$ integral.",
+          "correction": "If you are integrating horizontally (using $dy$), every single piece of the equation MUST be in terms of $y$. The limits must be y-coordinates (heights), not x-coordinates."
+        }
+      ],
+      "quick_summary": [
+        "Complex shapes must be split into separate integrals wherever the 'ceiling' or 'floor' boundary changes.",
+        "You can rotate your perspective and integrate horizontally using $dy$.",
+        "Horizontal integration uses the formula (Right Curve - Left Curve) evaluated between y-coordinate limits."
+      ],
+      "registry_scope": "Draft 79 approved audit: Set up areas enclosed by combinations of straight lines and curves; identify all relevant intersections and split regions when boundary ordering changes."
+    },
+    "hss_math_t15_st05": {
+      "id": "hss_math_t15_st05",
+      "title": "Integration in geometric problems",
+      "overview": "Integration can derive the standard area formulas you learned in middle school (like $\\pi r^2$). By modeling shapes algebraically on a coordinate grid, we can calculate the area of perfect circles, ellipses, and parabolic segments.",
+      "key_concepts": [
+        {
+          "concept": "Circles and Semicircles",
+          "definition": "The square root curves.",
+          "details": [
+            "The equation of a circle is $x^2 + y^2 = r^2$.",
+            "To integrate it, we isolate $y$: $y = \\pm\\sqrt{r^2 - x^2}$. The positive root is the top semicircle, the negative root is the bottom.",
+            "Integrating $\\int_{-r}^{r} \\sqrt{r^2 - x^2} dx$ mathematically proves the area of a half-circle is $\\frac{1}{2}\\pi r^2$."
+          ]
+        },
+        {
+          "concept": "Symmetry Shortcuts",
+          "definition": "Calculating quadrants.",
+          "details": [
+            "If a geometric shape (like a circle or ellipse) is perfectly symmetrical across the x and y axes, you don't need to integrate the whole thing.",
+            "Calculate the area of just Quadrant 1 (from $0$ to $r$), and simply multiply the result by 4."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t15_st05_visual_added01",
+          "title": "Integration in geometric problems — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration for Integration in geometric problems; not to scale.",
+          "alt_text": "Original schematic illustration for Integration in geometric problems; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Integration in geometric problems</title><desc>Original schematic illustration for Integration in geometric problems; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"30\" y1=\"175\" x2=\"290\" y2=\"175\" stroke=\"#64748b\"/><line x1=\"55\" y1=\"205\" x2=\"55\" y2=\"25\" stroke=\"#64748b\"/><path d=\"M60 155 Q115 25 270 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M60 175 L270 175\" stroke=\"#d97706\" stroke-width=\"2\"/><path d=\"M100 175 V112 M150 175 V78 M200 175 V65\" stroke=\"#d97706\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Integration in geometric problems</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Set up the integral to find the area of the top half of the circle $x^2 + y^2 = 16$.",
+          "solution_steps": [
+            "Step 1: Isolate $y$ in the equation: $y^2 = 16 - x^2 \\Rightarrow y = \\sqrt{16 - x^2}$. (We take the positive root for the top half).",
+            "Step 2: Identify the radius. $r^2 = 16$, so $r = 4$.",
+            "Step 3: The boundaries for the full top half span from the far left of the circle to the far right. Therefore, the limits are $-4$ to $4$.",
+            "Step 4: Set up the integral."
+          ],
+          "final_answer": "∫ from -4 to 4 of √(16 - x²) dx"
+        },
+        {
+          "problem": "Find the area of the region in the first quadrant bounded by $y=4-x^2$, the x-axis and the y-axis.",
+          "solution_steps": [
+            "The curve meets the x-axis where $4-x^2=0$, so $x=2$ in the first quadrant.",
+            "The area is $\\int_0^2(4-x^2)dx$.",
+            "An antiderivative is $4x-x^3/3$.",
+            "Evaluate from 0 to 2: $8-8/3=16/3$."
+          ],
+          "final_answer": "$\\frac{16}{3}$ square units."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting the $\\pm$ when isolating y.",
+          "correction": "When taking a square root to isolate $y$ for a circle or sideways parabola, you must actively decide if you are calculating the upper half ($+$) or the lower half ($-$). If you need the whole shape, integrate the upper half and double it."
+        }
+      ],
+      "quick_summary": [
+        "Integration can be used to mathematically prove geometric area formulas.",
+        "To integrate standard conics like circles and ellipses, you must isolate $y$ into a square-root function.",
+        "Exploit the symmetry of shapes by integrating a single quadrant and multiplying by $4$."
+      ],
+      "registry_scope": "Draft 79 approved audit: Apply definite integrals to determine geometric areas and dimensions of regions in coordinate settings; connect with geometry while avoiding repetition of elementary area formulas."
+    },
+    "hss_math_t15_st06": {
+      "id": "hss_math_t15_st06",
+      "title": "Displacement from velocity",
+      "overview": "If you drive at a variable speed, how do you calculate how far you traveled? Velocity is the derivative of position; therefore, integrating a velocity function mathematically recovers the total change in position (displacement).",
+      "key_concepts": [
+        {
+          "concept": "Displacement vs Distance",
+          "definition": "Net vs Total.",
+          "details": [
+            "**Displacement:** The net change in position (Start point to End point). Calculated directly as $\\int_a^b v(t) dt$. If you drive 5 miles forward and 5 miles backward, your displacement is $0$.",
+            "**Total Distance:** The actual physical ground covered. Calculated as $\\int_a^b |v(t)| dt$. If you drive 5 miles forward and 5 backward, your total distance is $10$."
+          ]
+        },
+        {
+          "concept": "Handling Reversal",
+          "definition": "The zero crossing.",
+          "details": [
+            "If an object reverses direction, its velocity crosses $v(t) = 0$.",
+            "To calculate Total Distance, you must find these roots, split the integral, and force the negative 'backward' area to be positive using absolute value (just like calculating Total Geometric Area)."
+          ]
+        },
+        {
+          "concept": "Finding Final Position",
+          "definition": "Adding the start.",
+          "details": [
+            "The integral only gives the *change* in position. To find exactly where the object is, you must add the starting position: Final Position = Initial Position + Displacement."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Displacement",
+          "equation": "$$ s(b) - s(a) = \\int_a^b v(t) dt $$",
+          "variables": {}
+        },
+        {
+          "name": "Total Distance",
+          "equation": "$$ \\text{Distance} = \\int_a^b |v(t)| dt $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t15_st06_visual_added01",
+          "title": "Displacement from velocity — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration for Displacement from velocity; not to scale.",
+          "alt_text": "Original schematic illustration for Displacement from velocity; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Displacement from velocity</title><desc>Original schematic illustration for Displacement from velocity; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"30\" y1=\"115\" x2=\"290\" y2=\"115\" stroke=\"#64748b\"/><path d=\"M45 190 L160 40 L275 190\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M160 40 V190\" stroke=\"#d97706\" stroke-dasharray=\"4 4\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Displacement from velocity</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "An object moves with velocity $v(t) = 2t - 4$. Find its total displacement between $t=0$ and $t=3$.",
+          "solution_steps": [
+            "Step 1: Set up the displacement integral: $\\int_0^3 (2t - 4) dt$.",
+            "Step 2: Find the antiderivative: $t^2 - 4t$.",
+            "Step 3: Evaluate at the upper limit (3): $(3)^2 - 4(3) = 9 - 12 = -3$.",
+            "Step 4: Evaluate at the lower limit (0): $0^2 - 4(0) = 0$.",
+            "Step 5: Subtract: $-3 - 0 = -3$."
+          ],
+          "final_answer": "-3 units"
+        },
+        {
+          "problem": "A particle has velocity $v(t)=t-2$ m/s for $0\\le t\\le4$. Find its displacement and total distance.",
+          "solution_steps": [
+            "Displacement is $\\int_0^4(t-2)dt=[t^2/2-2t]_0^4=0$.",
+            "Velocity changes sign at $t=2$.",
+            "Total distance is $\\int_0^2(2-t)dt+\\int_2^4(t-2)dt$.",
+            "Each triangular contribution is 2 m, so total distance is 4 m."
+          ],
+          "final_answer": "Displacement = 0 m; total distance = 4 m."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating distance when asked for displacement (or vice-versa).",
+          "correction": "Read the question carefully. If it asks for displacement, just run the integral straight through. If it asks for distance, you MUST split the integral at any points where velocity hits zero."
+        }
+      ],
+      "quick_summary": [
+        "Integrating velocity over an interval gives the net Displacement.",
+        "Integrating the absolute value of velocity gives Total Distance Traveled.",
+        "Final Position is calculated by adding the Displacement to the Initial Position."
+      ],
+      "registry_scope": "Draft 79 approved audit: Use the integral of velocity over time to calculate displacement; distinguish signed displacement from total distance, particularly when velocity changes sign."
+    },
+    "hss_math_t15_st07": {
+      "id": "hss_math_t15_st07",
+      "title": "Accumulated change",
+      "overview": "Integration is not restricted to geometry or physics. It is a universal tool that can sum up any continuous rate of change over time, whether that rate measures water flowing from a pipe, money entering an account, or bacteria multiplying in a dish.",
+      "key_concepts": [
+        {
+          "concept": "The General Accumulation Principle",
+          "definition": "Summing the rate.",
+          "details": [
+            "Total Change = $\\int_a^b \\text{Rate}(t) dt$.",
+            "If $r(t)$ is the rate at which water flows into a tank (in Liters/minute), integrating $r(t)$ from $t=0$ to $t=10$ gives the exact total Liters of water added during those 10 minutes."
+          ]
+        },
+        {
+          "concept": "Units of the Integral",
+          "definition": "Canceling the time.",
+          "details": [
+            "The units of an integral are (Units of Rate) $\\times$ (Units of time).",
+            "Example: If the rate is $\\frac{\\text{Gallons}}{\\text{Hour}}$, and $dt$ is Hours, then $\\frac{\\text{Gallons}}{\\text{Hour}} \\times \\text{Hours} = \\text{Gallons}$."
+          ]
+        },
+        {
+          "concept": "Net Change Theorem",
+          "definition": "Final Amount.",
+          "details": [
+            "Final Amount = Initial Amount + $\\int \\text{Rate}_{in} dt$ - $\\int \\text{Rate}_{out} dt$.",
+            "This tracks the exact final state of a system that is filling and draining simultaneously."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Accumulation Equation",
+          "equation": "$$ Q(b) = Q(a) + \\int_a^b r(t) dt $$",
+          "variables": {
+            "Q(b)": "Final quantity",
+            "Q(a)": "Initial quantity",
+            "r(t)": "Rate of change"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t15_st07_visual_added01",
+          "title": "Accumulated change — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration for Accumulated change; not to scale.",
+          "alt_text": "Original schematic illustration for Accumulated change; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Accumulated change</title><desc>Original schematic illustration for Accumulated change; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 Q100 140 150 105 T275 45\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M45 175 H275\" stroke=\"#64748b\"/><path d=\"M45 175 V175 M275 45 V175\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Accumulated change</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Water flows into a tank at a rate of $r(t) = 3t^2$ Liters/minute. If the tank initially held 50 Liters, how much water is in the tank after 2 minutes?",
+          "solution_steps": [
+            "Step 1: Set up the integral to find the accumulated water: $\\int_0^2 3t^2 dt$.",
+            "Step 2: Find the antiderivative: $t^3$.",
+            "Step 3: Evaluate from 0 to 2: $(2)^3 - (0)^3 = 8$. (8 Liters were added).",
+            "Step 4: Use the accumulation equation: Final = Initial + Accumulated.",
+            "Step 5: Final = $50 + 8 = 58$."
+          ],
+          "final_answer": "58 Liters"
+        },
+        {
+          "problem": "A factory's net production rate is $r(t)=5-0.5t$ items per hour over the first 4 hours. Find the net change in inventory if the initial inventory is 20 items.",
+          "solution_steps": [
+            "The accumulated change is $\\int_0^4(5-0.5t)dt$.",
+            "An antiderivative is $5t-0.25t^2$.",
+            "Evaluate: $(20-4)-0=16$ items.",
+            "Add the initial inventory: $20+16=36$ items."
+          ],
+          "final_answer": "Net increase = 16 items; final inventory = 36 items."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting to add the initial amount.",
+          "correction": "An integral ONLY calculates the *change* that occurred during the interval. It has no idea what was already in the tank. You must manually add the starting value to find the final total."
+        }
+      ],
+      "quick_summary": [
+        "Definite integrals accumulate rates of change into total amounts.",
+        "The units of the integral are the units of the y-axis (rate) multiplied by the units of the x-axis (time).",
+        "Final Quantity = Initial Quantity + Integral of the Rate."
+      ],
+      "registry_scope": "Draft 79 approved audit: Model total change from a rate function in contexts such as flow, production and population; interpret initial values, units and the meaning of the resulting integral."
+    },
+    "hss_math_t15_st08": {
+      "id": "hss_math_t15_st08",
+      "title": "Average value of a function — introduction",
+      "overview": "How do you find the 'average' temperature over a 24-hour period if the temperature is constantly shifting? You cannot just add up points; there are infinite points. Instead, we use integration to flatten the curve into a perfect rectangle.",
+      "key_concepts": [
+        {
+          "concept": "The Average Value Formula",
+          "definition": "Flattening the curve.",
+          "details": [
+            "The average value of a continuous function $f(x)$ over an interval $[a,b]$ is calculated by finding the total area under the curve, and dividing it by the width of the interval.",
+            "Formula: $f_{\\text{avg}} = \\frac{1}{b-a} \\int_a^b f(x) dx$."
+          ]
+        },
+        {
+          "concept": "Geometric Meaning",
+          "definition": "The magic rectangle.",
+          "details": [
+            "If you melted the area under the curve like ice, it would settle into a perfectly flat rectangle. The height of this resulting rectangle is the Average Value of the function."
+          ]
+        },
+        {
+          "concept": "Mean Value Theorem for Integrals",
+          "definition": "Hitting the average.",
+          "details": [
+            "If a function is continuous, there is absolutely guaranteed to be at least one specific point $c$ in the interval where the actual function height perfectly matches the Average Value ($f(c) = f_{\\text{avg}}$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Average Value Formula",
+          "equation": "$$ f_{\\text{avg}} = \\frac{1}{b-a} \\int_a^b f(x) dx $$",
+          "variables": {
+            "b-a": "Width of the interval"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t15_st08_visual_added01",
+          "title": "Average value of a function — introduction — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration for Average value of a function — introduction; not to scale.",
+          "alt_text": "Original schematic illustration for Average value of a function — introduction; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Average value of a function — introduction</title><desc>Original schematic illustration for Average value of a function — introduction; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 Q110 25 275 175\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><rect x=\"45\" y=\"105\" width=\"230\" height=\"70\" fill=\"#dbeafe\" fill-opacity=\"0.65\" stroke=\"#d97706\" stroke-width=\"1.5\"/><line x1=\"45\" y1=\"105\" x2=\"275\" y2=\"105\" stroke=\"#d97706\" stroke-dasharray=\"4 4\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Average value of a function — introduction</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the average value of $f(x) = x^2$ on the interval $[0, 3]$.",
+          "solution_steps": [
+            "Step 1: Identify the interval width ($b-a$). $3 - 0 = 3$.",
+            "Step 2: Set up the formula: $f_{\\text{avg}} = \\frac{1}{3} \\int_0^3 x^2 dx$.",
+            "Step 3: Find the integral of $x^2$: $\\frac{x^3}{3}$.",
+            "Step 4: Evaluate the integral from $0$ to $3$: $\\frac{3^3}{3} - 0 = 9$.",
+            "Step 5: Multiply the integral result by the width fraction: $\\frac{1}{3} \\times 9 = 3$."
+          ],
+          "final_answer": "3"
+        },
+        {
+          "problem": "Find the average value of $f(x)=2x+1$ on $[1,4]$.",
+          "solution_steps": [
+            "Use $f_{avg}=\\frac{1}{4-1}\\int_1^4(2x+1)dx$.",
+            "An antiderivative is $x^2+x$.",
+            "Evaluate: $(16+4)-(1+1)=18$.",
+            "Divide by the interval width 3."
+          ],
+          "final_answer": "Average value = $6$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Averaging the endpoints.",
+          "correction": "Students often just average $f(a)$ and $f(b)$ by doing $\\frac{f(a)+f(b)}{2}$. This ONLY works for perfectly straight linear lines. For any curve (like $x^2$), the function spends more time at different heights, so you MUST use the integral formula."
+        }
+      ],
+      "quick_summary": [
+        "The Average Value of a function is calculated by dividing the definite integral by the width of the interval.",
+        "It represents the height of a flat rectangle that has the exact same area as the curve.",
+        "A continuous function will physically hit this average value at least once in the interval."
+      ],
+      "registry_scope": "Draft 79 approved audit: Introduce the average value of a continuous function on an interval using the definite-integral average formula; keep treatment introductory and avoid advanced integral mean-value theory."
+    },
+    "hss_math_t15_st09": {
+      "id": "hss_math_t15_st09",
+      "title": "Setting up integrals from diagrams",
+      "overview": "Real-world problems rarely hand you a clean, pre-written integral. You will often be handed a diagram or a graph and must extract the boundaries, intersections, and orientation yourself to build the integral from scratch.",
+      "key_concepts": [
+        {
+          "concept": "The Representative Strip ($dx$ vs $dy$)",
+          "definition": "Vertical vs Horizontal.",
+          "details": [
+            "Before writing an integral, draw a tiny rectangle (a 'strip') inside the shaded region.",
+            "If the strip stands vertically, its width is $dx$, and its height is (Top curve - Bottom curve). You will integrate with respect to $x$.",
+            "If the strip lays horizontally, its width is $dy$, and its length is (Right curve - Left curve). You will integrate with respect to $y$."
+          ]
+        },
+        {
+          "concept": "Finding the Limits",
+          "definition": "The collision points.",
+          "details": [
+            "Look at the diagram to see where the shaded region begins and ends.",
+            "If the diagram does not provide numbers, you must set the curve equations equal to each other and solve algebraically to find the intersection points."
+          ]
+        },
+        {
+          "concept": "Splitting the Region",
+          "definition": "The ceiling change.",
+          "details": [
+            "Sweep your imaginary strip across the region. If the function acting as the 'ceiling' changes halfway through (e.g., from a parabola to a straight line), you MUST drop a vertical line at that change and create two separate integrals."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t15_st09_visual_added01",
+          "title": "Setting up integrals from diagrams — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration for Setting up integrals from diagrams; not to scale.",
+          "alt_text": "Original schematic illustration for Setting up integrals from diagrams; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Setting up integrals from diagrams</title><desc>Original schematic illustration for Setting up integrals from diagrams; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"30\" y1=\"175\" x2=\"290\" y2=\"175\" stroke=\"#64748b\"/><line x1=\"55\" y1=\"205\" x2=\"55\" y2=\"25\" stroke=\"#64748b\"/><path d=\"M60 155 Q115 25 270 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M60 175 L270 175\" stroke=\"#d97706\" stroke-width=\"2\"/><path d=\"M100 175 V112 M150 175 V78 M200 175 V65\" stroke=\"#d97706\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Setting up integrals from diagrams</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A diagram shows a region bounded by $y=x^2$, $y=0$, and $x=2$. Set up the integral for the area using vertical strips.",
+          "solution_steps": [
+            "Step 1: A vertical strip has width $dx$. The integration variable is $x$.",
+            "Step 2: The top of the strip touches $y=x^2$. The bottom touches $y=0$ (the axis). Height = $x^2 - 0$.",
+            "Step 3: The region starts at the origin $x=0$ and ends at the vertical wall $x=2$. These are the limits.",
+            "Step 4: Set up the integral: $\\int_0^2 x^2 dx$."
+          ],
+          "final_answer": "∫ from 0 to 2 of x² dx"
+        },
+        {
+          "problem": "A diagram describes the region between $y=4$ and $y=x^2$ from their intersection on the left to their intersection on the right. Set up the area integral.",
+          "solution_steps": [
+            "Find the intersections: $x^2=4$, so $x=-2$ and $x=2$.",
+            "On this interval, $y=4$ is the upper boundary and $y=x^2$ is the lower boundary.",
+            "Using vertical strips, height is $4-x^2$ and width is $dx$.",
+            "The required area is represented by $\\int_{-2}^{2}(4-x^2)dx$."
+          ],
+          "final_answer": "Set-up: $\\int_{-2}^{2}(4-x^2)dx$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Mixing x and y variables in the integral.",
+          "correction": "If your diagram requires a horizontal strip ($dy$), the limits MUST be y-values on the y-axis, and the equations inside the integral MUST be solved for $x$ (e.g., $x = y^2$, not $y = \\sqrt{x}$)."
+        }
+      ],
+      "quick_summary": [
+        "To build an integral from a picture, draw a representative strip to determine if you need $dx$ (vertical) or $dy$ (horizontal).",
+        "The boundaries of the shaded region become the upper and lower limits of the integral.",
+        "If the top or bottom boundary function changes mid-way, you must split the integral into pieces."
+      ],
+      "registry_scope": "Draft 79 approved audit: Translate diagrams, graphs and contextual descriptions into an integrand, limits and any required interval splits; emphasize mathematical formulation before integration."
+    },
+    "hss_math_t15_st10": {
+      "id": "hss_math_t15_st10",
+      "title": "Real-world applications of area and accumulation",
+      "overview": "The mathematical act of finding 'Area' translates to finding 'Total Amount' in the real world. Integrating a rate curve gives you the physical accumulation of water, energy, money, or mass.",
+      "key_concepts": [
+        {
+          "concept": "Physical Accumulation",
+          "definition": "Integrating Rates.",
+          "details": [
+            "**Volume:** Integrating the flow rate of a liquid (Gallons/min) gives Total Gallons.",
+            "**Energy:** Integrating Power (Joules/sec) over time gives Total Energy Consumed (Joules).",
+            "**Mass:** Integrating a 1D density function (kg/m) along a rod gives the Total Mass of the rod."
+          ]
+        },
+        {
+          "concept": "Economics and Business",
+          "definition": "Total Cost and Revenue.",
+          "details": [
+            "Integrating Marginal Cost (the cost to produce one additional unit) gives the Total Variable Cost of production.",
+            "Integrating Marginal Revenue gives the Total Revenue. Subtracting Total Cost from Total Revenue yields the Profit."
+          ]
+        },
+        {
+          "concept": "Interpreting Negative Accumulation",
+          "definition": "Loss vs Gain.",
+          "details": [
+            "If a rate curve dips below the x-axis, the integral calculates a negative value. In the real world, this represents a physical loss (e.g., water draining from a tank, a company losing money, a car driving in reverse)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Total Mass from Density",
+          "equation": "$$ M = \\int_a^b \\rho(x) dx $$",
+          "variables": {
+            "\\rho(x)": "Linear density function"
+          }
+        },
+        {
+          "name": "Total Energy from Power",
+          "equation": "$$ E = \\int_{t_1}^{t_2} P(t) dt $$",
+          "variables": {
+            "P(t)": "Power function"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t15_st10_visual_added01",
+          "title": "Real-world applications of area and accumulation — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic illustration for Real-world applications of area and accumulation; not to scale.",
+          "alt_text": "Original schematic illustration for Real-world applications of area and accumulation; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Real-world applications of area and accumulation</title><desc>Original schematic illustration for Real-world applications of area and accumulation; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 Q100 140 150 105 T275 45\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M45 175 H275\" stroke=\"#64748b\"/><path d=\"M45 175 V175 M275 45 V175\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Real-world applications of area and accumulation</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A machine consumes power at a rate of $P(t) = 3t^2$ Watts (Joules per second). Calculate the total energy consumed in the first 4 seconds.",
+          "solution_steps": [
+            "Step 1: Set up the accumulation integral: $\\int_0^4 P(t) dt$.",
+            "Step 2: Substitute the power function: $\\int_0^4 3t^2 dt$.",
+            "Step 3: Integrate: $t^3$.",
+            "Step 4: Evaluate from $0$ to $4$: $(4)^3 - (0)^3 = 64$.",
+            "Step 5: Check units: Watts $\\times$ seconds = Joules."
+          ],
+          "final_answer": "64 Joules"
+        },
+        {
+          "problem": "A water channel's cross-sectional flow rate is $q(t)=2t+3$ litres per minute for $0\\le t\\le5$. Find the total amount delivered and interpret the units.",
+          "solution_steps": [
+            "Total amount is the integral of the rate: $\\int_0^5(2t+3)dt$.",
+            "An antiderivative is $t^2+3t$.",
+            "Evaluate: $(25+15)-0=40$.",
+            "Litres per minute multiplied by minutes gives litres."
+          ],
+          "final_answer": "40 litres delivered."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying absolute value blindly to negative rates.",
+          "correction": "Unlike geometric area (which must be positive), real-world accumulation CAN be negative. If a business's profit rate is negative, they are losing money. Do not force it to be positive with absolute value unless the question specifically asks for 'Total change regardless of direction' (like Total Distance)."
+        }
+      ],
+      "quick_summary": [
+        "The mathematical 'Area under a curve' represents the physical accumulation of whatever rate is on the y-axis.",
+        "Integrating Power gives Energy; integrating Flow Rate gives Volume; integrating Marginal Cost gives Total Cost.",
+        "Negative integrals represent physical loss or reduction over time."
+      ],
+      "registry_scope": "Draft 79 approved audit: Solve multi-step contextual problems involving area and accumulated quantities; state assumptions, retain units and interpret whether results are reasonable without duplicating the dedicated methods above. Boundary: Focus on definite-integral applications, geometric area and integral-based accumulation. Exponential growth/decay through differential equations belongs in HSS T16; statistical/data-driven modelling belongs in HSS T18.",
+      "registry_boundary_note": "Focus on definite-integral applications, geometric area and integral-based accumulation. Exponential growth/decay through differential equations belongs in HSS T16; statistical/data-driven modelling belongs in HSS T18."
+    }
+  }
+}

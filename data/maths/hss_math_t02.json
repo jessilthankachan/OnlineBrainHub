@@ -1,0 +1,1017 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t02",
+  "topicTitle": "Number Systems, Complex Numbers and Inequalities",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t02_st01": {
+      "id": "hss_math_t02_st01",
+      "title": "Real numbers and their properties",
+      "overview": "Real numbers form the foundation of algebra, equations, inequalities, functions, coordinate geometry, and calculus. This lesson explores the structure of the real number system, its various subsets, intervals, absolute value, and algebraic properties.",
+      "key_concepts": [
+        {
+          "concept": "Classification of Real Numbers",
+          "definition": "The nested sets of numbers.",
+          "details": [
+            "**Natural Numbers ($\\mathbb{N}$):** Counting numbers $\\{1, 2, 3, \\dots\\}$.",
+            "**Whole Numbers ($\\mathbb{W}$):** Natural numbers plus zero $\\{0, 1, 2, \\dots\\}$.",
+            "**Integers ($\\mathbb{Z}$):** Whole numbers and their negatives $\\{\\dots, -2, -1, 0, 1, 2, \\dots\\}$.",
+            "**Rational Numbers ($\\mathbb{Q}$):** Numbers expressible as a fraction $\\frac{p}{q}$ where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$. They have terminating or recurring decimals.",
+            "**Irrational Numbers:** Numbers that cannot be expressed as a simple fraction (e.g., $\\sqrt{2}$, $\\pi$). They have non-terminating, non-recurring decimals.",
+            "**Real Numbers ($\\mathbb{R}$):** The union of rational and irrational numbers."
+          ]
+        },
+        {
+          "concept": "Interval Notation",
+          "definition": "Defining continuous sets.",
+          "details": [
+            "**Open Interval $(a, b)$:** Excludes endpoints ($a < x < b$).",
+            "**Closed Interval $[a, b]$:** Includes endpoints ($a \\leq x \\leq b$).",
+            "**Half-Open Interval $[a, b)$ or $(a, b]$:** Includes one endpoint, excludes the other.",
+            "Infinity ($\\infty$ or $-\\infty$) always uses a parenthesis, as it is not a reachable endpoint."
+          ]
+        },
+        {
+          "concept": "Absolute Value",
+          "definition": "Distance from zero.",
+          "details": [
+            "Denoted by $|x|$, it represents the non-negative distance of a number from zero on the number line.",
+            "**Triangle Inequality:** $|a + b| \\leq |a| + |b|$.",
+            "The distance between two real numbers $a$ and $b$ is $d(a,b) = |a - b|$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Absolute Value Piecewise Definition",
+          "equation": "$$ |x| = \\begin{cases} x, & x \\geq 0 \\\\ -x, & x < 0 \\end{cases} $$",
+          "variables": {}
+        },
+        {
+          "name": "Distance Between Two Real Numbers",
+          "equation": "$$ d(a,b) = |a - b| $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s01",
+          "title": "Nested Number Systems",
+          "type": "svg",
+          "caption": "The hierarchy of real numbers, from Natural numbers up to Reals.",
+          "alt_text": "Venn diagram showing nested circles. Smallest is N (Natural), inside W (Whole), inside Z (Integers), inside Q (Rational). A separate circle represents Irrational numbers. Both Q and Irrationals are inside the largest box representing R (Real numbers).",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"20\" width=\"460\" height=\"210\" fill=\"#e0f2fe\" stroke=\"#3b82f6\" stroke-width=\"2\" rx=\"5\"/><text x=\"30\" y=\"45\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">Real Numbers (ℝ)</text><ellipse cx=\"200\" cy=\"140\" rx=\"150\" ry=\"80\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"200\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Rational (ℚ)</text><ellipse cx=\"200\" cy=\"160\" rx=\"110\" ry=\"50\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"200\" y=\"130\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">Integers (ℤ)</text><ellipse cx=\"200\" cy=\"175\" rx=\"70\" ry=\"30\" fill=\"#ffedd5\" stroke=\"#f97316\" stroke-width=\"2\"/><text x=\"200\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#c2410c\" font-weight=\"bold\">Whole (ℝ)</text><ellipse cx=\"200\" cy=\"185\" rx=\"35\" ry=\"15\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"200\" y=\"190\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">Natural (ℕ)</text><rect x=\"370\" y=\"90\" width=\"90\" height=\"110\" fill=\"#f3e8ff\" stroke=\"#9333ea\" stroke-width=\"2\" rx=\"5\"/><text x=\"415\" y=\"115\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#581c87\" font-weight=\"bold\">Irrational</text><text x=\"415\" y=\"145\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#7e22ce\">π, √2</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve the absolute value equation: $|2x + 1| = 7$.",
+          "solution_steps": [
+            "Step 1: Set up the two possibilities for the absolute value: $2x + 1 = 7$ or $2x + 1 = -7$.",
+            "Step 2: Solve the first equation: $2x = 6 \\Rightarrow x = 3$.",
+            "Step 3: Solve the second equation: $2x = -8 \\Rightarrow x = -4$."
+          ],
+          "final_answer": "x = 3 or x = -4"
+        },
+        {
+          "problem": "Express $\\sqrt{50}$ in simplest surd form.",
+          "solution_steps": [
+            "Factor $50=25\\times2$.",
+            "Take the square root of the perfect-square factor."
+          ],
+          "final_answer": "$\\sqrt{50}=5\\sqrt2$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming every square root is irrational.",
+          "correction": "Only square roots of non-perfect squares are irrational (e.g., $\\sqrt{7}$). The square root of a perfect square (e.g., $\\sqrt{49} = 7$) is a rational integer."
+        },
+        {
+          "mistake": "Using square brackets for infinity in interval notation.",
+          "correction": "Infinity ($\\infty$ or $-\\infty$) is not a reachable number, so it must always be accompanied by a parenthesis `( )`, never a square bracket `[ ]`."
+        }
+      ],
+      "quick_summary": [
+        "Real numbers encompass both rational (fractions/terminating decimals) and irrational numbers (non-terminating/non-repeating).",
+        "Intervals represent continuous sets of numbers using `( )` for exclusive bounds and `[ ]` for inclusive bounds.",
+        "Absolute value $|x|$ represents physical distance from zero, leading to piecewise definitions and dual-solution equations."
+      ],
+      "registry_scope": "User-approved 2026-11-05 scope: Review real-number classification, intervals, absolute value, order properties and selected mathematical reasoning with greater rigour than the High School introduction; avoid unnecessary repetition of elementary foundations. Curriculum boundary: extend HS foundations without duplicating HS T01/T03/T04/T05; use set/function concepts from HSS T01 as needed; formal calculus optimisation remains in HSS T13."
+    },
+    "hss_math_t02_st02": {
+      "id": "hss_math_t02_st02",
+      "title": "Complex numbers and the imaginary unit",
+      "overview": "Real numbers cannot solve equations like $x^2 = -1$ because the square of any real number is non-negative. This lesson introduces the imaginary unit $i$ to extend the number system, creating Complex Numbers that unlock solutions to previously unsolvable algebraic equations.",
+      "key_concepts": [
+        {
+          "concept": "The Imaginary Unit ($i$)",
+          "definition": "The square root of negative one.",
+          "details": [
+            "The imaginary unit is defined by the property $i^2 = -1$ (or $i = \\sqrt{-1}$).",
+            "It is a mathematical invention to extend the real number system; it is not an ordinary real number."
+          ]
+        },
+        {
+          "concept": "Powers of $i$",
+          "definition": "The repeating cycle of 4.",
+          "details": [
+            "The powers of $i$ follow a strict repeating pattern: $i^1 = i$, $i^2 = -1$, $i^3 = -i$, $i^4 = 1$.",
+            "To evaluate any high power like $i^n$, divide the exponent $n$ by $4$ and look at the remainder to determine its value in the cycle."
+          ]
+        },
+        {
+          "concept": "Standard Form of a Complex Number",
+          "definition": "$z = a + bi$",
+          "details": [
+            "A complex number is written as $z = a + bi$.",
+            "**Real Part:** $\\operatorname{Re}(z) = a$.",
+            "**Imaginary Part:** $\\operatorname{Im}(z) = b$. (Note: the imaginary part is just the real coefficient $b$, it does *not* include the $i$).",
+            "If $b=0$, it is a purely real number. If $a=0$ and $b \\neq 0$, it is a purely imaginary number."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Imaginary Unit Definition",
+          "equation": "$$ i^2 = -1 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s02",
+          "title": "The Cycle of i",
+          "type": "svg",
+          "caption": "Powers of i repeat in a predictable cycle of 4: i, -1, -i, 1.",
+          "alt_text": "A circular cycle diagram showing i^1 = i pointing to i^2 = -1 pointing to i^3 = -i pointing to i^4 = 1 pointing back to i^1.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><circle cx=\"250\" cy=\"125\" r=\"80\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><circle cx=\"250\" cy=\"45\" r=\"25\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"250\" y=\"50\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">i¹ = i</text><circle cx=\"330\" cy=\"125\" r=\"25\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"330\" y=\"130\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">i² = -1</text><circle cx=\"250\" cy=\"205\" r=\"25\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"250\" y=\"210\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">i³ = -i</text><circle cx=\"170\" cy=\"125\" r=\"25\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"170\" y=\"130\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">i⁴ = 1</text><path d=\"M 270 55 Q 310 70 320 100\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 320 150 Q 310 180 270 195\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 230 195 Q 190 180 180 150\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 180 100 Q 190 70 230 55\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#333\"/></marker></defs></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $i^{42}$.",
+          "solution_steps": [
+            "Step 1: Divide the exponent $42$ by $4$.",
+            "Step 2: $42 = 4(10) + 2$. The remainder is $2$.",
+            "Step 3: Because the remainder is $2$, $i^{42} = i^2$.",
+            "Step 4: We know $i^2 = -1$."
+          ],
+          "final_answer": "-1"
+        },
+        {
+          "problem": "Identify the real and imaginary parts of $z = -3 - 9i$.",
+          "solution_steps": [
+            "Step 1: Compare the expression to the standard form $a + bi$.",
+            "Step 2: The real part $a$ is the term without an $i$. Thus, $a = -3$.",
+            "Step 3: The imaginary part $b$ is the coefficient attached to $i$. Thus, $b = -9$."
+          ],
+          "final_answer": "Re(z) = -3, Im(z) = -9"
+        },
+        {
+          "problem": "Evaluate $i^{57}$.",
+          "solution_steps": [
+            "The powers of i repeat in a cycle of four: i, −1, −i, 1.",
+            "Since 57=4(14)+1, the remainder is 1."
+          ],
+          "final_answer": "$i^{57}=i$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Identifying the imaginary part of $5 - 7i$ as $-7i$.",
+          "correction": "The imaginary part is strictly the real coefficient *in front* of the $i$. The imaginary part is $-7$, not $-7i$."
+        },
+        {
+          "mistake": "Writing $i^2 = 1$.",
+          "correction": "$i^2$ equals $-1$. It is a fundamental property of the imaginary unit."
+        }
+      ],
+      "quick_summary": [
+        "The imaginary unit $i$ allows us to take the square root of negative numbers ($i = \\sqrt{-1}$).",
+        "High powers of $i$ can be simplified easily because they loop in a 4-step cycle: $i, -1, -i, 1$.",
+        "A complex number perfectly combines a Real component and an Imaginary component into the standard form $z = a + bi$."
+      ],
+      "registry_scope": "User-approved 2026-11-05 scope: Introduce the imaginary unit i with i² = −1, complex numbers in standard form a + bi, and identification of real and imaginary parts. Curriculum boundary: extend HS foundations without duplicating HS T01/T03/T04/T05; use set/function concepts from HSS T01 as needed; formal calculus optimisation remains in HSS T13."
+    },
+    "hss_math_t02_st03": {
+      "id": "hss_math_t02_st03",
+      "title": "Algebra of complex numbers",
+      "overview": "Just like standard real numbers, complex numbers can be added, subtracted, multiplied, and divided. This lesson explores the algebraic mechanics of these operations, utilizing standard algebraic expansion and the powerful tool of the complex conjugate for division.",
+      "key_concepts": [
+        {
+          "concept": "Addition & Subtraction",
+          "definition": "Combining like terms.",
+          "details": [
+            "To add or subtract complex numbers, group and combine their real parts together, and their imaginary parts together.",
+            "$(a + bi) \\pm (c + di) = (a \\pm c) + (b \\pm d)i$."
+          ]
+        },
+        {
+          "concept": "Multiplication",
+          "definition": "FOIL and substitute.",
+          "details": [
+            "Multiply complex numbers using the standard distributive property (FOIL method) for binomials.",
+            "Whenever an $i^2$ term appears during expansion, strictly replace it with $-1$ to simplify back to standard form."
+          ]
+        },
+        {
+          "concept": "Division and the Complex Conjugate",
+          "definition": "Clearing the denominator.",
+          "details": [
+            "Division by a complex number is not straightforward. You must multiply both the numerator and denominator by the **Complex Conjugate** of the denominator.",
+            "The complex conjugate of $a + bi$ is $a - bi$.",
+            "Multiplying a complex number by its conjugate always yields a purely real number: $(a + bi)(a - bi) = a^2 + b^2$. This clears the imaginary unit from the denominator."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Complex Multiplication",
+          "equation": "$$ (a+bi)(c+di) = (ac - bd) + (ad + bc)i $$",
+          "variables": {}
+        },
+        {
+          "name": "Product of Conjugates",
+          "equation": "$$ (a+bi)(a-bi) = a^2 + b^2 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\frac{4 + 3i}{2 - i}$.",
+          "solution_steps": [
+            "Step 1: Identify the denominator ($2 - i$) and find its complex conjugate ($2 + i$).",
+            "Step 2: Multiply both numerator and denominator by the conjugate: $\\frac{(4 + 3i)(2 + i)}{(2 - i)(2 + i)}$.",
+            "Step 3: Expand the numerator using FOIL: $8 + 4i + 6i + 3i^2 = 8 + 10i - 3 = 5 + 10i$.",
+            "Step 4: Expand the denominator using the conjugate rule ($a^2 + b^2$): $2^2 + (-1)^2 = 4 + 1 = 5$.",
+            "Step 5: Divide: $\\frac{5 + 10i}{5} = 1 + 2i$."
+          ],
+          "final_answer": "1 + 2i"
+        },
+        {
+          "problem": "Simplify $(3+2i)+(1-5i)$.",
+          "solution_steps": [
+            "Add real parts and imaginary parts separately."
+          ],
+          "final_answer": "$4-3i$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Only multiplying the numerator by the complex conjugate during division.",
+          "correction": "You must multiply *both* the numerator and the denominator by the conjugate to maintain the equivalence of the fraction."
+        },
+        {
+          "mistake": "Forgetting to swap the sign on the $i^2$ term.",
+          "correction": "When expanding $(3i)(4i) = 12i^2$, students often leave it as $+12$. It must become $-12$ because $i^2 = -1$."
+        }
+      ],
+      "quick_summary": [
+        "Add/Subtract complex numbers by matching Real parts with Real parts, and Imaginary with Imaginary.",
+        "Multiply complex numbers like algebraic binomials, substituting $i^2 = -1$ to finish.",
+        "Divide complex numbers by multiplying top and bottom by the complex conjugate of the denominator."
+      ],
+      "registry_scope": "User-approved 2026-11-05 scope: Cover addition, subtraction, multiplication and division of complex numbers, powers of i, simplification and rationalisation of complex denominators. Curriculum boundary: extend HS foundations without duplicating HS T01/T03/T04/T05; use set/function concepts from HSS T01 as needed; formal calculus optimisation remains in HSS T13."
+    },
+    "hss_math_t02_st05": {
+      "id": "hss_math_t02_st05",
+      "title": "Geometric representation of complex numbers",
+      "overview": "Every complex number $a + bi$ contains two distinct pieces of information. By treating these pieces as $(x, y)$ coordinates, we can map the entire complex number system onto a 2D visual grid called the Complex Plane (Argand Plane).",
+      "key_concepts": [
+        {
+          "concept": "The Complex Plane (Argand Plane)",
+          "definition": "Visualizing imaginary space.",
+          "details": [
+            "The Complex Plane is a 2D coordinate grid where the horizontal x-axis is the **Real Axis** and the vertical y-axis is the **Imaginary Axis**.",
+            "A complex number $z = a + bi$ is plotted exactly like the coordinate point $(a, b)$."
+          ]
+        },
+        {
+          "concept": "Vector Interpretation",
+          "definition": "Algebra as geometry.",
+          "details": [
+            "Adding or subtracting complex numbers algebraically yields the exact same result as performing 2D vector addition/subtraction on their coordinates."
+          ]
+        },
+        {
+          "concept": "Distance from the Origin",
+          "definition": "The Modulus.",
+          "details": [
+            "The physical distance from the origin $(0,0)$ to the complex point $(a,b)$ is calculated using the Pythagorean theorem.",
+            "Distance $r = \\sqrt{a^2 + b^2}$. This is known as the *modulus* of the complex number."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Distance from Origin (Modulus)",
+          "equation": "$$ r = \\sqrt{a^2 + b^2} $$",
+          "variables": {
+            "a": "Real part",
+            "b": "Imaginary part"
+          }
+        },
+        {
+          "name": "Distance Between Two Complex Numbers",
+          "equation": "$$ d(z_1,z_2)=\\sqrt{(a-c)^2+(b-d)^2} $$",
+          "variables": {
+            "z₁ = a + bi": "First complex number, represented by point (a,b).",
+            "z₂ = c + di": "Second complex number, represented by point (c,d).",
+            "d(z₁,z₂)": "Euclidean distance between the two points in the Argand plane."
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s04",
+          "title": "The Argand Plane",
+          "type": "svg",
+          "caption": "Plotting complex numbers translates abstract algebra into 2D geometric points.",
+          "alt_text": "A 2D coordinate grid with the x-axis labeled 'Real Axis' and the y-axis labeled 'Imaginary Axis'. A point is plotted in the first quadrant, connected to the origin by a line labeled 'r'. The point is labeled z = a + bi, which corresponds to the coordinate (a,b).",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 250 20 L 250 230\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 20 180 L 480 180\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"480\" y=\"200\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\" font-weight=\"bold\">Real Axis (a)</text><text x=\"240\" y=\"30\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\" font-weight=\"bold\">Imaginary Axis (bi)</text><circle cx=\"350\" cy=\"80\" r=\"6\" fill=\"#3b82f6\"/><path d=\"M 250 180 L 350 80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 350 180 L 350 80\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 250 80 L 350 80\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"365\" y=\"75\" font-family=\"monospace\" font-size=\"16\" fill=\"#1e3a8a\" font-weight=\"bold\">z = a + bi</text><text x=\"365\" y=\"95\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#3b82f6\">(a, b)</text><text x=\"290\" y=\"120\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">r</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the distance from the origin to the point representing $z = -5 + 12i$.",
+          "solution_steps": [
+            "Step 1: Identify the coordinates in the complex plane: $a = -5, b = 12$.",
+            "Step 2: Apply the distance formula from the origin: $r = \\sqrt{a^2 + b^2}$.",
+            "Step 3: Substitute the values: $r = \\sqrt{(-5)^2 + 12^2}$.",
+            "Step 4: Calculate: $r = \\sqrt{25 + 144} = \\sqrt{169} = 13$."
+          ],
+          "final_answer": "13 units"
+        },
+        {
+          "problem": "Represent $z=3-4i$ as a point and find its distance from the origin.",
+          "solution_steps": [
+            "The point has coordinates $(\\operatorname{Re}z,\\operatorname{Im}z)=(3,-4)$.",
+            "The distance from the origin is the modulus."
+          ],
+          "final_answer": "Point $(3,-4)$; distance $|z|=5$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Reversing the real and imaginary coordinates on the grid.",
+          "correction": "The Real part $a$ is always the horizontal x-axis. The Imaginary part $b$ is always the vertical y-axis. (e.g., $3 + 4i$ is Right 3, Up 4)."
+        }
+      ],
+      "quick_summary": [
+        "The Complex Plane allows us to graph complex numbers exactly like $(x,y)$ coordinates.",
+        "The horizontal axis is Real, and the vertical axis is Imaginary.",
+        "The distance from a complex point to the origin is calculated using basic Pythagorean geometry."
+      ],
+      "registry_scope": "User-approved 2026-11-05 scope: Introduce the Argand plane, representation of complex numbers as points and vectors, and geometric interpretation of complex-number operations where appropriate. Curriculum boundary: extend HS foundations without duplicating HS T01/T03/T04/T05; use set/function concepts from HSS T01 as needed; formal calculus optimisation remains in HSS T13."
+    },
+    "hss_math_t02_st04": {
+      "id": "hss_math_t02_st04",
+      "title": "Conjugates and modulus of complex numbers",
+      "overview": "The complex conjugate and modulus are fundamental tools for analyzing complex numbers. They allow us to calculate distances, simplify division, and understand algebraic symmetry across the real axis.",
+      "key_concepts": [
+        {
+          "concept": "The Complex Conjugate",
+          "definition": "Reversing the imaginary sign.",
+          "details": [
+            "The conjugate of a complex number $z = a + bi$ is denoted by $\\bar{z} = a - bi$.",
+            "Only the sign of the imaginary part changes. The real part remains completely unchanged.",
+            "Geometrically, plotting $\\bar{z}$ results in a perfect mirror reflection of $z$ across the horizontal real axis."
+          ]
+        },
+        {
+          "concept": "The Modulus",
+          "definition": "The distance from zero.",
+          "details": [
+            "The modulus $|z|$ is the physical straight-line distance from the origin $(0,0)$ to the point $(a,b)$ in the complex plane.",
+            "It is calculated using the Pythagorean theorem: $|z| = \\sqrt{a^2 + b^2}$.",
+            "Important Property: Multiplying a complex number by its conjugate gives the square of its modulus: $z\\bar{z} = a^2 + b^2 = |z|^2$."
+          ]
+        },
+        {
+          "concept": "Properties of Conjugates",
+          "definition": "Algebraic distribution.",
+          "details": [
+            "The conjugate of a sum is the sum of conjugates: $\\overline{z + w} = \\bar{z} + \\bar{w}$.",
+            "The conjugate of a product is the product of conjugates: $\\overline{zw} = \\bar{z} \\times \\bar{w}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Complex Conjugate",
+          "equation": "$$ \\overline{a + bi} = a - bi $$",
+          "variables": {}
+        },
+        {
+          "name": "Modulus",
+          "equation": "$$ |z| = \\sqrt{a^2 + b^2} $$",
+          "variables": {}
+        },
+        {
+          "name": "Modulus-Conjugate Relationship",
+          "equation": "$$ z\\bar{z} = |z|^2 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s05",
+          "title": "Geometric Reflection of the Conjugate",
+          "type": "svg",
+          "caption": "A complex number and its conjugate are exact mirror images across the Real Axis.",
+          "alt_text": "A complex plane showing point z at (3, 2) in the first quadrant. A dashed line goes straight down across the x-axis to a mirrored point labeled z-bar at (3, -2) in the fourth quadrant.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 250 20 L 250 230\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 50 125 L 450 125\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"450\" y=\"115\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"end\" fill=\"#64748b\" font-weight=\"bold\">Real Axis</text><circle cx=\"350\" cy=\"65\" r=\"6\" fill=\"#3b82f6\"/><text x=\"365\" y=\"70\" font-family=\"monospace\" font-size=\"16\" fill=\"#1e3a8a\" font-weight=\"bold\">z = a + bi</text><circle cx=\"350\" cy=\"185\" r=\"6\" fill=\"#ef4444\"/><text x=\"365\" y=\"190\" font-family=\"monospace\" font-size=\"16\" fill=\"#991b1b\" font-weight=\"bold\">z̄ = a - bi</text><path d=\"M 350 71 L 350 179\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $z = 3 - 4i$, calculate its modulus and verify that $z\\bar{z} = |z|^2$.",
+          "solution_steps": [
+            "Step 1: Calculate the modulus: $|z| = \\sqrt{3^2 + (-4)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+            "Step 2: Square the modulus: $|z|^2 = 25$.",
+            "Step 3: Find the conjugate: $\\bar{z} = 3 + 4i$.",
+            "Step 4: Calculate $z\\bar{z}$: $(3 - 4i)(3 + 4i) = 3^2 - (4i)^2 = 9 - (-16) = 25$.",
+            "Step 5: Compare the results. Both equal $25$."
+          ],
+          "final_answer": "|z| = 5, both yield 25"
+        },
+        {
+          "problem": "Find the conjugate and modulus of $z=-5+12i$.",
+          "solution_steps": [
+            "Change the sign of the imaginary part to obtain the conjugate.",
+            "Use $|a+bi|=\\sqrt{a^2+b^2}$."
+          ],
+          "final_answer": "Conjugate $-5-12i$; modulus $13$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating modulus as $|a + bi| = \\sqrt{a^2 - b^2}$.",
+          "correction": "The modulus formula is strictly addition: $\\sqrt{a^2 + b^2}$. The $i$ is dropped before squaring."
+        }
+      ],
+      "quick_summary": [
+        "The complex conjugate flips the sign of the imaginary part, creating a geometric mirror image across the real axis.",
+        "The modulus $|z|$ measures the physical distance from the complex number to the origin.",
+        "Multiplying any complex number by its own conjugate produces a purely real number ($|z|^2$)."
+      ],
+      "registry_scope": "User-approved 2026-11-05 scope: Cover algebraic properties of conjugates and modulus, division using conjugates, modulus as distance in the Argand plane, and related calculations. Curriculum boundary: extend HS foundations without duplicating HS T01/T03/T04/T05; use set/function concepts from HSS T01 as needed; formal calculus optimisation remains in HSS T13."
+    },
+    "hss_math_t02_st06": {
+      "id": "hss_math_t02_st06",
+      "title": "Polar form of complex numbers",
+      "overview": "Instead of plotting a complex number using its horizontal and vertical coordinates ($a + bi$), we can plot it using a compass direction and a distance. This 'Polar Form' simplifies complex multiplication and powers dramatically.",
+      "key_concepts": [
+        {
+          "concept": "Polar Coordinates ($r, \\theta$)",
+          "definition": "Distance and direction.",
+          "details": [
+            "A complex number can be defined by its Modulus ($r$), which is its distance from the origin, and its Argument ($\\theta$), which is the angle measured counter-clockwise from the positive Real axis.",
+            "$z = r(\\cos\\theta + i\\sin\\theta)$, sometimes abbreviated as $z = r \\operatorname{cis}(\\theta)$."
+          ]
+        },
+        {
+          "concept": "Finding the Argument ($\\theta$)",
+          "definition": "The angle calculation.",
+          "details": [
+            "The basic reference angle is found using $\\tan\\theta = \\frac{b}{a}$. Therefore, $\\theta_{ref} = \\tan^{-1}\\left(|\\frac{b}{a}|\\right)$.",
+            "**Quadrant Adjustments:** You must adjust the angle based on which quadrant the point $(a,b)$ lies in to find the Principal Argument ($-\\pi < \\theta \\leq \\pi$)."
+          ]
+        },
+        {
+          "concept": "Multiplying in Polar Form",
+          "definition": "Multiply lengths, add angles.",
+          "details": [
+            "When multiplying two complex numbers in polar form, you multiply their moduli ($r_1 \\times r_2$) and simply add their arguments ($\\theta_1 + \\theta_2$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Polar Form Equation",
+          "equation": "$$ z = r(\\cos\\theta + i\\sin\\theta) $$",
+          "variables": {
+            "r": "Modulus",
+            "\\theta": "Argument"
+          }
+        },
+        {
+          "name": "Argument Reference Angle",
+          "equation": "$$ \\tan\\theta = \\frac{b}{a} $$",
+          "variables": {
+            "a": "Real part of z; the quotient b/a form requires a ≠ 0.",
+            "b": "Imaginary part of z.",
+            "θ": "Argument selected using the quadrant of (a,b); use atan2(b,a) or the Argand-plane quadrant, not arctan(b/a) alone. If a=0, the argument is determined directly from the imaginary axis."
+          }
+        }
+      ],
+      "visual_aids": [],
+      "worked_examples": [
+        {
+          "problem": "Convert $z = 1 + i$ into polar form.",
+          "solution_steps": [
+            "Step 1: Calculate the modulus ($r$). $r = \\sqrt{1^2 + 1^2} = \\sqrt{2}$.",
+            "Step 2: Calculate the argument ($\\theta$). $\\tan\\theta = \\frac{1}{1} = 1$.",
+            "Step 3: Determine the quadrant. Both $a$ and $b$ are positive, so it is in Quadrant 1.",
+            "Step 4: Find the angle in Q1 where $\\tan\\theta = 1$. The angle is $\\frac{\\pi}{4}$ (or $45^{\\circ}$).",
+            "Step 5: Write the polar form: $z = \\sqrt{2}\\left(\\cos\\frac{\\pi}{4} + i\\sin\\frac{\\pi}{4}\\right)$."
+          ],
+          "final_answer": "z = √2(cos(π/4) + i sin(π/4))"
+        },
+        {
+          "problem": "Convert $z=1+i$ to polar form with principal argument.",
+          "solution_steps": [
+            "The modulus is $r=\\sqrt{1^2+1^2}=\\sqrt2$.",
+            "The point is in quadrant I and has argument $\\pi/4$.",
+            "Substitute into polar form."
+          ],
+          "final_answer": "$z=\\sqrt2(\\cos\\frac\\pi4+i\\sin\\frac\\pi4)$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Blindly using the calculator output for $\\tan^{-1}(b/a)$.",
+          "correction": "Calculators only return angles in Quadrants 1 and 4. If your complex number is in Quadrant 2 or 3 (i.e., $a$ is negative), you must manually add or subtract $\\pi$ (or $180^{\\circ}$) to find the correct Principal Argument."
+        }
+      ],
+      "quick_summary": [
+        "Polar form describes a complex number by its distance from zero ($r$) and its angle from the positive real axis ($\\theta$).",
+        "The standard formula is $z = r(\\cos\\theta + i\\sin\\theta)$.",
+        "Always check which quadrant the point $(a,b)$ is in when determining the final angle $\\theta$."
+      ],
+      "registry_scope": "User-approved 2026-11-05 scope: Convert between Cartesian and polar forms; explain modulus, arguments, argument conventions and equivalent polar representations. Curriculum boundary: extend HS foundations without duplicating HS T01/T03/T04/T05; use set/function concepts from HSS T01 as needed; formal calculus optimisation remains in HSS T13."
+    },
+    "hss_math_t02_st07": {
+      "id": "hss_math_t02_st07",
+      "title": "De Moivre’s theorem",
+      "overview": "Raising a complex number to the power of 10 algebraically using FOIL would be a nightmare. De Moivre's Theorem leverages the polar form of complex numbers to solve massive powers in just a few simple lines of calculation.",
+      "key_concepts": [
+        {
+          "concept": "De Moivre's Theorem",
+          "definition": "The power shortcut.",
+          "details": [
+            "For any integer $n$, raising a complex number to a power $n$ works by raising the modulus $r$ to the power $n$, and multiplying the angle $\\theta$ by $n$.",
+            "Mathematically: $[r(\\cos\\theta + i\\sin\\theta)]^n = r^n(\\cos(n\\theta) + i\\sin(n\\theta))$."
+          ]
+        },
+        {
+          "concept": "Derivation Concept",
+          "definition": "Adding angles.",
+          "details": [
+            "Because multiplying two polar complex numbers means adding their angles ($\\theta_1 + \\theta_2$), multiplying the *same* complex number by itself $n$ times means adding its angle to itself $n$ times, resulting in $n\\theta$."
+          ]
+        },
+        {
+          "concept": "Negative Powers",
+          "definition": "Inverse powers.",
+          "details": [
+            "The theorem holds perfectly for negative integers as well, representing division or inverse powers, provided $z \\neq 0$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "De Moivre's Theorem",
+          "equation": "$$ [r(\\cos\\theta + i\\sin\\theta)]^n = r^n(\\cos(n\\theta) + i\\sin(n\\theta)) $$",
+          "variables": {
+            "r": "Modulus of the complex number, r ≥ 0.",
+            "θ": "An argument of the complex number.",
+            "n": "An integer exponent."
+          }
+        }
+      ],
+      "visual_aids": [],
+      "worked_examples": [
+        {
+          "problem": "Use De Moivre's Theorem to evaluate $(1 + i)^6$.",
+          "solution_steps": [
+            "Step 1: Convert to polar form. From previous examples, $1 + i = \\sqrt{2}\\left(\\cos\\frac{\\pi}{4} + i\\sin\\frac{\\pi}{4}\\right)$.",
+            "Step 2: Apply De Moivre's Theorem: Raise $r$ to the $6$th power, and multiply $\\theta$ by $6$.",
+            "Step 3: Evaluate $r$: $(\\sqrt{2})^6 = 2^3 = 8$.",
+            "Step 4: Evaluate $\\theta$: $6 \\times \\frac{\\pi}{4} = \\frac{6\\pi}{4} = \\frac{3\\pi}{2}$.",
+            "Step 5: Reassemble: $8\\left(\\cos\\frac{3\\pi}{2} + i\\sin\\frac{3\\pi}{2}\\right)$.",
+            "Step 6: Convert back to Cartesian. $\\cos(270^{\\circ}) = 0$, $\\sin(270^{\\circ}) = -1$. Result: $8(0 - 1i) = -8i$."
+          ],
+          "final_answer": "-8i"
+        },
+        {
+          "problem": "Use De Moivre's theorem to evaluate $(1+i)^4$.",
+          "solution_steps": [
+            "Write $1+i=\\sqrt2(\\cos\\frac\\pi4+i\\sin\\frac\\pi4)$.",
+            "Raise the modulus to the fourth power and multiply the argument by 4.",
+            "Evaluate $4(\\cos\\pi+i\\sin\\pi)$."
+          ],
+          "final_answer": "$ (1+i)^4=-4$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying De Moivre's theorem directly to the Cartesian form $(a + bi)^n$.",
+          "correction": "The theorem ONLY works when the complex number has been fully converted into Polar form ($r(\\cos\\theta + i\\sin\\theta)$)."
+        }
+      ],
+      "quick_summary": [
+        "De Moivre's theorem drastically simplifies raising complex numbers to large integer powers.",
+        "Raise the distance (modulus) to the power $n$, and multiply the angle (argument) by $n$.",
+        "It relies heavily on trigonometric addition identities."
+      ],
+      "registry_scope": "User-approved 2026-11-05 scope: Apply De Moivre’s theorem to integer powers of complex numbers and derive related trigonometric identities at an appropriate Higher Secondary level. Curriculum boundary: extend HS foundations without duplicating HS T01/T03/T04/T05; use set/function concepts from HSS T01 as needed; formal calculus optimisation remains in HSS T13."
+    },
+    "hss_math_t02_st08": {
+      "id": "hss_math_t02_st08",
+      "title": "Powers and roots of complex numbers",
+      "overview": "If $x^2 = 9$ has two roots ($3, -3$), how many roots does $x^3 = 8$ have? In the complex number system, every non-zero number has exactly $n$ distinct $n$th roots. This lesson uses a reverse application of De Moivre's Theorem to track them all down.",
+      "key_concepts": [
+        {
+          "concept": "The $n$th Roots Formula",
+          "definition": "Unlocking all solutions.",
+          "details": [
+            "To find the $n$th root of a complex number, we take the $n$th root of its modulus $r$, and divide its angle by $n$.",
+            "Because circles repeat every $2\\pi$ radians, we must add full rotations ($2k\\pi$) before dividing to find all the hidden roots.",
+            "Formula: $w_k = r^{1/n} \\left( \\cos\\left(\\frac{\\theta + 2k\\pi}{n}\\right) + i\\sin\\left(\\frac{\\theta + 2k\\pi}{n}\\right) \\right)$."
+          ]
+        },
+        {
+          "concept": "Number of Roots",
+          "definition": "The Fundamental Theorem link.",
+          "details": [
+            "You find all roots by plugging in $k = 0, 1, 2, \\dots, (n-1)$. Once $k = n$, the cycle repeats back to the first root.",
+            "Therefore, there are exactly $n$ distinct roots."
+          ]
+        },
+        {
+          "concept": "Roots of Unity",
+          "definition": "The roots of 1.",
+          "details": [
+            "The $n$th roots of the number $1$ are called the 'roots of unity'.",
+            "When plotted on the complex plane, the $n$ roots of unity form a perfect regular polygon inscribed inside a circle of radius 1 (e.g., the 3rd roots of unity form an equilateral triangle)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Root Formula",
+          "equation": "$$ w_k = r^{1/n} \\left( \\cos\\left(\\frac{\\theta + 2k\\pi}{n}\\right) + i\\sin\\left(\\frac{\\theta + 2k\\pi}{n}\\right) \\right) $$",
+          "variables": {
+            "k": "0, 1, 2, ..., n-1"
+          }
+        }
+      ],
+      "visual_aids": [],
+      "worked_examples": [
+        {
+          "problem": "Set up the formula to find the three cube roots of $z = 8(\\cos 0 + i\\sin 0)$.",
+          "solution_steps": [
+            "Step 1: Identify variables. $n = 3$, $r = 8$, $\\theta = 0$.",
+            "Step 2: Calculate the new modulus: $r^{1/3} = 8^{1/3} = 2$.",
+            "Step 3: Write the angle formula: $\\frac{0 + 2k\\pi}{3}$.",
+            "Step 4: Substitute $k=0$ for root 1: Angle is $0$. $w_0 = 2(\\cos 0 + i\\sin 0) = 2$.",
+            "Step 5: Substitute $k=1$ for root 2: Angle is $\\frac{2\\pi}{3}$. $w_1 = 2(\\cos\\frac{2\\pi}{3} + i\\sin\\frac{2\\pi}{3})$.",
+            "Step 6: Substitute $k=2$ for root 3: Angle is $\\frac{4\\pi}{3}$. $w_2 = 2(\\cos\\frac{4\\pi}{3} + i\\sin\\frac{4\\pi}{3})$."
+          ],
+          "final_answer": "Roots are at angles 0, 2π/3, and 4π/3 with modulus 2."
+        },
+        {
+          "problem": "Find the three cube roots of $8$.",
+          "solution_steps": [
+            "Write $8=8(\\cos0+i\\sin0)$.",
+            "The cube-root modulus is $8^{1/3}=2$.",
+            "The arguments are $(0+2k\\pi)/3$ for $k=0,1,2$."
+          ],
+          "final_answer": "Roots: $2$, $2(\\cos\\frac{2\\pi}{3}+i\\sin\\frac{2\\pi}{3})$, and $2(\\cos\\frac{4\\pi}{3}+i\\sin\\frac{4\\pi}{3})$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Stopping after finding the principal root (where $k=0$).",
+          "correction": "If a problem asks for the '$n$th roots', there are exactly $n$ answers. You must calculate all of them by stepping through $k = 0, 1, ..., n-1$."
+        }
+      ],
+      "quick_summary": [
+        "Every complex number has exactly $n$ distinct $n$th roots.",
+        "The roots are found by taking the real $n$th root of the modulus, and dividing the angles (plus full $2\\pi$ rotations) by $n$.",
+        "Geometrically, all $n$ roots are spaced perfectly evenly around a circle centered at the origin."
+      ],
+      "registry_scope": "User-approved 2026-11-05 scope: Calculate powers and nth roots of complex numbers, study roots of unity and their geometric arrangement, and connect complex roots with polynomial equations without repeating polynomial factorisation methods. Curriculum boundary: extend HS foundations without duplicating HS T01/T03/T04/T05; use set/function concepts from HSS T01 as needed; formal calculus optimisation remains in HSS T13."
+    },
+    "hss_math_t02_st09": {
+      "id": "hss_math_t02_st09",
+      "title": "Quadratic inequalities",
+      "overview": "Unlike linear inequalities that split the number line exactly in half, quadratic expressions form parabolas that dip below and rise above the x-axis. This lesson introduces sign analysis to determine exactly where a quadratic inequality is positive or negative.",
+      "key_concepts": [
+        {
+          "concept": "The Critical Points",
+          "definition": "The boundaries of truth.",
+          "details": [
+            "To solve $ax^2+bx+c > 0$, first pretend it is an equation ($ax^2+bx+c = 0$) and find the roots by factoring or using the quadratic formula.",
+            "These roots are the 'critical points'. They are the exact locations on the number line where the expression equals zero, which act as boundaries between positive and negative zones."
+          ]
+        },
+        {
+          "concept": "Sign Analysis (Test Intervals)",
+          "definition": "Checking the zones.",
+          "details": [
+            "The critical points divide the number line into distinct intervals (e.g., left, middle, right).",
+            "Pick a test number from inside each interval and plug it back into the original quadratic expression.",
+            "If the result is positive, that entire interval is positive. If negative, the entire interval is negative."
+          ]
+        },
+        {
+          "concept": "Solution Sets",
+          "definition": "Interval notation.",
+          "details": [
+            "Depending on whether the original inequality asked for $>0$ (positive) or $<0$ (negative), you select the matching intervals as your final solution.",
+            "Use parenthesis `( )` for strict inequalities ($>, <$) and brackets `[ ]` if it includes 'or equal to' ($\\geq, \\leq$)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s09",
+          "title": "Quadratic Sign Chart",
+          "type": "svg",
+          "caption": "Testing intervals around the critical points x=2 and x=3.",
+          "alt_text": "A number line showing points at 2 and 3. The intervals are labeled: left of 2 is (+), between 2 and 3 is (-), right of 3 is (+). A parabola opening upwards is drawn passing through 2 and 3, visualizing why the middle is negative.",
+          "data": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"200\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 50 120 L 450 120\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\" marker-end=\"url(#arrow)\" marker-start=\"url(#arrow-rev)\"/><circle cx=\"200\" cy=\"120\" r=\"5\" fill=\"#0f172a\"/><text x=\"200\" y=\"145\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">2</text><circle cx=\"300\" cy=\"120\" r=\"5\" fill=\"#0f172a\"/><text x=\"300\" y=\"145\" font-family=\"monospace\" font-size=\"16\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">3</text><text x=\"120\" y=\"100\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">+</text><text x=\"250\" y=\"100\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#dc2626\" font-weight=\"bold\">-</text><text x=\"380\" y=\"100\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">+</text><path d=\"M 100 50 Q 250 200 400 50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#94a3b8\"/></marker><marker id=\"arrow-rev\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 10 0 L 0 5 L 10 10 z\" fill=\"#94a3b8\"/></marker></defs></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve the inequality: $x^2 - 5x + 6 > 0$.",
+          "solution_steps": [
+            "Step 1: Set to zero and factorise to find critical points: $(x - 2)(x - 3) = 0$.",
+            "Step 2: The critical points are $x = 2$ and $x = 3$. They divide the number line into: $(-\\infty, 2)$, $(2, 3)$, and $(3, \\infty)$.",
+            "Step 3: Test a number in $(-\\infty, 2)$, let's use $x=0$. $(0)^2 - 5(0) + 6 = 6$ (Positive).",
+            "Step 4: Test a number in $(2, 3)$, let's use $x=2.5$. $(2.5-2)(2.5-3) = (0.5)(-0.5) = -0.25$ (Negative).",
+            "Step 5: Test a number in $(3, \\infty)$, let's use $x=4$. $(4-2)(4-3) = (2)(1) = 2$ (Positive).",
+            "Step 6: The inequality asks for $>0$ (Positive areas). Combine the positive intervals."
+          ],
+          "final_answer": "x ∈ (-∞, 2) ∪ (3, ∞)"
+        },
+        {
+          "problem": "Solve $x^2-5x+6>0$.",
+          "solution_steps": [
+            "Factor: $(x-2)(x-3)>0$.",
+            "The product is positive outside the two roots."
+          ],
+          "final_answer": "$x<2$ or $x>3$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Solving $x^2 > 4$ by just writing $x > 2$.",
+          "correction": "This completely ignores the negative zone. $x = -3$ squared is $9$, which is $>4$. The correct solution is $x > 2$ OR $x < -2$."
+        }
+      ],
+      "quick_summary": [
+        "Quadratic inequalities are solved by finding the roots (critical points) first.",
+        "Critical points divide the number line into intervals. Test one point in each interval.",
+        "Choose the intervals that match the sign requested by the inequality ($>0$ is positive, $<0$ is negative)."
+      ],
+      "registry_scope": "User-approved 2026-11-05 scope: Solve quadratic inequalities using roots, factorisation, sign analysis and interval notation, including repeated-root cases and quadratics with no real roots. Curriculum boundary: extend HS foundations without duplicating HS T01/T03/T04/T05; use set/function concepts from HSS T01 as needed; formal calculus optimisation remains in HSS T13."
+    },
+    "hss_math_t02_st10": {
+      "id": "hss_math_t02_st10",
+      "title": "Linear inequalities in two variables",
+      "overview": "A linear inequality in two variables describes a set of ordered pairs (x, y) that satisfy a first-degree inequality. Unlike a one-variable inequality, its solution set is generally a region in the coordinate plane. This lesson focuses on the algebraic form and meaning of its solutions; graphing conventions are developed in the next subtopic.",
+      "key_concepts": [
+        {
+          "concept": "Standard Linear Inequality",
+          "definition": "A first-degree inequality involving two variables.",
+          "details": [
+            "A linear inequality in two variables can be written in forms such as $ax+by<c$, $ax+by\\u2264 c$, $ax+by>c$, or $ax+by\\u2265 c$, where $a$ and $b$ are not both zero.",
+            "The boundary equation is $ax+by=c$. It is a straight line when $a$ and $b$ are not both zero."
+          ]
+        },
+        {
+          "concept": "Solution Ordered Pairs",
+          "definition": "Pairs that make the inequality true.",
+          "details": [
+            "An ordered pair $(p,q)$ is a solution of an inequality if substituting $x=p$ and $y=q$ makes the statement true.",
+            "A single linear inequality in two variables generally has infinitely many solutions, represented by points in a region of the coordinate plane."
+          ]
+        },
+        {
+          "concept": "Solution Set and Boundary Inclusion",
+          "definition": "The collection of all satisfying pairs.",
+          "details": [
+            "For $ax+by\\le c$ or $ax+by\\ge c$, points on the boundary line are included in the solution set.",
+            "For strict inequalities $ax+by<c$ or $ax+by>c$, points on the boundary line are not solutions."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Form of a Linear Inequality in Two Variables",
+          "equation": "$$ax+by\\;\\square\\;c$$",
+          "variables": {
+            "a, b, c": "Real constants, with a and b not both zero.",
+            "□": "One of <, ≤, >, or ≥.",
+            "x, y": "Real variables."
+          }
+        }
+      ],
+      "visual_aids": [],
+      "worked_examples": [
+        {
+          "problem": "Determine whether the ordered pairs $(2,1)$ and $(4,1)$ satisfy $2x+y\\leq 6$.",
+          "solution_steps": [
+            "Step 1: Substitute $(2,1)$: $2(2)+1=5$.",
+            "Step 2: Since $5\\leq 6$ is true, $(2,1)$ is a solution.",
+            "Step 3: Substitute $(4,1)$: $2(4)+1=9$.",
+            "Step 4: Since $9\\leq 6$ is false, $(4,1)$ is not a solution."
+          ],
+          "final_answer": "$(2,1)$ is a solution; $(4,1)$ is not a solution."
+        },
+        {
+          "problem": "Determine whether $(2,1)$ satisfies $2x+y\\le6$.",
+          "solution_steps": [
+            "Substitute $x=2$ and $y=1$.",
+            "Evaluate $2(2)+1=5$ and compare with 6."
+          ],
+          "final_answer": "Yes, since $5\\le6$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Checking only the x-coordinate or only the y-coordinate.",
+          "correction": "Substitute both coordinates in the ordered pair into the inequality."
+        },
+        {
+          "mistake": "Assuming a linear inequality in two variables has only one solution.",
+          "correction": "A non-degenerate linear inequality generally has infinitely many ordered-pair solutions."
+        }
+      ],
+      "quick_summary": [
+        "A linear inequality in two variables is a first-degree inequality involving x and y.",
+        "An ordered pair is a solution only if substitution makes the inequality true.",
+        "The solution set is generally a region, not a single point."
+      ],
+      "registry_scope": "User-approved 2026-11-05 scope: Formulate and interpret linear inequalities in two variables and identify the corresponding solution regions. Curriculum boundary: extend HS foundations without duplicating HS T01/T03/T04/T05; use set/function concepts from HSS T01 as needed; formal calculus optimisation remains in HSS T13."
+    },
+    "hss_math_t02_st11": {
+      "id": "hss_math_t02_st11",
+      "title": "Graphical representation of inequalities",
+      "overview": "A linear inequality in two variables can be represented on the coordinate plane by a boundary line and one of its half-planes. This lesson explains how to draw the boundary, decide whether it is included, and use a test point to identify the correct solution region.",
+      "key_concepts": [
+        {
+          "concept": "The Boundary Line",
+          "definition": "The dividing wall.",
+          "details": [
+            "To solve $ax + by < c$, start by graphing the strict equation $ax + by = c$ as a straight line.",
+            "**Solid Line:** Use a solid line if the inequality is $\\leq$ or $\\geq$, meaning the points on the line are included in the answer.",
+            "**Dashed Line:** Use a dashed line if the inequality is $<$ or $>$, meaning the line itself is an excluded boundary."
+          ]
+        },
+        {
+          "concept": "Half-Planes",
+          "definition": "The two sides of the world.",
+          "details": [
+            "The boundary line perfectly divides the coordinate plane into two infinite regions called half-planes.",
+            "Every single point in one half-plane will make the inequality true, and every point in the other will make it false."
+          ]
+        },
+        {
+          "concept": "Test Points",
+          "definition": "Finding the true side.",
+          "details": [
+            "To find which side to shade as the answer, pick any random coordinate point (like $(0,0)$) that is NOT on the boundary line.",
+            "Plug it into the inequality. If it is mathematically true, shade the side containing that point. If false, shade the opposite side."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s11_graph",
+          "title": "Boundary Line and Shaded Half-Plane",
+          "type": "svg",
+          "caption": "The inequality x + y ≤ 4 includes its solid boundary line and the half-plane containing the origin.",
+          "alt_text": "Coordinate plane with a solid line through (4,0) and (0,4). The half-plane containing (0,0) is shaded.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 300\">\n<rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/>\n<text x=\"260\" y=\"24\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">Graph of x + y ≤ 4</text>\n<polygon points=\"75,250 75,55 270,250\" fill=\"#dcfce7\" opacity=\"0.95\"/>\n<line x1=\"75\" y1=\"250\" x2=\"460\" y2=\"250\" stroke=\"#334155\" stroke-width=\"2\"/>\n<line x1=\"75\" y1=\"250\" x2=\"75\" y2=\"40\" stroke=\"#334155\" stroke-width=\"2\"/>\n<line x1=\"75\" y1=\"55\" x2=\"270\" y2=\"250\" stroke=\"#2563eb\" stroke-width=\"3\"/>\n<g fill=\"#0f172a\" font-family=\"Arial\" font-size=\"12\">\n<text x=\"466\" y=\"254\">x</text><text x=\"65\" y=\"38\">y</text><text x=\"65\" y=\"266\">0</text>\n<text x=\"270\" y=\"268\">4</text><text x=\"54\" y=\"58\">4</text>\n<text x=\"285\" y=\"80\" fill=\"#2563eb\">x + y = 4</text>\n<text x=\"130\" y=\"190\" fill=\"#166534\" font-weight=\"bold\">Solution region</text>\n<text x=\"87\" y=\"242\">(0,0)</text>\n</g>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Graph the inequality $x + y \\leq 4$.",
+          "solution_steps": [
+            "Step 1: Graph the boundary line $x + y = 4$. The intercepts are $(4,0)$ and $(0,4)$.",
+            "Step 2: Since the inequality is $\\leq$ (less than or equal to), draw the boundary line as a Solid line.",
+            "Step 3: Pick a test point not on the line. $(0,0)$ is easy.",
+            "Step 4: Plug $(0,0)$ into $x + y \\leq 4$. $0 + 0 \\leq 4$. This is True.",
+            "Step 5: Since the test point is True, shade the entire half-plane that contains the origin $(0,0)$."
+          ],
+          "final_answer": "Shade the region below and to the left of the solid line x + y = 4."
+        },
+        {
+          "problem": "Describe the boundary and shaded half-plane for $x+y\\le4$.",
+          "solution_steps": [
+            "The boundary is the line $x+y=4$.",
+            "Because equality is included, the boundary is solid.",
+            "The origin satisfies the inequality, so shade the side containing $(0,0)$."
+          ],
+          "final_answer": "Solid line through $(4,0)$ and $(0,4)$; shade the half-plane containing the origin."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using a test point that lies exactly on the boundary line.",
+          "correction": "If you test a point on the line (e.g., testing $(2,2)$ for $x+y \\leq 4$), the result will be $4 \\leq 4$. This gives you no directional information about which side of the line to shade."
+        }
+      ],
+      "quick_summary": [
+        "A linear inequality in two variables represents an entire region (half-plane) on a 2D graph.",
+        "Draw the boundary line using the standard equation (Solid for $\\leq/\\geq$, Dashed for $</>$).",
+        "Test a coordinate point to determine which side of the line is the true solution region, and shade it."
+      ],
+      "registry_scope": "User-approved 2026-11-05 scope: Represent inequalities graphically using correct boundary lines, solid or dashed boundaries, test points and shading conventions. Curriculum boundary: extend HS foundations without duplicating HS T01/T03/T04/T05; use set/function concepts from HSS T01 as needed; formal calculus optimisation remains in HSS T13."
+    },
+    "hss_math_t02_st12": {
+      "id": "hss_math_t02_st12",
+      "title": "Systems of inequalities",
+      "overview": "A system of inequalities imposes several conditions on the same variables at once. Its solution is the intersection of the individual solution regions. The common region is called the feasible region and may be bounded, unbounded, or empty.",
+      "key_concepts": [
+        {
+          "concept": "The System",
+          "definition": "Simultaneous truth.",
+          "details": [
+            "A system of inequalities means that all given inequalities must be satisfied *at the exact same time*.",
+            "On a graph, you shade the solution half-plane for each inequality individually."
+          ]
+        },
+        {
+          "concept": "The Feasible Region",
+          "definition": "The zone of overlap.",
+          "details": [
+            "The final solution to the system is strictly the area where ALL of the shaded regions overlap. This overlapping polygon is called the 'Feasible Region'.",
+            "If the regions never overlap, the system has No Solution (it is infeasible)."
+          ]
+        },
+        {
+          "concept": "Bounded vs Unbounded Regions",
+          "definition": "Finite vs Infinite area.",
+          "details": [
+            "**Bounded Region:** The feasible region is completely enclosed by boundary lines, forming a closed polygon.",
+            "**Unbounded Region:** The feasible region goes on forever in at least one direction."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Solution Set of a System",
+          "equation": "$$S=S_1\\cap S_2\\cap\\cdots\\cap S_n$$",
+          "variables": {
+            "S": "Set of ordered pairs satisfying every inequality in the system.",
+            "S₁, S₂, …, Sₙ": "Individual solution sets of the inequalities."
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v02_s11",
+          "title": "A Bounded Feasible Region",
+          "type": "svg",
+          "caption": "The intersection of x ≥ 0, y ≥ 0, and x + y ≤ 4 is a bounded triangular feasible region.",
+          "alt_text": "The first-quadrant triangular region bounded by the x-axis, y-axis and line x+y=4, with vertices (0,0), (4,0) and (0,4).",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 100 20 L 100 220\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M 50 180 L 450 180\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"100,180 300,180 100,40\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"160\" y=\"130\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Feasible</text><text x=\"160\" y=\"150\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Region</text><text x=\"90\" y=\"40\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"end\" fill=\"#0f172a\">4</text><text x=\"300\" y=\"200\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\">4</text><text x=\"350\" y=\"120\" font-family=\"monospace\" font-size=\"14\" fill=\"#16a34a\">x + y ≤ 4</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the feasible region of the system $x\\geq0$, $y\\geq0$, and $x+y\\leq4$. State its vertices and whether it is bounded.",
+          "solution_steps": [
+            "Step 1: The inequalities $x\\geq0$ and $y\\geq0$ restrict the solution to the first quadrant, including both coordinate axes.",
+            "Step 2: The inequality $x+y\\leq4$ gives the half-plane on or below the line $x+y=4$.",
+            "Step 3: Find the boundary intersections. The line $x+y=4$ meets the x-axis at $(4,0)$ and the y-axis at $(0,4)$; the two axes meet at $(0,0)$.",
+            "Step 4: The common region is the triangle with vertices $(0,0)$, $(4,0)$, and $(0,4)$.",
+            "Step 5: The region is enclosed by three line segments, so it is bounded."
+          ],
+          "final_answer": "The feasible region is the closed triangle with vertices $(0,0)$, $(4,0)$, and $(0,4)$. It is bounded."
+        },
+        {
+          "problem": "Find the vertices of the feasible region $x\\ge0$, $y\\ge0$, $x+y\\le4$.",
+          "solution_steps": [
+            "The axes and the line $x+y=4$ bound the region in the first quadrant.",
+            "Find their pairwise intersections."
+          ],
+          "final_answer": "Vertices $(0,0)$, $(4,0)$ and $(0,4)$; the region is bounded."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Just drawing the lines and assuming the region nearest the origin is the answer.",
+          "correction": "Never assume the shape of the feasible region. Depending on the direction of the inequality signs ($<$ vs $>$), the overlapping area could be a tiny sliver far away from the origin, or completely unbounded."
+        }
+      ],
+      "quick_summary": [
+        "A system requires all inequalities to hold simultaneously.",
+        "Its solution is the intersection of the individual solution regions, called the feasible region.",
+        "A feasible region may be bounded, unbounded, or empty."
+      ],
+      "registry_scope": "User-approved 2026-11-05 scope: Solve systems of inequalities by identifying feasible regions and interpreting practical constraints; reserve formal calculus-based optimisation for HSS T13. Curriculum boundary: extend HS foundations without duplicating HS T01/T03/T04/T05; use set/function concepts from HSS T01 as needed; formal calculus optimisation remains in HSS T13."
+    }
+  }
+}

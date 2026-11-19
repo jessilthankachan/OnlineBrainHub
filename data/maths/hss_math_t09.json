@@ -1,0 +1,1441 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t09",
+  "topicTitle": "Conic Sections",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t09_st01": {
+      "id": "hss_math_t09_st01",
+      "title": "Introduction to conic sections",
+      "overview": "Conic sections are curves formed when a plane intersects a double right circular cone. The orientation of the plane determines whether the intersection is a circle, ellipse, parabola or hyperbola. These are studied first geometrically; their equations and properties are developed in the following subtopics.",
+      "key_concepts": [
+        {
+          "concept": "The Double Cone",
+          "definition": "The source shape.",
+          "details": [
+            "A double cone consists of two identical cones joined at their tips (the vertex), extending infinitely in opposite directions."
+          ]
+        },
+        {
+          "concept": "The Four Slices",
+          "definition": "Angles of intersection.",
+          "details": [
+            "**Circle:** The plane cuts straight across, perfectly perpendicular to the vertical axis.",
+            "**Ellipse:** The plane tilts slightly, cutting through one cone at an angle to create a closed oval.",
+            "**Parabola:** The plane tilts perfectly parallel to the sloped edge of the cone, cutting an open, U-shaped curve.",
+            "**Hyperbola:** The plane cuts vertically straight down through both cones, creating two separate, mirrored open curves."
+          ]
+        },
+        {
+          "concept": "How the cutting plane determines the curve",
+          "definition": "The relative angle of the plane and the cone produces different intersections.",
+          "details": [
+            "A plane perpendicular to the cone axis and cutting one nappe produces a circle.",
+            "An oblique plane that cuts one nappe without being parallel to a generator produces an ellipse.",
+            "A plane parallel to a generator of the cone produces a parabola.",
+            "A plane that intersects both nappes produces two separate branches of a hyperbola.",
+            "The exact classification assumes the usual non-degenerate sections; special positions can produce limiting or degenerate cases, which are not the focus here."
+          ]
+        },
+        {
+          "concept": "Closed and open conics",
+          "definition": "Conics can be grouped by whether the resulting curve is bounded.",
+          "details": [
+            "A circle and an ellipse are closed curves.",
+            "A parabola and a hyperbola are open curves that extend indefinitely.",
+            "A hyperbola has two separate branches; a parabola has one continuous branch."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s01",
+          "title": "Slicing the Cone",
+          "type": "svg",
+          "caption": "The angle of the intersecting plane dictates the conic section produced.",
+          "alt_text": "Four double cones shown side by side. A plane cuts the first horizontally (Circle). A plane cuts the second at a slight tilt (Ellipse). A plane cuts the third parallel to the edge (Parabola). A plane cuts the fourth vertically through both cones (Hyperbola).",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 60 20 L 100 120 L 140 20 Z M 60 220 L 100 120 L 140 220 Z\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M 180 20 L 220 120 L 260 20 Z M 180 220 L 220 120 L 260 220 Z\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M 300 20 L 340 120 L 380 20 Z M 300 220 L 340 120 L 380 220 Z\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M 420 20 L 460 120 L 500 20 Z M 420 220 L 460 120 L 500 220 Z\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\"/><ellipse cx=\"100\" cy=\"60\" rx=\"25\" ry=\"8\" fill=\"#ef4444\"/><path d=\"M 175 75 L 265 45\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"4\"/><path d=\"M 290 80 L 390 180\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"4\"/><path d=\"M 480 30 L 480 210\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"4\"/><text x=\"100\" y=\"240\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Circle</text><text x=\"220\" y=\"240\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Ellipse</text><text x=\"340\" y=\"240\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Parabola</text><text x=\"460\" y=\"240\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Hyperbola</text></svg>"
+        },
+        {
+          "visual_id": "v09_s01b",
+          "title": "Four principal conic sections",
+          "type": "svg",
+          "caption": "Schematic comparison of the four principal conics.",
+          "alt_text": "Coordinate sketches of a circle, ellipse, parabola and two-branch hyperbola.",
+          "data": "<svg viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M35 150H485 M260 25V275\"/></g><g fill=\"#334155\" font-size=\"12\" font-family=\"Arial\"><text x=\"490\" y=\"145\">x</text><text x=\"270\" y=\"22\">y</text></g><g fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"><circle cx=\"90\" cy=\"150\" r=\"42\"/><ellipse cx=\"210\" cy=\"150\" rx=\"55\" ry=\"32\"/><path d=\"M315 95 Q245 150 315 205\"/><path d=\"M420 90 Q365 150 420 210 M460 90 Q515 150 460 210\"/></g><g fill=\"#334155\" font-size=\"13\"><text x=\"65\" y=\"225\">Circle</text><text x=\"185\" y=\"225\">Ellipse</text><text x=\"290\" y=\"225\">Parabola</text><text x=\"410\" y=\"245\">Hyperbola</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A plane cuts one nappe of a double cone at an oblique angle, but it is not parallel to a generator. Which conic is produced?",
+          "solution_steps": [
+            "The plane intersects only one nappe, so the section is a closed curve.",
+            "It is not perpendicular to the axis, so it is not a circle.",
+            "It is not parallel to a generator, so it is an ellipse."
+          ],
+          "final_answer": "An ellipse."
+        },
+        {
+          "problem": "Identify the conic represented by $x^2+y^2=25$ and state its centre and radius.",
+          "solution_steps": [
+            "Both squared coordinates have equal positive coefficients.",
+            "Compare with the circle equation $x^2+y^2=r^2$."
+          ],
+          "final_answer": "A circle with centre $(0,0)$ and radius 5."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking a parabola has two branches.",
+          "correction": "Because a parabola is cut parallel to the cone's edge, it only ever intersects ONE of the two cones. Only the Hyperbola cuts vertically through BOTH cones to create two separate branches."
+        }
+      ],
+      "quick_summary": [
+        "Conic sections are curves created by slicing a double cone with a flat plane.",
+        "A perpendicular slice creates a Circle. A tilted slice creates an Ellipse.",
+        "A slice parallel to the cone's edge creates a Parabola. A vertical slice through both cones creates a Hyperbola."
+      ],
+      "registry_scope": "Approved lesson-level scope: Introduce conics as curves obtained from plane sections of a double cone; identify circle, parabola, ellipse and hyperbola geometrically. Keep conceptual; analytical equations and detailed properties follow."
+    },
+    "hss_math_t09_st02": {
+      "id": "hss_math_t09_st02",
+      "title": "Circle and its properties",
+      "overview": "A circle is the special limiting case of an ellipse in which the two semi-axes are equal and the two foci coincide at the centre. In this conic-section comparison, the important fact is its zero eccentricity. Coordinate equations, tangents and circle-intersection methods are covered in HSS T08 and are not repeated here.",
+      "key_concepts": [
+        {
+          "concept": "The Locus Definition",
+          "definition": "Perfectly equidistant.",
+          "details": [
+            "A circle is the locus (path) of all points that are an exact, fixed distance (radius) from a single fixed point (center)."
+          ]
+        },
+        {
+          "concept": "The Special Ellipse",
+          "definition": "Merging the foci.",
+          "details": [
+            "An ellipse has two distinct focus points. In a circle, those two foci collapse and perfectly overlap at the exact center.",
+            "Because the foci are merged, the semi-major axis and semi-minor axis are exactly equal (they both just become the 'radius')."
+          ]
+        },
+        {
+          "concept": "Eccentricity of a Circle",
+          "definition": "Zero deviation.",
+          "details": [
+            "Eccentricity ($e$) measures how much a conic 'stretches' away from being perfectly round.",
+            "Because a circle is perfectly round, it has an eccentricity of exactly $0$."
+          ]
+        },
+        {
+          "concept": "Circle as a special ellipse",
+          "definition": "An ellipse becomes a circle when its semi-major and semi-minor axes are equal.",
+          "details": [
+            "If a=b, the ellipse has equal width and height in every direction.",
+            "The focal distance c satisfies c²=a²−b²=0, so c=0 and both foci coincide with the centre.",
+            "Its eccentricity is e=c/a=0."
+          ]
+        },
+        {
+          "concept": "Conceptual comparison",
+          "definition": "The circle differs from a non-circular ellipse only in its symmetry and eccentricity.",
+          "details": [
+            "Every diameter through the centre is an axis of symmetry of a circle.",
+            "A non-circular ellipse has one major axis and one minor axis; a circle has no unique major direction.",
+            "For circle coordinate equations and geometric calculations, refer to HSS T08."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v09_st02_extra",
+          "title": "Circle and Its Properties — schematic",
+          "type": "svg",
+          "caption": "Conceptual illustration supporting the key idea.",
+          "alt_text": "A simple schematic illustrating the subtopic concept.",
+          "data": "<svg viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M35 150H485 M260 25V275\"/></g><g fill=\"#334155\" font-size=\"12\" font-family=\"Arial\"><text x=\"490\" y=\"145\">x</text><text x=\"270\" y=\"22\">y</text></g><ellipse cx=\"260\" cy=\"150\" rx=\"145\" ry=\"78\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"260\" cy=\"150\" r=\"5\" fill=\"#dc2626\"/><text x=\"275\" y=\"145\" fill=\"#334155\" font-size=\"13\">Centre</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "An ellipse has an equation where its major axis is $10$ units and its minor axis is also $10$ units. What is this shape and what are its foci?",
+          "solution_steps": [
+            "Step 1: Recognize that if the major and minor axes are equal, the shape has no 'stretch'.",
+            "Step 2: A non-stretched ellipse is mathematically defined as a circle.",
+            "Step 3: Because it is a circle, the two foci overlap at the exact center of the shape."
+          ],
+          "final_answer": "It is a circle, and its foci are merged at the center."
+        },
+        {
+          "problem": "An ellipse has semi-major axis 6 and semi-minor axis 6. Determine its eccentricity and describe its foci.",
+          "solution_steps": [
+            "Equal semi-axes mean the ellipse is a circle.",
+            "For a circle, the focal distance c=0.",
+            "Thus e=c/a=0, and both foci coincide at the centre."
+          ],
+          "final_answer": "Circle; e=0; coincident foci at the centre."
+        }
+      ],
+      "common_mistakes": [],
+      "quick_summary": [
+        "A circle is a zero-eccentricity special case of an ellipse.",
+        "Its two foci coincide at the centre because the semi-axes are equal.",
+        "Circle equations, tangents and coordinate methods are covered in HSS T08."
+      ],
+      "registry_scope": "Approved lesson-level scope: Circle geometry, centre, radius and symmetry; explain its special role among conics and zero eccentricity where appropriate. Avoid repeating coordinate equations, tangents and line-circle intersections developed in HSS T08. Boundary: Treat the circle here as a brief conic-section reference and comparison only. Circle equations, tangents and coordinate methods are taught in HSS T08; the distinctive focus of HSS T09 is parabola, ellipse and hyperbola. Approved Draft 88 quality boundary: Limit this subtopic to identifying the circle as the zero-eccentricity/special conic case and comparing it conceptually with the other conics. Do not reteach circle geometry, coordinate equations, line-circle intersections or tangents; refer to HSS T08 for those methods."
+    },
+    "hss_math_t09_st04": {
+      "id": "hss_math_t09_st04",
+      "title": "Focus, directrix and eccentricity",
+      "overview": "For a non-circular conic, a point P on the curve is positioned so that its distance from a fixed point (the focus) is a constant multiple e of its perpendicular distance from a fixed line (the directrix). The constant e is the eccentricity. This focus-directrix definition provides a common geometric foundation for the parabola, ellipse and hyperbola.",
+      "key_concepts": [
+        {
+          "concept": "The Core Mechanism",
+          "definition": "The distance ratio.",
+          "details": [
+            "Take any point $P$ on a conic curve. Measure its straight distance to the Focus ($PF$). Measure its perpendicular distance to the Directrix line ($PD$).",
+            "The ratio of these two distances ($\\frac{PF}{PD}$) is a constant number called the Eccentricity ($e$)."
+          ]
+        },
+        {
+          "concept": "Classifying by Eccentricity ($e$)",
+          "definition": "The shape identifier.",
+          "details": [
+            "**Circle:** $e = 0$ (perfectly round, directrix is infinitely far away).",
+            "**Ellipse:** $0 < e < 1$ (closed loop).",
+            "**Parabola:** $e = 1$ (the tipping point, perfectly balanced).",
+            "**Hyperbola:** $e > 1$ (breaks open into two branches)."
+          ]
+        },
+        {
+          "concept": "Focus and directrix",
+          "definition": "The focus is a fixed point and the directrix is a fixed straight line associated with a conic.",
+          "details": [
+            "PF is the distance from a point P on the conic to the focus F.",
+            "PD is the perpendicular distance from P to the directrix; it is not the distance measured along an arbitrary segment.",
+            "For a given conic, the ratio PF/PD is constant for every point P on it."
+          ]
+        },
+        {
+          "concept": "Meaning of eccentricity",
+          "definition": "Eccentricity measures the conic type through the focus-directrix distance ratio.",
+          "details": [
+            "For an ellipse, 0<e<1.",
+            "For a parabola, e=1.",
+            "For a hyperbola, e>1.",
+            "The circle is treated separately as the limiting special case e=0; its two foci coincide."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Eccentricity Definition",
+          "equation": "$$ e = \\frac{PF}{PD} $$",
+          "variables": {
+            "PF": "Distance from point to Focus",
+            "PD": "Distance from point to Directrix"
+          }
+        },
+        {
+          "name": "Focus-directrix definition of eccentricity",
+          "equation": "$$e=\\frac{PF}{PD}$$",
+          "variables": {
+            "PF": "Distance from P to the focus",
+            "PD": "Perpendicular distance from P to the directrix"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_st03_extra",
+          "title": "Focus, Directrix and Eccentricity — schematic",
+          "type": "svg",
+          "caption": "Conceptual illustration supporting the key idea.",
+          "alt_text": "A simple schematic illustrating the subtopic concept.",
+          "data": "<svg viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M35 150H485 M260 25V275\"/></g><g fill=\"#334155\" font-size=\"12\" font-family=\"Arial\"><text x=\"490\" y=\"145\">x</text><text x=\"270\" y=\"22\">y</text></g><ellipse cx=\"260\" cy=\"150\" rx=\"145\" ry=\"78\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"260\" cy=\"150\" r=\"5\" fill=\"#dc2626\"/><text x=\"275\" y=\"145\" fill=\"#334155\" font-size=\"13\">Centre</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "For a particular curve, the distance from a point $P$ to the focus is $12$ units, and the perpendicular distance to the directrix is $15$ units. Identify the conic section.",
+          "solution_steps": [
+            "Step 1: Apply the eccentricity formula: $e = \\frac{PF}{PD}$.",
+            "Step 2: Substitute the known values: $e = \\frac{12}{15}$.",
+            "Step 3: Simplify the fraction: $e = 0.8$.",
+            "Step 4: Check the classification rule. Since $0 < e < 1$, the shape is a closed loop."
+          ],
+          "final_answer": "Ellipse"
+        },
+        {
+          "problem": "For a point P on a conic, PF=9 cm and the perpendicular distance from P to the directrix is PD=12 cm. Identify the conic type.",
+          "solution_steps": [
+            "Use e=PF/PD.",
+            "Substitute e=9/12=3/4=0.75.",
+            "Since 0<e<1, the conic is an ellipse."
+          ],
+          "final_answer": "Ellipse; e=0.75."
+        },
+        {
+          "problem": "For a point on a conic, PF=7.5 cm and PD=10 cm. Determine the eccentricity and conic.",
+          "solution_steps": [
+            "e=PF/PD=7.5/10=0.75.",
+            "Since 0<e<1, the conic is an ellipse."
+          ],
+          "final_answer": "e=0.75; ellipse."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Flipping the eccentricity ratio to $\\frac{PD}{PF}$.",
+          "correction": "The Focus is always the numerator. Remember 'F over D'. If you flip it, you will misidentify an ellipse as a hyperbola."
+        }
+      ],
+      "quick_summary": [
+        "The Focus is an internal anchor point; the Directrix is an external boundary line.",
+        "Eccentricity ($e$) is the constant ratio of a point's distance from the Focus divided by its distance to the Directrix.",
+        "The value of $e$ completely determines the shape: $e<1$ (Ellipse), $e=1$ (Parabola), $e>1$ (Hyperbola)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Establish focus-directrix definition and eccentricity as the ratio of distances from a point on the conic to its focus and directrix. This is the geometric foundation for the individual conics. Detailed standard equations follow."
+    },
+    "hss_math_t09_st03": {
+      "id": "hss_math_t09_st03",
+      "title": "Parabola and standard equations",
+      "overview": "A parabola is the conic with eccentricity 1. Every point on it is equidistant from a fixed focus and a fixed directrix. In standard position its vertex is at the origin and its axis is one coordinate axis; translations are introduced through the centre/vertex form where appropriate.",
+      "key_concepts": [
+        {
+          "concept": "The Locus Definition",
+          "definition": "The $1:1$ ratio.",
+          "details": [
+            "Because its eccentricity $e = 1$, every single point on a parabola is exactly the same distance from the Focus as it is from the Directrix line.",
+            "$PF = PD$."
+          ]
+        },
+        {
+          "concept": "Standard Equations",
+          "definition": "The four orientations.",
+          "details": [
+            "**Opens Right:** $y^2 = 4ax$ (Focus at $(a,0)$, Directrix at $x = -a$).",
+            "**Opens Left:** $y^2 = -4ax$ (Focus at $(-a,0)$, Directrix at $x = a$).",
+            "**Opens Up:** $x^2 = 4ay$ (Focus at $(0,a)$, Directrix at $y = -a$).",
+            "**Opens Down:** $x^2 = -4ay$ (Focus at $(0,-a)$, Directrix at $y = a$)."
+          ]
+        },
+        {
+          "concept": "Latus Rectum",
+          "definition": "The focal width.",
+          "details": [
+            "The Latus Rectum is the straight line segment that passes directly through the focus, perpendicular to the axis of symmetry, and touches both sides of the parabola.",
+            "Its length is always exactly $4a$."
+          ]
+        },
+        {
+          "concept": "Standard forms and orientation",
+          "definition": "The squared coordinate identifies the axis, while the sign identifies the opening direction.",
+          "details": [
+            "y²=4ax opens right; focus (a,0), directrix x=−a.",
+            "y²=−4ax opens left; focus (−a,0), directrix x=a.",
+            "x²=4ay opens upward; focus (0,a), directrix y=−a.",
+            "x²=−4ay opens downward; focus (0,−a), directrix y=a.",
+            "Here a>0 is the distance from vertex to focus; the latus rectum has length 4a."
+          ]
+        },
+        {
+          "concept": "Vertex and axis",
+          "definition": "The vertex is the turning point of the parabola and the axis is its line of symmetry.",
+          "details": [
+            "For y²=4ax or y²=−4ax, the axis is the x-axis.",
+            "For x²=4ay or x²=−4ay, the axis is the y-axis.",
+            "The latus rectum is the chord through the focus perpendicular to the axis."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Parabola (Opens Right)",
+          "equation": "$$ y^2 = 4ax $$",
+          "variables": {}
+        },
+        {
+          "name": "Length of Latus Rectum",
+          "equation": "$$ \\text{Length} = 4a $$",
+          "variables": {}
+        },
+        {
+          "name": "Four standard parabolas",
+          "equation": "$$y^2=\\pm 4ax,\\qquad x^2=\\pm 4ay$$",
+          "variables": {
+            "a": "Positive distance from vertex to focus"
+          }
+        },
+        {
+          "name": "Focus and directrix (right-opening)",
+          "equation": "Focus (a,0); directrix x=−a.",
+          "variables": {
+            "a": "Positive parameter"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s04",
+          "title": "Anatomy of a Parabola",
+          "type": "svg",
+          "caption": "For every point on the curve, the distance to the focus equals the distance to the directrix.",
+          "alt_text": "A parabola opening to the right. The focus F is marked inside. A vertical dashed line (directrix) is behind the parabola. A point P on the curve has two equal-length lines: one to F and one dropping perpendicularly to the directrix.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 50 125 L 450 125\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 150 20 L 150 230\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3\" stroke-dasharray=\"6,4\"/><text x=\"140\" y=\"40\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"end\" fill=\"#991b1b\" font-weight=\"bold\">Directrix</text><path d=\"M 400 30 Q 200 125 400 220\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"300\" cy=\"125\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"300\" y=\"145\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Focus (F)</text><circle cx=\"280\" cy=\"70\" r=\"5\" fill=\"#0f172a\"/><text x=\"280\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">P</text><path d=\"M 300 125 L 280 70\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M 150 70 L 280 70\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"310\" y=\"90\" font-family=\"monospace\" font-size=\"14\" fill=\"#15803d\">d₁</text><text x=\"200\" y=\"65\" font-family=\"monospace\" font-size=\"14\" fill=\"#15803d\">d₂</text><text x=\"230\" y=\"200\" font-family=\"sans-serif\" font-size=\"16\" fill=\"#15803d\" font-weight=\"bold\">d₁ = d₂</text></svg>"
+        },
+        {
+          "visual_id": "v09_s04b",
+          "title": "Parabola orientation",
+          "type": "svg",
+          "caption": "The four standard orientations of a parabola.",
+          "alt_text": "Four parabolas opening right, left, up and down with their axes.",
+          "data": "<svg viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M35 150H485 M260 25V275\"/></g><g fill=\"#334155\" font-size=\"12\" font-family=\"Arial\"><text x=\"490\" y=\"145\">x</text><text x=\"270\" y=\"22\">y</text></g><g fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"><path d=\"M100 65 Q190 150 100 235\"/><path d=\"M100 65 Q10 150 100 235\"/><path d=\"M285 235 Q370 150 455 235\"/><path d=\"M285 65 Q370 150 455 65\"/></g><g fill=\"#334155\" font-size=\"12\"><text x=\"75\" y=\"265\">Left/right</text><text x=\"350\" y=\"265\">Up/down</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the focus, directrix, and length of the latus rectum for the parabola $y^2 = 12x$.",
+          "solution_steps": [
+            "Step 1: Match the equation to the standard form $y^2 = 4ax$. (This parabola opens to the right).",
+            "Step 2: Solve for $a$. $4a = 12$, therefore $a = 3$.",
+            "Step 3: The focus for a right-opening parabola is at $(a, 0)$. Focus = $(3, 0)$.",
+            "Step 4: The directrix is at $x = -a$. Directrix = $x = -3$.",
+            "Step 5: The length of the latus rectum is exactly $4a$. Length = $12$."
+          ],
+          "final_answer": "Focus: (3,0), Directrix: x=-3, Latus Rectum: 12"
+        },
+        {
+          "problem": "For x²=−20y, find the vertex, opening direction, focus, directrix and latus-rectum length.",
+          "solution_steps": [
+            "Compare with x²=−4ay: 4a=20, so a=5.",
+            "The vertex is (0,0), and the negative sign means the parabola opens downward.",
+            "The focus is (0,−a)=(0,−5).",
+            "The directrix is y=a, so y=5.",
+            "The latus-rectum length is 4a=20."
+          ],
+          "final_answer": "Vertex (0,0); opens downward; focus (0,−5); directrix y=5; latus rectum 20."
+        },
+        {
+          "problem": "For y²=−24x, determine the focus and directrix.",
+          "solution_steps": [
+            "Compare with y²=−4ax, so 4a=24 and a=6.",
+            "The parabola opens left; its focus is (−a,0) and directrix is x=a."
+          ],
+          "final_answer": "Focus (−6,0); directrix x=6."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing which way the parabola opens.",
+          "correction": "Look at the unsquared variable. If it's $x$, it opens left/right along the x-axis. If it's $y$, it opens up/down along the y-axis. Then look at the sign ($+$ or $-$) to determine the exact direction."
+        }
+      ],
+      "quick_summary": [
+        "A parabola has an eccentricity of exactly $1$ ($PF = PD$).",
+        "The standard equations are $y^2 = \\pm 4ax$ (horizontal) and $x^2 = \\pm 4ay$ (vertical).",
+        "The value $a$ is the distance from the vertex to the focus. The Latus Rectum is $4a$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Study parabola, vertex, axis, focus, directrix and standard coordinate equations in usual orientations. Build on the preceding focus-directrix definition. Avoid calculus-based tangent and normal derivations."
+    },
+    "hss_math_t09_st05": {
+      "id": "hss_math_t09_st05",
+      "title": "Ellipse and standard equations",
+      "overview": "An ellipse is the locus of a point whose sum of distances from two fixed foci is constant. Its standard equation is centred at the origin. The larger denominator identifies the major-axis direction; detailed coordinates of foci, vertices and axis lengths are developed in the next subtopic.",
+      "key_concepts": [
+        {
+          "concept": "The Locus Definition",
+          "definition": "The string trick.",
+          "details": [
+            "An ellipse is the path of a point where the SUM of its distances to two fixed foci ($F_1$ and $F_2$) is always exactly the same constant number.",
+            "$PF_1 + PF_2 = 2a$ (where $2a$ is the total length of the major axis)."
+          ]
+        },
+        {
+          "concept": "Standard Equations",
+          "definition": "Horizontal vs Vertical.",
+          "details": [
+            "**Horizontal:** $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ (where $a > b$). The longer major axis is along the x-axis.",
+            "**Vertical:** $\\frac{x^2}{b^2} + \\frac{y^2}{a^2} = 1$ (where $a > b$). The longer major axis is along the y-axis.",
+            "The letter $a$ always represents the semi-major (longer) axis."
+          ]
+        },
+        {
+          "concept": "The Focal Distance ($c$)",
+          "definition": "The Pythagorean link.",
+          "details": [
+            "The distance from the center to either focus is $c$.",
+            "It is calculated using the altered Pythagorean relationship: $c^2 = a^2 - b^2$."
+          ]
+        },
+        {
+          "concept": "Standard equations",
+          "definition": "The positive terms show the ellipse is closed; the larger denominator gives the major-axis direction.",
+          "details": [
+            "Horizontal major axis: x²/a²+y²/b²=1, with a>b>0.",
+            "Vertical major axis: x²/b²+y²/a²=1, with a>b>0.",
+            "For either orientation, c²=a²−b² and 0<c<a.",
+            "The equation in this subtopic is centred at the origin; translated ellipses have (x−h)² and (y−k) terms."
+          ]
+        },
+        {
+          "concept": "Locus property",
+          "definition": "The sum of distances from any point on an ellipse to its two foci is constant.",
+          "details": [
+            "For a standard ellipse, PF₁+PF₂=2a.",
+            "The constant sum equals the length of the major axis."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Ellipse (Horizontal)",
+          "equation": "$$ \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1 $$",
+          "variables": {
+            "a": "Semi-major axis",
+            "b": "Semi-minor axis"
+          }
+        },
+        {
+          "name": "Focal Distance",
+          "equation": "$$ c^2 = a^2 - b^2 $$",
+          "variables": {}
+        },
+        {
+          "name": "Ellipse (vertical major axis)",
+          "equation": "$$\\frac{x^2}{b^2}+\\frac{y^2}{a^2}=1,\\quad a>b>0$$",
+          "variables": {
+            "a": "Semi-major axis",
+            "b": "Semi-minor axis"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s05b",
+          "title": "Ellipse and its foci",
+          "type": "svg",
+          "caption": "An ellipse with horizontal major axis and two foci.",
+          "alt_text": "Ellipse centred at origin, showing major and minor axes and two foci.",
+          "data": "<svg viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M35 150H485 M260 25V275\"/></g><g fill=\"#334155\" font-size=\"12\" font-family=\"Arial\"><text x=\"490\" y=\"145\">x</text><text x=\"270\" y=\"22\">y</text></g><ellipse cx=\"260\" cy=\"150\" rx=\"155\" ry=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M105 150H415 M260 68V232\" stroke=\"#94a3b8\" stroke-dasharray=\"5 4\"/><g fill=\"#dc2626\"><circle cx=\"330\" cy=\"150\" r=\"5\"/><circle cx=\"190\" cy=\"150\" r=\"5\"/></g><g fill=\"#334155\" font-size=\"13\"><text x=\"338\" y=\"142\">F₁</text><text x=\"165\" y=\"142\">F₂</text><text x=\"265\" y=\"60\">Minor axis</text><text x=\"215\" y=\"250\">Major axis</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the foci and eccentricity of the ellipse $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$.",
+          "solution_steps": [
+            "Step 1: Identify $a^2$ and $b^2$. The larger number is under $x$, so $a^2 = 25$ and $b^2 = 9$. It is a horizontal ellipse.",
+            "Step 2: Find $a$ and $b$. $a = 5$, $b = 3$.",
+            "Step 3: Calculate $c^2 = a^2 - b^2 = 25 - 9 = 16$. Therefore, $c = 4$.",
+            "Step 4: The foci lie on the major x-axis at $(\\pm c, 0)$. Foci = $(\\pm 4, 0)$.",
+            "Step 5: Calculate eccentricity: $e = \\frac{c}{a} = \\frac{4}{5} = 0.8$."
+          ],
+          "final_answer": "Foci: (±4, 0), e = 0.8"
+        },
+        {
+          "problem": "Determine the orientation and values of a, b and c for x²/9+y²/25=1.",
+          "solution_steps": [
+            "The larger denominator is 25 under y², so the major axis is vertical.",
+            "Thus a²=25 and b²=9, giving a=5 and b=3.",
+            "Use c²=a²−b²=25−9=16, so c=4."
+          ],
+          "final_answer": "Vertical ellipse; a=5, b=3, c=4."
+        },
+        {
+          "problem": "Write the standard equation of an ellipse with horizontal major axis, a=7 and b=4.",
+          "solution_steps": [
+            "For a horizontal ellipse, x²/a²+y²/b²=1.",
+            "Substitute a²=49 and b²=16."
+          ],
+          "final_answer": "x²/49+y²/16=1."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using $a^2 + b^2 = c^2$ to find the focus.",
+          "correction": "For an ellipse, the formula is strictly $c^2 = a^2 - b^2$. If you add them, you will calculate the focus for a hyperbola instead, which lies completely outside the shape."
+        }
+      ],
+      "quick_summary": [
+        "An ellipse is formed when the sum of distances to two foci is constant.",
+        "The larger denominator dictates the major axis (horizontal or vertical).",
+        "The distance to the focus ($c$) is found using $c^2 = a^2 - b^2$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Study ellipse and standard equations for principal-axis orientations; interpret parameters and test points. Detailed foci, vertices and axis lengths are developed in the next subtopic."
+    },
+    "hss_math_t09_st06": {
+      "id": "hss_math_t09_st06",
+      "title": "Foci, vertices and axes of an ellipse",
+      "overview": "Once the standard equation of an ellipse is known, its centre, vertices, co-vertices, foci and axis lengths can be determined systematically. The major axis follows the coordinate containing the larger denominator.",
+      "key_concepts": [
+        {
+          "concept": "Center and Axes",
+          "definition": "The crosshairs.",
+          "details": [
+            "The center $(h, k)$ is exactly halfway between the two foci.",
+            "The **Major Axis** has a total length of $2a$. The **Minor Axis** has a total length of $2b$."
+          ]
+        },
+        {
+          "concept": "Vertices and Co-Vertices",
+          "definition": "The boundary edges.",
+          "details": [
+            "The **Vertices** are the endpoints of the major axis. For a standard horizontal ellipse, they are at $(\\pm a, 0)$.",
+            "The **Co-Vertices** are the endpoints of the minor axis. For a standard horizontal ellipse, they are at $(0, \\pm b)$."
+          ]
+        },
+        {
+          "concept": "Latus Rectum",
+          "definition": "The focal width.",
+          "details": [
+            "The chord passing strictly through either focus, perpendicular to the major axis.",
+            "Its exact length is calculated as $\\frac{2b^2}{a}$."
+          ]
+        },
+        {
+          "concept": "Coordinates and lengths",
+          "definition": "For a standard ellipse centred at (0,0), the parameters locate the principal points.",
+          "details": [
+            "Horizontal: vertices (±a,0), co-vertices (0,±b), foci (±c,0).",
+            "Vertical: vertices (0,±a), co-vertices (±b,0), foci (0,±c).",
+            "Major-axis length is 2a; minor-axis length is 2b.",
+            "The focal relation is c²=a²−b²."
+          ]
+        },
+        {
+          "concept": "Latus rectum",
+          "definition": "The latus rectum is a chord through a focus and perpendicular to the major axis.",
+          "details": [
+            "Its length for an ellipse is 2b²/a.",
+            "It is not the same as the minor axis except in the circular case."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Length of Latus Rectum (Ellipse)",
+          "equation": "$$ \\text{Length} = \\frac{2b^2}{a} $$",
+          "variables": {}
+        },
+        {
+          "name": "Ellipse latus-rectum length",
+          "equation": "$$L=\\frac{2b^2}{a}$$",
+          "variables": {
+            "a": "Semi-major axis",
+            "b": "Semi-minor axis"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s06b",
+          "title": "Ellipse principal points",
+          "type": "svg",
+          "caption": "Vertices, co-vertices and foci of a standard ellipse.",
+          "alt_text": "Ellipse with centre, vertices, co-vertices and foci labelled.",
+          "data": "<svg viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M35 150H485 M260 25V275\"/></g><g fill=\"#334155\" font-size=\"12\" font-family=\"Arial\"><text x=\"490\" y=\"145\">x</text><text x=\"270\" y=\"22\">y</text></g><ellipse cx=\"260\" cy=\"150\" rx=\"165\" ry=\"85\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M95 150H425 M260 65V235\" stroke=\"#94a3b8\" stroke-dasharray=\"4 4\"/><g fill=\"#dc2626\"><circle cx=\"260\" cy=\"150\" r=\"4\"/><circle cx=\"95\" cy=\"150\" r=\"5\"/><circle cx=\"425\" cy=\"150\" r=\"5\"/><circle cx=\"260\" cy=\"65\" r=\"5\"/><circle cx=\"260\" cy=\"235\" r=\"5\"/><circle cx=\"325\" cy=\"150\" r=\"4\"/><circle cx=\"195\" cy=\"150\" r=\"4\"/></g><g fill=\"#334155\" font-size=\"12\"><text x=\"270\" y=\"145\">C</text><text x=\"75\" y=\"140\">V₁</text><text x=\"430\" y=\"140\">V₂</text><text x=\"270\" y=\"60\">Co-vertex</text><text x=\"330\" y=\"140\">F₁</text><text x=\"165\" y=\"140\">F₂</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Determine the length of the major axis, minor axis, and latus rectum for $\\frac{x^2}{16} + \\frac{y^2}{4} = 1$.",
+          "solution_steps": [
+            "Step 1: Identify $a^2 = 16 \\Rightarrow a = 4$.",
+            "Step 2: Identify $b^2 = 4 \\Rightarrow b = 2$.",
+            "Step 3: Length of Major Axis = $2a = 2(4) = 8$.",
+            "Step 4: Length of Minor Axis = $2b = 2(2) = 4$.",
+            "Step 5: Length of Latus Rectum = $\\frac{2b^2}{a} = \\frac{2(4)}{4} = \\frac{8}{4} = 2$."
+          ],
+          "final_answer": "Major: 8, Minor: 4, Latus Rectum: 2"
+        },
+        {
+          "problem": "For x²/25+y²/9=1, find the vertices, co-vertices, foci and both axis lengths.",
+          "solution_steps": [
+            "The larger denominator is under x², so the major axis is horizontal.",
+            "a=5 and b=3.",
+            "c²=25−9=16, so c=4.",
+            "Vertices are (±5,0); co-vertices are (0,±3); foci are (±4,0).",
+            "Major-axis length=2a=10; minor-axis length=2b=6."
+          ],
+          "final_answer": "Vertices (±5,0); co-vertices (0,±3); foci (±4,0); axis lengths 10 and 6."
+        },
+        {
+          "problem": "An ellipse has vertical major axis with a=6 and b=2. Find the foci.",
+          "solution_steps": [
+            "c²=a²−b²=36−4=32.",
+            "Thus c=√32=4√2.",
+            "For a vertical ellipse, the foci are (0,±c)."
+          ],
+          "final_answer": "Foci (0,±4√2)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Switching the vertices and co-vertices.",
+          "correction": "Vertices ALWAYS lie on the major (longer) axis. If the ellipse is taller than it is wide (a vertical ellipse where the larger number is under $y$), the vertices will be on the y-axis $(0, \\pm a)$."
+        }
+      ],
+      "quick_summary": [
+        "The center $(h,k)$ anchors the ellipse.",
+        "Vertices are $a$ units away from the center along the major axis.",
+        "The Latus Rectum measures the width of the ellipse at the focus, calculated as $\\frac{2b^2}{a}$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Determine foci, vertices, major and minor axes, and related lengths from an ellipse's standard equation. Avoid repeating the standard-equation development from the preceding subtopic."
+    },
+    "hss_math_t09_st07": {
+      "id": "hss_math_t09_st07",
+      "title": "Hyperbola and standard equations",
+      "overview": "A hyperbola is the locus of a point for which the absolute difference of its distances from two fixed foci is constant. Its standard equation has one positive squared term and one negative squared term. The positive term identifies the transverse-axis direction.",
+      "key_concepts": [
+        {
+          "concept": "The Locus Definition",
+          "definition": "Constant difference.",
+          "details": [
+            "A hyperbola is the path of a point where the absolute DIFFERENCE of its distances to two fixed foci ($F_1$ and $F_2$) is a constant number.",
+            "$|PF_1 - PF_2| = 2a$."
+          ]
+        },
+        {
+          "concept": "Standard Equations",
+          "definition": "The minus sign.",
+          "details": [
+            "**Horizontal:** $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$. The positive term dictates the direction it opens. Since $x^2$ is positive, it opens left/right.",
+            "**Vertical:** $\\frac{y^2}{a^2} - \\frac{x^2}{b^2} = 1$. Here, $y^2$ is positive, so it opens up/down."
+          ]
+        },
+        {
+          "concept": "The Focal Distance ($c$)",
+          "definition": "The outward push.",
+          "details": [
+            "Unlike an ellipse, the foci of a hyperbola sit completely outside the vertices.",
+            "Because they are pushed outwards, the Pythagorean link is ADDITIVE: $c^2 = a^2 + b^2$."
+          ]
+        },
+        {
+          "concept": "Standard equations and orientation",
+          "definition": "The positive fraction identifies the transverse axis and the direction in which the branches open.",
+          "details": [
+            "Horizontal: x²/a²−y²/b²=1; vertices (±a,0), transverse axis along x.",
+            "Vertical: y²/a²−x²/b²=1; vertices (0,±a), transverse axis along y.",
+            "For both orientations, c²=a²+b² and c>a.",
+            "The centre is the origin in these standard forms; translated forms use (x−h) and (y−k)."
+          ]
+        },
+        {
+          "concept": "Locus property",
+          "definition": "The absolute difference of distances from a point on a hyperbola to its two foci is constant.",
+          "details": [
+            "|PF₁−PF₂|=2a.",
+            "The two branches are symmetric about the transverse and conjugate axes."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Hyperbola (Horizontal)",
+          "equation": "$$ \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 $$",
+          "variables": {}
+        },
+        {
+          "name": "Hyperbola Focal Distance",
+          "equation": "$$ c^2 = a^2 + b^2 $$",
+          "variables": {}
+        },
+        {
+          "name": "Hyperbola (vertical transverse axis)",
+          "equation": "$$\\frac{y^2}{a^2}-\\frac{x^2}{b^2}=1$$",
+          "variables": {
+            "a": "Semi-transverse axis",
+            "b": "Semi-conjugate axis"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s07b",
+          "title": "Hyperbola branches",
+          "type": "svg",
+          "caption": "A standard horizontal hyperbola with centre, vertices and foci.",
+          "alt_text": "Two hyperbola branches opening left and right, with axes and focal points.",
+          "data": "<svg viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M35 150H485 M260 25V275\"/></g><g fill=\"#334155\" font-size=\"12\" font-family=\"Arial\"><text x=\"490\" y=\"145\">x</text><text x=\"270\" y=\"22\">y</text></g><g fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"><path d=\"M260 150 C225 135 190 75 105 55 M260 150 C225 165 190 225 105 245 M260 150 C295 135 330 75 415 55 M260 150 C295 165 330 225 415 245\"/></g><path d=\"M60 150H460 M260 30V270\" stroke=\"#94a3b8\" stroke-dasharray=\"5 4\"/><g fill=\"#dc2626\"><circle cx=\"260\" cy=\"150\" r=\"4\"/><circle cx=\"170\" cy=\"150\" r=\"5\"/><circle cx=\"350\" cy=\"150\" r=\"5\"/></g><g fill=\"#334155\" font-size=\"12\"><text x=\"270\" y=\"145\">Centre</text><text x=\"150\" y=\"140\">V₁</text><text x=\"355\" y=\"140\">V₂</text></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the foci of the hyperbola $\\frac{y^2}{9} - \\frac{x^2}{16} = 1$.",
+          "solution_steps": [
+            "Step 1: Identify orientation. The $y^2$ term is positive, so it opens vertically.",
+            "Step 2: The positive term's denominator is $a^2$, so $a^2 = 9$. The negative term's denominator is $b^2$, so $b^2 = 16$.",
+            "Step 3: Calculate $c^2 = a^2 + b^2 = 9 + 16 = 25$. Therefore, $c = 5$.",
+            "Step 4: Since it is vertical, the foci lie on the y-axis at $(0, \\pm c)$."
+          ],
+          "final_answer": "Foci: (0, ±5)"
+        },
+        {
+          "problem": "For x²/16−y²/9=1, find the orientation, vertices, foci and focal distance.",
+          "solution_steps": [
+            "The positive term is x²/16, so the transverse axis is horizontal.",
+            "a²=16 and b²=9, hence a=4 and b=3.",
+            "c²=a²+b²=16+9=25, so c=5.",
+            "Vertices are (±4,0) and foci are (±5,0)."
+          ],
+          "final_answer": "Horizontal hyperbola; vertices (±4,0); foci (±5,0); c=5."
+        },
+        {
+          "problem": "Find the vertices of y²/36−x²/64=1.",
+          "solution_steps": [
+            "The positive term contains y², so the transverse axis is vertical.",
+            "a²=36, so a=6.",
+            "Vertices are (0,±a)."
+          ],
+          "final_answer": "Vertices (0,±6)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $a^2$ is always the larger number.",
+          "correction": "In an ellipse, $a^2$ is the larger denominator. In a hyperbola, size does not matter at all. $a^2$ is ALWAYS the denominator of the positive fraction. For example, in $\\frac{x^2}{4} - \\frac{y^2}{100} = 1$, $a^2$ is $4$, even though $100$ is larger."
+        }
+      ],
+      "quick_summary": [
+        "A hyperbola is formed by subtracting distances from the foci ($|PF_1 - PF_2| = 2a$).",
+        "The standard equation has a minus sign between the fractions.",
+        "The fraction with the positive sign dictates whether the hyperbola opens horizontally or vertically.",
+        "The distance to the focus is found using $c^2 = a^2 + b^2$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Study hyperbola, standard equations, centre, transverse and conjugate axes, and principal geometric features. Detailed asymptote equations are reserved for the next subtopic."
+    },
+    "hss_math_t09_st08": {
+      "id": "hss_math_t09_st08",
+      "title": "Asymptotes of a hyperbola",
+      "overview": "The asymptotes of a standard hyperbola are straight lines that its branches approach as they extend farther from the centre. They pass through the centre and form the diagonal guide lines of the graph.",
+      "key_concepts": [
+        {
+          "concept": "The Invisible Guidewires",
+          "definition": "Approaching forever.",
+          "details": [
+            "An asymptote is a straight line that the curve gets infinitely close to, but never actually touches.",
+            "They pass directly through the center of the hyperbola."
+          ]
+        },
+        {
+          "concept": "Finding the Equations",
+          "definition": "Setting to zero.",
+          "details": [
+            "To find the asymptote equations, simply take the standard hyperbola equation, replace the $= 1$ with a $= 0$, and solve for $y$."
+          ]
+        },
+        {
+          "concept": "The Standard Formulas",
+          "definition": "The slopes.",
+          "details": [
+            "**Horizontal Hyperbola:** $y = \\pm \\frac{b}{a} x$.",
+            "**Vertical Hyperbola:** $y = \\pm \\frac{a}{b} x$."
+          ]
+        },
+        {
+          "concept": "Asymptote equations",
+          "definition": "The asymptote equations are obtained by replacing the right-hand side 1 in the standard hyperbola equation with 0.",
+          "details": [
+            "Horizontal hyperbola x²/a²−y²/b²=1 has asymptotes y=±(b/a)x.",
+            "Vertical hyperbola y²/a²−x²/b²=1 has asymptotes y=±(a/b)x.",
+            "For a translated hyperbola with centre (h,k), replace x by x−h and y by y−k."
+          ]
+        },
+        {
+          "concept": "Graph interpretation",
+          "definition": "Asymptotes describe the long-range direction of the branches.",
+          "details": [
+            "The branches approach the asymptotes but do not intersect them.",
+            "The asymptotes intersect at the centre of the hyperbola.",
+            "The rectangle with half-width a and half-height b has diagonals along the asymptotes for a horizontal hyperbola."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Asymptotes (Horizontal Hyperbola)",
+          "equation": "$$ y = \\pm \\frac{b}{a}x $$",
+          "variables": {}
+        },
+        {
+          "name": "Asymptotes (vertical hyperbola)",
+          "equation": "$$x=\\pm\\frac{b}{a}y$$",
+          "variables": {
+            "a": "Semi-transverse axis",
+            "b": "Semi-conjugate axis"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s08b",
+          "title": "Hyperbola with asymptotes",
+          "type": "svg",
+          "caption": "The asymptotes intersect at the centre and guide both branches.",
+          "alt_text": "Hyperbola branches with two dashed asymptotes.",
+          "data": "<svg viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M35 150H485 M260 25V275\"/></g><g fill=\"#334155\" font-size=\"12\" font-family=\"Arial\"><text x=\"490\" y=\"145\">x</text><text x=\"270\" y=\"22\">y</text></g><g fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"><path d=\"M260 150 C220 135 180 80 105 55 M260 150 C220 165 180 220 105 245 M260 150 C300 135 340 80 415 55 M260 150 C300 165 340 220 415 245\"/></g><g stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"7 5\"><path d=\"M80 260L440 40 M80 40L440 260\"/></g></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the equations of the asymptotes for $\\frac{x^2}{16} - \\frac{y^2}{9} = 1$.",
+          "solution_steps": [
+            "Step 1: Identify $a^2 = 16 \\Rightarrow a = 4$.",
+            "Step 2: Identify $b^2 = 9 \\Rightarrow b = 3$.",
+            "Step 3: This is a horizontal hyperbola, so the asymptote formula is $y = \\pm \\frac{b}{a} x$.",
+            "Step 4: Substitute $a$ and $b$ into the formula: $y = \\pm \\frac{3}{4} x$."
+          ],
+          "final_answer": "y = ±(3/4)x"
+        },
+        {
+          "problem": "Find the asymptotes of y²/25−x²/4=1.",
+          "solution_steps": [
+            "This is a vertical hyperbola because the positive term contains y².",
+            "Here a=5 and b=2.",
+            "For a vertical hyperbola, x=±(b/a)y.",
+            "Substitute the values: x=±(2/5)y, equivalently y=±(5/2)x."
+          ],
+          "final_answer": "y=(5/2)x and y=−(5/2)x."
+        },
+        {
+          "problem": "Find the asymptotes of x²/9−y²/16=1.",
+          "solution_steps": [
+            "This is a horizontal hyperbola with a=3 and b=4.",
+            "Its asymptotes are y=±(b/a)x."
+          ],
+          "final_answer": "y=±(4/3)x."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Mixing up $\\frac{b}{a}$ and $\\frac{a}{b}$.",
+          "correction": "Always remember that slope is $\\frac{\\text{rise (y)}}{\\text{run (x)}}$. In the horizontal hyperbola $\\frac{x^2}{a^2} - \\frac{y^2}{b^2}$, the $b$ is under the $y$, and the $a$ is under the $x$. So the slope is $\\pm\\frac{b}{a}$."
+        }
+      ],
+      "quick_summary": [
+        "Asymptotes are 'X' shaped lines that guide the hyperbola's branches at infinity.",
+        "They are found algebraically by setting the hyperbola equation equal to zero instead of 1.",
+        "The slopes of the asymptotes are always a ratio of $a$ and $b$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Derive and use asymptote equations for standard hyperbolas and interpret their relationship to the graph. Keep calculations to standard forms."
+    },
+    "hss_math_t09_st09": {
+      "id": "hss_math_t09_st09",
+      "title": "Eccentricity of conic sections",
+      "overview": "Eccentricity is a numerical measure that classifies a conic. It is defined by the focus-directrix ratio and, for standard ellipses and hyperbolas, can also be calculated from the focal distance and semi-axis parameter.",
+      "key_concepts": [
+        {
+          "concept": "The Universal Ratio",
+          "definition": "Focus vs Directrix.",
+          "details": [
+            "Eccentricity ($e$) is the constant ratio of the distance from a point on the curve to the focus ($PF$), divided by the distance to the directrix ($PD$).",
+            "Formula: $e = \\frac{PF}{PD}$."
+          ]
+        },
+        {
+          "concept": "The Classification Spectrum",
+          "definition": "From 0 to Infinity.",
+          "details": [
+            "**$e = 0$:** A perfect Circle.",
+            "**$0 < e < 1$:** An Ellipse. As $e$ gets closer to $1$, the ellipse gets more stretched and oval-like.",
+            "**$e = 1$:** A Parabola. The tipping point where the loop snaps open.",
+            "**$e > 1$:** A Hyperbola. The higher the number, the flatter and wider the branches become."
+          ]
+        },
+        {
+          "concept": "Calculating Eccentricity",
+          "definition": "The $c/a$ formula.",
+          "details": [
+            "For both ellipses and hyperbolas, the eccentricity can be rapidly calculated using the semi-major axis ($a$) and the focal distance ($c$).",
+            "Formula: $e = \\frac{c}{a}$."
+          ]
+        },
+        {
+          "concept": "Eccentricity formulas for standard forms",
+          "definition": "The relationship between a, b and c depends on the conic.",
+          "details": [
+            "Ellipse: c²=a²−b² and e=c/a, so 0<e<1.",
+            "Parabola: e=1.",
+            "Hyperbola: c²=a²+b² and e=c/a, so e>1.",
+            "Circle: e=0."
+          ]
+        },
+        {
+          "concept": "Classification using e",
+          "definition": "The value of eccentricity distinguishes the four principal conics.",
+          "details": [
+            "e=0: circle.",
+            "0<e<1: ellipse.",
+            "e=1: parabola.",
+            "e>1: hyperbola.",
+            "For ellipses, values closer to 0 indicate a rounder shape; values closer to 1 indicate a more elongated ellipse."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Eccentricity (Focus/Directrix)",
+          "equation": "$$ e = \\frac{PF}{PD} $$",
+          "variables": {}
+        },
+        {
+          "name": "Eccentricity (Axes)",
+          "equation": "$$ e = \\frac{c}{a} $$",
+          "variables": {
+            "c": "Focal distance",
+            "a": "Semi-major axis"
+          }
+        },
+        {
+          "name": "Ellipse eccentricity",
+          "equation": "$$e=\\frac{c}{a}=\\sqrt{1-\\frac{b^2}{a^2}}$$",
+          "variables": {
+            "a": "Semi-major axis",
+            "b": "Semi-minor axis",
+            "c": "Distance from centre to a focus"
+          }
+        },
+        {
+          "name": "Hyperbola eccentricity",
+          "equation": "$$e=\\frac{c}{a}=\\sqrt{1+\\frac{b^2}{a^2}}$$",
+          "variables": {
+            "a": "Semi-transverse axis",
+            "b": "Semi-conjugate axis",
+            "c": "Distance from centre to a focus"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_st09_extra",
+          "title": "Eccentricity of Conic Sections — schematic",
+          "type": "svg",
+          "caption": "Conceptual illustration supporting the key idea.",
+          "alt_text": "A simple schematic illustrating the subtopic concept.",
+          "data": "<svg viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M35 150H485 M260 25V275\"/></g><g fill=\"#334155\" font-size=\"12\" font-family=\"Arial\"><text x=\"490\" y=\"145\">x</text><text x=\"270\" y=\"22\">y</text></g><ellipse cx=\"260\" cy=\"150\" rx=\"145\" ry=\"78\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"260\" cy=\"150\" r=\"5\" fill=\"#dc2626\"/><text x=\"275\" y=\"145\" fill=\"#334155\" font-size=\"13\">Centre</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the eccentricity of the ellipse $\\frac{x^2}{25} + \\frac{y^2}{16} = 1$.",
+          "solution_steps": [
+            "Step 1: Identify $a^2$ and $b^2$. The larger number is $25$, so $a^2 = 25$ ($a = 5$) and $b^2 = 16$.",
+            "Step 2: Calculate $c$ using the ellipse formula $c^2 = a^2 - b^2$.",
+            "Step 3: $c^2 = 25 - 16 = 9$. So $c = 3$.",
+            "Step 4: Use the eccentricity formula $e = \\frac{c}{a}$.",
+            "Step 5: Substitute: $e = \\frac{3}{5} = 0.6$."
+          ],
+          "final_answer": "0.6"
+        },
+        {
+          "problem": "A hyperbola has a=3 and b=4. Calculate its eccentricity.",
+          "solution_steps": [
+            "For a hyperbola, c²=a²+b².",
+            "c²=9+16=25, so c=5.",
+            "Eccentricity e=c/a=5/3.",
+            "Since e>1, the value is consistent with a hyperbola."
+          ],
+          "final_answer": "e=5/3."
+        },
+        {
+          "problem": "An ellipse has a=13 and b=5. Find its eccentricity.",
+          "solution_steps": [
+            "c²=a²−b²=169−25=144, so c=12.",
+            "e=c/a=12/13."
+          ],
+          "final_answer": "e=12/13."
+        },
+        {
+          "problem": "A hyperbola has semi-transverse axis $a=5$ and semi-conjugate axis $b=12$. Find its eccentricity.",
+          "solution_steps": [
+            "For a hyperbola, $c^2=a^2+b^2$.",
+            "Thus $c^2=25+144=169$, so $c=13$.",
+            "Use $e=c/a$."
+          ],
+          "final_answer": "$e=13/5$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking a larger eccentricity means a rounder shape.",
+          "correction": "It is the exact opposite. Zero eccentricity is perfectly round. As eccentricity increases, the shape gets more stretched, deformed, and 'eccentric', eventually snapping open into a parabola and hyperbola."
+        }
+      ],
+      "quick_summary": [
+        "Eccentricity is the numerical ratio of focus-distance to directrix-distance.",
+        "The value of $e$ strictly classifies the conic: $0$ (Circle), $0<e<1$ (Ellipse), $1$ (Parabola), $>1$ (Hyperbola).",
+        "For closed shapes and hyperbolas, it can be quickly calculated as $e = \\frac{c}{a}$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Compare eccentricity across circle, parabola, ellipse and hyperbola; use values/ranges and parameter relationships to classify conics. Build on the focus-directrix definition and individual conic properties."
+    },
+    "hss_math_t09_st10": {
+      "id": "hss_math_t09_st10",
+      "title": "General equations of conics",
+      "overview": "A general second-degree equation in x and y can represent a conic. For the suitably aligned cases in this lesson, the sign of B²−4AC gives a first classification, where A, B and C are the coefficients of x², xy and y². This test alone does not establish that every equation represents a real, non-degenerate conic.",
+      "key_concepts": [
+        {
+          "concept": "The General Second-Degree Equation",
+          "definition": "The master formula.",
+          "details": [
+            "Every single conic section can be written in the form: $Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0$.",
+            "The $A$, $B$, and $C$ coefficients dictate the shape. The $D$, $E$, and $F$ coefficients just shift and slide the shape around the grid."
+          ]
+        },
+        {
+          "concept": "The Discriminant Test ($B^2 - 4AC$)",
+          "definition": "The diagnostic tool.",
+          "details": [
+            "By plugging the first three coefficients into the discriminant formula, you can instantly identify the shape.",
+            "**Parabola:** $B^2 - 4AC = 0$.",
+            "**Ellipse:** $B^2 - 4AC < 0$ (and $A \\neq C$).",
+            "**Circle:** $B^2 - 4AC < 0$ AND $A = C$ AND $B = 0$.",
+            "**Hyperbola:** $B^2 - 4AC > 0$."
+          ]
+        },
+        {
+          "concept": "General second-degree form",
+          "definition": "A general conic equation can be written as a quadratic expression in x and y plus linear and constant terms.",
+          "details": [
+            "Ax²+Bxy+Cy²+Dx+Ey+F=0.",
+            "A, B and C determine the quadratic part; D, E and F affect the position and whether the curve is real or degenerate.",
+            "In the axis-aligned cases with B=0, A and C having the same sign indicate an ellipse-type quadratic part, while opposite signs indicate a hyperbola-type part."
+          ]
+        },
+        {
+          "concept": "Discriminant-type classification",
+          "definition": "The quantity Δ=B²−4AC is a useful preliminary classifier.",
+          "details": [
+            "Δ<0: ellipse-type; a circle is a special case when A=C and B=0.",
+            "Δ=0: parabola-type.",
+            "Δ>0: hyperbola-type.",
+            "Additional checks may be needed to determine whether the equation represents a real, non-degenerate conic; degenerate cases are not classified by this sign test alone.",
+            "This topic excludes rotated-axis transformations and full quadratic-form classification."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Conic Discriminant",
+          "equation": "$$ \\Delta = B^2 - 4AC $$",
+          "variables": {
+            "A": "Coefficient of x^2",
+            "B": "Coefficient of xy",
+            "C": "Coefficient of y^2"
+          }
+        },
+        {
+          "name": "Conic discriminant",
+          "equation": "$$\\Delta=B^2-4AC$$",
+          "variables": {
+            "A": "Coefficient of x²",
+            "B": "Coefficient of xy",
+            "C": "Coefficient of y²"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_st10_extra",
+          "title": "General Equations of Conics — schematic",
+          "type": "svg",
+          "caption": "Conceptual illustration supporting the key idea.",
+          "alt_text": "A simple schematic illustrating the subtopic concept.",
+          "data": "<svg viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M35 150H485 M260 25V275\"/></g><g fill=\"#334155\" font-size=\"12\" font-family=\"Arial\"><text x=\"490\" y=\"145\">x</text><text x=\"270\" y=\"22\">y</text></g><ellipse cx=\"260\" cy=\"150\" rx=\"145\" ry=\"78\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"260\" cy=\"150\" r=\"5\" fill=\"#dc2626\"/><text x=\"275\" y=\"145\" fill=\"#334155\" font-size=\"13\">Centre</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify the quadratic equation $3x^2-4xy+2y^2-5x+7=0$ and determine whether it has real points.",
+          "solution_steps": [
+            "For $Ax^2+Bxy+Cy^2+Dx+Ey+F=0$, use $B^2-4AC=(-4)^2-4(3)(2)=-8<0$, indicating ellipse-type quadratic form.",
+            "The quadratic form is positive definite because A=3>0 and AC-(B/2)^2=6-4=2>0.",
+            "Its centre is found from 6x−4y−5=0 and −4x+4y=0, giving (x,y)=(5/2,5/2).",
+            "After translating to the centre, the constant minimum is 3/4, so the left-hand quadratic expression is strictly positive and cannot equal zero."
+          ],
+          "final_answer": "Ellipse-type quadratic, but it has no real points (an empty real locus)."
+        },
+        {
+          "problem": "Use the discriminant to classify 2x²+3y²−12x+6y+1=0.",
+          "solution_steps": [
+            "Identify A=2, B=0 and C=3.",
+            "Calculate Δ=B²−4AC=0²−4(2)(3)=−24.",
+            "Since Δ<0, the equation is ellipse-type.",
+            "The quadratic coefficients are unequal, so it is not a circle."
+          ],
+          "final_answer": "Ellipse-type conic (subject to the real/non-degenerate check)."
+        },
+        {
+          "problem": "Classify the quadratic type of 4x²−9y²+8x+18y−5=0.",
+          "solution_steps": [
+            "A=4, B=0 and C=−9.",
+            "Δ=0²−4(4)(−9)=144>0.",
+            "A positive discriminant indicates a hyperbola-type conic."
+          ],
+          "final_answer": "Hyperbola-type."
+        },
+        {
+          "problem": "Classify the quadratic type of 5x²−2y²+3x−4y+1=0.",
+          "solution_steps": [
+            "A=5, B=0, C=−2.",
+            "Δ=B²−4AC=0−4(5)(−2)=40>0."
+          ],
+          "final_answer": "Hyperbola-type."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating the sign of B²−4AC as a complete proof that the equation is a real, non-degenerate conic.",
+          "correction": "The sign gives a preliminary conic type. Check reality and degeneracy where required; the full classification is outside this lesson."
+        }
+      ],
+      "quick_summary": [
+        "Every conic can be written as $Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0$.",
+        "The discriminant $B^2 - 4AC$ acts as a diagnostic test.",
+        "Zero = Parabola, Negative = Ellipse (or Circle), Positive = Hyperbola."
+      ],
+      "registry_scope": "Approved lesson-level scope: Introduce general second-degree equations and classify suitably aligned standard cases using coefficients and discriminant-type conditions. Exclude full rotated-axis classification, matrix diagonalisation and advanced quadratic-form theory."
+    },
+    "hss_math_t09_st11": {
+      "id": "hss_math_t09_st11",
+      "title": "Tangents and normals to conics — introduction",
+      "overview": "A tangent is the straight line that has the direction of the conic at a specified point; a normal is the line through that point perpendicular to the tangent. This introductory treatment uses standard tangent equations and elementary perpendicular-line geometry, without calculus-based derivations.",
+      "key_concepts": [
+        {
+          "concept": "The Tangent",
+          "definition": "The surface skimmer.",
+          "details": [
+            "A tangent is a straight line that touches the curve at exactly one local point (the Point of Contact).",
+            "It represents the exact instantaneous direction or 'slope' of the curve at that specific microsecond."
+          ]
+        },
+        {
+          "concept": "The Normal",
+          "definition": "The perpendicular piercer.",
+          "details": [
+            "The normal is a straight line that passes through the exact same point of contact, but it is perfectly perpendicular ($90^\\circ$) to the tangent line.",
+            "Because they are perpendicular, if the tangent slope is $m$, the normal slope is $-\\frac{1}{m}$."
+          ]
+        },
+        {
+          "concept": "Reflective Properties",
+          "definition": "Bouncing off.",
+          "details": [
+            "In optics, a light ray hitting a parabolic mirror will reflect. The Normal line acts as the 'mirror axis' to determine exactly where that light ray will bounce."
+          ]
+        },
+        {
+          "concept": "Tangent equations at a point",
+          "definition": "For a point (x₁,y₁) on a standard conic, the following forms give the tangent.",
+          "details": [
+            "Parabola y²=4ax: yy₁=2a(x+x₁).",
+            "Ellipse x²/a²+y²/b²=1: xx₁/a²+yy₁/b²=1.",
+            "Hyperbola x²/a²−y²/b²=1: xx₁/a²−yy₁/b²=1.",
+            "The point must lie on the relevant conic; otherwise the expression is not the tangent at that point.",
+            "For other standard orientations, interchange x and y or adjust signs consistently."
+          ]
+        },
+        {
+          "concept": "Normal line",
+          "definition": "The normal passes through the point of contact and is perpendicular to the tangent.",
+          "details": [
+            "If the tangent has finite non-zero slope m, the normal slope is −1/m.",
+            "Use point-slope form y−y₁=mₙ(x−x₁).",
+            "If the tangent is horizontal, the normal is vertical; if the tangent is vertical, the normal is horizontal."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Normal Slope",
+          "equation": "$$ m_{\\text{normal}} = -\\frac{1}{m_{\\text{tangent}}} $$",
+          "variables": {}
+        },
+        {
+          "name": "Normal slope",
+          "equation": "$$m_n=-\\frac{1}{m_t}$$",
+          "variables": {
+            "m_n": "Slope of normal",
+            "m_t": "Slope of tangent; finite and non-zero"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v09_st11_extra",
+          "title": "Tangents and Normals to Conics — schematic",
+          "type": "svg",
+          "caption": "Conceptual illustration supporting the key idea.",
+          "alt_text": "A simple schematic illustrating the subtopic concept.",
+          "data": "<svg viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M35 150H485 M260 25V275\"/></g><g fill=\"#334155\" font-size=\"12\" font-family=\"Arial\"><text x=\"490\" y=\"145\">x</text><text x=\"270\" y=\"22\">y</text></g><ellipse cx=\"260\" cy=\"150\" rx=\"145\" ry=\"78\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"260\" cy=\"150\" r=\"5\" fill=\"#dc2626\"/><text x=\"275\" y=\"145\" fill=\"#334155\" font-size=\"13\">Centre</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "If the equation of a tangent line to a parabola at point $P(2, 4)$ is $y = 2x$, find the equation of the normal line at point $P$.",
+          "solution_steps": [
+            "Step 1: Identify the slope of the tangent line. From $y = 2x$, $m_{\\text{tangent}} = 2$.",
+            "Step 2: Calculate the slope of the normal line using the negative reciprocal: $m_{\\text{normal}} = -\\frac{1}{2}$.",
+            "Step 3: Use the Point-Slope form with the contact point $P(2, 4)$: $y - y_1 = m(x - x_1)$.",
+            "Step 4: Substitute: $y - 4 = -\\frac{1}{2}(x - 2)$.",
+            "Step 5: Simplify: $y - 4 = -\\frac{1}{2}x + 1 \\Rightarrow y = -\\frac{1}{2}x + 5$."
+          ],
+          "final_answer": "y = -(1/2)x + 5"
+        },
+        {
+          "problem": "Find the tangent to the parabola y²=8x at the point (2,4).",
+          "solution_steps": [
+            "Compare with y²=4ax: 4a=8, so a=2.",
+            "Use yy₁=2a(x+x₁).",
+            "Substitute (x₁,y₁)=(2,4): 4y=4(x+2).",
+            "Divide by 4: y=x+2."
+          ],
+          "final_answer": "y=x+2."
+        },
+        {
+          "problem": "At the point (1,2), a tangent has slope 2. Find the normal equation.",
+          "solution_steps": [
+            "The normal slope is the negative reciprocal: mₙ=−1/2.",
+            "Use point-slope form through (1,2): y−2=−(1/2)(x−1).",
+            "Multiply by 2 and simplify: 2y−4=−x+1, so x+2y−5=0."
+          ],
+          "final_answer": "x+2y−5=0."
+        },
+        {
+          "problem": "Find the tangent to x²/9+y²/4=1 at (3/√2,√2).",
+          "solution_steps": [
+            "Check the point: (9/2)/9+(2)/4=1/2+1/2=1, so it lies on the ellipse.",
+            "Use xx₁/9+yy₁/4=1.",
+            "Substitute x₁=3/√2 and y₁=√2: x/(3√2)+y/(2√2)=1.",
+            "Multiply by 6√2: 2x+3y=6√2."
+          ],
+          "final_answer": "2x+3y=6√2."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the negative-reciprocal slope formula when the tangent is horizontal or vertical.",
+          "correction": "Handle these cases separately: a horizontal tangent has a vertical normal, and a vertical tangent has a horizontal normal."
+        }
+      ],
+      "quick_summary": [
+        "A Tangent touches a conic locally and matches its exact slope.",
+        "A Normal passes through the tangent point but is perfectly perpendicular.",
+        "The Normal slope is always the negative reciprocal of the Tangent slope."
+      ],
+      "registry_scope": "Approved lesson-level scope: Introduce tangent and normal lines to standard conics and suitable equation-based methods. HSS T08 already covers circle tangents; focus here on parabola, ellipse and hyperbola. Exclude calculus-based derivations reserved for later calculus topics."
+    },
+    "hss_math_t09_st12": {
+      "id": "hss_math_t09_st12",
+      "title": "Applications of conic sections",
+      "overview": "Conic sections appear in optical devices, reflectors, astronomy and navigation. The aim here is to connect each application to the defining geometric property, not to develop advanced physical models.",
+      "key_concepts": [
+        {
+          "concept": "Parabolic Reflectors",
+          "definition": "Focusing energy.",
+          "details": [
+            "A parabola has a unique geometric property: any ray of light or radio wave traveling parallel to its axis will bounce off the curve and perfectly strike the focus.",
+            "This is why satellite dishes, car headlights, and solar ovens are shaped like parabolas."
+          ]
+        },
+        {
+          "concept": "Elliptical Orbits",
+          "definition": "Kepler's Laws.",
+          "details": [
+            "Planets do not orbit in perfect circles. They orbit in ellipses, with the Sun sitting exactly at one of the two focal points (not the center).",
+            "Ellipses are also used in 'Whispering Galleries'—rooms shaped like an ellipsoid where a whisper at one focus perfectly bounces to a person standing at the other focus."
+          ]
+        },
+        {
+          "concept": "Hyperbolic Navigation",
+          "definition": "The LORAN system.",
+          "details": [
+            "Because a hyperbola is based on the *difference* in distance from two points, systems like GPS and older LORAN navigation use time-delay differences between two radio towers to pinpoint a ship's exact location on a hyperbolic curve."
+          ]
+        },
+        {
+          "concept": "Parabolic reflectors",
+          "definition": "A parabola has a focus-directrix property that supports reflection of rays parallel to its axis.",
+          "details": [
+            "A parabolic satellite dish can direct incoming parallel radio waves towards its focus.",
+            "A headlight reflector can use a light source near the focus so reflected rays travel approximately parallel to the axis.",
+            "The focus position depends on the dish profile; it is not generally at the geometric centre of the opening."
+          ]
+        },
+        {
+          "concept": "Elliptical and hyperbolic applications",
+          "definition": "The two-focus geometry of ellipses and hyperbolas supports useful reflection and positioning principles.",
+          "details": [
+            "In an ideal elliptical reflector, a ray emitted from one focus reflects towards the other focus.",
+            "In an ideal two-body gravitational orbit, a bound orbit is an ellipse with the attracting body at one focus.",
+            "Hyperbolic paths occur in unbound flyby trajectories; hyperbolic distance-difference geometry is also used in some navigation systems."
+          ]
+        },
+        {
+          "concept": "Choosing a conic in context",
+          "definition": "Identify the defining feature before selecting a conic model.",
+          "details": [
+            "Parallel rays focused to one point suggest a parabola.",
+            "A closed orbit with a body at one focus suggests an ellipse.",
+            "A two-branch path or constant difference-of-distances model suggests a hyperbola.",
+            "Real devices and physical orbits may only approximate ideal mathematical conics."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v09_s12b",
+          "title": "Parabolic reflector principle",
+          "type": "svg",
+          "caption": "Parallel incoming rays are reflected towards the focus in an ideal parabolic reflector.",
+          "alt_text": "Parabolic curve with parallel rays entering from above and reflected rays meeting at the focus.",
+          "data": "<svg viewBox=\"0 0 520 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"300\" rx=\"12\" fill=\"#f8fafc\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><path d=\"M35 150H485 M260 25V275\"/></g><g fill=\"#334155\" font-size=\"12\" font-family=\"Arial\"><text x=\"490\" y=\"145\">x</text><text x=\"270\" y=\"22\">y</text></g><path d=\"M120 65 Q260 285 400 65\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><g stroke=\"#0f766e\" stroke-width=\"2.5\" fill=\"none\"><path d=\"M145 25V100 L245 150\"/><path d=\"M260 25V150\"/><path d=\"M375 25V100 L275 150\"/></g><g fill=\"#dc2626\"><circle cx=\"260\" cy=\"150\" r=\"6\"/></g><text x=\"270\" y=\"145\" fill=\"#334155\" font-size=\"13\">Focus</text><text x=\"110\" y=\"18\" fill=\"#334155\" font-size=\"12\">Parallel rays</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A satellite dish is $12$ feet across its opening and $3$ feet deep at its center. Where should the receiver (the focus) be placed?",
+          "solution_steps": [
+            "Step 1: Set up a coordinate grid with the vertex of the parabola at $(0,0)$.",
+            "Step 2: The dish opens upwards, so the equation is $x^2 = 4ay$.",
+            "Step 3: The dish is 12 feet wide, meaning it spans from $x = -6$ to $x = 6$. Its depth is 3, so $y = 3$. This gives us a point on the rim: $(6, 3)$.",
+            "Step 4: Plug this point into the equation to find $a$: $6^2 = 4a(3)$.",
+            "Step 5: $36 = 12a \\Rightarrow a = 3$.",
+            "Step 6: The focus is at $(0, a)$. Therefore, the receiver should be placed $3$ feet above the vertex."
+          ],
+          "final_answer": "3 feet above the vertex"
+        },
+        {
+          "problem": "A parabolic reflector has a cross-section x²=16y, with its vertex at the origin. Find the focus location.",
+          "solution_steps": [
+            "Compare with x²=4ay.",
+            "4a=16, so a=4.",
+            "The focus is (0,a)=(0,4)."
+          ],
+          "final_answer": "The focus is 4 units above the vertex, at (0,4)."
+        },
+        {
+          "problem": "A parabolic headlight reflector has cross-section y²=20x. Find the focus where the light source should be placed in the ideal model.",
+          "solution_steps": [
+            "Compare with y²=4ax, so a=5.",
+            "The focus is (a,0)."
+          ],
+          "final_answer": "At (5,0), five units from the vertex along the axis."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Placing the receiver at the 'center' of the dish's opening.",
+          "correction": "The receiver MUST be placed exactly at the mathematical focus ($a$), which is dictated entirely by the curvature of the dish, not simply halfway up or at the rim."
+        }
+      ],
+      "quick_summary": [
+        "Parabolas focus incoming parallel waves to a single point (satellite dishes, headlights).",
+        "Ellipses govern orbital mechanics, with the massive body (like the Sun) sitting at one focus.",
+        "Hyperbolas are used in navigation and tracking systems based on time-delay differences."
+      ],
+      "registry_scope": "Approved lesson-level scope: Apply conic properties to reflectors, headlights, satellite dishes, elliptical orbits and hyperbolic navigation/optical examples. Keep applications introductory; broader modelling belongs in HSS T18."
+    }
+  }
+}

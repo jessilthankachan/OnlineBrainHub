@@ -1,0 +1,1358 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t06",
+  "topicTitle": "Permutations, Combinations and Binomial Theorem",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t06_st01": {
+      "id": "hss_math_t06_st01",
+      "title": "Fundamental principle of counting",
+      "overview": "If you have 3 shirts and 2 pairs of trousers, how many outfits can you make? You don't need to list them all out; the Fundamental Principle of Counting provides a mathematical shortcut to calculate total outcomes for combined events.",
+      "key_concepts": [
+        {
+          "concept": "Multiplication Principle (AND)",
+          "definition": "Successive choices.",
+          "details": [
+            "Used when you must perform multiple tasks in sequence (e.g., choosing a shirt AND a trouser).",
+            "If Task 1 has $m$ options and Task 2 has $n$ options, doing both tasks yields $m \\times n$ total possible outcomes."
+          ]
+        },
+        {
+          "concept": "Addition Principle (OR)",
+          "definition": "Mutually exclusive choices.",
+          "details": [
+            "Used when you are choosing from different categories but can only pick ONE thing total (e.g., choosing a shirt OR a trouser, but not both).",
+            "If Category 1 has $m$ options and Category 2 has $n$ options, choosing one item yields $m + n$ total possible outcomes."
+          ]
+        },
+        {
+          "concept": "Tree Diagrams",
+          "definition": "Visualizing outcomes.",
+          "details": [
+            "A branching visual map that tracks all possible choice combinations step-by-step. The total number of final branch tips equals the result of the multiplication principle."
+          ]
+        },
+        {
+          "concept": "Complementary counting",
+          "definition": "Count the total possibilities and subtract those that fail the required condition.",
+          "details": [
+            "This is useful when the excluded cases have a simpler structure than the valid cases.",
+            "Check that the excluded cases are counted exactly once."
+          ]
+        },
+        {
+          "concept": "Decision trees",
+          "definition": "A tree diagram represents sequential choices as branches.",
+          "details": [
+            "Multiply along a path to count the outcomes on that path; add the counts of disjoint terminal paths."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Multiplication principle",
+          "equation": "N=n_1n_2\\cdots n_k",
+          "variables": "$n_i$ is the number of available choices at stage $i$, when each stage's count is fixed or appropriately conditional."
+        },
+        {
+          "name": "Addition principle",
+          "equation": "N=n_1+n_2+\\cdots+n_k",
+          "variables": "The alternatives must be mutually exclusive and collectively describe the allowed cases."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_s01",
+          "title": "AND vs OR Counting",
+          "type": "svg",
+          "caption": "The word 'AND' implies multiplication. The word 'OR' implies addition.",
+          "alt_text": "Two boxes. Left box says 'Multiplication Principle (AND): 3 Shirts x 2 Pants = 6 Outfits'. Right box says 'Addition Principle (OR): 3 Shirts + 2 Pants = 5 Items to choose from'.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><rect x=\"20\" y=\"40\" width=\"220\" height=\"150\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"10\"/><text x=\"130\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Multiplication (AND)</text><text x=\"130\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#16a34a\">3 Shirts × 2 Pants</text><text x=\"130\" y=\"150\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">= 6 Outfits</text><rect x=\"260\" y=\"40\" width=\"220\" height=\"150\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\" rx=\"10\"/><text x=\"370\" y=\"70\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Addition (OR)</text><text x=\"370\" y=\"110\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#3b82f6\">3 Shirts + 2 Pants</text><text x=\"370\" y=\"150\" font-family=\"monospace\" font-size=\"24\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">= 5 Items Total</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A restaurant offers 4 starters, 5 main courses, and 3 desserts. How many different 3-course meals can be ordered?",
+          "solution_steps": [
+            "Step 1: Identify the nature of the choices. The customer is choosing a starter AND a main AND a dessert. (Successive choices).",
+            "Step 2: Apply the multiplication principle.",
+            "Step 3: Multiply the options for each stage: $4 \\times 5 \\times 3$.",
+            "Step 4: Calculate: $20 \\times 3 = 60$."
+          ],
+          "final_answer": "60 meals"
+        },
+        {
+          "problem": "A code is formed by choosing one letter from A, B, C, D followed by a digit from 0 to 5. How many codes are possible?",
+          "solution_steps": [
+            "There are 4 choices for the letter.",
+            "There are 6 choices for the digit.",
+            "The choices are successive, so apply multiplication: $4\\times6=24$."
+          ],
+          "final_answer": "24 codes"
+        },
+        {
+          "problem": "A student can travel from town P to Q by 3 bus routes or 2 train routes, and from Q to R by 4 bus routes. How many P-to-R journeys through Q are possible?",
+          "solution_steps": [
+            "For P to Q there are $3+2=5$ mutually exclusive route choices.",
+            "For each of these, there are 4 choices from Q to R.",
+            "Multiply the stages: $5\\times4=20$."
+          ],
+          "final_answer": "20 journeys"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding probabilities when they should be multiplied.",
+          "correction": "Always ask yourself if you are building a *combination* of things (AND -> Multiply) or just picking *one single thing* from separate piles (OR -> Add)."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "The Fundamental Principle of Counting calculates total outcomes without manual listing.",
+        "Use the Multiplication Principle ($m \\times n$) when tasks are performed one after the other (AND).",
+        "Use the Addition Principle ($m + n$) when tasks are mutually exclusive (OR).",
+        "Count the total possibilities and subtract those that fail the required condition.",
+        "A tree diagram represents sequential choices as branches."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Extend High School counting foundations to multi-stage counting, the addition and multiplication principles, complementary counting and complex counting situations. Emphasise systematic strategy selection and avoid repeating elementary examples."
+    },
+    "hss_math_t06_st02": {
+      "id": "hss_math_t06_st02",
+      "title": "Factorials",
+      "overview": "When arranging objects, the number of available options shrinks with every choice you make (e.g., placing 5 books on a shelf means 5 choices for the first spot, 4 for the next...). The Factorial notation captures this massive descending multiplication in a single symbol.",
+      "key_concepts": [
+        {
+          "concept": "The Factorial Definition ($n!$)",
+          "definition": "Descending multiplication.",
+          "details": [
+            "The factorial of a positive integer $n$ is the product of all positive integers from $n$ down to $1$.",
+            "$n! = n \\times (n-1) \\times (n-2) \\dots \\times 1$."
+          ]
+        },
+        {
+          "concept": "Zero Factorial ($0!$)",
+          "definition": "The empty arrangement.",
+          "details": [
+            "By mathematical definition and necessity for combinatorial formulas, $0! = 1$.",
+            "Conceptually, there is exactly $1$ way to arrange zero objects: doing nothing."
+          ]
+        },
+        {
+          "concept": "Simplifying Factorial Fractions",
+          "definition": "The cancellation trick.",
+          "details": [
+            "Factorials contain smaller factorials inside them. For example, $7! = 7 \\times 6 \\times 5!$.",
+            "When dividing factorials (e.g., $\\frac{7!}{5!}$), you expand the larger one just until it matches the smaller one, then cancel them out: $\\frac{7 \\times 6 \\times 5!}{5!} = 7 \\times 6 = 42$."
+          ]
+        },
+        {
+          "concept": "Zero factorial",
+          "definition": "The value of $0!$ is defined as 1.",
+          "details": [
+            "This definition makes factorial formulas and identities consistent, including ${}^{n}C_0=1$."
+          ]
+        },
+        {
+          "concept": "Factorial simplification",
+          "definition": "Simplify factorial ratios by expanding only enough factors to cancel.",
+          "details": [
+            "Avoid calculating large factorials separately when most factors cancel."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Factorial",
+          "equation": "n!=n(n-1)(n-2)\\cdots2\\cdot1",
+          "variables": "$n$ is a non-negative integer; by definition $0!=1$."
+        },
+        {
+          "name": "Factorial recurrence",
+          "equation": "n!=n(n-1)!",
+          "variables": "Valid for integers $n\\geq1$."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_hss_math_t06_st02",
+          "title": "Factorials — method overview",
+          "type": "svg",
+          "caption": "A general problem-solving sequence for this subtopic.",
+          "alt_text": "Three stages: identify the mathematical model, choose a counting or expansion method, and check the result and its conditions.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 180\" role=\"img\" aria-label=\"Factorials\">\n<rect x=\"4\" y=\"4\" width=\"712\" height=\"172\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<text x=\"360\" y=\"42\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">Factorials</text>\n<rect x=\"35\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dbeafe\" stroke=\"#2563eb\"/>\n<rect x=\"265\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dcfce7\" stroke=\"#16a34a\"/>\n<rect x=\"495\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#fef3c7\" stroke=\"#d97706\"/>\n<text x=\"130\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Identify the model</text>\n<text x=\"130\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">What is being counted?</text>\n<text x=\"360\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Choose a method</text>\n<text x=\"360\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#14532d\">Formula or reasoning</text>\n<text x=\"590\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#92400e\">Check the result</text>\n<text x=\"590\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#92400e\">Conditions and units</text>\n<path d=\"M225 104 H258 M455 104 H488\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n<path d=\"M252 98 L260 104 L252 110 M482 98 L490 104 L482 110\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Simplify the expression $\\frac{8!}{6! \\times 2!}$.",
+          "solution_steps": [
+            "Step 1: Expand the largest factorial ($8!$) until it reaches the next largest factorial in the denominator ($6!$).",
+            "Step 2: $8! = 8 \\times 7 \\times 6!$.",
+            "Step 3: Substitute this into the fraction: $\\frac{8 \\times 7 \\times 6!}{6! \\times 2!}$.",
+            "Step 4: Cancel the $6!$ from top and bottom: $\\frac{8 \\times 7}{2!}$.",
+            "Step 5: Expand $2! = 2 \\times 1 = 2$.",
+            "Step 6: Calculate: $\\frac{56}{2} = 28$."
+          ],
+          "final_answer": "28"
+        },
+        {
+          "problem": "Simplify $\\dfrac{9!}{7!\\,2!}$.",
+          "solution_steps": [
+            "Expand only the factors needed: $9!=9\\times8\\times7!$.",
+            "Cancel $7!$: $\\dfrac{9\\times8}{2\\times1}=36$."
+          ],
+          "final_answer": "36"
+        },
+        {
+          "problem": "Find the positive integer $n$ if $\\dfrac{(n+1)!}{(n-1)!}=30$.",
+          "solution_steps": [
+            "Write $(n+1)!=(n+1)n(n-1)!$.",
+            "Cancel $(n-1)!$: $n(n+1)=30$.",
+            "Thus $n^2+n-30=0=(n+6)(n-5)$.",
+            "Since $n$ is positive, choose $n=5$."
+          ],
+          "final_answer": "n = 5"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dividing the numbers inside the factorial symbols.",
+          "correction": "$\\frac{6!}{3!}$ is NOT equal to $2!$. You must expand them: $\\frac{720}{6} = 120$. Never divide or cancel the base numbers of factorials directly."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "A factorial ($n!$) multiplies a number by every positive integer below it.",
+        "Zero factorial is mathematically defined as $1$ ($0! = 1$).",
+        "To divide factorials, expand the larger factorial until you can cancel out the smaller one.",
+        "The value of $0!$ is defined as 1.",
+        "Simplify factorial ratios by expanding only enough factors to cancel."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Cover factorial notation and identities, simplification of factorial expressions, and algebraic manipulation used in permutation and combination formulas."
+    },
+    "hss_math_t06_st03": {
+      "id": "hss_math_t06_st03",
+      "title": "Permutations",
+      "overview": "A password of '123' is different from '321'. When you are selecting a group of items and the specific sequence or arrangement matters, you are calculating a Permutation.",
+      "key_concepts": [
+        {
+          "concept": "Permutations ($^nP_r$)",
+          "definition": "Order matters.",
+          "details": [
+            "A permutation is an ordered arrangement of $r$ objects taken from a pool of $n$ distinct objects.",
+            "Because order matters, ABC and BAC are counted as two completely different permutations."
+          ]
+        },
+        {
+          "concept": "The Permutation Formula",
+          "definition": "Factorial division.",
+          "details": [
+            "The formula is $^nP_r = \\frac{n!}{(n-r)!}$.",
+            "The numerator represents all possible arrangements of all objects. The denominator divides away the arrangements of the objects you didn't select, effectively stopping the factorial early."
+          ]
+        },
+        {
+          "concept": "Arranging Everything",
+          "definition": "The $n!$ rule.",
+          "details": [
+            "If you are selecting and arranging ALL the objects in the pool ($r = n$), the formula becomes $^nP_n = \\frac{n!}{0!} = n!$."
+          ]
+        },
+        {
+          "concept": "Order matters",
+          "definition": "A permutation distinguishes arrangements that contain the same objects in different positions.",
+          "details": [
+            "For example, AB and BA are different ordered arrangements."
+          ]
+        },
+        {
+          "concept": "Selection followed by arrangement",
+          "definition": "An arrangement of $r$ objects from $n$ can be counted by first selecting and then ordering.",
+          "details": [
+            "This gives ${}^{n}P_r={}^{n}C_r r!$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Permutations of n distinct objects",
+          "equation": "{}^nP_r=\\dfrac{n!}{(n-r)!}",
+          "variables": "$n$ distinct objects are available; $r$ positions are filled, with no repetition; $0\\leq r\\leq n$."
+        },
+        {
+          "name": "Arrangement of all n distinct objects",
+          "equation": "n!",
+          "variables": "All $n$ distinct objects are arranged in a line."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_hss_math_t06_st03",
+          "title": "Permutations — method overview",
+          "type": "svg",
+          "caption": "A general problem-solving sequence for this subtopic.",
+          "alt_text": "Three stages: identify the mathematical model, choose a counting or expansion method, and check the result and its conditions.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 180\" role=\"img\" aria-label=\"Permutations\">\n<rect x=\"4\" y=\"4\" width=\"712\" height=\"172\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<text x=\"360\" y=\"42\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">Permutations</text>\n<rect x=\"35\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dbeafe\" stroke=\"#2563eb\"/>\n<rect x=\"265\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dcfce7\" stroke=\"#16a34a\"/>\n<rect x=\"495\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#fef3c7\" stroke=\"#d97706\"/>\n<text x=\"130\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Identify the model</text>\n<text x=\"130\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">What is being counted?</text>\n<text x=\"360\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Choose a method</text>\n<text x=\"360\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#14532d\">Formula or reasoning</text>\n<text x=\"590\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#92400e\">Check the result</text>\n<text x=\"590\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#92400e\">Conditions and units</text>\n<path d=\"M225 104 H258 M455 104 H488\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n<path d=\"M252 98 L260 104 L252 110 M482 98 L490 104 L482 110\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "How many 3-letter passwords can be made from the letters A, B, C, D, E without repeating any letters?",
+          "solution_steps": [
+            "Step 1: Determine if order matters. Yes, 'ABC' is a different password than 'CBA'. Use Permutations.",
+            "Step 2: Identify variables: total letters $n = 5$, letters chosen $r = 3$.",
+            "Step 3: Apply formula: $^5P_3 = \\frac{5!}{(5-3)!}$.",
+            "Step 4: Simplify denominator: $\\frac{5!}{2!}$.",
+            "Step 5: Expand and cancel: $\\frac{5 \\times 4 \\times 3 \\times 2!}{2!} = 5 \\times 4 \\times 3 = 60$."
+          ],
+          "final_answer": "60 passwords"
+        },
+        {
+          "problem": "How many 4-digit numbers can be formed from 1, 2, 3, 4, 5 without repetition?",
+          "solution_steps": [
+            "There are 5 choices for the first position, then 4, 3 and 2.",
+            "By the multiplication principle: $5\\times4\\times3\\times2=120$."
+          ],
+          "final_answer": "120 numbers"
+        },
+        {
+          "problem": "In how many ways can 3 different prizes be awarded to 8 students if no student receives more than one prize?",
+          "solution_steps": [
+            "The prizes are distinct, so the recipients are assigned in order.",
+            "There are 8 choices for the first prize, 7 for the second and 6 for the third.",
+            "Total: $8\\times7\\times6=336$."
+          ],
+          "final_answer": "336 ways"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using permutations when order doesn't matter.",
+          "correction": "If you are just forming a group (like a committee) where the sequence of people doesn't matter, Permutations will give you an answer that is much too large. (Use Combinations instead)."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "Permutations count how many ways you can select and arrange items where sequence/order matters.",
+        "The formula is $^nP_r = \\frac{n!}{(n-r)!}$.",
+        "Arranging every single item in a set of $n$ items results in $n!$ total arrangements.",
+        "A permutation distinguishes arrangements that contain the same objects in different positions.",
+        "An arrangement of $r$ objects from $n$ can be counted by first selecting and then ordering."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Develop permutations of distinct objects and arrangements of selected objects using factorial-based formulas. Treat elementary cases as revision and focus on Higher Secondary problem-solving."
+    },
+    "hss_math_t06_st05": {
+      "id": "hss_math_t06_st05",
+      "title": "Combinations",
+      "overview": "Permutations and Combinations are two sides of the same mathematical coin. By understanding the direct algebraic link between them, you can rapidly solve complex problems that involve both selecting items and arranging them.",
+      "key_concepts": [
+        {
+          "concept": "The Linking Formula",
+          "definition": "Selection $\\times$ Arrangement.",
+          "details": [
+            "A permutation ($^nP_r$) is just a combination ($^nC_r$) where the selected items are then arranged ($r!$).",
+            "Therefore: $^nP_r = ^nC_r \\times r!$."
+          ]
+        },
+        {
+          "concept": "Conceptualizing the Link",
+          "definition": "The two-step process.",
+          "details": [
+            "If you need to pick 3 people from 10 and seat them in specific chairs, you can do it in two steps:",
+            "Step 1: Pick the 3 people (Combination: $10C3$).",
+            "Step 2: Seat those 3 people in order (Factorial: $3!$).",
+            "Total arrangements = $10C3 \\times 3! = 10P3$."
+          ]
+        },
+        {
+          "concept": "Order does not matter",
+          "definition": "A combination counts a group once, regardless of the order in which its members are listed.",
+          "details": [
+            "The selections ABC and BCA represent the same group."
+          ]
+        },
+        {
+          "concept": "Complementary selection",
+          "definition": "Choosing $r$ objects to include is equivalent to choosing the $n-r$ objects to exclude.",
+          "details": [
+            "This explains the identity ${}^{n}C_r={}^{n}C_{n-r}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Combinations",
+          "equation": "{}^nC_r=\\dfrac{n!}{r!(n-r)!}",
+          "variables": "Select $r$ objects from $n$ distinct objects; order does not matter; $0\\leq r\\leq n$."
+        },
+        {
+          "name": "Symmetry of combinations",
+          "equation": "{}^nC_r={}^nC_{n-r}",
+          "variables": "Selecting $r$ objects is equivalent to deciding which $n-r$ objects are left out."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_hss_math_t06_st05",
+          "title": "Combinations — method overview",
+          "type": "svg",
+          "caption": "A general problem-solving sequence for this subtopic.",
+          "alt_text": "Three stages: identify the mathematical model, choose a counting or expansion method, and check the result and its conditions.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 180\" role=\"img\" aria-label=\"Combinations\">\n<rect x=\"4\" y=\"4\" width=\"712\" height=\"172\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<text x=\"360\" y=\"42\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">Combinations</text>\n<rect x=\"35\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dbeafe\" stroke=\"#2563eb\"/>\n<rect x=\"265\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dcfce7\" stroke=\"#16a34a\"/>\n<rect x=\"495\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#fef3c7\" stroke=\"#d97706\"/>\n<text x=\"130\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Identify the model</text>\n<text x=\"130\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">What is being counted?</text>\n<text x=\"360\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Choose a method</text>\n<text x=\"360\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#14532d\">Formula or reasoning</text>\n<text x=\"590\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#92400e\">Check the result</text>\n<text x=\"590\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#92400e\">Conditions and units</text>\n<path d=\"M225 104 H258 M455 104 H488\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n<path d=\"M252 98 L260 104 L252 110 M482 98 L490 104 L482 110\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "If $^nC_r = 10$ and $r! = 6$, find $^nP_r$.",
+          "solution_steps": [
+            "Step 1: Recall the linking formula: $^nP_r = ^nC_r \\times r!$.",
+            "Step 2: Substitute the known values: $^nP_r = 10 \\times 6$.",
+            "Step 3: Calculate the product."
+          ],
+          "final_answer": "60"
+        },
+        {
+          "problem": "A committee of 3 is selected from 7 people and its members are then assigned president, secretary and treasurer. How many outcomes are possible?",
+          "solution_steps": [
+            "Select the committee: $\\binom{7}{3}=35$.",
+            "Assign the three distinct offices: $3!=6$ ways.",
+            "Total $=35\\times6=210$."
+          ],
+          "final_answer": "210 outcomes"
+        },
+        {
+          "problem": "Evaluate $\\dfrac{{}^{10}P_4}{{}^{10}C_4}$.",
+          "solution_steps": [
+            "Use ${}^{n}P_r=r!\\,{}^{n}C_r$.",
+            "For $r=4$, the ratio is $4!=24$."
+          ],
+          "final_answer": "24"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $^nP_r$ is smaller than $^nC_r$.",
+          "correction": "Because permutations care about the order, there are always far MORE permutations than combinations (unless $r=0$ or $r=1$, where they are equal). $^nP_r$ is the larger number."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "Permutations count both the selection of items AND their specific sequence.",
+        "Combinations count ONLY the selection.",
+        "To convert a combination into a permutation, multiply it by the factorial of the number of items selected ($r!$).",
+        "A combination counts a group once, regardless of the order in which its members are listed.",
+        "Choosing $r$ objects to include is equivalent to choosing the $n-r$ objects to exclude."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Develop combinations as selections where order is irrelevant. Extend beyond elementary selection to multi-condition problems and combinatorial reasoning."
+    },
+    "hss_math_t06_st06": {
+      "id": "hss_math_t06_st06",
+      "title": "Relationship between permutations and combinations",
+      "overview": "Real-world arrangements rarely exist in a vacuum. Often, specific items must be grouped together, kept apart, or locked into a specific position. This lesson covers the 'block' and 'gap' methods for handling these restrictions.",
+      "key_concepts": [
+        {
+          "concept": "The Block Method (Items MUST be together)",
+          "definition": "Treating a group as one.",
+          "details": [
+            "If items A and B must sit together, put them in a 'box' and treat the box as a single item. Arrange all the items (including the box).",
+            "Then, multiply by the number of ways the items inside the box can be arranged among themselves."
+          ]
+        },
+        {
+          "concept": "The Gap Method (Items MUST NOT be together)",
+          "definition": "Creating barriers.",
+          "details": [
+            "First, arrange all the non-restricted items, leaving empty 'gaps' between them (and at the ends).",
+            "Then, use permutations to place the restricted items exclusively into those gaps. This guarantees they will never touch each other."
+          ]
+        },
+        {
+          "concept": "Fixed Positions",
+          "definition": "Locking it down.",
+          "details": [
+            "If a specific item must be in the first spot, simply remove it from the pool of items and calculate the factorial for the remaining spots."
+          ]
+        },
+        {
+          "concept": "Why the factor r! appears",
+          "definition": "Each selected group of $r$ distinct objects can be arranged in exactly $r!$ orders.",
+          "details": [
+            "Thus permutations count every combination $r!$ times."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Permutation-combination relationship",
+          "equation": "{}^nP_r=r!\\,{}^nC_r",
+          "variables": "First select $r$ objects, then arrange those selected objects in $r!$ orders."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_hss_math_t06_st06",
+          "title": "Relationship Between Permutations and Combinations — method overview",
+          "type": "svg",
+          "caption": "A general problem-solving sequence for this subtopic.",
+          "alt_text": "Three stages: identify the mathematical model, choose a counting or expansion method, and check the result and its conditions.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 180\" role=\"img\" aria-label=\"Relationship Between Permutations and Combinations\">\n<rect x=\"4\" y=\"4\" width=\"712\" height=\"172\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<text x=\"360\" y=\"42\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">Relationship Between Permutations and Combinations</text>\n<rect x=\"35\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dbeafe\" stroke=\"#2563eb\"/>\n<rect x=\"265\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dcfce7\" stroke=\"#16a34a\"/>\n<rect x=\"495\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#fef3c7\" stroke=\"#d97706\"/>\n<text x=\"130\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Identify the model</text>\n<text x=\"130\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">What is being counted?</text>\n<text x=\"360\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Choose a method</text>\n<text x=\"360\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#14532d\">Formula or reasoning</text>\n<text x=\"590\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#92400e\">Check the result</text>\n<text x=\"590\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#92400e\">Conditions and units</text>\n<path d=\"M225 104 H258 M455 104 H488\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n<path d=\"M252 98 L260 104 L252 110 M482 98 L490 104 L482 110\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "How many ways can 5 people (A, B, C, D, E) be arranged in a line if A and B must stand exactly next to each other?",
+          "solution_steps": [
+            "Step 1: Put A and B into a 'box'. We now have 4 items to arrange: (AB Box), C, D, E.",
+            "Step 2: Arrange these 4 items: $4! = 24$.",
+            "Step 3: Arrange the items inside the box (A and B can swap places): $2! = 2$.",
+            "Step 4: Multiply the two results together: $24 \\times 2 = 48$."
+          ],
+          "final_answer": "48 ways"
+        },
+        {
+          "problem": "How many 6-letter arrangements of the letters A, B, C, D, E, F have A first and F last?",
+          "solution_steps": [
+            "Fix A in the first position and F in the last.",
+            "Arrange the remaining four letters in the four middle positions: $4!=24$."
+          ],
+          "final_answer": "24 arrangements"
+        },
+        {
+          "problem": "How many arrangements of 5 distinct people in a row have A and B not adjacent?",
+          "solution_steps": [
+            "Total unrestricted arrangements: $5!=120$.",
+            "Arrangements with A and B adjacent: treat them as a block, giving $4!\\times2=48$.",
+            "Subtract: $120-48=72$."
+          ],
+          "final_answer": "72 arrangements"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using complementary counting incorrectly for 'NOT together'.",
+          "correction": "You can calculate 'Total arrangements' minus 'Arrangements where they are together'. However, if you have 3 items that can't be together, subtracting 'all 3 together' doesn't remove the cases where just 2 of them are together. The Gap Method is much safer for 3+ items."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "If items must be together, treat them as a single block, arrange the total items, then multiply by the arrangements inside the block.",
+        "If items must be separated, arrange everything else first, then place the separated items into the empty gaps between them.",
+        "Each selected group of $r$ distinct objects can be arranged in exactly $r!$ orders."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Derive and apply nPr = r! × nCr. Explain the role of order and conversion between ordered arrangements and unordered selections; include algebraic and counting applications."
+    },
+    "hss_math_t06_st04": {
+      "id": "hss_math_t06_st04",
+      "title": "Permutations with restrictions",
+      "overview": "If you are making a fruit salad, it doesn't matter if you put the apples in before the bananas; the salad is exactly the same. When selecting items where order does not matter, you are calculating a Combination.",
+      "key_concepts": [
+        {
+          "concept": "Combinations ($^nC_r$)",
+          "definition": "Order does NOT matter.",
+          "details": [
+            "A combination is a selection of $r$ objects from a pool of $n$ objects where the arrangement sequence is irrelevant.",
+            "ABC and BAC represent the exact same combination, so they are only counted once."
+          ]
+        },
+        {
+          "concept": "The Combination Formula",
+          "definition": "Dividing out duplicates.",
+          "details": [
+            "The formula is $^nC_r = \\frac{n!}{r!(n-r)!}$. (Also written as $\\binom{n}{r}$).",
+            "It is identical to the permutation formula, but it includes an extra $r!$ in the denominator to divide out and delete all the duplicate internal arrangements."
+          ]
+        },
+        {
+          "concept": "Symmetry Property",
+          "definition": "Choosing vs Rejecting.",
+          "details": [
+            "Choosing 8 players from a team of 10 is mathematically identical to choosing 2 players to leave behind.",
+            "Formula: $^nC_r = ^nC_{n-r}$. (e.g., $^8C_6 = ^8C_2$). This is a massive shortcut for large numbers."
+          ]
+        },
+        {
+          "concept": "Gap method",
+          "definition": "Arrange objects that must be separated by first arranging the other objects and then placing restricted objects in available gaps.",
+          "details": [
+            "For a line of $m$ arranged objects there are $m+1$ gaps, including the two ends.",
+            "For multiple restricted objects, account for whether more than one may occupy the same gap."
+          ]
+        },
+        {
+          "concept": "Identical objects versus repetition allowed",
+          "definition": "Identical objects are indistinguishable in the final arrangement; repetition-allowed choices permit the same type to be selected independently at different positions.",
+          "details": [
+            "These are different counting models and use different formulas."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Restricted arrangements by complement",
+          "equation": "Allowed = Total - Forbidden",
+          "variables": "Use when the forbidden cases can be counted without overlap and are easier to enumerate."
+        },
+        {
+          "name": "Block method",
+          "equation": "(n-k+1)!\\,k!",
+          "variables": "For a specified group of $k$ distinct objects that must stay together among $n$ distinct objects in a line: treat the group as one block, then arrange internally."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_hss_math_t06_st04",
+          "title": "Permutations with Restrictions — method overview",
+          "type": "svg",
+          "caption": "A general problem-solving sequence for this subtopic.",
+          "alt_text": "Three stages: identify the mathematical model, choose a counting or expansion method, and check the result and its conditions.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 180\" role=\"img\" aria-label=\"Permutations with Restrictions\">\n<rect x=\"4\" y=\"4\" width=\"712\" height=\"172\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<text x=\"360\" y=\"42\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">Permutations with Restrictions</text>\n<rect x=\"35\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dbeafe\" stroke=\"#2563eb\"/>\n<rect x=\"265\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dcfce7\" stroke=\"#16a34a\"/>\n<rect x=\"495\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#fef3c7\" stroke=\"#d97706\"/>\n<text x=\"130\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Identify the model</text>\n<text x=\"130\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">What is being counted?</text>\n<text x=\"360\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Choose a method</text>\n<text x=\"360\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#14532d\">Formula or reasoning</text>\n<text x=\"590\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#92400e\">Check the result</text>\n<text x=\"590\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#92400e\">Conditions and units</text>\n<path d=\"M225 104 H258 M455 104 H488\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n<path d=\"M252 98 L260 104 L252 110 M482 98 L490 104 L482 110\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "How many arrangements of A, B, C, D, E are possible if A must be first and B must not be last?",
+          "solution_steps": [
+            "Fix A in the first position; the remaining four letters can be arranged in $4!=24$ ways.",
+            "Count arrangements with B last: fix B last and A first, leaving 3 letters in $3!=6$ ways.",
+            "Subtract the prohibited cases."
+          ],
+          "final_answer": "$24-6=18$ arrangements."
+        },
+        {
+          "problem": "Seven people are to sit in a row. In how many arrangements must A and B sit together?",
+          "solution_steps": [
+            "Treat A and B as one block. The block and the other five people make 6 units.",
+            "These units can be arranged in $6!$ ways.",
+            "Within the block, A and B can switch places in $2!$ ways.",
+            "Total $=6!\\times2=1440$."
+          ],
+          "final_answer": "1,440 arrangements"
+        },
+        {
+          "problem": "How many arrangements of the letters A, B, C, D, E are possible if A and B must not be adjacent?",
+          "solution_steps": [
+            "There are $5!=120$ arrangements in total.",
+            "Treat A and B as one block to count adjacent arrangements: $2\\times4!=48$.",
+            "Subtract the adjacent cases from the total."
+          ],
+          "final_answer": "$120-48=72$ arrangements."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing Permutations and Combinations.",
+          "correction": "Passwords, podium placements, and scheduled events = Order Matters (Permutation). Teams, committees, and hands of cards = Order Does Not Matter (Combination)."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "Combinations count how many groups can be formed when the sequence of selection doesn't matter.",
+        "The formula is $^nC_r = \\frac{n!}{r!(n-r)!}$, which removes duplicate arrangements.",
+        "Symmetry ($^nC_r = ^nC_{n-r}$) allows you to calculate $^nC_r$ using a much smaller $r$ value when $r$ is close to $n$.",
+        "Arrange objects that must be separated by first arranging the other objects and then placing restricted objects in available gaps.",
+        "Identical objects are indistinguishable in the final arrangement; repetition-allowed choices permit the same type to be selected independently at different positions."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Cover restricted arrangements involving fixed positions, objects that must be together or separated, multiple simultaneous conditions and complementary counting. Include arrangements of repeated/identical objects where appropriate, distinguishing these from repetition-allowed choices."
+    },
+    "hss_math_t06_st07": {
+      "id": "hss_math_t06_st07",
+      "title": "Circular arrangements",
+      "overview": "Arranging items in a straight line has a clear start and end. When you bend that line into a circle, the 'start' vanishes, and shifting everyone one seat over doesn't actually create a new arrangement relative to each other.",
+      "key_concepts": [
+        {
+          "concept": "Circular Permutations",
+          "definition": "The $(n-1)!$ rule.",
+          "details": [
+            "When arranging $n$ objects in a circle, every unique seating arrangement can be rotated $n$ times while maintaining the exact same neighbor-to-neighbor relationships.",
+            "To remove these rotational duplicates, we divide the linear formula $n!$ by $n$, resulting in $(n-1)!$."
+          ]
+        },
+        {
+          "concept": "Fixing a Reference Point",
+          "definition": "Breaking the circle.",
+          "details": [
+            "Conceptually, the easiest way to understand circular permutations is to force one person to sit down and act as a 'fixed anchor'.",
+            "Once one person is fixed, the remaining $(n-1)$ people can be arranged around them linearly: $(n-1)!$."
+          ]
+        },
+        {
+          "concept": "Necklaces and Bracelets",
+          "definition": "Flipping the circle.",
+          "details": [
+            "If the circle can be physically picked up and flipped over (like a bead necklace), clockwise and counter-clockwise arrangements become identical.",
+            "In this specific case, divide the formula by 2: $\\frac{(n-1)!}{2}$."
+          ]
+        },
+        {
+          "concept": "Rotational equivalence",
+          "definition": "Circular arrangements that differ only by rotating every position are considered the same.",
+          "details": [
+            "Fixing one person or object removes the rotational duplicates."
+          ]
+        },
+        {
+          "concept": "Reflections",
+          "definition": "A mirror image is generally counted as a different circular arrangement unless the problem explicitly identifies reflections.",
+          "details": [
+            "For necklaces or bracelets where flips are equivalent, the count may require a different model; do not automatically divide by 2."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Circular permutations",
+          "equation": "(n-1)!",
+          "variables": "Arrange $n$ distinct objects around an unmarked circle, identifying rotations but not reflections."
+        },
+        {
+          "name": "Circular arrangements with a fixed adjacent pair",
+          "equation": "2(n-2)!",
+          "variables": "For a specified pair among $n$ distinct people, treat the pair as a block in a circle; the pair can be internally ordered in 2 ways."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_hss_math_t06_st07",
+          "title": "Circular Arrangements — method overview",
+          "type": "svg",
+          "caption": "A general problem-solving sequence for this subtopic.",
+          "alt_text": "Three stages: identify the mathematical model, choose a counting or expansion method, and check the result and its conditions.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 180\" role=\"img\" aria-label=\"Circular Arrangements\">\n<rect x=\"4\" y=\"4\" width=\"712\" height=\"172\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<text x=\"360\" y=\"42\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">Circular Arrangements</text>\n<rect x=\"35\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dbeafe\" stroke=\"#2563eb\"/>\n<rect x=\"265\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dcfce7\" stroke=\"#16a34a\"/>\n<rect x=\"495\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#fef3c7\" stroke=\"#d97706\"/>\n<text x=\"130\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Identify the model</text>\n<text x=\"130\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">What is being counted?</text>\n<text x=\"360\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Choose a method</text>\n<text x=\"360\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#14532d\">Formula or reasoning</text>\n<text x=\"590\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#92400e\">Check the result</text>\n<text x=\"590\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#92400e\">Conditions and units</text>\n<path d=\"M225 104 H258 M455 104 H488\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n<path d=\"M252 98 L260 104 L252 110 M482 98 L490 104 L482 110\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "How many ways can 6 distinct keys be arranged on a circular key ring?",
+          "solution_steps": [
+            "Step 1: Identify that this is a circular arrangement of $n=6$ items.",
+            "Step 2: Since it is a key ring, it can be flipped over in your hand, making clockwise and counter-clockwise identical.",
+            "Step 3: Use the Necklace formula: $\\frac{(6-1)!}{2}$.",
+            "Step 4: Calculate the factorial: $5! = 120$.",
+            "Step 5: Divide by 2: $\\frac{120}{2} = 60$."
+          ],
+          "final_answer": "60 ways"
+        },
+        {
+          "problem": "In how many ways can 6 people sit around a circular table?",
+          "solution_steps": [
+            "For circular arrangements, rotations represent the same relative seating.",
+            "Fix one person to remove rotational duplicates.",
+            "Arrange the other five: $(6-1)!=5!=120$."
+          ],
+          "final_answer": "120 circular arrangements"
+        },
+        {
+          "problem": "Five people sit around a circular table. In how many arrangements must A and B sit next to each other?",
+          "solution_steps": [
+            "Treat A and B as one block; with the other three people there are 4 units around the circle.",
+            "Arrange the four units circularly in $(4-1)!=6$ ways.",
+            "A and B can switch within their block in 2 ways.",
+            "Total $=6\\times2=12$."
+          ],
+          "final_answer": "12 arrangements"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using $(n-1)!$ when seats are specifically numbered.",
+          "correction": "If the circular table has specific numbered chairs (e.g., Chair 1, Chair 2), the circle is 'broken' because rotating people actually changes their chair number. In this case, it reverts to a standard linear permutation $n!$."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "In a standard circle, there is no starting point, so the number of arrangements is reduced to $(n-1)!$.",
+        "If the circle can be physically flipped over (like a bracelet), divide the result by 2.",
+        "If a specific person is fixed in place, the problem usually reduces to arranging the remaining people.",
+        "Circular arrangements that differ only by rotating every position are considered the same.",
+        "A mirror image is generally counted as a different circular arrangement unless the problem explicitly identifies reflections."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Extend circular arrangements beyond introductory High School cases. Explain rotational equivalence and solve restricted circular-arrangement problems; state clearly when reflections are or are not treated as equivalent."
+    },
+    "hss_math_t06_st08": {
+      "id": "hss_math_t06_st08",
+      "title": "Counting with repetition",
+      "overview": "Most counting problems assume you can only use an item once. But what if you are making a password, rolling dice, or arranging words with repeating letters? This lesson modifies our formulas to handle infinite supplies and identical twins.",
+      "key_concepts": [
+        {
+          "concept": "Infinite Choices ($n^r$)",
+          "definition": "The power rule.",
+          "details": [
+            "If you are selecting $r$ items from a pool of $n$ options, and you are allowed to pick the same option over and over (like a 4-digit PIN code using digits 0-9), you simply multiply $n$ by itself $r$ times.",
+            "Formula: $n^r$ (e.g., $10^4 = 10,000$ PIN codes)."
+          ]
+        },
+        {
+          "concept": "Arranging Identical Items",
+          "definition": "Dividing out twins.",
+          "details": [
+            "If you are arranging a set of items, but some of those items are visually identical (like the two 'P's in APPLE), standard factorial ($5!$) will overcount, treating the first P and second P as different arrangements.",
+            "To fix this, divide the total factorial by the factorial of each repeating group: $\\frac{n!}{p! q! \\dots}$"
+          ]
+        },
+        {
+          "concept": "Repetition allowed",
+          "definition": "When each position can independently use any of $n$ symbols, the number of length-$r$ strings is $n^r$.",
+          "details": [
+            "This counts strings such as 111 and 121 as different when positions matter."
+          ]
+        },
+        {
+          "concept": "Repeated identical objects",
+          "definition": "When identical copies are arranged, swapping identical copies does not create a new arrangement.",
+          "details": [
+            "Divide the factorial count by the factorial of each identical group's size."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Ordered choices with repetition",
+          "equation": "n^r",
+          "variables": "Each of $r$ positions independently has $n$ possible choices; repetition is allowed."
+        },
+        {
+          "name": "Distinct arrangements with repeated objects",
+          "equation": "\\dfrac{n!}{n_1!n_2!\\cdots n_k!}",
+          "variables": "Arrange $n$ objects where groups of identical objects have multiplicities $n_1,\\ldots,n_k$ and sum to $n$."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_hss_math_t06_st08",
+          "title": "Counting with Repetition — method overview",
+          "type": "svg",
+          "caption": "A general problem-solving sequence for this subtopic.",
+          "alt_text": "Three stages: identify the mathematical model, choose a counting or expansion method, and check the result and its conditions.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 180\" role=\"img\" aria-label=\"Counting with Repetition\">\n<rect x=\"4\" y=\"4\" width=\"712\" height=\"172\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"2\"/>\n<text x=\"360\" y=\"42\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">Counting with Repetition</text>\n<rect x=\"35\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dbeafe\" stroke=\"#2563eb\"/>\n<rect x=\"265\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#dcfce7\" stroke=\"#16a34a\"/>\n<rect x=\"495\" y=\"68\" width=\"190\" height=\"72\" rx=\"9\" fill=\"#fef3c7\" stroke=\"#d97706\"/>\n<text x=\"130\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Identify the model</text>\n<text x=\"130\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">What is being counted?</text>\n<text x=\"360\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Choose a method</text>\n<text x=\"360\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#14532d\">Formula or reasoning</text>\n<text x=\"590\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#92400e\">Check the result</text>\n<text x=\"590\" y=\"119\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#92400e\">Conditions and units</text>\n<path d=\"M225 104 H258 M455 104 H488\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n<path d=\"M252 98 L260 104 L252 110 M482 98 L490 104 L482 110\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/>\n</svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "How many distinct ways can you arrange the letters in the word MISSISSIPPI?",
+          "solution_steps": [
+            "Step 1: Count the total number of letters. $n = 11$.",
+            "Step 2: Identify and count the repeating letters. There are 4 'I's, 4 'S's, and 2 'P's.",
+            "Step 3: Set up the formula dividing the total factorial by the factorial of each repeat group: $\\frac{11!}{4! 4! 2!}$.",
+            "Step 4: Expand and calculate: $\\frac{39,916,800}{24 \\times 24 \\times 2} = \\frac{39,916,800}{1,152}$.",
+            "Step 5: Solve."
+          ],
+          "final_answer": "34,650 ways"
+        },
+        {
+          "problem": "How many 5-character strings can be made from 26 letters if repetition is allowed?",
+          "solution_steps": [
+            "Each of the five positions has 26 independent choices.",
+            "By multiplication, the total is $26^5=11,881,376$."
+          ],
+          "final_answer": "11,881,376 strings"
+        },
+        {
+          "problem": "How many distinct arrangements can be made from the letters of BANANA?",
+          "solution_steps": [
+            "There are 6 letters, with A repeated 3 times and N repeated 2 times.",
+            "Divide $6!$ by the factorials of the repeated counts: $\\dfrac{6!}{3!2!}=60$."
+          ],
+          "final_answer": "60 arrangements"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Mixing up $n^r$ and $r^n$.",
+          "correction": "Always think logically: $n$ is the number of 'choices available per slot'. $r$ is the number of 'slots'. If you have 3 letters to put in 5 mailboxes, it's $5 \\times 5 \\times 5$ ($5^3$), not $3^5$."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "If you can reuse options infinitely (like a password), the total number of arrangements is $n^r$.",
+        "If you are arranging a specific set of physical objects, but some are identical twins, you must divide the total $n!$ by the factorial of the twin counts to eliminate duplicate visual arrangements.",
+        "When each position can independently use any of $n$ symbols, the number of length-$r$ strings is $n^r$.",
+        "When identical copies are arranged, swapping identical copies does not create a new arrangement."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Develop counting with repetition, including arrangements where choices may repeat and arrangements containing identical objects. Distinguish repetition allowed from permutations of repeated/identical objects and select the appropriate formulas and reasoning."
+    },
+    "hss_math_t06_st13": {
+      "id": "hss_math_t06_st13",
+      "title": "Applications of counting principles",
+      "overview": "Counting principles are applied to practical problems by translating conditions into stages or disjoint cases. The key is to decide whether choices are successive, alternative, ordered, unordered, restricted or repeatable.",
+      "key_concepts": [
+        {
+          "concept": "Multi-stage counting",
+          "definition": "Break a task into a sequence of choices and multiply the number of options at each stage.",
+          "details": [
+            "If the number of options changes after a choice, use the appropriate count at each stage."
+          ]
+        },
+        {
+          "concept": "Counting by disjoint cases",
+          "definition": "Separate outcomes into cases that do not overlap, count each case, and add.",
+          "details": [
+            "State why the cases are exhaustive and mutually exclusive."
+          ]
+        },
+        {
+          "concept": "Subsets",
+          "definition": "A subset is formed by deciding independently whether each element is included.",
+          "details": [
+            "Each of $n$ elements has two possibilities, giving $2^n$ subsets."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Number of subsets",
+          "equation": "2^n",
+          "variables": "A set with $n$ distinct elements has $2^n$ subsets, including the empty set and the set itself."
+        },
+        {
+          "name": "Selections by cases",
+          "equation": "N=N_1+N_2+\\cdots+N_k",
+          "variables": "Add counts for mutually exclusive cases; use multiplication within each case when choices are successive."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_hss_math_t06_st13",
+          "title": "Counting strategy map",
+          "type": "svg",
+          "caption": "Use multiplication for stages and addition for disjoint cases.",
+          "alt_text": "Decision diagram distinguishes successive choices, counted by multiplication, from disjoint cases, counted by addition.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 230\"><rect width=\"600\" height=\"230\" rx=\"12\" fill=\"#f8fafc\"/><rect x=\"190\" y=\"12\" width=\"220\" height=\"48\" rx=\"8\" fill=\"#e2e8f0\" stroke=\"#475569\"/><text x=\"300\" y=\"42\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\">Counting problem</text><path d=\"M300 60 V82 H150 V105 M300 82 H450 V105\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\"/><rect x=\"35\" y=\"105\" width=\"230\" height=\"80\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><rect x=\"335\" y=\"105\" width=\"230\" height=\"80\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\"/><text x=\"150\" y=\"135\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\">Successive stages</text><text x=\"150\" y=\"162\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"20\">Multiply</text><text x=\"450\" y=\"135\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\">Disjoint cases</text><text x=\"450\" y=\"162\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"20\">Add</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A committee of 5 is to be formed from 6 men and 4 women. How many committees contain exactly 3 men and 2 women?",
+          "solution_steps": [
+            "Step 1: Identify the two separate selection tasks. Select 3 men from 6 AND select 2 women from 4.",
+            "Step 2: Calculate the men combination: $^6C_3 = \\frac{6!}{3!3!} = 20$.",
+            "Step 3: Calculate the women combination: $^4C_2 = \\frac{4!}{2!2!} = 6$.",
+            "Step 4: Because we are doing both to form the committee (AND), multiply the results: $20 \\times 6 = 120$."
+          ],
+          "final_answer": "120 committees"
+        },
+        {
+          "problem": "A student chooses one language from 4 options, one science subject from 3 options, and either one of 2 arts subjects or one of 3 sports. How many selections are possible?",
+          "solution_steps": [
+            "The final choice is either an arts subject or a sport: $2+3=5$ choices.",
+            "There are 4 language choices and 3 science choices.",
+            "Total $=4\\times3\\times5=60$."
+          ],
+          "final_answer": "60 selections"
+        },
+        {
+          "problem": "How many 4-digit even numbers can be formed from digits 0, 1, 2, 3, 4 without repetition?",
+          "solution_steps": [
+            "Case 1: last digit 0. The first digit has 4 choices (1–4); the middle positions have 3 and 2 choices. Count $=4\\times3\\times2=24$.",
+            "Case 2: last digit 2 or 4. Choose the last digit in 2 ways. The first digit cannot be 0 or the chosen last digit, so 3 choices. The middle positions then have 3 and 2 choices. Count $=2\\times3\\times3\\times2=36$.",
+            "The cases are disjoint; add: $24+36=60$."
+          ],
+          "final_answer": "60 numbers"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding instead of multiplying sub-groups.",
+          "correction": "When building a single committee by picking some men AND some women, you must multiply the combinations together. You only ADD if you are calculating completely separate alternative committee types (Case 1 OR Case 2)."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "Translate the situation into stages or disjoint cases.",
+        "Multiply counts for successive choices and add counts for mutually exclusive cases.",
+        "Check that every valid outcome is counted exactly once."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Apply counting principles to multi-step arrangements, selections, grouping and practical problems. Use counting as preparation for probability without repeating probability rules, conditional probability or probability distributions."
+    },
+    "hss_math_t06_st12": {
+      "id": "hss_math_t06_st12",
+      "title": "Binomial coefficients and Pascal’s triangle",
+      "overview": "Pascal’s triangle displays binomial coefficients in successive rows. Its symmetry and recurrence relation provide efficient ways to calculate coefficients and prove identities.",
+      "key_concepts": [
+        {
+          "concept": "Binomial coefficients",
+          "definition": "${}^{n}C_r$ counts selections of r objects from n distinct objects.",
+          "details": [
+            "They form row n of Pascal’s triangle, indexed from r=0 to r=n."
+          ]
+        },
+        {
+          "concept": "Symmetry and recurrence",
+          "definition": "${}^{n}C_r={}^{n}C_{n-r}$ and ${}^{n}C_r={}^{n-1}C_{r-1}+{}^{n-1}C_r$.",
+          "details": [
+            "The recurrence follows by separating selections according to whether they contain one specified object."
+          ]
+        },
+        {
+          "concept": "Row sum",
+          "definition": "The sum of the entries in row n is $2^n$.",
+          "details": [
+            "This counts all subsets of an n-element set."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Middle term position (even exponent)",
+          "equation": "T_{\\frac n2+1}",
+          "variables": "If $n$ is even, $(a+b)^n$ has one middle term."
+        },
+        {
+          "name": "Middle term positions (odd exponent)",
+          "equation": "T_{\\frac{n+1}{2}}\\text{ and }T_{\\frac{n+3}{2}}",
+          "variables": "If $n$ is odd, the expansion has two middle terms."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_hss_math_t06_st12",
+          "title": "Pascal’s triangle and binomial coefficients",
+          "type": "svg",
+          "caption": "Symmetry and recurrence build each row of binomial coefficients.",
+          "alt_text": "Symmetry and recurrence build each row of binomial coefficients.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 170\"><rect width=\"640\" height=\"170\" rx=\"12\" fill=\"#f8fafc\"/><text x=\"320\" y=\"32\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" font-weight=\"bold\" fill=\"#0f172a\">Pascal’s triangle and binomial coefficients</text><rect x=\"35\" y=\"58\" width=\"170\" height=\"75\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><rect x=\"235\" y=\"58\" width=\"170\" height=\"75\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\"/><rect x=\"435\" y=\"58\" width=\"170\" height=\"75\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"120\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Index / row</text><text x=\"120\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">Choose r</text><text x=\"320\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Coefficient</text><text x=\"320\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#14532d\">nCr</text><text x=\"520\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#92400e\">Term / result</text><text x=\"520\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#92400e\">Check position</text><path d=\"M205 95 H230 M405 95 H430\" stroke=\"#475569\" stroke-width=\"2\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Identify the coefficient of the third term in the expansion of $(x+y)^5$.",
+          "solution_steps": [
+            "Step 1: The coefficients correspond to the combinations $^5C_r$.",
+            "Step 2: The terms start counting from $r=0$. Therefore, the first term is $^5C_0$, the second term is $^5C_1$, and the third term is $^5C_2$.",
+            "Step 3: Calculate $^5C_2 = \\frac{5!}{2!3!} = \\frac{5 \\times 4}{2} = 10$."
+          ],
+          "final_answer": "10"
+        },
+        {
+          "problem": "Find the coefficient of $x^2y^3$ in $(x+y)^5$.",
+          "solution_steps": [
+            "The term containing $x^2y^3$ has $r=3$ in ${}^{5}C_r x^{5-r}y^r$.",
+            "Its coefficient is ${}^{5}C_3=10$."
+          ],
+          "final_answer": "10"
+        },
+        {
+          "problem": "Use Pascal's identity to evaluate ${}^{8}C_3+{}^{8}C_4$.",
+          "solution_steps": [
+            "Pascal's identity gives ${}^{n}C_r+{}^{n}C_{r+1}={}^{n+1}C_{r+1}$.",
+            "Thus ${}^{8}C_3+{}^{8}C_4={}^{9}C_4=126$."
+          ],
+          "final_answer": "126"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking the $r$ value matches the term number.",
+          "correction": "Because the expansion starts at $r=0$, the $r$ value is always ONE LESS than the term number. The 3rd term uses $r=2$. The 1st term uses $r=0$."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "Pascal row n contains ${}^{n}C_0$ through ${}^{n}C_n$.",
+        "Rows are symmetric and each interior entry is the sum of the two above it.",
+        "The sum of row n is $2^n$."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Develop binomial-coefficient properties including symmetry, recurrence relations, row sums and selected identities. Connect coefficients with Pascal’s triangle and include combinatorial explanations and accessible proofs rather than memorisation alone."
+    },
+    "hss_math_t06_st09": {
+      "id": "hss_math_t06_st09",
+      "title": "Binomial theorem for positive integer powers",
+      "overview": "Multiplying out $(a+b)^6$ by hand is exhausting and prone to error. The Binomial Theorem provides a universal master formula to instantly jump to the fully expanded polynomial using combinatorics.",
+      "key_concepts": [
+        {
+          "concept": "Finite binomial expansion",
+          "definition": "For a non-negative integer n, $(a+b)^n=\\sum_{r=0}^{n}{}^{n}C_r a^{n-r}b^r$.",
+          "details": [
+            "There are n+1 terms before like terms are combined.",
+            "The exponents in each term add to n."
+          ]
+        },
+        {
+          "concept": "Signs and coefficients",
+          "definition": "For $(a-b)^n$, substitute $-b$ for b in the theorem.",
+          "details": [
+            "The sign of each term depends on the parity of the exponent of b."
+          ]
+        },
+        {
+          "concept": "Coefficient pattern",
+          "definition": "The coefficients are the entries of row n in Pascal’s triangle.",
+          "details": [
+            "This connects the binomial theorem with the properties of combinations."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Binomial coefficient",
+          "equation": "{}^nC_r=\\dfrac{n!}{r!(n-r)!}",
+          "variables": "Coefficient associated with choosing $r$ factors to contribute the second term in a product of $n$ identical binomials."
+        },
+        {
+          "name": "Pascal recurrence",
+          "equation": "{}^nC_r={} ^{n-1}C_{r-1}+{}^{n-1}C_r",
+          "variables": "For $1\\leq r\\leq n-1$."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_hss_math_t06_st09",
+          "title": "Binomial expansion structure",
+          "type": "svg",
+          "caption": "Coefficients follow Pascal’s triangle while powers move in opposite directions.",
+          "alt_text": "Coefficients follow Pascal’s triangle while powers move in opposite directions.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 170\"><rect width=\"640\" height=\"170\" rx=\"12\" fill=\"#f8fafc\"/><text x=\"320\" y=\"32\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" font-weight=\"bold\" fill=\"#0f172a\">Binomial expansion structure</text><rect x=\"35\" y=\"58\" width=\"170\" height=\"75\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><rect x=\"235\" y=\"58\" width=\"170\" height=\"75\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\"/><rect x=\"435\" y=\"58\" width=\"170\" height=\"75\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"120\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Index / row</text><text x=\"120\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">Choose r</text><text x=\"320\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Coefficient</text><text x=\"320\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#14532d\">nCr</text><text x=\"520\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#92400e\">Term / result</text><text x=\"520\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#92400e\">Check position</text><path d=\"M205 95 H230 M405 95 H430\" stroke=\"#475569\" stroke-width=\"2\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Expand $(x + 2)^3$ using the Binomial Theorem.",
+          "solution_steps": [
+            "Step 1: Identify variables: $a = x$, $b = 2$, $n = 3$.",
+            "Step 2: Set up the full summation: $^3C_0(x^3)(2^0) + {^3C_1}(x^2)(2^1) + {^3C_2}(x^1)(2^2) + {^3C_3}(x^0)(2^3)$.",
+            "Step 3: Evaluate the Combinations ($1, 3, 3, 1$): $1(x^3)(1) + 3(x^2)(2) + 3(x)(4) + 1(1)(8)$.",
+            "Step 4: Multiply the internal constants: $x^3 + 6x^2 + 12x + 8$."
+          ],
+          "final_answer": "x³ + 6x² + 12x + 8"
+        },
+        {
+          "problem": "Expand $(2x-3)^4$.",
+          "solution_steps": [
+            "Apply the binomial theorem: $\\sum_{r=0}^{4}{}^{4}C_r(2x)^{4-r}(-3)^r$.",
+            "The five terms are $16x^4$, $-96x^3$, $216x^2$, $-216x$ and $81$.",
+            "Combine them in descending powers."
+          ],
+          "final_answer": "$16x^4-96x^3+216x^2-216x+81$"
+        },
+        {
+          "problem": "Find the coefficient of $x^3$ in $(1+2x)^5$.",
+          "solution_steps": [
+            "The general expansion term is ${}^{5}C_r(1)^{5-r}(2x)^r$.",
+            "For $x^3$, take $r=3$.",
+            "Coefficient $={}^{5}C_3\\times2^3=10\\times8=80$."
+          ],
+          "final_answer": "80"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting to apply powers to coefficients inside the binomial.",
+          "correction": "If expanding $(3x + y)^2$, the first term is $(3x)^2 = 9x^2$, NOT $3x^2$. The power applies to the entire chunk 'a'."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "Use the finite theorem for non-negative integer powers.",
+        "The coefficient of the term indexed r is ${}^{n}C_r$.",
+        "Powers of a descend and powers of b ascend."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Teach the binomial theorem for positive integer powers, including expansion, coefficient patterns, Pascal’s triangle connections and applications. Exclude non-integer and infinite binomial series."
+    },
+    "hss_math_t06_st10": {
+      "id": "hss_math_t06_st10",
+      "title": "General term of a binomial expansion",
+      "overview": "The binomial theorem gives a finite expansion of (a+b)^n for a non-negative integer n. Its coefficients are binomial coefficients, and the powers of a decrease while the powers of b increase.",
+      "key_concepts": [
+        {
+          "concept": "General term and index",
+          "definition": "In $(a+b)^n$, $T_{r+1}={}^{n}C_r a^{n-r}b^r$.",
+          "details": [
+            "The index begins at zero; therefore the kth term uses r=k−1."
+          ]
+        },
+        {
+          "concept": "Specified coefficient",
+          "definition": "Match the powers of the variables in the general term.",
+          "details": [
+            "Include numerical factors and signs when calculating the coefficient."
+          ]
+        },
+        {
+          "concept": "Constant term",
+          "definition": "Set the total exponent of the variable equal to zero.",
+          "details": [
+            "The resulting index must be an integer between 0 and n."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Binomial theorem",
+          "equation": "(a+b)^n=\\sum_{r=0}^{n}{}^nC_r a^{n-r}b^r",
+          "variables": "$n$ is a non-negative integer; the expansion has $n+1$ terms before any like terms are combined."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_hss_math_t06_st10",
+          "title": "General term selection",
+          "type": "svg",
+          "caption": "The index r identifies term number r+1 in a binomial expansion.",
+          "alt_text": "The index r identifies term number r+1 in a binomial expansion.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 170\"><rect width=\"640\" height=\"170\" rx=\"12\" fill=\"#f8fafc\"/><text x=\"320\" y=\"32\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" font-weight=\"bold\" fill=\"#0f172a\">General term selection</text><rect x=\"35\" y=\"58\" width=\"170\" height=\"75\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><rect x=\"235\" y=\"58\" width=\"170\" height=\"75\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\"/><rect x=\"435\" y=\"58\" width=\"170\" height=\"75\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"120\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Index / row</text><text x=\"120\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">Choose r</text><text x=\"320\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Coefficient</text><text x=\"320\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#14532d\">nCr</text><text x=\"520\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#92400e\">Term / result</text><text x=\"520\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#92400e\">Check position</text><path d=\"M205 95 H230 M405 95 H430\" stroke=\"#475569\" stroke-width=\"2\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the 4th term in the expansion of $(x - 2y)^7$.",
+          "solution_steps": [
+            "Step 1: Identify variables. $a = x$, $b = -2y$, $n = 7$.",
+            "Step 2: We want the 4th term, so $r = 4 - 1 = 3$.",
+            "Step 3: Apply the General Term formula: $T_4 = {^7C_3} (x)^{7-3} (-2y)^3$.",
+            "Step 4: Calculate combination: $^7C_3 = \\frac{7 \\times 6 \\times 5}{6} = 35$.",
+            "Step 5: Apply exponents: $35 (x^4) (-8y^3)$.",
+            "Step 6: Multiply constants: $35 \\times -8 = -280$."
+          ],
+          "final_answer": "-280x⁴y³"
+        },
+        {
+          "problem": "Write the general term in the expansion of $(3x-2y)^5$.",
+          "solution_steps": [
+            "For $(a+b)^n$, $T_{r+1}=\\binom nr a^{n-r}b^r$.",
+            "Here $a=3x$, $b=-2y$ and $n=5$.",
+            "Substitute the values."
+          ],
+          "final_answer": "$T_{r+1}=\\binom5r(3x)^{5-r}(-2y)^r$."
+        },
+        {
+          "problem": "Find the coefficient of $x^4y^2$ in $(3x+y)^6$.",
+          "solution_steps": [
+            "The general term is $T_{r+1}=\\binom6r(3x)^{6-r}y^r$.",
+            "To obtain $y^2$, set r=2; the power of x is then 4.",
+            "The coefficient is $\\binom62 3^4$."
+          ],
+          "final_answer": "$15\\times81=1215$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Plugging the term number directly in for $r$.",
+          "correction": "If a question asks for the 5th term, DO NOT use $r=5$. Because the series starts at zero, the 5th term corresponds to $r=4$."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "Write the general term with index r.",
+        "For the kth term, use r=k−1.",
+        "For a constant term, solve the exponent equation and check the index."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Use the general term to identify specified terms, calculate coefficients and solve problems involving powers of variables and constant terms."
+    },
+    "hss_math_t06_st11": {
+      "id": "hss_math_t06_st11",
+      "title": "Middle terms in binomial expansions",
+      "overview": "The general term identifies any selected term in a binomial expansion without writing every term. It is especially useful for specified term numbers, coefficients, powers and constant terms.",
+      "key_concepts": [
+        {
+          "concept": "Number of terms",
+          "definition": "The expansion of $(a+b)^n$ has n+1 terms.",
+          "details": [
+            "For even n there is one middle term; for odd n there are two."
+          ]
+        },
+        {
+          "concept": "Middle term when n is even",
+          "definition": "The middle term is at position $\\frac n2+1$.",
+          "details": [
+            "Substitute r=n/2 into the general term."
+          ]
+        },
+        {
+          "concept": "Middle terms when n is odd",
+          "definition": "The middle terms are at positions $(n+1)/2$ and $(n+3)/2$.",
+          "details": [
+            "Use r=(n−1)/2 and r=(n+1)/2 in the general term."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General term",
+          "equation": "T_{r+1}={}^nC_r a^{n-r}b^r",
+          "variables": "In $(a+b)^n$, $r=0,1,\\ldots,n$; the term number is $r+1$."
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v06_hss_math_t06_st11",
+          "title": "Locating middle terms",
+          "type": "svg",
+          "caption": "The parity of n determines whether there is one middle term or two.",
+          "alt_text": "The parity of n determines whether there is one middle term or two.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 170\"><rect width=\"640\" height=\"170\" rx=\"12\" fill=\"#f8fafc\"/><text x=\"320\" y=\"32\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" font-weight=\"bold\" fill=\"#0f172a\">Locating middle terms</text><rect x=\"35\" y=\"58\" width=\"170\" height=\"75\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><rect x=\"235\" y=\"58\" width=\"170\" height=\"75\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\"/><rect x=\"435\" y=\"58\" width=\"170\" height=\"75\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"120\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1e3a8a\">Index / row</text><text x=\"120\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1e3a8a\">Choose r</text><text x=\"320\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#14532d\">Coefficient</text><text x=\"320\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#14532d\">nCr</text><text x=\"520\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#92400e\">Term / result</text><text x=\"520\" y=\"111\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#92400e\">Check position</text><path d=\"M205 95 H230 M405 95 H430\" stroke=\"#475569\" stroke-width=\"2\"/></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the middle term in the expansion of $(x+2)^6$.",
+          "solution_steps": [
+            "There are 7 terms because n=6, so the middle term is the 4th term.",
+            "Use $T_{r+1}=\\binom6r x^{6-r}2^r$ with r=3.",
+            "Evaluate the coefficient and powers."
+          ],
+          "final_answer": "$T_4=\\binom63x^3(2)^3=160x^3$."
+        },
+        {
+          "problem": "Find the two middle terms in the expansion of $(2x-y)^5$.",
+          "solution_steps": [
+            "There are 6 terms because n=5, so the two middle terms are T3 and T4.",
+            "Use $T_{r+1}=\\binom5r(2x)^{5-r}(-y)^r$.",
+            "Evaluate for r=2 and r=3."
+          ],
+          "final_answer": "$T_3=80x^3y^2$ and $T_4=-40x^2y^3$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Plugging the term number directly in for $r$.",
+          "correction": "If a question asks for the 5th term, DO NOT use $r=5$. Because the series starts at zero, the 5th term corresponds to $r=4$."
+        },
+        {
+          "mistake": "Applying a formula without checking whether order matters, repetition is allowed, or the cases are mutually exclusive.",
+          "correction": "Define exactly what counts as one outcome and check all restrictions before selecting a formula."
+        }
+      ],
+      "quick_summary": [
+        "Count n+1 terms in the expansion.",
+        "Even n gives one middle term; odd n gives two.",
+        "Use the general term to calculate the middle term(s)."
+      ],
+      "registry_scope": "Approved HSS T06 audit — Draft 70: Determine the middle term or middle terms from the parity of the exponent and apply the general-term formula to calculate them."
+    }
+  }
+}

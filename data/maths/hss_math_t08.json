@@ -1,0 +1,1241 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t08",
+  "topicTitle": "Coordinate Geometry: Lines and Circles",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t08_st01": {
+      "id": "hss_math_t08_st01",
+      "title": "Cartesian coordinate system",
+      "overview": "Coordinate geometry merges algebra and geometry. By placing shapes onto a mathematical grid, we can use numbers and equations to calculate their exact positions, lengths, and intersections without ever drawing them.",
+      "key_concepts": [
+        {
+          "concept": "The Coordinate Plane",
+          "definition": "The mathematical map.",
+          "details": [
+            "Formed by two perpendicular number lines: the horizontal x-axis and vertical y-axis.",
+            "They intersect at exactly $(0,0)$, known as the Origin."
+          ]
+        },
+        {
+          "concept": "Ordered Pairs $(x, y)$",
+          "definition": "The address.",
+          "details": [
+            "Every point is defined by an $x$-coordinate (distance left/right) and a $y$-coordinate (distance up/down).",
+            "Points exactly on the x-axis have a y-coordinate of $0$ (e.g., $(5, 0)$). Points on the y-axis have an x-coordinate of $0$ (e.g., $(0, -3)$)."
+          ]
+        },
+        {
+          "concept": "The Four Quadrants",
+          "definition": "The four zones.",
+          "details": [
+            "**Q1 (Top Right):** $(+, +)$.",
+            "**Q2 (Top Left):** $(-, +)$.",
+            "**Q3 (Bottom Left):** $(-, -)$.",
+            "**Q4 (Bottom Right):** $(+, -)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Quadrant sign pattern",
+          "equation": "$$Q1:(+,+), Q2:(-,+), Q3:(-,-), Q4:(+,-)$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s01",
+          "title": "Cartesian coordinate system",
+          "type": "svg",
+          "caption": "The axes divide the plane into four distinct quadrants, numbered counter-clockwise.",
+          "alt_text": "A standard coordinate plane with x and y axes. Q1 is top-right labeled (+,+). Q2 is top-left labeled (-,+). Q3 is bottom-left labeled (-,-). Q4 is bottom-right labeled (+,-).",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 250 20 L 250 230\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\"/><path d=\"M 100 125 L 400 125\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\"/><text x=\"325\" y=\"100\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-weight=\"bold\">Q1</text><text x=\"325\" y=\"120\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#1e3a8a\">(+, +)</text><text x=\"175\" y=\"100\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">Q2</text><text x=\"175\" y=\"120\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\">(-, +)</text><text x=\"175\" y=\"170\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#14532d\" font-weight=\"bold\">Q3</text><text x=\"175\" y=\"190\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#14532d\">(-, -)</text><text x=\"325\" y=\"170\" font-family=\"sans-serif\" font-size=\"24\" text-anchor=\"middle\" fill=\"#a16207\" font-weight=\"bold\">Q4</text><text x=\"325\" y=\"190\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#a16207\">(+, -)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Determine which quadrant or axis the point $(-4, 0)$ lies on.",
+          "solution_steps": [
+            "Step 1: Check the coordinates. The x-coordinate is $-4$, meaning we move $4$ units left.",
+            "Step 2: The y-coordinate is $0$, meaning we do not move up or down.",
+            "Step 3: Because the point does not leave the horizontal line, it is not in any quadrant."
+          ],
+          "final_answer": "It lies on the negative x-axis."
+        },
+        {
+          "problem": "The points A(-3, 2), B(4, 2) and C(0, -5) are plotted. State the location of each point and identify which pair has the same y-coordinate.",
+          "solution_steps": [
+            "Step 1: A(-3,2) lies in Quadrant II, B(4,2) lies in Quadrant I, and C(0,-5) lies on the negative y-axis",
+            "Step 2: A and B have the same y-coordinate, so they lie on the horizontal line y=2."
+          ],
+          "final_answer": "A is in QII, B is in QI, C is on the negative y-axis; A and B share y=2."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Swapping the x and y coordinates.",
+          "correction": "Always read coordinates alphabetically: $(x, y)$. Left/Right comes first, then Up/Down."
+        }
+      ],
+      "quick_summary": [
+        "The Cartesian plane maps geometric shapes using $(x,y)$ coordinate numbers.",
+        "The plane is divided into four quadrants, numbered counter-clockwise starting from the top right.",
+        "Points with a zero coordinate lie exactly on the boundary axes, not inside a quadrant."
+      ],
+      "registry_scope": "Approved lesson-level scope: Revise Cartesian coordinates and develop analytical interpretation of geometric relationships, including coordinate-based representations of points and geometric configurations. Keep foundational plotting exercises as revision rather than the main Higher Secondary focus. Approved HSS T08 sequence: retained in the approved progression from coordinate foundations through straight lines, circle equations, intersections and integrated coordinate problems."
+    },
+    "hss_math_t08_st02": {
+      "id": "hss_math_t08_st02",
+      "title": "Distance and section formulas",
+      "overview": "If you know the exact map coordinates of two cities, you can calculate the exact straight-line distance between them. Furthermore, you can find the coordinates of any point that divides that line into specific fractional parts.",
+      "key_concepts": [
+        {
+          "concept": "The Distance Formula",
+          "definition": "Pythagoras on a grid.",
+          "details": [
+            "The distance $d$ between points $(x_1, y_1)$ and $(x_2, y_2)$ is derived directly from the Pythagorean theorem ($a^2 + b^2 = c^2$).",
+            "Formula: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$."
+          ]
+        },
+        {
+          "concept": "Internal Division (Section Formula)",
+          "definition": "Splitting the line.",
+          "details": [
+            "If you want to find a point $P$ that splits a line segment into a specific ratio $m:n$, you 'cross-multiply' the ratio with the opposite coordinates.",
+            "x-coordinate: $\\frac{m x_2 + n x_1}{m + n}$. y-coordinate: $\\frac{m y_2 + n y_1}{m + n}$."
+          ]
+        },
+        {
+          "concept": "External Division",
+          "definition": "Outside the line.",
+          "details": [
+            "If the point lies on the extended line *outside* the original segment, the formula changes to subtraction: $\\frac{m x_2 - n x_1}{m - n}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Distance Formula",
+          "equation": "$$ d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} $$",
+          "variables": {}
+        },
+        {
+          "name": "Section Formula (Internal)",
+          "equation": "$$ P(x,y) = \\left( \\frac{mx_2 + nx_1}{m+n}, \\frac{my_2 + ny_1}{m+n} \\right) $$",
+          "variables": {
+            "m, n": "The parts of the ratio m:n"
+          }
+        },
+        {
+          "name": "Internal section formula",
+          "equation": "$$P=\\left(\\frac{nx_1+mx_2}{m+n},\\frac{ny_1+my_2}{m+n}\\right),\\quad AP:PB=m:n$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_02",
+          "title": "Distance and section formulas",
+          "type": "svg",
+          "caption": "Schematic representation of distance and section formulas.",
+          "alt_text": "Coordinate geometry diagram illustrating distance and section formulas.",
+          "data": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M55 235 H475 M95 255 V25\" stroke=\"#475569\" stroke-width=\"2.5\"/><path d=\"M475 235 l-9 -5 v10 z M95 25 l-5 9 h10 z\" fill=\"#475569\"/><text x=\"482\" y=\"240\" font-size=\"13\" fill=\"#334155\">x</text><text x=\"102\" y=\"24\" font-size=\"13\" fill=\"#334155\">y</text><path d=\"M150 185 L420 65\" stroke=\"#0f766e\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"185\" r=\"5\" fill=\"#0f766e\"/><circle cx=\"420\" cy=\"65\" r=\"5\" fill=\"#0f766e\"/><circle cx=\"258\" cy=\"137\" r=\"5\" fill=\"#dc2626\"/><text x=\"130\" y=\"205\" font-size=\"14\">A</text><text x=\"425\" y=\"62\" font-size=\"14\">B</text><text x=\"260\" y=\"157\" font-size=\"14\">P</text><text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Distance and section formulas</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the distance between $A(2, 3)$ and $B(5, 7)$.",
+          "solution_steps": [
+            "Step 1: Identify coordinates: $x_1=2, y_1=3$ and $x_2=5, y_2=7$.",
+            "Step 2: Apply the distance formula: $d = \\sqrt{(5 - 2)^2 + (7 - 3)^2}$.",
+            "Step 3: Calculate the differences inside the brackets: $d = \\sqrt{(3)^2 + (4)^2}$.",
+            "Step 4: Square the numbers: $d = \\sqrt{9 + 16}$.",
+            "Step 5: Add and root: $d = \\sqrt{25} = 5$."
+          ],
+          "final_answer": "5 units"
+        },
+        {
+          "problem": "Find the coordinates of the point P dividing A(-2, 5) and B(8, -1) internally in the ratio AP:PB = 2:3.",
+          "solution_steps": [
+            "Step 1: For AP:PB=m:n, P=((nx₁+mx₂)/(m+n),(ny₁+my₂)/(m+n))",
+            "Step 2: Here m=2, n=3",
+            "Step 3: Thus x=(3(-2)+2(8))/5=10/5=2 and y=(3(5)+2(-1))/5=13/5."
+          ],
+          "final_answer": "P=(2,13/5)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding instead of subtracting inside the distance formula brackets.",
+          "correction": "You are calculating the physical *difference* (length) between the x-values and y-values, so it must be subtraction: $(x_2 - x_1)$. The squaring then makes the negative or positive distance irrelevant."
+        }
+      ],
+      "quick_summary": [
+        "The Distance formula is just the Pythagorean theorem adapted for coordinate points.",
+        "The Section formula finds the exact $(x,y)$ coordinates that divide a line into a specific $m:n$ ratio.",
+        "Internal division uses addition in the formula; External division uses subtraction."
+      ],
+      "registry_scope": "Approved lesson-level scope: Extend distance and internal/external section formulas to more complex coordinate problems, including applications involving ratios and geometric relationships. The midpoint formula may be mentioned as a special case, but its full treatment belongs in subtopic 3. Approved HSS T08 sequence: retained in the approved progression from coordinate foundations through straight lines, circle equations, intersections and integrated coordinate problems."
+    },
+    "hss_math_t08_st03": {
+      "id": "hss_math_t08_st03",
+      "title": "Midpoint and centroid",
+      "overview": "If you want to cut a line perfectly in half, or find the perfect balancing center of a triangle, you use averages. The Midpoint and Centroid formulas are simply averages of the given coordinates.",
+      "key_concepts": [
+        {
+          "concept": "The Midpoint Formula",
+          "definition": "The exact middle.",
+          "details": [
+            "The midpoint is a specific case of the Section Formula where the ratio is exactly $1:1$.",
+            "To find it, you simply average the x-coordinates and average the y-coordinates: $\\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)$."
+          ]
+        },
+        {
+          "concept": "The Centroid of a Triangle",
+          "definition": "The center of mass.",
+          "details": [
+            "The centroid is the point where all three medians of a triangle intersect. It is the perfect balance point of the shape.",
+            "It is found by taking the average of all three vertex coordinates: $\\left(\\frac{x_1 + x_2 + x_3}{3}, \\frac{y_1 + y_2 + y_3}{3}\\right)$."
+          ]
+        },
+        {
+          "concept": "The $2:1$ Property",
+          "definition": "Centroid division.",
+          "details": [
+            "A geometric rule states that the centroid always divides every median of the triangle into a strict $2:1$ ratio, with the longer part closer to the vertex."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Midpoint Formula",
+          "equation": "$$ M = \\left( \\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2} \\right) $$",
+          "variables": {}
+        },
+        {
+          "name": "Centroid Formula",
+          "equation": "$$ G = \\left( \\frac{x_1 + x_2 + x_3}{3}, \\frac{y_1 + y_2 + y_3}{3} \\right) $$",
+          "variables": {}
+        },
+        {
+          "name": "Centroid of a triangle",
+          "equation": "$$G=\\left(\\frac{x_1+x_2+x_3}{3},\\frac{y_1+y_2+y_3}{3}\\right)$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_03",
+          "title": "Midpoint and centroid",
+          "type": "svg",
+          "caption": "Schematic representation of midpoint and centroid.",
+          "alt_text": "Coordinate geometry diagram illustrating midpoint and centroid.",
+          "data": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M55 235 H475 M95 255 V25\" stroke=\"#475569\" stroke-width=\"2.5\"/><path d=\"M475 235 l-9 -5 v10 z M95 25 l-5 9 h10 z\" fill=\"#475569\"/><text x=\"482\" y=\"240\" font-size=\"13\" fill=\"#334155\">x</text><text x=\"102\" y=\"24\" font-size=\"13\" fill=\"#334155\">y</text><path d=\"M155 205 L400 205 L270 45 Z\" fill=\"none\" stroke=\"#0f766e\" stroke-width=\"3\"/><path d=\"M270 45 L270 205 M155 205 L335 125 M400 205 L215 125\" stroke=\"#94a3b8\" stroke-dasharray=\"5 4\" stroke-width=\"2\"/><circle cx=\"275\" cy=\"152\" r=\"6\" fill=\"#dc2626\"/><text x=\"286\" y=\"151\" font-size=\"14\">G</text><text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Midpoint and centroid</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the centroid of a triangle with vertices $A(1, 2)$, $B(4, 6)$, and $C(7, -2)$.",
+          "solution_steps": [
+            "Step 1: Identify all three x-coordinates: $1, 4, 7$.",
+            "Step 2: Average the x-coordinates: $\\frac{1 + 4 + 7}{3} = \\frac{12}{3} = 4$.",
+            "Step 3: Identify all three y-coordinates: $2, 6, -2$.",
+            "Step 4: Average the y-coordinates: $\\frac{2 + 6 + (-2)}{3} = \\frac{6}{3} = 2$.",
+            "Step 5: Combine into a single coordinate point."
+          ],
+          "final_answer": "(4, 2)"
+        },
+        {
+          "problem": "Find the centroid of the triangle with vertices A(-3, 1), B(6, 4) and C(0, -2).",
+          "solution_steps": [
+            "Step 1: The centroid G is the average of the three x-coordinates and the three y-coordinates",
+            "Step 2: x_G=(-3+6+0)/3=1; y_G=(1+4-2)/3=1."
+          ],
+          "final_answer": "G=(1,1)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the distance formula instead of the midpoint formula.",
+          "correction": "If a question asks for the coordinates of the middle of the line, use the Midpoint average formula. If it asks how long the line is, use the Distance root formula."
+        }
+      ],
+      "quick_summary": [
+        "The Midpoint formula finds the center of a line segment by averaging two points.",
+        "The Centroid formula finds the physical center of a triangle by averaging three points.",
+        "The centroid is exactly where the three medians of the triangle intersect."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop midpoint and centroid formulas, including coordinate-based reasoning, derivations and applications to triangles and other geometric configurations. Approved HSS T08 sequence: retained in the approved progression from coordinate foundations through straight lines, circle equations, intersections and integrated coordinate problems."
+    },
+    "hss_math_t08_st04": {
+      "id": "hss_math_t08_st04",
+      "title": "Slope of a straight line",
+      "overview": "A line isn't just defined by where it is, but by how steep it is. The 'slope' (or gradient) mathematically measures this steepness, allowing us to determine if lines are parallel, perpendicular, or intersecting.",
+      "key_concepts": [
+        {
+          "concept": "The Slope Formula ($m$)",
+          "definition": "Rise over Run.",
+          "details": [
+            "Slope measures the vertical change (rise) divided by the horizontal change (run).",
+            "Given two points on the line, $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+          ]
+        },
+        {
+          "concept": "Slope via Inclination Angle ($\\theta$)",
+          "definition": "The tangent link.",
+          "details": [
+            "If you know the angle $\\theta$ the line makes with the positive x-axis, the slope is exactly equal to the tangent of that angle: $m = \\tan\\theta$.",
+            "A horizontal line has an angle of $0^\\circ$, so $m = \\tan(0) = 0$.",
+            "A vertical line has an angle of $90^\\circ$, so $m = \\tan(90^\\circ) = \\text{undefined}$."
+          ]
+        },
+        {
+          "concept": "Positive vs Negative Slope",
+          "definition": "Uphill vs Downhill.",
+          "details": [
+            "If a line travels upwards from left to right, the slope is Positive.",
+            "If a line travels downwards from left to right, the slope is Negative."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Slope (Two Points)",
+          "equation": "$$ m = \\frac{y_2 - y_1}{x_2 - x_1} $$",
+          "variables": {}
+        },
+        {
+          "name": "Slope (Inclination Angle)",
+          "equation": "$$ m = \\tan\\theta $$",
+          "variables": {}
+        },
+        {
+          "name": "Slope formula",
+          "equation": "$$m=\\frac{y_2-y_1}{x_2-x_1},\\quad x_2\\ne x_1$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_s04",
+          "title": "Slope of a straight line",
+          "type": "svg",
+          "caption": "Slope is calculated by dividing the vertical y-change by the horizontal x-change.",
+          "alt_text": "A diagonal line slanting upwards. A triangle is drawn under it. The horizontal bottom leg is labeled 'Run: (x2 - x1)'. The vertical leg is labeled 'Rise: (y2 - y1)'.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 100 200 L 400 50\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><circle cx=\"160\" cy=\"170\" r=\"6\" fill=\"#1e3a8a\"/><text x=\"130\" y=\"160\" font-family=\"monospace\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">(x₁, y₁)</text><circle cx=\"360\" cy=\"70\" r=\"6\" fill=\"#1e3a8a\"/><text x=\"370\" y=\"60\" font-family=\"monospace\" font-size=\"14\" fill=\"#1e3a8a\" font-weight=\"bold\">(x₂, y₂)</text><path d=\"M 160 170 L 360 170\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"6,4\"/><text x=\"260\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Run (x₂ - x₁)</text><path d=\"M 360 170 L 360 70\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\" stroke-dasharray=\"6,4\"/><text x=\"375\" y=\"125\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#991b1b\" font-weight=\"bold\">Rise (y₂ - y₁)</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the slope of the line passing through $(-2, 4)$ and $(3, -1)$.",
+          "solution_steps": [
+            "Step 1: Assign $(x_1, y_1)$ to $(-2, 4)$ and $(x_2, y_2)$ to $(3, -1)$.",
+            "Step 2: Apply the slope formula: $m = \\frac{y_2 - y_1}{x_2 - x_1}$.",
+            "Step 3: Substitute the coordinates: $m = \\frac{-1 - 4}{3 - (-2)}$.",
+            "Step 4: Simplify numerator and denominator: $m = \\frac{-5}{3 + 2} = \\frac{-5}{5}$.",
+            "Step 5: Reduce."
+          ],
+          "final_answer": "-1"
+        },
+        {
+          "problem": "Find the slope of the line through P(2,-3) and Q(2,5). Explain the result.",
+          "solution_steps": [
+            "Step 1: m=(y₂-y₁)/(x₂-x₁)=(5-(-3))/(2-2)=8/0, which is undefined",
+            "Step 2: The x-coordinate is constant, so the line is vertical."
+          ],
+          "final_answer": "The slope is undefined; the line is x=2."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Mixing up the order of subtraction.",
+          "correction": "You must be perfectly consistent. If you start with $y_2$ on the top, you MUST start with $x_2$ on the bottom. $\\frac{y_2 - y_1}{x_1 - x_2}$ will result in the wrong sign."
+        }
+      ],
+      "quick_summary": [
+        "Slope ($m$) measures the steepness and direction of a line.",
+        "It is calculated using Rise over Run: $\\frac{y_2 - y_1}{x_2 - x_1}$.",
+        "It can also be calculated as the tangent of the line's angle of inclination with the x-axis ($m = \\tan\\theta$)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop slope as a measure of inclination, including horizontal and vertical lines, undefined slope and relationships between slope and direction. Approved HSS T08 sequence: retained in the approved progression from coordinate foundations through straight lines, circle equations, intersections and integrated coordinate problems."
+    },
+    "hss_math_t08_st05": {
+      "id": "hss_math_t08_st05",
+      "title": "Different forms of a line equation",
+      "overview": "Depending on the information you have—whether it's two points, one point and an angle, or where the line hits the axes—you can write the equation of a straight line in several different formats.",
+      "key_concepts": [
+        {
+          "concept": "General Form",
+          "definition": "The standard layout.",
+          "details": [
+            "$Ax + By + C = 0$.",
+            "This is the most formal way to write a line equation. From this form, the slope is always $m = -\\frac{A}{B}$ and the y-intercept is $-\\frac{C}{B}$."
+          ]
+        },
+        {
+          "concept": "Point-Slope Form",
+          "definition": "The most versatile.",
+          "details": [
+            "If you know the slope $m$ and any single point $(x_1, y_1)$ on the line.",
+            "Formula: $y - y_1 = m(x - x_1)$."
+          ]
+        },
+        {
+          "concept": "Slope-Intercept Form",
+          "definition": "The graphing standard.",
+          "details": [
+            "If you know the slope $m$ and exactly where the line crosses the y-axis ($c$).",
+            "Formula: $y = mx + c$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Form",
+          "equation": "$$ Ax + By + C = 0 $$",
+          "variables": {}
+        },
+        {
+          "name": "Point-Slope Form",
+          "equation": "$$ y - y_1 = m(x - x_1) $$",
+          "variables": {}
+        },
+        {
+          "name": "Slope-Intercept Form",
+          "equation": "$$ y = mx + c $$",
+          "variables": {}
+        },
+        {
+          "name": "Intercept form",
+          "equation": "$$\\frac{x}{a}+\\frac{y}{b}=1,\\quad a,b\\ne0$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_05",
+          "title": "Different forms of a line equation",
+          "type": "svg",
+          "caption": "Schematic representation of different forms of a line equation.",
+          "alt_text": "Coordinate geometry diagram illustrating different forms of a line equation.",
+          "data": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M55 235 H475 M95 255 V25\" stroke=\"#475569\" stroke-width=\"2.5\"/><path d=\"M475 235 l-9 -5 v10 z M95 25 l-5 9 h10 z\" fill=\"#475569\"/><text x=\"482\" y=\"240\" font-size=\"13\" fill=\"#334155\">x</text><text x=\"102\" y=\"24\" font-size=\"13\" fill=\"#334155\">y</text><path d=\"M120 210 L420 60\" stroke=\"#0f766e\" stroke-width=\"3\"/><circle cx=\"120\" cy=\"210\" r=\"5\" fill=\"#dc2626\"/><circle cx=\"420\" cy=\"60\" r=\"5\" fill=\"#dc2626\"/><text x=\"125\" y=\"230\" font-size=\"14\">intercept</text><text x=\"340\" y=\"90\" font-size=\"14\">y=mx+c</text><text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Different forms of a line equation</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the equation of a line with slope $3$ passing through $(2, 5)$ and convert it to General Form.",
+          "solution_steps": [
+            "Step 1: You have a slope and a point, so use Point-Slope form: $y - y_1 = m(x - x_1)$.",
+            "Step 2: Substitute values: $y - 5 = 3(x - 2)$.",
+            "Step 3: Distribute the 3: $y - 5 = 3x - 6$.",
+            "Step 4: To get General Form, move everything to one side so it equals zero.",
+            "Step 5: Subtract $y$ and add $5$: $3x - y - 1 = 0$."
+          ],
+          "final_answer": "3x - y - 1 = 0"
+        },
+        {
+          "problem": "Find the equation of the line through (2,-1) and (6,7) in point-slope, slope-intercept and general forms.",
+          "solution_steps": [
+            "Step 1: The slope is m=(7+1)/(6-2)=2",
+            "Step 2: Point-slope form using (2,-1): y+1=2(x-2)",
+            "Step 3: Simplifying gives y=2x-5, hence general form 2x-y-5=0."
+          ],
+          "final_answer": "y+1=2(x-2); y=2x-5; 2x-y-5=0."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to use the two-point formula without calculating the slope first.",
+          "correction": "If given two points, you must calculate the slope $m = \\frac{y_2 - y_1}{x_2 - x_1}$ first, and then plug that $m$ along with EITHER of the points into the Point-Slope form."
+        }
+      ],
+      "quick_summary": [
+        "The General Form $Ax + By + C = 0$ is the standard way to present a line equation.",
+        "The Point-Slope Form $y - y_1 = m(x - x_1)$ is the easiest way to build an equation from raw data.",
+        "The Slope-Intercept Form $y = mx + c$ is the easiest way to graph a line quickly."
+      ],
+      "registry_scope": "Approved lesson-level scope: Study general, slope-intercept, point-slope and intercept forms of a line equation. Convert between forms and interpret their parameters. Approved HSS T08 sequence: retained in the approved progression from coordinate foundations through straight lines, circle equations, intersections and integrated coordinate problems."
+    },
+    "hss_math_t08_st06": {
+      "id": "hss_math_t08_st06",
+      "title": "Angle between two lines",
+      "overview": "When two lines intersect on a graph, they create an angle. By comparing the individual slopes of the two lines, we can calculate the exact acute angle at which they collide.",
+      "key_concepts": [
+        {
+          "concept": "The Angle Formula",
+          "definition": "Comparing slopes.",
+          "details": [
+            "If Line 1 has slope $m_1$ and Line 2 has slope $m_2$, the acute angle $\\theta$ between them is found using the tangent difference formula.",
+            "$\\tan\\theta = \\left| \\frac{m_2 - m_1}{1 + m_1 m_2} \\right|$."
+          ]
+        },
+        {
+          "concept": "Absolute Value",
+          "definition": "Keeping it acute.",
+          "details": [
+            "Intersecting lines create two angles (an acute one and an obtuse one that add to $180^\\circ$).",
+            "Taking the absolute value ensures the formula outputs the positive tangent, which corresponds to the smaller acute angle."
+          ]
+        },
+        {
+          "concept": "Undefined Cases",
+          "definition": "Vertical lines.",
+          "details": [
+            "If the denominator $1 + m_1 m_2 = 0$, then $\\tan\\theta$ is undefined, which means the angle is $90^\\circ$ (the lines are perfectly perpendicular)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Angle Between Lines",
+          "equation": "$$ \\tan\\theta = \\left| \\frac{m_2 - m_1}{1 + m_1 m_2} \\right| $$",
+          "variables": {
+            "m_1, m_2": "Slopes of the two intersecting lines"
+          }
+        },
+        {
+          "name": "Angle between two non-vertical lines",
+          "equation": "$$\\tan\\theta=\\left|\\frac{m_2-m_1}{1+m_1m_2}\\right|$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_06",
+          "title": "Angle between two lines",
+          "type": "svg",
+          "caption": "Schematic representation of angle between two lines.",
+          "alt_text": "Coordinate geometry diagram illustrating angle between two lines.",
+          "data": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M55 235 H475 M95 255 V25\" stroke=\"#475569\" stroke-width=\"2.5\"/><path d=\"M475 235 l-9 -5 v10 z M95 25 l-5 9 h10 z\" fill=\"#475569\"/><text x=\"482\" y=\"240\" font-size=\"13\" fill=\"#334155\">x</text><text x=\"102\" y=\"24\" font-size=\"13\" fill=\"#334155\">y</text><path d=\"M125 210 L420 55 M125 210 L420 170\" stroke=\"#0f766e\" stroke-width=\"3\"/><path d=\"M180 181 A65 65 0 0 0 185 178\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"205\" y=\"185\" font-size=\"16\">θ</text><text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Angle between two lines</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the acute angle between two lines with slopes $2$ and $-3$.",
+          "solution_steps": [
+            "Step 1: Identify variables: $m_1 = 2$, $m_2 = -3$.",
+            "Step 2: Apply the formula: $\\tan\\theta = \\left| \\frac{-3 - 2}{1 + (2)(-3)} \\right|$.",
+            "Step 3: Simplify the numerator: $-3 - 2 = -5$.",
+            "Step 4: Simplify the denominator: $1 - 6 = -5$.",
+            "Step 5: Divide inside the absolute value: $\\tan\\theta = \\left| \\frac{-5}{-5} \\right| = |1| = 1$.",
+            "Step 6: If $\\tan\\theta = 1$, the reference angle is $45^\\circ$ or $\\frac{\\pi}{4}$."
+          ],
+          "final_answer": "45° or π/4"
+        },
+        {
+          "problem": "Find the smaller angle between the lines 3x-y+4=0 and x+2y-5=0.",
+          "solution_steps": [
+            "Step 1: Their slopes are m₁=3 and m₂=-1/2",
+            "Step 2: tan θ=|(m₂-m₁)/(1+m₁m₂)|=|(-1/2-3)/(1-3/2)|=7",
+            "Step 3: Therefore θ=tan⁻¹(7), approximately 81.87°."
+          ],
+          "final_answer": "The smaller angle is tan⁻¹(7) ≈ 81.87°."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting the absolute value brackets.",
+          "correction": "Without the absolute value, depending on which slope you designate as $m_1$, you might get a negative tangent, which will yield the larger, obtuse angle instead of the standard acute angle."
+        }
+      ],
+      "quick_summary": [
+        "The angle between two lines can be found strictly by plugging their slopes into the tangent formula.",
+        "The formula uses absolute value to guarantee it returns the acute (smaller) angle of intersection.",
+        "If the formula results in division by zero, the lines meet at exactly $90^\\circ$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Derive and apply the angle-between-two-lines formula using slopes. Include acute and obtuse angles and special cases. Approved HSS T08 sequence: retained in the approved progression from coordinate foundations through straight lines, circle equations, intersections and integrated coordinate problems."
+    },
+    "hss_math_t08_st07": {
+      "id": "hss_math_t08_st07",
+      "title": "Parallel and perpendicular lines",
+      "overview": "You don't need to graph two lines to know if they run side-by-side or crash at a perfect 90-degree angle. The slopes of the lines instantly reveal their geometric relationship.",
+      "key_concepts": [
+        {
+          "concept": "Parallel Lines",
+          "definition": "Identical slopes.",
+          "details": [
+            "If two lines are parallel, they have the exact same steepness and direction.",
+            "Mathematical condition: $m_1 = m_2$."
+          ]
+        },
+        {
+          "concept": "Perpendicular Lines",
+          "definition": "Negative reciprocals.",
+          "details": [
+            "If two lines meet at a perfect right angle ($90^\\circ$), their slopes are 'negative reciprocals' of each other (flip the fraction, flip the sign).",
+            "Mathematical condition: $m_1 \\times m_2 = -1$ (or $m_1 = -\\frac{1}{m_2}$)."
+          ]
+        },
+        {
+          "concept": "General Equation Shortcuts",
+          "definition": "Swapping coefficients.",
+          "details": [
+            "A line parallel to $Ax + By + C = 0$ will have the same $A$ and $B$, but a different constant: $Ax + By + K = 0$.",
+            "A line perpendicular to $Ax + By + C = 0$ swaps the $A$ and $B$ coefficients and flips the middle sign: $Bx - Ay + K = 0$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Parallel Condition",
+          "equation": "$$ m_1 = m_2 $$",
+          "variables": {}
+        },
+        {
+          "name": "Perpendicular Condition",
+          "equation": "$$ m_1 m_2 = -1 $$",
+          "variables": {}
+        },
+        {
+          "name": "Perpendicular line condition",
+          "equation": "$$m_1m_2=-1\\quad\\text{(when both slopes are defined)}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_07",
+          "title": "Parallel and perpendicular lines",
+          "type": "svg",
+          "caption": "Schematic representation of parallel and perpendicular lines.",
+          "alt_text": "Coordinate geometry diagram illustrating parallel and perpendicular lines.",
+          "data": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M55 235 H475 M95 255 V25\" stroke=\"#475569\" stroke-width=\"2.5\"/><path d=\"M475 235 l-9 -5 v10 z M95 25 l-5 9 h10 z\" fill=\"#475569\"/><text x=\"482\" y=\"240\" font-size=\"13\" fill=\"#334155\">x</text><text x=\"102\" y=\"24\" font-size=\"13\" fill=\"#334155\">y</text><path d=\"M130 210 L410 70 M130 70 L270 210\" stroke=\"#0f766e\" stroke-width=\"3\"/><path d=\"M130 210 L130 70 L270 210\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\"/><text x=\"145\" y=\"95\" font-size=\"14\">90°</text><text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Parallel and perpendicular lines</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Determine if the lines $3x - 4y + 5 = 0$ and $4x + 3y - 2 = 0$ are parallel, perpendicular, or neither.",
+          "solution_steps": [
+            "Step 1: Find the slope of Line 1 using $m = -\\frac{A}{B}$. $m_1 = -\\frac{3}{-4} = \\frac{3}{4}$.",
+            "Step 2: Find the slope of Line 2. $m_2 = -\\frac{4}{3}$.",
+            "Step 3: Check for parallel. Does $m_1 = m_2$? No ($\\frac{3}{4} \\neq -\\frac{4}{3}$).",
+            "Step 4: Check for perpendicular. Does $m_1 \\times m_2 = -1$? $(\\frac{3}{4}) \\times (-\\frac{4}{3}) = -\\frac{12}{12} = -1$. Yes."
+          ],
+          "final_answer": "Perpendicular"
+        },
+        {
+          "problem": "Find k if the lines 2x+ky-7=0 and 4x-6y+3=0 are perpendicular.",
+          "solution_steps": [
+            "Step 1: For Ax+By+C=0, slope=-A/B",
+            "Step 2: Thus m₁=-2/k and m₂=2/3",
+            "Step 3: Perpendicular non-vertical lines satisfy m₁m₂=-1: (-2/k)(2/3)=-1, so k=4/3."
+          ],
+          "final_answer": "k=4/3."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking perpendicular slopes just have opposite signs.",
+          "correction": "A slope of $2$ and a slope of $-2$ are NOT perpendicular. You must flip the sign AND flip the fraction. The perpendicular slope to $2$ (which is $2/1$) is $-1/2$."
+        }
+      ],
+      "quick_summary": [
+        "Parallel lines have exactly equal slopes ($m_1 = m_2$).",
+        "Perpendicular lines have slopes that multiply to $-1$ ($m_1 m_2 = -1$).",
+        "You can instantly write the framework for a parallel or perpendicular line by manipulating the coefficients of the general equation $Ax + By + C = 0$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop analytical conditions for parallel and perpendicular lines using slopes and line equations. Include problems involving unknown coefficients and geometric configurations. Approved HSS T08 sequence: retained in the approved progression from coordinate foundations through straight lines, circle equations, intersections and integrated coordinate problems."
+    },
+    "hss_math_t08_st08": {
+      "id": "hss_math_t08_st08",
+      "title": "Distance from a point to a line",
+      "overview": "If you are standing in a field and want to walk to a nearby road, the shortest path is a straight line perpendicular to the road. This lesson provides the formula to calculate that exact minimum distance.",
+      "key_concepts": [
+        {
+          "concept": "The Shortest Path",
+          "definition": "Perpendicular distance.",
+          "details": [
+            "The distance from a point to a line ALWAYS refers to the shortest possible path, which is a perfect $90^\\circ$ perpendicular drop from the point to the line."
+          ]
+        },
+        {
+          "concept": "The Distance Formula",
+          "definition": "Plugging it in.",
+          "details": [
+            "To find the distance $d$ from point $(x_1, y_1)$ to the line $Ax + By + C = 0$, you plug the point's coordinates directly into the line equation, take the absolute value, and divide by the Pythagorean length of the coefficients.",
+            "$d = \\frac{|Ax_1 + By_1 + C|}{\\sqrt{A^2 + B^2}}$."
+          ]
+        },
+        {
+          "concept": "Distance Between Parallel Lines",
+          "definition": "The constant gap.",
+          "details": [
+            "If two lines are parallel, their $A$ and $B$ coefficients are identical ($Ax+By+C_1=0$ and $Ax+By+C_2=0$).",
+            "The distance between them is the difference of their constants: $d = \\frac{|C_1 - C_2|}{\\sqrt{A^2 + B^2}}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Point to Line Distance",
+          "equation": "$$ d = \\frac{|Ax_1 + By_1 + C|}{\\sqrt{A^2 + B^2}} $$",
+          "variables": {
+            "A,B,C": "Coefficients of line equation",
+            "x_1,y_1": "Coordinates of the point"
+          }
+        },
+        {
+          "name": "Distance Between Parallel Lines",
+          "equation": "$$ d = \\frac{|C_1 - C_2|}{\\sqrt{A^2 + B^2}} $$",
+          "variables": {}
+        },
+        {
+          "name": "Distance between parallel lines",
+          "equation": "$$d=\\frac{|C_2-C_1|}{\\sqrt{A^2+B^2}}$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_08",
+          "title": "Distance from a point to a line",
+          "type": "svg",
+          "caption": "Schematic representation of distance from a point to a line.",
+          "alt_text": "Coordinate geometry diagram illustrating distance from a point to a line.",
+          "data": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M55 235 H475 M95 255 V25\" stroke=\"#475569\" stroke-width=\"2.5\"/><path d=\"M475 235 l-9 -5 v10 z M95 25 l-5 9 h10 z\" fill=\"#475569\"/><text x=\"482\" y=\"240\" font-size=\"13\" fill=\"#334155\">x</text><text x=\"102\" y=\"24\" font-size=\"13\" fill=\"#334155\">y</text><path d=\"M125 205 L430 65\" stroke=\"#0f766e\" stroke-width=\"3\"/><path d=\"M125 205 L430 205\" stroke=\"#94a3b8\" stroke-dasharray=\"5 4\"/><path d=\"M270 138 L295 193\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"270\" cy=\"138\" r=\"5\" fill=\"#dc2626\"/><text x=\"300\" y=\"160\" font-size=\"14\">d</text><text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Distance from a point to a line</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the distance from the point $(3, -2)$ to the line $4x - 3y + 2 = 0$.",
+          "solution_steps": [
+            "Step 1: Identify variables: $x_1=3, y_1=-2$ and $A=4, B=-3, C=2$.",
+            "Step 2: Apply the formula: $d = \\frac{|Ax_1 + By_1 + C|}{\\sqrt{A^2 + B^2}}$.",
+            "Step 3: Substitute numerator: $|4(3) + (-3)(-2) + 2| = |12 + 6 + 2| = 20$.",
+            "Step 4: Substitute denominator: $\\sqrt{(4)^2 + (-3)^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$.",
+            "Step 5: Divide: $d = \\frac{20}{5} = 4$."
+          ],
+          "final_answer": "4 units"
+        },
+        {
+          "problem": "Find the distance between the parallel lines 3x+4y-7=0 and 3x+4y+8=0.",
+          "solution_steps": [
+            "Step 1: For parallel lines Ax+By+C₁=0 and Ax+By+C₂=0, distance=|C₂-C₁|/√(A²+B²)",
+            "Step 2: Here the distance is |8-(-7)|/√(9+16)=15/5."
+          ],
+          "final_answer": "The perpendicular distance is 3 units."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting to set the line equation to zero first.",
+          "correction": "If the line is given as $4x - 3y = -2$, you CANNOT use $C = -2$. You must rearrange it into General Form ($4x - 3y + 2 = 0$) so that $C$ has the correct sign ($+2$) before using the formula."
+        }
+      ],
+      "quick_summary": [
+        "The distance from a point to a line is the length of the shortest, perpendicular path.",
+        "It is calculated by plugging the point into the line's general equation and dividing by $\\sqrt{A^2+B^2}$.",
+        "The distance between two parallel lines is the difference of their $C$ constants divided by $\\sqrt{A^2+B^2}$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Extend the point-to-line distance formula to more complex problems, including perpendicular distance and applications involving parallel lines. Build on the introductory High School treatment. Approved HSS T08 sequence: retained in the approved progression from coordinate foundations through straight lines, circle equations, intersections and integrated coordinate problems. Approved Draft 88 cross-topic boundary: Coordinate-circle content includes standard and general equations, completing-square transformations, line-circle intersections and coordinate methods for tangents. Synthetic Euclidean circle theorems are covered in HS T09; HSS T09 refers to the circle only as a conic classification case."
+    },
+    "hss_math_t08_st09": {
+      "id": "hss_math_t08_st09",
+      "title": "Family of straight lines",
+      "overview": "A 'Family of Lines' is an infinite collection of lines that all share one specific geometric trait, such as all passing through the exact same point, or all having the exact same slope. We can represent this entire infinite family using a single equation with a variable parameter.",
+      "key_concepts": [
+        {
+          "concept": "The Parameter ($k$ or $\\lambda$)",
+          "definition": "The variable constant.",
+          "details": [
+            "A parameter is a letter (like $k$) that acts as a placeholder constant. By changing the value of $k$, you generate a different specific line within the family.",
+            "Example: $y = 3x + k$ represents the family of all lines with a slope of $3$. Changing $k$ just shifts the line up or down, creating parallel lines."
+          ]
+        },
+        {
+          "concept": "Lines Through a Fixed Point",
+          "definition": "The pinwheel.",
+          "details": [
+            "If a family of lines all pass through a single specific coordinate $(x_1, y_1)$, they form a starburst pattern.",
+            "Equation: $y - y_1 = m(x - x_1)$. Here, $m$ is the parameter. Changing $m$ spins the line around the fixed point."
+          ]
+        },
+        {
+          "concept": "Intersection of Two Lines",
+          "definition": "The combined family.",
+          "details": [
+            "If you have two lines, $L_1 = 0$ and $L_2 = 0$, any line that passes through their intersection point can be written as $L_1 + kL_2 = 0$.",
+            "This is a massive shortcut that avoids having to calculate the actual $(x,y)$ intersection point first."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Family Through Intersection",
+          "equation": "$$ (A_1x + B_1y + C_1) + k(A_2x + B_2y + C_2) = 0 $$",
+          "variables": {
+            "k": "The parameter defining the specific line"
+          }
+        },
+        {
+          "name": "Family through intersection",
+          "equation": "$$L_1+kL_2=0$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_09",
+          "title": "Family of straight lines",
+          "type": "svg",
+          "caption": "Schematic representation of family of straight lines.",
+          "alt_text": "Coordinate geometry diagram illustrating family of straight lines.",
+          "data": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M55 235 H475 M95 255 V25\" stroke=\"#475569\" stroke-width=\"2.5\"/><path d=\"M475 235 l-9 -5 v10 z M95 25 l-5 9 h10 z\" fill=\"#475569\"/><text x=\"482\" y=\"240\" font-size=\"13\" fill=\"#334155\">x</text><text x=\"102\" y=\"24\" font-size=\"13\" fill=\"#334155\">y</text><path d=\"M120 210 L420 60 M120 60 L420 210 M270 45 L270 235\" stroke=\"#0f766e\" stroke-width=\"2.5\"/><circle cx=\"270\" cy=\"135\" r=\"5\" fill=\"#dc2626\"/><text x=\"285\" y=\"130\" font-size=\"14\">fixed point</text><text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Family of straight lines</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Set up the equation for the family of lines passing through the intersection of $x + y - 2 = 0$ and $2x - y + 1 = 0$.",
+          "solution_steps": [
+            "Step 1: Identify $L_1$: $x + y - 2$.",
+            "Step 2: Identify $L_2$: $2x - y + 1$.",
+            "Step 3: Combine them using the parameter $k$: $(x + y - 2) + k(2x - y + 1) = 0$."
+          ],
+          "final_answer": "(x + y - 2) + k(2x - y + 1) = 0"
+        },
+        {
+          "problem": "Find the equation of the line through the intersection of x+y-4=0 and 2x-y-1=0, and the point (1,3).",
+          "solution_steps": [
+            "Step 1: Solving the two lines gives x=5/3 and y=7/3",
+            "Step 2: The slope from (1,3) to (5/3,7/3) is (7/3-3)/(5/3-1)=(-2/3)/(2/3)=-1",
+            "Step 3: Hence y-3=-(x-1), or x+y-4=0",
+            "Step 4: The given point itself lies on the first line, so the required line is that same line."
+          ],
+          "final_answer": "x+y-4=0."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating the parameter as a coordinate variable.",
+          "correction": "The variables $x$ and $y$ represent the physical grid. The parameter $k$ represents a *choice*. Once you choose a value for $k$ (e.g., based on a condition like passing through a 3rd point), $k$ becomes a permanent number for that specific line."
+        }
+      ],
+      "quick_summary": [
+        "A family of lines shares a geometric trait and is defined by a parameter (like $k$ or $m$).",
+        "Parallel families share a slope but have different y-intercepts ($y = mx + k$).",
+        "You can find the equation of a line passing through an intersection instantly using $L_1 + kL_2 = 0$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Study families of lines passing through a fixed point, lines through the intersection of two given lines, and parameter-based line equations. Approved HSS T08 sequence: retained in the approved progression from coordinate foundations through straight lines, circle equations, intersections and integrated coordinate problems."
+    },
+    "hss_math_t08_st11": {
+      "id": "hss_math_t08_st11",
+      "title": "Centre-radius form of a circle",
+      "overview": "The centre-radius form expresses every point on a circle as being a fixed distance r from its centre (h,k). It is the most direct form for constructing a circle from geometric information.",
+      "key_concepts": [
+        {
+          "concept": "Standard centre-radius equation",
+          "definition": "A circle with centre (h,k) and radius r.",
+          "details": [
+            "(x-h)²+(y-k)²=r².",
+            "The signs inside the brackets are opposite to the coordinates of the centre."
+          ]
+        },
+        {
+          "concept": "Constructing an equation",
+          "definition": "Translate centre and radius information into an equation.",
+          "details": [
+            "Substitute the centre coordinates and radius into the standard form.",
+            "If a diameter is given, first find its midpoint for the centre and use half its length as the radius."
+          ]
+        },
+        {
+          "concept": "Conversion to expanded form",
+          "definition": "Expand the squares to obtain the general equation.",
+          "details": [
+            "Expand both squares and collect terms.",
+            "Completing the square reverses this process and recovers centre and radius."
+          ]
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A circle has centre (-2,3) and passes through (1,7). Find its equation.",
+          "solution_steps": [
+            "Step 1: The radius squared is (1+2)²+(7-3)²=9+16=25",
+            "Step 2: Substituting h=-2, k=3 and r²=25 into (x-h)²+(y-k)²=r² gives (x+2)²+(y-3)²=25."
+          ],
+          "final_answer": "(x+2)²+(y-3)²=25."
+        },
+        {
+          "problem": "A circle has diameter endpoints A(-1,2) and B(5,6). Find its centre-radius equation.",
+          "solution_steps": [
+            "The centre is the midpoint: ((-1+5)/2,(2+6)/2)=(2,4).",
+            "The diameter length is √((5+1)²+(6-2)²)=√52=2√13, so the radius is √13.",
+            "Substitute h=2, k=4 and r²=13 into the standard equation."
+          ],
+          "final_answer": "(x-2)²+(y-4)²=13."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Centre-radius form",
+          "equation": "$$(x-h)^2+(y-k)^2=r^2$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_10",
+          "title": "Centre-radius form of a circle",
+          "type": "svg",
+          "caption": "Schematic representation of centre-radius form of a circle.",
+          "alt_text": "Coordinate geometry diagram illustrating centre-radius form of a circle.",
+          "data": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M55 235 H475 M95 255 V25\" stroke=\"#475569\" stroke-width=\"2.5\"/><path d=\"M475 235 l-9 -5 v10 z M95 25 l-5 9 h10 z\" fill=\"#475569\"/><text x=\"482\" y=\"240\" font-size=\"13\" fill=\"#334155\">x</text><text x=\"102\" y=\"24\" font-size=\"13\" fill=\"#334155\">y</text><circle cx=\"285\" cy=\"135\" r=\"85\" fill=\"none\" stroke=\"#0f766e\" stroke-width=\"3\"/><circle cx=\"285\" cy=\"135\" r=\"5\" fill=\"#dc2626\"/><path d=\"M285 135 L370 135\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"292\" y=\"125\" font-size=\"14\">C(h,k)</text><text x=\"325\" y=\"125\" font-size=\"14\">r</text><text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Centre-radius form of a circle</text></svg>"
+        }
+      ],
+      "common_mistakes": [],
+      "quick_summary": [
+        "The centre-radius form expresses every point on a circle as being a fixed distance r from its centre (h,k). It is the most direct form for constructing a circle from geometric information."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop the standard centre-radius equation, construct equations from given geometric information, and convert between standard and general forms. Use completing the square as the connecting method. Approved HSS T08 sequence: the centre-radius form is introduced before the general equation, establishing the geometric model before algebraic generalisation."
+    },
+    "hss_math_t08_st10": {
+      "id": "hss_math_t08_st10",
+      "title": "General equation of a circle",
+      "overview": "The general second-degree equation x²+y²+Dx+Ey+F=0 represents a real circle, a point circle or no real circle depending on its completed-square radius condition. Completing the square reveals its centre and radius.",
+      "key_concepts": [
+        {
+          "concept": "General form",
+          "definition": "A circle in expanded coordinate form.",
+          "details": [
+            "x²+y²+Dx+Ey+F=0, where the coefficients of x² and y² are equal and there is no xy term.",
+            "The centre is (-D/2,-E/2), and the squared radius is (D²+E²)/4-F."
+          ]
+        },
+        {
+          "concept": "Completing the square",
+          "definition": "Recovering the centre-radius form.",
+          "details": [
+            "Group x-terms and y-terms, complete each square, and move the constant to the other side.",
+            "The resulting equation is (x+D/2)²+(y+E/2)²=r²."
+          ]
+        },
+        {
+          "concept": "Nature of the locus",
+          "definition": "Classification by the squared radius.",
+          "details": [
+            "If r²>0, the equation represents a real circle.",
+            "If r²=0, it represents a single point (a point circle).",
+            "If r²<0, there are no real points satisfying the equation."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Centre-Radius Form",
+          "equation": "$$ (x-h)^2 + (y-k)^2 = r^2 $$",
+          "variables": {
+            "(h,k)": "Center coordinates",
+            "r": "Radius"
+          }
+        },
+        {
+          "name": "General Form Center & Radius",
+          "equation": "$$ \\text{Center: } (-g, -f), \\quad r = \\sqrt{g^2 + f^2 - c} $$",
+          "variables": {}
+        },
+        {
+          "name": "Radius squared from general form",
+          "equation": "$$r^2=\\frac{D^2+E^2}{4}-F$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_11",
+          "title": "General equation of a circle",
+          "type": "svg",
+          "caption": "Schematic representation of general equation of a circle.",
+          "alt_text": "Coordinate geometry diagram illustrating general equation of a circle.",
+          "data": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M55 235 H475 M95 255 V25\" stroke=\"#475569\" stroke-width=\"2.5\"/><path d=\"M475 235 l-9 -5 v10 z M95 25 l-5 9 h10 z\" fill=\"#475569\"/><text x=\"482\" y=\"240\" font-size=\"13\" fill=\"#334155\">x</text><text x=\"102\" y=\"24\" font-size=\"13\" fill=\"#334155\">y</text><circle cx=\"285\" cy=\"135\" r=\"85\" fill=\"none\" stroke=\"#0f766e\" stroke-width=\"3\"/><circle cx=\"285\" cy=\"135\" r=\"5\" fill=\"#dc2626\"/><path d=\"M285 135 L370 135\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"300\" y=\"120\" font-size=\"14\">centre</text><text x=\"325\" y=\"155\" font-size=\"14\">r²=(D²+E²)/4−F</text><text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">General equation of a circle</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the center and radius of the circle $x^2 + y^2 - 6x + 4y - 12 = 0$.",
+          "solution_steps": [
+            "Step 1: Compare to the standard general form $x^2 + y^2 + 2gx + 2fy + c = 0$.",
+            "Step 2: Find $g$ and $f$. $2g = -6 \\Rightarrow g = -3$. $2f = 4 \\Rightarrow f = 2$.",
+            "Step 3: The center is $(-g, -f)$. So, Center = $(3, -2)$.",
+            "Step 4: Identify $c$. $c = -12$.",
+            "Step 5: Calculate the radius: $r = \\sqrt{(-3)^2 + (2)^2 - (-12)}$.",
+            "Step 6: Evaluate: $r = \\sqrt{9 + 4 + 12} = \\sqrt{25} = 5$."
+          ],
+          "final_answer": "Center = (3, -2), Radius = 5"
+        },
+        {
+          "problem": "Classify the locus x²+y²-4x+6y+14=0 and, if it is a real circle, find its centre and radius.",
+          "solution_steps": [
+            "Step 1: Complete squares: (x²-4x)+(y²+6y)=-14",
+            "Step 2: Thus (x-2)²-4+(y+3)²-9=-14, so (x-2)²+(y+3)²=-1",
+            "Step 3: The squared radius is negative, so there are no real points."
+          ],
+          "final_answer": "No real circle; the locus is empty over the real coordinate plane."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Extracting the center directly as $(g, f)$ without flipping the signs.",
+          "correction": "The general formula uses $+2gx$ and $+2fy$, but the physical center coordinates are the NEGATIVE halves: $(-g, -f)$."
+        }
+      ],
+      "quick_summary": [
+        "The Centre-Radius form $(x-h)^2 + (y-k)^2 = r^2$ is the easiest way to graph a circle.",
+        "The General form $x^2 + y^2 + 2gx + 2fy + c = 0$ is the standard algebraic presentation.",
+        "You can instantly extract the center by halving the $x$ and $y$ coefficients and flipping their signs."
+      ],
+      "registry_scope": "Approved lesson-level scope: Study the general equation of a circle, determine its centre and radius by completing the square, and identify conditions under which the equation represents a real circle, a point circle or no real circle. Approved HSS T08 sequence: the general equation follows the centre-radius form and is connected through completing the square."
+    },
+    "hss_math_t08_st13": {
+      "id": "hss_math_t08_st13",
+      "title": "Intersections of lines and circles",
+      "overview": "A tangent is a line that perfectly skims the edge of a circle, touching it at only a single microscopic point. This creates a highly specific geometric relationship that allows us to calculate its exact slope and equation.",
+      "key_concepts": [
+        {
+          "concept": "The $90^\\circ$ Rule",
+          "definition": "The radius anchor.",
+          "details": [
+            "A tangent line is ALWAYS perfectly perpendicular ($90^\\circ$) to the radius line drawn to that exact point of contact.",
+            "This means if you calculate the slope of the radius ($m_1$), the slope of the tangent line ($m_2$) is instantly known: $m_2 = -\\frac{1}{m_1}$."
+          ]
+        },
+        {
+          "concept": "Finding the Equation (Point of Contact known)",
+          "definition": "Point-Slope method.",
+          "details": [
+            "Step 1: Find the center of the circle.",
+            "Step 2: Calculate the slope of the radius to the point of contact.",
+            "Step 3: Take the negative reciprocal to get the tangent slope.",
+            "Step 4: Use the Point-Slope form with the contact point to write the line equation."
+          ]
+        },
+        {
+          "concept": "Length of a Tangent",
+          "definition": "From an outside point.",
+          "details": [
+            "If you draw a tangent to a circle from a random point $P(x_1, y_1)$ floating outside the circle, you can calculate the exact physical length of that tangent line.",
+            "Length = $\\sqrt{x_1^2 + y_1^2 + 2gx_1 + 2fy_1 + c}$. (You literally just plug the outside point into the left side of the circle's general equation and square root it)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Tangent Length Formula",
+          "equation": "$$ L = \\sqrt{x_1^2 + y_1^2 + 2gx_1 + 2fy_1 + c} $$",
+          "variables": {}
+        },
+        {
+          "name": "Line-circle substitution",
+          "equation": "$$ Ax^2+Bx+C=0\\quad\\text{after substitution; discriminant } \\Delta=B^2-4AC$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_12",
+          "title": "Intersections of lines and circles",
+          "type": "svg",
+          "caption": "Schematic representation of intersections of lines and circles.",
+          "alt_text": "Coordinate geometry diagram illustrating intersections of lines and circles.",
+          "data": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M55 235 H475 M95 255 V25\" stroke=\"#475569\" stroke-width=\"2.5\"/><path d=\"M475 235 l-9 -5 v10 z M95 25 l-5 9 h10 z\" fill=\"#475569\"/><text x=\"482\" y=\"240\" font-size=\"13\" fill=\"#334155\">x</text><text x=\"102\" y=\"24\" font-size=\"13\" fill=\"#334155\">y</text><circle cx=\"285\" cy=\"135\" r=\"85\" fill=\"none\" stroke=\"#0f766e\" stroke-width=\"3\"/><path d=\"M120 135 H450\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"202\" cy=\"135\" r=\"5\" fill=\"#dc2626\"/><circle cx=\"368\" cy=\"135\" r=\"5\" fill=\"#dc2626\"/><text x=\"190\" y=\"120\" font-size=\"13\">P₁</text><text x=\"370\" y=\"120\" font-size=\"13\">P₂</text><text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Intersections of lines and circles</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the slope of the tangent to the circle $x^2 + y^2 = 25$ at the point $(3, 4)$.",
+          "solution_steps": [
+            "Step 1: Identify the center of the circle. This is a basic circle centered at $(0,0)$.",
+            "Step 2: Calculate the slope of the radius connecting $(0,0)$ to the contact point $(3,4)$.",
+            "Step 3: $m_{radius} = \\frac{4 - 0}{3 - 0} = \\frac{4}{3}$.",
+            "Step 4: The tangent is perpendicular to the radius. Take the negative reciprocal.",
+            "Step 5: $m_{tangent} = -\\frac{3}{4}$."
+          ],
+          "final_answer": "-3/4"
+        },
+        {
+          "problem": "Determine the number and coordinates of intersection points of y=1 and x²+y²=5.",
+          "solution_steps": [
+            "Step 1: Substitute y=1 into the circle: x²+1=5, so x²=4 and x=±2",
+            "Step 2: Both values are real and distinct, so the line is a secant."
+          ],
+          "final_answer": "Two intersections: (2,1) and (-2,1)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the tangent length formula without setting the circle equation to zero.",
+          "correction": "The tangent length formula ONLY works if the circle equation is in the exact format $x^2 + y^2 + 2gx + 2fy + c = 0$. The coefficients of $x^2$ and $y^2$ MUST be 1. If they are $2x^2 + 2y^2 = \\dots$, you must divide the entire equation by 2 first."
+        }
+      ],
+      "quick_summary": [
+        "A tangent skims a circle at one point and is strictly perpendicular to the radius at that point.",
+        "The slope of a tangent is the negative reciprocal of the radius slope.",
+        "The physical length of a tangent drawn from an outside point can be calculated by plugging the point into the rooted circle equation."
+      ],
+      "registry_scope": "Approved lesson-level scope: Solve simultaneous line-circle equations and interpret zero, one or two real intersection points geometrically as no intersection, tangency or secancy. Approved HSS T08 sequence: line-circle intersections precede tangent equations, so zero/one/two intersection cases establish the analytical basis for tangency."
+    },
+    "hss_math_t08_st12": {
+      "id": "hss_math_t08_st12",
+      "title": "Equations of tangents to circles",
+      "overview": "When a straight line cuts across a coordinate grid containing a circle, it can either miss the circle entirely, hit it exactly once (a tangent), or spear straight through it (a secant). We use algebra and the discriminant to figure out which collision occurs.",
+      "key_concepts": [
+        {
+          "concept": "The Substitution Method",
+          "definition": "Algebraic collision.",
+          "details": [
+            "To find where a line and a circle intersect, rearrange the linear equation to isolate $y$ (or $x$), and substitute it into the circle's equation.",
+            "This will always create a heavy Quadratic Equation ($Ax^2 + Bx + C = 0$)."
+          ]
+        },
+        {
+          "concept": "Using the Discriminant ($\\Delta$)",
+          "definition": "Predicting the collision.",
+          "details": [
+            "By calculating the discriminant ($\\Delta = B^2 - 4AC$) of that resulting quadratic, you can instantly know how many times the line hits the circle.",
+            "$\\Delta > 0$: The line hits twice (Secant).",
+            "$\\Delta = 0$: The line hits exactly once (Tangent).",
+            "$\\Delta < 0$: The line misses completely."
+          ]
+        },
+        {
+          "concept": "Distance to Center Alternative",
+          "definition": "Geometric collision.",
+          "details": [
+            "Alternatively, calculate the perpendicular distance ($d$) from the circle's center to the line.",
+            "If $d < r$, it's a secant. If $d = r$, it's a tangent. If $d > r$, it misses."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "The Discriminant",
+          "equation": "$$ \\Delta = B^2 - 4AC $$",
+          "variables": {}
+        },
+        {
+          "name": "Tangent at a point on a circle",
+          "equation": "$$(x_1-h)(x-h)+(y_1-k)(y-k)=r^2$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_13",
+          "title": "Equations of tangents to circles",
+          "type": "svg",
+          "caption": "Schematic representation of equations of tangents to circles.",
+          "alt_text": "Coordinate geometry diagram illustrating equations of tangents to circles.",
+          "data": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M55 235 H475 M95 255 V25\" stroke=\"#475569\" stroke-width=\"2.5\"/><path d=\"M475 235 l-9 -5 v10 z M95 25 l-5 9 h10 z\" fill=\"#475569\"/><text x=\"482\" y=\"240\" font-size=\"13\" fill=\"#334155\">x</text><text x=\"102\" y=\"24\" font-size=\"13\" fill=\"#334155\">y</text><circle cx=\"285\" cy=\"135\" r=\"85\" fill=\"none\" stroke=\"#0f766e\" stroke-width=\"3\"/><path d=\"M185 65 L390 205\" stroke=\"#dc2626\" stroke-width=\"3\"/><path d=\"M285 135 L370 135\" stroke=\"#94a3b8\" stroke-width=\"2\"/><circle cx=\"370\" cy=\"135\" r=\"5\" fill=\"#dc2626\"/><text x=\"380\" y=\"130\" font-size=\"13\">T</text><text x=\"305\" y=\"125\" font-size=\"13\">radius</text><text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Equations of tangents to circles</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Set up the intersection equation for the line $y = x + 1$ and the circle $x^2 + y^2 = 4$.",
+          "solution_steps": [
+            "Step 1: Take the linear expression for $y$ ($x+1$).",
+            "Step 2: Substitute it into the circle equation wherever there is a $y$: $x^2 + (x + 1)^2 = 4$.",
+            "Step 3: Expand the binomial: $x^2 + (x^2 + 2x + 1) = 4$.",
+            "Step 4: Combine like terms and set to zero: $2x^2 + 2x - 3 = 0$.",
+            "Step 5: You would now use the quadratic formula on this to find the exact x-coordinates of the collision."
+          ],
+          "final_answer": "2x² + 2x - 3 = 0"
+        },
+        {
+          "problem": "Find the tangent to the circle x²+y²=25 at the point (3,4).",
+          "solution_steps": [
+            "Step 1: For x²+y²=r², the tangent at (x₁,y₁) on the circle is xx₁+yy₁=r²",
+            "Step 2: Substituting (3,4) gives 3x+4y=25",
+            "Step 3: The point lies on the circle since 9+16=25."
+          ],
+          "final_answer": "3x+4y=25."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting to foil when substituting.",
+          "correction": "When you substitute $y = x+1$ into $y^2$, you must do $(x+1)^2 = x^2 + 2x + 1$. A common error is just squaring the individual parts ($x^2 + 1$), which is algebraically illegal."
+        }
+      ],
+      "quick_summary": [
+        "A line can intersect a circle 0, 1, or 2 times.",
+        "To find out, substitute the line equation into the circle equation to create a single quadratic.",
+        "The discriminant ($B^2 - 4AC$) of that quadratic dictates the nature of the collision."
+      ],
+      "registry_scope": "Approved lesson-level scope: Derive and apply equations of tangents at specified points on a circle and, where appropriate, from external points. Establish the radius-tangent perpendicular relationship analytically; avoid duplicating Euclidean tangent theorems. Approved HSS T08 sequence: tangent equations follow line-circle intersection analysis; connect tangency to a single intersection and the radius-tangent perpendicular relationship."
+    },
+    "hss_math_t08_st14": {
+      "id": "hss_math_t08_st14",
+      "title": "Coordinate-based geometric problems",
+      "overview": "Coordinate methods turn geometric conditions into equations and algebraic calculations. Choose coordinates strategically, translate the given relationships into formulas, and interpret the resulting values in the original geometric setting.",
+      "key_concepts": [
+        {
+          "concept": "Coordinate modelling",
+          "definition": "Represent geometric objects using ordered pairs and equations.",
+          "details": [
+            "Assign coordinates to known points and unknown points.",
+            "Use line equations, distances, ratios and circle equations to express the conditions."
+          ]
+        },
+        {
+          "concept": "Choosing a convenient coordinate system",
+          "definition": "Place axes to simplify the algebra.",
+          "details": [
+            "A side may be placed on an axis, or a symmetric figure may be centred at the origin.",
+            "A convenient choice simplifies calculations without changing the geometry."
+          ]
+        },
+        {
+          "concept": "Analytical proof",
+          "definition": "Verify a geometric conclusion through coordinate relationships.",
+          "details": [
+            "Derive the required equality, incidence, parallelism, perpendicularity or tangency from the coordinates.",
+            "Check that any algebraic solutions satisfy the original geometric conditions."
+          ]
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Show analytically that the points A(0,0), B(4,0), C(6,3) and D(2,3) form a parallelogram.",
+          "solution_steps": [
+            "Step 1: Slope AB=(0-0)/(4-0)=0 and slope CD=(3-3)/(2-6)=0, so AB is parallel to CD",
+            "Step 2: Slope BC=(3-0)/(6-4)=3/2 and slope AD=(3-0)/(2-0)=3/2, so BC is parallel to AD",
+            "Step 3: Both pairs of opposite sides are parallel."
+          ],
+          "final_answer": "ABCD is a parallelogram."
+        },
+        {
+          "problem": "Find the area of the triangle with vertices A(1,2), B(5,2) and C(3,7) using coordinates.",
+          "solution_steps": [
+            "Use the coordinate area formula: Area=1/2|x₁(y₂-y₃)+x₂(y₃-y₁)+x₃(y₁-y₂)|.",
+            "Substitute: Area=1/2|1(2-7)+5(7-2)+3(2-2)|.",
+            "Simplify: Area=1/2|-5+25+0|=20/2."
+          ],
+          "final_answer": "10 square units."
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Area of a triangle by coordinates",
+          "equation": "$$\\text{Area}=\\frac12|x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)|$$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v08_14",
+          "title": "Coordinate-based geometric problems",
+          "type": "svg",
+          "caption": "Schematic representation of coordinate-based geometric problems.",
+          "alt_text": "Coordinate geometry diagram illustrating coordinate-based geometric problems.",
+          "data": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"520\" height=\"280\" rx=\"12\" fill=\"#f8fafc\"/><path d=\"M55 235 H475 M95 255 V25\" stroke=\"#475569\" stroke-width=\"2.5\"/><path d=\"M475 235 l-9 -5 v10 z M95 25 l-5 9 h10 z\" fill=\"#475569\"/><text x=\"482\" y=\"240\" font-size=\"13\" fill=\"#334155\">x</text><text x=\"102\" y=\"24\" font-size=\"13\" fill=\"#334155\">y</text><path d=\"M155 190 L385 190 L420 75 L190 75 Z\" fill=\"none\" stroke=\"#0f766e\" stroke-width=\"3\"/><path d=\"M155 190 L420 75 M385 190 L190 75\" stroke=\"#94a3b8\" stroke-dasharray=\"5 4\" stroke-width=\"2\"/><circle cx=\"155\" cy=\"190\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"385\" cy=\"190\" r=\"4\" fill=\"#dc2626\"/><text x=\"160\" y=\"210\" font-size=\"13\">A</text><text x=\"390\" y=\"210\" font-size=\"13\">B</text><text x=\"260\" y=\"270\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">Coordinate-based geometric problems</text></svg>"
+        }
+      ],
+      "common_mistakes": [],
+      "quick_summary": [
+        "Coordinate methods turn geometric conditions into equations and algebraic calculations. Choose coordinates strategically, translate the given relationships into formulas, and interpret the resulting values in the original geometric setting."
+      ],
+      "registry_scope": "Approved lesson-level scope: Solve integrated analytical problems involving points, lines, distances, ratios, circles, tangents and intersections. Emphasise multi-step reasoning and coordinate-based proof. Approved HSS T08 sequence: retained in the approved progression from coordinate foundations through straight lines, circle equations, intersections and integrated coordinate problems. Boundary: HSS T08 is the primary treatment of circle equations and coordinate-geometry fundamentals. HSS T09 may refer to the circle as a conic for comparison, but should not reteach circle equations or core circle properties."
+    }
+  }
+}

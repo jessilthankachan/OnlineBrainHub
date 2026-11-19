@@ -1,0 +1,1343 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t12",
+  "topicTitle": "Differentiation",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t12_st01": {
+      "id": "hss_math_t12_st01",
+      "title": "Average and instantaneous rates of change",
+      "overview": "Algebra can calculate the average speed of a car over a road trip. Calculus can calculate the exact speed on the speedometer at one specific microsecond. This transition from average to instantaneous is the birthplace of differentiation.",
+      "key_concepts": [
+        {
+          "concept": "Average Rate of Change",
+          "definition": "The secant line.",
+          "details": [
+            "Calculates how much the output ($y$) changes over a specific interval of inputs ($x$).",
+            "Formula: $\\frac{f(b) - f(a)}{b - a}$.",
+            "Geometrically, this represents the slope of the 'secant line' connecting two points on a graph."
+          ]
+        },
+        {
+          "concept": "Instantaneous Rate of Change",
+          "definition": "The tangent line.",
+          "details": [
+            "What happens if the interval between point $a$ and point $b$ shrinks to absolutely zero? You calculate the exact rate of change at a single instant.",
+            "Geometrically, this is the slope of the 'tangent line' skimming the curve at one exact point."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Average Rate of Change",
+          "equation": "$$ \\text{Rate} = \\frac{f(b) - f(a)}{b - a} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st01_visual_added01",
+          "title": "Average and instantaneous rates of change — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Average and instantaneous rates of change; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Average and instantaneous rates of change; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Average and instantaneous rates of change</title><desc>Conceptual illustration for Average and instantaneous rates of change; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 190 Q110 20 285 175\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M65 155 L250 75\" stroke=\"#d97706\" stroke-width=\"2.5\"/><circle cx=\"65\" cy=\"155\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"250\" cy=\"75\" r=\"4\" fill=\"#2563eb\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Average and instantaneous rates of change</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the average rate of change of $f(x) = x^2$ over the interval $[1, 4]$.",
+          "solution_steps": [
+            "Step 1: Identify $a=1$ and $b=4$.",
+            "Step 2: Calculate $f(1) = 1^2 = 1$.",
+            "Step 3: Calculate $f(4) = 4^2 = 16$.",
+            "Step 4: Use the formula: $\\frac{16 - 1}{4 - 1}$.",
+            "Step 5: Simplify: $\\frac{15}{3} = 5$."
+          ],
+          "final_answer": "5"
+        },
+        {
+          "problem": "A particle moves so that its displacement is $s(t)=t^2+3t$ metres. Find its average velocity from $t=1$ s to $t=3$ s, then find its instantaneous velocity at $t=2$ s.",
+          "solution_steps": [
+            "Average velocity is $\\frac{s(3)-s(1)}{3-1}$.",
+            "Here, $s(3)=18$ m and $s(1)=4$ m.",
+            "Thus the average velocity is $\\frac{18-4}{2}=7$ m/s.",
+            "Instantaneous velocity is the derivative $s'(t)=2t+3$.",
+            "At $t=2$, the instantaneous velocity is $2(2)+3=7$ m/s."
+          ],
+          "final_answer": "Average velocity = $7$ m/s; instantaneous velocity at 2 s = $7$ m/s."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing average rate of change with slope.",
+          "correction": "Average rate of change *is* the slope formula. $\\frac{y_2 - y_1}{x_2 - x_1}$ and $\\frac{f(b)-f(a)}{b-a}$ are mathematically identical."
+        }
+      ],
+      "quick_summary": [
+        "Average rate of change measures the overall change between two distinct points (Secant line).",
+        "Instantaneous rate of change measures the exact change at one single microsecond (Tangent line).",
+        "Calculus uses limits to shrink the interval of the average rate of change down to zero."
+      ],
+      "registry_scope": "Approved lesson-level scope: Introduce average rate of change as a secant gradient and instantaneous rate of change as a tangent gradient. Use accessible motion and other contextual examples to connect rates of change with the need for derivatives."
+    },
+    "hss_math_t12_st02": {
+      "id": "hss_math_t12_st02",
+      "title": "Derivative from first principles",
+      "overview": "To calculate instantaneous change, we need to divide by zero (a time interval of zero). Algebra can't do this, but limits can. 'First Principles' is the foundational limit formula that defines the derivative.",
+      "key_concepts": [
+        {
+          "concept": "The Difference Quotient",
+          "definition": "The shrinking gap.",
+          "details": [
+            "We pick a point $x$, and another point slightly ahead of it: $(x + h)$.",
+            "The slope between them is $\\frac{f(x+h) - f(x)}{h}$."
+          ]
+        },
+        {
+          "concept": "Applying the Limit",
+          "definition": "Forcing the gap to zero.",
+          "details": [
+            "By taking the limit as the gap $h$ approaches zero, we force the two points to merge into one, revealing the exact instantaneous slope.",
+            "$f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$."
+          ]
+        },
+        {
+          "concept": "Derivative Notation",
+          "definition": "The language.",
+          "details": [
+            "The derivative of $y = f(x)$ can be written in several ways: $f'(x)$ (prime notation), $\\frac{dy}{dx}$ (Leibniz notation), or $\\frac{d}{dx}[f(x)]$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "First Principles Definition",
+          "equation": "$$ f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h} $$",
+          "variables": {
+            "h": "A small change in input"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st02_visual_added01",
+          "title": "Derivative from first principles — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Derivative from first principles; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Derivative from first principles; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Derivative from first principles</title><desc>Conceptual illustration for Derivative from first principles; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 190 Q110 20 285 175\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M75 105 L250 145\" stroke=\"#d97706\" stroke-width=\"2.5\"/><circle cx=\"165\" cy=\"125\" r=\"4\" fill=\"#2563eb\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Derivative from first principles</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Use first principles to find the derivative of $f(x) = x^2$.",
+          "solution_steps": [
+            "Step 1: Set up the formula: $\\lim_{h \\to 0} \\frac{(x+h)^2 - x^2}{h}$.",
+            "Step 2: Expand the binomial: $\\lim_{h \\to 0} \\frac{(x^2 + 2xh + h^2) - x^2}{h}$.",
+            "Step 3: Cancel the $x^2$ terms: $\\lim_{h \\to 0} \\frac{2xh + h^2}{h}$.",
+            "Step 4: Factor out $h$ in the numerator: $\\lim_{h \\to 0} \\frac{h(2x + h)}{h}$.",
+            "Step 5: Cancel the $h$ in the numerator and denominator: $\\lim_{h \\to 0} (2x + h)$.",
+            "Step 6: Apply direct substitution ($h=0$): $2x + 0 = 2x$."
+          ],
+          "final_answer": "f'(x) = 2x"
+        },
+        {
+          "problem": "Use first principles to find the derivative of $f(x)=x^2+2x$ at $x=a$.",
+          "solution_steps": [
+            "By definition, $f'(a)=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}{h}$.",
+            "Calculate $f(a+h)=(a+h)^2+2(a+h)=a^2+2ah+h^2+2a+2h$.",
+            "Subtract $f(a)=a^2+2a$ and divide by $h$: $\\frac{2ah+h^2+2h}{h}=2a+h+2$.",
+            "Taking $h\\to0$ gives $2a+2$."
+          ],
+          "final_answer": "$f'(a)=2a+2$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Plugging in $h=0$ immediately.",
+          "correction": "This will always yield $0/0$ (an indeterminate form). You must expand and cancel the $h$ in the denominator before evaluating the limit."
+        }
+      ],
+      "quick_summary": [
+        "The derivative mathematically measures the instantaneous rate of change.",
+        "It is formally defined using the limit of the difference quotient (First Principles).",
+        "Notations like $f'(x)$ and $dy/dx$ both represent the derivative."
+      ],
+      "registry_scope": "Approved lesson-level scope: Define the derivative as the limit of the difference quotient, using the limit concepts developed in HSS T11. Interpret the derivative geometrically as a tangent gradient and numerically as an instantaneous rate of change. Include existence at a point at an introductory level."
+    },
+    "hss_math_t12_st03": {
+      "id": "hss_math_t12_st03",
+      "title": "Derivatives of standard functions",
+      "overview": "Doing the 'First Principles' limit calculation every time is exhausting. Mathematicians did it once for all the basic shapes, creating a list of memorizable 'Standard Derivatives' that act as shortcuts.",
+      "key_concepts": [
+        {
+          "concept": "The Constant Rule",
+          "definition": "The flat line.",
+          "details": [
+            "If a function is just a constant number (e.g., $y = 15$), its graph is a perfectly flat horizontal line.",
+            "Because it is flat, its slope is always zero. $\\frac{d}{dx}(c) = 0$."
+          ]
+        },
+        {
+          "concept": "The Identity Function",
+          "definition": "The perfect diagonal.",
+          "details": [
+            "For the function $f(x) = x$, every step right is one step up. Its slope is constantly 1.",
+            "$\\frac{d}{dx}(x) = 1$."
+          ]
+        },
+        {
+          "concept": "Constant Multiple Rule",
+          "definition": "Scaling slopes.",
+          "details": [
+            "If a function has a coefficient attached to it (e.g., $y = 7x$), the derivative is simply scaled by that same number.",
+            "$\\frac{d}{dx}(7x) = 7$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Constant Rule",
+          "equation": "$$ \\frac{d}{dx}(c) = 0 $$",
+          "variables": {}
+        },
+        {
+          "name": "Identity Rule",
+          "equation": "$$ \\frac{d}{dx}(x) = 1 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st03_visual_added01",
+          "title": "Derivatives of standard functions — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Derivatives of standard functions; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Derivatives of standard functions; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Derivatives of standard functions</title><desc>Conceptual illustration for Derivatives of standard functions; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 180 Q100 20 160 120 T285 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"25\" y1=\"205\" x2=\"295\" y2=\"205\" stroke=\"#64748b\"/><line x1=\"45\" y1=\"220\" x2=\"45\" y2=\"25\" stroke=\"#64748b\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Derivatives of standard functions</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the derivative of $f(x) = 42$.",
+          "solution_steps": [
+            "Step 1: Identify the type of function. It is a constant number with no variables attached.",
+            "Step 2: Recall the constant rule for derivatives.",
+            "Step 3: The derivative of any constant is zero."
+          ],
+          "final_answer": "f'(x) = 0"
+        },
+        {
+          "problem": "Differentiate $f(x)=4x^3-2\\sin x+e^x+\\ln x$ and state the domain of the logarithmic term.",
+          "solution_steps": [
+            "Differentiate each standard function term: $(4x^3)'=12x^2$.",
+            "$(-2\\sin x)'=-2\\cos x$ and $(e^x)'=e^x$.",
+            "$(\\ln x)'=1/x$, valid for $x>0$.",
+            "Combine the derivatives."
+          ],
+          "final_answer": "$f'(x)=12x^2-2\\cos x+e^x+\\frac1x$, for $x>0$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking the derivative of $\\pi$ is $1$.",
+          "correction": "$\\pi$ is just a constant number. Even though it is a letter, it has no variable $x$ attached to it. Therefore, $\\frac{d}{dx}(\\pi) = 0$."
+        }
+      ],
+      "quick_summary": [
+        "Standard derivatives provide instant answers to basic calculus problems without using limits.",
+        "The derivative of any constant number (flat line) is exactly $0$.",
+        "The derivative of a linear variable (like $x$ or $7x$) is just its coefficient ($1$ or $7$)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Establish derivatives of standard elementary functions as a usable reference, including constants, identity and common polynomial, trigonometric, exponential and logarithmic functions. Explain applicable domains and conditions; detailed rule-based practice is developed in the following subtopics."
+    },
+    "hss_math_t12_st04": {
+      "id": "hss_math_t12_st04",
+      "title": "Power rule",
+      "overview": "The Power Rule is the most famous and heavily utilized shortcut in all of calculus. It allows you to instantly differentiate any variable raised to an exponent in just two simple steps.",
+      "key_concepts": [
+        {
+          "concept": "The Power Rule Mechanics",
+          "definition": "Drop and Subtract.",
+          "details": [
+            "To differentiate $x^n$:",
+            "1. Take the exponent ($n$) and drop it down to the front to multiply as a coefficient.",
+            "2. Subtract $1$ from the original exponent.",
+            "Result: $\\frac{d}{dx}(x^n) = nx^{n-1}$."
+          ]
+        },
+        {
+          "concept": "Negative Powers",
+          "definition": "Fractions.",
+          "details": [
+            "The rule works perfectly for negative exponents (which represent fractions like $\\frac{1}{x^2} = x^{-2}$).",
+            "Be careful with subtraction: $-2 - 1 = -3$."
+          ]
+        },
+        {
+          "concept": "Fractional Powers",
+          "definition": "Radicals.",
+          "details": [
+            "The rule works perfectly for fractional exponents (which represent roots like $\\sqrt{x} = x^{1/2}$).",
+            "Subtracting 1 from a fraction requires common denominators: $\\frac{1}{2} - 1 = -\\frac{1}{2}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "The Power Rule",
+          "equation": "$$ \\frac{d}{dx}(x^n) = nx^{n-1} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st04_visual_added01",
+          "title": "Power rule — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Power rule; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Power rule; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Power rule</title><desc>Conceptual illustration for Power rule; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 180 Q100 20 160 120 T285 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"25\" y1=\"205\" x2=\"295\" y2=\"205\" stroke=\"#64748b\"/><line x1=\"45\" y1=\"220\" x2=\"45\" y2=\"25\" stroke=\"#64748b\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Power rule</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the derivative of $f(x) = 3x^4$.",
+          "solution_steps": [
+            "Step 1: Identify the exponent ($4$) and the coefficient ($3$).",
+            "Step 2: Drop the exponent down and multiply it by the coefficient: $4 \\times 3 = 12$.",
+            "Step 3: Subtract $1$ from the exponent: $4 - 1 = 3$.",
+            "Step 4: Reassemble the term."
+          ],
+          "final_answer": "f'(x) = 12x³"
+        },
+        {
+          "problem": "Differentiate $f(x) = \\frac{1}{x^3}$.",
+          "solution_steps": [
+            "Step 1: Rewrite the fraction as a negative exponent: $x^{-3}$.",
+            "Step 2: Apply the power rule. Drop the $-3$ down to the front.",
+            "Step 3: Subtract $1$ from the exponent: $-3 - 1 = -4$.",
+            "Step 4: The result is $-3x^{-4}$. (Can be rewritten as $-\\frac{3}{x^4}$)."
+          ],
+          "final_answer": "-3/x⁴"
+        },
+        {
+          "problem": "Differentiate $y=5x^{-2}+3\\sqrt{x}$.",
+          "solution_steps": [
+            "Rewrite $\\sqrt{x}$ as $x^{1/2}$.",
+            "Apply $\\frac{d}{dx}x^n=nx^{n-1}$ to each term.",
+            "The derivative is $5(-2)x^{-3}+3(\\frac12)x^{-1/2}$.",
+            "Rewrite using positive powers if desired."
+          ],
+          "final_answer": "$\\frac{dy}{dx}=-\\frac{10}{x^3}+\\frac{3}{2\\sqrt{x}}$, for $x>0$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying the power rule to exponential functions like $2^x$.",
+          "correction": "The Power Rule ONLY applies when the variable is the base and the exponent is a constant number ($x^2$). If the variable is in the exponent ($2^x$), the Power Rule is illegal."
+        }
+      ],
+      "quick_summary": [
+        "The Power Rule rapidly differentiates variables with exponents.",
+        "Drop the exponent down to multiply, and subtract 1 from the exponent.",
+        "It works for positive integers, negative integers (fractions), and fractional exponents (radicals)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Apply the power rule to suitable positive, negative and rational powers wherever the function is defined and differentiable. Include constant multiples and simple algebraic expressions, while avoiding duplication of the sum and difference rule."
+    },
+    "hss_math_t12_st05": {
+      "id": "hss_math_t12_st05",
+      "title": "Sum and difference rules",
+      "overview": "Polynomials are built by adding and subtracting different powers of x. The Sum and Difference Rules prove that differentiation is a linear operation, allowing us to break massive equations down into bite-sized pieces.",
+      "key_concepts": [
+        {
+          "concept": "The Sum Rule",
+          "definition": "Term by term.",
+          "details": [
+            "The derivative of a sum is simply the sum of the derivatives.",
+            "$\\frac{d}{dx}[f(x) + g(x)] = f'(x) + g'(x)$."
+          ]
+        },
+        {
+          "concept": "The Difference Rule",
+          "definition": "Handling subtraction.",
+          "details": [
+            "Just like addition, you can distribute the derivative operator across subtraction.",
+            "$\\frac{d}{dx}[f(x) - g(x)] = f'(x) - g'(x)$."
+          ]
+        },
+        {
+          "concept": "Polynomial Differentiation",
+          "definition": "The assembly line.",
+          "details": [
+            "To differentiate a long polynomial like $3x^4 - 2x^2 + 5x - 7$, you apply the Power Rule and Constant Rule to each individual term separately, keeping the plus and minus signs exactly where they are."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sum Rule",
+          "equation": "$$ \\frac{d}{dx}[u + v] = u' + v' $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st05_visual_added01",
+          "title": "Sum and difference rules — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Sum and difference rules; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Sum and difference rules; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Sum and difference rules</title><desc>Conceptual illustration for Sum and difference rules; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"45\" y=\"55\" width=\"230\" height=\"120\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"95\" text-anchor=\"middle\" font-size=\"20\" fill=\"#1e3a8a\">u(x) · v(x)</text><text x=\"160\" y=\"135\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">u′v + uv′</text><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Sum and difference rules</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Differentiate $f(x) = 5x^3 - 4x^2 + 7x - 9$.",
+          "solution_steps": [
+            "Step 1: Treat each term independently due to the Sum/Difference rules.",
+            "Step 2: Differentiate $5x^3$ using the power rule: $3 \\times 5x^2 = 15x^2$.",
+            "Step 3: Differentiate $-4x^2$: $2 \\times -4x^1 = -8x$.",
+            "Step 4: Differentiate $7x$: The derivative of $x$ is 1, so it is $7$.",
+            "Step 5: Differentiate $-9$: It is a constant, so the derivative is $0$.",
+            "Step 6: Combine all the results."
+          ],
+          "final_answer": "f'(x) = 15x² - 8x + 7"
+        },
+        {
+          "problem": "Differentiate $y=3x^4-5x^2+7x-9$.",
+          "solution_steps": [
+            "Differentiate each term separately.",
+            "The derivative of $3x^4$ is $12x^3$.",
+            "The derivative of $-5x^2$ is $-10x$; that of $7x$ is 7.",
+            "The derivative of the constant is zero."
+          ],
+          "final_answer": "$\\frac{dy}{dx}=12x^3-10x+7$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Dropping the negative sign on subtracted terms.",
+          "correction": "The sign belongs to the coefficient. If the term is $-4x^2$, the derivative is $2 \\times -4 = -8x$."
+        }
+      ],
+      "quick_summary": [
+        "Differentiation is a linear operator. You can distribute it across addition and subtraction.",
+        "Differentiate long polynomials by evaluating one term at a time.",
+        "Constants attached to variables (coefficients) stay for the ride; constants by themselves vanish to zero."
+      ],
+      "registry_scope": "Approved lesson-level scope: Apply linearity of differentiation to sums and differences of functions and to constant multiples. Include multi-term expressions and combinations of standard functions."
+    },
+    "hss_math_t12_st06": {
+      "id": "hss_math_t12_st06",
+      "title": "Product rule",
+      "overview": "While you can distribute a derivative across addition, you CANNOT distribute it across multiplication. If two distinct functions of x are multiplied together, they interfere with each other's rate of change, requiring the Product Rule.",
+      "key_concepts": [
+        {
+          "concept": "The Non-Distribution Rule",
+          "definition": "A critical warning.",
+          "details": [
+            "The derivative of $f(x) \\times g(x)$ is strictly NOT $f'(x) \\times g'(x)$."
+          ]
+        },
+        {
+          "concept": "The Product Rule Formula",
+          "definition": "The alternating derivative.",
+          "details": [
+            "To differentiate $u(x)v(x)$, you differentiate the first function while leaving the second alone, then ADD the first function left alone multiplied by the derivative of the second.",
+            "$\\frac{d}{dx}(uv) = u'v + uv'$."
+          ]
+        },
+        {
+          "concept": "Identifying Factors",
+          "definition": "Splitting the function.",
+          "details": [
+            "Always identify the two distinct functions being multiplied. E.g., in $y = x^2\\sin(x)$, $u = x^2$ and $v = \\sin(x)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Product Rule",
+          "equation": "$$ (uv)' = u'v + uv' $$",
+          "variables": {
+            "u": "First function",
+            "v": "Second function"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st06_visual_added01",
+          "title": "Product rule — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Product rule; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Product rule; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Product rule</title><desc>Conceptual illustration for Product rule; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"45\" y=\"55\" width=\"230\" height=\"120\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"95\" text-anchor=\"middle\" font-size=\"20\" fill=\"#1e3a8a\">u(x) · v(x)</text><text x=\"160\" y=\"135\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">u′v + uv′</text><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Product rule</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Differentiate $y = (x^2 + 1)(3x - 2)$.",
+          "solution_steps": [
+            "Step 1: Set $u = x^2 + 1$ and $v = 3x - 2$.",
+            "Step 2: Find derivatives: $u' = 2x$ and $v' = 3$.",
+            "Step 3: Apply Product Rule: $y' = u'v + uv'$.",
+            "Step 4: Substitute: $y' = (2x)(3x - 2) + (x^2 + 1)(3)$.",
+            "Step 5: Expand brackets: $y' = 6x^2 - 4x + 3x^2 + 3$.",
+            "Step 6: Combine like terms: $9x^2 - 4x + 3$."
+          ],
+          "final_answer": "9x² - 4x + 3"
+        },
+        {
+          "problem": "Differentiate $y=(x^2+1)(3x-2)$ using the product rule.",
+          "solution_steps": [
+            "Let $u=x^2+1$ and $v=3x-2$.",
+            "Then $u'=2x$ and $v'=3$.",
+            "Use $(uv)'=u'v+uv'$.",
+            "Substitute: $y'=2x(3x-2)+3(x^2+1)$.",
+            "Simplify."
+          ],
+          "final_answer": "$y'=9x^2-4x+3$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the product rule when one factor is just a constant.",
+          "correction": "For $y = 5x^2$, you do not need the product rule ($u=5, v=x^2$). The Constant Multiple rule is faster ($10x$). Only use the product rule if BOTH factors contain the variable $x$."
+        }
+      ],
+      "quick_summary": [
+        "You cannot simply multiply the derivatives of two multiplied functions.",
+        "The Product Rule states that $(uv)' = u'v + uv'$.",
+        "Differentiate one factor, hold the other constant, then swap and add the results."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop and apply the product rule for differentiable functions, including products of algebraic and standard functions. Explain why differentiating each factor separately and multiplying is not a valid substitute."
+    },
+    "hss_math_t12_st07": {
+      "id": "hss_math_t12_st07",
+      "title": "Quotient rule",
+      "overview": "Division is just as complex as multiplication when it comes to rates of change. When one function is divided by another, the denominator aggressively influences the slope, requiring the Quotient Rule.",
+      "key_concepts": [
+        {
+          "concept": "The Quotient Rule Formula",
+          "definition": "Low D-High minus High D-Low.",
+          "details": [
+            "For a function $y = \\frac{u}{v}$, the derivative is $\\frac{u'v - uv'}{v^2}$.",
+            "A common mnemonic is 'Low D-High minus High D-Low, draw a line and square below' ($D$ meaning derivative)."
+          ]
+        },
+        {
+          "concept": "Order Matters",
+          "definition": "The subtraction trap.",
+          "details": [
+            "Because the numerator involves subtraction, order is critical. You MUST do $u'v$ first. If you do $uv'$ first, your entire numerator will have the wrong sign."
+          ]
+        },
+        {
+          "concept": "Simplification",
+          "definition": "Cleaning up.",
+          "details": [
+            "After applying the rule, aggressively factor and simplify the numerator. Leave the denominator as $v^2$ (do not expand it unless specifically asked to)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Quotient Rule",
+          "equation": "$$ \\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2} $$",
+          "variables": {
+            "u": "Numerator function",
+            "v": "Denominator function"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st07_visual_added01",
+          "title": "Quotient rule — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Quotient rule; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Quotient rule; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Quotient rule</title><desc>Conceptual illustration for Quotient rule; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"45\" y=\"55\" width=\"230\" height=\"120\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"95\" text-anchor=\"middle\" font-size=\"20\" fill=\"#1e3a8a\">u(x) · v(x)</text><text x=\"160\" y=\"135\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">u′v + uv′</text><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Quotient rule</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Differentiate $y = \\frac{2x}{x+1}$.",
+          "solution_steps": [
+            "Step 1: Identify parts. $u = 2x$ (so $u' = 2$) and $v = x+1$ (so $v' = 1$).",
+            "Step 2: Set up the Quotient Rule: $\\frac{u'v - uv'}{v^2}$.",
+            "Step 3: Substitute: $\\frac{(2)(x+1) - (2x)(1)}{(x+1)^2}$.",
+            "Step 4: Distribute in the numerator: $\\frac{2x + 2 - 2x}{(x+1)^2}$.",
+            "Step 5: Cancel the $2x$ terms."
+          ],
+          "final_answer": "2 / (x+1)²"
+        },
+        {
+          "problem": "Differentiate $y=\\frac{x^2+1}{x-1}$.",
+          "solution_steps": [
+            "Let $u=x^2+1$ and $v=x-1$, where $x\\ne1$.",
+            "Then $u'=2x$ and $v'=1$.",
+            "Use $y'=\\frac{vu'-uv'}{v^2}$.",
+            "Substitute and simplify the numerator: $2x(x-1)-(x^2+1)=x^2-2x-1$."
+          ],
+          "final_answer": "$y'=\\frac{x^2-2x-1}{(x-1)^2}$, for $x\\ne1$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting to square the denominator.",
+          "correction": "It is easy to focus all your mental energy on the complex numerator and forget the $v^2$ on the bottom. Always write the fraction bar and the squared denominator first before doing the top."
+        }
+      ],
+      "quick_summary": [
+        "The Quotient Rule differentiates algebraic fractions (a function divided by a function).",
+        "The formula is strictly $\\frac{u'v - uv'}{v^2}$.",
+        "Order matters in the numerator. Always differentiate the top function ($u$) first."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop and apply the quotient rule to suitable rational and other quotient functions. State that the denominator must be non-zero at the point considered and include simplification where helpful."
+    },
+    "hss_math_t12_st08": {
+      "id": "hss_math_t12_st08",
+      "title": "Chain rule",
+      "overview": "What happens if a function is trapped inside another function? The Chain Rule allows us to peel mathematical layers like an onion, differentiating from the outside-in without having to expand massive powers.",
+      "key_concepts": [
+        {
+          "concept": "Composite Functions",
+          "definition": "Functions inside functions.",
+          "details": [
+            "A composite function is written as $f(g(x))$. There is an 'outer' function and an 'inner' function.",
+            "Example: In $y = (3x+2)^4$, the outer function is $(\\text{something})^4$, and the inner function is $3x+2$."
+          ]
+        },
+        {
+          "concept": "The Chain Rule Formula",
+          "definition": "Peeling the onion.",
+          "details": [
+            "To differentiate $f(g(x))$, you differentiate the outer function (leaving the inside completely alone), and then multiply that by the derivative of the inner function.",
+            "$\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\times g'(x)$."
+          ]
+        },
+        {
+          "concept": "Leibniz Notation",
+          "definition": "The substitution method.",
+          "details": [
+            "If $y$ is a function of $u$, and $u$ is a function of $x$, then $\\frac{dy}{dx} = \\frac{dy}{du} \\times \\frac{du}{dx}$.",
+            "This makes it clear that the 'rates of change' multiply together like gears in a machine."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Chain Rule",
+          "equation": "$$ \\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st08_visual_added01",
+          "title": "Chain rule — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Chain rule; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Chain rule; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Chain rule</title><desc>Conceptual illustration for Chain rule; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"35\" y=\"80\" width=\"85\" height=\"55\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><rect x=\"200\" y=\"80\" width=\"85\" height=\"55\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\"/><path d=\"M120 108 H195 M185 100 L195 108 L185 116\" stroke=\"#64748b\" stroke-width=\"2\" fill=\"none\"/><text x=\"77\" y=\"112\" text-anchor=\"middle\" font-size=\"15\" fill=\"#1e3a8a\">inner</text><text x=\"242\" y=\"112\" text-anchor=\"middle\" font-size=\"15\" fill=\"#92400e\">outer</text><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Chain rule</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Differentiate $y = (3x^2 + 5)^4$.",
+          "solution_steps": [
+            "Step 1: Identify outer and inner functions. Outer is $(\\dots)^4$. Inner is $3x^2 + 5$.",
+            "Step 2: Differentiate the outer function using the power rule, keeping the inside identical: $4(3x^2 + 5)^3$.",
+            "Step 3: Differentiate the inner function: $\\frac{d}{dx}(3x^2 + 5) = 6x$.",
+            "Step 4: Multiply the two results together (Chain Rule): $4(3x^2 + 5)^3 \\times (6x)$.",
+            "Step 5: Multiply the constants on the outside: $24x(3x^2 + 5)^3$."
+          ],
+          "final_answer": "24x(3x² + 5)³"
+        },
+        {
+          "problem": "Differentiate $y=(3x^2+1)^4$.",
+          "solution_steps": [
+            "Identify the outer function as the fourth power and the inner function as $u=3x^2+1$.",
+            "The derivative of $u^4$ with respect to $u$ is $4u^3$.",
+            "The inner derivative is $du/dx=6x$.",
+            "Multiply by the chain rule."
+          ],
+          "final_answer": "$\\frac{dy}{dx}=24x(3x^2+1)^3$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Differentiating the inside and outside at the exact same time.",
+          "correction": "Students often write $4(6x)^3$. This is fatally wrong. When doing the outer derivative, the inside MUST remain untouched ($3x^2+5$). You only differentiate the inside when multiplying on the far right."
+        }
+      ],
+      "quick_summary": [
+        "The Chain Rule is used for composite functions (a function inside a function).",
+        "Differentiate the Outside (leave inside alone) $\\times$ Differentiate the Inside.",
+        "Leibniz notation proves this mathematically: $\\frac{dy}{dx} = \\frac{dy}{du} \\times \\frac{du}{dx}$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Apply the chain rule to composite and nested functions, identifying outer and inner functions. Include algebraic, trigonometric, exponential and logarithmic composites at an appropriate Higher Secondary level."
+    },
+    "hss_math_t12_st09": {
+      "id": "hss_math_t12_st09",
+      "title": "Derivatives of trigonometric functions",
+      "overview": "Trigonometric functions are repeating waves, meaning their slopes (rates of change) are also repeating waves. By learning the standard derivatives of the six trig functions, we can calculate the exact slope of a wave at any point.",
+      "key_concepts": [
+        {
+          "concept": "Sine and Cosine",
+          "definition": "The alternating pair.",
+          "details": [
+            "$\\frac{d}{dx}(\\sin x) = \\cos x$.",
+            "$\\frac{d}{dx}(\\cos x) = -\\sin x$.",
+            "Notice the negative sign on the cosine derivative. This is because when cosine is dropping from its peak, its slope is negative."
+          ]
+        },
+        {
+          "concept": "Tangent and Secant",
+          "definition": "The partnered squares.",
+          "details": [
+            "$\\frac{d}{dx}(\\tan x) = \\sec^2 x$.",
+            "$\\frac{d}{dx}(\\sec x) = \\sec x \\tan x$."
+          ]
+        },
+        {
+          "concept": "Cotangent and Cosecant",
+          "definition": "The negative 'co's.",
+          "details": [
+            "Any trig function starting with 'co' (cosine, cotangent, cosecant) ALWAYS has a negative derivative.",
+            "$\\frac{d}{dx}(\\cot x) = -\\csc^2 x$.",
+            "$\\frac{d}{dx}(\\csc x) = -\\csc x \\cot x$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sine/Cosine Derivatives",
+          "equation": "$$ \\frac{d}{dx}(\\sin x) = \\cos x \\quad \\text{and} \\quad \\frac{d}{dx}(\\cos x) = -\\sin x $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st09_visual_added01",
+          "title": "Derivatives of trigonometric functions — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Derivatives of trigonometric functions; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Derivatives of trigonometric functions; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Derivatives of trigonometric functions</title><desc>Conceptual illustration for Derivatives of trigonometric functions; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 180 Q100 20 160 120 T285 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"25\" y1=\"205\" x2=\"295\" y2=\"205\" stroke=\"#64748b\"/><line x1=\"45\" y1=\"220\" x2=\"45\" y2=\"25\" stroke=\"#64748b\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Derivatives of trigonometric functions</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Differentiate $y = \\sin(4x)$.",
+          "solution_steps": [
+            "Step 1: Identify that this is a composite function requiring the Chain Rule. The outer function is $\\sin(\\dots)$, inner is $4x$.",
+            "Step 2: Differentiate the outer function (Sine becomes Cosine), leaving the inside identical: $\\cos(4x)$.",
+            "Step 3: Differentiate the inner function: $\\frac{d}{dx}(4x) = 4$.",
+            "Step 4: Multiply the two results together: $\\cos(4x) \\times 4$."
+          ],
+          "final_answer": "4cos(4x)"
+        },
+        {
+          "problem": "Differentiate $y=\\sin(3x)+2\\tan x$, using radians.",
+          "solution_steps": [
+            "Use $\\frac{d}{dx}\\sin u=\\cos u\\,u'$.",
+            "The derivative of $\\sin(3x)$ is $3\\cos(3x)$.",
+            "The derivative of $2\\tan x$ is $2\\sec^2x$.",
+            "Combine the terms; note that tangent is undefined where $\\cos x=0$."
+          ],
+          "final_answer": "$y'=3\\cos(3x)+2\\sec^2x$, wherever the original function is defined."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using degrees instead of radians.",
+          "correction": "Calculus ONLY works with radians. The standard limit $\\frac{\\sin h}{h} = 1$ (which proves the sine derivative) is mathematically false if you use degrees. All angles in calculus problems are assumed to be radians."
+        }
+      ],
+      "quick_summary": [
+        "Sine differentiates to Cosine, and Cosine differentiates to Negative Sine.",
+        "Tangent differentiates to Secant squared.",
+        "Any trigonometric function starting with a 'C' will have a negative derivative."
+      ],
+      "registry_scope": "Approved lesson-level scope: Differentiate sine, cosine, tangent and other syllabus-appropriate trigonometric functions, using radians. Include suitable composite arguments through the chain rule and respect domains where derivatives are defined."
+    },
+    "hss_math_t12_st10": {
+      "id": "hss_math_t12_st10",
+      "title": "Derivatives of exponential functions",
+      "overview": "If $f(x) = x^2$, the base changes while the power stays the same (Power Rule). But what if the base stays the same and the power changes, like $f(x) = 2^x$? This requires entirely new exponential derivative rules.",
+      "key_concepts": [
+        {
+          "concept": "The Natural Exponential ($e^x$)",
+          "definition": "The immortal function.",
+          "details": [
+            "The function $e^x$ is the only function in all of mathematics whose rate of change is exactly equal to its own current value.",
+            "Therefore, $\\frac{d}{dx}(e^x) = e^x$. The derivative is identical to the original function."
+          ]
+        },
+        {
+          "concept": "Other Bases ($a^x$)",
+          "definition": "The scaling factor.",
+          "details": [
+            "If the base is any other positive number (like $2^x$ or $10^x$), the derivative is almost identical to the original function, but you must multiply it by a scaling factor: the natural log of the base.",
+            "$\\frac{d}{dx}(a^x) = a^x \\ln(a)$."
+          ]
+        },
+        {
+          "concept": "Combining with the Chain Rule",
+          "definition": "Complex exponents.",
+          "details": [
+            "If the exponent is a function instead of just $x$ (e.g., $e^{3x^2}$), you must multiply the standard exponential derivative by the derivative of that exponent: $e^{3x^2} \\times (6x)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Natural Exponential",
+          "equation": "$$ \\frac{d}{dx}(e^x) = e^x $$",
+          "variables": {}
+        },
+        {
+          "name": "General Exponential",
+          "equation": "$$ \\frac{d}{dx}(a^x) = a^x \\ln(a) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st10_visual_added01",
+          "title": "Derivatives of exponential functions — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Derivatives of exponential functions; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Derivatives of exponential functions; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Derivatives of exponential functions</title><desc>Conceptual illustration for Derivatives of exponential functions; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 180 Q100 20 160 120 T285 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"25\" y1=\"205\" x2=\"295\" y2=\"205\" stroke=\"#64748b\"/><line x1=\"45\" y1=\"220\" x2=\"45\" y2=\"25\" stroke=\"#64748b\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Derivatives of exponential functions</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Differentiate $y = 5^{x^2}$.",
+          "solution_steps": [
+            "Step 1: Identify this as a general exponential function ($a^x$) combined with the Chain Rule.",
+            "Step 2: Differentiate the outer exponential part, which requires multiplying by $\\ln(5)$: $5^{x^2} \\times \\ln(5)$.",
+            "Step 3: Differentiate the inner exponent: $\\frac{d}{dx}(x^2) = 2x$.",
+            "Step 4: Multiply the two results together."
+          ],
+          "final_answer": "y' = 2x(5^(x²))ln(5)"
+        },
+        {
+          "problem": "Differentiate $y=4e^{2x}-3^{x}$.",
+          "solution_steps": [
+            "Use $\\frac{d}{dx}e^{u}=e^u u'$.",
+            "The derivative of $4e^{2x}$ is $8e^{2x}$.",
+            "For a positive base $a$, $\\frac{d}{dx}a^x=a^x\\ln a$.",
+            "Thus the derivative of $3^x$ is $3^x\\ln3$."
+          ],
+          "final_answer": "$y'=8e^{2x}-3^x\\ln3$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying the Power Rule to exponential functions.",
+          "correction": "Students often write $\\frac{d}{dx}(2^x) = x2^{x-1}$. This is a catastrophic error. The Power Rule is ONLY for $x^n$. For $a^x$, you MUST use the exponential rule $a^x \\ln(a)$."
+        }
+      ],
+      "quick_summary": [
+        "The derivative of $e^x$ is exactly $e^x$.",
+        "The derivative of any other base $a^x$ is $a^x \\ln(a)$.",
+        "If the exponent contains a complex term, you must use the Chain Rule and multiply by the derivative of the exponent."
+      ],
+      "registry_scope": "Approved lesson-level scope: Differentiate exponential functions, including natural exponential functions and other positive bases where defined. Include constant multiples and composite arguments using the chain rule."
+    },
+    "hss_math_t12_st11": {
+      "id": "hss_math_t12_st11",
+      "title": "Derivatives of logarithmic functions",
+      "overview": "Logarithms are the inverses of exponentials. Because $e^x$ has such a clean and unique derivative, its inverse function, the Natural Logarithm ($\\ln x$), also has an incredibly clean, foundational derivative.",
+      "key_concepts": [
+        {
+          "concept": "The Natural Logarithm ($\\ln x$)",
+          "definition": "The inverse of $e^x$.",
+          "details": [
+            "$\\frac{d}{dx}(\\ln x) = \\frac{1}{x}$.",
+            "This applies strictly for $x > 0$."
+          ]
+        },
+        {
+          "concept": "Other Bases ($\\log_a x$)",
+          "definition": "The conversion factor.",
+          "details": [
+            "For a logarithm with a base other than $e$ (like $\\log_{10} x$), you must divide by the natural log of that base.",
+            "$\\frac{d}{dx}(\\log_a x) = \\frac{1}{x \\ln a}$."
+          ]
+        },
+        {
+          "concept": "Combining with the Chain Rule",
+          "definition": "Log of a function.",
+          "details": [
+            "If you are taking the natural log of an entire function (e.g., $\\ln(3x^2+2)$), the derivative is simply: $\\frac{\\text{derivative of inside}}{\\text{original inside}}$.",
+            "Formula: $\\frac{d}{dx}[\\ln(u)] = \\frac{u'}{u}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Natural Log Derivative",
+          "equation": "$$ \\frac{d}{dx}(\\ln x) = \\frac{1}{x} $$",
+          "variables": {}
+        },
+        {
+          "name": "Log Chain Rule Shortcut",
+          "equation": "$$ \\frac{d}{dx}[\\ln(u)] = \\frac{u'}{u} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st11_visual_added01",
+          "title": "Derivatives of logarithmic functions — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Derivatives of logarithmic functions; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Derivatives of logarithmic functions; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Derivatives of logarithmic functions</title><desc>Conceptual illustration for Derivatives of logarithmic functions; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 180 Q100 20 160 120 T285 55\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"25\" y1=\"205\" x2=\"295\" y2=\"205\" stroke=\"#64748b\"/><line x1=\"45\" y1=\"220\" x2=\"45\" y2=\"25\" stroke=\"#64748b\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Derivatives of logarithmic functions</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Differentiate $y = \\ln(5x^3 - 4x)$.",
+          "solution_steps": [
+            "Step 1: Identify that this is a composite function involving a natural log. Use the shortcut $\\frac{u'}{u}$.",
+            "Step 2: Identify $u$ (the inside of the log): $u = 5x^3 - 4x$.",
+            "Step 3: Calculate $u'$ (the derivative of the inside): $u' = 15x^2 - 4$.",
+            "Step 4: Create the fraction $\\frac{u'}{u}$."
+          ],
+          "final_answer": "y' = (15x² - 4) / (5x³ - 4x)"
+        },
+        {
+          "problem": "Differentiate $y=\\ln(5x^2+1)$.",
+          "solution_steps": [
+            "The logarithm requires $5x^2+1>0$, which holds for every real $x$.",
+            "Use $\\frac{d}{dx}\\ln u=\\frac{u'}u$.",
+            "Here $u=5x^2+1$ and $u'=10x$.",
+            "Substitute."
+          ],
+          "final_answer": "$y'=\\frac{10x}{5x^2+1}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Writing the derivative of $\\ln(5x)$ as $\\frac{5}{5x}$ and not simplifying.",
+          "correction": "$\\frac{5}{5x}$ simplifies directly to $\\frac{1}{x}$. Interestingly, the derivative of $\\ln(x)$ and $\\ln(5x)$ are identical! (This is because $\\ln(5x) = \\ln(5) + \\ln(x)$, and the constant vanishes)."
+        }
+      ],
+      "quick_summary": [
+        "The derivative of $\\ln(x)$ is $\\frac{1}{x}$.",
+        "The derivative of a log with any other base requires dividing by $\\ln(a)$.",
+        "When using the Chain Rule on $\\ln(u)$, the result is always exactly $\\frac{u'}{u}$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Differentiate natural logarithmic and other-base logarithmic functions. Include domain restrictions, constant multiples and composite arguments using the chain rule."
+    },
+    "hss_math_t12_st12": {
+      "id": "hss_math_t12_st12",
+      "title": "Implicit differentiation",
+      "overview": "Normally, we differentiate equations where $y$ is perfectly isolated ($y = x^2$). But what if $x$ and $y$ are completely tangled together, like in the circle equation $x^2 + y^2 = 25$? Implicit differentiation allows us to find the slope without untangling them.",
+      "key_concepts": [
+        {
+          "concept": "The Core Rule",
+          "definition": "The $dy/dx$ tag.",
+          "details": [
+            "You differentiate both sides of the equation term by term with respect to $x$.",
+            "Whenever you differentiate a term with an $x$, it's normal (e.g., $x^2 \\to 2x$).",
+            "Whenever you differentiate a term with a $y$, you differentiate it normally BUT you MUST instantly attach a $\\frac{dy}{dx}$ tag to it (e.g., $y^2 \\to 2y \\frac{dy}{dx}$). This is actually just the Chain Rule in action!"
+          ]
+        },
+        {
+          "concept": "Isolating $\\frac{dy}{dx}$",
+          "definition": "The algebra clean-up.",
+          "details": [
+            "Once you have differentiated every term, you use basic algebra to move all terms containing a $\\frac{dy}{dx}$ to the left side of the equals sign, move everything else to the right, factor out the $\\frac{dy}{dx}$, and divide to isolate it."
+          ]
+        },
+        {
+          "concept": "Mixed Products",
+          "definition": "The Product Rule trap.",
+          "details": [
+            "If you see an $xy$ term, you CANNOT just write $1 \\cdot \\frac{dy}{dx}$. Because $x$ and $y$ are two multiplied functions, you MUST use the Product Rule: $1(y) + x(1 \\frac{dy}{dx}) = y + x \\frac{dy}{dx}$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st12_visual_added01",
+          "title": "Implicit differentiation — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Implicit differentiation; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Implicit differentiation; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Implicit differentiation</title><desc>Conceptual illustration for Implicit differentiation; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 190 Q110 20 285 175\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M75 105 L250 145\" stroke=\"#d97706\" stroke-width=\"2.5\"/><circle cx=\"165\" cy=\"125\" r=\"4\" fill=\"#2563eb\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Implicit differentiation</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find $\\frac{dy}{dx}$ for the circle $x^2 + y^2 = 25$.",
+          "solution_steps": [
+            "Step 1: Differentiate the $x^2$ term normally: $2x$.",
+            "Step 2: Differentiate the $y^2$ term and attach the tag: $2y \\frac{dy}{dx}$.",
+            "Step 3: Differentiate the constant $25$: $0$.",
+            "Step 4: Write the new equation: $2x + 2y \\frac{dy}{dx} = 0$.",
+            "Step 5: Isolate $\\frac{dy}{dx}$. Subtract $2x$: $2y \\frac{dy}{dx} = -2x$.",
+            "Step 6: Divide by $2y$: $\\frac{dy}{dx} = -\\frac{2x}{2y} = -\\frac{x}{y}$."
+          ],
+          "final_answer": "dy/dx = -x/y"
+        },
+        {
+          "problem": "For the curve $x^2+xy+y^2=7$, find $dy/dx$ and the gradient at $(1,2)$.",
+          "solution_steps": [
+            "Differentiate each term with respect to $x$: $2x+(x\\frac{dy}{dx}+y)+2y\\frac{dy}{dx}=0$.",
+            "Collect derivative terms: $(x+2y)\\frac{dy}{dx}=-(2x+y)$.",
+            "Therefore $\\frac{dy}{dx}=-\\frac{2x+y}{x+2y}$.",
+            "At $(1,2)$, the gradient is $-\\frac{4}{5}$."
+          ],
+          "final_answer": "$\\frac{dy}{dx}=-\\frac{2x+y}{x+2y}$; gradient at $(1,2)$ is $-\\frac45$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting the Product Rule on mixed terms.",
+          "correction": "Terms like $x^2y$ are the #1 source of errors. You must treat $x^2$ as $u$ and $y$ as $v$ and perform a full $(u'v + uv')$ expansion."
+        }
+      ],
+      "quick_summary": [
+        "Implicit differentiation allows you to find the slope of tangled equations without isolating $y$ first.",
+        "Differentiate $x$ terms normally. Differentiate $y$ terms normally, but attach a $\\frac{dy}{dx}$ tag to them immediately.",
+        "Use standard algebra to get all $\\frac{dy}{dx}$ tags on one side and isolate them."
+      ],
+      "registry_scope": "Approved lesson-level scope: Differentiate relations in which dependent and independent variables are not isolated, using implicit differentiation. Include finding gradients at specified points and checking whether the resulting derivative is defined."
+    },
+    "hss_math_t12_st13": {
+      "id": "hss_math_t12_st13",
+      "title": "Parametric differentiation",
+      "overview": "Sometimes a curve is so complex that it cannot be written as $y = f(x)$. Instead, both $x$ and $y$ are controlled by a third, invisible variable called a 'parameter' (usually $t$ for time). Parametric differentiation allows us to find the slope of these complex curves.",
+      "key_concepts": [
+        {
+          "concept": "The Parameter ($t$)",
+          "definition": "The puppet master.",
+          "details": [
+            "Instead of $y$ depending on $x$, both $x$ and $y$ depend on a separate third variable $t$.",
+            "Example: $x = 2t$ and $y = t^2$. As $t$ changes, it generates a coordinate $(x,y)$."
+          ]
+        },
+        {
+          "concept": "The Parametric Derivative Formula",
+          "definition": "Dividing the rates.",
+          "details": [
+            "We want to find $\\frac{dy}{dx}$ (how much $y$ changes when $x$ changes).",
+            "We find this by differentiating both equations separately with respect to $t$, and then dividing them: $\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Parametric Derivative",
+          "equation": "$$ \\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}} $$",
+          "variables": {
+            "t": "The parameter"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st13_visual_added01",
+          "title": "Parametric differentiation — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Parametric differentiation; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Parametric differentiation; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Parametric differentiation</title><desc>Conceptual illustration for Parametric differentiation; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M55 185 Q90 20 160 120 T270 50\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"160\" cy=\"120\" r=\"5\" fill=\"#d97706\"/><text x=\"170\" y=\"110\" font-size=\"13\" fill=\"#92400e\">t</text><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Parametric differentiation</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find $\\frac{dy}{dx}$ if $x = 2t^3$ and $y = 5t^4$.",
+          "solution_steps": [
+            "Step 1: Differentiate $x$ with respect to $t$: $\\frac{dx}{dt} = 6t^2$.",
+            "Step 2: Differentiate $y$ with respect to $t$: $\\frac{dy}{dt} = 20t^3$.",
+            "Step 3: Apply the parametric formula: $\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}$.",
+            "Step 4: Substitute the derivatives: $\\frac{20t^3}{6t^2}$.",
+            "Step 5: Simplify the fraction and the exponents: $\\frac{10}{3}t$."
+          ],
+          "final_answer": "(10/3)t"
+        },
+        {
+          "problem": "Given $x=t^2+1$ and $y=t^3-2t$, find $dy/dx$ at $t=1$.",
+          "solution_steps": [
+            "Differentiate with respect to $t$: $dx/dt=2t$ and $dy/dt=3t^2-2$.",
+            "Use $dy/dx=(dy/dt)/(dx/dt)$ when $dx/dt\\ne0$.",
+            "At $t=1$, $dy/dt=1$ and $dx/dt=2$.",
+            "Divide."
+          ],
+          "final_answer": "$dy/dx=\\frac12$ at $t=1$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Flipping the fraction.",
+          "correction": "It is extremely common to accidentally write $\\frac{dx/dt}{dy/dt}$ because you calculated $x$ first. Always remember that $\\frac{dy}{dx}$ means the $y$-derivative MUST be on top."
+        }
+      ],
+      "quick_summary": [
+        "Parametric equations use a third variable ($t$) to independently control $x$ and $y$.",
+        "To find the slope of the resulting curve ($\\frac{dy}{dx}$), differentiate both equations with respect to $t$.",
+        "Divide the $y$-derivative by the $x$-derivative."
+      ],
+      "registry_scope": "Approved lesson-level scope: Differentiate parametric equations using the chain-rule relationship dy/dx = (dy/dt)/(dx/dt), where dx/dt is non-zero. Include interpretation and straightforward curve examples."
+    },
+    "hss_math_t12_st14": {
+      "id": "hss_math_t12_st14",
+      "title": "Second and higher derivatives",
+      "overview": "If the first derivative tells you how fast your car is moving, what tells you how hard you are pressing the accelerator? The second derivative measures the rate of change of the rate of change.",
+      "key_concepts": [
+        {
+          "concept": "The Second Derivative ($f''(x)$)",
+          "definition": "Differentiating the derivative.",
+          "details": [
+            "Simply take the result of your first derivative and differentiate it a second time.",
+            "Notation: $f''(x)$ or $\\frac{d^2y}{dx^2}$."
+          ]
+        },
+        {
+          "concept": "Higher Order Derivatives",
+          "definition": "Continuing the chain.",
+          "details": [
+            "You can continue differentiating infinitely. The third derivative is $f'''(x)$ or $\\frac{d^3y}{dx^3}$.",
+            "Eventually, polynomials will hit zero (e.g., $x^2 \\to 2x \\to 2 \\to 0$)."
+          ]
+        },
+        {
+          "concept": "Physical Meaning",
+          "definition": "Motion.",
+          "details": [
+            "If the original function $s(t)$ is Position.",
+            "The 1st derivative $s'(t)$ is Velocity (Speed).",
+            "The 2nd derivative $s''(t)$ is Acceleration."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Second Derivative Notation",
+          "equation": "$$ y'' = f''(x) = \\frac{d^2y}{dx^2} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st14_visual_added01",
+          "title": "Second and higher derivatives — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Second and higher derivatives; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Second and higher derivatives; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Second and higher derivatives</title><desc>Conceptual illustration for Second and higher derivatives; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 175 Q100 25 160 110 T285 65\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M35 205 Q160 150 285 205\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2.5\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Second and higher derivatives</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the second derivative of $f(x) = x^4 - 3x^3 + 2x^2$.",
+          "solution_steps": [
+            "Step 1: Find the first derivative $f'(x)$ using the power rule.",
+            "Step 2: $f'(x) = 4x^3 - 9x^2 + 4x$.",
+            "Step 3: Differentiate the result to find the second derivative $f''(x)$.",
+            "Step 4: $f''(x) = 12x^2 - 18x + 4$."
+          ],
+          "final_answer": "f''(x) = 12x² - 18x + 4"
+        },
+        {
+          "problem": "For $s(t)=t^3-3t^2+2t$, find velocity and acceleration at $t=2$.",
+          "solution_steps": [
+            "Velocity is the first derivative: $v(t)=s'(t)=3t^2-6t+2$.",
+            "Acceleration is the second derivative: $a(t)=v'(t)=s''(t)=6t-6$.",
+            "At $t=2$, $v(2)=12-12+2=2$.",
+            "At $t=2$, $a(2)=12-6=6$."
+          ],
+          "final_answer": "Velocity = $2$ units/s; acceleration = $6$ units/s$^2$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Squaring the first derivative.",
+          "correction": "The notation $\\frac{d^2y}{dx^2}$ DOES NOT mean $(\\frac{dy}{dx})^2$. It means the 'second derivative operation'. You must actually perform the derivative process a second time."
+        }
+      ],
+      "quick_summary": [
+        "A second derivative is found by differentiating the first derivative.",
+        "It mathematically measures how the slope itself is changing (curvature).",
+        "In physics, it represents Acceleration."
+      ],
+      "registry_scope": "Approved lesson-level scope: Calculate second and higher derivatives and interpret the second derivative as the rate of change of the first derivative. Include suitable motion examples such as acceleration; reserve systematic curve analysis and derivative tests for HSS T13."
+    },
+    "hss_math_t12_st15": {
+      "id": "hss_math_t12_st15",
+      "title": "Logarithmic differentiation",
+      "overview": "How do you differentiate $x^x$? The Power Rule fails because the exponent is a variable. The Exponential Rule fails because the base is a variable. By using logarithms, we can drag the exponent down and solve the impossible.",
+      "key_concepts": [
+        {
+          "concept": "The Variable Trap",
+          "definition": "Variable base and exponent.",
+          "details": [
+            "Functions like $y = x^x$ or $y = (\\sin x)^x$ cannot be differentiated using standard rules."
+          ]
+        },
+        {
+          "concept": "The Logarithm Trick",
+          "definition": "Bringing down the power.",
+          "details": [
+            "Step 1: Take the natural log ($\\ln$) of both sides of the equation: $\\ln(y) = \\ln(x^x)$.",
+            "Step 2: Use log properties to pull the exponent down to the front: $\\ln(y) = x \\ln(x)$.",
+            "Step 3: Differentiate both sides using Implicit Differentiation on the left, and the Product Rule on the right."
+          ]
+        },
+        {
+          "concept": "Massive Products/Quotients",
+          "definition": "The secondary use.",
+          "details": [
+            "Logarithmic differentiation is also used as a shortcut for massive fractions like $y = \\frac{(x+1)^4 \\sqrt{x-2}}{(3x+4)^5}$. Taking the log of both sides turns all the multiplication/division into simple addition/subtraction."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t12_st15_visual_added01",
+          "title": "Logarithmic differentiation — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Logarithmic differentiation; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Logarithmic differentiation; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Logarithmic differentiation</title><desc>Conceptual illustration for Logarithmic differentiation; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"45\" y=\"55\" width=\"230\" height=\"120\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"95\" text-anchor=\"middle\" font-size=\"20\" fill=\"#1e3a8a\">u(x) · v(x)</text><text x=\"160\" y=\"135\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">u′v + uv′</text><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Logarithmic differentiation</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Differentiate $y = x^x$.",
+          "solution_steps": [
+            "Step 1: Take the natural log of both sides: $\\ln y = \\ln(x^x)$.",
+            "Step 2: Pull the exponent down: $\\ln y = x \\ln x$.",
+            "Step 3: Differentiate the left side implicitly: $\\frac{1}{y} \\frac{dy}{dx}$.",
+            "Step 4: Differentiate the right side using the Product Rule ($u=x, v=\\ln x$): $(1)(\\ln x) + (x)(\\frac{1}{x}) = \\ln x + 1$.",
+            "Step 5: Assemble: $\\frac{1}{y} \\frac{dy}{dx} = \\ln x + 1$.",
+            "Step 6: Multiply by $y$ to isolate $\\frac{dy}{dx}$: $\\frac{dy}{dx} = y(\\ln x + 1)$.",
+            "Step 7: Substitute the original $y$ equation ($y = x^x$) back in."
+          ],
+          "final_answer": "dy/dx = xˣ(ln x + 1)"
+        },
+        {
+          "problem": "Use logarithmic differentiation to differentiate $y=(x^2+1)^3\\sqrt{x}$ for $x>0$.",
+          "solution_steps": [
+            "Take logarithms: $\\ln y=3\\ln(x^2+1)+\\frac12\\ln x$.",
+            "Differentiate: $\\frac{y'}y=\\frac{6x}{x^2+1}+\\frac{1}{2x}$.",
+            "Multiply by $y=(x^2+1)^3\\sqrt{x}$.",
+            "This logarithmic form is convenient because the original expression is a product of powers."
+          ],
+          "final_answer": "$y'=(x^2+1)^3\\sqrt{x}\\left(\\frac{6x}{x^2+1}+\\frac1{2x}\\right)$, for $x>0$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting to multiply the final answer by $y$.",
+          "correction": "Because you differentiated $\\ln y$, the left side becomes $\\frac{1}{y} \\frac{dy}{dx}$. You MUST multiply that $y$ back over to the right side to isolate $\\frac{dy}{dx}$."
+        }
+      ],
+      "quick_summary": [
+        "Logarithmic differentiation is required when a function has a variable in the base AND the exponent.",
+        "Take $\\ln$ of both sides, use log laws to pull the exponent down, and use implicit differentiation.",
+        "It can also be used as a shortcut to turn terrifying multiplication/division problems into simple addition/subtraction."
+      ],
+      "registry_scope": "Approved lesson-level scope: Use logarithmic differentiation to simplify derivatives of products, quotients, powers and variable-base/variable-exponent expressions where the logarithms are defined. Emphasise when this method is advantageous over direct rules."
+    },
+    "hss_math_t12_st16": {
+      "id": "hss_math_t12_st16",
+      "title": "Applications of differentiation",
+      "overview": "Differentiation is arguably the most powerful tool in applied mathematics. It allows us to find the exact peak of a mountain, the exact bottom of a valley, and the precise moment an object is moving its absolute fastest.",
+      "key_concepts": [
+        {
+          "concept": "Tangents and Normals",
+          "definition": "Slopes on a graph.",
+          "details": [
+            "The derivative evaluated at a point $x=a$ ($f'(a)$) gives the exact slope ($m$) of the tangent line touching the curve at that point.",
+            "The normal line is perpendicular to the tangent, so its slope is $-\\frac{1}{m}$."
+          ]
+        },
+        {
+          "concept": "Increasing and Decreasing Functions",
+          "definition": "Going up or down.",
+          "details": [
+            "If $f'(x) > 0$ (positive derivative), the function is climbing upwards.",
+            "If $f'(x) < 0$ (negative derivative), the function is dropping downwards."
+          ]
+        },
+        {
+          "concept": "Stationary Points (Maxima and Minima)",
+          "definition": "The peaks and valleys.",
+          "details": [
+            "A stationary point occurs when the curve flattens out entirely. This happens exactly where the derivative equals zero ($f'(x) = 0$).",
+            "To find the highest peak (Maximum) or lowest valley (Minimum) of a function, you set its derivative to zero and solve for $x$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v12_s16",
+          "title": "Stationary Points",
+          "type": "svg",
+          "caption": "At the exact peak of a curve, the tangent line is perfectly flat, meaning the slope (derivative) is zero.",
+          "alt_text": "A curve that goes up like a hill and then down like a valley. At the very top peak, a horizontal tangent line is drawn labeled 'f'(x) = 0 (Local Maximum)'. At the very bottom valley, a horizontal tangent line is drawn labeled 'f'(x) = 0 (Local Minimum)'.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 50 150 Q 150 20, 250 125 T 450 100\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"4\"/><path d=\"M 100 65 L 200 65\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\" stroke-dasharray=\"6,4\"/><circle cx=\"150\" cy=\"65\" r=\"5\" fill=\"#991b1b\"/><text x=\"150\" y=\"45\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">f'(x) = 0</text><text x=\"150\" y=\"95\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Local Max</text><path d=\"M 300 185 L 400 185\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\" stroke-dasharray=\"6,4\"/><circle cx=\"350\" cy=\"185\" r=\"5\" fill=\"#991b1b\"/><text x=\"350\" y=\"215\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"middle\" fill=\"#991b1b\" font-weight=\"bold\">f'(x) = 0</text><text x=\"350\" y=\"165\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#0f172a\" font-weight=\"bold\">Local Min</text></svg>"
+        },
+        {
+          "visual_id": "hss_math_t12_st16_visual_added01",
+          "title": "Applications of differentiation — concept illustration",
+          "type": "svg",
+          "caption": "Conceptual illustration for Applications of differentiation; schematic only, not to scale.",
+          "alt_text": "Conceptual illustration for Applications of differentiation; schematic only, not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Applications of differentiation</title><desc>Conceptual illustration for Applications of differentiation; schematic only, not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 190 Q110 20 285 175\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M75 105 L250 145\" stroke=\"#d97706\" stroke-width=\"2.5\"/><circle cx=\"165\" cy=\"125\" r=\"4\" fill=\"#2563eb\"/><text x=\"160\" y=\"222\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Applications of differentiation</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the x-coordinate of the stationary point of the curve $y = x^2 - 4x + 7$.",
+          "solution_steps": [
+            "Step 1: A stationary point occurs where the derivative equals zero.",
+            "Step 2: Find the derivative: $y' = 2x - 4$.",
+            "Step 3: Set the derivative equal to zero: $2x - 4 = 0$.",
+            "Step 4: Solve for $x$: $2x = 4 \\Rightarrow x = 2$."
+          ],
+          "final_answer": "x = 2"
+        },
+        {
+          "problem": "A rectangle has perimeter 20 cm. Express its area in terms of one side $x$, and find the stationary value of the area.",
+          "solution_steps": [
+            "If the sides are $x$ and $y$, then $2x+2y=20$, so $y=10-x$.",
+            "Area is $A=x(10-x)=10x-x^2$, where $0<x<10$.",
+            "Differentiate: $A'=10-2x$.",
+            "Set $A'=0$: $x=5$, so $y=5$.",
+            "The second derivative is $A''=-2<0$, confirming a maximum."
+          ],
+          "final_answer": "Maximum area is $25$ cm$^2$, attained by a $5$ cm by $5$ cm square."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Finding $x$ and stopping.",
+          "correction": "If a question asks for the 'coordinates of the stationary point', finding $x$ is only half the battle. You must plug that $x$ back into the ORIGINAL function (not the derivative) to find the $y$ coordinate."
+        }
+      ],
+      "quick_summary": [
+        "Plugging a point into a derivative gives the exact slope of the Tangent line at that point.",
+        "If a derivative is positive, the function is increasing. If negative, it is decreasing.",
+        "When the derivative is exactly $0$, the function has flattened out into a peak (Maximum) or valley (Minimum)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Introduce applications including tangent and normal gradients, rates of change, intervals of increase or decrease, stationary points and elementary optimisation. Provide a bridge to the more systematic derivative tests, curve sketching, related rates and extended optimisation in HSS T13. Boundary: Include derivative rules and introductory applications/examples only. Systematic optimisation, curve analysis, related rates and other structured applications are developed in HSS T13."
+    }
+  }
+}

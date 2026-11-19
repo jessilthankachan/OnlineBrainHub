@@ -1,0 +1,1497 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t04",
+  "topicTitle": "Matrices and Determinants",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t04_st01": {
+      "id": "hss_math_t04_st01",
+      "title": "Definition and types of matrices",
+      "overview": "A matrix is a powerful tool for organizing complex data and solving massive systems of equations. This lesson introduces the structure of matrices, mapping rows and columns, and classifying the different specific types of matrices you will encounter.",
+      "key_concepts": [
+        {
+          "concept": "The Matrix Structure",
+          "definition": "Rows and Columns.",
+          "details": [
+            "A matrix is a rectangular array of numbers or expressions arranged in horizontal **Rows** and vertical **Columns**.",
+            "Individual numbers inside the matrix are called 'elements' or 'entries'."
+          ]
+        },
+        {
+          "concept": "General Classification",
+          "definition": "Based on dimensions.",
+          "details": [
+            "**Row Matrix:** A matrix with only exactly 1 row.",
+            "**Column Matrix:** A matrix with only exactly 1 column.",
+            "**Square Matrix:** A matrix where the number of rows perfectly equals the number of columns.",
+            "**Rectangular Matrix:** A matrix where rows and columns are unequal."
+          ]
+        },
+        {
+          "concept": "Specific Square Matrices",
+          "definition": "Based on elements.",
+          "details": [
+            "**Diagonal Matrix:** A square matrix where all elements *outside* the main diagonal are zero.",
+            "**Scalar Matrix:** A diagonal matrix where all diagonal elements are identical.",
+            "**Identity Matrix ($I$):** A scalar matrix where every diagonal element is exactly 1.",
+            "**Zero Matrix ($O$):** A matrix where every single element is zero."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "A matrix is an ordered rectangular arrangement; the position of an entry is identified by its row and column indices.",
+          "details": [
+            "For example, in A=[[2,−1,0],[4,3,5]], a₂₃=5: the second row and third column.",
+            "A diagonal matrix has all off-diagonal entries zero; scalar matrices have equal diagonal entries; an identity matrix is a scalar matrix with diagonal entries 1."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Number of entries",
+          "equation": "$$N=mn$$",
+          "variables": {
+            "m": "Number of rows",
+            "n": "Number of columns"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s01",
+          "title": "Rows vs Columns",
+          "type": "svg",
+          "caption": "Rows run horizontally (left to right). Columns run vertically (top to bottom).",
+          "alt_text": "A 2x3 matrix with arrows showing row direction (horizontal) and column direction (vertical).",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><text x=\"200\" y=\"100\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\">[</text><text x=\"300\" y=\"100\" font-family=\"monospace\" font-size=\"24\" fill=\"#0f172a\">]</text><text x=\"220\" y=\"80\" font-family=\"monospace\" font-size=\"18\" fill=\"#0f172a\">a</text><text x=\"250\" y=\"80\" font-family=\"monospace\" font-size=\"18\" fill=\"#0f172a\">b</text><text x=\"280\" y=\"80\" font-family=\"monospace\" font-size=\"18\" fill=\"#0f172a\">c</text><text x=\"220\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#0f172a\">d</text><text x=\"250\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#0f172a\">e</text><text x=\"280\" y=\"120\" font-family=\"monospace\" font-size=\"18\" fill=\"#0f172a\">f</text><path d=\"M 100 75 L 180 75\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" marker-end=\"url(#arrow-blue)\"/><text x=\"90\" y=\"80\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"end\" fill=\"#1d4ed8\" font-weight=\"bold\">Row 1</text><path d=\"M 100 115 L 180 115\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" marker-end=\"url(#arrow-blue)\"/><text x=\"90\" y=\"120\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"end\" fill=\"#1d4ed8\" font-weight=\"bold\">Row 2</text><path d=\"M 225 180 L 225 140\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\" marker-end=\"url(#arrow-green)\"/><text x=\"225\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Col 1</text><path d=\"M 255 180 L 255 140\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\" marker-end=\"url(#arrow-green)\"/><text x=\"255\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Col 2</text><path d=\"M 285 180 L 285 140\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\" marker-end=\"url(#arrow-green)\"/><text x=\"285\" y=\"195\" font-family=\"sans-serif\" font-size=\"14\" text-anchor=\"middle\" fill=\"#15803d\" font-weight=\"bold\">Col 3</text><defs><marker id=\"arrow-blue\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker><marker id=\"arrow-green\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#16a34a\"/></marker></defs></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Identify the type of matrix: $\\begin{bmatrix} 5 & 0 & 0 \\\\ 0 & 5 & 0 \\\\ 0 & 0 & 5 \\end{bmatrix}$.",
+          "solution_steps": [
+            "Step 1: Check dimensions. It has 3 rows and 3 columns. It is a square matrix.",
+            "Step 2: Check non-diagonal elements. All elements off the main diagonal are zero. It is a diagonal matrix.",
+            "Step 3: Check diagonal elements. They are all identical (5).",
+            "Step 4: A diagonal matrix with identical entries is a scalar matrix."
+          ],
+          "final_answer": "Scalar Matrix"
+        },
+        {
+          "problem": "Classify A=[[4,0,0],[0,4,0],[0,0,4]]: it is square, diagonal and scalar, but not the identity matrix because its diagonal entries are 4.",
+          "solution_steps": [
+            "The diagonal entries are 4 and all off-diagonal entries are 0.",
+            "Therefore it is diagonal; because both diagonal entries are equal, it is scalar.",
+            "It is not I₃ because an identity matrix has diagonal entries 1."
+          ],
+          "final_answer": "A is square, diagonal and scalar, but not an identity matrix."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing a scalar matrix with an identity matrix.",
+          "correction": "An identity matrix is a specific type of scalar matrix where the diagonal elements are *strictly* $1$. If they are all $5$s, it is a scalar matrix, not an identity matrix."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "Matrices arrange data into horizontal rows and vertical columns.",
+        "They are classified broadly by their dimensions (square, row, column).",
+        "Square matrices have special classifications based on their diagonal and non-diagonal elements (diagonal, scalar, identity).",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Matrix definition, notation, entries and common types: row, column, rectangular, square, diagonal, scalar, identity, zero and triangular matrices. Introduce types with clear examples."
+    },
+    "hss_math_t04_st02": {
+      "id": "hss_math_t04_st02",
+      "title": "Order and equality of matrices",
+      "overview": "To perform operations on matrices, we must first understand their exact dimensions (Order). When two matrices share the exact same order and identical elements, they are equal, allowing us to solve for missing variables.",
+      "key_concepts": [
+        {
+          "concept": "Order (Dimension) of a Matrix",
+          "definition": "Rows $\\times$ Columns.",
+          "details": [
+            "The order of a matrix is always written as $m \\times n$, where $m$ is the total number of rows and $n$ is the total number of columns.",
+            "Rows always come first. A $2 \\times 3$ matrix is short and wide. A $3 \\times 2$ matrix is tall and narrow."
+          ]
+        },
+        {
+          "concept": "Total Elements",
+          "definition": "The area.",
+          "details": [
+            "Multiplying the order gives the total number of elements inside the matrix. A $4 \\times 5$ matrix contains $20$ elements."
+          ]
+        },
+        {
+          "concept": "Equality of Matrices",
+          "definition": "Perfect twins.",
+          "details": [
+            "Two matrices are considered mathematically equal if and only if they meet two strict conditions:",
+            "1. They have the exact same order.",
+            "2. Every corresponding element in identical positions is perfectly equal ($a_{ij} = b_{ij}$)."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "The entry aᵢⱼ is located in row i and column j. The first subscript identifies the row; the second identifies the column.",
+          "details": [
+            "A matrix with m rows and n columns has mn entries.",
+            "Equality is defined entry by entry and is possible only for matrices of the same order."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Matrix Order Notation",
+          "equation": "$$ \\text{Order} = m \\times n $$",
+          "variables": {
+            "m": "Number of Rows",
+            "n": "Number of Columns"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s02_concept",
+          "title": "Order and Equality of Matrices: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in order and equality of matrices.",
+          "alt_text": "A labelled concept panel for order and equality of matrices showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Order and Equality of Matrices</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find $x$ and $y$ if $\\begin{bmatrix} x+y & 2 \\\\ 5 & x-y \\end{bmatrix} = \\begin{bmatrix} 7 & 2 \\\\ 5 & 1 \\end{bmatrix}$.",
+          "solution_steps": [
+            "Step 1: Confirm both matrices have the same order ($2 \\times 2$). Equality is possible.",
+            "Step 2: Equate the corresponding elements in row 1, column 1: $x + y = 7$.",
+            "Step 3: Equate the corresponding elements in row 2, column 2: $x - y = 1$.",
+            "Step 4: Solve the system of linear equations. Add the two equations: $2x = 8 \\Rightarrow x = 4$.",
+            "Step 5: Substitute $x=4$ back into the first equation: $4 + y = 7 \\Rightarrow y = 3$."
+          ],
+          "final_answer": "x = 4, y = 3"
+        },
+        {
+          "problem": "If [[2x, y−1],[3, z+2]]=[[8,4],[3,7]], then 2x=8, y−1=4 and z+2=7; hence x=4, y=5 and z=5.",
+          "solution_steps": [
+            "Equate corresponding entries: 2x=8, y−1=4 and z+2=7.",
+            "Solve separately: x=4, y=5 and z=5."
+          ],
+          "final_answer": "x=4, y=5, z=5"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Setting matrices equal that have different orders.",
+          "correction": "A $2 \\times 3$ matrix can never equal a $3 \\times 2$ matrix, even if they contain the exact same numbers. Equality strictly requires matching dimensions."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "The order of a matrix is stated as Rows $\\times$ Columns ($m \\times n$).",
+        "The total number of elements is found by multiplying $m$ and $n$.",
+        "Two matrices are only equal if their dimensions match perfectly and every corresponding element is identical.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Dimensions and element notation; conditions for equality of matrices; determine unknown entries from matrix equality. Distinguish matrix order from individual entries."
+    },
+    "hss_math_t04_st03": {
+      "id": "hss_math_t04_st03",
+      "title": "Addition and subtraction of matrices",
+      "overview": "Matrix addition and subtraction are straightforward, element-by-element operations. However, unlike standard arithmetic, these operations are strictly locked behind dimensional rules: only matching matrices can interact.",
+      "key_concepts": [
+        {
+          "concept": "The Golden Rule of Matrix Addition",
+          "definition": "Order must match.",
+          "details": [
+            "You can only add or subtract two matrices if they share the exact same order (dimensions).",
+            "You cannot add a $2 \\times 2$ matrix to a $2 \\times 3$ matrix. The operation is 'undefined'."
+          ]
+        },
+        {
+          "concept": "Element-by-Element Operation",
+          "definition": "Positional math.",
+          "details": [
+            "To add (or subtract) two matrices, you simply add (or subtract) the elements that occupy the exact same position.",
+            "Top-left adds to top-left, bottom-right adds to bottom-right."
+          ]
+        },
+        {
+          "concept": "Properties",
+          "definition": "Algebraic rules.",
+          "details": [
+            "**Commutative:** $A + B = B + A$. Order does not matter for addition.",
+            "**Associative:** $(A + B) + C = A + (B + C)$. Grouping does not matter.",
+            "Note: Matrix subtraction is NOT commutative ($A - B \\neq B - A$)."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "Addition and subtraction are performed entry by entry. Both matrices must have the same order.",
+          "details": [
+            "The zero matrix O of a given order is the additive identity, and −A is obtained by changing the sign of every entry.",
+            "Matrix addition is commutative and associative; subtraction is not commutative in general."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Matrix Addition",
+          "equation": "$$ [a_{ij}] + [b_{ij}] = [a_{ij} + b_{ij}] $$",
+          "variables": {}
+        },
+        {
+          "name": "Matrix addition and subtraction",
+          "equation": "$$(A\\pm B)_{ij}=a_{ij}\\pm b_{ij}$$",
+          "variables": {
+            "a_ij": "Entry of A in row i, column j",
+            "b_ij": "Corresponding entry of B"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s03_concept",
+          "title": "Addition and Subtraction of Matrices: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in addition and subtraction of matrices.",
+          "alt_text": "A labelled concept panel for addition and subtraction of matrices showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Addition and Subtraction of Matrices</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $A = \\begin{bmatrix} 2 & 4 \\\\ 1 & 3 \\end{bmatrix}$ and $B = \\begin{bmatrix} 5 & 2 \\\\ 3 & 6 \\end{bmatrix}$, find $A - B$.",
+          "solution_steps": [
+            "Step 1: Check orders. Both are $2 \\times 2$. Subtraction is valid.",
+            "Step 2: Subtract the top-left elements: $2 - 5 = -3$.",
+            "Step 3: Subtract the top-right elements: $4 - 2 = 2$.",
+            "Step 4: Subtract the bottom-left elements: $1 - 3 = -2$.",
+            "Step 5: Subtract the bottom-right elements: $3 - 6 = -3$.",
+            "Step 6: Assemble the final matrix."
+          ],
+          "final_answer": "[-3, 2; -2, -3]"
+        },
+        {
+          "problem": "For A=[[1,−2],[3,4]] and B=[[5,1],[−1,2]], A+B=[[6,−1],[2,6]] and A−B=[[-4,−3],[4,2]].",
+          "solution_steps": [
+            "Add corresponding entries: [[1+5,−2+1],[3−1,4+2]].",
+            "Subtract corresponding entries: [[1−5,−2−1],[3−(−1),4−2]]."
+          ],
+          "final_answer": "A+B=[[6,−1],[2,6]]; A−B=[[-4,−3],[4,2]]"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding matrices of different sizes by padding them with zeros.",
+          "correction": "This is mathematically invalid. If matrix $A$ is $2 \\times 2$ and $B$ is $3 \\times 3$, $A + B$ is undefined. You cannot force them to add."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "Matrix addition and subtraction are performed element-by-element.",
+        "The operation is only valid if both matrices have the exact same dimensions (order).",
+        "Matrix addition follows the commutative and associative properties, just like real numbers.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Addition and subtraction for matrices of compatible orders; entrywise operations; zero matrix and additive inverse; commutative and associative properties of addition."
+    },
+    "hss_math_t04_st04": {
+      "id": "hss_math_t04_st04",
+      "title": "Scalar multiplication",
+      "overview": "A scalar is just a fancy term for a standard, standalone number. Scaling a matrix involves broadcasting that single number across the entire matrix structure, expanding or contracting every element uniformly.",
+      "key_concepts": [
+        {
+          "concept": "Scalar Multiplication",
+          "definition": "Global distribution.",
+          "details": [
+            "When multiplying a matrix by a scalar $k$, you multiply *every single element* inside the matrix by $k$.",
+            "$kA = k[a_{ij}] = [k \\cdot a_{ij}]$."
+          ]
+        },
+        {
+          "concept": "Order Preservation",
+          "definition": "No resizing.",
+          "details": [
+            "Scalar multiplication changes the values inside the matrix, but it NEVER changes the order (dimensions) of the matrix. A $2 \\times 3$ matrix stays a $2 \\times 3$ matrix."
+          ]
+        },
+        {
+          "concept": "Negative Scalars",
+          "definition": "Flipping signs.",
+          "details": [
+            "Multiplying by a negative scalar distributes the negative sign to every element. Finding $-A$ is just scalar multiplication by $-1$."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "Scalar multiplication multiplies every entry of a matrix by the same number k; it does not change the matrix order.",
+          "details": [
+            "For scalars k,l and matrices A,B of the same order, k(A+B)=kA+kB and (k+l)A=kA+lA.",
+            "Scalar multiplication is compatible with matrix multiplication: k(AB)=(kA)B=A(kB), whenever the products are defined."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Scalar Multiplication",
+          "equation": "$$ kA = [k \\cdot a_{ij}] $$",
+          "variables": {
+            "k": "A real scalar number"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s04_concept",
+          "title": "Scalar Multiplication: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in scalar multiplication.",
+          "alt_text": "A labelled concept panel for scalar multiplication showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Scalar Multiplication</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "If $A = \\begin{bmatrix} 1 & -2 \\\\ 4 & 5 \\end{bmatrix}$, find $3A$.",
+          "solution_steps": [
+            "Step 1: Set up the scalar multiplication: $3 \\times \\begin{bmatrix} 1 & -2 \\\\ 4 & 5 \\end{bmatrix}$.",
+            "Step 2: Multiply the top-left element: $3 \\times 1 = 3$.",
+            "Step 3: Multiply the top-right element: $3 \\times (-2) = -6$.",
+            "Step 4: Multiply the bottom-left element: $3 \\times 4 = 12$.",
+            "Step 5: Multiply the bottom-right element: $3 \\times 5 = 15$.",
+            "Step 6: Assemble the resulting matrix."
+          ],
+          "final_answer": "[3, -6; 12, 15]"
+        },
+        {
+          "problem": "If A=[[2,−1],[0,3]], then −2A=[[-4,2],[0,−6]].",
+          "solution_steps": [
+            "Multiply each entry by −2.",
+            "The order remains 2×2."
+          ],
+          "final_answer": "−2A=[[-4,2],[0,−6]]"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Only multiplying the first row or column by the scalar.",
+          "correction": "A scalar outside a matrix distributes to EVERY element inside the matrix, not just a single row or column. (Note: This is different from the rule for determinants later on)."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "A scalar is a standard real number outside a matrix.",
+        "Scalar multiplication requires multiplying every element in the matrix by that scalar.",
+        "The final matrix retains the exact same dimensions as the original.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Multiplication of a matrix by a scalar; entrywise scaling; distributive properties over matrix addition and scalar addition; simple algebraic applications."
+    },
+    "hss_math_t04_st08": {
+      "id": "hss_math_t04_st08",
+      "title": "Identity and zero matrices",
+      "overview": "In standard arithmetic, the numbers $0$ and $1$ are special: adding $0$ or multiplying by $1$ changes nothing. Matrices have exact structural equivalents for these concepts, known as the Zero Matrix and the Identity Matrix.",
+      "key_concepts": [
+        {
+          "concept": "The Zero Matrix ($O$)",
+          "definition": "The additive identity.",
+          "details": [
+            "A zero matrix (null matrix) contains exclusively zeros in every position.",
+            "It can be square or rectangular.",
+            "Property: $A + O = A$. It acts exactly like the number $0$ in addition."
+          ]
+        },
+        {
+          "concept": "The Identity Matrix ($I$)",
+          "definition": "The multiplicative identity.",
+          "details": [
+            "An identity matrix MUST be a square matrix. Every element on its main diagonal is exactly $1$, and every other element is $0$.",
+            "Property: $A \\times I = I \\times A = A$. It acts exactly like the number $1$ in multiplication."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "The zero matrix O is defined for any order and has every entry equal to zero. It is the additive identity.",
+          "details": [
+            "The identity matrix Iₙ is square, has ones on its main diagonal and zeros elsewhere; it is the multiplicative identity for compatible matrices.",
+            "For A of order m×n, AIₙ=A and IₘA=A. A zero matrix product is zero whenever the product is defined."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Identity matrix multiplication",
+          "equation": "$$AI_n=A,\\quad I_mA=A$$",
+          "variables": {
+            "m": "Number of rows of A",
+            "n": "Number of columns of A"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s05_concept",
+          "title": "Identity and Zero Matrices: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in identity and zero matrices.",
+          "alt_text": "A labelled concept panel for identity and zero matrices showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Identity and Zero Matrices</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Write the $3 \\times 3$ identity matrix $I_3$.",
+          "solution_steps": [
+            "Step 1: Set up a $3 \\times 3$ grid.",
+            "Step 2: Place $1$s starting from the top-left to the bottom-right.",
+            "Step 3: Fill every remaining space with $0$s."
+          ],
+          "final_answer": "[[1, 0, 0], [0, 1, 0], [0, 0, 1]]"
+        },
+        {
+          "problem": "For A=[[1,2,3],[4,5,6]], AI₃=A and I₂A=A; A is 2×3, so the left and right identity matrices have different orders.",
+          "solution_steps": [
+            "A has order 2×3, so the right identity must be I₃.",
+            "The left identity must be I₂.",
+            "Multiplication by these compatible identity matrices leaves A unchanged."
+          ],
+          "final_answer": "AI₃=A and I₂A=A"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking an Identity Matrix can be rectangular.",
+          "correction": "Identity matrices are strictly square by definition (e.g., $2 \\times 2$, $3 \\times 3$). There is no such thing as a $2 \\times 3$ identity matrix."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "The Zero matrix ($O$) is filled with $0$s and acts as the mathematical zero for addition.",
+        "The Identity matrix ($I$) has $1$s on the diagonal and acts as the mathematical one for multiplication.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Properties and roles of identity and zero matrices; identity as the multiplicative identity for compatible square matrices; zero-matrix behaviour in multiplication; distinguish the scalar zero from a zero matrix."
+    },
+    "hss_math_t04_st05": {
+      "id": "hss_math_t04_st05",
+      "title": "Matrix multiplication",
+      "overview": "Unlike matrix addition, matrix multiplication is not a simple element-by-element process. It is an intricate 'row-by-column' operation that acts as a structural transformation, with strict dimensional rules dictating when two matrices can even be combined.",
+      "key_concepts": [
+        {
+          "concept": "The Dimensional Lock",
+          "definition": "Inner numbers must match.",
+          "details": [
+            "To multiply matrix $A$ (order $m \\times n$) by matrix $B$ (order $p \\times q$), the number of columns in $A$ MUST equal the number of rows in $B$ ($n = p$).",
+            "The resulting matrix will have the dimensions of the 'outside' numbers: $m \\times q$."
+          ]
+        },
+        {
+          "concept": "Row-by-Column Method",
+          "definition": "Dot products.",
+          "details": [
+            "To find the element in row $1$, column $1$ of the answer, take row $1$ of the first matrix and column $1$ of the second matrix. Multiply their corresponding elements sequentially, and add them all together."
+          ]
+        },
+        {
+          "concept": "Non-Commutativity",
+          "definition": "Order matters completely.",
+          "details": [
+            "In general, $AB \\neq BA$. Matrix multiplication is NOT commutative. In many cases, calculating $BA$ might not even be mathematically possible due to dimensional mismatches."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "If A is m×n and B is n×p, AB is defined and has order m×p. The inner dimensions must match.",
+          "details": [
+            "The entry in row i, column j of AB is the sum of products of entries from row i of A and column j of B.",
+            "Matrix multiplication is associative and distributive over addition, but is not commutative in general."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Matrix product entry",
+          "equation": "$$(AB)_{ij}=\\sum_{k=1}^{n}a_{ik}b_{kj}$$",
+          "variables": {
+            "n": "Number of columns of A and rows of B"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s06_concept",
+          "title": "Matrix Multiplication: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in matrix multiplication.",
+          "alt_text": "A labelled concept panel for matrix multiplication showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Matrix Multiplication</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Multiply $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$ by $B = \\begin{bmatrix} 5 & 6 \\\\ 7 & 8 \\end{bmatrix}$.",
+          "solution_steps": [
+            "Step 1: Check dimensions. Both are $2 \\times 2$. Multiplication is possible, result will be $2 \\times 2$.",
+            "Step 2: Top-Left element (R1 of A * C1 of B): $(1 \\times 5) + (2 \\times 7) = 5 + 14 = 19$.",
+            "Step 3: Top-Right element (R1 of A * C2 of B): $(1 \\times 6) + (2 \\times 8) = 6 + 16 = 22$.",
+            "Step 4: Bottom-Left element (R2 of A * C1 of B): $(3 \\times 5) + (4 \\times 7) = 15 + 28 = 43$.",
+            "Step 5: Bottom-Right element (R2 of A * C2 of B): $(3 \\times 6) + (4 \\times 8) = 18 + 32 = 50$."
+          ],
+          "final_answer": "AB = [19, 22; 43, 50]"
+        },
+        {
+          "problem": "Let A=[[1,2],[3,4]] and B=[[2,0],[1,−1]]. AB=[[4,−2],[10,−4]], whereas BA=[[2,4],[−2,−2]]; hence AB≠BA.",
+          "solution_steps": [
+            "Compute each entry of AB using row-by-column products.",
+            "AB=[[1·2+2·1,1·0+2·(−1)],[3·2+4·1,3·0+4·(−1)]].",
+            "Compute BA separately: [[2·1+0·3,2·2+0·4],[1·1+(−1)·3,1·2+(−1)·4]]."
+          ],
+          "final_answer": "AB=[[4,−2],[10,−4]]; BA=[[2,4],[−2,−2]], so AB≠BA"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying element-by-element (e.g., top-left $\\times$ top-left).",
+          "correction": "Matrix multiplication is strictly Row-by-Column. You must multiply across the row of the first matrix while going down the column of the second matrix."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "Matrix multiplication is only possible if the columns of the first matrix match the rows of the second.",
+        "Elements are calculated by taking a row from the first matrix and a column from the second, multiplying terms in order, and summing them.",
+        "The order of multiplication cannot be swapped: $AB \\neq BA$.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Compatibility of matrix dimensions; multiplication of rectangular and square matrices; row-by-column calculation; associativity and distributivity; non-commutativity; applications of identity and zero matrices."
+    },
+    "hss_math_t04_st06": {
+      "id": "hss_math_t04_st06",
+      "title": "Transpose of a matrix",
+      "overview": "The transpose operation is a simple structural flip that turns horizontal rows into vertical columns. It reveals deep symmetries in matrices and plays a crucial role in advanced data algorithms.",
+      "key_concepts": [
+        {
+          "concept": "The Transpose Operation ($A^T$)",
+          "definition": "Swapping axes.",
+          "details": [
+            "To find the transpose of a matrix, rewrite its 1st row as its 1st column, its 2nd row as its 2nd column, etc.",
+            "This physically flips the matrix over its main diagonal."
+          ]
+        },
+        {
+          "concept": "Order Change",
+          "definition": "Flipping dimensions.",
+          "details": [
+            "If matrix $A$ has an order of $m \\times n$, its transpose $A^T$ will have an order of $n \\times m$."
+          ]
+        },
+        {
+          "concept": "Transpose Properties",
+          "definition": "Algebraic rules.",
+          "details": [
+            "**Double Transpose:** $(A^T)^T = A$.",
+            "**Sum Transpose:** $(A + B)^T = A^T + B^T$.",
+            "**Reversal Law for Products:** $(AB)^T = B^T A^T$. Notice the order of multiplication reverses!"
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "The transpose Aᵀ is formed by interchanging rows and columns; an m×n matrix becomes n×m.",
+          "details": [
+            "The transpose of a sum is the sum of the transposes, and scalar factors remain unchanged.",
+            "The order of factors reverses in the transpose of a product: (AB)ᵀ=BᵀAᵀ."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Transpose of a product",
+          "equation": "$$(AB)^T=B^TA^T$$",
+          "variables": {
+            "A, B": "Matrices for which AB is defined"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s07_concept",
+          "title": "Transpose of a Matrix: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in transpose of a matrix.",
+          "alt_text": "A labelled concept panel for transpose of a matrix showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Transpose of a Matrix</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the transpose of $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\\\ 5 & 6 \\end{bmatrix}$.",
+          "solution_steps": [
+            "Step 1: Check the order. $A$ is $3 \\times 2$. The transpose will be $2 \\times 3$.",
+            "Step 2: Read the first row $[1, 2]$ and write it as the first vertical column.",
+            "Step 3: Read the second row $[3, 4]$ and write it as the second vertical column.",
+            "Step 4: Read the third row $[5, 6]$ and write it as the third vertical column."
+          ],
+          "final_answer": "Aᵀ = [[1, 3, 5], [2, 4, 6]]"
+        },
+        {
+          "problem": "If A=[[1,2,3],[4,5,6]], then Aᵀ=[[1,4],[2,5],[3,6]], of order 3×2.",
+          "solution_steps": [
+            "Write the first row of A as the first column of Aᵀ.",
+            "Write the second row as the second column.",
+            "The resulting matrix has 3 rows and 2 columns."
+          ],
+          "final_answer": "Aᵀ=[[1,4],[2,5],[3,6]]"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $A^T$ means $A$ raised to a power.",
+          "correction": "The superscript 'T' is just a label for the transpose operation. It involves no numerical multiplication or exponents."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "The transpose operation converts the rows of a matrix into its columns.",
+        "A matrix of order $m \\times n$ becomes $n \\times m$ when transposed.",
+        "The transpose of a matrix product reverses the multiplication order: $(AB)^T = B^T A^T$.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Transpose of a matrix and its dimensions; transpose of sums and scalar multiples; transpose of a product, including (AB)^T = B^T A^T."
+    },
+    "hss_math_t04_st07": {
+      "id": "hss_math_t04_st07",
+      "title": "Symmetric and skew-symmetric matrices",
+      "overview": "By applying the transpose operation, we can identify square matrices that have perfect structural symmetry. These matrices are mathematically elegant and appear constantly in physics and engineering.",
+      "key_concepts": [
+        {
+          "concept": "Symmetric Matrix",
+          "definition": "Mirror images.",
+          "details": [
+            "A square matrix is symmetric if its transpose equals the original matrix: $A^T = A$.",
+            "This means elements are mirrored identically across the main diagonal ($a_{ij} = a_{ji}$)."
+          ]
+        },
+        {
+          "concept": "Skew-Symmetric Matrix",
+          "definition": "Negative mirrors.",
+          "details": [
+            "A square matrix is skew-symmetric if its transpose equals its negative: $A^T = -A$.",
+            "Because elements flip signs across the diagonal ($a_{ij} = -a_{ji}$), all elements directly on the main diagonal MUST be exactly $0$."
+          ]
+        },
+        {
+          "concept": "The Decomposition Theorem",
+          "definition": "Splitting any matrix.",
+          "details": [
+            "Any square matrix $A$ can be uniquely expressed as the sum of a symmetric and a skew-symmetric matrix.",
+            "Symmetric part: $\\frac{1}{2}(A + A^T)$.",
+            "Skew-symmetric part: $\\frac{1}{2}(A - A^T)$."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "A square matrix A is symmetric when Aᵀ=A; corresponding entries across the main diagonal are equal.",
+          "details": [
+            "A square matrix A is skew-symmetric when Aᵀ=−A. Every diagonal entry of a skew-symmetric matrix is zero over the real numbers.",
+            "Every real square matrix A can be written uniquely as A=(A+Aᵀ)/2 +(A−Aᵀ)/2, the sum of a symmetric and a skew-symmetric matrix."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Symmetric Matrix Condition",
+          "equation": "$$ A^T = A $$",
+          "variables": {}
+        },
+        {
+          "name": "Skew-Symmetric Matrix Condition",
+          "equation": "$$ A^T = -A $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s08_concept",
+          "title": "Symmetric and Skew-Symmetric Matrices: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in symmetric and skew-symmetric matrices.",
+          "alt_text": "A labelled concept panel for symmetric and skew-symmetric matrices showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Symmetric and Skew-Symmetric Matrices</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Determine if $A = \\begin{bmatrix} 2 & 5 \\\\ 5 & 3 \\end{bmatrix}$ is symmetric or skew-symmetric.",
+          "solution_steps": [
+            "Step 1: Calculate the transpose $A^T$ by making the rows into columns.",
+            "Step 2: The first row $[2, 5]$ becomes the first column. The second row $[5, 3]$ becomes the second column.",
+            "Step 3: $A^T = \\begin{bmatrix} 2 & 5 \\\\ 5 & 3 \\end{bmatrix}$.",
+            "Step 4: Compare $A^T$ to the original $A$. They are perfectly identical ($A^T = A$)."
+          ],
+          "final_answer": "Symmetric"
+        },
+        {
+          "problem": "For A=[[2,5],[1,4]], the symmetric part is [[2,3],[3,4]] and the skew-symmetric part is [[0,2],[−2,0]].",
+          "solution_steps": [
+            "Calculate (A+Aᵀ)/2 to obtain the symmetric part.",
+            "Calculate (A−Aᵀ)/2 to obtain the skew-symmetric part.",
+            "Their sum is the original matrix A."
+          ],
+          "final_answer": "Symmetric part=[[2,3],[3,4]]; skew-symmetric part=[[0,2],[−2,0]]"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Classifying a matrix as skew-symmetric when its diagonal contains non-zero numbers.",
+          "correction": "A skew-symmetric matrix demands $a_{ij} = -a_{ji}$. For the diagonal where $i=j$, this means $a_{ii} = -a_{ii}$, which is mathematically only possible if the number is zero. Diagonals must be all zeros."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "A symmetric matrix is completely unchanged by transposition ($A^T = A$).",
+        "A skew-symmetric matrix becomes its own negative upon transposition ($A^T = -A$) and must have zeros on the main diagonal.",
+        "Any square matrix can be split into the sum of these two types.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Definitions and properties of symmetric and skew-symmetric square matrices; identify and construct examples; decompose a real square matrix into symmetric and skew-symmetric parts."
+    },
+    "hss_math_t04_st09": {
+      "id": "hss_math_t04_st09",
+      "title": "Determinants of square matrices",
+      "overview": "While a matrix is an entire grid of data, a determinant mathematically condenses a square matrix into a single numerical value. This value is critical for determining if a matrix is invertible and for solving complex systems of equations.",
+      "key_concepts": [
+        {
+          "concept": "The Determinant Definition",
+          "definition": "The numerical scalar.",
+          "details": [
+            "A determinant is a specific numerical value calculated from a matrix. It is denoted by $|A|$ or $\\det(A)$.",
+            "CRITICAL: Determinants can ONLY be calculated for square matrices. A rectangular matrix does not have a determinant."
+          ]
+        },
+        {
+          "concept": "2x2 Determinant Formula",
+          "definition": "The cross-product difference.",
+          "details": [
+            "For a $2 \\times 2$ matrix $A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$, the determinant is calculated by cross-multiplying and subtracting.",
+            "$|A| = (a \\times d) - (b \\times c)$."
+          ]
+        },
+        {
+          "concept": "Higher Order Expansions",
+          "definition": "Breaking it down.",
+          "details": [
+            "For $3 \\times 3$ matrices and higher, you cannot simply cross-multiply. The determinant must be expanded along a row or column using smaller $2 \\times 2$ sub-determinants."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "A determinant assigns one scalar to each square matrix. For a 2×2 matrix, ad−bc is the determinant.",
+          "details": [
+            "For a 3×3 matrix, expansion along a row or column reduces the calculation to 2×2 determinants.",
+            "A square matrix is singular when its determinant is zero and non-singular when its determinant is non-zero."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "2x2 Determinant",
+          "equation": "$$ |A| = ad - bc $$",
+          "variables": {}
+        },
+        {
+          "name": "3×3 determinant expansion",
+          "equation": "$$\\det(A)=a(ei-fh)-b(di-fg)+c(dh-eg)$$",
+          "variables": {
+            "a,b,c,d,e,f,g,h,i": "Entries of the 3×3 matrix, row by row"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s09_concept",
+          "title": "Determinants of Square Matrices: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in determinants of square matrices.",
+          "alt_text": "A labelled concept panel for determinants of square matrices showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Determinants of Square Matrices</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the determinant of $A = \\begin{bmatrix} 2 & 3 \\\\ 1 & 4 \\end{bmatrix}$.",
+          "solution_steps": [
+            "Step 1: Identify $a, b, c, d$. Here $a=2, b=3, c=1, d=4$.",
+            "Step 2: Multiply the main diagonal: $a \\times d = 2 \\times 4 = 8$.",
+            "Step 3: Multiply the secondary diagonal: $b \\times c = 3 \\times 1 = 3$.",
+            "Step 4: Subtract the secondary from the main: $8 - 3 = 5$."
+          ],
+          "final_answer": "|A| = 5"
+        },
+        {
+          "problem": "For A=[[1,2,0],[0,3,1],[2,0,1]], det(A)=1(3·1−0)−2(0·1−2·1)=3+4=7.",
+          "solution_steps": [
+            "Expand along the first row.",
+            "det(A)=1(3·1−1·0)−2(0·1−1·2)+0(...).",
+            "Simplify to 3+4."
+          ],
+          "final_answer": "det(A)=7"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding instead of subtracting the cross-products.",
+          "correction": "The determinant formula strictly requires subtraction: $(ad) - (bc)$. Do not add them."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "A determinant $|A|$ evaluates a square matrix down to a single number.",
+        "For a $2 \\times 2$ matrix, calculate the product of the main diagonal and subtract the product of the secondary diagonal.",
+        "Determinants are strictly defined for square matrices only.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Determinants of 2×2 and 3×3 matrices; evaluation by expansion; determinant notation and interpretation; singular and non-singular matrices."
+    },
+    "hss_math_t04_st10": {
+      "id": "hss_math_t04_st10",
+      "title": "Properties of determinants",
+      "overview": "Calculating large determinants by brute force is tedious. By learning the structural properties of determinants, you can drastically simplify calculations, pull out common factors, or instantly recognize when a determinant will evaluate to zero.",
+      "key_concepts": [
+        {
+          "concept": "The Zero Determinant Rules",
+          "definition": "Instant cancellations.",
+          "details": [
+            "A determinant is instantly zero if any entire row or column consists of all zeros.",
+            "A determinant is instantly zero if any two rows (or any two columns) are perfectly identical or proportional to each other."
+          ]
+        },
+        {
+          "concept": "Swapping Rows or Columns",
+          "definition": "Flipping the sign.",
+          "details": [
+            "If you interchange any two rows (or two columns) in a matrix, the numerical value of the determinant stays the same, but its sign flips to negative."
+          ]
+        },
+        {
+          "concept": "Scalar Multiplication in Determinants",
+          "definition": "Row-by-row extraction.",
+          "details": [
+            "Unlike a matrix where a scalar multiplies *everything*, in a determinant, a scalar only multiplies a single row or single column.",
+            "You can factor out a common number from a single row to simplify the determinant."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "Interchanging two rows or two columns changes the sign of a determinant.",
+          "details": [
+            "Multiplying one row or column by k multiplies the determinant by k; adding a multiple of one row to another leaves the determinant unchanged.",
+            "If two rows or columns are equal or proportional, the determinant is zero. A common factor from a row or column can be factored out."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Row operation: adding a multiple",
+          "equation": "$$R_i\\to R_i+kR_j\\;\\text{ leaves }\\det(A)\\text{ unchanged}$$",
+          "variables": {
+            "k": "Any scalar; i and j are distinct row indices"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s10_concept",
+          "title": "Properties of Determinants: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in properties of determinants.",
+          "alt_text": "A labelled concept panel for properties of determinants showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Properties of Determinants</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate the determinant of $D = \\begin{bmatrix} 4 & 5 & 6 \\\\ 4 & 5 & 6 \\\\ 1 & 2 & 3 \\end{bmatrix}$.",
+          "solution_steps": [
+            "Step 1: Inspect the matrix for patterns.",
+            "Step 2: Notice that Row 1 ($4, 5, 6$) and Row 2 ($4, 5, 6$) are perfectly identical.",
+            "Step 3: Apply the identical row property of determinants."
+          ],
+          "final_answer": "D = 0"
+        },
+        {
+          "problem": "For D=|1 2; 3 4|=−2, interchanging the rows gives |3 4; 1 2|=2, confirming the sign change.",
+          "solution_steps": [
+            "The original determinant is 1·4−2·3=−2.",
+            "After swapping rows, the determinant is 3·2−4·1=2.",
+            "The value changes sign, as required."
+          ],
+          "final_answer": "Original determinant=−2; after row interchange=2"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Factoring a scalar out of the entire matrix determinant at once.",
+          "correction": "If $k$ is multiplied into every element of a $3 \\times 3$ matrix $A$, the determinant is $|kA| = k^3|A|$, not $k|A|$. It factors out once for *every* row."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "If two rows or columns are identical, the determinant is $0$.",
+        "Swapping two rows or columns changes the sign of the determinant.",
+        "Scalars can be factored out of individual rows or columns, not the entire matrix at once.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Determinant properties involving row and column operations, interchange and scaling; effects of dependent rows or columns; efficient determinant evaluation using appropriate properties."
+    },
+    "hss_math_t04_st11": {
+      "id": "hss_math_t04_st11",
+      "title": "Minors and cofactors",
+      "overview": "To break down a massive $3 \\times 3$ matrix, we extract smaller $2 \\times 2$ matrices from it called minors. By attaching a specific positive or negative sign to these minors, we create cofactors, which are the fundamental building blocks for finding a matrix inverse.",
+      "key_concepts": [
+        {
+          "concept": "The Minor ($M_{ij}$)",
+          "definition": "The sub-matrix determinant.",
+          "details": [
+            "The minor of any element in a matrix is the determinant of the smaller matrix left over when you completely cross out that element's row and column."
+          ]
+        },
+        {
+          "concept": "The Cofactor ($C_{ij}$)",
+          "definition": "The minor with a sign.",
+          "details": [
+            "A cofactor is simply the minor multiplied by a positive or negative sign, based strictly on its grid position.",
+            "The sign is determined by the formula $(-1)^{i+j}$. If the row number $i$ plus the column number $j$ is even, the sign is positive. If odd, it is negative."
+          ]
+        },
+        {
+          "concept": "The Sign Pattern",
+          "definition": "The checkerboard.",
+          "details": [
+            "For a $3 \\times 3$ matrix, the signs always follow a strict alternating checkerboard pattern: $+ - +$ for the first row, $- + -$ for the second, and $+ - +$ for the third."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "The minor Mᵢⱼ is the determinant obtained by deleting row i and column j.",
+          "details": [
+            "The cofactor Cᵢⱼ is (−1)ⁱ⁺ʲMᵢⱼ; its sign follows the checkerboard pattern + − + / − + − / + − +.",
+            "A determinant can be expanded along any row or column by multiplying each entry by its cofactor and adding."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Cofactor Formula",
+          "equation": "$$ C_{ij} = (-1)^{i+j} M_{ij} $$",
+          "variables": {
+            "C_{ij}": "Cofactor",
+            "M_{ij}": "Minor",
+            "i": "Row number",
+            "j": "Column number"
+          }
+        },
+        {
+          "name": "Cofactor",
+          "equation": "$$C_{ij}=(-1)^{i+j}M_{ij}$$",
+          "variables": {
+            "M_ij": "Minor of the entry in row i, column j"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s11_concept",
+          "title": "Minors and Cofactors: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in minors and cofactors.",
+          "alt_text": "A labelled concept panel for minors and cofactors showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Minors and Cofactors</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the minor and cofactor for the element $a_{12} = 3$ in $A = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}$.",
+          "solution_steps": [
+            "Step 1: Identify the position. Element $3$ is in Row 1, Column 2 ($i=1, j=2$).",
+            "Step 2: Find the minor $M_{12}$ by crossing out Row 1 and Column 2. The only remaining element is $4$. So, $M_{12} = 4$.",
+            "Step 3: Calculate the cofactor sign: $(-1)^{1+2} = (-1)^3 = -1$.",
+            "Step 4: Multiply the minor by the sign to get the cofactor: $C_{12} = -1(4) = -4$."
+          ],
+          "final_answer": "Minor = 4, Cofactor = -4"
+        },
+        {
+          "problem": "For A=[[1,2,3],[0,4,5],[1,0,6]], M₂₃=|1 2;1 0|=−2 and C₂₃=(−1)⁵(−2)=2.",
+          "solution_steps": [
+            "Delete row 2 and column 3 to obtain [[1,2],[1,0]].",
+            "Its determinant is 1·0−2·1=−2.",
+            "Since (−1)^(2+3)=−1, C₂₃=−(−2)=2."
+          ],
+          "final_answer": "M₂₃=−2 and C₂₃=2"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Multiplying the minor by the element itself to get the cofactor.",
+          "correction": "The cofactor is ONLY the minor multiplied by the grid sign $(-1)^{i+j}$. You do not multiply it by the actual numerical element (e.g., $3$) until you are performing a full determinant expansion."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "A Minor is the determinant of the smaller matrix left after deleting a specific row and column.",
+        "A Cofactor is the Minor multiplied by an alternating positional sign $(-1)^{i+j}$.",
+        "These values are calculated for every single position in the matrix to build a new 'Cofactor Matrix'.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Minors and cofactors of matrix elements; cofactor signs; expansion of determinants along a row or column; structured evaluation of 3×3 determinants."
+    },
+    "hss_math_t04_st12": {
+      "id": "hss_math_t04_st12",
+      "title": "Adjoint of a matrix",
+      "overview": "The adjoint matrix is the mathematical bridge that allows us to find the inverse of a matrix. It requires finding the cofactor for every single element, assembling them into a new grid, and transposing it.",
+      "key_concepts": [
+        {
+          "concept": "The Cofactor Matrix",
+          "definition": "The intermediate grid.",
+          "details": [
+            "Calculate the cofactor ($C_{ij}$) for every single element in the original matrix $A$.",
+            "Place all of these new cofactors into their exact corresponding positions in a brand new matrix. This is the Cofactor Matrix."
+          ]
+        },
+        {
+          "concept": "The Adjoint ($\\text{adj } A$)",
+          "definition": "The transpose.",
+          "details": [
+            "The Adjoint of $A$ is simply the transpose of the Cofactor Matrix.",
+            "You take the completed Cofactor Matrix and flip its rows into columns: $\\text{adj}(A) = C^T$."
+          ]
+        },
+        {
+          "concept": "The 2x2 Shortcut",
+          "definition": "Swap and negate.",
+          "details": [
+            "For a $2 \\times 2$ matrix, you don't need to do the full calculation. You can find the adjoint instantly.",
+            "1. Swap the positions of the elements on the main diagonal.",
+            "2. Change the signs (but not the positions) of the elements on the secondary diagonal."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "The cofactor matrix contains Cᵢⱼ in the same position as aᵢⱼ. The adjoint (adjugate) is the transpose of the cofactor matrix.",
+          "details": [
+            "For a square matrix A, A adj(A)=adj(A) A=det(A) I.",
+            "For a 2×2 matrix [[a,b],[c,d]], adj(A)=[[d,−b],[−c,a]]."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Adjoint Formula",
+          "equation": "$$ \\text{adj}(A) = C^T $$",
+          "variables": {
+            "C": "Cofactor Matrix"
+          }
+        },
+        {
+          "name": "2x2 Adjoint Shortcut",
+          "equation": "$$ \\text{If } A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}, \\text{ then adj}(A) = \\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s12_concept",
+          "title": "Adjoint of a Matrix: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in adjoint of a matrix.",
+          "alt_text": "A labelled concept panel for adjoint of a matrix showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Adjoint of a Matrix</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the adjoint of $A = \\begin{bmatrix} 3 & -1 \\\\ 4 & 5 \\end{bmatrix}$.",
+          "solution_steps": [
+            "Step 1: Apply the $2 \\times 2$ adjoint shortcut.",
+            "Step 2: Swap the elements on the main diagonal ($3$ and $5$). The diagonal becomes $5$ and $3$.",
+            "Step 3: Change the signs of the elements on the secondary diagonal ($-1$ becomes $1$, $4$ becomes $-4$).",
+            "Step 4: Write the new adjoint matrix."
+          ],
+          "final_answer": "adj(A) = [5, 1; -4, 3]"
+        },
+        {
+          "problem": "For A=[[1,2],[3,4]], the cofactor matrix is [[4,−3],[−2,1]], so adj(A)=[[4,−2],[−3,1]].",
+          "solution_steps": [
+            "For a 2×2 matrix, the cofactor matrix is [[d,−c],[−b,a]].",
+            "Substitute a=1, b=2, c=3, d=4.",
+            "Transpose the cofactor matrix to obtain the adjoint."
+          ],
+          "final_answer": "adj(A)=[[4,−2],[−3,1]]"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting to transpose the cofactor matrix.",
+          "correction": "The adjoint is NOT the cofactor matrix. It is the *transpose* of the cofactor matrix. If you forget to flip the rows and columns at the very end, your adjoint is wrong."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "The Adjoint of a matrix is the transpose of its Cofactor Matrix.",
+        "To find it, you must calculate the signed minor for every position, build a new grid, and then transpose that grid.",
+        "For $2 \\times 2$ matrices, use the shortcut: swap the main diagonal, negate the secondary diagonal.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Cofactor matrix and its transpose as the adjoint; calculation of the adjoint; key adjoint–determinant relationship and properties used to find inverses."
+    },
+    "hss_math_t04_st13": {
+      "id": "hss_math_t04_st13",
+      "title": "Inverse of a matrix",
+      "overview": "Division does not exist in matrix algebra. Instead, to 'divide' by a matrix, we multiply by its inverse. Finding the inverse is the ultimate operation that brings together determinants, minors, and adjoints.",
+      "key_concepts": [
+        {
+          "concept": "The Inverse Definition ($A^{-1}$)",
+          "definition": "The cancellation matrix.",
+          "details": [
+            "The inverse of a square matrix $A$ is a special matrix $A^{-1}$ that, when multiplied by $A$, completely cancels it out, leaving only the Identity Matrix $I$.",
+            "$A A^{-1} = A^{-1} A = I$."
+          ]
+        },
+        {
+          "concept": "The Invertibility Condition",
+          "definition": "The determinant check.",
+          "details": [
+            "Not all matrices have inverses. A matrix only has an inverse if its determinant is NOT zero ($|A| \\neq 0$).",
+            "If $|A| = 0$, the matrix is called 'singular' and cannot be inverted."
+          ]
+        },
+        {
+          "concept": "Calculating the Inverse",
+          "definition": "Adjoint divided by Determinant.",
+          "details": [
+            "To calculate the inverse, you find the adjoint matrix and multiply every element inside it by the scalar fraction $\\frac{1}{|A|}$.",
+            "Formula: $A^{-1} = \\frac{1}{|A|} \\text{adj}(A)$."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "A square matrix is invertible exactly when its determinant is non-zero.",
+          "details": [
+            "The inverse is unique and satisfies AA⁻¹=A⁻¹A=I. In general, (AB)⁻¹=B⁻¹A⁻¹ when both inverses exist.",
+            "The adjoint formula is A⁻¹=adj(A)/det(A), valid only when det(A)≠0."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Matrix Inverse",
+          "equation": "$$ A^{-1} = \\frac{1}{|A|} \\text{adj}(A) $$",
+          "variables": {
+            "|A|": "Determinant of A",
+            "\\text{adj}(A)": "Adjoint of A"
+          }
+        },
+        {
+          "name": "Inverse using adjoint",
+          "equation": "$$A^{-1}=\\frac{\\operatorname{adj}(A)}{\\det(A)},\\quad\\det(A)\\ne0$$",
+          "variables": {
+            "adj(A)": "Adjoint of A",
+            "det(A)": "Determinant of A"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s13_concept",
+          "title": "Inverse of a Matrix: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in inverse of a matrix.",
+          "alt_text": "A labelled concept panel for inverse of a matrix showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Inverse of a Matrix</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the inverse of $A = \\begin{bmatrix} 2 & 5 \\\\ 1 & 3 \\end{bmatrix}$.",
+          "solution_steps": [
+            "Step 1: Calculate the determinant $|A|$. $(2 \\times 3) - (5 \\times 1) = 6 - 5 = 1$. Since $|A| \\neq 0$, the inverse exists.",
+            "Step 2: Find the adjoint using the $2 \\times 2$ shortcut. Swap the main diagonal (3 and 2) and negate the secondary diagonal (-5 and -1). $\\text{adj}(A) = \\begin{bmatrix} 3 & -5 \\\\ -1 & 2 \\end{bmatrix}$.",
+            "Step 3: Apply the inverse formula. $A^{-1} = \\frac{1}{1} \\begin{bmatrix} 3 & -5 \\\\ -1 & 2 \\end{bmatrix}$.",
+            "Step 4: Since the scalar is just $1$, the inverse is exactly the adjoint matrix."
+          ],
+          "final_answer": "A⁻¹ = [3, -5; -1, 2]"
+        },
+        {
+          "problem": "For A=[[1,2],[3,4]], det(A)=−2 and A⁻¹=[[-2,1],[3/2,−1/2]]. Multiplication verifies AA⁻¹=I₂.",
+          "solution_steps": [
+            "Calculate det(A)=1·4−2·3=−2, which is non-zero.",
+            "Use A⁻¹=(1/−2)[[4,−2],[−3,1]].",
+            "Multiply A by the result to verify the identity matrix."
+          ],
+          "final_answer": "A⁻¹=[[-2,1],[3/2,−1/2]]"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to find the inverse of a non-square matrix.",
+          "correction": "Only square matrices ($2 \\times 2, 3 \\times 3$, etc.) can have determinants, which means only square matrices can have inverses."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "The inverse of a matrix $A$ is $A^{-1}$, which satisfies $AA^{-1} = I$.",
+        "A matrix can only be inverted if its determinant is non-zero (non-singular).",
+        "The inverse is calculated by multiplying the adjoint matrix by 1 over the determinant.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Existence of an inverse and the non-singularity condition; inverse using the adjoint/determinant method; verify an inverse by multiplication; basic algebraic applications."
+    },
+    "hss_math_t04_st14": {
+      "id": "hss_math_t04_st14",
+      "title": "Solving simultaneous equations using matrices",
+      "overview": "Matrices were invented specifically to solve massive webs of interconnected equations. By stripping out the variables (x, y, z) and loading the numbers into matrices, we can solve the entire system with a single inverse operation.",
+      "key_concepts": [
+        {
+          "concept": "Matrix Representation ($AX = B$)",
+          "definition": "Extracting the data.",
+          "details": [
+            "Any system of linear equations can be written as a matrix multiplication: $AX = B$.",
+            "$A$ is the 'Coefficient Matrix' (the numbers attached to the variables).",
+            "$X$ is the 'Variable Matrix' (a vertical column of the variables, e.g., $x, y$).",
+            "$B$ is the 'Constant Matrix' (the numbers on the right side of the equals sign)."
+          ]
+        },
+        {
+          "concept": "Solving via Inverse",
+          "definition": "Isolating the variables.",
+          "details": [
+            "To solve for $X$, we multiply both sides of the equation by $A^{-1}$ (the inverse of $A$).",
+            "Because $A^{-1} A = I$, the $A$ disappears from the left side, leaving $X = A^{-1} B$.",
+            "If $|A| = 0$, the inverse doesn't exist, meaning the system either has NO solution or INFINITE solutions."
+          ]
+        },
+        {
+          "concept": "Cramer's Rule",
+          "definition": "The determinant shortcut.",
+          "details": [
+            "Instead of calculating a full matrix inverse, Cramer's Rule solves for individual variables using only determinants.",
+            "$x = \\frac{D_x}{D}$, $y = \\frac{D_y}{D}$, where $D$ is the main coefficient determinant, and $D_x$ is the determinant formed by replacing the $x$-column with the constant matrix $B$."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "A linear system can be written AX=B, where A is the coefficient matrix, X the column of unknowns and B the constants column.",
+          "details": [
+            "If det(A)≠0, the unique solution is X=A⁻¹B. Cramer’s rule gives xᵢ=det(Aᵢ)/det(A), replacing column i of A by B.",
+            "If det(A)=0, the inverse method and standard Cramer quotients do not apply; the system may have no solution or infinitely many solutions."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Matrix Equation Solution",
+          "equation": "$$ X = A^{-1} B $$",
+          "variables": {
+            "A^{-1}": "Inverse of coefficient matrix",
+            "B": "Constant matrix"
+          }
+        },
+        {
+          "name": "Cramer's Rule",
+          "equation": "$$ x = \\frac{D_x}{D}, \\quad y = \\frac{D_y}{D} $$",
+          "variables": {}
+        },
+        {
+          "name": "Cramer’s rule",
+          "equation": "$$x_i=\\frac{\\det(A_i)}{\\det(A)},\\quad\\det(A)\\ne0$$",
+          "variables": {
+            "A_i": "A with column i replaced by B"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s14_concept",
+          "title": "Solving Simultaneous Equations Using Matrices: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in solving simultaneous equations using matrices.",
+          "alt_text": "A labelled concept panel for solving simultaneous equations using matrices showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Solving Simultaneous Equations Using Matrices</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Set up the matrix equation $AX = B$ for the system: $2x + 3y = 8$ and $x + 2y = 5$.",
+          "solution_steps": [
+            "Step 1: Extract the coefficients of $x$ and $y$ to form matrix $A$. Row 1 is $[2, 3]$. Row 2 is $[1, 2]$.",
+            "Step 2: Form the variable column matrix $X$ using the variables top-to-bottom: $[x, y]^T$.",
+            "Step 3: Extract the constants to form the column matrix $B$: $[8, 5]^T$.",
+            "Step 4: Write the final equation format."
+          ],
+          "final_answer": "[[2, 3], [1, 2]] * [x, y]^T = [8, 5]^T"
+        },
+        {
+          "problem": "Solve 2x+y=5 and x−y=1. A=[[2,1],[1,−1]], det(A)=−3. A₁=[[5,1],[1,−1]], det(A₁)=−6; A₂=[[2,5],[1,1]], det(A₂)=−3. Thus x=2 and y=1.",
+          "solution_steps": [
+            "det(A)=2(−1)−1(1)=−3.",
+            "Replace the first column by B: det(A₁)=5(−1)−1(1)=−6, so x=2.",
+            "Replace the second column by B: det(A₂)=2(1)−5(1)=−3, so y=1."
+          ],
+          "final_answer": "x=2, y=1"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Writing $X = B A^{-1}$.",
+          "correction": "Matrix multiplication is not commutative. You must strictly pre-multiply by $A^{-1}$. The correct formula is always $X = A^{-1} B$."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "A system of equations can be converted into the matrix equation $AX = B$.",
+        "The system is solved by calculating the inverse of the coefficient matrix and multiplying it by the constants ($X = A^{-1}B$).",
+        "Cramer's Rule is an alternative method that uses purely determinants to find the variables.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Represent suitable linear systems as AX = B; solve using the inverse-matrix method and Cramer's rule; include appropriate two- and three-variable systems and interpret solutions."
+    },
+    "hss_math_t04_st15": {
+      "id": "hss_math_t04_st15",
+      "title": "Applications of matrices and determinants",
+      "overview": "Matrices are not just algebraic puzzles; they are the fundamental data structures of the modern world. This lesson explores how matrices are used to track business inventories, encrypt data, and rotate 3D graphics in computer science.",
+      "key_concepts": [
+        {
+          "concept": "Data Organisation",
+          "definition": "The spreadsheet structure.",
+          "details": [
+            "Matrices act as mathematical spreadsheets. A factory can use a matrix where rows represent different products and columns represent the raw materials needed for each.",
+            "Matrix multiplication can then instantly calculate the total cost of materials needed for a massive production run."
+          ]
+        },
+        {
+          "concept": "Coordinate Transformations",
+          "definition": "Computer graphics.",
+          "details": [
+            "Every pixel or vertex on a screen is a coordinate vector (a $1 \\times 2$ or $1 \\times 3$ matrix).",
+            "By multiplying these coordinates by specific 'transformation matrices', a computer can instantly rotate, scale, or move 3D objects in video games and simulations."
+          ]
+        },
+        {
+          "concept": "Network Analysis",
+          "definition": "Mapping connections.",
+          "details": [
+            "Matrices are used to model networks (like the internet or airline flight paths). An 'Adjacency Matrix' uses $1$s and $0$s to map whether two nodes are directly connected."
+          ]
+        },
+        {
+          "concept": "Further explanation and interpretation",
+          "definition": "Matrices organise data with consistent row and column meaning, such as quantities of products across branches or periods. Addition combines like-positioned data.",
+          "details": [
+            "A matrix can represent a linear transformation of coordinate vectors; multiplication applies transformations in sequence.",
+            "For a 2×2 transformation matrix, the absolute value of its determinant is the area scale factor. A zero determinant collapses area to zero."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Area scale factor in 2D",
+          "equation": "$$\\text{Area scale factor}=|\\det(T)|$$",
+          "variables": {
+            "T": "2×2 matrix representing the linear transformation"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v04_s15_concept",
+          "title": "Applications of Matrices and Determinants: key idea",
+          "type": "svg",
+          "caption": "A visual reminder of the central idea in applications of matrices and determinants.",
+          "alt_text": "A labelled concept panel for applications of matrices and determinants showing the key mathematical procedure.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\"><rect x=\"8\" y=\"8\" width=\"624\" height=\"244\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"320\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">Applications of Matrices and Determinants</text><rect x=\"70\" y=\"85\" width=\"500\" height=\"105\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\"/><text x=\"320\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"19\" fill=\"#0c4a6e\">Key idea</text><text x=\"320\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0c4a6e\">Use the definition, check conditions, then calculate</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#334155\">Higher Secondary Mathematics · Matrices and Determinants</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A store sells 3 apples and 2 bananas to Alice, and 5 apples and 1 banana to Bob. Apples cost $2 and bananas cost $1. Represent the total cost for each person using matrix multiplication.",
+          "solution_steps": [
+            "Step 1: Set up the quantity matrix $Q$. Rows are people (Alice, Bob), columns are fruit (Apples, Bananas). $Q = \\begin{bmatrix} 3 & 2 \\\\ 5 & 1 \\end{bmatrix}$.",
+            "Step 2: Set up the price column matrix $P$. Top is Apple cost, bottom is Banana cost. $P = \\begin{bmatrix} 2 \\\\ 1 \\end{bmatrix}$.",
+            "Step 3: Multiply $Q \\times P$.",
+            "Step 4: Alice's Cost (Row 1 * Col 1): $(3 \\times 2) + (2 \\times 1) = 6 + 2 = 8$.",
+            "Step 5: Bob's Cost (Row 2 * Col 1): $(5 \\times 2) + (1 \\times 1) = 10 + 1 = 11$."
+          ],
+          "final_answer": "Total Cost Matrix = [8, 11]^T. Alice pays $8, Bob pays $11."
+        },
+        {
+          "problem": "The transformation T=[[2,0],[0,3]] maps the unit square to a 2×3 rectangle. Its determinant is 6, so areas are multiplied by 6.",
+          "solution_steps": [
+            "The transformation sends (x,y) to (2x,3y).",
+            "The unit square has area 1; its image has side lengths 2 and 3.",
+            "The determinant is 2·3=6, equal to the area scale factor."
+          ],
+          "final_answer": "Area scale factor=|det(T)|=6"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Aligning data matrices incorrectly before multiplying.",
+          "correction": "When setting up real-world matrix multiplications, the labels of the *columns* in the first matrix must match the labels of the *rows* in the second matrix. (e.g., Columns = Fruits, Rows = Fruits)."
+        },
+        {
+          "mistake": "Applying a matrix rule without checking its required dimensions or conditions.",
+          "correction": "Check the matrix orders and the hypotheses of the relevant rule before performing the operation."
+        }
+      ],
+      "quick_summary": [
+        "Matrices act as mathematical spreadsheets, organizing and processing massive amounts of interconnected data simultaneously.",
+        "They are the foundational math behind 3D computer graphics, allowing for instantaneous rotation and scaling of objects.",
+        "Determinants and inverses are used to solve complex, multi-variable real-world systems in engineering and economics.",
+        "Check dimensions and defining conditions before applying the relevant matrix operation or determinant property."
+      ],
+      "registry_scope": "Approved lesson scope: Applications to systems of linear equations, structured data and transformations of quantities; determinant-based geometric applications such as area scaling, within the level of this topic."
+    }
+  }
+}

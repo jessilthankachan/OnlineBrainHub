@@ -1,0 +1,1017 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t14",
+  "topicTitle": "Integration",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t14_st01": {
+      "id": "hss_math_t14_st01",
+      "title": "Antiderivatives and indefinite integrals",
+      "overview": "If differentiation breaks a function down into its rate of change, integration builds it back up. This lesson introduces the reverse-engineering process of calculus, turning a derivative back into its original parent function.",
+      "key_concepts": [
+        {
+          "concept": "The Antiderivative",
+          "definition": "Working backwards.",
+          "details": [
+            "If the derivative of $F(x)$ is $f(x)$, then the antiderivative of $f(x)$ is $F(x)$.",
+            "Example: Since $\\frac{d}{dx}(x^3) = 3x^2$, the antiderivative of $3x^2$ is $x^3$."
+          ]
+        },
+        {
+          "concept": "The Constant of Integration ($+C$)",
+          "definition": "The lost number.",
+          "details": [
+            "The derivative of a constant is zero. So, $x^3$, $x^3 + 5$, and $x^3 - 10$ ALL differentiate to $3x^2$.",
+            "When we integrate backwards, we have no idea what that original constant was, so we MUST add $+C$ to represent it."
+          ]
+        },
+        {
+          "concept": "Indefinite Integral Notation",
+          "definition": "The elongated S.",
+          "details": [
+            "The mathematical command to find the antiderivative is the integral sign $\\int$.",
+            "$\\int f(x) dx = F(x) + C$. The $dx$ simply tells us which variable we are integrating with respect to."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "The Indefinite Integral",
+          "equation": "$$ \\int f(x) dx = F(x) + C $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t14_st01_visual_added01",
+          "title": "Antiderivatives and indefinite integrals — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic visual aid for Antiderivatives and indefinite integrals; not to scale.",
+          "alt_text": "Original schematic visual aid for Antiderivatives and indefinite integrals; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Antiderivatives and indefinite integrals</title><desc>Original schematic visual aid for Antiderivatives and indefinite integrals; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 175 Q95 40 155 130 T285 65\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M35 195 Q95 60 155 150 T285 85\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Antiderivatives and indefinite integrals</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate the indefinite integral $\\int 2x \\, dx$.",
+          "solution_steps": [
+            "Step 1: Ask yourself, 'What function, when differentiated, gives $2x$?'",
+            "Step 2: Recall the power rule for derivatives. The derivative of $x^2$ is $2x$.",
+            "Step 3: Therefore, the antiderivative of $2x$ is $x^2$.",
+            "Step 4: Do not forget that the original function could have had any constant attached to it."
+          ],
+          "final_answer": "x² + C"
+        },
+        {
+          "problem": "Find the most general antiderivative of $f(x)=6x^2-4x+3$.",
+          "solution_steps": [
+            "Integrate each term: $\\int 6x^2dx=2x^3$, $\\int -4x dx=-2x^2$, and $\\int 3dx=3x$.",
+            "Add the arbitrary constant because every antiderivative differs by a constant.",
+            "Differentiate the result to check that it returns the original integrand."
+          ],
+          "final_answer": "$F(x)=2x^3-2x^2+3x+C$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting the $+C$.",
+          "correction": "An indefinite integral evaluates to a *family* of functions, not a single function. If you forget the $+C$, your answer is mathematically incomplete because it assumes the constant was zero."
+        }
+      ],
+      "quick_summary": [
+        "Integration is the exact mathematical inverse of differentiation.",
+        "An indefinite integral asks you to find the original parent function.",
+        "Because constants disappear during differentiation, you must always add $+C$ when integrating indefinitely."
+      ],
+      "registry_scope": "Approved lesson-level scope: Explain antiderivatives as families of functions, the arbitrary constant and the relationship between differentiation and integration. Extend the introductory simple indefinite integrals in High School T17 without repeating elementary exercises unnecessarily."
+    },
+    "hss_math_t14_st02": {
+      "id": "hss_math_t14_st02",
+      "title": "Basic integration formulas",
+      "overview": "Just like we memorized standard derivatives to save time, we must memorize the standard integrals. The most important of these is the Reverse Power Rule, which perfectly undoes the 'drop and subtract' mechanic of differentiation.",
+      "key_concepts": [
+        {
+          "concept": "The Reverse Power Rule",
+          "definition": "Add and divide.",
+          "details": [
+            "To integrate $x^n$, you do the exact opposite of the derivative power rule: Add $1$ to the exponent, then divide by that new exponent.",
+            "$\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$. (This works for all powers EXCEPT $n = -1$)."
+          ]
+        },
+        {
+          "concept": "The Special Case ($x^{-1}$)",
+          "definition": "The logarithm exception.",
+          "details": [
+            "If you try to apply the Reverse Power Rule to $\\int x^{-1} dx$ (or $\\int \\frac{1}{x} dx$), you get $\\frac{x^0}{0}$, which is dividing by zero.",
+            "Instead, recall that the derivative of $\\ln(x)$ is $\\frac{1}{x}$. Therefore: $\\int \\frac{1}{x} dx = \\ln|x| + C$."
+          ]
+        },
+        {
+          "concept": "Exponential Integration",
+          "definition": "The immortal function returns.",
+          "details": [
+            "Since the derivative of $e^x$ is $e^x$, the integral of $e^x$ is also exactly $e^x$.",
+            "$\\int e^x dx = e^x + C$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Reverse Power Rule",
+          "equation": "$$ \\int x^n dx = \\frac{x^{n+1}}{n+1} + C \\quad (n \\neq -1) $$",
+          "variables": {}
+        },
+        {
+          "name": "Integral of 1/x",
+          "equation": "$$ \\int \\frac{1}{x} dx = \\ln|x| + C $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t14_st02_visual_added01",
+          "title": "Basic integration formulas — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic visual aid for Basic integration formulas; not to scale.",
+          "alt_text": "Original schematic visual aid for Basic integration formulas; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Basic integration formulas</title><desc>Original schematic visual aid for Basic integration formulas; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M35 175 Q95 40 155 130 T285 65\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M35 195 Q95 60 155 150 T285 85\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Basic integration formulas</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\int (3x^2 - 4x + 5) \\, dx$.",
+          "solution_steps": [
+            "Step 1: Integrate term by term. Use the Reverse Power Rule on $3x^2$: $3(\\frac{x^3}{3}) = x^3$.",
+            "Step 2: Use the Reverse Power Rule on $-4x^1$: $-4(\\frac{x^2}{2}) = -2x^2$.",
+            "Step 3: Integrate the constant $5$. Think 'what differentiates to 5?' It's $5x$.",
+            "Step 4: Combine the terms and add the constant of integration."
+          ],
+          "final_answer": "x³ - 2x² + 5x + C"
+        },
+        {
+          "problem": "Evaluate $\\int (3e^x+2\\sec^2x-4/x)\\,dx$, stating the restriction on $x$.",
+          "solution_steps": [
+            "Integrate term by term using the standard formulas.",
+            "$\\int 3e^x dx=3e^x$.",
+            "$\\int 2\\sec^2x dx=2\\tan x$.",
+            "$\\int -4/x dx=-4\\ln|x|$.",
+            "The logarithm requires $x\\ne0$."
+          ],
+          "final_answer": "$3e^x+2\\tan x-4\\ln|x|+C$, for $x\\ne0$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the Reverse Power Rule on $1/x$.",
+          "correction": "Always watch out for $x^{-1}$. It is the only power of $x$ that triggers the Natural Logarithm ($\\ln|x|$) instead of the Power Rule."
+        }
+      ],
+      "quick_summary": [
+        "To integrate polynomials, add $1$ to the exponent and divide by that new exponent.",
+        "The integral of a constant $k$ is $kx$.",
+        "The integral of $1/x$ is $\\ln|x|$, and the integral of $e^x$ is $e^x$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop standard integration formulas for powers, reciprocal functions, exponential functions and syllabus-appropriate trigonometric functions. State conditions and domain restrictions, and distinguish the formula reference from the integration techniques in later subtopics."
+    },
+    "hss_math_t14_st03": {
+      "id": "hss_math_t14_st03",
+      "title": "Integration using substitution",
+      "overview": "If the Chain Rule is how we differentiate composite functions (functions trapped inside other functions), U-Substitution is how we integrate them. It is the art of condensing a messy integral into a clean, simple variable.",
+      "key_concepts": [
+        {
+          "concept": "The U-Substitution Mechanic",
+          "definition": "The disguise.",
+          "details": [
+            "We replace a complex inner part of the function with a single letter, $u$.",
+            "This turns an impossible integral into a simple one, like turning $\\int 2x(x^2+3)^4 dx$ into $\\int u^4 du$."
+          ]
+        },
+        {
+          "concept": "Swapping the Differential ($dx \\to du$)",
+          "definition": "The balancing act.",
+          "details": [
+            "You cannot integrate a function of $u$ with respect to $x$ ($dx$). You must calculate the derivative $\\frac{du}{dx}$ to figure out how to perfectly swap $dx$ out for $du$.",
+            "This step usually cleanly cancels out the 'extra' messy parts of the original integral."
+          ]
+        },
+        {
+          "concept": "The Back-Substitution",
+          "definition": "Unmasking the answer.",
+          "details": [
+            "Once you perform the simple integration in terms of $u$, you must replace every $u$ with the original $x$-expression to finish the problem."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t14_st03_visual_added01",
+          "title": "Integration using substitution — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic visual aid for Integration using substitution; not to scale.",
+          "alt_text": "Original schematic visual aid for Integration using substitution; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Integration using substitution</title><desc>Original schematic visual aid for Integration using substitution; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"42\" y=\"75\" width=\"95\" height=\"55\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><rect x=\"185\" y=\"75\" width=\"95\" height=\"55\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\"/><path d=\"M137 102 H180 M170 94 L180 102 L170 110\" stroke=\"#64748b\" stroke-width=\"2\" fill=\"none\"/><text x=\"90\" y=\"108\" text-anchor=\"middle\" font-size=\"16\" fill=\"#1e3a8a\">x</text><text x=\"232\" y=\"108\" text-anchor=\"middle\" font-size=\"16\" fill=\"#92400e\">u</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Integration using substitution</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\int 2x(x^2+3)^4 \\, dx$.",
+          "solution_steps": [
+            "Step 1: Choose the 'inner' function for $u$. Let $u = x^2 + 3$.",
+            "Step 2: Find the derivative $\\frac{du}{dx} = 2x$.",
+            "Step 3: Rearrange to isolate $dx$: $dx = \\frac{du}{2x}$.",
+            "Step 4: Substitute $u$ and $dx$ back into the original integral: $\\int 2x (u)^4 \\frac{du}{2x}$.",
+            "Step 5: Cancel the $2x$ terms. You are left with $\\int u^4 \\, du$.",
+            "Step 6: Integrate using the Reverse Power Rule: $\\frac{u^5}{5} + C$.",
+            "Step 7: Back-substitute $x^2 + 3$ in place of $u$."
+          ],
+          "final_answer": "(x² + 3)⁵ / 5 + C"
+        },
+        {
+          "problem": "Evaluate $\\int 2x(x^2+5)^4\\,dx$ using substitution.",
+          "solution_steps": [
+            "Let $u=x^2+5$, so $du=2x\\,dx$.",
+            "The integral becomes $\\int u^4du$.",
+            "Integrate: $u^5/5+C$.",
+            "Substitute back for $u$."
+          ],
+          "final_answer": "$\\frac{(x^2+5)^5}{5}+C$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Leaving the final answer in terms of $u$.",
+          "correction": "The variable $u$ is something you invented to solve the problem. The original question was asked in terms of $x$, so your final answer MUST be translated back into terms of $x$."
+        }
+      ],
+      "quick_summary": [
+        "U-Substitution is the reverse of the Chain Rule.",
+        "Set $u$ equal to the 'inner' function, and use its derivative to swap $dx$ for $du$.",
+        "If chosen correctly, the 'extra' $x$ terms in the integral will cancel out entirely."
+      ],
+      "registry_scope": "Approved lesson-level scope: Teach substitution as the reverse of the chain rule. Include recognition of suitable inner functions, changes of variable and correct handling of constants. For definite integrals, introduce corresponding changes to the integration limits where appropriate."
+    },
+    "hss_math_t14_st04": {
+      "id": "hss_math_t14_st04",
+      "title": "Integration by parts",
+      "overview": "When two distinct types of functions are multiplied together (like $x \\sin x$ or $x^2 e^x$), U-substitution completely fails. Integration by Parts is the reverse of the Product Rule, unwinding two multiplied functions.",
+      "key_concepts": [
+        {
+          "concept": "The By-Parts Formula",
+          "definition": "The trade-off.",
+          "details": [
+            "$\\int u \\, dv = uv - \\int v \\, du$.",
+            "You take a hard integral, and trade it for an easier integral by differentiating one part ($u$) and integrating the other ($dv$)."
+          ]
+        },
+        {
+          "concept": "The ILATE Rule",
+          "definition": "Choosing $u$.",
+          "details": [
+            "The hardest part is deciding which piece of the function should be $u$ (the part to differentiate).",
+            "Use the acronym **ILATE**: Inverse Trig, Logarithmic, Algebraic, Trigonometric, Exponential.",
+            "Whichever function appears first in that list should be chosen as $u$."
+          ]
+        },
+        {
+          "concept": "The Algebraic Breakdown",
+          "definition": "Simplifying the problem.",
+          "details": [
+            "If you have an Algebraic term (like $x$) multiplied by a Trig term (like $\\sin x$), picking $x$ as $u$ means its derivative $du$ will just be $1$. This successfully eliminates the $x$, making the second integral trivially easy to solve."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Integration by Parts",
+          "equation": "$$ \\int u \\, dv = uv - \\int v \\, du $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t14_st04_visual_added01",
+          "title": "Integration by parts — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic visual aid for Integration by parts; not to scale.",
+          "alt_text": "Original schematic visual aid for Integration by parts; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Integration by parts</title><desc>Original schematic visual aid for Integration by parts; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"40\" y=\"65\" width=\"240\" height=\"110\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"105\" text-anchor=\"middle\" font-size=\"19\" fill=\"#1e3a8a\">∫ u dv</text><text x=\"160\" y=\"142\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">= uv − ∫ v du</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Integration by parts</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\int x e^x \\, dx$.",
+          "solution_steps": [
+            "Step 1: Use ILATE to choose $u$. $x$ is Algebraic. $e^x$ is Exponential. 'A' comes before 'E', so $u = x$ and $dv = e^x dx$.",
+            "Step 2: Differentiate $u$: $du = 1 dx$.",
+            "Step 3: Integrate $dv$: $v = \\int e^x dx = e^x$.",
+            "Step 4: Apply the formula: $uv - \\int v du$.",
+            "Step 5: Substitute: $x e^x - \\int e^x (1) dx$.",
+            "Step 6: Evaluate the remaining easy integral: $x e^x - e^x + C$."
+          ],
+          "final_answer": "xeˣ - eˣ + C"
+        },
+        {
+          "problem": "Evaluate $\\int x e^{2x}\\,dx$ using integration by parts.",
+          "solution_steps": [
+            "Choose $u=x$ and $dv=e^{2x}dx$.",
+            "Then $du=dx$ and $v=\\frac12e^{2x}$.",
+            "Apply $\\int u\\,dv=uv-\\int v\\,du$.",
+            "This gives $\\frac{x}{2}e^{2x}-\\frac12\\int e^{2x}dx$.",
+            "Integrate the remaining term."
+          ],
+          "final_answer": "$\\frac{x}{2}e^{2x}-\\frac14e^{2x}+C$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Choosing the wrong $u$.",
+          "correction": "If you chose $u = e^x$ and $dv = x dx$ in the example above, the second integral would become $\\int e^x \\frac{x^2}{2} dx$. The power of $x$ actually increased! Choosing the wrong $u$ makes the problem worse, not better."
+        }
+      ],
+      "quick_summary": [
+        "Integration by Parts is the reverse of the Product Rule, used when two unrelated functions are multiplied.",
+        "The formula is $\\int u \\, dv = uv - \\int v \\, du$.",
+        "Always use the ILATE acronym to choose the correct $u$ variable."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop integration by parts from the product rule. Include suitable polynomial, exponential, logarithmic and trigonometric examples, with repeated applications only where appropriate to the Higher Secondary level."
+    },
+    "hss_math_t14_st05": {
+      "id": "hss_math_t14_st05",
+      "title": "Integration using partial fractions",
+      "overview": "When faced with a massive rational polynomial fraction that is impossible to integrate, we can algebraically shatter it into several smaller, simple fractions. This 'Decomposition' is the key to solving the hardest rational integrals.",
+      "key_concepts": [
+        {
+          "concept": "Partial Fraction Decomposition",
+          "definition": "Splitting the denominator.",
+          "details": [
+            "If a denominator can be factored (e.g., $(x+1)(x+2)$), the original fraction can be split into two separate fractions: $\\frac{A}{x+1} + \\frac{B}{x+2}$.",
+            "This turns one impossible integral into two very easy natural logarithm integrals."
+          ]
+        },
+        {
+          "concept": "Proper vs Improper Fractions",
+          "definition": "The degree check.",
+          "details": [
+            "Decomposition ONLY works on Proper Fractions (where the highest power of the numerator is strictly smaller than the denominator).",
+            "If the fraction is improper, you must use polynomial long division first, and then apply partial fractions to the remainder."
+          ]
+        },
+        {
+          "concept": "Finding the Constants (A, B)",
+          "definition": "The algebra phase.",
+          "details": [
+            "Multiply the entire decomposed equation by the common denominator. Then, plug in strategic $x$-values (the roots of the factors) to instantly wipe out terms and solve for the unknown letters $A$ and $B$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t14_st05_visual_added01",
+          "title": "Integration using partial fractions — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic visual aid for Integration using partial fractions; not to scale.",
+          "alt_text": "Original schematic visual aid for Integration using partial fractions; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Integration using partial fractions</title><desc>Original schematic visual aid for Integration using partial fractions; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"45\" y=\"60\" width=\"230\" height=\"120\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"105\" text-anchor=\"middle\" font-size=\"18\" fill=\"#1e3a8a\">A/(x+a)</text><text x=\"160\" y=\"140\" text-anchor=\"middle\" font-size=\"18\" fill=\"#1e3a8a\">+ B/(x+b)</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Integration using partial fractions</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Set up the partial fraction decomposition for $\\frac{3x + 5}{(x+1)(x+2)}$.",
+          "solution_steps": [
+            "Step 1: Check degrees. Numerator is degree 1. Denominator is degree 2. It is proper.",
+            "Step 2: Write the decomposition framework: $\\frac{A}{x+1} + \\frac{B}{x+2}$.",
+            "Step 3: Multiply the entire equation by $(x+1)(x+2)$. This yields $3x + 5 = A(x+2) + B(x+1)$.",
+            "Step 4: Solve for $A$. Choose $x = -1$ (this wipes out $B$). $3(-1) + 5 = A(-1+2) \\Rightarrow 2 = A$.",
+            "Step 5: Solve for $B$. Choose $x = -2$ (this wipes out $A$). $3(-2) + 5 = B(-2+1) \\Rightarrow -1 = -B \\Rightarrow B = 1$.",
+            "Step 6: Write final expression: $\\frac{2}{x+1} + \\frac{1}{x+2}$."
+          ],
+          "final_answer": "2/(x+1) + 1/(x+2)"
+        },
+        {
+          "problem": "Evaluate $\\int \\frac{5x+1}{(x+1)(x+2)}\\,dx$ using partial fractions.",
+          "solution_steps": [
+            "Write $\\frac{5x+1}{(x+1)(x+2)}=\\frac{A}{x+1}+\\frac{B}{x+2}$.",
+            "Then $5x+1=A(x+2)+B(x+1)$.",
+            "Set $x=-1$: $-4=A$, so $A=-4$.",
+            "Set $x=-2$: $-9=-B$, so $B=9$.",
+            "Integrate the two logarithmic terms."
+          ],
+          "final_answer": "$-4\\ln|x+1|+9\\ln|x+2|+C$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using partial fractions on improper integrals.",
+          "correction": "If the numerator is $x^3$ and the denominator is $x^2-4$, you cannot jump straight to $A/(x-2)$. You must divide $x^3$ by $x^2-4$ using long division first."
+        }
+      ],
+      "quick_summary": [
+        "Partial fractions break one difficult polynomial fraction into a sum of easy fractions.",
+        "The method requires a 'proper' fraction where the numerator's degree is smaller.",
+        "The resulting separated fractions almost always integrate cleanly into Natural Logarithms ($\\ln|x|$)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Integrate suitable rational functions using partial-fraction decomposition. Explain proper and improper rational functions and perform algebraic division before decomposition when required. Keep decomposition cases within the intended Higher Secondary scope."
+    },
+    "hss_math_t14_st06": {
+      "id": "hss_math_t14_st06",
+      "title": "Integration using trigonometric identities",
+      "overview": "We know how to integrate $\\sin x$. But how do you integrate $\\sin^2 x$? The basic formulas fail on powers and products of trig functions. We must use standard Trig Identities as algebraic crowbars to break them down.",
+      "key_concepts": [
+        {
+          "concept": "Power Reduction (Double-Angle)",
+          "definition": "Flattening squares.",
+          "details": [
+            "To integrate $\\sin^2 x$ or $\\cos^2 x$, you must use the power reduction formulas to flatten the exponent down to a degree of 1.",
+            "$\\sin^2 x = \\frac{1 - \\cos(2x)}{2}$.",
+            "$\\cos^2 x = \\frac{1 + \\cos(2x)}{2}$."
+          ]
+        },
+        {
+          "concept": "Pythagorean Swaps",
+          "definition": "Odd powers.",
+          "details": [
+            "If you have an odd power like $\\sin^3 x$, split it into $\\sin^2 x \\times \\sin x$.",
+            "Convert the squared part using $\\sin^2 x = 1 - \\cos^2 x$, and then use U-Substitution ($u = \\cos x$)."
+          ]
+        },
+        {
+          "concept": "Product-to-Sum",
+          "definition": "Splitting waves.",
+          "details": [
+            "To integrate $\\sin(3x)\\cos(2x)$, use the product-to-sum identity to turn the multiplied waves into added waves: $\\frac{1}{2}[\\sin(5x) + \\sin(x)]$. This can then be integrated term-by-term."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Power Reduction (Sine)",
+          "equation": "$$ \\sin^2 x = \\frac{1 - \\cos(2x)}{2} $$",
+          "variables": {}
+        },
+        {
+          "name": "Power Reduction (Cosine)",
+          "equation": "$$ \\cos^2 x = \\frac{1 + \\cos(2x)}{2} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t14_st06_visual_added01",
+          "title": "Integration using trigonometric identities — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic visual aid for Integration using trigonometric identities; not to scale.",
+          "alt_text": "Original schematic visual aid for Integration using trigonometric identities; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Integration using trigonometric identities</title><desc>Original schematic visual aid for Integration using trigonometric identities; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M30 120 Q70 35 110 120 T190 120 T270 120\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M30 120 Q70 205 110 120 T190 120 T270 120\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Integration using trigonometric identities</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\int \\cos^2 x \\, dx$.",
+          "solution_steps": [
+            "Step 1: The standard formula cannot integrate a squared cosine. Use power reduction.",
+            "Step 2: Replace $\\cos^2 x$ with $\\frac{1 + \\cos(2x)}{2}$.",
+            "Step 3: Rewrite the integral: $\\frac{1}{2} \\int (1 + \\cos(2x)) dx$.",
+            "Step 4: Integrate $1$ to get $x$.",
+            "Step 5: Integrate $\\cos(2x)$ to get $\\frac{1}{2}\\sin(2x)$ (using reverse chain rule/u-sub).",
+            "Step 6: Distribute the $\\frac{1}{2}$: $\\frac{x}{2} + \\frac{1}{4}\\sin(2x) + C$."
+          ],
+          "final_answer": "x/2 + (1/4)sin(2x) + C"
+        },
+        {
+          "problem": "Evaluate $\\int \\sin x\\cos x\\,dx$ using a trigonometric identity.",
+          "solution_steps": [
+            "Use $\\sin x\\cos x=\\frac12\\sin 2x$.",
+            "Rewrite the integral as $\\frac12\\int\\sin 2x\\,dx$.",
+            "Use reverse chain rule: $\\int\\sin 2x\\,dx=-\\frac12\\cos2x$.",
+            "Multiply by the outer factor."
+          ],
+          "final_answer": "$-\\frac14\\cos2x+C$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to use the reverse power rule on trig functions.",
+          "correction": "$\\int \\sin^2 x \\, dx$ is NOT equal to $\\frac{\\sin^3 x}{3}$. The power rule only works on algebraic variables like $x^n$. Trig functions require identities to strip away the powers."
+        }
+      ],
+      "quick_summary": [
+        "Trig identities are mandatory tools for simplifying complex trigonometric integrals.",
+        "Use Power Reduction formulas to integrate $\\sin^2$ and $\\cos^2$.",
+        "Use Pythagorean identities to integrate odd powers.",
+        "Use Product-to-Sum identities to integrate multiplied waves with different frequencies."
+      ],
+      "registry_scope": "Approved lesson-level scope: Use trigonometric identities to simplify integrands, including suitable powers and products of trigonometric functions. Select identities and substitutions appropriate to the form of the integrand; avoid advanced reduction techniques beyond the intended level."
+    },
+    "hss_math_t14_st07": {
+      "id": "hss_math_t14_st07",
+      "title": "Definite integrals",
+      "overview": "If an indefinite integral represents a 'family of curves', a Definite Integral represents an exact, physical number. By setting limits on the integral, we can calculate total accumulated change over a specific interval.",
+      "key_concepts": [
+        {
+          "concept": "The Definite Integral",
+          "definition": "Setting limits.",
+          "details": [
+            "A definite integral has a lower limit ($a$) and an upper limit ($b$).",
+            "Notation: $\\int_{a}^{b} f(x) dx$.",
+            "The result is a single numerical value, not an algebraic equation."
+          ]
+        },
+        {
+          "concept": "The Evaluation Theorem",
+          "definition": "Top minus Bottom.",
+          "details": [
+            "To solve a definite integral, first find the antiderivative $F(x)$ exactly like normal.",
+            "Then, plug the upper limit $b$ into $F(x)$, and subtract the result of plugging the lower limit $a$ into $F(x)$.",
+            "$F(b) - F(a)$."
+          ]
+        },
+        {
+          "concept": "The Disappearing Constant",
+          "definition": "No $+C$.",
+          "details": [
+            "Because you are subtracting $F(a)$ from $F(b)$, the unknown constant $+C$ cancels itself out perfectly: $(F(b) + C) - (F(a) + C) = F(b) - F(a)$. You do not need to write $+C$ for definite integrals."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Evaluation Theorem",
+          "equation": "$$ \\int_{a}^{b} f(x) dx = F(b) - F(a) $$",
+          "variables": {
+            "F(x)": "Antiderivative of f(x)",
+            "a": "Lower limit",
+            "b": "Upper limit"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t14_st07_visual_added01",
+          "title": "Definite integrals — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic visual aid for Definite integrals; not to scale.",
+          "alt_text": "Original schematic visual aid for Definite integrals; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Definite integrals</title><desc>Original schematic visual aid for Definite integrals; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"35\" y1=\"185\" x2=\"285\" y2=\"185\" stroke=\"#64748b\"/><path d=\"M35 185 L35 175 L60 160 L85 145 L110 130 L135 115 L160 100 L185 85 L210 70 L235 55 L260 40 L285 25\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><g stroke=\"#d97706\" fill=\"#fef3c7\"><path d=\"M35 185 V175 L60 160 V185 Z\"/><path d=\"M60 185 V160 L85 145 V185 Z\"/><path d=\"M85 185 V145 L110 130 V185 Z\"/></g><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Definite integrals</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate the definite integral $\\int_{1}^{3} 2x \\, dx$.",
+          "solution_steps": [
+            "Step 1: Identify the lower limit ($a=1$) and upper limit ($b=3$).",
+            "Step 2: Find the antiderivative $F(x)$. The integral of $2x$ is $x^2$.",
+            "Step 3: Evaluate $F(b)$ by plugging in $3$: $F(3) = 3^2 = 9$.",
+            "Step 4: Evaluate $F(a)$ by plugging in $1$: $F(1) = 1^2 = 1$.",
+            "Step 5: Subtract: $F(b) - F(a) = 9 - 1 = 8$."
+          ],
+          "final_answer": "8"
+        },
+        {
+          "problem": "Interpret $\\int_0^3 2x\\,dx$ as a limit of Riemann sums and evaluate it.",
+          "solution_steps": [
+            "Divide $[0,3]$ into $n$ equal parts, so $\\Delta x=3/n$.",
+            "Using right endpoints $x_i=3i/n$, the sum is $\\sum_{i=1}^n 2(3i/n)(3/n)=\\frac{18}{n^2}\\sum_{i=1}^n i$.",
+            "Use $\\sum_{i=1}^n i=n(n+1)/2$.",
+            "The sum becomes $9(n+1)/n$, which approaches 9 as $n\\to\\infty$.",
+            "Thus the definite integral equals this limit."
+          ],
+          "final_answer": "$\\int_0^3 2x\\,dx=9$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Subtracting Bottom from Top.",
+          "correction": "The evaluation is strictly $F(b) - F(a)$ (Top limit evaluated MINUS Bottom limit evaluated). Doing it backwards will give you the exact negative of the correct answer."
+        }
+      ],
+      "quick_summary": [
+        "A definite integral calculates the total accumulated value over a strict interval.",
+        "It outputs a single number.",
+        "Find the standard antiderivative, plug in the top limit, and subtract the result of plugging in the bottom limit."
+      ],
+      "registry_scope": "Approved lesson-level scope: Introduce definite integrals through limits of sums and as accumulated signed quantities. Explain lower and upper limits, the interval of integration and the distinction between definite and indefinite integrals."
+    },
+    "hss_math_t14_st08": {
+      "id": "hss_math_t14_st08",
+      "title": "Properties of definite integrals",
+      "overview": "Just like standard arithmetic, definite integrals follow strict structural laws. Understanding these properties allows you to chop up intervals, flip limits, and calculate massive integrals without doing the heavy lifting of finding the antiderivative.",
+      "key_concepts": [
+        {
+          "concept": "Zero Width",
+          "definition": "No distance.",
+          "details": [
+            "If the upper limit and lower limit are exactly the same, the integral is $0$.",
+            "$\\int_{a}^{a} f(x) dx = 0$."
+          ]
+        },
+        {
+          "concept": "Reversing the Limits",
+          "definition": "Flipping the sign.",
+          "details": [
+            "If you swap the top and bottom limits, the entire numerical value of the integral flips its sign.",
+            "$\\int_{a}^{b} f(x) dx = -\\int_{b}^{a} f(x) dx$."
+          ]
+        },
+        {
+          "concept": "Interval Splitting",
+          "definition": "Chopping it up.",
+          "details": [
+            "You can split any integral across a middle point $c$.",
+            "$\\int_{a}^{b} = \\int_{a}^{c} + \\int_{c}^{b}$.",
+            "This is absolutely essential for calculating the absolute area of Piecewise functions or Absolute Value graphs."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Limit Reversal",
+          "equation": "$$ \\int_{a}^{b} f(x) dx = -\\int_{b}^{a} f(x) dx $$",
+          "variables": {}
+        },
+        {
+          "name": "Interval Splitting",
+          "equation": "$$ \\int_{a}^{b} f(x) dx = \\int_{a}^{c} f(x) dx + \\int_{c}^{b} f(x) dx $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t14_st08_visual_added01",
+          "title": "Properties of definite integrals — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic visual aid for Properties of definite integrals; not to scale.",
+          "alt_text": "Original schematic visual aid for Properties of definite integrals; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Properties of definite integrals</title><desc>Original schematic visual aid for Properties of definite integrals; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"40\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M55 150 Q160 5 265 150\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M55 150 V150 M265 150 V150\" stroke=\"#d97706\" stroke-width=\"4\"/><text x=\"55\" y=\"175\" text-anchor=\"middle\" font-size=\"13\" fill=\"#334155\">a</text><text x=\"265\" y=\"175\" text-anchor=\"middle\" font-size=\"13\" fill=\"#334155\">b</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Properties of definite integrals</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\int_{3}^{3} (x^4 - 2x^2 + 7) \\, dx$.",
+          "solution_steps": [
+            "Step 1: Check the upper and lower limits.",
+            "Step 2: The limits are identical ($a=3$ and $b=3$).",
+            "Step 3: According to the Zero Width property, evaluating this requires no calculation."
+          ],
+          "final_answer": "0"
+        },
+        {
+          "problem": "Given $\\int_0^2 f(x)dx=5$ and $\\int_2^5 f(x)dx=-1$, find $\\int_5^0 f(x)dx$.",
+          "solution_steps": [
+            "By additivity, $\\int_0^5 f(x)dx=\\int_0^2 f(x)dx+\\int_2^5 f(x)dx$.",
+            "Therefore $\\int_0^5 f(x)dx=5+(-1)=4$.",
+            "Reversing limits changes the sign: $\\int_5^0 f(x)dx=-\\int_0^5 f(x)dx$."
+          ],
+          "final_answer": "$-4$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Failing to split the integral for Absolute Value functions.",
+          "correction": "If evaluating $\\int_{-2}^{2} |x| dx$, you cannot just integrate $x$. You must split the integral exactly where the absolute value bends (at $x=0$), yielding $\\int_{-2}^{0} (-x) dx + \\int_{0}^{2} (x) dx$."
+        }
+      ],
+      "quick_summary": [
+        "Definite integrals over a zero-width interval (like $a$ to $a$) always equal $0$.",
+        "Reversing the limits negates the entire answer.",
+        "You can chain adjacent intervals together by addition (e.g., area from 1 to 2 plus area from 2 to 3 equals area from 1 to 3)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop properties of definite integrals, including linearity, additivity over intervals, reversal of limits and suitable comparison properties. Apply these properties to simplify evaluation and avoid duplicating symmetry-specific methods in subtopic 10."
+    },
+    "hss_math_t14_st09": {
+      "id": "hss_math_t14_st09",
+      "title": "Fundamental theorem of calculus",
+      "overview": "For centuries, calculating slopes (derivatives) and calculating areas (integrals) were thought to be completely separate branches of math. The Fundamental Theorem of Calculus is the brilliant mathematical bridge that proves they are exact inverses of each other.",
+      "key_concepts": [
+        {
+          "concept": "Part 1: Differentiating an Integral",
+          "definition": "The cancellation.",
+          "details": [
+            "If you create a function by integrating another function from a constant up to $x$, taking the derivative of that new function just gives you the original inner function back.",
+            "$\\frac{d}{dx} \\left[ \\int_a^x f(t) dt \\right] = f(x)$."
+          ]
+        },
+        {
+          "concept": "Part 2: The Evaluation Theorem",
+          "definition": "The shortcut.",
+          "details": [
+            "This is the practical rule used to solve definite integrals: $\\int_a^b f(x) dx = F(b) - F(a)$.",
+            "It proves that you can find the area under a curve simply by evaluating its antiderivative at the endpoints, bypassing the need to add up infinite rectangles."
+          ]
+        },
+        {
+          "concept": "The Chain Rule Extension",
+          "definition": "Function limits.",
+          "details": [
+            "If the upper limit of the integral is a function of $x$ (like $x^2$) instead of just $x$, you must apply the Chain Rule when differentiating.",
+            "$\\frac{d}{dx} \\left[ \\int_a^{g(x)} f(t) dt \\right] = f(g(x)) \\times g'(x)$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "FTC Part 1",
+          "equation": "$$ \\frac{d}{dx} \\left[ \\int_a^x f(t) dt \\right] = f(x) $$",
+          "variables": {}
+        },
+        {
+          "name": "FTC Part 2",
+          "equation": "$$ \\int_a^b f(x) dx = F(b) - F(a) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t14_st09_visual_added01",
+          "title": "Fundamental theorem of calculus — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic visual aid for Fundamental theorem of calculus; not to scale.",
+          "alt_text": "Original schematic visual aid for Fundamental theorem of calculus; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Fundamental theorem of calculus</title><desc>Original schematic visual aid for Fundamental theorem of calculus; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"40\" y=\"55\" width=\"240\" height=\"125\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"100\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">Differentiation</text><path d=\"M160 108 V130 M152 122 L160 130 L168 122\" stroke=\"#64748b\" stroke-width=\"2\" fill=\"none\"/><text x=\"160\" y=\"155\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">Integration</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Fundamental theorem of calculus</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the derivative of $G(x) = \\int_{2}^{x^3} \\sin(t) dt$.",
+          "solution_steps": [
+            "Step 1: Identify that you are taking the derivative of an integral. This requires FTC Part 1.",
+            "Step 2: Check the upper limit. It is a function ($x^3$), not just $x$, so we must use the Chain Rule extension.",
+            "Step 3: Substitute the upper limit $x^3$ into the inner function: $\\sin(x^3)$.",
+            "Step 4: Multiply by the derivative of that upper limit: $\\frac{d}{dx}(x^3) = 3x^2$.",
+            "Step 5: Combine."
+          ],
+          "final_answer": "G'(x) = 3x² sin(x³)"
+        },
+        {
+          "problem": "If $G(x)=\\int_1^x (t^2+1)dt$, find $G'(x)$ and $G(2)$.",
+          "solution_steps": [
+            "By the first part of the Fundamental Theorem of Calculus, $G'(x)=x^2+1$.",
+            "For the value, use the second part: $G(2)=\\int_1^2(t^2+1)dt$.",
+            "An antiderivative is $t^3/3+t$.",
+            "Evaluate: $(8/3+2)-(1/3+1)=10/3$."
+          ],
+          "final_answer": "$G'(x)=x^2+1$ and $G(2)=\\frac{10}{3}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Evaluating the lower limit in FTC Part 1.",
+          "correction": "As long as the lower limit '$a$' is a constant number (like $2, 0$, or $-5$), it completely disappears during the derivative process because the derivative of a constant is zero. You only need to plug in the upper limit."
+        }
+      ],
+      "quick_summary": [
+        "The Fundamental Theorem of Calculus proves that Integration and Differentiation are inverse operations.",
+        "Taking the derivative of an integral simply returns the original function.",
+        "It provides the theoretical backing for evaluating definite integrals using $F(b) - F(a)$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Explain and apply both parts of the Fundamental Theorem of Calculus. Connect accumulation and differentiation conceptually, and use antiderivatives to evaluate definite integrals. Emphasise the relationship rather than treating the theorem only as an evaluation formula."
+    },
+    "hss_math_t14_st10": {
+      "id": "hss_math_t14_st10",
+      "title": "Symmetry properties of integrals",
+      "overview": "Why do the hard work of integrating a polynomial if you already know the positive side perfectly cancels out the negative side? By checking for Even and Odd symmetry, you can evaluate complex integrals over symmetric intervals instantly.",
+      "key_concepts": [
+        {
+          "concept": "Symmetric Intervals",
+          "definition": "Mirror boundaries.",
+          "details": [
+            "These shortcuts ONLY apply when the limits of integration are perfect opposites (e.g., from $-a$ to $+a$, like $[-5, 5]$)."
+          ]
+        },
+        {
+          "concept": "Even Functions",
+          "definition": "The mirror doubling.",
+          "details": [
+            "An even function (like $y=x^2$ or $y=\\cos x$) is perfectly mirrored across the y-axis ($f(-x) = f(x)$).",
+            "Because the left area exactly equals the right area, you can just calculate from $0$ to $a$ and double it: $\\int_{-a}^{a} = 2 \\int_{0}^{a}$."
+          ]
+        },
+        {
+          "concept": "Odd Functions",
+          "definition": "The instant zero.",
+          "details": [
+            "An odd function (like $y=x^3$ or $y=\\sin x$) has rotational symmetry. The area on the right is exactly the negative equivalent of the area on the left ($f(-x) = -f(x)$).",
+            "Because the positive and negative areas cancel each other out completely, the integral evaluates instantly: $\\int_{-a}^{a} = 0$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Even Function Integral",
+          "equation": "$$ \\int_{-a}^{a} f(x) dx = 2 \\int_{0}^{a} f(x) dx $$",
+          "variables": {}
+        },
+        {
+          "name": "Odd Function Integral",
+          "equation": "$$ \\int_{-a}^{a} f(x) dx = 0 $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t14_st10_visual_added01",
+          "title": "Symmetry properties of integrals — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic visual aid for Symmetry properties of integrals; not to scale.",
+          "alt_text": "Original schematic visual aid for Symmetry properties of integrals; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Symmetry properties of integrals</title><desc>Original schematic visual aid for Symmetry properties of integrals; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"160\" y1=\"30\" x2=\"160\" y2=\"190\" stroke=\"#64748b\" stroke-dasharray=\"4 4\"/><path d=\"M45 170 Q95 20 160 100 Q225 20 275 170\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M45 170 Q95 20 160 100\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Symmetry properties of integrals</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\int_{-4}^{4} (x^3 + \\sin x) \\, dx$.",
+          "solution_steps": [
+            "Step 1: Notice the symmetric limits: $-4$ to $4$. Check for symmetry.",
+            "Step 2: Test the function: $f(-x) = (-x)^3 + \\sin(-x) = -x^3 - \\sin x = -f(x)$.",
+            "Step 3: The function is completely Odd.",
+            "Step 4: According to the Odd symmetry property over a $[-a, a]$ interval, the positive area perfectly cancels the negative area."
+          ],
+          "final_answer": "0"
+        },
+        {
+          "problem": "Evaluate $\\int_{-2}^{2}(x^4+3x)dx$ using symmetry.",
+          "solution_steps": [
+            "The interval $[-2,2]$ is symmetric about zero.",
+            "The term $x^4$ is even, so its integral is twice the integral from 0 to 2.",
+            "The term $3x$ is odd, so its integral over the symmetric interval is zero.",
+            "Therefore evaluate $2\\int_0^2x^4dx=2[x^5/5]_0^2$."
+          ],
+          "final_answer": "$\\frac{64}{5}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Applying the zero shortcut when the interval is not symmetric.",
+          "correction": "If the limits are from $-3$ to $5$, the areas do NOT cancel out, even if the function is perfectly odd. You must calculate it fully."
+        }
+      ],
+      "quick_summary": [
+        "Check for symmetry whenever integration limits are $[-a, a]$.",
+        "If the function is Even (mirrored across y-axis), you can evaluate from $0$ to $a$ and multiply by $2$.",
+        "If the function is Odd (rotationally symmetric), the answer is instantly $0$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Apply even- and odd-function symmetry over symmetric intervals and other suitable symmetry arguments to simplify definite integrals. Distinguish these techniques from the general properties covered in subtopic 8."
+    },
+    "hss_math_t14_st11": {
+      "id": "hss_math_t14_st11",
+      "title": "Numerical integration — introduction",
+      "overview": "Some functions (like $e^{-x^2}$) physically do not have an algebraic antiderivative. When pure calculus fails, we must rely on computational geometry, chopping the area up into tiny rectangles or trapezoids to estimate the answer.",
+      "key_concepts": [
+        {
+          "concept": "The Necessity",
+          "definition": "When calculus fails.",
+          "details": [
+            "Numerical integration is used when an exact integral is mathematically impossible to find, or when you are given raw data points (a table of numbers) instead of an equation."
+          ]
+        },
+        {
+          "concept": "Rectangular Methods",
+          "definition": "The basic blocks.",
+          "details": [
+            "Left Riemann Sum: Uses the left corner of each block to determine height.",
+            "Right Riemann Sum: Uses the right corner to determine height.",
+            "Midpoint Rule: Uses the exact center of each interval to determine the height, usually providing a much better estimate than left or right edges."
+          ]
+        },
+        {
+          "concept": "The Trapezoidal Rule",
+          "definition": "The angled roof.",
+          "details": [
+            "Instead of flat rectangles, we use trapezoids. The top edge of the trapezoid tilts to connect the left and right function heights, creating a much closer fit to the actual curve.",
+            "Area of one trapezoid: $\\frac{1}{2} w (h_1 + h_2)$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t14_st11_visual_added01",
+          "title": "Numerical integration — introduction — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic visual aid for Numerical integration — introduction; not to scale.",
+          "alt_text": "Original schematic visual aid for Numerical integration — introduction; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Numerical integration — introduction</title><desc>Original schematic visual aid for Numerical integration — introduction; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 L45 125 L130 65 L215 35 L215 175 Z\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M45 125 L130 65 L215 35\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Numerical integration — introduction</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Estimate the area under a curve from $x=0$ to $x=4$ using 2 trapezoids of equal width. Given points: $(0, 2), (2, 6), (4, 10)$.",
+          "solution_steps": [
+            "Step 1: Calculate the width of each trapezoid. Total distance is $4$, divided into 2 trapezoids, so width ($w$) = $2$.",
+            "Step 2: Calculate Area of Trapezoid 1 (using $x=0$ and $x=2$): $\\frac{1}{2}(2)(2 + 6) = 1(8) = 8$.",
+            "Step 3: Calculate Area of Trapezoid 2 (using $x=2$ and $x=4$): $\\frac{1}{2}(2)(6 + 10) = 1(16) = 16$.",
+            "Step 4: Add the areas together: $8 + 16 = 24$."
+          ],
+          "final_answer": "24"
+        },
+        {
+          "problem": "Use the composite trapezoidal rule with two equal subintervals to approximate $\\int_0^2 f(x)dx$ for $f(0)=1$, $f(1)=2$ and $f(2)=5$.",
+          "solution_steps": [
+            "The width is $h=(2-0)/2=1$.",
+            "The composite trapezoidal rule is $T=\\frac h2[y_0+2y_1+y_2]$.",
+            "Substitute the values: $T=\\frac12[1+2(2)+5]$.",
+            "Calculate the weighted sum."
+          ],
+          "final_answer": "Approximation: $T=5$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating the estimate as an exact answer.",
+          "correction": "Numerical integration ALWAYS has some margin of error. The only way to make the estimate perfectly accurate is to increase the number of rectangles/trapezoids to infinity (which brings us right back to the definite integral formula)."
+        }
+      ],
+      "quick_summary": [
+        "Numerical integration estimates areas when finding an exact antiderivative is impossible.",
+        "The Midpoint Rule uses flat rectangles whose heights are taken from the middle of the interval.",
+        "The Trapezoidal Rule connects the left and right heights with a slanted line for a better fit."
+      ],
+      "registry_scope": "Approved lesson-level scope: Introduce numerical approximation of definite integrals using the trapezoidal rule and, where appropriate, the midpoint rule. Discuss partition size, approximation error and limitations, without expanding into advanced numerical analysis."
+    },
+    "hss_math_t14_st12": {
+      "id": "hss_math_t14_st12",
+      "title": "Applications of integration",
+      "overview": "If differentiation calculates a rate (like mph), integration calculates the total accumulation of that rate (like total miles driven). This lesson turns integrals from pure math into real-world tools.",
+      "key_concepts": [
+        {
+          "concept": "Total Accumulation",
+          "definition": "The area under the rate.",
+          "details": [
+            "If you are given a Rate of Change function, integrating it over a specific interval gives you the Total Amount Accumulated.",
+            "Example: Integrating the 'flow rate of water' gives the 'total volume of water in the tank'."
+          ]
+        },
+        {
+          "concept": "Recovering Original Functions",
+          "definition": "Working backwards.",
+          "details": [
+            "In economics, integrating Marginal Cost (the cost to make one more item) gives the Total Cost function. (You use a known data point to solve for the $+C$)."
+          ]
+        },
+        {
+          "concept": "Kinematics",
+          "definition": "Motion equations.",
+          "details": [
+            "Integrating Acceleration $a(t)$ gives Velocity $v(t)$.",
+            "Integrating Velocity $v(t)$ gives Position $s(t)$.",
+            "Evaluating a definite integral of absolute velocity ($\\int |v(t)| dt$) gives Total Distance Traveled."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Accumulation Equation",
+          "equation": "$$ \\text{Total Change} = \\int_{a}^{b} \\text{Rate}(t) dt $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t14_st12_visual_added01",
+          "title": "Applications of integration — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic visual aid for Applications of integration; not to scale.",
+          "alt_text": "Original schematic visual aid for Applications of integration; not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Applications of integration</title><desc>Original schematic visual aid for Applications of integration; not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"40\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M55 150 Q160 5 265 150\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M55 150 V150 M265 150 V150\" stroke=\"#d97706\" stroke-width=\"4\"/><text x=\"55\" y=\"175\" text-anchor=\"middle\" font-size=\"13\" fill=\"#334155\">a</text><text x=\"265\" y=\"175\" text-anchor=\"middle\" font-size=\"13\" fill=\"#334155\">b</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Applications of integration</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A car accelerates with $a(t) = 6t$ m/s$^2$. It starts with an initial velocity of $4$ m/s at $t=0$. Find its velocity function.",
+          "solution_steps": [
+            "Step 1: Recognize that velocity is the integral of acceleration.",
+            "Step 2: Integrate the acceleration function: $v(t) = \\int 6t \\, dt = 3t^2 + C$.",
+            "Step 3: Use the initial condition to find $C$. We know $v(0) = 4$.",
+            "Step 4: Substitute $t=0$: $3(0)^2 + C = 4 \\Rightarrow C = 4$.",
+            "Step 5: Write the complete velocity function."
+          ],
+          "final_answer": "v(t) = 3t² + 4"
+        },
+        {
+          "problem": "A tank receives water at a rate $r(t)=3t+2$ litres per minute. Find the total volume entering from $t=0$ to $t=4$ minutes.",
+          "solution_steps": [
+            "Total accumulated volume is the definite integral of the rate.",
+            "Compute $\\int_0^4(3t+2)dt=[\\frac32t^2+2t]_0^4$.",
+            "At $t=4$, the antiderivative is $24+8=32$; at 0 it is 0.",
+            "Subtract the lower endpoint value."
+          ],
+          "final_answer": "32 litres."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ignoring the $+C$ when recovering a function.",
+          "correction": "When recovering a total cost or a position function, you must always include $+C$ and use a given data point (an 'initial condition') to solve for it. A car starting at a velocity of $100$ mph is very different from a car starting at $0$ mph."
+        }
+      ],
+      "quick_summary": [
+        "Integration calculates total accumulated quantity from a given rate of change.",
+        "Integrating marginal functions recovers the total economic functions (Cost/Revenue/Profit).",
+        "Integrating acceleration yields velocity, and integrating velocity yields position."
+      ],
+      "registry_scope": "Approved lesson-level scope: Apply integration to geometric area, including area under a curve and between curves, displacement from velocity and other accumulated quantities. Distinguish signed integral from geometric area and connect integration with accumulation. Keep derivative-based optimisation and related rates in HSS T13. Boundary: Include the fundamental theorem and introductory accumulation interpretation as part of integration foundations. Detailed geometric area, area between curves and applied accumulation problems belong in HSS T15.",
+      "registry_boundary_note": "This topic introduces integration as accumulation and includes simple rate-to-total examples. Detailed geometric area, area between curves and extended applied accumulation are developed in HSS T15, as specified by the Draft 89 registry."
+    }
+  }
+}

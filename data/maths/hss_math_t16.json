@@ -1,0 +1,808 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t16",
+  "topicTitle": "Differential Equations",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t16_st01": {
+      "id": "hss_math_t16_st01",
+      "title": "Introduction to differential equations",
+      "overview": "Standard algebra equations solve for a missing number ($x = 5$). Differential equations solve for a missing function ($y = f(x)$). They describe physical situations where we only know how fast something is changing, rather than what the thing actually is.",
+      "key_concepts": [
+        {
+          "concept": "The Unknown Function",
+          "definition": "The hidden equation.",
+          "details": [
+            "In an ordinary equation like $x^2 + 5 = 21$, the solution is a number ($x = 4$).",
+            "In a differential equation like $\\frac{dy}{dx} = 2x$, the solution is an entire function ($y = x^2 + C$)."
+          ]
+        },
+        {
+          "concept": "Dependent vs Independent Variables",
+          "definition": "Who controls who.",
+          "details": [
+            "The variable being differentiated (usually $y$) is the Dependent variable.",
+            "The variable it is differentiated with respect to (usually $x$ or $t$) is the Independent variable."
+          ]
+        },
+        {
+          "concept": "Verifying Solutions",
+          "definition": "Plugging it back in.",
+          "details": [
+            "To check if a specific function is a valid solution, differentiate that function and substitute it directly back into the original differential equation to see if the left side equals the right side."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t16_st01_visual_added01",
+          "title": "Introduction to differential equations — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Introduction to differential equations; conceptual and not to scale.",
+          "alt_text": "Original schematic teaching aid for Introduction to differential equations; conceptual and not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Introduction to differential equations</title><desc>Original schematic teaching aid for Introduction to differential equations; conceptual and not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"42\" y=\"60\" width=\"236\" height=\"115\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"102\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">differential</text><text x=\"160\" y=\"133\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">equation</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Introduction to differential equations</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Verify that $y = e^{3x}$ is a solution to the differential equation $\\frac{dy}{dx} - 3y = 0$.",
+          "solution_steps": [
+            "Step 1: Calculate the derivative of the proposed solution. $\\frac{dy}{dx} = 3e^{3x}$.",
+            "Step 2: Substitute the derivative and the original $y$ function into the differential equation.",
+            "Step 3: $(3e^{3x}) - 3(e^{3x})$.",
+            "Step 4: Combine terms: $3e^{3x} - 3e^{3x} = 0$.",
+            "Step 5: The left side equals the right side, confirming it is a valid solution."
+          ],
+          "final_answer": "Verified."
+        },
+        {
+          "problem": "Classify $\\frac{dy}{dx}=x+y$ as a differential equation and identify its dependent and independent variables.",
+          "solution_steps": [
+            "The equation contains the derivative of an unknown function, so it is a differential equation.",
+            "The function is $y$, which depends on $x$.",
+            "It is an ordinary differential equation because it involves an ordinary derivative with respect to one independent variable."
+          ],
+          "final_answer": "An ordinary differential equation (ODE); dependent variable: $y$; independent variable: $x$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Treating $\\frac{dy}{dx}$ as a fraction of variables.",
+          "correction": "While you can manipulate the differentials $dy$ and $dx$ algebraically in some solving methods (like separation of variables), $\\frac{dy}{dx}$ in an equation represents a cohesive derivative function, not just $y$ divided by $x$."
+        }
+      ],
+      "quick_summary": [
+        "A differential equation contains the derivative of an unknown function.",
+        "Solving it means finding the original function ($y = f(x)$) that makes the equation true.",
+        "You verify solutions by differentiating them and substituting them back into the differential equation."
+      ],
+      "registry_scope": "Draft 80 approved audit: Define differential equations as equations involving an unknown function and its derivatives; explain their role in describing relationships and modelling change."
+    },
+    "hss_math_t16_st02": {
+      "id": "hss_math_t16_st02",
+      "title": "Order and degree",
+      "overview": "Just like polynomials are classified by their highest exponent, differential equations are classified by the 'Order' and 'Degree' of their derivatives. This classification dictates exactly which mathematical tools can be used to solve them.",
+      "key_concepts": [
+        {
+          "concept": "Order",
+          "definition": "The deepest derivative.",
+          "details": [
+            "The Order is strictly the highest derivative present in the entire equation.",
+            "If an equation contains $\\frac{d^3y}{dx^3}$ and $\\frac{dy}{dx}$, the order is $3$."
+          ]
+        },
+        {
+          "concept": "Degree",
+          "definition": "The power of the highest derivative.",
+          "details": [
+            "The Degree is the exponent (power) raised on the HIGHEST ORDER derivative.",
+            "If you have $(\\frac{d^3y}{dx^3})^2 + (\\frac{dy}{dx})^5$, the highest order is $3$, and its power is $2$. Therefore, the Degree is $2$ (ignore the 5)."
+          ]
+        },
+        {
+          "concept": "Undefined Degree",
+          "definition": "Trapped derivatives.",
+          "details": [
+            "The Degree is only defined if the differential equation can be written as a standard polynomial. If a derivative is trapped inside a sine function, e.g., $\\sin(\\frac{dy}{dx})$, or an exponential $e^{dy/dx}$, the Degree is 'Undefined'."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t16_st02_visual_added01",
+          "title": "Order and degree — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Order and degree; conceptual and not to scale.",
+          "alt_text": "Original schematic teaching aid for Order and degree; conceptual and not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Order and degree</title><desc>Original schematic teaching aid for Order and degree; conceptual and not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"42\" y=\"60\" width=\"236\" height=\"115\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"102\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">differential</text><text x=\"160\" y=\"133\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">equation</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Order and degree</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the order and degree of the equation: $\\left(\\frac{d^2y}{dx^2}\\right)^3 + 4\\left(\\frac{dy}{dx}\\right)^7 + y = 0$.",
+          "solution_steps": [
+            "Step 1: Scan the equation to find the highest derivative. The highest derivative is $\\frac{d^2y}{dx^2}$.",
+            "Step 2: Since it is a second derivative, the Order is 2.",
+            "Step 3: Look exclusively at that highest derivative term to find its exponent. It is raised to the power of 3.",
+            "Step 4: Therefore, the Degree is 3. (Do not be distracted by the power of 7 on the lower derivative)."
+          ],
+          "final_answer": "Order = 2, Degree = 3"
+        },
+        {
+          "problem": "Determine the order and degree, if defined, of $\\left(\\frac{d^2y}{dx^2}\\right)^3+\\left(\\frac{dy}{dx}\\right)^2+y=0$.",
+          "solution_steps": [
+            "The highest order derivative present is $d^2y/dx^2$, so the order is 2.",
+            "The equation is polynomial in its derivatives, with the highest order derivative raised to the third power.",
+            "Therefore the degree is 3."
+          ],
+          "final_answer": "Order = 2; degree = 3."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Picking the highest exponent in the whole equation as the degree.",
+          "correction": "The Degree is NOT the biggest exponent overall. It is exclusively the exponent attached to the highest-order derivative. Always find the Order first, then look at its specific exponent."
+        }
+      ],
+      "quick_summary": [
+        "Order is the level of the highest derivative in the equation (1st, 2nd, 3rd, etc.).",
+        "Degree is the algebraic power (exponent) that the highest derivative is raised to.",
+        "Degree is undefined if the derivative is trapped inside a transcendental function like sine or natural log."
+      ],
+      "registry_scope": "Draft 80 approved audit: Distinguish order from degree. Define degree only when the equation can be expressed as a polynomial in its derivatives after appropriate simplification; avoid assigning a degree when it is not defined.",
+      "definition_note": "Degree is defined only when, after appropriate simplification, the differential equation is a polynomial in its derivatives. If derivatives occur inside non-polynomial functions or fractional powers that cannot be converted to a polynomial form, degree is not defined."
+    },
+    "hss_math_t16_st03": {
+      "id": "hss_math_t16_st03",
+      "title": "General and particular solutions",
+      "overview": "When you integrate to solve a differential equation, you create an unknown constant ($+C$). This means a single differential equation represents an infinite family of curves. Initial conditions allow us to pinpoint the one exact curve we need.",
+      "key_concepts": [
+        {
+          "concept": "The General Solution",
+          "definition": "The infinite family.",
+          "details": [
+            "The raw result of solving a differential equation. It contains arbitrary constants (like $C_1, C_2$).",
+            "The number of arbitrary constants in the General Solution will ALWAYS exactly match the Order of the differential equation (e.g., a 2nd-order equation will have two constants)."
+          ]
+        },
+        {
+          "concept": "The Particular Solution",
+          "definition": "The exact curve.",
+          "details": [
+            "A specific solution where all arbitrary constants have been solved for and replaced with actual numbers.",
+            "You find this by plugging 'Initial Conditions' (specific $x$ and $y$ coordinates) into the General Solution and solving for $C$."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t16_st03_visual_added01",
+          "title": "General and particular solutions — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for General and particular solutions; conceptual and not to scale.",
+          "alt_text": "Original schematic teaching aid for General and particular solutions; conceptual and not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>General and particular solutions</title><desc>Original schematic teaching aid for General and particular solutions; conceptual and not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"42\" y=\"60\" width=\"236\" height=\"115\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"102\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">differential</text><text x=\"160\" y=\"133\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">equation</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">General and particular solutions</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the particular solution for $\\frac{dy}{dx} = 4x$ given the initial condition $y(1) = 5$.",
+          "solution_steps": [
+            "Step 1: Integrate to find the General Solution: $y = \\int 4x \\, dx$.",
+            "Step 2: $y = 2x^2 + C$. (This is the General Solution).",
+            "Step 3: Apply the initial condition. Substitute $x = 1$ and $y = 5$.",
+            "Step 4: $5 = 2(1)^2 + C \\Rightarrow 5 = 2 + C \\Rightarrow C = 3$.",
+            "Step 5: Rewrite the solution with the specific constant."
+          ],
+          "final_answer": "y = 2x² + 3"
+        },
+        {
+          "problem": "Verify that $y=Ce^{2x}$ is a general solution of $\\frac{dy}{dx}=2y$, and find the particular solution satisfying $y(0)=5$.",
+          "solution_steps": [
+            "Differentiate: $y'=2Ce^{2x}$.",
+            "Since $2y=2Ce^{2x}$, the differential equation is satisfied.",
+            "Apply $y(0)=5$: $5=Ce^0=C$.",
+            "Substitute this value of the constant."
+          ],
+          "final_answer": "Verified; the particular solution is $y=5e^{2x}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Stopping at the General Solution.",
+          "correction": "If a problem provides a data point (like $y=5$ when $x=1$), it is explicitly asking for the Particular Solution. Do not stop at $+C$."
+        }
+      ],
+      "quick_summary": [
+        "A General Solution contains arbitrary constants and represents an entire family of curves.",
+        "The number of constants perfectly matches the Order of the differential equation.",
+        "A Particular Solution is found by using initial conditions to solve for the constants."
+      ],
+      "registry_scope": "Draft 80 approved audit: Explain arbitrary constants in general solutions and how additional conditions determine particular solutions; verify proposed solutions by substitution."
+    },
+    "hss_math_t16_st04": {
+      "id": "hss_math_t16_st04",
+      "title": "Formation of differential equations",
+      "overview": "If solving a differential equation means integrating to create a $+C$, forming a differential equation means differentiating to completely destroy the constants. We are working the problem backwards to find the master rule that governs a family of curves.",
+      "key_concepts": [
+        {
+          "concept": "The Elimination Process",
+          "definition": "Destroying the constants.",
+          "details": [
+            "Given an equation with arbitrary constants (like $y = mx + c$), your goal is to create a new equation that has NO constants ($m$ or $c$), only $x, y,$ and derivatives.",
+            "To do this, you differentiate the equation as many times as there are arbitrary constants."
+          ]
+        },
+        {
+          "concept": "The Order Rule",
+          "definition": "How many times to derive.",
+          "details": [
+            "If an equation has 1 arbitrary constant, you differentiate exactly once (creating a 1st-order differential equation).",
+            "If an equation has 2 arbitrary constants, you MUST differentiate exactly twice (creating a 2nd-order differential equation)."
+          ]
+        },
+        {
+          "concept": "Algebraic Substitution",
+          "definition": "The final cleanup.",
+          "details": [
+            "After differentiating, the constants might still be visible in the equation. You must use algebra to substitute them out using the original equation."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t16_st04_visual_added01",
+          "title": "Formation of differential equations — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Formation of differential equations; conceptual and not to scale.",
+          "alt_text": "Original schematic teaching aid for Formation of differential equations; conceptual and not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Formation of differential equations</title><desc>Original schematic teaching aid for Formation of differential equations; conceptual and not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"42\" y=\"60\" width=\"236\" height=\"115\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"102\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">differential</text><text x=\"160\" y=\"133\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">equation</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Formation of differential equations</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Form the differential equation representing the family of curves $y = Ax$.",
+          "solution_steps": [
+            "Step 1: Count the arbitrary constants. There is 1 constant ($A$). Therefore, we differentiate exactly 1 time.",
+            "Step 2: Differentiate with respect to $x$: $\\frac{dy}{dx} = A$.",
+            "Step 3: The constant $A$ is still present. We must eliminate it.",
+            "Step 4: From the original equation $y = Ax$, we can isolate $A$: $A = \\frac{y}{x}$.",
+            "Step 5: Substitute this into the derivative equation: $\\frac{dy}{dx} = \\frac{y}{x}$.",
+            "Step 6: Rearrange into standard format: $x \\frac{dy}{dx} - y = 0$."
+          ],
+          "final_answer": "x(dy/dx) - y = 0"
+        },
+        {
+          "problem": "Form a differential equation by eliminating the arbitrary constants from $y=Ae^{2x}+B$.",
+          "solution_steps": [
+            "Differentiate once: $y'=2Ae^{2x}$.",
+            "Differentiate again: $y''=4Ae^{2x}$.",
+            "Eliminate $A$ using $y''=2y'$.",
+            "The constant $B$ is also eliminated because it disappears on differentiation."
+          ],
+          "final_answer": "$y''-2y'=0$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Leaving arbitrary constants in the final answer.",
+          "correction": "A differential equation by definition MUST NOT contain the arbitrary constants of the family (like $A, B$, or $C$). You must substitute them out algebraically."
+        }
+      ],
+      "quick_summary": [
+        "Forming a differential equation requires working backwards from a general solution.",
+        "You must differentiate the equation a number of times equal to the number of arbitrary constants.",
+        "Use substitution to eliminate all arbitrary constants from the final equation."
+      ],
+      "registry_scope": "Draft 80 approved audit: Form differential equations by eliminating arbitrary constants from given families of functions; distinguish forming an equation from solving one."
+    },
+    "hss_math_t16_st05": {
+      "id": "hss_math_t16_st05",
+      "title": "Variable-separable differential equations",
+      "overview": "When x's and y's are completely tangled together in a differential equation, you cannot integrate. The Variable-Separable method is an algebraic sorting process, moving all the y's to the left and all the x's to the right so they can be integrated independently.",
+      "key_concepts": [
+        {
+          "concept": "The Sorting Process",
+          "definition": "Splitting the sides.",
+          "details": [
+            "If an equation can be factored into a pure $x$-function multiplied by a pure $y$-function ($\\frac{dy}{dx} = f(x)g(y)$), you can separate it.",
+            "Move all terms with $y$ (including $dy$) to the left, and all terms with $x$ (including $dx$) to the right: $\\frac{1}{g(y)} dy = f(x) dx$."
+          ]
+        },
+        {
+          "concept": "The Integration Step",
+          "definition": "Solving the equation.",
+          "details": [
+            "Once perfectly separated, draw an integral sign on both sides: $\\int \\frac{1}{g(y)} dy = \\int f(x) dx$.",
+            "Integrate both sides normally. You only need to add ONE $+C$ to the final equation (usually on the $x$ side)."
+          ]
+        },
+        {
+          "concept": "Lost Solutions",
+          "definition": "The division warning.",
+          "details": [
+            "When you divide by $g(y)$ to move it to the left, you assume $g(y) \\neq 0$. If $g(y) = 0$ is a valid constant solution to the original equation, you must state it separately, as it gets lost during the division."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Variable Separation",
+          "equation": "$$ \\int \\frac{1}{g(y)} dy = \\int f(x) dx $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t16_st05_visual_added01",
+          "title": "Variable-separable differential equations — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Variable-separable differential equations; conceptual and not to scale.",
+          "alt_text": "Original schematic teaching aid for Variable-separable differential equations; conceptual and not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Variable-separable differential equations</title><desc>Original schematic teaching aid for Variable-separable differential equations; conceptual and not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"42\" y=\"60\" width=\"236\" height=\"115\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"102\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">differential</text><text x=\"160\" y=\"133\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">equation</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Variable-separable differential equations</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Solve the differential equation $\\frac{dy}{dx} = xy$.",
+          "solution_steps": [
+            "Step 1: Separate the variables. Divide both sides by $y$ and multiply both sides by $dx$.",
+            "Step 2: $\\frac{1}{y} dy = x dx$.",
+            "Step 3: Integrate both sides: $\\int \\frac{1}{y} dy = \\int x dx$.",
+            "Step 4: $\\ln|y| = \\frac{x^2}{2} + C$.",
+            "Step 5: To solve explicitly for $y$, exponentiate both sides (base $e$): $y = e^{\\frac{x^2}{2} + C}$.",
+            "Step 6: Rewrite the constant: $y = e^C \\cdot e^{\\frac{x^2}{2}}$. Let $A = e^C$, yielding $y = Ae^{x^2/2}$."
+          ],
+          "final_answer": "y = Ae^(x²/2)"
+        },
+        {
+          "problem": "Solve $\\frac{dy}{dx}=\\frac{2x}{1+y^2}$ by separating variables.",
+          "solution_steps": [
+            "Separate: $(1+y^2)dy=2x\\,dx$.",
+            "Integrate both sides: $\\int(1+y^2)dy=\\int2x\\,dx$.",
+            "This gives $y+\\frac{y^3}{3}=x^2+C$.",
+            "Differentiate the implicit solution to check it."
+          ],
+          "final_answer": "$y+\\frac{y^3}{3}=x^2+C$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to separate addition/subtraction.",
+          "correction": "You cannot separate $\\frac{dy}{dx} = x + y$. You can only move terms to the other side using multiplication and division. If you can't factor the equation into $f(x) \\cdot g(y)$, it is NOT variable-separable."
+        }
+      ],
+      "quick_summary": [
+        "Variable Separation is an algebraic technique to isolate $y$ and $dy$ on the left, and $x$ and $dx$ on the right.",
+        "Once separated, you integrate both sides independently.",
+        "Add a single constant of integration ($+C$) to the side containing the independent variable ($x$)."
+      ],
+      "registry_scope": "Draft 80 approved audit: Solve suitable first-order, first-degree separable equations by separating variables and integrating; account for integration constants and relevant domain restrictions."
+    },
+    "hss_math_t16_st06": {
+      "id": "hss_math_t16_st06",
+      "title": "First-order linear differential equations",
+      "overview": "If an equation cannot be separated because the $x$'s and $y$'s are glued together with addition, we must use a multiplier. The 'Integrating Factor' acts as a magic key that forces the left side of the equation to collapse perfectly into a Product Rule derivative.",
+      "key_concepts": [
+        {
+          "concept": "The Standard Form",
+          "definition": "The required layout.",
+          "details": [
+            "Before you do anything, the equation MUST be written in the exact form: $\\frac{dy}{dx} + P(x)y = Q(x)$.",
+            "If there is a coefficient in front of $\\frac{dy}{dx}$ (like $x \\frac{dy}{dx}$), you must divide the entire equation by that coefficient first."
+          ]
+        },
+        {
+          "concept": "The Integrating Factor (IF)",
+          "definition": "The magic multiplier.",
+          "details": [
+            "Identify the $P(x)$ term (whatever is attached to $y$).",
+            "Calculate the Integrating Factor: $\\text{IF} = e^{\\int P(x) dx}$."
+          ]
+        },
+        {
+          "concept": "The Collapse",
+          "definition": "The immediate solution.",
+          "details": [
+            "Multiply the entire differential equation by the IF. The left side will INSTANTLY collapse into the derivative of a product: $\\frac{d}{dx} [y \\cdot \\text{IF}]$.",
+            "To finish, integrate both sides. The general solution is always: $y \\cdot \\text{IF} = \\int [Q(x) \\cdot \\text{IF}] dx + C$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Standard Linear Form",
+          "equation": "$$ \\frac{dy}{dx} + P(x)y = Q(x) $$",
+          "variables": {}
+        },
+        {
+          "name": "Integrating Factor (IF)",
+          "equation": "$$ \\text{IF} = e^{\\int P(x) dx} $$",
+          "variables": {}
+        },
+        {
+          "name": "General Solution Format",
+          "equation": "$$ y \\cdot \\text{IF} = \\int Q(x) \\cdot \\text{IF} \\, dx + C $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t16_st06_visual_added01",
+          "title": "First-order linear differential equations — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for First-order linear differential equations; conceptual and not to scale.",
+          "alt_text": "Original schematic teaching aid for First-order linear differential equations; conceptual and not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>First-order linear differential equations</title><desc>Original schematic teaching aid for First-order linear differential equations; conceptual and not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"42\" y=\"60\" width=\"236\" height=\"115\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"102\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">differential</text><text x=\"160\" y=\"133\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">equation</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">First-order linear differential equations</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the integrating factor for $\\frac{dy}{dx} + 2y = e^x$.",
+          "solution_steps": [
+            "Step 1: Check standard form. It is in the form $\\frac{dy}{dx} + P(x)y = Q(x)$.",
+            "Step 2: Identify $P(x)$. The coefficient of $y$ is $2$. So, $P(x) = 2$.",
+            "Step 3: Calculate the Integrating Factor (IF) = $e^{\\int P(x) dx}$.",
+            "Step 4: Integrate $P(x)$: $\\int 2 dx = 2x$.",
+            "Step 5: The integrating factor is $e^{2x}$."
+          ],
+          "final_answer": "e^(2x)"
+        },
+        {
+          "problem": "Solve $\\frac{dy}{dx}+2y=6$ using an integrating factor.",
+          "solution_steps": [
+            "The equation is in standard form with $P(x)=2$ and $Q(x)=6$.",
+            "The integrating factor is $e^{\\int2dx}=e^{2x}$.",
+            "Multiply through: $e^{2x}y'+2e^{2x}y=6e^{2x}$.",
+            "The left side is $\\frac{d}{dx}(ye^{2x})$.",
+            "Integrate: $ye^{2x}=3e^{2x}+C$.",
+            "Divide by $e^{2x}$."
+          ],
+          "final_answer": "$y=3+Ce^{-2x}$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding $+C$ when finding the Integrating Factor.",
+          "correction": "When you integrate $P(x)$ to find the IF, do NOT add $+C$. We only need one integrating factor, not a family of them. Save the $+C$ for the final integration step of the main equation."
+        }
+      ],
+      "quick_summary": [
+        "Linear differential equations are solved using an Integrating Factor (IF).",
+        "The IF is calculated as $e^{\\int P(x) dx}$.",
+        "Multiplying the equation by the IF forces the left side to collapse, allowing you to easily integrate the right side."
+      ],
+      "registry_scope": "Draft 80 approved audit: Solve first-order linear equations using the integrating-factor method, including standard form, integrating-factor construction and verification."
+    },
+    "hss_math_t16_st07": {
+      "id": "hss_math_t16_st07",
+      "title": "Initial-value problems",
+      "overview": "Solving a differential equation yields an infinite family of curves floating in space. To anchor the curve to reality, we use an 'Initial Condition'—a specific coordinate that forces us to choose one exact curve from the family.",
+      "key_concepts": [
+        {
+          "concept": "The Initial Condition",
+          "definition": "The anchor point.",
+          "details": [
+            "Usually given in the format $y(x_0) = y_0$ (meaning when $x = x_0$, the function value is exactly $y_0$).",
+            "Example: $y(0) = 5$ means the curve must pass exactly through the point $(0,5)$."
+          ]
+        },
+        {
+          "concept": "Solving for C",
+          "definition": "Locking the constant.",
+          "details": [
+            "First, solve the differential equation entirely to find the General Solution with $+C$.",
+            "Second, substitute the $x$ and $y$ values from the Initial Condition into the General Solution to algebraically solve for $C$.",
+            "Rewrite the equation with the newly discovered specific number to get the Particular Solution."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t16_st07_visual_added01",
+          "title": "Initial-value problems — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Initial-value problems; conceptual and not to scale.",
+          "alt_text": "Original schematic teaching aid for Initial-value problems; conceptual and not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Initial-value problems</title><desc>Original schematic teaching aid for Initial-value problems; conceptual and not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"42\" y=\"60\" width=\"236\" height=\"115\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"102\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">differential</text><text x=\"160\" y=\"133\" text-anchor=\"middle\" font-size=\"17\" fill=\"#1e3a8a\">equation</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Initial-value problems</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "The general solution to a differential equation is $y = 3x^2 + C$. Find the particular solution given the initial condition $y(2) = 15$.",
+          "solution_steps": [
+            "Step 1: Identify the initial condition coordinates. $x = 2$, $y = 15$.",
+            "Step 2: Substitute these values directly into the general solution: $15 = 3(2)^2 + C$.",
+            "Step 3: Simplify: $15 = 3(4) + C \\Rightarrow 15 = 12 + C$.",
+            "Step 4: Solve for $C$: $C = 15 - 12 = 3$.",
+            "Step 5: Substitute $C = 3$ back into the original general solution."
+          ],
+          "final_answer": "y = 3x² + 3"
+        },
+        {
+          "problem": "Solve $\\frac{dy}{dx}=3x^2$ with initial condition $y(1)=4$.",
+          "solution_steps": [
+            "Integrate to obtain the general solution: $y=x^3+C$.",
+            "Apply the initial condition: $4=1+C$.",
+            "Thus $C=3$.",
+            "Substitute into the general solution."
+          ],
+          "final_answer": "$y=x^3+3$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Plugging in the initial conditions before integrating.",
+          "correction": "Initial conditions are coordinate points on the final graph. They CANNOT be plugged into the derivative equation. You must complete the integration process and generate the $+C$ first."
+        }
+      ],
+      "quick_summary": [
+        "An Initial-Value Problem (IVP) asks you to find a single, specific Particular Solution.",
+        "Always solve for the General Solution ($+C$) first.",
+        "Plug the given initial condition coordinates into the General Solution to solve for $C$."
+      ],
+      "registry_scope": "Draft 80 approved audit: Use initial conditions to determine particular solutions from general solutions; distinguish initial conditions from arbitrary constants."
+    },
+    "hss_math_t16_st08": {
+      "id": "hss_math_t16_st08",
+      "title": "Exponential growth and decay models",
+      "overview": "In nature, the more bacteria you have, the faster they multiply. When the rate of change is directly proportional to the current amount, the result is the most famous differential equation model in science: Exponential Growth and Decay.",
+      "key_concepts": [
+        {
+          "concept": "The Proportionality Model",
+          "definition": "The starting equation.",
+          "details": [
+            "Growth: $\\frac{dP}{dt} = kP$ (where $k > 0$). The rate of growth is proportional to the current population $P$.",
+            "Decay: $\\frac{dP}{dt} = -kP$ (where $k > 0$). The rate of loss is proportional to the current amount."
+          ]
+        },
+        {
+          "concept": "The Universal Solution",
+          "definition": "The exponential law.",
+          "details": [
+            "Solving the differential equation $\\frac{dP}{dt} = kP$ by separating variables ALWAYS yields the exact same solution format: $P(t) = P_0 e^{kt}$.",
+            "Here, $P_0$ is the initial amount at time $t=0$, and $k$ is the specific growth/decay constant."
+          ]
+        },
+        {
+          "concept": "Half-Life and Doubling Time",
+          "definition": "Solving for time.",
+          "details": [
+            "**Doubling Time:** Set $P(t) = 2P_0$. Solving for $t$ gives $t = \\frac{\\ln 2}{k}$.",
+            "**Half-Life:** Set $P(t) = \\frac{1}{2}P_0$. Solving for $t$ gives $t = \\frac{\\ln 2}{k}$ (where $k$ is the positive decay constant)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Exponential Growth/Decay",
+          "equation": "$$ P(t) = P_0 e^{kt} $$",
+          "variables": {
+            "P_0": "Initial quantity",
+            "k": "Growth/Decay constant"
+          }
+        },
+        {
+          "name": "Half-Life / Doubling Time",
+          "equation": "$$ t = \\frac{\\ln 2}{k} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t16_st08_visual_added01",
+          "title": "Exponential growth and decay models — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Exponential growth and decay models; conceptual and not to scale.",
+          "alt_text": "Original schematic teaching aid for Exponential growth and decay models; conceptual and not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Exponential growth and decay models</title><desc>Original schematic teaching aid for Exponential growth and decay models; conceptual and not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M40 175 Q100 150 150 105 T280 35\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M40 175 H280\" stroke=\"#64748b\"/><path d=\"M40 175 V25\" stroke=\"#64748b\"/><text x=\"220\" y=\"65\" font-size=\"13\" fill=\"#92400e\">growth / change</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Exponential growth and decay models</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A bacteria culture grows according to $\\frac{dP}{dt} = 0.05P$. If there are initially 100 bacteria, write the equation for the population at time $t$.",
+          "solution_steps": [
+            "Step 1: Recognize the standard proportional growth differential equation.",
+            "Step 2: State the universal solution format: $P(t) = P_0 e^{kt}$.",
+            "Step 3: Identify the growth constant $k$ from the differential equation: $k = 0.05$.",
+            "Step 4: Identify the initial population $P_0$ from the problem text: $P_0 = 100$.",
+            "Step 5: Substitute the values into the solution formula."
+          ],
+          "final_answer": "P(t) = 100e^(0.05t)"
+        },
+        {
+          "problem": "A quantity follows $\\frac{dP}{dt}=0.2P$ and initially equals 50. Find the time required for it to double.",
+          "solution_steps": [
+            "The growth model has solution $P(t)=P_0e^{kt}=50e^{0.2t}$.",
+            "For doubling, set $P(t)=100$.",
+            "Then $100=50e^{0.2t}$, so $2=e^{0.2t}$.",
+            "Take natural logarithms: $\\ln2=0.2t$.",
+            "Solve for $t$."
+          ],
+          "final_answer": "$t=\\frac{\\ln2}{0.2}\\approx3.47$ time units."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Putting a negative sign on both $k$ and the exponent in a decay problem.",
+          "correction": "If the model is $P = P_0 e^{-kt}$, $k$ is treated as a strictly positive decay constant. Do not write $e^{-(-k)t}$."
+        }
+      ],
+      "quick_summary": [
+        "If a rate of change is proportional to its current amount ($\\frac{dP}{dt} = kP$), it is an exponential model.",
+        "The mathematical solution is always $P(t) = P_0 e^{kt}$.",
+        "Doubling time and Half-life are solely dependent on the constant $k$, calculated as $\\frac{\\ln 2}{k}$."
+      ],
+      "registry_scope": "Draft 80 approved audit: Model exponential growth and decay with differential equations, using suitable contexts such as population change and radioactive decay; interpret parameters and assumptions.",
+      "parameter_note": "Use a consistent sign convention: growth may be written dP/dt=kP with k>0; decay may be written dP/dt=-kP with k>0. Equivalently, one may use dP/dt=kP with k<0. The half-life formula ln(2)/k uses the positive decay constant k."
+    },
+    "hss_math_t16_st09": {
+      "id": "hss_math_t16_st09",
+      "title": "Applications to physical and biological systems",
+      "overview": "Differential equations are the underlying language of the physical universe. Newton's laws of cooling, kinematics, and electrical circuits are all formulated as differential equations.",
+      "key_concepts": [
+        {
+          "concept": "Newton's Law of Cooling",
+          "definition": "Temperature differential.",
+          "details": [
+            "An object cools at a rate proportional to the difference between its temperature and the room's temperature.",
+            "$\\frac{dT}{dt} = -k(T - T_s)$. (Where $T_s$ is the surrounding environment temperature).",
+            "Solution: $T(t) = T_s + (T_0 - T_s)e^{-kt}$."
+          ]
+        },
+        {
+          "concept": "Kinematics with Air Resistance",
+          "definition": "Opposing forces.",
+          "details": [
+            "In basic physics, acceleration is constant ($a = -g$). But with air resistance, acceleration changes based on velocity.",
+            "Equation: $m \\frac{dv}{dt} = mg - kv$. This is a First-Order Linear differential equation that can be solved to find 'Terminal Velocity'."
+          ]
+        },
+        {
+          "concept": "Logistic Population Growth",
+          "definition": "The carrying capacity.",
+          "details": [
+            "Exponential growth can't last forever. In biology, populations hit a limit (Carrying Capacity, $M$).",
+            "Equation: $\\frac{dP}{dt} = kP(M - P)$. The population grows fast, then slows down as it approaches $M$, forming an S-shaped curve."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Newton's Law of Cooling",
+          "equation": "$$ \\frac{dT}{dt} = -k(T - T_s) $$",
+          "variables": {
+            "T_s": "Surrounding temperature"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t16_st09_visual_added01",
+          "title": "Applications to physical and biological systems — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Applications to physical and biological systems; conceptual and not to scale.",
+          "alt_text": "Original schematic teaching aid for Applications to physical and biological systems; conceptual and not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Applications to physical and biological systems</title><desc>Original schematic teaching aid for Applications to physical and biological systems; conceptual and not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M40 175 Q100 150 150 105 T280 35\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M40 175 H280\" stroke=\"#64748b\"/><path d=\"M40 175 V25\" stroke=\"#64748b\"/><text x=\"220\" y=\"65\" font-size=\"13\" fill=\"#92400e\">growth / change</text><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Applications to physical and biological systems</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Write the differential equation for an object whose temperature $T$ cools at a rate proportional to the difference between $T$ and the $20^\\circ$C room.",
+          "solution_steps": [
+            "Step 1: Translate 'rate of cooling' to a derivative: $\\frac{dT}{dt}$.",
+            "Step 2: Translate 'proportional' to a constant $k$. Because it is cooling (decreasing), use $-k$.",
+            "Step 3: Translate 'difference between $T$ and room temperature': $(T - 20)$.",
+            "Step 4: Combine into a differential equation."
+          ],
+          "final_answer": "dT/dt = -k(T - 20)"
+        },
+        {
+          "problem": "An object at $90^\\circ$C is placed in a room at $20^\\circ$C. Its cooling constant is $k=0.1$ per minute. Write its temperature model and find the temperature after 10 minutes.",
+          "solution_steps": [
+            "Newton's law gives $T(t)=T_s+(T_0-T_s)e^{-kt}$.",
+            "Substitute $T_s=20$, $T_0=90$ and $k=0.1$.",
+            "Thus $T(t)=20+70e^{-0.1t}$.",
+            "At $t=10$, $T(10)=20+70e^{-1}$.",
+            "Using $e^{-1}\\approx0.3679$, evaluate."
+          ],
+          "final_answer": "$T(10)\\approx45.75^\\circ$C."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing the variable $T$ (Temperature) with $t$ (Time).",
+          "correction": "In thermodynamics models, capital $T$ is the dependent variable (temperature), and lowercase $t$ is the independent variable (time). The derivative is $\\frac{dT}{dt}$."
+        }
+      ],
+      "quick_summary": [
+        "Differential equations translate real-world physical laws into solvable math.",
+        "Newton's Law of Cooling states objects cool proportional to the temperature difference of the room.",
+        "Logistic growth modifies exponential growth to account for a maximum population limit (carrying capacity)."
+      ],
+      "registry_scope": "Draft 80 approved audit: Apply elementary differential equations to appropriate physical and biological contexts, such as cooling and population systems; state modelling assumptions and avoid duplicating the standard exponential-model treatment."
+    },
+    "hss_math_t16_st10": {
+      "id": "hss_math_t16_st10",
+      "title": "Interpreting solutions and solution curves",
+      "overview": "Some differential equations are mathematically impossible to solve algebraically. However, by plotting the derivative at thousands of tiny points, we can visualize the flow of the equation and predict its behavior without ever finding the solution.",
+      "key_concepts": [
+        {
+          "concept": "Solution Curves",
+          "definition": "The family graph.",
+          "details": [
+            "A single general solution (like $y = x^2 + C$) graphs as a series of stacked, parallel curves (e.g., $y=x^2$, $y=x^2+1$, $y=x^2-1$).",
+            "An Initial Condition pinpoints exactly which one of those parallel curves represents the true physical situation."
+          ]
+        },
+        {
+          "concept": "Slope Fields (Direction Fields)",
+          "definition": "The wind map.",
+          "details": [
+            "A slope field is a graph filled with tiny hash marks. The angle of each hash mark is calculated by plugging that specific $(x,y)$ coordinate directly into the differential equation (e.g., $\\frac{dy}{dx} = 2x$).",
+            "By tracing a path that follows the flow of these hash marks, you can visually trace the shape of the solution curve without any algebra."
+          ]
+        },
+        {
+          "concept": "Equilibrium Solutions",
+          "definition": "The flatlines.",
+          "details": [
+            "An equilibrium solution is a state where nothing changes. It occurs when $\\frac{dy}{dx} = 0$ for all time.",
+            "Graphically, these appear as perfectly horizontal straight lines on a slope field."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t16_st10_visual_added01",
+          "title": "Interpreting solutions and solution curves — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Interpreting solutions and solution curves; conceptual and not to scale.",
+          "alt_text": "Original schematic teaching aid for Interpreting solutions and solution curves; conceptual and not to scale.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Interpreting solutions and solution curves</title><desc>Original schematic teaching aid for Interpreting solutions and solution curves; conceptual and not to scale.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><line x1=\"35\" y1=\"175\" x2=\"285\" y2=\"175\" stroke=\"#64748b\"/><line x1=\"45\" y1=\"205\" x2=\"45\" y2=\"25\" stroke=\"#64748b\"/><path d=\"M55 145 Q115 55 165 105 T280 60\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M55 115 Q115 25 165 75 T280 30\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"160\" y=\"220\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Interpreting solutions and solution curves</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the equilibrium solutions for the population equation $\\frac{dP}{dt} = 0.05P(100 - P)$.",
+          "solution_steps": [
+            "Step 1: An equilibrium solution occurs when the rate of change is zero.",
+            "Step 2: Set the differential equation to zero: $0.05P(100 - P) = 0$.",
+            "Step 3: Solve for $P$. By the zero-product property, either $P = 0$ or $100 - P = 0$.",
+            "Step 4: This means the population is in equilibrium (won't change) if there are $0$ animals, or if the population hits its carrying capacity of $100$."
+          ],
+          "final_answer": "P = 0 and P = 100"
+        },
+        {
+          "problem": "For $\\frac{dy}{dx}=y-2$, identify the equilibrium solution and describe the sign of the slope above and below it.",
+          "solution_steps": [
+            "At equilibrium, $dy/dx=0$.",
+            "Set $y-2=0$, giving $y=2$.",
+            "If $y>2$, then $dy/dx>0$, so solution curves have positive slope.",
+            "If $y<2$, then $dy/dx<0$, so solution curves have negative slope."
+          ],
+          "final_answer": "Equilibrium solution: $y=2$; slopes are positive above it and negative below it."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Trying to solve slope fields algebraically.",
+          "correction": "Slope fields are entirely visual and qualitative. They are used specifically when algebraic integration is too difficult or impossible. Just follow the visual 'current'."
+        }
+      ],
+      "quick_summary": [
+        "A General Solution produces an infinite family of parallel curves. An Initial Condition selects just one.",
+        "Slope fields act as 'wind maps', showing the trajectory of a solution visually by plotting the derivative at thousands of points.",
+        "Equilibrium solutions occur where the derivative is permanently zero, resulting in a flat horizontal line."
+      ],
+      "registry_scope": "Draft 80 approved audit: Interpret solution curves, equilibrium solutions, initial conditions and qualitative behaviour; relate mathematical results to the model and identify limitations. Boundary: Growth/decay and dynamic-system models are treated through differential equations and rates of change. Integral-based geometric area/accumulation belongs in HSS T15; empirical statistical modelling belongs in HSS T18.",
+      "equilibrium_note": "An equilibrium solution is a constant solution for which the derivative is zero throughout the interval of the model; for an autonomous equation dy/dt=F(y), equilibria satisfy F(y)=0."
+    }
+  }
+}

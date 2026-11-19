@@ -1,0 +1,1384 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t07",
+  "topicTitle": "Trigonometric Functions and Equations",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t07_st01": {
+      "id": "hss_math_t07_st01",
+      "title": "Angles in degrees and radians",
+      "overview": "Trigonometry begins with the measurement of rotation. While degrees are familiar and historical, radians are the pure mathematical language of circles, measuring angles directly by the length of the arc they create.",
+      "key_concepts": [
+        {
+          "concept": "Degree Measure",
+          "definition": "The historical standard.",
+          "details": [
+            "A full circle is divided into $360$ equal degrees.",
+            "Degrees can be subdivided into minutes ($1^\\circ = 60'$) and seconds ($1' = 60''$)."
+          ]
+        },
+        {
+          "concept": "Radian Measure",
+          "definition": "The geometric standard.",
+          "details": [
+            "One radian is the angle created when the arc length exactly matches the radius of the circle.",
+            "Because the circumference of a full circle is $2\\pi r$, a full $360^\\circ$ rotation is exactly $2\\pi$ radians."
+          ]
+        },
+        {
+          "concept": "Conversion Rules",
+          "definition": "Switching units.",
+          "details": [
+            "**Degrees to Radians:** Multiply by $\\frac{\\pi}{180}$.",
+            "**Radians to Degrees:** Multiply by $\\frac{180}{\\pi}$."
+          ]
+        },
+        {
+          "concept": "Coterminal angles",
+          "definition": "Angles that differ by an integer multiple of a full revolution have the same terminal side.",
+          "details": [
+            "In radians, θ and θ+2kπ are coterminal for any integer k. Negative angles describe clockwise rotation."
+          ]
+        },
+        {
+          "concept": "Arc length connection",
+          "definition": "Radian measure is defined by the ratio of arc length to radius.",
+          "details": [
+            "For a circle of radius r and central angle θ in radians, s=rθ. This is why radian measure is especially useful in calculus and circular motion."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Radians to Degrees",
+          "equation": "$$ \\text{Degrees} = \\text{Radians} \\times \\frac{180}{\\pi} $$",
+          "variables": {}
+        },
+        {
+          "name": "Degrees to Radians",
+          "equation": "$$ \\text{Radians} = \\text{Degrees} \\times \\frac{\\pi}{180} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_s01",
+          "title": "The Definition of a Radian",
+          "type": "svg",
+          "caption": "1 Radian is formed when the wrapped arc exactly equals the radius.",
+          "alt_text": "A circle sector where the radius is 'r' and the curved arc length is also 'r'. The internal angle is labeled '1 Radian'.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 250 200 L 400 200 A 150 150 0 0 0 330 70 Z\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M 400 200 A 150 150 0 0 0 330 70\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"4\"/><text x=\"325\" y=\"215\" font-family=\"monospace\" font-size=\"16\" fill=\"#1e3a8a\" font-weight=\"bold\">r</text><text x=\"260\" y=\"120\" font-family=\"monospace\" font-size=\"16\" fill=\"#1e3a8a\" font-weight=\"bold\">r</text><text x=\"395\" y=\"125\" font-family=\"monospace\" font-size=\"16\" fill=\"#991b1b\" font-weight=\"bold\">Arc = r</text><path d=\"M 290 200 A 40 40 0 0 0 270 165\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"310\" y=\"185\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#0f172a\" font-weight=\"bold\">1 Radian</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Convert $150^\\circ$ into radians.",
+          "solution_steps": [
+            "Step 1: Use the conversion fraction $\\frac{\\pi}{180}$.",
+            "Step 2: Multiply: $150 \\times \\frac{\\pi}{180}$.",
+            "Step 3: Simplify the fraction: $\\frac{150}{180} = \\frac{15}{18} = \\frac{5}{6}$.",
+            "Step 4: Keep the $\\pi$ attached."
+          ],
+          "final_answer": "5π/6 radians"
+        },
+        {
+          "problem": "Convert -225° to radians and state a positive coterminal angle.",
+          "solution_steps": [
+            "Use θ(rad)=θ(deg)×π/180: -225×π/180=-5π/4.",
+            "A positive coterminal angle is obtained by adding 2π: -5π/4+2π=3π/4."
+          ],
+          "final_answer": "-5π/4 radians; positive coterminal angle 3π/4 radians."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $\\pi$ is a unit.",
+          "correction": "$\\pi$ is just a number ($\\approx 3.14159$). An angle of '$2$ radians' is perfectly valid without a $\\pi$ attached. The unit is 'radians' (or often left unitless in advanced math)."
+        }
+      ],
+      "quick_summary": [
+        "Degrees divide a circle into $360$ parts. Radians measure angles using arc length.",
+        "$180^\\circ = \\pi$ radians.",
+        "To convert from degrees to radians, multiply by $\\frac{\\pi}{180}$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Extend High School degree-radian foundations through positive and negative angles, coterminal angles and radian measure in function analysis and applications. Avoid repeating elementary conversion drills. Approved HSS T07 sequence: equation solving and applications conclude the topic after function, identity, graph and inverse-function foundations."
+    },
+    "hss_math_t07_st02": {
+      "id": "hss_math_t07_st02",
+      "title": "Unit circle and trigonometric functions",
+      "overview": "SOH CAH TOA is limited to right-angled triangles, meaning it cannot calculate angles past 90 degrees. The Unit Circle upgrades trigonometry by mapping angles to $(x, y)$ coordinates, allowing us to calculate sine and cosine for any angle in existence.",
+      "key_concepts": [
+        {
+          "concept": "The Unit Circle",
+          "definition": "Radius = 1.",
+          "details": [
+            "A circle centered at the origin $(0,0)$ with a radius of exactly $1$.",
+            "Equation: $x^2 + y^2 = 1$."
+          ]
+        },
+        {
+          "concept": "Standard Position",
+          "definition": "The starting line.",
+          "details": [
+            "Angles are always measured starting from the positive x-axis (the 3 o'clock position).",
+            "Positive angles rotate counter-clockwise. Negative angles rotate clockwise."
+          ]
+        },
+        {
+          "concept": "The Coordinate Definitions",
+          "definition": "Replacing the triangle.",
+          "details": [
+            "For any angle $\\theta$, the point where the angle's arm crosses the Unit Circle has the coordinates $(x, y)$.",
+            "**Cosine** is redefined as the x-coordinate: $\\cos\\theta = x$.",
+            "**Sine** is redefined as the y-coordinate: $\\sin\\theta = y$.",
+            "**Tangent** is redefined as the slope: $\\tan\\theta = \\frac{y}{x}$."
+          ]
+        },
+        {
+          "concept": "Unit-circle coordinates",
+          "definition": "For a real angle θ measured from the positive x-axis, the terminal point on the unit circle is (cosθ,sinθ).",
+          "details": [
+            "Because x²+y²=1, cos²θ+sin²θ=1. Tangent is y/x whenever x≠0; reciprocal ratios are defined only when their denominators are nonzero."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Unit Circle Equation",
+          "equation": "$$ x^2 + y^2 = 1 $$",
+          "variables": {}
+        },
+        {
+          "name": "Trig Function Definitions",
+          "equation": "$$ \\cos\\theta = x, \\quad \\sin\\theta = y, \\quad \\tan\\theta = \\frac{y}{x} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st02",
+          "title": "Unit Circle and Trigonometric Functions — concept diagram",
+          "type": "svg",
+          "caption": "Schematic visual aid supporting the key relationships in this lesson.",
+          "alt_text": "A labelled unit-circle diagram showing axes, a radius and the terminal point for angle theta.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 270\"><rect x=\"1\" y=\"1\" width=\"518\" height=\"268\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Unit Circle and Trigonometric Functions</text><line x1=\"65\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"238\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"260\" y1=\"145\" x2=\"318\" y2=\"87\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"318\" cy=\"87\" r=\"5\" fill=\"#dc2626\"/><text x=\"330\" y=\"82\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#991b1b\">(cos θ, sin θ)</text><text x=\"465\" y=\"238\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">x</text><text x=\"270\" y=\"52\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "An angle $\\theta$ intersects the unit circle at the point $(-\\frac{1}{2}, \\frac{\\sqrt{3}}{2})$. What are the values of $\\cos\\theta$, $\\sin\\theta$, and $\\tan\\theta$?",
+          "solution_steps": [
+            "Step 1: Recall the definitions. $\\cos\\theta = x$ and $\\sin\\theta = y$.",
+            "Step 2: Read the x-coordinate: $\\cos\\theta = -\\frac{1}{2}$.",
+            "Step 3: Read the y-coordinate: $\\sin\\theta = \\frac{\\sqrt{3}}{2}$.",
+            "Step 4: Calculate the tangent: $\\tan\\theta = \\frac{y}{x} = \\frac{\\frac{\\sqrt{3}}{2}}{-\\frac{1}{2}}$.",
+            "Step 5: Simplify: $\\frac{\\sqrt{3}}{2} \\times -\\frac{2}{1} = -\\sqrt{3}$."
+          ],
+          "final_answer": "cosθ = -1/2, sinθ = √3/2, tanθ = -√3"
+        },
+        {
+          "problem": "A point on the unit circle has x-coordinate  -√3/2 and lies below the x-axis. Find its coordinates and the six trigonometric ratios.",
+          "solution_steps": [
+            "On the unit circle x²+y²=1, so y²=1-3/4=1/4.",
+            "Below the x-axis means y=-1/2. Thus the point is (-√3/2,-1/2).",
+            "Cosine is x and sine is y; the remaining ratios follow by quotient and reciprocal definitions."
+          ],
+          "final_answer": "cosθ=-√3/2, sinθ=-1/2, tanθ=1/√3, secθ=-2/√3, cscθ=-2, cotθ=√3."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing which coordinate is sine and which is cosine.",
+          "correction": "Alphabetical order trick: $(x, y)$ corresponds to $(\\cos, \\sin)$."
+        }
+      ],
+      "quick_summary": [
+        "The Unit Circle has a radius of 1 and centers on the origin.",
+        "Angles start on the positive x-axis and rotate counter-clockwise.",
+        "Cosine is the x-coordinate of the intersection point; Sine is the y-coordinate."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop the geometric unit-circle model: coordinates of points on the circle and the interpretation of sine and cosine through coordinates. Establish the geometric foundation for trigonometric functions. Approved HSS T07 sequence: unit-circle geometry precedes quadrant signs and exact standard values; formal real-number function treatment follows this geometric foundation."
+    },
+    "hss_math_t07_st04": {
+      "id": "hss_math_t07_st04",
+      "title": "Signs of trigonometric functions in quadrants",
+      "overview": "Because Sine and Cosine are tied to the $(x, y)$ coordinates of a circle, their values become negative when the angle rotates into negative coordinate territory. The ASTC rule provides a fast mental map for tracking these signs.",
+      "key_concepts": [
+        {
+          "concept": "Quadrant 1 ($0$ to $\\frac{\\pi}{2}$)",
+          "definition": "Top Right.",
+          "details": [
+            "Both $x$ and $y$ coordinates are positive.",
+            "Therefore, **ALL** functions (Sine, Cosine, Tangent) are positive."
+          ]
+        },
+        {
+          "concept": "Quadrant 2 ($\\frac{\\pi}{2}$ to $\\pi$)",
+          "definition": "Top Left.",
+          "details": [
+            "The $x$ coordinate is negative, but $y$ is positive.",
+            "Therefore, only **SINE** (and Cosecant) is positive. Cosine and Tangent are negative."
+          ]
+        },
+        {
+          "concept": "Quadrant 3 ($\\pi$ to $\\frac{3\\pi}{2}$)",
+          "definition": "Bottom Left.",
+          "details": [
+            "Both $x$ and $y$ are negative.",
+            "Because $\\tan = \\frac{y}{x} = \\frac{\\text{negative}}{\\text{negative}}$, only **TANGENT** (and Cotangent) is positive."
+          ]
+        },
+        {
+          "concept": "Quadrant 4 ($\\frac{3\\pi}{2}$ to $2\\pi$)",
+          "definition": "Bottom Right.",
+          "details": [
+            "The $x$ coordinate is positive, but $y$ is negative.",
+            "Therefore, only **COSINE** (and Secant) is positive."
+          ]
+        },
+        {
+          "concept": "Real-number inputs",
+          "definition": "Trigonometric functions extend the unit-circle definitions to every real input angle.",
+          "details": [
+            "For tangent and secant, exclude angles where cosine is zero; for cotangent and cosecant, exclude angles where sine is zero."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v07_s03",
+          "title": "The ASTC Rule",
+          "type": "svg",
+          "caption": "All Students Take Calculus (or Add Sugar To Coffee).",
+          "alt_text": "Coordinate plane divided into 4 quadrants. Q1 labeled 'A (All Positive)'. Q2 labeled 'S (Sine Positive)'. Q3 labeled 'T (Tangent Positive)'. Q4 labeled 'C (Cosine Positive)'.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 250 20 L 250 230\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\"/><path d=\"M 100 125 L 400 125\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"3\"/><text x=\"325\" y=\"80\" font-family=\"monospace\" font-size=\"40\" text-anchor=\"middle\" fill=\"#3b82f6\" font-weight=\"bold\">A</text><text x=\"325\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">All</text><text x=\"175\" y=\"80\" font-family=\"monospace\" font-size=\"40\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">S</text><text x=\"175\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#991b1b\">Sine</text><text x=\"175\" y=\"190\" font-family=\"monospace\" font-size=\"40\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">T</text><text x=\"175\" y=\"215\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">Tangent</text><text x=\"325\" y=\"190\" font-family=\"monospace\" font-size=\"40\" text-anchor=\"middle\" fill=\"#eab308\" font-weight=\"bold\">C</text><text x=\"325\" y=\"215\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"#a16207\">Cosine</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Determine the sign of $\\tan(300^\\circ)$.",
+          "solution_steps": [
+            "Step 1: Identify which quadrant $300^\\circ$ lies in.",
+            "Step 2: $300^\\circ$ is between $270^\\circ$ and $360^\\circ$, placing it in Quadrant 4.",
+            "Step 3: Recall the ASTC rule. In Q4 (the 'C' quadrant), only Cosine is positive.",
+            "Step 4: Therefore, Tangent must be negative."
+          ],
+          "final_answer": "Negative"
+        },
+        {
+          "problem": "If sinθ=-5/13 and θ lies in Quadrant IV, find cosθ and tanθ.",
+          "solution_steps": [
+            "Use sin²θ+cos²θ=1: cos²θ=1-25/169=144/169.",
+            "Cosine is positive in Quadrant IV, so cosθ=12/13.",
+            "Tanθ=sinθ/cosθ=(-5/13)/(12/13)."
+          ],
+          "final_answer": "cosθ=12/13 and tanθ=-5/12."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking Sine is the x-axis and Cosine is the y-axis.",
+          "correction": "Always remember Cosine = $x$, Sine = $y$. This explains why Sine is positive in Q2 (where $y$ is UP, but $x$ is LEFT)."
+        }
+      ],
+      "quick_summary": [
+        "The signs of trigonometric functions depend entirely on the $(x,y)$ coordinates of the quadrant they land in.",
+        "Q1: All positive. Q2: Sine positive. Q3: Tangent positive. Q4: Cosine positive.",
+        "Use the mnemonic 'ASTC' to remember the positive functions in quadrants 1, 2, 3, and 4."
+      ],
+      "registry_scope": "Approved lesson-level scope: Study signs of trigonometric functions in all quadrants, reference angles, symmetry and determining values for related angles. Connect signs to the unit-circle model. Approved HSS T07 sequence: quadrant signs and reference-angle reasoning precede exact standard-angle values."
+    },
+    "hss_math_t07_st05": {
+      "id": "hss_math_t07_st05",
+      "title": "Standard trigonometric values",
+      "overview": "Certain angles appear so frequently in physics and engineering that calculating them from scratch every time is impractical. This lesson covers the core standard angles ($0^\\circ, 30^\\circ, 45^\\circ, 60^\\circ, 90^\\circ$) and how to derive them using reference triangles.",
+      "key_concepts": [
+        {
+          "concept": "The $45^\\circ$ Triangle ($\\frac{\\pi}{4}$)",
+          "definition": "The isosceles right triangle.",
+          "details": [
+            "Derived from a square cut in half. The sides are $1, 1, \\sqrt{2}$.",
+            "$\\sin(45^\\circ) = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$",
+            "$\\cos(45^\\circ) = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$",
+            "$\\tan(45^\\circ) = \\frac{1}{1} = 1$"
+          ]
+        },
+        {
+          "concept": "The $30^\\circ$-$60^\\circ$ Triangle ($\\frac{\\pi}{6}, \\frac{\\pi}{3}$)",
+          "definition": "The equilateral half.",
+          "details": [
+            "Derived from an equilateral triangle cut in half. The sides are $1, \\sqrt{3}, 2$.",
+            "$\\sin(30^\\circ) = \\frac{1}{2}$, $\\cos(30^\\circ) = \\frac{\\sqrt{3}}{2}$",
+            "$\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$, $\\cos(60^\\circ) = \\frac{1}{2}$"
+          ]
+        },
+        {
+          "concept": "Quadrantal Angles",
+          "definition": "On the axes.",
+          "details": [
+            "Angles exactly on the axes ($0, \\frac{\\pi}{2}, \\pi, \\frac{3\\pi}{2}$).",
+            "Read directly from the unit circle coordinates: e.g., at $90^\\circ$ ($\\frac{\\pi}{2}$), the point is $(0,1)$, so $\\cos(90^\\circ)=0$ and $\\sin(90^\\circ)=1$."
+          ]
+        },
+        {
+          "concept": "Reference angle",
+          "definition": "The reference angle is the acute angle between the terminal side and the x-axis.",
+          "details": [
+            "It supplies the magnitude of the related standard trigonometric value; the quadrant determines its sign."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st04",
+          "title": "Standard Trigonometric Values — concept diagram",
+          "type": "svg",
+          "caption": "Schematic visual aid supporting the key relationships in this lesson.",
+          "alt_text": "A labelled unit-circle diagram showing axes, a radius and the terminal point for angle theta.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 270\"><rect x=\"1\" y=\"1\" width=\"518\" height=\"268\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Standard Trigonometric Values</text><line x1=\"65\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"238\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"260\" y1=\"145\" x2=\"318\" y2=\"87\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"318\" cy=\"87\" r=\"5\" fill=\"#dc2626\"/><text x=\"330\" y=\"82\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#991b1b\">(cos θ, sin θ)</text><text x=\"465\" y=\"238\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">x</text><text x=\"270\" y=\"52\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\sin^2(60^\\circ) + \\cos^2(45^\\circ)$.",
+          "solution_steps": [
+            "Step 1: Recall the standard value for $\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$.",
+            "Step 2: Recall the standard value for $\\cos(45^\\circ) = \\frac{\\sqrt{2}}{2}$.",
+            "Step 3: Square both values: $(\\frac{\\sqrt{3}}{2})^2 = \\frac{3}{4}$, and $(\\frac{\\sqrt{2}}{2})^2 = \\frac{2}{4} = \\frac{1}{2}$.",
+            "Step 4: Add them together: $\\frac{3}{4} + \\frac{2}{4} = \\frac{5}{4}$."
+          ],
+          "final_answer": "5/4"
+        },
+        {
+          "problem": "If θ is in Quadrant III and its reference angle is 30°, determine all six trigonometric ratios.",
+          "solution_steps": [
+            "In Quadrant III, sine and cosine are negative while tangent is positive.",
+            "Use the 30° reference values: sin=1/2, cos=√3/2, tan=1/√3, then apply signs and reciprocals."
+          ],
+          "final_answer": "sinθ=-1/2, cosθ=-√3/2, tanθ=1/√3, cscθ=-2, secθ=-2/√3, cotθ=√3."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing $\\sin(30^\\circ)$ and $\\sin(60^\\circ)$.",
+          "correction": "Remember that Sine represents the y-height. A $30^\\circ$ angle is low, so its height is the smaller number ($\\frac{1}{2}$). A $60^\\circ$ angle is high, so its height is the larger number ($\\frac{\\sqrt{3}}{2}$)."
+        }
+      ],
+      "quick_summary": [
+        "The standard angles ($30^\\circ, 45^\\circ, 60^\\circ$) are derived from two foundational triangles.",
+        "$\\sin$ and $\\cos$ of $45^\\circ$ are both $\\frac{\\sqrt{2}}{2}$.",
+        "$\\sin(30^\\circ)$ and $\\cos(60^\\circ)$ both equal $\\frac{1}{2}$.",
+        "Values on the axes ($0^\\circ, 90^\\circ$) are read directly from unit circle $(x,y)$ coordinates."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop exact standard-angle values and related-angle values, with reference-angle reasoning and applications rather than repetitive elementary evaluation. Approved HSS T07 sequence: exact standard-angle values follow quadrant signs and precede formal real-number function treatment."
+    },
+    "hss_math_t07_st03": {
+      "id": "hss_math_t07_st03",
+      "title": "Trigonometric functions of real numbers",
+      "overview": "Trigonometry isn't just about geometry; it is the mathematical language of repeating waves. By treating inputs as pure real numbers (radians) rather than physical shapes, we unlock the ability to graph infinite, continuous wave functions.",
+      "key_concepts": [
+        {
+          "concept": "Real Number Inputs",
+          "definition": "Radians as real numbers.",
+          "details": [
+            "In higher math, $\\sin(2)$ doesn't mean $2$ degrees. It means the real number $2$, evaluated in radians.",
+            "This maps the entire real number line continuously around the unit circle, creating repeating wave patterns."
+          ]
+        },
+        {
+          "concept": "Domain and Range",
+          "definition": "The boundaries.",
+          "details": [
+            "**Sine and Cosine:** Domain is all real numbers ($\\mathbb{R}$). Range is restricted strictly between $[-1, 1]$.",
+            "**Tangent:** Domain is all real numbers EXCEPT where $\\cos\\theta = 0$ (like $\\frac{\\pi}{2}$ or $\\frac{3\\pi}{2}$), creating vertical asymptotes. Range is all real numbers ($\\mathbb{R}$)."
+          ]
+        },
+        {
+          "concept": "Periodicity",
+          "definition": "The repeating cycle.",
+          "details": [
+            "Because a circle resets every $360^\\circ$ ($2\\pi$ radians), the functions repeat their values endlessly.",
+            "Sine and Cosine repeat every $2\\pi$. Tangent repeats every $\\pi$."
+          ]
+        },
+        {
+          "concept": "Exact values",
+          "definition": "Exact standard-angle values are obtained from special right triangles and the unit circle.",
+          "details": [
+            "Use 30°–60°–90° and 45°–45°–90° triangles to derive values rather than relying only on memorisation."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st05",
+          "title": "Trigonometric Functions of Real Numbers — concept diagram",
+          "type": "svg",
+          "caption": "Schematic visual aid supporting the key relationships in this lesson.",
+          "alt_text": "A labelled unit-circle diagram showing axes, a radius and the terminal point for angle theta.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 270\"><rect x=\"1\" y=\"1\" width=\"518\" height=\"268\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Trigonometric Functions of Real Numbers</text><line x1=\"65\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"238\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"260\" y1=\"145\" x2=\"318\" y2=\"87\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"318\" cy=\"87\" r=\"5\" fill=\"#dc2626\"/><text x=\"330\" y=\"82\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#991b1b\">(cos θ, sin θ)</text><text x=\"465\" y=\"238\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">x</text><text x=\"270\" y=\"52\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\sin(4\\pi + \\frac{\\pi}{6})$.",
+          "solution_steps": [
+            "Step 1: Recognize the periodicity of the Sine function. It repeats every $2\\pi$.",
+            "Step 2: The term $4\\pi$ represents exactly two full rotations around the unit circle.",
+            "Step 3: Therefore, $\\sin(4\\pi + \\frac{\\pi}{6})$ is perfectly identical to $\\sin(\\frac{\\pi}{6})$.",
+            "Step 4: Recall the standard value for $\\sin(30^\\circ)$ or $\\sin(\\frac{\\pi}{6})$."
+          ],
+          "final_answer": "1/2"
+        },
+        {
+          "problem": "Evaluate sin(-7π/6) and cos(11π/3) using coterminal angles.",
+          "solution_steps": [
+            "-7π/6+2π=5π/6, so sin(-7π/6)=sin(5π/6)=1/2.",
+            "11π/3-2π=5π/3, so cos(11π/3)=cos(5π/3)=1/2."
+          ],
+          "final_answer": "Both values are 1/2."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking $\\sin(x) = 2$ has a solution.",
+          "correction": "Because the radius of the unit circle is 1, the y-coordinate (Sine) can never physically exceed 1 or drop below -1. The equation has no real solutions."
+        }
+      ],
+      "quick_summary": [
+        "Treating radians as pure real numbers turns trigonometry from geometry into continuous algebra.",
+        "Sine and Cosine are capped between $-1$ and $1$. Tangent can stretch to infinity.",
+        "Trig functions are periodic, meaning their values repeat at set intervals ($2\\pi$ for Sin/Cos, $\\pi$ for Tan)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop the formal function interpretation of the six trigonometric functions for real-number inputs, including domains, ranges, periodicity and function behaviour. Distinguish this function-focused treatment from the geometric unit-circle introduction. Approved HSS T07 sequence: formal real-number function properties follow the unit-circle, quadrant-sign and standard-value foundations."
+    },
+    "hss_math_t07_st06": {
+      "id": "hss_math_t07_st06",
+      "title": "Trigonometric identities",
+      "overview": "Trigonometric identities are the DNA of the Unit Circle. Because sine and cosine are structurally locked together by the circle's geometry, they can be algebraically swapped, substituted, and transformed to simplify complex equations.",
+      "key_concepts": [
+        {
+          "concept": "The Pythagorean Identity",
+          "definition": "The core circle equation.",
+          "details": [
+            "Because the unit circle equation is $x^2 + y^2 = 1$, and $x=\\cos\\theta$, $y=\\sin\\theta$, we get the most important identity in trigonometry: $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+            "This allows you to instantly convert between Sine and Cosine."
+          ]
+        },
+        {
+          "concept": "Quotient and Reciprocal Identities",
+          "definition": "The secondary functions.",
+          "details": [
+            "**Quotient:** $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$ and $\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$.",
+            "**Reciprocal:** $\\sec\\theta = \\frac{1}{\\cos\\theta}$, $\\csc\\theta = \\frac{1}{\\sin\\theta}$, $\\cot\\theta = \\frac{1}{\\tan\\theta}$."
+          ]
+        },
+        {
+          "concept": "Derived Pythagorean Identities",
+          "definition": "Tangent and Secant links.",
+          "details": [
+            "By dividing the main Pythagorean identity entirely by $\\cos^2\\theta$, you get: $1 + \\tan^2\\theta = \\sec^2\\theta$.",
+            "By dividing entirely by $\\sin^2\\theta$, you get: $1 + \\cot^2\\theta = \\csc^2\\theta$."
+          ]
+        },
+        {
+          "concept": "Identity proof strategy",
+          "definition": "An identity is an equality valid for every input in the common domain of its sides.",
+          "details": [
+            "Transform one side using established identities, factorisation or a common denominator. Do not divide by an expression that may be zero without noting the restriction."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Pythagorean Identity",
+          "equation": "$$ \\sin^2\\theta + \\cos^2\\theta = 1 $$",
+          "variables": {}
+        },
+        {
+          "name": "Tangent Identity",
+          "equation": "$$ 1 + \\tan^2\\theta = \\sec^2\\theta $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st06",
+          "title": "Trigonometric Identities — concept diagram",
+          "type": "svg",
+          "caption": "Schematic visual aid supporting the key relationships in this lesson.",
+          "alt_text": "A labelled unit-circle diagram showing axes, a radius and the terminal point for angle theta.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 270\"><rect x=\"1\" y=\"1\" width=\"518\" height=\"268\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Trigonometric Identities</text><line x1=\"65\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"238\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"260\" y1=\"145\" x2=\"318\" y2=\"87\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"318\" cy=\"87\" r=\"5\" fill=\"#dc2626\"/><text x=\"330\" y=\"82\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#991b1b\">(cos θ, sin θ)</text><text x=\"465\" y=\"238\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">x</text><text x=\"270\" y=\"52\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Prove that $(\\sin\\theta + \\cos\\theta)^2 = 1 + 2\\sin\\theta\\cos\\theta$.",
+          "solution_steps": [
+            "Step 1: Expand the left side using the perfect square algebraic identity: $(a+b)^2 = a^2 + 2ab + b^2$.",
+            "Step 2: Expansion yields: $\\sin^2\\theta + 2\\sin\\theta\\cos\\theta + \\cos^2\\theta$.",
+            "Step 3: Rearrange the terms: $(\\sin^2\\theta + \\cos^2\\theta) + 2\\sin\\theta\\cos\\theta$.",
+            "Step 4: Apply the Pythagorean identity $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+            "Step 5: Substitute: $1 + 2\\sin\\theta\\cos\\theta$. The proof is complete."
+          ],
+          "final_answer": "Proof complete"
+        },
+        {
+          "problem": "Prove (1-cosθ)/sinθ = sinθ/(1+cosθ), where both sides are defined.",
+          "solution_steps": [
+            "Start with the left-hand side and multiply numerator and denominator by 1+cosθ.",
+            "(1-cosθ)(1+cosθ)/[sinθ(1+cosθ)]=(1-cos²θ)/[sinθ(1+cosθ)].",
+            "Apply 1-cos²θ=sin²θ and cancel one factor of sinθ."
+          ],
+          "final_answer": "The expression simplifies to sinθ/(1+cosθ), proving the identity on the common domain."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Writing $\\sin\\theta^2$ instead of $\\sin^2\\theta$.",
+          "correction": "$\\sin\\theta^2$ means you are squaring the *angle* before taking the sine. $\\sin^2\\theta$ means you take the sine of the angle first, and then square the resulting *number*. The Pythagorean identity uses the latter."
+        }
+      ],
+      "quick_summary": [
+        "The Pythagorean identity $\\sin^2\\theta + \\cos^2\\theta = 1$ is the foundation of trigonometric algebra.",
+        "Tangent is defined as Sine divided by Cosine.",
+        "These identities allow you to swap functions and prove that two entirely different-looking expressions are actually mathematically identical."
+      ],
+      "registry_scope": "Approved lesson-level scope: Prove and apply trigonometric identities; simplify expressions and solve multi-step problems by selecting and combining appropriate identities. Emphasise reasoning, not memorisation alone. Approved HSS T07 sequence: equation solving and applications conclude the topic after function, identity, graph and inverse-function foundations."
+    },
+    "hss_math_t07_st07": {
+      "id": "hss_math_t07_st07",
+      "title": "Compound-angle formulas",
+      "overview": "If you know the exact value of $45^\\circ$ and $30^\\circ$, can you find the exact value of $75^\\circ$? Yes. Compound-angle formulas allow us to break apart non-standard angles into manageable sums and differences.",
+      "key_concepts": [
+        {
+          "concept": "The Non-Linearity Rule",
+          "definition": "A critical warning.",
+          "details": [
+            "Trigonometry is not simple algebra. $\\sin(A + B)$ is strictly NOT equal to $\\sin(A) + \\sin(B)$. You cannot 'distribute' the sine function."
+          ]
+        },
+        {
+          "concept": "Sine Compound Formulas",
+          "definition": "Mixing functions.",
+          "details": [
+            "$\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$",
+            "$\\sin(A - B) = \\sin A\\cos B - \\cos A\\sin B$"
+          ]
+        },
+        {
+          "concept": "Cosine Compound Formulas",
+          "definition": "Matching functions, flipped signs.",
+          "details": [
+            "$\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$",
+            "$\\cos(A - B) = \\cos A\\cos B + \\sin A\\sin B$"
+          ]
+        },
+        {
+          "concept": "Compound-angle reasoning",
+          "definition": "Addition and subtraction formulas express trigonometric functions of a sum or difference using the functions of the component angles.",
+          "details": [
+            "Keep the sign distinction: cosine of a sum uses a minus between the products, while cosine of a difference uses a plus."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sine Addition Formula",
+          "equation": "$$ \\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B $$",
+          "variables": {}
+        },
+        {
+          "name": "Cosine Addition Formula",
+          "equation": "$$ \\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st07",
+          "title": "Compound-Angle Formulas — concept diagram",
+          "type": "svg",
+          "caption": "Schematic visual aid supporting the key relationships in this lesson.",
+          "alt_text": "A labelled unit-circle diagram showing axes, a radius and the terminal point for angle theta.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 270\"><rect x=\"1\" y=\"1\" width=\"518\" height=\"268\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Compound-Angle Formulas</text><line x1=\"65\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"238\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"260\" y1=\"145\" x2=\"318\" y2=\"87\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"318\" cy=\"87\" r=\"5\" fill=\"#dc2626\"/><text x=\"330\" y=\"82\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#991b1b\">(cos θ, sin θ)</text><text x=\"465\" y=\"238\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">x</text><text x=\"270\" y=\"52\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the exact value of $\\cos(75^\\circ)$.",
+          "solution_steps": [
+            "Step 1: Break $75^\\circ$ into standard angles. $75^\\circ = 45^\\circ + 30^\\circ$.",
+            "Step 2: Use the Cosine Addition formula: $\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$.",
+            "Step 3: Substitute: $\\cos(45^\\circ)\\cos(30^\\circ) - \\sin(45^\\circ)\\sin(30^\\circ)$.",
+            "Step 4: Plug in standard values: $(\\frac{\\sqrt{2}}{2})(\\frac{\\sqrt{3}}{2}) - (\\frac{\\sqrt{2}}{2})(\\frac{1}{2})$.",
+            "Step 5: Multiply the fractions: $\\frac{\\sqrt{6}}{4} - \\frac{\\sqrt{2}}{4}$.",
+            "Step 6: Combine over the common denominator."
+          ],
+          "final_answer": "(√6 - √2) / 4"
+        },
+        {
+          "problem": "Given sin A=3/5 and cos A=4/5, and sin B=5/13 and cos B=12/13, with A and B acute, find sin(A+B) and cos(A+B).",
+          "solution_steps": [
+            "Use sin(A+B)=sinA cosB+cosA sinB.",
+            "Compute (3/5)(12/13)+(4/5)(5/13)=56/65.",
+            "Use cos(A+B)=cosA cosB-sinA sinB=(4/5)(12/13)-(3/5)(5/13)."
+          ],
+          "final_answer": "sin(A+B)=56/65; cos(A+B)=33/65."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting the sign flip in the Cosine formula.",
+          "correction": "The sine formula keeps the same sign ($A+B$ uses a $+$). The cosine formula FLIPS the sign ($A+B$ uses a $-$)."
+        }
+      ],
+      "quick_summary": [
+        "Compound formulas allow us to calculate the exact values of non-standard angles by splitting them into standard angles.",
+        "You CANNOT distribute trig functions like algebraic variables. You must use the specific expanded formulas.",
+        "Sine formulas mix $\\sin$ and $\\cos$ together. Cosine formulas group $\\cos$ with $\\cos$ and $\\sin$ with $\\sin$, but flip the operator sign."
+      ],
+      "registry_scope": "Approved lesson-level scope: Derive and apply sine, cosine and tangent addition and subtraction formulas. Include suitable derivations and multi-step applications. Approved HSS T07 sequence: equation solving and applications conclude the topic after function, identity, graph and inverse-function foundations."
+    },
+    "hss_math_t07_st08": {
+      "id": "hss_math_t07_st08",
+      "title": "Double-angle and half-angle formulas",
+      "overview": "What happens if both angles in a compound formula are exactly the same? This gives us the Double-Angle formulas, a critical tool in calculus for knocking high-power trigonometric functions down into easier forms.",
+      "key_concepts": [
+        {
+          "concept": "The Sine Double-Angle",
+          "definition": "The single product.",
+          "details": [
+            "Derived by setting $A=B=\\theta$ in the sine addition formula.",
+            "$\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$."
+          ]
+        },
+        {
+          "concept": "The Cosine Double-Angle",
+          "definition": "The three variants.",
+          "details": [
+            "Derived by setting $A=B=\\theta$ in the cosine addition formula: $\\cos(2\\theta) = \\cos^2\\theta - \\sin^2\\theta$.",
+            "By substituting the Pythagorean identity ($\\sin^2\\theta = 1 - \\cos^2\\theta$), this creates two highly useful variants:",
+            "Variant 2: $\\cos(2\\theta) = 2\\cos^2\\theta - 1$.",
+            "Variant 3: $\\cos(2\\theta) = 1 - 2\\sin^2\\theta$."
+          ]
+        },
+        {
+          "concept": "Power Reduction (Half-Angle base)",
+          "definition": "Flattening squares.",
+          "details": [
+            "Rearranging Variants 2 and 3 above gives the incredibly important power-reduction formulas:",
+            "$\\cos^2\\theta = \\frac{1 + \\cos(2\\theta)}{2}$ and $\\sin^2\\theta = \\frac{1 - \\cos(2\\theta)}{2}$."
+          ]
+        },
+        {
+          "concept": "Half-angle sign choice",
+          "definition": "The sign in a half-angle formula depends on the quadrant containing the half-angle.",
+          "details": [
+            "A square root gives a nonnegative magnitude; determine the sign from the stated interval or quadrant."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Sine Double-Angle",
+          "equation": "$$ \\sin(2\\theta) = 2\\sin\\theta\\cos\\theta $$",
+          "variables": {}
+        },
+        {
+          "name": "Cosine Double-Angle (Base)",
+          "equation": "$$ \\cos(2\\theta) = \\cos^2\\theta - \\sin^2\\theta $$",
+          "variables": {}
+        },
+        {
+          "name": "Power Reduction (Sine Squared)",
+          "equation": "$$ \\sin^2\\theta = \\frac{1 - \\cos(2\\theta)}{2} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st08",
+          "title": "Double-Angle and Half-Angle Formulas — concept diagram",
+          "type": "svg",
+          "caption": "Schematic visual aid supporting the key relationships in this lesson.",
+          "alt_text": "A labelled unit-circle diagram showing axes, a radius and the terminal point for angle theta.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 270\"><rect x=\"1\" y=\"1\" width=\"518\" height=\"268\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Double-Angle and Half-Angle Formulas</text><line x1=\"65\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"238\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"260\" y1=\"145\" x2=\"318\" y2=\"87\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"318\" cy=\"87\" r=\"5\" fill=\"#dc2626\"/><text x=\"330\" y=\"82\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#991b1b\">(cos θ, sin θ)</text><text x=\"465\" y=\"238\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">x</text><text x=\"270\" y=\"52\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $\\sin\\theta = \\frac{3}{5}$ and $\\cos\\theta = \\frac{4}{5}$, calculate $\\sin(2\\theta)$.",
+          "solution_steps": [
+            "Step 1: Identify the correct double-angle formula: $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$.",
+            "Step 2: Substitute the known values into the formula.",
+            "Step 3: $2 \\times (\\frac{3}{5}) \\times (\\frac{4}{5})$.",
+            "Step 4: Multiply the numerators: $2 \\times 3 \\times 4 = 24$.",
+            "Step 5: Multiply the denominators: $5 \\times 5 = 25$."
+          ],
+          "final_answer": "24/25"
+        },
+        {
+          "problem": "If cosθ=5/13 and θ is acute, find cos(2θ) and tan(θ/2).",
+          "solution_steps": [
+            "From sin²θ=1-cos²θ, sinθ=12/13 because θ is acute.",
+            "cos(2θ)=cos²θ-sin²θ=25/169-144/169.",
+            "tan(θ/2)=sinθ/(1+cosθ)=(12/13)/(18/13)."
+          ],
+          "final_answer": "cos(2θ)=-119/169; tan(θ/2)=2/3."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing the Cosine Double-Angle formula with the Pythagorean Identity.",
+          "correction": "The Pythagorean Identity is $\\cos^2\\theta + \\sin^2\\theta = 1$ (Addition). The Double-Angle formula is $\\cos^2\\theta - \\sin^2\\theta = \\cos(2\\theta)$ (Subtraction). Do not mix up the signs."
+        }
+      ],
+      "quick_summary": [
+        "Double-angle formulas evaluate trig functions when the angle is multiplied by $2$.",
+        "The Cosine double-angle formula has three distinct variations, which are chosen based on what information is available in the problem.",
+        "Rearranging the Cosine double-angle formula allows you to eliminate squared trig functions, which is heavily used in higher-level calculus."
+      ],
+      "registry_scope": "Approved lesson-level scope: Derive and apply double-angle and half-angle identities, including transformations between equivalent forms and appropriate problem-solving. Approved HSS T07 sequence: equation solving and applications conclude the topic after function, identity, graph and inverse-function foundations."
+    },
+    "hss_math_t07_st09": {
+      "id": "hss_math_t07_st09",
+      "title": "Product-to-sum and sum-to-product identities",
+      "overview": "When doing calculus or analyzing wave interference, multiplying two waves together is often much harder to handle than simply adding them. These identities allow us to smoothly transition back and forth between the multiplication of trig functions and the addition of trig functions.",
+      "key_concepts": [
+        {
+          "concept": "Product-to-Sum Identities",
+          "definition": "Splitting the multiplication.",
+          "details": [
+            "These identities convert the multiplication of two trig functions into the sum (or difference) of two separate trig functions.",
+            "They are derived by taking the Compound-Angle formulas (e.g., $\\sin(A+B)$ and $\\sin(A-B)$) and literally adding or subtracting the equations together to cancel out middle terms."
+          ]
+        },
+        {
+          "concept": "Sum-to-Product Identities",
+          "definition": "Combining into factors.",
+          "details": [
+            "These identities do the exact reverse, converting the addition of two trig functions into a single multiplied product.",
+            "This is extremely useful when solving equations, because transforming a sum into a product allows you to use the Zero-Product Property (setting each factor to zero)."
+          ]
+        },
+        {
+          "concept": "Pattern Recognition",
+          "definition": "Sine mixes, Cosine matches.",
+          "details": [
+            "Notice the patterns: Multiplying Sine and Cosine together yields a Sum of Sines. Multiplying Cosine and Cosine (or Sine and Sine) yields a Sum of Cosines."
+          ]
+        },
+        {
+          "concept": "Choosing a transformation",
+          "definition": "Product-to-sum is useful when products of trigonometric functions occur; sum-to-product is useful when sums or differences occur.",
+          "details": [
+            "Check the factor of 2 and the half-sum/half-difference arguments carefully."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Product-to-Sum (Sine/Cosine)",
+          "equation": "$$ 2\\sin A \\cos B = \\sin(A+B) + \\sin(A-B) $$",
+          "variables": {}
+        },
+        {
+          "name": "Sum-to-Product (Sine)",
+          "equation": "$$ \\sin A + \\sin B = 2\\sin\\left(\\frac{A+B}{2}\\right)\\cos\\left(\\frac{A-B}{2}\\right) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st09",
+          "title": "Product-to-Sum and Sum-to-Product Identities — concept diagram",
+          "type": "svg",
+          "caption": "Schematic visual aid supporting the key relationships in this lesson.",
+          "alt_text": "A labelled unit-circle diagram showing axes, a radius and the terminal point for angle theta.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 270\"><rect x=\"1\" y=\"1\" width=\"518\" height=\"268\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Product-to-Sum and Sum-to-Product Identities</text><line x1=\"65\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"238\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"260\" y1=\"145\" x2=\"318\" y2=\"87\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"318\" cy=\"87\" r=\"5\" fill=\"#dc2626\"/><text x=\"330\" y=\"82\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#991b1b\">(cos θ, sin θ)</text><text x=\"465\" y=\"238\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">x</text><text x=\"270\" y=\"52\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Express $2\\sin(5x)\\cos(3x)$ as a sum or difference.",
+          "solution_steps": [
+            "Step 1: Identify the correct Product-to-Sum identity: $2\\sin A \\cos B = \\sin(A+B) + \\sin(A-B)$.",
+            "Step 2: Let $A = 5x$ and $B = 3x$.",
+            "Step 3: Substitute the angles into the formula: $\\sin(5x + 3x) + \\sin(5x - 3x)$.",
+            "Step 4: Simplify the angle additions and subtractions."
+          ],
+          "final_answer": "sin(8x) + sin(2x)"
+        },
+        {
+          "problem": "Express cos(4x)-cos(2x) as a product.",
+          "solution_steps": [
+            "Use cos A-cos B=-2 sin((A+B)/2) sin((A-B)/2).",
+            "Substitute A=4x and B=2x."
+          ],
+          "final_answer": "-2 sin(3x) sin(x)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting the factor of 2.",
+          "correction": "The product-to-sum identities usually start with a $2$ on the left side ($2\\sin A \\cos B = \\dots$). If your problem doesn't have a 2 (e.g., just $\\sin A \\cos B$), you must multiply the right side of the formula by $\\frac{1}{2}$."
+        }
+      ],
+      "quick_summary": [
+        "Product-to-sum identities turn multiplied trig waves into added trig waves.",
+        "Sum-to-product identities do the reverse, which is crucial for factoring and solving trig equations.",
+        "They are all direct algebraic consequences of adding or subtracting the compound-angle formulas."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop product-to-sum and sum-to-product identities, including derivation and use in expression simplification and trigonometric problems. Approved HSS T07 sequence: equation solving and applications conclude the topic after function, identity, graph and inverse-function foundations."
+    },
+    "hss_math_t07_st10": {
+      "id": "hss_math_t07_st10",
+      "title": "Graphs of trigonometric functions",
+      "overview": "By tracking the x and y coordinates of a point as it spins endlessly around the unit circle, we can unroll that circular motion into flat, continuous 2D waves on a graph. These graphs are the mathematical foundation of sound, light, and electricity.",
+      "key_concepts": [
+        {
+          "concept": "The Sine Graph ($y = \\sin x$)",
+          "definition": "The standard wave.",
+          "details": [
+            "Starts at $(0,0)$.",
+            "Rises to a maximum of $1$ at $\\frac{\\pi}{2}$, crosses $0$ at $\\pi$, drops to a minimum of $-1$ at $\\frac{3\\pi}{2}$, and finishes the cycle at $2\\pi$.",
+            "It is a continuous, perfectly smooth wave."
+          ]
+        },
+        {
+          "concept": "The Cosine Graph ($y = \\cos x$)",
+          "definition": "The shifted wave.",
+          "details": [
+            "Starts at its maximum peak of $(0,1)$.",
+            "Crosses $0$ at $\\frac{\\pi}{2}$, drops to a minimum of $-1$ at $\\pi$, crosses $0$ at $\\frac{3\\pi}{2}$, and finishes the cycle back at the peak at $2\\pi$.",
+            "It is perfectly identical in shape to the Sine wave, just shifted backwards by $\\frac{\\pi}{2}$."
+          ]
+        },
+        {
+          "concept": "The Tangent Graph ($y = \\tan x$)",
+          "definition": "The broken wave.",
+          "details": [
+            "Starts at $(0,0)$.",
+            "Instead of waving smoothly, it curves upwards to infinity as it approaches $\\frac{\\pi}{2}$.",
+            "Because $\\tan x = \\frac{\\sin x}{\\cos x}$, the graph physically breaks (creating vertical asymptotes) everywhere $\\cos x = 0$ (e.g., $\\frac{\\pi}{2}, \\frac{3\\pi}{2}$)."
+          ]
+        },
+        {
+          "concept": "Graph features",
+          "definition": "A trigonometric graph is analysed through its domain, range, intercepts, period, symmetry and discontinuities.",
+          "details": [
+            "Sine and cosine are defined for all real x and are bounded between -1 and 1; tangent is undefined at x=π/2+kπ."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v07_s10",
+          "title": "Sine vs Cosine Waves",
+          "type": "svg",
+          "caption": "The Cosine wave is just a Sine wave shifted to the left.",
+          "alt_text": "A coordinate graph showing two waves. The Sine wave starts at (0,0) and goes up. The Cosine wave starts at (0,1) and goes down. Both oscillate between 1 and -1.",
+          "data": "<svg viewBox=\"0 0 500 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"500\" height=\"250\" fill=\"#f8fafc\" rx=\"10\"/><path d=\"M 50 125 L 450 125\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><path d=\"M 100 20 L 100 230\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"80\" y=\"45\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"end\" fill=\"#0f172a\">1</text><text x=\"80\" y=\"210\" font-family=\"monospace\" font-size=\"14\" text-anchor=\"end\" fill=\"#0f172a\">-1</text><path d=\"M 100 125 Q 140 25 180 125 T 260 125 T 340 125 T 420 125\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><path d=\"M 100 40 Q 140 40 180 125 T 260 210 T 340 125 T 420 40\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\" stroke-dasharray=\"5,5\"/><text x=\"200\" y=\"60\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#1d4ed8\" font-weight=\"bold\">Sine</text><text x=\"200\" y=\"200\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#991b1b\" font-weight=\"bold\">Cosine</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Identify where the graph of $y = \\cos x$ crosses the x-axis during its first fundamental period $[0, 2\\pi]$.",
+          "solution_steps": [
+            "Step 1: The graph crosses the x-axis when $y = 0$. So we are solving $\\cos x = 0$.",
+            "Step 2: Recall the unit circle. The x-coordinate (cosine) is zero at the very top and very bottom of the circle.",
+            "Step 3: In radians, the top is $\\frac{\\pi}{2}$ and the bottom is $\\frac{3\\pi}{2}$."
+          ],
+          "final_answer": "x = π/2 and x = 3π/2"
+        },
+        {
+          "problem": "For y=2sin x, state the amplitude, period, range, and zeros in [0,2π].",
+          "solution_steps": [
+            "For y=a sin(bx), amplitude is |a| and period is 2π/|b|.",
+            "Here a=2 and b=1, so amplitude=2 and period=2π.",
+            "The sine graph is zero at x=0,π,2π in the stated closed interval."
+          ],
+          "final_answer": "Amplitude 2; period 2π; range [-2,2]; zeros 0, π and 2π."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Connecting the tangent branches.",
+          "correction": "When drawing a tangent graph, never connect the top of one curve to the bottom of the next. The vertical asymptotes act as impenetrable walls; the function is completely undefined at those points."
+        }
+      ],
+      "quick_summary": [
+        "Sine starts at $0$ and waves up. Cosine starts at $1$ and waves down.",
+        "Both Sine and Cosine have a maximum height of $1$ and a minimum of $-1$.",
+        "Tangent is a repeating curve that rockets to infinity, broken apart by vertical asymptotes where Cosine equals zero."
+      ],
+      "registry_scope": "Approved lesson-level scope: Analyse detailed graphs of sine, cosine and tangent, including domains, ranges, intercepts, periods and asymptotes where applicable, and interpret their key features. Approved HSS T07 sequence: basic graph analysis precedes parameter-based graph transformations."
+    },
+    "hss_math_t07_st11": {
+      "id": "hss_math_t07_st11",
+      "title": "Periodicity and transformations",
+      "overview": "A standard sine wave is useful, but real-world signals (like heartbeats or radio frequencies) are stretched, squished, and shifted. By modifying the equation $y = A\\sin(B(x-C)) + D$, we can transform the basic wave to match any physical reality.",
+      "key_concepts": [
+        {
+          "concept": "Amplitude ($A$)",
+          "definition": "Vertical stretch.",
+          "details": [
+            "Amplitude dictates how 'tall' the wave is. It is exactly half the distance between the maximum and minimum peak.",
+            "In $y = 3\\sin(x)$, the amplitude is $3$. The wave goes up to $3$ and down to $-3$."
+          ]
+        },
+        {
+          "concept": "Period ($B$)",
+          "definition": "Horizontal compression.",
+          "details": [
+            "The period is how long it takes for the wave to complete one full repeating cycle.",
+            "The standard period for Sine/Cosine is $2\\pi$. If you multiply $x$ by $B$ ($y = \\sin(Bx)$), the new period is squished to $\\frac{2\\pi}{B}$."
+          ]
+        },
+        {
+          "concept": "Phase Shift and Vertical Shift ($C$ & $D$)",
+          "definition": "Moving the graph.",
+          "details": [
+            "**Phase Shift ($C$):** Moves the entire wave left or right along the x-axis. In $y = \\sin(x - \\frac{\\pi}{2})$, the wave is shifted to the right by $\\frac{\\pi}{2}$.",
+            "**Vertical Shift ($D$):** Moves the entire 'midline' of the wave up or down. In $y = \\sin(x) + 4$, the wave now oscillates around the line $y=4$."
+          ]
+        },
+        {
+          "concept": "General transformed form",
+          "definition": "For y=A sin(B(x-C))+D or y=A cos(B(x-C))+D, |A| is the amplitude, 2π/|B| is the period, C is the horizontal shift and D is the midline.",
+          "details": [
+            "A negative A reflects the graph in its midline. These parameters describe separate transformations."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Transformed Wave",
+          "equation": "$$ y = A\\sin(B(x-C)) + D $$",
+          "variables": {
+            "A": "Amplitude",
+            "2\\pi/B": "Period",
+            "C": "Phase Shift (Horizontal)",
+            "D": "Vertical Shift (Midline)"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st11",
+          "title": "Periodicity and Transformations — concept diagram",
+          "type": "svg",
+          "caption": "Schematic visual aid supporting the key relationships in this lesson.",
+          "alt_text": "A labelled unit-circle diagram showing axes, a radius and the terminal point for angle theta.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 270\"><rect x=\"1\" y=\"1\" width=\"518\" height=\"268\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Periodicity and Transformations</text><line x1=\"65\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"238\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"260\" y1=\"145\" x2=\"318\" y2=\"87\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"318\" cy=\"87\" r=\"5\" fill=\"#dc2626\"/><text x=\"330\" y=\"82\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#991b1b\">(cos θ, sin θ)</text><text x=\"465\" y=\"238\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">x</text><text x=\"270\" y=\"52\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Determine the amplitude and period of the function $y = 5\\cos(4x)$.",
+          "solution_steps": [
+            "Step 1: Match the function to the standard form $y = A\\cos(Bx)$.",
+            "Step 2: Identify the amplitude coefficient $A$. $A = 5$. The amplitude is $5$.",
+            "Step 3: Identify the frequency coefficient $B$. $B = 4$.",
+            "Step 4: Calculate the new period using the formula $\\frac{2\\pi}{B}$.",
+            "Step 5: $\\frac{2\\pi}{4} = \\frac{\\pi}{2}$."
+          ],
+          "final_answer": "Amplitude = 5, Period = π/2"
+        },
+        {
+          "problem": "Describe the transformations from y=sin x to y=-3sin(2x-π)+1.",
+          "solution_steps": [
+            "Factor the argument: 2x-π=2(x-π/2).",
+            "The factor 3 gives vertical stretch by 3; the negative sign reflects across the x-axis.",
+            "The factor 2 halves the period to π; x-π/2 shifts right by π/2; +1 shifts up one unit."
+          ],
+          "final_answer": "Amplitude 3; period π; phase shift right π/2; vertical shift up 1; reflection in the x-axis."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Thinking a larger $B$ value means a larger period.",
+          "correction": "It is the exact opposite. A larger $B$ means the wave is moving faster, so it completes its cycle in a much *shorter* amount of time. The period shrinks."
+        }
+      ],
+      "quick_summary": [
+        "Amplitude ($A$) changes the height of the wave peaks.",
+        "The Period (calculated via $\\frac{2\\pi}{B}$) changes how quickly the wave repeats.",
+        "Phase Shift ($C$) moves the wave horizontally, and Vertical Shift ($D$) moves the center of the wave up or down."
+      ],
+      "registry_scope": "Approved lesson-level scope: Study transformations of trigonometric graphs: amplitude, period, phase shift and vertical shift. Explain how parameter changes affect graph shape, position and periodic behaviour. Keep distinct from basic graph analysis in subtopic 10. Approved HSS T07 sequence: equation solving and applications conclude the topic after function, identity, graph and inverse-function foundations."
+    },
+    "hss_math_t07_st12": {
+      "id": "hss_math_t07_st12",
+      "title": "Inverse trigonometric functions",
+      "overview": "If standard trig functions take an angle and output a coordinate, inverse trig functions reverse the process: they take a coordinate and output the original angle. This is essential for solving triangles when only the side lengths are known.",
+      "key_concepts": [
+        {
+          "concept": "The Inverse Operation",
+          "definition": "Going backwards.",
+          "details": [
+            "If $\\sin(\\theta) = x$, then the inverse function returns the angle: $\\sin^{-1}(x) = \\theta$.",
+            "This is read as 'the angle whose sine is x'."
+          ]
+        },
+        {
+          "concept": "Notation Warning",
+          "definition": "Not an exponent.",
+          "details": [
+            "The $-1$ superscript in $\\sin^{-1}(x)$ strictly means 'inverse function'. It does NOT mean the reciprocal $\\frac{1}{\\sin x}$.",
+            "The reciprocal of sine is Cosecant ($\\csc x$). To avoid confusion, inverse sine is also commonly written as $\\arcsin(x)$."
+          ]
+        },
+        {
+          "concept": "The Domain Constraint",
+          "definition": "Valid inputs.",
+          "details": [
+            "Because standard Sine and Cosine only output numbers between $-1$ and $1$, their inverse functions can only *accept* inputs between $-1$ and $1$.",
+            "$\\sin^{-1}(2)$ is mathematically impossible because no angle produces a sine of $2$."
+          ]
+        },
+        {
+          "concept": "Inverse-function meaning",
+          "definition": "An inverse trigonometric function returns an angle from a trigonometric ratio, subject to a chosen restricted branch.",
+          "details": [
+            "The notation sin⁻¹x means inverse sine, not 1/sin x; the reciprocal is cosec x."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Inverse Notation",
+          "equation": "$$ \\theta = \\sin^{-1}(x) \\quad \\text{or} \\quad \\theta = \\arcsin(x) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st12",
+          "title": "Inverse Trigonometric Functions — concept diagram",
+          "type": "svg",
+          "caption": "Schematic visual aid supporting the key relationships in this lesson.",
+          "alt_text": "A labelled unit-circle diagram showing axes, a radius and the terminal point for angle theta.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 270\"><rect x=\"1\" y=\"1\" width=\"518\" height=\"268\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Inverse Trigonometric Functions</text><line x1=\"65\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"238\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"260\" y1=\"145\" x2=\"318\" y2=\"87\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"318\" cy=\"87\" r=\"5\" fill=\"#dc2626\"/><text x=\"330\" y=\"82\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#991b1b\">(cos θ, sin θ)</text><text x=\"465\" y=\"238\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">x</text><text x=\"270\" y=\"52\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\sin^{-1}\\left(\\frac{1}{2}\\right)$.",
+          "solution_steps": [
+            "Step 1: Translate the expression into a question: 'What angle produces a sine value of $\\frac{1}{2}$?'",
+            "Step 2: Recall the standard trigonometric angles.",
+            "Step 3: The sine (y-coordinate) is $\\frac{1}{2}$ at $30^\\circ$.",
+            "Step 4: Convert to radians."
+          ],
+          "final_answer": "π/6"
+        },
+        {
+          "problem": "Evaluate tan⁻¹(1)+sin⁻¹(0) using principal values.",
+          "solution_steps": [
+            "tan⁻¹(1)=π/4 in the principal range (-π/2,π/2).",
+            "sin⁻¹(0)=0 in the principal range [-π/2,π/2].",
+            "Add the principal values."
+          ],
+          "final_answer": "π/4."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Evaluating $\\sin^{-1}(x)$ on a calculator set to degrees when the problem requires radians.",
+          "correction": "Calculators output the exact unit they are set to. Inverse functions output angles, so if you need $\\frac{\\pi}{6}$, make sure you are in Radian mode, or manually convert the degree output."
+        }
+      ],
+      "quick_summary": [
+        "Inverse trig functions take a numerical ratio and return the angle that created it.",
+        "$\\sin^{-1}$ and $\\arcsin$ mean the exact same thing.",
+        "Inverse Sine and Cosine can only accept inputs between $-1$ and $1$."
+      ],
+      "registry_scope": "Approved lesson-level scope: Develop inverse trigonometric functions, their definitions and relationships to trigonometric functions, including inverse-function properties and compositions. Distinguish the inverse-function concept from principal-value restrictions. Approved HSS T07 sequence: inverse trigonometric functions are introduced before restricted branches and principal-value domains/ranges."
+    },
+    "hss_math_t07_st13": {
+      "id": "hss_math_t07_st13",
+      "title": "Principal values and domains",
+      "overview": "Because trig functions are repeating waves, infinitely many angles share the exact same sine value. For an inverse function to work properly, it must give exactly *one* answer. We achieve this by restricting the function to a 'Principal Value' range.",
+      "key_concepts": [
+        {
+          "concept": "The Principal Value Requirement",
+          "definition": "Choosing one answer.",
+          "details": [
+            "Both $30^\\circ$ and $150^\\circ$ have a sine of $0.5$. If you ask a calculator for $\\arcsin(0.5)$, it must be programmed to only return one specific angle.",
+            "We restrict the inverse functions to specific halves of the unit circle to guarantee exactly one positive and one negative output for every valid input."
+          ]
+        },
+        {
+          "concept": "Principal Range of $\\sin^{-1}$ and $\\tan^{-1}$",
+          "definition": "The right half.",
+          "details": [
+            "Restricted to Quadrants 1 and 4. The range is $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$.",
+            "Positive inputs return Q1 angles ($0$ to $90^\\circ$). Negative inputs return Q4 angles ($0$ to $-90^\\circ$)."
+          ]
+        },
+        {
+          "concept": "Principal Range of $\\cos^{-1}$",
+          "definition": "The top half.",
+          "details": [
+            "Restricted to Quadrants 1 and 2. The range is $[0, \\pi]$.",
+            "Positive inputs return Q1 angles. Negative inputs return Q2 angles ($90^\\circ$ to $180^\\circ$)."
+          ]
+        },
+        {
+          "concept": "Principal-value ranges",
+          "definition": "A trigonometric function must be restricted to a one-to-one interval before it has an inverse function.",
+          "details": [
+            "Standard ranges are sin⁻¹: [-π/2,π/2], cos⁻¹: [0,π], and tan⁻¹: (-π/2,π/2)."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st13",
+          "title": "Principal Values and Domains — concept diagram",
+          "type": "svg",
+          "caption": "Schematic visual aid supporting the key relationships in this lesson.",
+          "alt_text": "A labelled unit-circle diagram showing axes, a radius and the terminal point for angle theta.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 270\"><rect x=\"1\" y=\"1\" width=\"518\" height=\"268\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Principal Values and Domains</text><line x1=\"65\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"238\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"260\" y1=\"145\" x2=\"318\" y2=\"87\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"318\" cy=\"87\" r=\"5\" fill=\"#dc2626\"/><text x=\"330\" y=\"82\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#991b1b\">(cos θ, sin θ)</text><text x=\"465\" y=\"238\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">x</text><text x=\"270\" y=\"52\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate $\\sin^{-1}\\left(-\\frac{1}{2}\\right)$ giving the principal value in radians.",
+          "solution_steps": [
+            "Step 1: Identify the reference angle where $\\sin\\theta = \\frac{1}{2}$. That is $\\frac{\\pi}{6}$.",
+            "Step 2: Since the input is negative, Inverse Sine must return an angle in Quadrant 4 (the principal negative range).",
+            "Step 3: In Q4, the angle is just the negative reference angle."
+          ],
+          "final_answer": "-π/6"
+        },
+        {
+          "problem": "Evaluate $\\cos^{-1}\\left(-\\frac{1}{2}\\right)$ giving the principal value in radians.",
+          "solution_steps": [
+            "Step 1: Identify the reference angle where $\\cos\\theta = \\frac{1}{2}$. That is $\\frac{\\pi}{3}$.",
+            "Step 2: Since the input is negative, Inverse Cosine must return an angle in Quadrant 2.",
+            "Step 3: To find the Q2 angle, subtract the reference angle from $\\pi$.",
+            "Step 4: $\\pi - \\frac{\\pi}{3} = \\frac{2\\pi}{3}$."
+          ],
+          "final_answer": "2π/3"
+        },
+        {
+          "problem": "Evaluate cos⁻¹(cos(5π/3)) and explain why the result is not 5π/3.",
+          "solution_steps": [
+            "cos(5π/3)=1/2.",
+            "The principal range of cos⁻¹ is [0,π], so cos⁻¹(1/2)=π/3.",
+            "Inverse cosine returns the principal angle in its restricted range, not an arbitrary coterminal input."
+          ],
+          "final_answer": "π/3."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Evaluating $\\cos^{-1}(-x)$ as $-\\cos^{-1}(x)$.",
+          "correction": "Inverse Cosine operates in the top half of the circle ($0$ to $\\pi$). A negative input pushes it into Quadrant 2, not into negative angles. The correct property is $\\cos^{-1}(-x) = \\pi - \\cos^{-1}(x)$."
+        }
+      ],
+      "quick_summary": [
+        "To guarantee a single answer, inverse trig functions are restricted to a 'Principal Value' range.",
+        "Inverse Sine and Tangent operate on the right half of the circle (returning negative angles for negative inputs).",
+        "Inverse Cosine operates on the top half of the circle (returning obtuse Q2 angles for negative inputs)."
+      ],
+      "registry_scope": "Approved lesson-level scope: Establish domains and principal-value ranges for inverse trigonometric functions and use restricted branches correctly. Emphasise why restrictions are necessary for inverse functions to be well-defined. Approved HSS T07 sequence: principal-value restrictions follow the inverse-function concept."
+    },
+    "hss_math_t07_st14": {
+      "id": "hss_math_t07_st14",
+      "title": "Trigonometric equations",
+      "overview": "Unlike an inverse function calculation that strictly demands a single principal value, solving a trigonometric equation requires finding *every possible angle* that makes the equation true, stretching out to infinity.",
+      "key_concepts": [
+        {
+          "concept": "Equations vs Identities",
+          "definition": "Specific vs Universal.",
+          "details": [
+            "An identity (like $\\sin^2x + \\cos^2x = 1$) is true for absolutely every angle.",
+            "An equation (like $\\sin x = 0.5$) is only true for specific angles. Our job is to find them."
+          ]
+        },
+        {
+          "concept": "General Solutions",
+          "definition": "Capturing infinity.",
+          "details": [
+            "Because waves repeat, if $x$ is a solution, then $x + 2\\pi$, $x + 4\\pi$, etc., are also solutions.",
+            "We use an integer parameter $n$ (where $n \\in \\mathbb{Z}$) to instantly represent all infinite solutions."
+          ]
+        },
+        {
+          "concept": "General Solution Formulas",
+          "definition": "The repeating rules.",
+          "details": [
+            "For $\\sin x = \\sin \\alpha$, the general solution is $x = n\\pi + (-1)^n \\alpha$.",
+            "For $\\cos x = \\cos \\alpha$, the general solution is $x = 2n\\pi \\pm \\alpha$.",
+            "For $\\tan x = \\tan \\alpha$, the general solution is $x = n\\pi + \\alpha$."
+          ]
+        },
+        {
+          "concept": "General solution and interval solution",
+          "definition": "A general solution represents every angle satisfying an equation, usually through periodic families.",
+          "details": [
+            "An interval solution lists only those members of the families inside the specified interval. Check endpoints and avoid duplicate representations."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "General Solution (Cosine)",
+          "equation": "$$ x = 2n\\pi \\pm \\alpha $$",
+          "variables": {
+            "\\alpha": "Principal angle",
+            "n": "Any integer"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st14",
+          "title": "Trigonometric Equations — concept diagram",
+          "type": "svg",
+          "caption": "Schematic visual aid supporting the key relationships in this lesson.",
+          "alt_text": "A labelled unit-circle diagram showing axes, a radius and the terminal point for angle theta.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 270\"><rect x=\"1\" y=\"1\" width=\"518\" height=\"268\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Trigonometric Equations</text><line x1=\"65\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"238\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"260\" y1=\"145\" x2=\"318\" y2=\"87\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"318\" cy=\"87\" r=\"5\" fill=\"#dc2626\"/><text x=\"330\" y=\"82\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#991b1b\">(cos θ, sin θ)</text><text x=\"465\" y=\"238\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">x</text><text x=\"270\" y=\"52\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Find the general solution for $\\cos x = \\frac{1}{2}$.",
+          "solution_steps": [
+            "Step 1: Find the principal angle $\\alpha$ where $\\cos\\alpha = \\frac{1}{2}$. $\\alpha = \\frac{\\pi}{3}$.",
+            "Step 2: Apply the Cosine general solution formula: $x = 2n\\pi \\pm \\alpha$.",
+            "Step 3: Substitute $\\alpha = \\frac{\\pi}{3}$ into the formula."
+          ],
+          "final_answer": "x = 2nπ ± π/3, where n ∈ ℤ"
+        },
+        {
+          "problem": "Solve 2sin²x-3sin x+1=0 for 0≤x<2π.",
+          "solution_steps": [
+            "Factor: (2sin x-1)(sin x-1)=0.",
+            "So sin x=1/2 or sin x=1.",
+            "In [0,2π), sin x=1/2 at π/6 and 5π/6; sin x=1 at π/2."
+          ],
+          "final_answer": "x=π/6, π/2, 5π/6."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Only giving the principal value when asked for a solution.",
+          "correction": "If a question asks to 'Solve $\\sin x = 1$', writing just $\\frac{\\pi}{2}$ is incomplete, because it ignores the infinite other times the wave hits the peak. You must provide the general solution (e.g., $x = \\frac{\\pi}{2} + 2n\\pi$) unless the problem specifies a strict interval."
+        }
+      ],
+      "quick_summary": [
+        "Solving a trig equation means finding all angles that satisfy the condition.",
+        "Because the functions are periodic, there are usually infinitely many solutions.",
+        "We capture all of them simultaneously by adding integer multiples of the period (using the variable $n$) to the principal angle."
+      ],
+      "registry_scope": "Approved lesson-level scope: Solve trigonometric equations using identities, multiple-angle relationships and periodicity. Include general solutions and solutions restricted to specified intervals; check for completeness and avoid duplicate angle families. Approved HSS T07 sequence: equation solving and applications conclude the topic after function, identity, graph and inverse-function foundations."
+    },
+    "hss_math_t07_st15": {
+      "id": "hss_math_t07_st15",
+      "title": "Applications of trigonometry",
+      "overview": "Trigonometry escapes the coordinate grid to solve real-world physical problems. By combining basic ratios with the advanced Sine and Cosine rules, we can calculate distances, heights, and navigation bearings without ever needing a tape measure.",
+      "key_concepts": [
+        {
+          "concept": "Angles of Elevation and Depression",
+          "definition": "Looking up and down.",
+          "details": [
+            "**Elevation:** The angle measured upwards from a flat horizontal sightline (e.g., looking up at a bird).",
+            "**Depression:** The angle measured downwards from a flat horizontal sightline (e.g., looking down from a cliff). Due to parallel line geometry, the angle of depression exactly equals the angle of elevation from the target below."
+          ]
+        },
+        {
+          "concept": "The Sine Rule",
+          "definition": "Solving any triangle.",
+          "details": [
+            "Works for ANY triangle, not just right-angled ones.",
+            "$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}$.",
+            "Use this when you know a 'matching pair' (a side and its exact opposite angle)."
+          ]
+        },
+        {
+          "concept": "The Cosine Rule",
+          "definition": "The extended Pythagorean theorem.",
+          "details": [
+            "Works for ANY triangle.",
+            "$c^2 = a^2 + b^2 - 2ab\\cos C$.",
+            "Use this when you know all three sides (SSS) or two sides and the included angle between them (SAS)."
+          ]
+        },
+        {
+          "concept": "Periodic modelling",
+          "definition": "A sinusoidal model can represent quantities that repeat regularly, such as rotating motion, oscillations and idealised waves.",
+          "details": [
+            "Identify the midline, amplitude, period and phase from the context; state units and interpret the model only over a meaningful time interval."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "The Sine Rule",
+          "equation": "$$ \\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} $$",
+          "variables": {}
+        },
+        {
+          "name": "The Cosine Rule",
+          "equation": "$$ c^2 = a^2 + b^2 - 2ab\\cos C $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "v07_st15",
+          "title": "Applications of Trigonometry — concept diagram",
+          "type": "svg",
+          "caption": "Schematic visual aid supporting the key relationships in this lesson.",
+          "alt_text": "A labelled unit-circle diagram showing axes, a radius and the terminal point for angle theta.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 270\"><rect x=\"1\" y=\"1\" width=\"518\" height=\"268\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\">Applications of Trigonometry</text><line x1=\"65\" y1=\"220\" x2=\"455\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"238\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"145\" r=\"82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"260\" y1=\"145\" x2=\"318\" y2=\"87\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"318\" cy=\"87\" r=\"5\" fill=\"#dc2626\"/><text x=\"330\" y=\"82\" font-family=\"Arial,sans-serif\" font-size=\"13\" fill=\"#991b1b\">(cos θ, sin θ)</text><text x=\"465\" y=\"238\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">x</text><text x=\"270\" y=\"52\" font-family=\"Arial,sans-serif\" font-size=\"12\" fill=\"#334155\">y</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A surveyor measures the distance to two trees as $50$m and $70$m. The angle between his sightlines to the two trees is $60^\\circ$. How far apart are the two trees?",
+          "solution_steps": [
+            "Step 1: Identify the knowns. We have two sides ($a=50, b=70$) and the included angle between them ($C=60^\\circ$). SAS condition.",
+            "Step 2: Choose the Cosine Rule: $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+            "Step 3: Substitute values: $c^2 = 50^2 + 70^2 - 2(50)(70)\\cos(60^\\circ)$.",
+            "Step 4: Recall $\\cos(60^\\circ) = 0.5$. Evaluate: $c^2 = 2500 + 4900 - 7000(0.5)$.",
+            "Step 5: $c^2 = 7400 - 3500 = 3900$.",
+            "Step 6: Take the square root: $c = \\sqrt{3900} \\approx 62.45$."
+          ],
+          "final_answer": "Approximately 62.45m"
+        },
+        {
+          "problem": "A point on a rotating wheel has vertical displacement y=0.8sin(πt/4) metres from its centre. Find the amplitude and period, and its displacement at t=2 seconds.",
+          "solution_steps": [
+            "The amplitude is 0.8 m.",
+            "Angular frequency is π/4 rad/s, so period T=2π/(π/4)=8 s.",
+            "At t=2, y=0.8sin(π/2)=0.8 m."
+          ],
+          "final_answer": "Amplitude 0.8 m; period 8 s; displacement at 2 s is 0.8 m."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Measuring the angle of depression from the vertical.",
+          "correction": "Angles of depression are ALWAYS measured strictly from the flat horizontal eye-line pointing straight ahead. Never measure from the vertical wall or cliff face."
+        }
+      ],
+      "quick_summary": [
+        "Right-angled trigonometry uses Sine, Cosine, and Tangent to find inaccessible heights and distances via angles of elevation/depression.",
+        "The Sine Rule solves non-right triangles when you have an opposite Side-Angle pair.",
+        "The Cosine Rule solves non-right triangles when you have SSS or SAS."
+      ],
+      "registry_scope": "Approved lesson-level scope: Apply trigonometric functions and equations to periodic phenomena, oscillations, wave models and suitable real-world situations. Avoid repeating elementary heights-and-distances or triangle-solving applications from High School. Approved HSS T07 sequence: equation solving and applications conclude the topic after function, identity, graph and inverse-function foundations."
+    }
+  }
+}

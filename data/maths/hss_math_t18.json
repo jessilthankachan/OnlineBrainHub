@@ -1,0 +1,1112 @@
+{
+  "subject": "math",
+  "topicId": "hss_math_t18",
+  "topicTitle": "Statistics and Mathematical Modelling",
+  "grade": "Higher Secondary",
+  "subtopics": {
+    "hss_math_t18_st01": {
+      "id": "hss_math_t18_st01",
+      "title": "Data collection and sampling",
+      "overview": "Statistics involves collecting, organising, analysing, and interpreting data. Because studying an entire population is often impossible, we use sampling techniques to select a representative subset to study.",
+      "key_concepts": [
+        {
+          "concept": "Types of Data",
+          "definition": "Primary vs Secondary, Qualitative vs Quantitative.",
+          "details": [
+            "**Primary Data:** Collected directly by the researcher for a specific purpose.",
+            "**Secondary Data:** Already collected by someone else (e.g., government reports).",
+            "**Qualitative:** Categorical or descriptive (e.g., eye colour).",
+            "**Quantitative:** Numerical. Can be Discrete (countable, e.g., number of cars) or Continuous (measurable, e.g., height)."
+          ]
+        },
+        {
+          "concept": "Population vs Sample",
+          "definition": "The whole vs the part.",
+          "details": [
+            "**Population:** The entire group being studied. A survey of the whole population is a Census.",
+            "**Sample:** A subset of the population. Used to make inferences about the whole without testing everyone."
+          ]
+        },
+        {
+          "concept": "Sampling Techniques",
+          "definition": "How to select a sample.",
+          "details": [
+            "**Probability Sampling:** Random selection (Simple Random, Systematic (every $k$th item), Stratified (random within subgroups), Cluster).",
+            "**Non-Probability Sampling:** Non-random (Convenience, Purposive, Quota, Snowball). Prone to selection bias."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Systematic Sampling Interval",
+          "equation": "$$ k = \\frac{N}{n} $$",
+          "variables": {
+            "N": "Population size",
+            "n": "Required sample size"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st01_visual_added01",
+          "title": "Data collection and sampling — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Data collection and sampling.",
+          "alt_text": "Original schematic teaching aid for Data collection and sampling.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Data collection and sampling</title><desc>Original schematic illustration for Data collection and sampling.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"45\" y=\"55\" width=\"230\" height=\"115\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"160\" y=\"92\" text-anchor=\"middle\" font-size=\"15\">Population</text><path d=\"M160 102 V125 M160 125 L100 150 M160 125 L220 150\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"100\" y=\"165\" text-anchor=\"middle\" font-size=\"12\">Sample A</text><text x=\"220\" y=\"165\" text-anchor=\"middle\" font-size=\"12\">Sample B</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Data collection and sampling</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A population contains 1,000 households and a researcher wants a sample size of 100 using systematic sampling. What is the sampling interval?",
+          "solution_steps": [
+            "Step 1: Identify $N = 1000$ and $n = 100$.",
+            "Step 2: Use the interval formula $k = N / n$.",
+            "Step 3: $k = 1000 / 100 = 10$.",
+            "Step 4: The researcher selects a random starting point between 1 and 10, then selects every 10th household."
+          ],
+          "final_answer": "k = 10"
+        },
+        {
+          "problem": "A school has 600 students in three grade groups. A researcher samples 20 students from each grade group. Identify the sampling method and explain why it may be useful.",
+          "solution_steps": [
+            "The population is divided into groups (strata) according to grade.",
+            "A sample is selected from each stratum.",
+            "This is stratified sampling and ensures each grade group is represented."
+          ],
+          "final_answer": "Stratified sampling; each grade group is represented in the sample."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing Stratified and Cluster sampling.",
+          "correction": "Stratified sampling randomly selects individuals *from within every group*. Cluster sampling randomly selects *entire groups* and tests everyone in them."
+        }
+      ],
+      "quick_summary": [
+        "Data can be Primary (new) or Secondary (existing), Qualitative (categories) or Quantitative (numbers).",
+        "A sample is a subset of a population. Probability sampling reduces bias.",
+        "Sampling error is natural variation; sampling bias is a systematic flaw in how the sample was chosen."
+      ],
+      "registry_scope": "Draft 82 approved audit: Cover population, sample, sampling frame and data sources; compare random, stratified, systematic and convenience sampling; identify sampling bias, representativeness and data-reliability limitations."
+    },
+    "hss_math_t18_st02": {
+      "id": "hss_math_t18_st02",
+      "title": "Frequency distributions",
+      "overview": "Raw data is often disorganised and hard to read. Frequency distributions organize data into tables and intervals (classes) to reveal patterns, concentrations, and outliers.",
+      "key_concepts": [
+        {
+          "concept": "Class Limits, Boundaries, and Marks",
+          "definition": "Defining grouped intervals.",
+          "details": [
+            "**Limits:** The stated minimum and maximum of an interval (e.g., 20–29).",
+            "**Boundaries:** Continuous limits that close gaps between intervals (e.g., 19.5–29.5).",
+            "**Class Mark ($x_i$):** The midpoint of the class, used to represent all values in it. Calculated as (Lower Limit + Upper Limit) / 2."
+          ]
+        },
+        {
+          "concept": "Types of Frequencies",
+          "definition": "Relative, Percentage, and Cumulative.",
+          "details": [
+            "**Relative Frequency:** The fraction of the total ($f/n$).",
+            "**Cumulative Frequency:** The running total of frequencies up to that point. Used to create Ogive curves to find medians."
+          ]
+        },
+        {
+          "concept": "Frequency Density",
+          "definition": "Adjusting for unequal widths.",
+          "details": [
+            "If class intervals have different widths in a histogram, the height of the bar must be the Frequency Density, not the raw frequency, so the *area* of the bar represents frequency."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Class Mark (Midpoint)",
+          "equation": "$$ x_i = \\frac{\\text{Lower limit} + \\text{Upper limit}}{2} $$",
+          "variables": {}
+        },
+        {
+          "name": "Frequency Density",
+          "equation": "$$ \\text{Frequency Density} = \\frac{\\text{Frequency}}{\\text{Class width}} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st02_visual_added01",
+          "title": "Frequency distributions — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Frequency distributions.",
+          "alt_text": "Original schematic teaching aid for Frequency distributions.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Frequency distributions</title><desc>Original schematic illustration for Frequency distributions.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 H280 M50 180 V40\" stroke=\"#64748b\"/><rect x=\"75\" y=\"120\" width=\"38\" height=\"55\" fill=\"#bfdbfe\" stroke=\"#2563eb\"/><rect x=\"113\" y=\"85\" width=\"38\" height=\"90\" fill=\"#bfdbfe\" stroke=\"#2563eb\"/><rect x=\"151\" y=\"55\" width=\"38\" height=\"120\" fill=\"#bfdbfe\" stroke=\"#2563eb\"/><rect x=\"189\" y=\"100\" width=\"38\" height=\"75\" fill=\"#bfdbfe\" stroke=\"#2563eb\"/><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Frequency distributions</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A class interval is given as 10–20 with a frequency of 30. Calculate the class mark and frequency density.",
+          "solution_steps": [
+            "Step 1: Calculate the Class Mark (midpoint): $(10 + 20) / 2 = 15$.",
+            "Step 2: Calculate the Class Width: $20 - 10 = 10$.",
+            "Step 3: Calculate Frequency Density: $Frequency / Width = 30 / 10 = 3$."
+          ],
+          "final_answer": "Class mark = 15, Frequency density = 3"
+        },
+        {
+          "problem": "The grouped data below has frequencies 4, 7 and 5 for class intervals 0–10, 10–20 and 20–30. Find the total frequency and cumulative frequencies.",
+          "solution_steps": [
+            "Add the frequencies: $4+7+5=16$.",
+            "Cumulative frequency is the running total from the first class.",
+            "The running totals are 4, 4+7=11 and 11+5=16."
+          ],
+          "final_answer": "Total frequency = 16; cumulative frequencies = 4, 11, 16."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using raw frequencies for histogram heights when class widths are unequal.",
+          "correction": "Histograms use area to represent frequency. If widths vary, you must plot Frequency Density on the y-axis, otherwise wider classes will look deceptively massive."
+        }
+      ],
+      "quick_summary": [
+        "Grouped frequency distributions organize continuous data into classes.",
+        "Class marks are the midpoints of intervals, used for estimating means.",
+        "Frequency density must be used for histograms with unequal class widths."
+      ],
+      "registry_scope": "Draft 82 approved audit: Organise discrete and continuous data using frequency tables and grouped distributions; interpret class intervals, cumulative frequencies and suitable graphical representations."
+    },
+    "hss_math_t18_st03": {
+      "id": "hss_math_t18_st03",
+      "title": "Measures of central tendency",
+      "overview": "Measures of central tendency (Mean, Median, Mode) provide a single summary value that represents the 'center' or typical value of a dataset.",
+      "key_concepts": [
+        {
+          "concept": "Mean, Median, and Mode",
+          "definition": "The three centers.",
+          "details": [
+            "**Mean ($\\bar{x}$):** The arithmetic average. Highly sensitive to extreme outliers.",
+            "**Median:** The exact middle value when data is sorted. Resists outliers.",
+            "**Mode:** The most frequent value. Best for categorical data."
+          ]
+        },
+        {
+          "concept": "Grouped Mean Methods",
+          "definition": "Estimating from intervals.",
+          "details": [
+            "To find the mean of grouped data, multiply each class mark ($m$) by its frequency ($f$), sum them up, and divide by the total frequency: $\\bar{x} = \\frac{\\sum fm}{\\sum f}$."
+          ]
+        },
+        {
+          "concept": "Skewness and the Empirical Relationship",
+          "definition": "How the centers align.",
+          "details": [
+            "Symmetrical: Mean = Median = Mode.",
+            "Positively Skewed (long right tail): Mode < Median < Mean.",
+            "Empirical Approximation: Mode $\\approx 3(\\text{Median}) - 2(\\text{Mean})$."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Mean of Grouped Data",
+          "equation": "$$ \\bar{x} = \\frac{\\sum fm}{\\sum f} $$",
+          "variables": {
+            "f": "Frequency",
+            "m": "Class mark (midpoint)"
+          }
+        },
+        {
+          "name": "Empirical Relationship",
+          "equation": "$$ \\text{Mode} \\approx 3(\\text{Median}) - 2(\\text{Mean}) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st03_visual_added01",
+          "title": "Measures of central tendency — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Measures of central tendency.",
+          "alt_text": "Original schematic teaching aid for Measures of central tendency.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Measures of central tendency</title><desc>Original schematic illustration for Measures of central tendency.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 H280 M50 180 V35\" stroke=\"#64748b\"/><rect x=\"85\" y=\"90\" width=\"38\" height=\"85\" fill=\"#bfdbfe\"/><rect x=\"145\" y=\"55\" width=\"38\" height=\"120\" fill=\"#bfdbfe\"/><rect x=\"205\" y=\"110\" width=\"38\" height=\"65\" fill=\"#bfdbfe\"/><path d=\"M55 115 H270\" stroke=\"#ea580c\" stroke-dasharray=\"5 4\"/><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Measures of central tendency</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "For a moderately skewed distribution, the Median is 14 and the Mean is 15. Estimate the Mode.",
+          "solution_steps": [
+            "Step 1: Use the empirical formula: Mode $\\approx 3(\\text{Median}) - 2(\\text{Mean})$.",
+            "Step 2: Substitute the values: Mode $\\approx 3(14) - 2(15)$.",
+            "Step 3: Calculate: $42 - 30 = 12$."
+          ],
+          "final_answer": "12"
+        },
+        {
+          "problem": "The values 2, 4, 4, 6 and 9 are observed. Find the mean, median and mode.",
+          "solution_steps": [
+            "Mean: $(2+4+4+6+9)/5=25/5$.",
+            "The ordered middle value is the third value, 4.",
+            "The most frequent value is 4."
+          ],
+          "final_answer": "Mean = 5; median = 4; mode = 4."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the Mean for highly skewed data.",
+          "correction": "If a dataset has massive outliers (like income levels), the Mean gets dragged toward the outlier. The Median provides a much better 'typical' value in these cases."
+        }
+      ],
+      "quick_summary": [
+        "The Mean is the arithmetic average, the Median is the sorted middle, and the Mode is the most frequent value.",
+        "Grouped means use the class marks to estimate the total sum.",
+        "The Median is the most robust measure when extreme outliers are present."
+      ],
+      "registry_scope": "Draft 82 approved audit: Develop mean, median, mode and weighted mean; compare their suitability for different data shapes and explain sensitivity to extreme values."
+    },
+    "hss_math_t18_st04": {
+      "id": "hss_math_t18_st04",
+      "title": "Variance and standard deviation",
+      "overview": "While central tendency tells us where the middle of the data is, dispersion tells us how spread out the data is. Variance and Standard Deviation measure the average distance of data points from the mean.",
+      "key_concepts": [
+        {
+          "concept": "Variance ($\\sigma^2$ or $s^2$)",
+          "definition": "The squared spread.",
+          "details": [
+            "Variance is the average of the *squared* deviations from the mean.",
+            "Population Variance divides by $N$. Sample Variance divides by $n-1$ to provide an unbiased estimate of the population."
+          ]
+        },
+        {
+          "concept": "Standard Deviation ($\\sigma$ or $s$)",
+          "definition": "The practical spread.",
+          "details": [
+            "Because Variance is in 'squared units' (e.g., dollars squared), it is hard to interpret. Standard Deviation is the square root of Variance, bringing the spread back into the original units."
+          ]
+        },
+        {
+          "concept": "Coefficient of Variation (CV)",
+          "definition": "Relative spread.",
+          "details": [
+            "CV compares the standard deviation directly to the mean as a percentage: $CV = \\frac{\\sigma}{\\mu} \\times 100\\%$. It allows you to compare the variability of two entirely different datasets (e.g., weights of mice vs elephants)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Population Variance",
+          "equation": "$$ \\sigma^2 = \\frac{\\sum (x - \\mu)^2}{N} = \\frac{\\sum x^2}{N} - \\mu^2 $$",
+          "variables": {
+            "\\mu": "Population mean",
+            "N": "Population size"
+          }
+        },
+        {
+          "name": "Sample Variance",
+          "equation": "$$ s^2 = \\frac{\\sum (x - \\bar{x})^2}{n - 1} $$",
+          "variables": {}
+        },
+        {
+          "name": "Coefficient of Variation",
+          "equation": "$$ CV = \\frac{\\sigma}{\\mu} \\times 100\\% $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st04_visual_added01",
+          "title": "Variance and standard deviation — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Variance and standard deviation.",
+          "alt_text": "Original schematic teaching aid for Variance and standard deviation.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Variance and standard deviation</title><desc>Original schematic illustration for Variance and standard deviation.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 H280 M50 180 V35\" stroke=\"#64748b\"/><rect x=\"85\" y=\"90\" width=\"38\" height=\"85\" fill=\"#bfdbfe\"/><rect x=\"145\" y=\"55\" width=\"38\" height=\"120\" fill=\"#bfdbfe\"/><rect x=\"205\" y=\"110\" width=\"38\" height=\"65\" fill=\"#bfdbfe\"/><path d=\"M55 115 H270\" stroke=\"#ea580c\" stroke-dasharray=\"5 4\"/><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Variance and standard deviation</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Machine A produces parts with a mean length of 100mm and standard deviation 5mm. Machine B produces parts with a mean length of 200mm and standard deviation 8mm. Which machine has less relative variability?",
+          "solution_steps": [
+            "Step 1: Calculate CV for Machine A: $CV_A = (5 / 100) \\times 100\\% = 5\\%$.",
+            "Step 2: Calculate CV for Machine B: $CV_B = (8 / 200) \\times 100\\% = 4\\%$.",
+            "Step 3: Compare. Machine B has a lower CV, meaning it is more consistent relative to the size of the parts it makes."
+          ],
+          "final_answer": "Machine B (CV = 4%)"
+        },
+        {
+          "problem": "For the population data 2, 4 and 6, calculate the population variance and population standard deviation.",
+          "solution_steps": [
+            "The population mean is $(2+4+6)/3=4$.",
+            "Squared deviations are $(2-4)^2=4$, $(4-4)^2=0$ and $(6-4)^2=4$.",
+            "Population variance is $(4+0+4)/3=8/3$.",
+            "Standard deviation is the square root of the variance."
+          ],
+          "final_answer": "$\\sigma^2=\\frac83$ and $\\sigma=\\sqrt{\\frac83}\\approx1.633$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using $n$ instead of $n-1$ for a sample.",
+          "correction": "When you only have a sample of data, dividing by $n$ actually underestimates the true variance of the population. Dividing by $n-1$ (Bessel's correction) fixes this."
+        }
+      ],
+      "quick_summary": [
+        "Variance measures squared spread; Standard Deviation is the square root of Variance (original units).",
+        "Adding a constant to all data shifts the mean but does NOT change the variance or standard deviation.",
+        "Coefficient of Variation (CV) measures relative risk/spread as a percentage of the mean."
+      ],
+      "registry_scope": "Draft 82 approved audit: Measure spread using range, interquartile range, variance and standard deviation; compare population and sample variance conventions and interpret variability in context.",
+      "variance_note": "Population variance divides the sum of squared deviations by N. The usual unbiased sample variance divides by n−1. State which convention is being used before comparing or calculating variability."
+    },
+    "hss_math_t18_st05": {
+      "id": "hss_math_t18_st05",
+      "title": "Correlation",
+      "overview": "Correlation measures the strength and direction of the linear relationship between two variables. It tells us if and how two things change together.",
+      "key_concepts": [
+        {
+          "concept": "Direction and Strength",
+          "definition": "How variables move.",
+          "details": [
+            "**Positive Correlation:** Variables move in the same direction (e.g., study time and test scores).",
+            "**Negative Correlation:** Variables move in opposite directions (e.g., elevation and temperature).",
+            "**Strength:** Measured from -1 (perfect negative) to +1 (perfect positive). 0 means no linear correlation."
+          ]
+        },
+        {
+          "concept": "Pearson Correlation Coefficient ($r$)",
+          "definition": "The numerical measure.",
+          "details": [
+            "Calculates the exact linear correlation. $r = \\frac{\\text{Covariance}(X,Y)}{\\sigma_X \\sigma_Y}$.",
+            "Only measures *linear* relationships. A perfect U-shaped curve might have an $r$ of 0 despite a perfect mathematical relationship."
+          ]
+        },
+        {
+          "concept": "Correlation vs Causation",
+          "definition": "A critical boundary.",
+          "details": [
+            "A high correlation does NOT prove that one variable causes the other. They could both be caused by a third 'confounding' variable (e.g., ice cream sales and sunburns are correlated because of summer heat, not each other)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Pearson Correlation Coefficient",
+          "equation": "$$ r = \\frac{\\sum(x - \\bar{x})(y - \\bar{y})}{\\sqrt{\\sum(x - \\bar{x})^2 \\sum(y - \\bar{y})^2}} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st05_visual_added01",
+          "title": "Correlation — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Correlation.",
+          "alt_text": "Original schematic teaching aid for Correlation.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Correlation</title><desc>Original schematic illustration for Correlation.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 H280 M50 180 V35\" stroke=\"#64748b\"/><path d=\"M65 155 L95 130 L125 120 L155 90 L185 75 L215 55 L255 40\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"65\" cy=\"155\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"95\" cy=\"130\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"125\" cy=\"120\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"155\" cy=\"90\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"185\" cy=\"75\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"215\" cy=\"55\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"255\" cy=\"40\" r=\"4\" fill=\"#ea580c\"/><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Correlation</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the covariance for a sample if the correlation $r = 0.9$, the standard deviation of $x$ is 2, and standard deviation of $y$ is 5.",
+          "solution_steps": [
+            "Step 1: Use the relationship formula: $r = \\frac{s_{xy}}{s_x s_y}$ (where $s_{xy}$ is covariance).",
+            "Step 2: Rearrange to solve for covariance: $s_{xy} = r \\times s_x \\times s_y$.",
+            "Step 3: Substitute the values: $s_{xy} = 0.9 \\times 2 \\times 5$.",
+            "Step 4: Calculate: $0.9 \\times 10 = 9$."
+          ],
+          "final_answer": "9"
+        },
+        {
+          "problem": "A scatter plot shows that as study time increases, examination score tends to increase. Describe the correlation and state one reason it does not prove causation.",
+          "solution_steps": [
+            "The variables tend to increase together, indicating positive correlation.",
+            "Correlation describes association, not necessarily a cause-and-effect relationship.",
+            "Other variables, such as prior knowledge or support, may affect both."
+          ],
+          "final_answer": "Positive correlation; the association alone does not establish that extra study time caused the higher scores."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming $r=0$ means the variables are completely unrelated.",
+          "correction": "Pearson's $r$ only checks for a *straight line*. Variables can have a perfect nonlinear relationship (like $y=x^2$) and still have a correlation of 0."
+        }
+      ],
+      "quick_summary": [
+        "Correlation $r$ ranges from -1 to 1. The closer to the extremes, the stronger the line.",
+        "Positive means they grow together; negative means one shrinks as the other grows.",
+        "Correlation never proves causation."
+      ],
+      "registry_scope": "Draft 82 approved audit: Interpret positive, negative and near-zero correlation, strength and direction using scatter plots and numerical measures where appropriate; discuss outliers and explain why correlation does not establish causation.",
+      "interpretation_note": "Pearson's correlation coefficient measures the direction and strength of a linear association and lies between −1 and 1. A value near zero does not rule out a nonlinear relationship. Correlation alone does not establish causation."
+    },
+    "hss_math_t18_st06": {
+      "id": "hss_math_t18_st06",
+      "title": "Regression and lines of best fit",
+      "overview": "While correlation measures *if* a relationship exists, Regression creates a mathematical model of that relationship so we can use one variable to predict the other.",
+      "key_concepts": [
+        {
+          "concept": "The Line of Best Fit",
+          "definition": "The predictive model.",
+          "details": [
+            "Written as $\\hat{y} = a + bx$. The slope ($b$) is the predicted change in $y$ for every 1-unit increase in $x$. The intercept ($a$) is the baseline predicted value of $y$ when $x=0$."
+          ]
+        },
+        {
+          "concept": "The Least-Squares Method",
+          "definition": "Finding the perfect line.",
+          "details": [
+            "The distance between an actual data point and the prediction line is a 'residual' ($e = y - \\hat{y}$).",
+            "The least-squares line is the one specific line that minimizes the sum of all the squared residuals ($SSE$)."
+          ]
+        },
+        {
+          "concept": "Interpolation vs Extrapolation",
+          "definition": "Prediction safety.",
+          "details": [
+            "**Interpolation:** Predicting inside the range of your data (safe).",
+            "**Extrapolation:** Predicting far outside the range of your data (dangerous, as the trend might change)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Regression Slope",
+          "equation": "$$ b = \\frac{\\sum(x - \\bar{x})(y - \\bar{y})}{\\sum(x - \\bar{x})^2} = r\\frac{s_y}{s_x} $$",
+          "variables": {}
+        },
+        {
+          "name": "Regression Intercept",
+          "equation": "$$ a = \\bar{y} - b\\bar{x} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st06_visual_added01",
+          "title": "Regression and lines of best fit — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Regression and lines of best fit.",
+          "alt_text": "Original schematic teaching aid for Regression and lines of best fit.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Regression and lines of best fit</title><desc>Original schematic illustration for Regression and lines of best fit.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 H280 M50 180 V35\" stroke=\"#64748b\"/><path d=\"M65 155 L95 130 L125 120 L155 90 L185 75 L215 55 L255 40\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"65\" cy=\"155\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"95\" cy=\"130\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"125\" cy=\"120\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"155\" cy=\"90\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"185\" cy=\"75\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"215\" cy=\"55\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"255\" cy=\"40\" r=\"4\" fill=\"#ea580c\"/><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Regression and lines of best fit</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Given $\\bar{x} = 3$, $\\bar{y} = 4$, and the slope of the regression line $b = 0.9$. Find the equation of the least-squares regression line.",
+          "solution_steps": [
+            "Step 1: Find the intercept ($a$) using the formula $a = \\bar{y} - b\\bar{x}$.",
+            "Step 2: $a = 4 - (0.9 \\times 3) = 4 - 2.7 = 1.3$.",
+            "Step 3: Write the full equation $\\hat{y} = a + bx$."
+          ],
+          "final_answer": "ŷ = 1.3 + 0.9x"
+        },
+        {
+          "problem": "A least-squares regression line is $\\hat y=12+3x$. Predict $y$ when $x=5$ and identify whether this is interpolation if the observed x-values range from 2 to 8.",
+          "solution_steps": [
+            "Substitute $x=5$ into the regression equation.",
+            "$\\hat y=12+3(5)=27$.",
+            "Since 5 lies within the observed x-range 2 to 8, the prediction is interpolation."
+          ],
+          "final_answer": "Predicted value = 27; this is interpolation."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using the Regression of Y on X to predict X from Y.",
+          "correction": "There are actually two different regression lines. The line to predict Y from X is different from the line to predict X from Y. Always use the one that matches what you are trying to predict."
+        }
+      ],
+      "quick_summary": [
+        "Regression creates a predictive line equation: $\\hat{y} = a + bx$.",
+        "The least-squares method guarantees the line with the smallest squared prediction errors.",
+        "The line always passes through the 'center of gravity' of the data: $(\\bar{x}, \\bar{y})$."
+      ],
+      "registry_scope": "Draft 82 approved audit: Introduce linear regression and least-squares concepts, interpret regression equations and use them for prediction; distinguish interpolation from extrapolation and explain their limitations.",
+      "prediction_note": "Interpolation predicts within the observed range of explanatory-variable values; extrapolation predicts outside that range and is generally less reliable because the fitted relationship may not continue."
+    },
+    "hss_math_t18_st07": {
+      "id": "hss_math_t18_st07",
+      "title": "Interpreting statistical graphs",
+      "overview": "Visualizing data is crucial for spotting patterns. Different types of data require different types of graphs, and interpreting them correctly prevents being misled by bad data presentation.",
+      "key_concepts": [
+        {
+          "concept": "Box Plots",
+          "definition": "Visualizing spread and outliers.",
+          "details": [
+            "Shows the 5-number summary: Min, Q1, Median, Q3, Max.",
+            "The box represents the Interquartile Range (IQR = Q3 - Q1), which holds the middle 50% of the data.",
+            "Outliers are formally identified as values outside the 'fences': $Q1 - 1.5(IQR)$ and $Q3 + 1.5(IQR)$."
+          ]
+        },
+        {
+          "concept": "Histograms and Ogives",
+          "definition": "Visualizing continuous data.",
+          "details": [
+            "**Histograms:** Bars touch to show continuous flow. Area represents frequency.",
+            "**Ogives:** Line graphs of Cumulative Frequency. Excellent for visually estimating the median and quartiles."
+          ]
+        },
+        {
+          "concept": "Misleading Graphs",
+          "definition": "Visual deception.",
+          "details": [
+            "Graphs can lie. Common tricks include: truncating the Y-axis (not starting at zero) to exaggerate tiny differences, using 3D effects to distort proportions, or failing to use frequency density for unequal class widths."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Outlier Fences",
+          "equation": "$$ \\text{Lower} = Q_1 - 1.5(IQR) \\quad \\text{Upper} = Q_3 + 1.5(IQR) $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st07_visual_added01",
+          "title": "Interpreting statistical graphs — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Interpreting statistical graphs.",
+          "alt_text": "Original schematic teaching aid for Interpreting statistical graphs.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Interpreting statistical graphs</title><desc>Original schematic illustration for Interpreting statistical graphs.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 H280 M50 180 V40\" stroke=\"#64748b\"/><rect x=\"75\" y=\"120\" width=\"38\" height=\"55\" fill=\"#bfdbfe\" stroke=\"#2563eb\"/><rect x=\"113\" y=\"85\" width=\"38\" height=\"90\" fill=\"#bfdbfe\" stroke=\"#2563eb\"/><rect x=\"151\" y=\"55\" width=\"38\" height=\"120\" fill=\"#bfdbfe\" stroke=\"#2563eb\"/><rect x=\"189\" y=\"100\" width=\"38\" height=\"75\" fill=\"#bfdbfe\" stroke=\"#2563eb\"/><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Interpreting statistical graphs</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A dataset has Q1 = 20, Median = 30, and Q3 = 40. Calculate the upper and lower fences for outliers.",
+          "solution_steps": [
+            "Step 1: Calculate the Interquartile Range (IQR) = $Q3 - Q1 = 40 - 20 = 20$.",
+            "Step 2: Calculate the Lower Fence: $Q1 - 1.5(IQR) = 20 - 1.5(20) = 20 - 30 = -10$.",
+            "Step 3: Calculate the Upper Fence: $Q3 + 1.5(IQR) = 40 + 1.5(20) = 40 + 30 = 70$."
+          ],
+          "final_answer": "Lower Fence = -10, Upper Fence = 70. Any value outside this range is an outlier."
+        },
+        {
+          "problem": "A graph displays monthly sales from 95 to 105 but its vertical axis begins at 94. Explain how this choice can mislead readers.",
+          "solution_steps": [
+            "The vertical axis omits zero and shows only a narrow range.",
+            "Small absolute differences occupy a large part of the displayed graph.",
+            "The visual impression may exaggerate the size of changes."
+          ],
+          "final_answer": "The truncated vertical scale can make small changes appear much larger than they are."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Assuming a larger Box (IQR) in a boxplot means a higher average.",
+          "correction": "The size of the box only shows the *spread* (variance) of the middle 50% of the data. A massive box could have a very low median, while a tiny box could have a very high median."
+        }
+      ],
+      "quick_summary": [
+        "Box plots visually map the median and IQR, and flag outliers using the 1.5(IQR) rule.",
+        "Histograms use area (frequency density) to show distributions of continuous data.",
+        "Always check the axes of a graph to ensure it isn't truncated or distorted to mislead the viewer."
+      ],
+      "registry_scope": "Draft 82 approved audit: Interpret histograms, frequency polygons, cumulative frequency curves, box plots and scatter plots; identify misleading scales, inappropriate displays and distortions in graphical presentation."
+    },
+    "hss_math_t18_st08": {
+      "id": "hss_math_t18_st08",
+      "title": "Mathematical modelling using equations",
+      "overview": "Mathematical modelling is the process of translating a messy, real-world situation into clean mathematical equations so we can analyze it, solve it, and make predictions.",
+      "key_concepts": [
+        {
+          "concept": "The Components of a Model",
+          "definition": "The building blocks.",
+          "details": [
+            "**Variables:** Quantities that change (e.g., Time $t$, Cost $C$).",
+            "**Parameters:** Fixed quantities specific to the scenario (e.g., a flat starting fee of $5).",
+            "**Assumptions:** Simplifying rules we accept to make the math possible (e.g., assuming a vehicle travels at a perfectly constant speed)."
+          ]
+        },
+        {
+          "concept": "Linear vs Proportional Models",
+          "definition": "The baseline equations.",
+          "details": [
+            "**Direct Proportion:** $y = kx$. (If you buy $x$ notebooks at $4 each, Cost = $4x$).",
+            "**Linear:** $y = a + bx$. Involves a fixed starting amount plus a rate. (A taxi charges a flat $5 plus $3 per mile: Cost = $5 + 3x$)."
+          ]
+        },
+        {
+          "concept": "Constraints",
+          "definition": "Real-world limits.",
+          "details": [
+            "Models must obey physical reality. Time cannot be negative ($t \\geq 0$), you can't sell half a ticket ($x \\in \\mathbb{Z}$), and a 200-seat theater has a capacity cap ($x \\leq 200$)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Linear Model",
+          "equation": "$$ y = a + bx $$",
+          "variables": {
+            "a": "Fixed initial value (parameter)",
+            "b": "Rate of change (parameter)",
+            "x": "Independent variable"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st08_visual_added01",
+          "title": "Mathematical modelling using equations — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Mathematical modelling using equations.",
+          "alt_text": "Original schematic teaching aid for Mathematical modelling using equations.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Mathematical modelling using equations</title><desc>Original schematic illustration for Mathematical modelling using equations.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"55\" y=\"65\" width=\"210\" height=\"100\" rx=\"8\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><path d=\"M75 145 L125 105 L175 125 L245 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"160\" y=\"48\" text-anchor=\"middle\" font-size=\"14\" fill=\"#334155\">model / data</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Mathematical modelling using equations</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A water tank initially contains 200 liters. Water enters at a constant rate of 12 liters per minute. Write the mathematical model for Volume (V) over time (t), and find the volume after 15 minutes.",
+          "solution_steps": [
+            "Step 1: Identify the fixed parameter (initial amount) $a = 200$.",
+            "Step 2: Identify the rate parameter $b = 12$.",
+            "Step 3: Construct the linear model: $V(t) = 200 + 12t$.",
+            "Step 4: Substitute $t = 15$: $V(15) = 200 + 12(15) = 200 + 180 = 380$."
+          ],
+          "final_answer": "V(t) = 200 + 12t. Volume = 380 Liters."
+        },
+        {
+          "problem": "A taxi fare consists of a fixed booking charge of ₹40 plus ₹15 per kilometre. Form a model for a journey of $d$ kilometres and find the fare for 8 km.",
+          "solution_steps": [
+            "The fixed charge is the intercept, ₹40.",
+            "The rate per kilometre is the coefficient, ₹15.",
+            "The linear model is $C(d)=40+15d$.",
+            "Substitute $d=8$."
+          ],
+          "final_answer": "$C(d)=40+15d$; $C(8)=₹160$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Ignoring dimensional consistency (Units).",
+          "correction": "If your equation is $C = 5 + 3x$, and $C$ is in dollars, then 5 must be dollars, and $3x$ must resolve to dollars. You cannot add dollars to kilometers."
+        }
+      ],
+      "quick_summary": [
+        "Modelling strips away real-world noise to build an equation of Variables and fixed Parameters.",
+        "Always state the Assumptions that make your model possible.",
+        "Apply Constraints to ensure your mathematical answers don't violate physical reality (like negative time or exceeding maximum capacity)."
+      ],
+      "registry_scope": "Draft 82 approved audit: Formulate mathematical models by identifying variables, parameters, assumptions and relationships; translate contextual situations into equations and state the meaning of model components."
+    },
+    "hss_math_t18_st09": {
+      "id": "hss_math_t18_st09",
+      "title": "Linear and quadratic models",
+      "overview": "Different real-world scenarios grow in different ways. Linear models are used when things change at a constant steady rate. Quadratic models are used when the rate of change is itself changing, often creating a maximum or minimum turning point.",
+      "key_concepts": [
+        {
+          "concept": "Linear Models",
+          "definition": "Constant change.",
+          "details": [
+            "Equation: $y = a + bx$.",
+            "The defining feature is that the 'first differences' are constant. Every time $x$ increases by 1, $y$ increases by exactly $b$."
+          ]
+        },
+        {
+          "concept": "Quadratic Models",
+          "definition": "Curved change.",
+          "details": [
+            "Equation: $y = ax^2 + bx + c$.",
+            "The graph is a parabola. If $a>0$, it opens upward (has a minimum). If $a<0$, it opens downward (has a maximum).",
+            "The defining feature is that 'second differences' are constant."
+          ]
+        },
+        {
+          "concept": "Finding the Vertex",
+          "definition": "The optimization point.",
+          "details": [
+            "The turning point (maximum or minimum) of a quadratic model occurs exactly at the x-coordinate: $x_v = -\\frac{b}{2a}$. Plug this back into the equation to find the maximum height, profit, etc."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Quadratic Vertex x-coordinate",
+          "equation": "$$ x_v = -\\frac{b}{2a} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st09_visual_added01",
+          "title": "Linear and quadratic models — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Linear and quadratic models.",
+          "alt_text": "Original schematic teaching aid for Linear and quadratic models.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Linear and quadratic models</title><desc>Original schematic illustration for Linear and quadratic models.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"55\" y=\"65\" width=\"210\" height=\"100\" rx=\"8\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><path d=\"M75 145 L125 105 L175 125 L245 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"160\" y=\"48\" text-anchor=\"middle\" font-size=\"14\" fill=\"#334155\">model / data</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Linear and quadratic models</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A company's revenue based on units sold ($x$) is modelled by $R(x) = 100x - 2x^2$. How many units should they sell to maximize revenue, and what is that max revenue?",
+          "solution_steps": [
+            "Step 1: Identify that this is a quadratic opening downward ($a = -2$, $b = 100$).",
+            "Step 2: Find the vertex x-coordinate: $x = -\\frac{100}{2(-2)} = \\frac{-100}{-4} = 25$ units.",
+            "Step 3: Plug $x=25$ back into the revenue equation to find the max money.",
+            "Step 4: $R(25) = 100(25) - 2(25)^2 = 2500 - 1250 = 1250$."
+          ],
+          "final_answer": "Sell 25 units for a max revenue of $1250."
+        },
+        {
+          "problem": "A ball's height is modelled by $h(t)=-5t^2+20t+1$. Find the time at which its height is greatest and the maximum height.",
+          "solution_steps": [
+            "The quadratic opens downward because its leading coefficient is negative.",
+            "The vertex time is $t=-b/(2a)=-20/(2\\times-5)=2$.",
+            "Substitute $t=2$: $h(2)=-5(4)+40+1=21$."
+          ],
+          "final_answer": "Maximum height = 21 units at $t=2$ time units."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using a linear model for a relationship that is clearly accelerating or decelerating.",
+          "correction": "If data shows an accelerating trend (like gravity pulling an object faster and faster), a linear model will fail spectacularly as time goes on. You must use a quadratic (or exponential) model."
+        }
+      ],
+      "quick_summary": [
+        "Linear models have a constant rate of change (straight line).",
+        "Quadratic models have a changing rate of change (parabola).",
+        "The most important feature of a quadratic model is its vertex, calculated as $x = -\\frac{b}{2a}$, which tells you the absolute maximum or minimum of the system."
+      ],
+      "registry_scope": "Draft 82 approved audit: Develop and interpret linear and quadratic models, estimate parameters where appropriate, make predictions and evaluate whether the chosen model is suitable for the context."
+    },
+    "hss_math_t18_st10": {
+      "id": "hss_math_t18_st10",
+      "title": "Exponential and logarithmic models",
+      "overview": "When a quantity changes by a constant *percentage* rather than a constant *amount*, the system is exponential. Logarithms are the mathematical reverse, used to solve for how long those exponential processes will take.",
+      "key_concepts": [
+        {
+          "concept": "Discrete vs Continuous Growth",
+          "definition": "Step-by-step vs fluid.",
+          "details": [
+            "**Discrete:** Growth applied at set intervals (like annual bank interest). $P(t) = P_0(1+r)^t$.",
+            "**Continuous:** Growth happening seamlessly every microsecond (like bacteria or radioactive decay). $P(t) = P_0 e^{kt}$."
+          ]
+        },
+        {
+          "concept": "Half-Life & Doubling Time",
+          "definition": "The constant time thresholds.",
+          "details": [
+            "In continuous exponential models, the time it takes for the amount to exactly double (or halve) is solely dependent on the rate $k$, not the starting amount.",
+            "$T = \\frac{\\ln 2}{k}$."
+          ]
+        },
+        {
+          "concept": "Logarithmic Models",
+          "definition": "Diminishing returns.",
+          "details": [
+            "Modeled as $y = a + b \\ln x$.",
+            "Used for systems that grow incredibly fast at first, but then severely slow down (like learning curves or certain human sensory perceptions)."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Continuous Exponential Growth/Decay",
+          "equation": "$$ P(t) = P_0 e^{kt} $$",
+          "variables": {
+            "P_0": "Initial amount",
+            "k": "Growth/decay rate"
+          }
+        },
+        {
+          "name": "Half-Life / Doubling Time",
+          "equation": "$$ T = \\frac{\\ln 2}{k} $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st10_visual_added01",
+          "title": "Exponential and logarithmic models — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Exponential and logarithmic models.",
+          "alt_text": "Original schematic teaching aid for Exponential and logarithmic models.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Exponential and logarithmic models</title><desc>Original schematic illustration for Exponential and logarithmic models.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"55\" y=\"65\" width=\"210\" height=\"100\" rx=\"8\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><path d=\"M75 145 L125 105 L175 125 L245 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"160\" y=\"48\" text-anchor=\"middle\" font-size=\"14\" fill=\"#334155\">model / data</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Exponential and logarithmic models</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A radioactive substance has a continuous decay constant of $k = 0.08$ per year. Find its half-life.",
+          "solution_steps": [
+            "Step 1: Recognize this is a continuous exponential decay problem.",
+            "Step 2: Use the half-life formula: $T = \\frac{\\ln 2}{k}$.",
+            "Step 3: Substitute the rate: $T = \\frac{0.6931}{0.08}$.",
+            "Step 4: Calculate the time."
+          ],
+          "final_answer": "8.66 years"
+        },
+        {
+          "problem": "A service has 12,000 users and grows by 5% per year. Write an exponential model and estimate the number of users after 3 years.",
+          "solution_steps": [
+            "A constant percentage increase is modelled exponentially.",
+            "Use $P(t)=P_0(1+r)^t$ with $P_0=12000$ and $r=0.05$.",
+            "Evaluate $P(3)=12000(1.05)^3$."
+          ],
+          "final_answer": "$P(t)=12000(1.05)^t$; $P(3)=13,891.5$, approximately 13,892 users."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Confusing a discrete 10% rate with a continuous $k=0.10$ rate.",
+          "correction": "They are not the same. Continuous compounding at $k=0.10$ yields slightly more than discrete 10% growth over a year because the growth itself is growing constantly. The continuous equivalent of a discrete rate $r$ is $k = \\ln(1+r)$."
+        }
+      ],
+      "quick_summary": [
+        "Exponential models describe systems that grow/decay proportional to their current size (constant percentage).",
+        "The continuous model is $P_0 e^{kt}$. If $k$ is positive, it's growth. If negative, it's decay.",
+        "Logarithmic models are used when you need to solve an exponential equation for time ($t$), or for modeling diminishing returns."
+      ],
+      "registry_scope": "Draft 82 approved audit: Develop and interpret exponential growth/decay and logarithmic relationships; interpret parameters and connect with prior exponential and logarithmic learning without repeating differential-equation solution methods.",
+      "model_note": "For discrete annual growth at rate r, use P(t)=P0(1+r)^t. For continuous proportional growth with rate constant k, use P(t)=P0e^(kt). These are different parameter conventions; do not mix their rates."
+    },
+    "hss_math_t18_st11": {
+      "id": "hss_math_t18_st11",
+      "title": "Optimisation and constraints",
+      "overview": "Optimization is the process of finding the absolute best possible outcome (max profit, min cost, max speed) while forced to operate under strict, real-world limitations (budget, materials, time).",
+      "key_concepts": [
+        {
+          "concept": "The Core Components",
+          "definition": "The setup.",
+          "details": [
+            "**Decision Variables:** The things you can change (e.g., $x$ = units of Product A to make).",
+            "**Objective Function:** The master equation you want to maximize or minimize (e.g., Profit $P = 40x + 30y$).",
+            "**Constraints:** The hard limits represented as inequalities (e.g., $2x + y \\leq 100$ labor hours)."
+          ]
+        },
+        {
+          "concept": "The Feasible Region",
+          "definition": "The safe zone.",
+          "details": [
+            "When you graph all the constraint inequalities together, the overlapping area is the Feasible Region. Any coordinate inside this shape obeys all the rules of reality for your problem."
+          ]
+        },
+        {
+          "concept": "The Corner-Point Principle",
+          "definition": "The shortcut to victory.",
+          "details": [
+            "In linear optimization, you don't need to test every single point in the feasible region. The absolute maximum or minimum will ALWAYS occur at one of the outer 'corners' (vertices) of the feasible shape."
+          ]
+        }
+      ],
+      "formulas": [],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st11_visual_added01",
+          "title": "Optimisation and constraints — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Optimisation and constraints.",
+          "alt_text": "Original schematic teaching aid for Optimisation and constraints.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Optimisation and constraints</title><desc>Original schematic illustration for Optimisation and constraints.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"55\" y=\"65\" width=\"210\" height=\"100\" rx=\"8\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><path d=\"M75 145 L125 105 L175 125 L245 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"160\" y=\"48\" text-anchor=\"middle\" font-size=\"14\" fill=\"#334155\">model / data</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Optimisation and constraints</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A company wants to maximize profit $P = 5x + 4y$. The constraint boundaries create a feasible region with corners at $(0,0)$, $(4,0)$, $(0,8)$, and an intersection point at $(2,6)$. What is the max profit?",
+          "solution_steps": [
+            "Step 1: According to the Corner-Point principle, we only need to test the vertices in the objective function.",
+            "Step 2: Test $(4,0)$: $P = 5(4) + 4(0) = 20$.",
+            "Step 3: Test $(0,8)$: $P = 5(0) + 4(8) = 32$.",
+            "Step 4: Test $(2,6)$: $P = 5(2) + 4(6) = 10 + 24 = 34$.",
+            "Step 5: Compare the results. The highest output is the optimal choice."
+          ],
+          "final_answer": "Max Profit is $34, achieved by making 2 of x and 6 of y."
+        },
+        {
+          "problem": "Maximise $Z=3x+2y$ subject to $x\\geq0$, $y\\geq0$, $x+y\\leq6$ and $x\\leq4$. Find the maximum using the feasible-region vertices.",
+          "solution_steps": [
+            "The feasible region has vertices $(0,0)$, $(4,0)$, $(4,2)$ and $(0,6)$.",
+            "Evaluate $Z$ at each vertex: 0, 12, 16 and 12.",
+            "The largest value is 16."
+          ],
+          "final_answer": "Maximum $Z=16$ at $(x,y)=(4,2)$."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting integer restrictions.",
+          "correction": "If your corner point math tells you to make 4.5 cars to maximize profit, you can't physically do that. You must test the nearest whole integers *inside* the feasible region to find the true practical max."
+        }
+      ],
+      "quick_summary": [
+        "Optimization requires an Objective Function to maximize/minimize, and Constraints that limit your choices.",
+        "Graphing the constraints creates a Feasible Region of valid options.",
+        "The best possible outcome will always be found at one of the vertices (corners) of that feasible region."
+      ],
+      "registry_scope": "Draft 82 approved audit: Formulate objective functions and constraints, identify feasible solutions and interpret practical optima using graphical and algebraic methods; include introductory calculus-based approaches only as applications of HSS T13, not as a repeat of derivative techniques."
+    },
+    "hss_math_t18_st12": {
+      "id": "hss_math_t18_st12",
+      "title": "Modelling real-world situations",
+      "overview": "This subtopic brings all previous modelling techniques together. Real-world problems rarely announce whether they are linear, quadratic, or exponential; you must analyze the situation and select the correct mathematical architecture.",
+      "key_concepts": [
+        {
+          "concept": "Choosing the Model",
+          "definition": "Matching math to reality.",
+          "details": [
+            "Fixed charge + cost per unit $\\rightarrow$ Linear Model.",
+            "Revenue = Price $\\times$ Quantity (where price changes based on quantity) $\\rightarrow$ Quadratic Model.",
+            "Compound interest or uninhibited population growth $\\rightarrow$ Exponential Model."
+          ]
+        },
+        {
+          "concept": "Logistic Growth",
+          "definition": "The S-Curve.",
+          "details": [
+            "Standard exponential growth assumes infinite resources. Logistic models account for reality: growth starts exponential, but slows down and flattens out as it hits a maximum 'Carrying Capacity' ($K$)."
+          ]
+        },
+        {
+          "concept": "Systems of Equations",
+          "definition": "Interconnected variables.",
+          "details": [
+            "Used when multiple unknown quantities are tied together by multiple rules (e.g., ticket pricing where total sales and total revenue are both known). Solved via substitution or matrix methods."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Logistic Population Model",
+          "equation": "$$ P(t) = \\frac{K}{1 + Ae^{-rt}} $$",
+          "variables": {
+            "K": "Carrying capacity",
+            "r": "Growth rate parameter"
+          }
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st12_visual_added01",
+          "title": "Modelling real-world situations — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Modelling real-world situations.",
+          "alt_text": "Original schematic teaching aid for Modelling real-world situations.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Modelling real-world situations</title><desc>Original schematic illustration for Modelling real-world situations.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><rect x=\"55\" y=\"65\" width=\"210\" height=\"100\" rx=\"8\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><path d=\"M75 145 L125 105 L175 125 L245 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"160\" y=\"48\" text-anchor=\"middle\" font-size=\"14\" fill=\"#334155\">model / data</text><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Modelling real-world situations</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A population initially has 100 animals. The environment's carrying capacity is 1,000. Write the setup for the logistic model to find the constant 'A'.",
+          "solution_steps": [
+            "Step 1: Identify the parameters. $P_0 = 100$, $K = 1000$.",
+            "Step 2: Use the formula for the constant A: $A = \\frac{K - P_0}{P_0}$.",
+            "Step 3: Substitute: $A = \\frac{1000 - 100}{100}$.",
+            "Step 4: Calculate: $A = \\frac{900}{100} = 9$."
+          ],
+          "final_answer": "A = 9"
+        },
+        {
+          "problem": "A community's water demand is estimated as 150 litres per person per day. Form a model for the daily demand of $n$ people and estimate demand for 240 people.",
+          "solution_steps": [
+            "Identify population $n$ and per-person daily demand 150 litres.",
+            "Assuming constant per-person demand, total demand is proportional to population.",
+            "Write and evaluate the model."
+          ],
+          "final_answer": "$D(n)=150n$ litres/day; $D(240)=36,000$ litres/day."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Accepting mathematically correct but physically impossible answers.",
+          "correction": "If solving a quadratic equation for time ($t$) gives you $t = 5$ and $t = -2$, you must throw out $-2$. Negative time or negative distance are mathematical artifacts that don't exist in reality."
+        }
+      ],
+      "quick_summary": [
+        "Real-world modelling requires translating word problems into the correct mathematical framework.",
+        "Logistic models improve upon exponential models by enforcing a strict maximum capacity limit.",
+        "Always cross-check your final mathematical answers against the constraints of physical reality."
+      ],
+      "registry_scope": "Draft 82 approved audit: Integrate modelling tasks from scientific, environmental, economic, demographic and everyday contexts; formulate, solve, interpret and communicate models with stated assumptions and units."
+    },
+    "hss_math_t18_st13": {
+      "id": "hss_math_t18_st13",
+      "title": "Checking assumptions and interpreting results",
+      "overview": "A model is only a mathematical guess. Once a model is built, we must rigorously test its accuracy against actual real-world data to see if our assumptions hold up, and quantify how 'wrong' the model is.",
+      "key_concepts": [
+        {
+          "concept": "Residuals",
+          "definition": "The error gap.",
+          "details": [
+            "A residual is the exact difference between what actually happened in reality and what your model predicted would happen. $e = y - \\hat{y}$.",
+            "If a residual plot shows a clear pattern (like a U-shape), your model is fundamentally wrong (e.g., you used a linear line for quadratic data)."
+          ]
+        },
+        {
+          "concept": "Goodness of Fit Metrics",
+          "definition": "Scoring the model.",
+          "details": [
+            "**MAE (Mean Absolute Error):** The average size of your mistakes.",
+            "**RMSE (Root Mean Squared Error):** Heavily penalizes massive outlier mistakes.",
+            "**$R^2$ (Coefficient of Determination):** The percentage (0 to 1) of the real-world variation that your model successfully explains."
+          ]
+        },
+        {
+          "concept": "Outliers and Contextual Validity",
+          "definition": "The reality check.",
+          "details": [
+            "Just because a model has a high $R^2$ doesn't mean it's practically useful. If a model predicts a factory will produce maximum profit by running 25 hours a day, the model is contextually invalid and fails."
+          ]
+        }
+      ],
+      "formulas": [
+        {
+          "name": "Residual",
+          "equation": "$$ e = y - \\hat{y} $$",
+          "variables": {
+            "y": "Actual observed value",
+            "\\hat{y}": "Model's predicted value"
+          }
+        },
+        {
+          "name": "Mean Absolute Error (MAE)",
+          "equation": "$$ MAE = \\frac{1}{n} \\sum |y_i - \\hat{y}_i| $$",
+          "variables": {}
+        }
+      ],
+      "visual_aids": [
+        {
+          "visual_id": "hss_math_t18_st13_visual_added01",
+          "title": "Checking assumptions and interpreting results — concept illustration",
+          "type": "svg",
+          "caption": "Original schematic teaching aid for Checking assumptions and interpreting results.",
+          "alt_text": "Original schematic teaching aid for Checking assumptions and interpreting results.",
+          "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"320\" height=\"240\" viewBox=\"0 0 320 240\"><title>Checking assumptions and interpreting results</title><desc>Original schematic illustration for Checking assumptions and interpreting results.</desc><rect x=\"1\" y=\"1\" width=\"318\" height=\"238\" rx=\"12\" fill=\"#fff\" stroke=\"#cbd5e1\"/><path d=\"M45 175 H280 M50 180 V35\" stroke=\"#64748b\"/><path d=\"M65 155 L95 130 L125 120 L155 90 L185 75 L215 55 L255 40\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"65\" cy=\"155\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"95\" cy=\"130\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"125\" cy=\"120\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"155\" cy=\"90\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"185\" cy=\"75\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"215\" cy=\"55\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"255\" cy=\"40\" r=\"4\" fill=\"#ea580c\"/><text x=\"160\" y=\"218\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"11\" fill=\"#334155\">Checking assumptions and interpreting results</text></svg>"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A regression model predicts a student's score will be 70. The student actually scored 68. What is the residual, and what does it mean?",
+          "solution_steps": [
+            "Step 1: Identify actual ($y = 68$) and predicted ($\\hat{y} = 70$).",
+            "Step 2: Use the residual formula: $e = y - \\hat{y}$.",
+            "Step 3: $e = 68 - 70 = -2$."
+          ],
+          "final_answer": "Residual = -2. The negative sign means the model overestimated the student's score by 2 points."
+        },
+        {
+          "problem": "A model predicts values 10, 15 and 20, while the observed values are 12, 14 and 19. Find the residuals and mean absolute error.",
+          "solution_steps": [
+            "Residuals are observed minus predicted: $12-10=2$, $14-15=-1$ and $19-20=-1$.",
+            "Take absolute values: 2, 1 and 1.",
+            "MAE is the mean of the absolute residuals: $(2+1+1)/3$."
+          ],
+          "final_answer": "Residuals = 2, −1, −1; MAE = 4/3 ≈ 1.33."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Calculating residual as Predicted minus Actual.",
+          "correction": "It is ALWAYS Actual minus Predicted ($y - \\hat{y}$). If you reverse them, your error signs will be backwards, leading you to think the model is underestimating when it is actually overestimating."
+        }
+      ],
+      "quick_summary": [
+        "Residuals measure the exact error between real data and model predictions.",
+        "Metrics like MAE, RMSE, and $R^2$ grade how tightly the model fits the reality.",
+        "A successful model must not only have good math, but must make logical sense in the real-world context."
+      ],
+      "registry_scope": "Draft 82 approved audit: Evaluate assumptions, residuals and introductory residual plots, goodness of fit, uncertainty, outliers and contextual validity; explain model limitations and communicate conclusions responsibly. Boundary: HSS T18 focuses on empirical data, descriptive statistics, correlation/regression and model evaluation. Distinguish observed frequency distributions from theoretical probability distributions in HSS T17. Sampling distributions, confidence intervals and hypothesis testing are optional enrichment, not core requirements in this registry.",
+      "evaluation_note": "Residual plots can reveal patterns left unexplained by a model. Random scatter around zero is generally more consistent with a suitable linear form than a systematic curve or changing spread. Residuals do not by themselves prove a model is valid."
+    }
+  }
+}
